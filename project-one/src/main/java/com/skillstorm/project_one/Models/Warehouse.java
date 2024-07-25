@@ -1,10 +1,13 @@
 package com.skillstorm.project_one.Models;
 
+import java.util.Set;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -16,13 +19,17 @@ public class Warehouse {
     private Integer id;
 
     @Column(length = 50)
-    private String warehouseLocation;
+    private String location;
 
     @Column(length = 50)
     private Integer capacity;
 
     @Column(length = 50)
     private Integer currentStock;
+
+    //Adding oneToMany relationship with stock table
+    @OneToMany(mappedBy = "warehouse")
+    private Set<Stock> stocks;
 
     public Integer getId() {
         return id;
@@ -32,12 +39,12 @@ public class Warehouse {
         this.id = id;
     }
 
-    public String getWarehouseLocation() {
-        return warehouseLocation;
+    public String getLocation() {
+        return location;
     }
 
-    public void setWarehouseLocation(String warehouseLocation) {
-        this.warehouseLocation = warehouseLocation;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public Integer getCapacity() {
@@ -58,9 +65,11 @@ public class Warehouse {
 
     @Override
     public String toString() {
-        return "Warehouse [id=" + id + ", warehouseLocation=" + warehouseLocation + ", capacity=" + capacity
-                + ", currentStock=" + currentStock + "]";
+        return "Warehouse [id=" + id + ", location=" + location + ", capacity=" + capacity + ", currentStock="
+                + currentStock + "]";
     }
+
+    
 
     
 

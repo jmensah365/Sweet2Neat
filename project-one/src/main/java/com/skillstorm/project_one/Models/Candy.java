@@ -1,10 +1,14 @@
 package com.skillstorm.project_one.Models;
 
+import java.math.BigDecimal;
+import java.util.Set;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -18,21 +22,25 @@ public class Candy {
     private Integer id;
 
     @Column(length = 50)
-    private String candyName;
+    private String name;
 
     @Column(length = 50)
-    private String candyType;
+    private String type;
 
     @Column(length = 50)
-    private String candyFlavor;
+    private String flavor;
 
     @Min(value = 0)
-    @Max(value = 15)
-    private Double price;
+    @Max(value = 10)
+    private BigDecimal price;
 
     @Min(value = 0)
-    @Max(value = 5)
-    private Double weight;
+    @Max(value = 10)
+    private BigDecimal weight;
+
+    //adding OneToMany relationship with stock table
+    @OneToMany(mappedBy = "candy")
+    private Set<Stock> stocks;
 
     public Integer getId() {
         return id;
@@ -42,51 +50,53 @@ public class Candy {
         this.id = id;
     }
 
-    public String getCandyName() {
-        return candyName;
+    public String getName() {
+        return name;
     }
 
-    public void setCandyName(String candyName) {
-        this.candyName = candyName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getCandyType() {
-        return candyType;
+    public String getType() {
+        return type;
     }
 
-    public void setCandyType(String candyType) {
-        this.candyType = candyType;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getCandyFlavor() {
-        return candyFlavor;
+    public String getFlavor() {
+        return flavor;
     }
 
-    public void setCandyFlavor(String candyFlavor) {
-        this.candyFlavor = candyFlavor;
+    public void setFlavor(String flavor) {
+        this.flavor = flavor;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
-    public Double getWeight() {
+    public BigDecimal getWeight() {
         return weight;
     }
 
-    public void setWeight(Double weight) {
+    public void setWeight(BigDecimal weight) {
         this.weight = weight;
     }
 
     @Override
     public String toString() {
-        return "Candy [id=" + id + ", candyName=" + candyName + ", candyType=" + candyType + ", candyFlavor="
-                + candyFlavor + ", price=" + price + ", weight=" + weight + "]";
+        return "Candy [id=" + id + ", name=" + name + ", type=" + type + ", flavor=" + flavor + ", price=" + price
+                + ", weight=" + weight + "]";
     }
+
+    
 
 
     
