@@ -10,7 +10,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 
 @Entity
@@ -31,11 +30,9 @@ public class Candy {
     private String flavor;
 
     @Min(value = 0)
-    @Max(value = 10)
     private BigDecimal price;
 
     @Min(value = 0)
-    @Max(value = 10)
     private BigDecimal weight;
 
     //adding OneToMany relationship with stock table

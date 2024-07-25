@@ -27,7 +27,7 @@ public class WarehouseService {
 
     //For put mappings
     public void updateWarehouse(int id, Warehouse warehouse){
-        if(!repo.existsById(id)) throw new NoSuchElementException("Warehouse with id " + id + " does not exists");
+        if(!repo.existsById(id)) throw new NoSuchElementException("Warehouse with id " + id + " does not exist");
         warehouse.setId(id);
         repo.save(warehouse);
     }
