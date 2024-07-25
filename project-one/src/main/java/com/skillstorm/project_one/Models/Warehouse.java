@@ -28,7 +28,7 @@ public class Warehouse {
     private Integer currentStock;
 
     //Adding oneToMany relationship with stock table
-    @OneToMany(mappedBy = "warehouse")
+    @OneToMany(mappedBy = "warehouseId")
     private Set<Stock> stocks;
 
     public Integer getId() {
