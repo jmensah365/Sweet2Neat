@@ -11,6 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "candy")
@@ -21,24 +22,30 @@ public class Candy {
     private Integer id;
 
     @Column(length = 50)
+    @NotBlank
     private String name;
 
     @Column(length = 50)
+    @NotBlank
     private String type;
 
     @Column(length = 50)
+    @NotBlank
     private String flavor;
 
     @Min(value = 0)
+    @NotBlank
     private BigDecimal price;
 
     @Min(value = 0)
+    @NotBlank
     private BigDecimal weight;
 
     //adding OneToMany relationship with stock table
     @OneToMany(mappedBy = "candy")
     private Set<Stock> stocks;
 
+    ///Adding Getters, Setters, and toString method
     public Integer getId() {
         return id;
     }

@@ -10,6 +10,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "orders")
@@ -20,15 +21,19 @@ public class Orders {
     private Integer id;
 
     @Column
+    @NotBlank
     private String customerName;
 
     @Column
+    @NotBlank
     private Date orderDate;
 
     @Column
+    @NotBlank
     private Boolean status;
 
     @Column
+    @NotBlank
     private String customerAddress;
 
     public String getCustomerAddress() {

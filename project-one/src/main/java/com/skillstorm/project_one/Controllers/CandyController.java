@@ -20,30 +20,34 @@ import com.skillstorm.project_one.Services.CandyService;
 @RequestMapping("/candy")
 public class CandyController {
 
+    //Injecting CandyService dependency
     private CandyService service;
-
     public CandyController(CandyService service){
         this.service = service;
     }
 
+    // Endpoint to retrieve all candies
     @GetMapping
     public Iterable<Candy> getAllCandy() {
         return service.findAll();
     }
 
+    // Endpoint to add a new candy
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     public Candy createCandy(@RequestBody Candy candy) {
         return service.createCandy(candy);
     }
 
+    // Endpoint to update an existing candy
     @PutMapping("/{id}")
-    public ResponseEntity<Candy> updateWarehouse(@PathVariable int id, @RequestBody Candy candy) {
+    public ResponseEntity<Candy> updateCandy(@PathVariable int id, @RequestBody Candy candy) {
         service.updateCandy(id, candy);
         return new ResponseEntity<>(HttpStatus.OK);
         
     }
 
+    // Endpoint to delete a candy by its ID
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCandyById(@PathVariable int id){
         service.deleteCandy(id);

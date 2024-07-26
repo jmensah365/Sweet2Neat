@@ -9,6 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "warehouse")
@@ -19,12 +20,15 @@ public class Warehouse {
     private Integer id;
 
     @Column(length = 50)
+    @NotBlank
     private String location;
 
     @Column(length = 50)
+    @NotBlank
     private Integer capacity;
 
     @Column(length = 50)
+    @NotBlank
     private Integer currentStock;
 
     //Adding oneToMany relationship with stock table

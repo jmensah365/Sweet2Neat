@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 
@@ -17,14 +18,17 @@ public class Stock {
     private Integer id;
 
     @ManyToOne
+    @NotBlank
     @JoinColumn(name = "candy_id")
     private Candy candy;
     
     @ManyToOne
+    @NotBlank
     @JoinColumn(name = "warehouse_id")
     private Warehouse warehouseId;
     
     @Column
+    @NotBlank
     private Integer quantity;
 
     public Integer getId() {

@@ -24,24 +24,26 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RestController
 @RequestMapping("warehouse")
 public class WarehouseController {
-    
+    //Injecting WarehouseService dependency
     private WarehouseService service;
-
     public WarehouseController(WarehouseService service){
         this.service = service;
     }
 
+    //Endpoint to retrieve all warehouses
     @GetMapping
     public Iterable<Warehouse> getAllWarehouses() {
         return service.findAll();
     }
 
+    //Endpoint to create a new warehouse
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     public Warehouse createWarehouse(@RequestBody Warehouse warehouse) {
         return service.createWarehouse(warehouse);
     }
 
+    //Endpoint to update an existing warehouse
     @PutMapping("/{id}")
     public ResponseEntity<Warehouse> updateWarehouse(@PathVariable int id, @RequestBody Warehouse warehouse) {
         service.updateWarehouse(id, warehouse);
@@ -49,6 +51,7 @@ public class WarehouseController {
         
     }
 
+    //Endpoint to delete a warehouse by its id
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteWarehouseById(@PathVariable int id){
         service.deleteWarehouse(id);
