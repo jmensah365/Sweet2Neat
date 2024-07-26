@@ -1,6 +1,6 @@
 package com.skillstorm.project_one.Models;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.Set;
 
 import jakarta.persistence.Column;
@@ -27,6 +27,19 @@ public class Orders {
 
     @Column
     private Boolean status;
+
+    @Column
+    private String customerAddress;
+
+    public String getCustomerAddress() {
+        return customerAddress;
+    }
+
+
+    public void setCustomerAddress(String customerAddress) {
+        this.customerAddress = customerAddress;
+    }
+
 
     @OneToMany(mappedBy = "orders")
     private Set<OrderItem> orderItem;
