@@ -11,9 +11,9 @@ import java.util.List;
 
 
 public interface StockRepo extends JpaRepository<Stock, Integer>{
-    //List<Stock> findByWarehouseId(Warehouse warehouse);
+    Stock findByWarehouse(Warehouse warehouse);
 
-    // @Query("SELECT s FROM Stock s WHERE s.warehouse.id = :warehouseId")
-    // List<Stock> findByWarehouseId(@Param("warehouseId") Integer warehouseId);
+    @Query("SELECT s FROM Stock s WHERE s.warehouse.id = :warehouseId")
+    List<Stock> findByWarehouseId(@Param("warehouseId") Integer warehouseId);
     
 }

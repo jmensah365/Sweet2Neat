@@ -1,6 +1,8 @@
 package com.skillstorm.project_one.Controllers;
 
 
+import java.util.Optional;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -30,6 +32,12 @@ public class CandyController {
     @GetMapping
     public Iterable<Candy> getAllCandy() {
         return service.findAll();
+    }
+
+    //Endpoint to retrieve candies by id
+    @GetMapping("/{id}")
+    public Optional<Candy> getCandyById(@PathVariable int id){
+        return service.findById(id);
     }
 
     // Endpoint to add a new candy

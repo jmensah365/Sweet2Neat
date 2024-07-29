@@ -1,6 +1,7 @@
 package com.skillstorm.project_one.Services;
 
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,10 @@ public class CandyService {
     //For get mappings
     public Iterable<Candy> findAll(){
         return repo.findAll();
+    }
+
+    public Optional<Candy> findById(int id){
+        return repo.findById(id);
     }
 
     //For post mappings

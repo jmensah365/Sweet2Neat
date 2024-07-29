@@ -2,34 +2,33 @@ package com.skillstorm.project_one.Models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.PositiveOrZero;
 
 @Entity
-
 public class Stock {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne
-    @NotBlank
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "candy_id")
     private Candy candy;
     
-    @ManyToOne
-    @NotBlank
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "warehouse_id")
-    private Warehouse warehouseId;
+    private Warehouse warehouse;
     
     @Column
-    @NotBlank
+    @PositiveOrZero
     private Integer quantity;
+
 
     public Integer getId() {
         return id;
@@ -39,16 +38,25 @@ public class Stock {
         this.id = id;
     }
 
-    public Warehouse getWarehouseId() {
-        return warehouseId;
+
+    public Integer getWarehouseId() {
+        return warehouse != null ? warehouse.getId() : null;
     }
 
-    public void setWarehouseId(Warehouse warehouseId) {
-        this.warehouseId = warehouseId;
+    public Warehouse getWarehouse() {
+        return warehouse;
+    }
+
+    public void setWarehouse(Warehouse warehouse) {
+        this.warehouse = warehouse;
     }
 
     public Candy getCandy() {
         return candy;
+    }
+
+    public Integer getCandyId() {
+        return candy != null ? candy.getCandyId() : null;
     }
 
     public void setCandy(Candy candy) {
@@ -65,7 +73,7 @@ public class Stock {
 
     @Override
     public String toString() {
-        return "Stock [id=" + id + ", warehouseId=" + warehouseId + ", candy=" + candy + ", quantity=" + quantity + "]";
+        return "Stock [id=" + id + ", warehouse=" + warehouse + ", candy=" + candy + ", quantity=" + quantity + "]";
     }
 
     

@@ -2,10 +2,9 @@ package com.skillstorm.project_one.Models;
 
 import java.math.BigDecimal;
 
-
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -13,6 +12,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.PositiveOrZero;
 
 @Entity
 @Table(name = "orderitem")
@@ -22,22 +22,22 @@ public class OrderItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @NotBlank
     @JoinColumn(name = "orders_id")
     private Orders orders;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @NotBlank
     @JoinColumn(name = "candy_id")
     private Candy candy;
 
     @Column
-    @NotBlank
+    @PositiveOrZero
     private BigDecimal price;
 
     @Column
-    @NotBlank
+    @PositiveOrZero
     private Integer quantity;
 
 
@@ -63,6 +63,22 @@ public class OrderItem {
 
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
+    }
+
+    public Integer getCandyId(){
+        return candy != null ? candy.getCandyId() : null;
+    }
+
+    public Integer getOrderId(){
+        return orders != null ? orders.getId() : null;
+    }
+
+    public void setCandy(Candy candy){
+        this.candy = candy;
+    }
+
+    public void setOrder(Orders orders){
+        this.orders = orders;
     }
 
     @Override

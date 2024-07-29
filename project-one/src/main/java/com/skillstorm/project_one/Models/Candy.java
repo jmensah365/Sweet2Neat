@@ -3,6 +3,7 @@ package com.skillstorm.project_one.Models;
 import java.math.BigDecimal;
 import java.util.Set;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -34,19 +35,17 @@ public class Candy {
     private String flavor;
 
     @Min(value = 0)
-    @NotBlank
     private BigDecimal price;
 
     @Min(value = 0)
-    @NotBlank
     private BigDecimal weight;
 
     //adding OneToMany relationship with stock table
-    @OneToMany(mappedBy = "candy")
+    @OneToMany(mappedBy = "candy", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Stock> stocks;
 
     ///Adding Getters, Setters, and toString method
-    public Integer getId() {
+    public Integer getCandyId() {
         return id;
     }
 

@@ -47,7 +47,7 @@ public class OrderItemController {
     }
 
     // Endpoint to add a new order item
-    @PostMapping("/{id}")
+    @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     public OrderItem createOrderItem(@RequestBody OrderItem orderItem){
         return service.createOrderItem(orderItem);

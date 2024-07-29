@@ -3,6 +3,7 @@ package com.skillstorm.project_one.Models;
 import java.sql.Date;
 import java.util.Set;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -36,6 +37,10 @@ public class Orders {
     @NotBlank
     private String customerAddress;
 
+    @OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
+    private Set<OrderItem> orderItems;
+    
+    
     public String getCustomerAddress() {
         return customerAddress;
     }
