@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import {
     Table, TableBody, TableCell, TableContainer,
     TableHead, TableRow, Paper,
-    CircularProgress, Typography} from '@mui/material';
+    CircularProgress, Typography, Alert, AlertTitle} from '@mui/material';
 
 const WarehouseList = () => {
     const url = "http://localhost:8080/warehouse";
@@ -32,13 +32,24 @@ const WarehouseList = () => {
     if (!loaded) {
         return <CircularProgress />;
     }
+    // if(loaded){
+    //     return <Alert severity='success'>
+    //         <AlertTitle>Success</AlertTitle>
+    //     </Alert>
+    // }
 
     if (error) {
-        return <Typography variant="h6" color="error">Error: {error.message}</Typography>;
+        return <Alert severity='error'>
+            <AlertTitle>Error</AlertTitle>
+            Sorry could not get warehouses
+            </Alert>;
     }
 
     if (warehouses.length === 0) {
-        return <Typography variant="h6">No warehouses found</Typography>;
+        return <Alert severity='error'>
+            <AlertTitle>Error</AlertTitle>
+            No warehouses found
+            </Alert>;
     }
 
     return(
@@ -50,7 +61,6 @@ const WarehouseList = () => {
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell>ID</TableCell>
                             <TableCell>Location</TableCell>
                             <TableCell>Capacity</TableCell>
                             <TableCell>Current Stock</TableCell>
@@ -59,7 +69,6 @@ const WarehouseList = () => {
                     <TableBody>
                         {warehouses.map(warehouse => (
                             <TableRow key={warehouse.id}>
-                                <TableCell>{warehouse.id}</TableCell>
                                 <TableCell>{warehouse.location}</TableCell>
                                 <TableCell>{warehouse.capacity}</TableCell>
                                 <TableCell>{warehouse.currentStock}</TableCell>
