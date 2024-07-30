@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { AppBar, Toolbar, IconButton, Typography, Button, Menu, MenuItem, Drawer, List, ListItemButton, Divider } from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
-import { styled } from '@mui/system';
-import candyImage from '../../assets/CandyPics/logo2.png'
-import { Navigate, useNavigate } from "react-router-dom";
+import candyImage from '../../assets/CandyPics/CandyLogos/logo.png'
+import { useNavigate } from "react-router-dom";
+import './AppBar.css'
 
 
 const AppBarComponent = () => {
@@ -61,17 +60,19 @@ const AppBarComponent = () => {
     return (
         <>
         <AppBar position="fixed">
-            <Toolbar>
+            <Toolbar className="appbar">
                 <IconButton
                     edge="start"
                     color="inherit"
                     aria-label="menu"
+                    className="spin"
                     onClick={() => navigateTo('/')}
                 >
                     <img src={candyImage} alt="Menu Icon" style={{width: 24, height: 24}} />
                 </IconButton>
                 <Button
                     color="inherit"
+                    className="menuItems"
                     onClick={handleProductsMenuOpen}
                 >
                     Candy
@@ -81,13 +82,12 @@ const AppBarComponent = () => {
                     open={Boolean(productsMenuAnchorEl)}
                     onClose={handleProductsMenuClose}
                 >
-                    <MenuItem onClick={handleProductsMenuClose}>Candy List</MenuItem>
-                    <MenuItem onClick={handleProductsMenuClose}>Add a Candy</MenuItem>
-                    <MenuItem onClick={handleProductsMenuClose}>Delete a Candy</MenuItem>
+                    <MenuItem onClick={() => navigateTo('/candy')}>Candy List</MenuItem>
                 </Menu>
 
                 <Button
                     color="inherit"
+                    className="menuItems"
                     onClick={handleWarehouseMenuOpen}
                 >
                     Warehouses
@@ -98,11 +98,10 @@ const AppBarComponent = () => {
                     onClose={handleWarehouseMenuClose}
                 >
                     <MenuItem onClick={() => navigateTo('/warehouses')}>Warehouse List</MenuItem>
-                    <MenuItem onClick={handleWarehouseMenuClose}>Add a Warehouse</MenuItem>
-                    <MenuItem onClick={handleWarehouseMenuClose}>Delete a Warehouse</MenuItem>
                 </Menu>
                 <Button
                     color="inherit"
+                    className="menuItems"
                     onClick={handleOrdersMenuOpen}
                 >
                     Orders
@@ -112,11 +111,12 @@ const AppBarComponent = () => {
                     open={Boolean(ordersMenuAnchorEl)}
                     onClose={handleOrdersMenuClose}
                 >
-                    <MenuItem onClick={handleOrdersMenuClose}>List of Orders</MenuItem>
+                    <MenuItem onClick={() => navigateTo('/orders')}>List of Orders</MenuItem>
                     <MenuItem onClick={handleOrdersMenuClose}>Order Info</MenuItem>
                 </Menu>
                 <Button
                     color="inherit"
+                    className="menuItems"
                     onClick={() => navigateTo('/about')}
                 >
                     About

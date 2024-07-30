@@ -1,0 +1,20 @@
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin {
+    animation: spin 2s infinite linear;
+}
+
+.appbar{
+    background-color:rgb(111, 105, 187);
+}
+
+.menuItems{
+    text-align: center;
+}
