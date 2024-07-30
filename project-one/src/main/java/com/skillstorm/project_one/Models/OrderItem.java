@@ -11,7 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 
 @Entity
@@ -23,12 +23,12 @@ public class OrderItem {
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @NotBlank
+    @NotNull
     @JoinColumn(name = "orders_id")
     private Orders orders;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @NotBlank
+    @NotNull
     @JoinColumn(name = "candy_id")
     private Candy candy;
 
@@ -40,13 +40,36 @@ public class OrderItem {
     @PositiveOrZero
     private Integer quantity;
 
-
     public Integer getId() {
         return id;
     }
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Orders getOrders() {
+        return orders;
+    }
+
+    public Integer getOrderId() {
+        return orders.getId();
+    }
+
+    public void setOrders(Orders orders) {
+        this.orders = orders;
+    }
+
+    public Candy getCandy() {
+        return candy;
+    }
+
+    public Integer getCandyId() {
+        return candy.getCandyId();
+    }
+
+    public void setCandy(Candy candy) {
+        this.candy = candy;
     }
 
     public BigDecimal getPrice() {
@@ -65,26 +88,14 @@ public class OrderItem {
         this.quantity = quantity;
     }
 
-    public Integer getCandyId(){
-        return candy != null ? candy.getCandyId() : null;
-    }
-
-    public Integer getOrderId(){
-        return orders != null ? orders.getId() : null;
-    }
-
-    public void setCandy(Candy candy){
-        this.candy = candy;
-    }
-
-    public void setOrder(Orders orders){
-        this.orders = orders;
-    }
-
     @Override
     public String toString() {
-        return "OrderItem [id=" + id + ", price=" + price + ", quantity=" + quantity + "]";
+        return "OrderItem [id=" + id + ", orders=" + orders + ", candy=" + candy + ", price=" + price + ", quantity="
+                + quantity + "]";
     }
+
+
+    
 
     
 }

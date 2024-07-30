@@ -1,7 +1,9 @@
 package com.skillstorm.project_one.Models;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -12,6 +14,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "orders")
@@ -26,12 +29,13 @@ public class Orders {
     private String customerName;
 
     @Column
-    @NotBlank
+    @NotNull
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date orderDate;
 
     @Column
     @NotBlank
-    private Boolean status;
+    private String status;
 
     @Column
     @NotBlank
@@ -85,12 +89,12 @@ public class Orders {
     }
 
 
-    public Boolean getStatus() {
+    public String getStatus() {
         return status;
     }
 
 
-    public void setStatus(Boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 

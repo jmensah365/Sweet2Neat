@@ -7,5 +7,5 @@ import java.util.List;
 
 
 public interface OrdersRepo extends JpaRepository<Orders, Integer> {
-    List<Orders> findByStatus(Boolean status);
+    List<Orders> findByStatus(String status);
 }

@@ -25,7 +25,7 @@ public class OrdersService {
         return repo.findById(id);
     }
 
-    public Iterable<Orders> getOrdersByStatus(Boolean status){
+    public Iterable<Orders> getOrdersByStatus(String status){
         return repo.findByStatus(status);
     }
 

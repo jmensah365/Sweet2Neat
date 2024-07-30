@@ -1,9 +1,11 @@
 package com.skillstorm.project_one.Controllers;
 
-import java.util.Optional;
+import java.util.List;
+
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,11 +15,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.skillstorm.project_one.DTOs.OrderItemDTO;
 import com.skillstorm.project_one.Models.OrderItem;
 import com.skillstorm.project_one.Services.OrderItemService;
 import org.springframework.web.bind.annotation.PutMapping;
 
-
+@CrossOrigin(origins = "http://localhost:5174")
 @RestController
 @RequestMapping("/orderItem")
 public class OrderItemController {
@@ -30,32 +33,35 @@ public class OrderItemController {
 
     // Endpoint to retrieve all order items
     @GetMapping
-    public Iterable<OrderItem> findAll(){
-        return service.findAll();
+    public ResponseEntity<Iterable<OrderItemDTO>>findAll(){
+        List<OrderItemDTO> orderItem = service.findAll();
+        return new ResponseEntity<>(orderItem, HttpStatus.OK);
     }
 
-    // Endpoint to retrieve an order item by its ID
-    @GetMapping("/{id}")
-    public Optional<OrderItem> getOrderItemById(@PathVariable int id){
-        return service.getOrderItemById(id);
-    }
+    // // Endpoint to retrieve an order item by its ID
+    // @GetMapping("/{id}")
+    // public Optional<OrderItem> getOrderItemById(@PathVariable int id){
+    //     return service.getOrderItemById(id);
+    // }
 
     //Endpoint to retrieve an order item by its orderId
     @GetMapping("/order/{orderId}")
-    public Optional<OrderItem> getOrderItemsByOrderId(@PathVariable int orderId){
-        return service.getOrderItemsByOrderId(orderId);
+    public List<OrderItemDTO> getOrderItemsByOrderId(@PathVariable int orderId){
+        return service.findByOrderId(orderId);
     }
 
     // Endpoint to add a new order item
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
-    public OrderItem createOrderItem(@RequestBody OrderItem orderItem){
-        return service.createOrderItem(orderItem);
+    public ResponseEntity<OrderItem> createOrderItem(@RequestBody OrderItemDTO orderItem){
+
+        OrderItem createdOrderItem = service.createOrderItem(orderItem);
+        return ResponseEntity.ok(createdOrderItem);
     }
 
     // Endpoint to update an existing order item
     @PutMapping("/{id}")
-    public ResponseEntity<Void> updateOrderItem (@PathVariable int id, @RequestBody OrderItem orderItem) {
+    public ResponseEntity<Void> updateOrderItem (@PathVariable Integer id, @RequestBody OrderItem orderItem) {
         service.updateOrderItem(id, orderItem);
         
         return new ResponseEntity<>(HttpStatus.OK);
