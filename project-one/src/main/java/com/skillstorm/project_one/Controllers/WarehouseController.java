@@ -8,6 +8,7 @@ import com.skillstorm.project_one.Services.WarehouseService;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -20,9 +21,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 
 
-
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
-@RequestMapping("warehouse")
+@RequestMapping("/warehouse")
 public class WarehouseController {
     //Injecting WarehouseService dependency
     private WarehouseService service;

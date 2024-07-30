@@ -45,6 +45,7 @@ public class OrderItemService {
         Orders order = orderRepo.findById(orderItemRequest.getOrderId()).orElseThrow(() -> new NoSuchElementException("Order does not exist"));
         
         OrderItem orderItem = new OrderItem();
+        orderItem.setId(orderItem.getId());
         orderItem.setCandy(candy);
         orderItem.setOrder(order);
         orderItem.setPrice(orderItem.getPrice());
