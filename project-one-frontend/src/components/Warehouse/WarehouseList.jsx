@@ -78,6 +78,7 @@ const WarehouseList = () => {
             if (editingWarehouse) {
                 setWarehouses(warehouses.map(w => w.id === data.id ? data : w))
                 setEditingWarehouse(null);
+                console.log(warehouses.length);
             }else{
                 setWarehouses([...warehouses, data]);
             }
@@ -92,6 +93,7 @@ const WarehouseList = () => {
 
     const handleEdit = (warehouse) => {
         console.log('Editing warehouse:',warehouse);
+        console.log(warehouses.length);
         setEditingWarehouse(warehouse);
     };
 
@@ -167,7 +169,7 @@ const WarehouseList = () => {
                 </Button>
                 {editingWarehouse && (
                     <Button variant='contained' color='secondary' onClick={() =>setEditingWarehouse(null)}>
-                        Cancel Edit
+                        Cancel edit
                     </Button>
                 )}
             </Box>

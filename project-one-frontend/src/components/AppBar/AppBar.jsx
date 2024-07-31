@@ -82,7 +82,8 @@ const AppBarComponent = () => {
                     open={Boolean(productsMenuAnchorEl)}
                     onClose={handleProductsMenuClose}
                 >
-                    <MenuItem onClick={() => navigateTo('/candy')}>Candy List</MenuItem>
+                    <MenuItem onClick={() => navigateTo('/candy')}>Candy list</MenuItem>
+                    <MenuItem onClick={() => navigateTo('/candyTypes')}>Candy categories</MenuItem>
                 </Menu>
 
                 <Button
