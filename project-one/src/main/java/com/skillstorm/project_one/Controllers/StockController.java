@@ -22,7 +22,7 @@ import com.skillstorm.project_one.Services.StockService;
 
 import jakarta.validation.Valid;
 
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/stock")
 public class StockController {

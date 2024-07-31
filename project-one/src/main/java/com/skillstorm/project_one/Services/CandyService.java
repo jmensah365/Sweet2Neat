@@ -1,5 +1,6 @@
 package com.skillstorm.project_one.Services;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
@@ -24,6 +25,14 @@ public class CandyService {
 
     public Optional<Candy> findById(int id){
         return repo.findById(id);
+    }
+
+    public List<Candy> findByFlavor(String flavor){
+        return repo.findByFlavor(flavor);
+    }
+
+    public List<Candy> findByType(String type){
+        return repo.findByType(type);
     }
 
     //For post mappings

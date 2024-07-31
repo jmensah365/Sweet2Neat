@@ -1,6 +1,7 @@
 package com.skillstorm.project_one.Controllers;
 
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.http.HttpStatus;
@@ -18,8 +19,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.skillstorm.project_one.Models.Candy;
 import com.skillstorm.project_one.Services.CandyService;
+import org.springframework.web.bind.annotation.RequestParam;
 
-@CrossOrigin(origins = "http://localhost:5174")
+
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/candy")
 public class CandyController {
@@ -41,6 +44,18 @@ public class CandyController {
     public Optional<Candy> getCandyById(@PathVariable int id){
         return service.findById(id);
     }
+
+    @GetMapping("/getByType")
+    public List<Candy> getCandyByType(@RequestParam String type) {
+        return service.findByType(type);
+    }
+
+    @GetMapping("/getByFlavor")
+    public List<Candy> getByFlavor(@RequestParam String flavor) {
+        return service.findByFlavor(flavor);
+    }
+    
+    
 
     // Endpoint to add a new candy
     @PostMapping

@@ -20,7 +20,7 @@ import com.skillstorm.project_one.Models.OrderItem;
 import com.skillstorm.project_one.Services.OrderItemService;
 import org.springframework.web.bind.annotation.PutMapping;
 
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/orderItem")
 public class OrderItemController {

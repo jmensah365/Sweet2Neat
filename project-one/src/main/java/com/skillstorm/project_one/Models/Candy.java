@@ -41,7 +41,7 @@ public class Candy {
     private BigDecimal weight;
 
     //adding OneToMany relationship with stock table
-    @OneToMany(mappedBy = "candy", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "candy", cascade = CascadeType.ALL)
     private Set<Stock> stocks;
 
     ///Adding Getters, Setters, and toString method
