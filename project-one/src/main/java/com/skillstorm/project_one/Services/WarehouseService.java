@@ -63,12 +63,12 @@ public class WarehouseService {
         //Retrieve the existing stock record for the warehouse, if there is any
         Stock stock = stockRepo.findByWarehouse(warehouse);
         if(stock != null){
-            stock.setQuantity(warehouse.getCurrentStock());
+            stock.setQuantity(warehouse.getCurrentStock() + stock.getQuantity());
             stockRepo.save(stock);
         } else {
             Stock newStock = new Stock();
             newStock.setWarehouse(warehouse);
-            newStock.setQuantity(warehouse.getCurrentStock());
+            newStock.setQuantity(warehouse.getCurrentStock() + newStock.getQuantity());
             Candy defaultCandy = candyRepo.findById(10). orElseThrow(() -> new NoSuchElementException("Candy not found"));
             newStock.setCandy(defaultCandy);
             stockRepo.save(newStock);

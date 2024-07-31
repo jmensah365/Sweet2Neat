@@ -5,9 +5,9 @@ import {
     TableHead, TableRow, Paper,
     CircularProgress, Typography, Alert, AlertTitle} from '@mui/material';
 
-const CandyList = () => {
-    const url = "http://localhost:8080/candy";
-    const [candy, setCandy] = useState([]);
+const Orders = () => {
+    const url = "http://localhost:8080/orders";
+    const [order, setOrder] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(null);
 
@@ -20,7 +20,7 @@ const CandyList = () => {
                 return response.json();
             })
             .then(returnedData => {
-                setCandy(returnedData);
+                setOrder(returnedData);
                 setLoaded(true);
             })
             .catch(err => {
@@ -41,41 +41,39 @@ const CandyList = () => {
     if (error) {
         return <Alert severity='error'>
             <AlertTitle>Error</AlertTitle>
-            Sorry could not get candy inventory
+            Sorry could not get order information
             </Alert>;
     }
 
-    if (candy.length === 0) {
+    if (order.length === 0) {
         return <Alert severity='error'>
             <AlertTitle>Error</AlertTitle>
-            No candy found
+            No orders found
             </Alert>;
     }
 
     return(
         <>
             <Typography variant="h4" gutterBottom>
-                Candy List
+                Order Information
             </Typography>
             <TableContainer component={Paper}>
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell>Candy Name</TableCell>
-                            <TableCell>Candy Type</TableCell>
-                            <TableCell>Flavor</TableCell>
-                            <TableCell>Price ($)</TableCell>
-                            <TableCell>Weight (oz.)</TableCell>
+                            <TableCell>Customer Name</TableCell>
+                            <TableCell>Order Date</TableCell>
+                            <TableCell>Status</TableCell>
+                            <TableCell>Customer Address </TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {candy.map(candy => (
-                            <TableRow key={candy.id}>
-                                <TableCell>{candy.name}</TableCell>
-                                <TableCell>{candy.type}</TableCell>
-                                <TableCell>{candy.flavor}</TableCell>
-                                <TableCell>{candy.price}</TableCell>
-                                <TableCell>{candy.weight}</TableCell>
+                        {order.map(order => (
+                            <TableRow key={order.id}>
+                                <TableCell>{order.customerName}</TableCell>
+                                <TableCell>{order.orderDate}</TableCell>
+                                <TableCell>{order.status}</TableCell>
+                                <TableCell>{order.customerAddress}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
@@ -85,4 +83,4 @@ const CandyList = () => {
     );
 };
 
-export default CandyList;
+export default Orders;

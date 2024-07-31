@@ -5,9 +5,9 @@ import {
     TableHead, TableRow, Paper,
     CircularProgress, Typography, Alert, AlertTitle} from '@mui/material';
 
-const WarehouseList = () => {
-    const url = "http://localhost:8080/orders";
-    const [order, setOrder] = useState([]);
+const OrderInfo = () => {
+    const url = "http://localhost:8080/orderItem";
+    const [orderItem, setOrderItem] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(null);
 
@@ -20,7 +20,7 @@ const WarehouseList = () => {
                 return response.json();
             })
             .then(returnedData => {
-                setOrder(returnedData);
+                setOrderItem(returnedData);
                 setLoaded(true);
             })
             .catch(err => {
@@ -45,10 +45,10 @@ const WarehouseList = () => {
             </Alert>;
     }
 
-    if (order.length === 0) {
+    if (orderItem.length === 0) {
         return <Alert severity='error'>
             <AlertTitle>Error</AlertTitle>
-            No orders found
+            No order information found
             </Alert>;
     }
 
@@ -61,19 +61,18 @@ const WarehouseList = () => {
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell>Customer Name</TableCell>
-                            <TableCell>Order Date</TableCell>
-                            <TableCell>Status</TableCell>
-                            <TableCell>Customer Address </TableCell>
+                            <TableCell>Customer</TableCell>
+                            <TableCell>Candy Ordered</TableCell>
+                            <TableCell>Total price</TableCell>
+                            <TableCell>Quantity </TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {order.map(order => (
-                            <TableRow key={order.id}>
-                                <TableCell>{order.customerName}</TableCell>
-                                <TableCell>{order.orderDate}</TableCell>
-                                <TableCell>{order.status}</TableCell>
-                                <TableCell>{order.customerAddress}</TableCell>
+                        {orderItem.map(orderItem => (
+                            <TableRow key={orderItem.id}>
+                                <TableCell>{orderItem.orderId.customerName}</TableCell>
+                                <TableCell>{orderItem.price}</TableCell>
+                                <TableCell>{orderItem.quantity}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
@@ -83,4 +82,4 @@ const WarehouseList = () => {
     );
 };
 
-export default WarehouseList;
+export default OrderInfo;

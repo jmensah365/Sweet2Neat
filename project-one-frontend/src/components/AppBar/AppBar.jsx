@@ -112,7 +112,7 @@ const AppBarComponent = () => {
                     onClose={handleOrdersMenuClose}
                 >
                     <MenuItem onClick={() => navigateTo('/orders')}>List of Orders</MenuItem>
-                    <MenuItem onClick={handleOrdersMenuClose}>Order Info</MenuItem>
+                    <MenuItem onClick={() => navigateTo('/orderInfo')}>Order Info</MenuItem>
                 </Menu>
                 <Button
                     color="inherit"
