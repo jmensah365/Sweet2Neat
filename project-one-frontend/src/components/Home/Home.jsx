@@ -1,11 +1,8 @@
-import React from 'react';
 import '../../index.css'
-
-import { useState,useEffect } from 'react';
-import { Typography, Container} from '@mui/material';
+import React, { useState,useEffect } from 'react';
+import {Container} from '@mui/material';
 import logoHome from '../../assets/CandyPics/CandyLogos/logo-no-background (1).png';
 import { useNavigate } from "react-router-dom";
-import CandyCard from '../Cards/CandyCard';
 
 
 
@@ -44,22 +41,9 @@ const Home = () => {
         <Container component='main' sx={{flexGrow: 1, py: 4}}>
             <br/>
             <br/>
-            <div className="home-background">
+            <div className='logo'>
             <img src={logoHome} alt='home logo' className="background-image"/>
             </div>
-            {/* <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/> */}
-            {/* <Typography variant='h2' gutterBottom>Types of candy</Typography>
-            <div>
-                <CandyCard/>
-            </div> */}
-
         </Container>
         </>
     )

@@ -3,8 +3,7 @@ import '../../components/Forms.css'
 import { useState, useEffect } from "react";
 import {
     Table, TableBody, TableCell, TableContainer,
-    TableHead, TableRow, Paper,
-    CircularProgress, Typography, Alert, AlertTitle,
+    TableHead, TableRow, Paper, Typography, Alert, AlertTitle,
     TextField, Button, IconButton, Snackbar, Box} from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit'
 import DeleteIcon from '@mui/icons-material/Delete'
@@ -110,21 +109,10 @@ const Orders = () => {
         setSuccessMessage('');
     };
 
-    if (!loaded) {
-        return <CircularProgress />;
-    }
-
     if (error) {
         return <Alert severity='error'>
             <AlertTitle>Error</AlertTitle>
             Sorry could not get order information
-            </Alert>;
-    }
-
-    if (order.length === 0) {
-        return <Alert severity='error'>
-            <AlertTitle>Error</AlertTitle>
-            No orders found
             </Alert>;
     }
 

@@ -2,8 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import {
     Table, TableBody, TableCell, TableContainer,
-    TableHead, TableRow, Paper,
-    CircularProgress, Typography, Alert, AlertTitle,
+    TableHead, TableRow, Paper, Typography, Alert, AlertTitle,
     TextField, Button, Box, IconButton, Snackbar
 } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit'
@@ -11,21 +10,24 @@ import DeleteIcon from '@mui/icons-material/Delete'
 
 
 const WarehouseList = () => {
-    //TODO put in env variables
     const url = "http://localhost:8080/warehouse";
+    
     //hook to keep track of warehouses
     const [warehouses, setWarehouses] = useState([]);
-    const [loaded, setLoaded] = useState(false);
-    const [error, setError] = useState(null);
     const [newWarehouse, setNewWarehouse] = useState({
         location: '',
         capacity: '',
         currentStock: ''
     });
 
+    const [loaded, setLoaded] = useState(false);
+    const [error, setError] = useState(null);
+    
+
     const [editingWarehouse, setEditingWarehouse] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
 
+    //Fetch warehouses from the backend on component mount
     useEffect(() => {
         fetch(url)
             .then(response => {
@@ -44,6 +46,7 @@ const WarehouseList = () => {
             });
     }, []);
 
+    //Handle input changes for both new and editing warehouse forms
     const handleInputChange = (e) => {
         const {name, value} = e.target;
         if(editingWarehouse){
@@ -53,6 +56,7 @@ const WarehouseList = () => {
         }
     };
 
+    //Handle form submission for adding or editing a warehouse
     const handleSubmit = (e) => {
         e.preventDefault();
         const warehouseData = editingWarehouse || newWarehouse;
@@ -76,6 +80,7 @@ const WarehouseList = () => {
         })
         .then(data => {
             if (editingWarehouse) {
+                //updating the warehouse in the list
                 setWarehouses(warehouses.map(w => w.id === data.id ? data : w))
                 setEditingWarehouse(null);
             }else{
@@ -90,10 +95,12 @@ const WarehouseList = () => {
         });
     };
 
+    // sets the warehouse to edit
     const handleEdit = (warehouse) => {
         setEditingWarehouse(warehouse);
     };
 
+    //handles the deletion of a warehouse
     const handleDelete = (id) => {
         fetch(`${url}/${id}`, {
             method: 'DELETE',
@@ -111,10 +118,6 @@ const WarehouseList = () => {
     const handleCloseSnackbar = () => {
         setSuccessMessage('');
     };
-
-    if (!loaded) {
-        return <CircularProgress />;
-    }
 
     if (error) {
         return <Alert severity='error'>

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import '../../components/Forms.css'
 import {
     Table, TableBody, TableCell, TableContainer,
-    TableHead, TableRow, Paper, CircularProgress, Typography, Box,
-    TextField, Alert, Button, IconButton, Snackbar
+    TableHead, TableRow, Paper, Typography, Box,
+    TextField, Button, IconButton, Snackbar
 } from '@mui/material';
 import Edit from '@mui/icons-material/Edit';
 import Delete from '@mui/icons-material/Delete';
@@ -13,20 +13,24 @@ const WarehouseStocks = () => {
     const stockUrl = 'http://localhost:8080/stock';
     const warehouseUrl = 'http://localhost:8080/warehouse';
     const candyUrl = 'http://localhost:8080/candy';
+    
+    //hooks that will hold our retrieved data
     const [stocks, setStocks] = useState([]);
     const [warehouses, setWarehouses] = useState([]);
     const [candies, setCandies] = useState([]);
-    const [loaded, setLoaded] = useState(false);
-    const [error, setError] = useState(null);
     const [newStock, setNewStock] = useState({
         candyId: '',
         warehouseId: '',
         quantity: '',
     });
+    
+    const [loaded, setLoaded] = useState(false);
+    const [error, setError] = useState(null);
 
     const [editingStock, setEditingStock] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
 
+    //Fetches data on component mount
     useEffect(() => {
         // Fetch stocks
         fetch(stockUrl)
@@ -50,6 +54,7 @@ const WarehouseStocks = () => {
             .catch(err => setError(err));
     }, []);
 
+    //Handles input change for new and existing stocks
     const handleInputChange = (e) => {
         const {name, value} = e.target;
         if(editingStock) {
@@ -59,6 +64,7 @@ const WarehouseStocks = () => {
         }
     };
 
+    //handles form submission when adding or editing a stock
     const handleSubmit = (e) => {
         e.preventDefault();
         const stockData = editingStock || newStock;
@@ -82,10 +88,11 @@ const WarehouseStocks = () => {
         })
         .then(data =>{
             if(editingStock) {
+                //update the stock in the list
                 setStocks(stocks.map(s =>s.id === data.id ? data : s))
                 setEditingStock(null);
             } else{
-                setStocks([...stocks, data]); //update the state with the new stock
+                setStocks([...stocks, data]); //update the list with the new stock
             }
             setNewStock({candyId: '', warehouseId: '', quantity: ''}); // reset form
             setSuccessMessage(editingStock ? 'Updated stock successfully!' : 'Added stock successfully');
@@ -93,15 +100,18 @@ const WarehouseStocks = () => {
         .catch(err => setError('Failed to update stock'));
     }
 
+    //Set the stock to edit
     const handleEdit = (stock) => {
         setEditingStock(stock);
     }
 
+    //Handles deletion of a stock
     const handleDeleteStock = (id) => {
         fetch(`${stockUrl}/${id}`,{
             method: 'DELETE'
         })
         .then (() => {
+            //removes deleted stock from list
             setStocks(stocks.filter(s => s.id !== id));
             setSuccessMessage('Warehouse deleted successfully');
         })
@@ -110,10 +120,6 @@ const WarehouseStocks = () => {
 
     const handleCloseSnackbar = () => {
         setSuccessMessage('');
-    }
-
-    if (!loaded) {
-        return <CircularProgress />;
     }
 
     if (error) {
@@ -125,7 +131,6 @@ const WarehouseStocks = () => {
         const warehouse = warehouses.find(w => w.id === id);
         return warehouse ? warehouse.location : 'Unknown Warehouse';
     };
-
     const getCandyName = (id) => {
         const candy = candies.find(c => c.candyId === id);
         return candy ? candy.name : 'Unknown Candy';

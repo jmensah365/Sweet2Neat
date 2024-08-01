@@ -3,9 +3,8 @@ import '../../components/Forms.css'
 import { useState, useEffect } from "react";
 import {
     Table, TableBody, TableCell, TableContainer,
-    TableHead, TableRow, Paper,
-    CircularProgress, Typography, Alert, AlertTitle,
-    TextField, Button, Box, IconButton, Snackbar, Icon
+    TableHead, TableRow, Paper, Typography, Alert, AlertTitle,
+    TextField, Button, Box, IconButton, Snackbar,
 } from '@mui/material';
     import EditIcon from '@mui/icons-material/Edit';
     import DeleteIcon from '@mui/icons-material/Delete';
@@ -112,21 +111,10 @@ const CandyList = () => {
         setSuccessMessage('');
     }
 
-    if (!loaded) {
-        return <CircularProgress />;
-    }
-
     if (error) {
         return <Alert severity='error'>
             <AlertTitle>Error</AlertTitle>
             Sorry could not get candy inventory
-            </Alert>;
-    }
-
-    if (candy.length === 0) {
-        return <Alert severity='error'>
-            <AlertTitle>Error</AlertTitle>
-            No candy found
             </Alert>;
     }
 

@@ -8,7 +8,6 @@ import WarehouseIcon from '@mui/icons-material/Warehouse';
 
 const AppBarComponent = () => {
     const [anchorEl, setAnchorEl] = useState(null);
-    const [drawerOpen, setDrawerOpen] = useState(false);
     const [productsMenuAnchorEl, setProductsMenuAnchorEl] = useState(null);
     const [warehouseMenuAnchorEl, setWarehouseMenuAnchorEl] = useState(null);
     const [ordersMenuAnchorEl, setOrdersMenuAnchorEl] = useState(null);
@@ -45,9 +44,6 @@ const AppBarComponent = () => {
         setAnchorEl(null);
     };
 
-    const toggleDrawer = () => {
-        setDrawerOpen(!drawerOpen);
-    };
 
     const handleProductsMenuOpen = (event) => {
         setProductsMenuAnchorEl(event.currentTarget)
@@ -77,7 +73,6 @@ const AppBarComponent = () => {
         navigate(path);
         handleProductsMenuClose();
         handleMenuClose();
-        setDrawerOpen(false);
     };
 
 
@@ -150,7 +145,9 @@ const AppBarComponent = () => {
                 </Button>
                 </div>
                 <div>
-                <Button variant='contained' color='primary' size='large' onClick={() => navigateTo('/warehouses')}>Add a warehouse</Button>
+                <Button variant='contained' color='primary' size='large' onClick={() => navigateTo('/warehouses')}>
+                    Add a warehouse
+                </Button>
                 <Badge
                     badgeContent={warehouses.length}
                     color="primary"

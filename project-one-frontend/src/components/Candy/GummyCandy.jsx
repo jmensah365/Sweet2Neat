@@ -2,8 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import {
     Table, TableBody, TableCell, TableContainer,
-    TableHead, TableRow, Paper,
-    CircularProgress, Typography, Alert, AlertTitle} from '@mui/material';
+    TableHead, TableRow, Paper, Typography} from '@mui/material';
 
 const GummyCandy = () => {
     const url = "http://localhost:8080/candy/getByType?type=Gummy Candy";

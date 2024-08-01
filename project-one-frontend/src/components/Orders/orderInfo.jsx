@@ -32,7 +32,6 @@ const OrderInfo = () => {
         fetch(orderItemUrl)
             .then(response => response.json())
             .then(returnedData => {
-                console.log('Fetched order items:', returnedData); // Log the response to debug
                 setOrderItem(returnedData);
                 setLoaded(true);
             })

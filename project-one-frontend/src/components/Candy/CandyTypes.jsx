@@ -4,7 +4,7 @@ import ChoclateCard from '../Cards/ChoclateCard';
 import SourCandyCard from '../Cards/SourCandyCard';
 import TaffyCard from '../Cards/TaffyCard';
 import LollipopCard from '../Cards/LollipopCard';
-import { Typography, Box, Card, CardMedia, Container, Grid, CardContent, Button, CardActions} from '@mui/material';
+import { Typography,Container, Grid} from '@mui/material';
 
 const CandyTypes = () => {
   return (
