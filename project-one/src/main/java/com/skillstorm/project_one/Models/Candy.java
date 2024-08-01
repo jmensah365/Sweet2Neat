@@ -14,10 +14,13 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 
+// Entity class representing a single candy
 @Entity
 @Table(name = "candy")
 public class Candy {
     
+    //Entity fields
+    //Autogenerating UID
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

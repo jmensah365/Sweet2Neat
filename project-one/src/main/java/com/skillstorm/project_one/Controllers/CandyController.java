@@ -21,7 +21,7 @@ import com.skillstorm.project_one.Models.Candy;
 import com.skillstorm.project_one.Services.CandyService;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
+//Linking frontend and backend using CORS
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/candy")
@@ -32,6 +32,7 @@ public class CandyController {
     public CandyController(CandyService service){
         this.service = service;
     }
+
 
     // Endpoint to retrieve all candies
     @GetMapping
@@ -45,11 +46,13 @@ public class CandyController {
         return service.findById(id);
     }
 
+    //Endpoint to retrieve candies by type
     @GetMapping("/getByType")
     public List<Candy> getCandyByType(@RequestParam String type) {
         return service.findByType(type);
     }
 
+    //Endpoint to retrieve candies by flavor
     @GetMapping("/getByFlavor")
     public List<Candy> getByFlavor(@RequestParam String flavor) {
         return service.findByFlavor(flavor);
@@ -64,6 +67,7 @@ public class CandyController {
         return service.createCandy(candy);
     }
 
+
     // Endpoint to update an existing candy
     @PutMapping("/{id}")
     public ResponseEntity<Candy> updateCandy(@PathVariable int id, @RequestBody Candy candy) {
@@ -72,6 +76,7 @@ public class CandyController {
         
     }
 
+    
     // Endpoint to delete a candy by its ID
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteCandyById(@PathVariable int id){

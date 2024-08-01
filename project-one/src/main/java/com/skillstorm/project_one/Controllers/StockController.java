@@ -22,6 +22,8 @@ import com.skillstorm.project_one.Services.StockService;
 
 import jakarta.validation.Valid;
 
+
+//Linking frontend and backend using CORS
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/stock")
@@ -33,11 +35,7 @@ public class StockController {
         this.service = service;
     }
     
-    //Endpoint to retrieve all stock items
-    // @GetMapping
-    // public Iterable<Stock> getAllStocks() {
-    //     return service.getAllStocks();
-    // }
+
 
     @GetMapping
     public ResponseEntity<List<StockDTO>> findAllStocks(){
@@ -51,6 +49,8 @@ public class StockController {
         return new ResponseEntity<>(stocks, HttpStatus.OK);
     }
 
+
+
     // Endpoint to add a new stock item
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
@@ -60,6 +60,8 @@ public class StockController {
         return new ResponseEntity<>(stock, HttpStatus.OK);
     }
 
+
+
     // Endpoint to update an existing stock item
     @PutMapping("/{id}")
     public ResponseEntity<Void> updateStock(@PathVariable Integer id, @RequestBody StockDTO stockDto) {
@@ -67,6 +69,8 @@ public class StockController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+
+    
     // Endpoint to delete a stock item by its ID
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteStock(@PathVariable Integer id) {

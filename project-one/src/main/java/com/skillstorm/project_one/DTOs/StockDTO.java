@@ -1,6 +1,8 @@
 package com.skillstorm.project_one.DTOs;
 
+//DTO for my stock entity to correctly initialize candy and warehouse IDs
 public class StockDTO {
+    //DTO fields
     private Integer id;
     private Integer candyId;
     private Integer warehouseId;
@@ -16,7 +18,7 @@ public class StockDTO {
         this.quantity = quantity;
     }
 
-
+    //Getters and Setters
     public Integer getId() {
         return id;
     }

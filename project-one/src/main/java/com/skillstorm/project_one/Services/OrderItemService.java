@@ -16,21 +16,23 @@ import com.skillstorm.project_one.Repositories.CandyRepo;
 import com.skillstorm.project_one.Repositories.OrderItemRepo;
 
 
-//service class to manage order information
+//service class to manage order item entity
 @Service
 public class OrderItemService {
-    //Injecting repo dependencies
+
+    // Autowire the orderRepo, candyRepo, and orderItem repo for dependency injection
     @Autowired
     private OrdersRepo orderRepo;
-
     @Autowired
     private CandyRepo candyRepo;
-    
     @Autowired
     private OrderItemRepo repo;
 
 
-    // Method to fetch all order items
+    /**
+     * Gets all order item entries and converts them to dtos
+     * @return a list of OrderItemDTOs
+     */
     public List<OrderItemDTO> findAll(){
         List<OrderItemDTO> dtos = new ArrayList<>();
         for (OrderItem orderItem : repo.findAll()) {
@@ -40,7 +42,11 @@ public class OrderItemService {
     }
 
 
-    //Method to fetch order items by its order id
+    /**
+     * Method to fetch order items by its order id
+     * @param id The id of the order entity
+     * @return a list of OrderItemDTOs
+     */
     public List<OrderItemDTO> findByOrderId(Integer id){
         List<OrderItemDTO> dtos = new ArrayList<>();
         for (OrderItem orderItem : repo.findByOrderId(id)) {
@@ -49,7 +55,11 @@ public class OrderItemService {
         return dtos;
     }
 
-    //converting order items to a DTO
+    /**
+     * converting order items to a DTO
+     * @param orderItem orderItem to be converted
+     * @return a converted orderItem to an orderItemDTO
+     */
     private OrderItemDTO convertToDTO(OrderItem orderItem) {
         OrderItemDTO dto = new OrderItemDTO();
         dto.setId(orderItem.getId());
@@ -61,7 +71,11 @@ public class OrderItemService {
     }
 
 
-    //Method to create a new order item
+    /**
+     * Method to create a new order item
+     * @param orderItemRequest the OrderItemDTO containing the necessary data
+     * @return the created orderItem
+     */
     public OrderItem createOrderItem(OrderItemDTO orderItemRequest){
         Candy candy = candyRepo.findById(orderItemRequest.getCandyId()).orElseThrow(() -> new NoSuchElementException("Candy does not exist"));
         Orders order = orderRepo.findById(orderItemRequest.getOrderId()).orElseThrow(() -> new NoSuchElementException("Order does not exist"));
@@ -74,7 +88,11 @@ public class OrderItemService {
         return repo.save(orderItem);
     }
 
-    //Method to update an exisitng order item
+    /**
+     * Method to update an exisitng order item
+     * @param id The ID of the existing order item entity
+     * @param stockDTO The order item dto object containing the updated data
+     */
     public void updateOrderItem(int id, OrderItemDTO orderItemDto){
         if (orderItemDto.getId() == null){
             throw new NoSuchElementException("Sorry that id does not exist");
@@ -90,7 +108,10 @@ public class OrderItemService {
         repo.save(orderItem);
     }
 
-    //Method to delete an order item using its id
+    /**
+     * Delete a order item entity by its ID.
+     * @param id The ID of the order item entity to delete
+     */
     public void deleteOrderItem(int id){
         repo.deleteById(id);
     }

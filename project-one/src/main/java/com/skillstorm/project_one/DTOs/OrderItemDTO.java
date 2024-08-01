@@ -2,7 +2,11 @@ package com.skillstorm.project_one.DTOs;
 
 import java.math.BigDecimal;
 
+
+//DTO for my order item entity to correctly initialize order and candy ID's
 public class OrderItemDTO {
+    
+    //DTO fields
     private Integer id;
     private Integer orderId;
     private Integer candyId;
@@ -11,7 +15,6 @@ public class OrderItemDTO {
 
     public OrderItemDTO(){}
 
-    
     public OrderItemDTO(Integer id, Integer orderId, Integer candyId, BigDecimal price, Integer quantity) {
         this.id = id;
         this.orderId = orderId;
@@ -22,7 +25,7 @@ public class OrderItemDTO {
 
     
 
-
+    //Getters and Setters
     public Integer getId() {
         return id;
     }

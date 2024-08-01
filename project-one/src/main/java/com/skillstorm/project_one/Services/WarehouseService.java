@@ -6,57 +6,79 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 import com.skillstorm.project_one.Models.Stock;
 import com.skillstorm.project_one.Models.Warehouse;
 import com.skillstorm.project_one.Repositories.StockRepo;
 import com.skillstorm.project_one.Repositories.WarehouseRepo;
 
+/**
+ * Service class for managing warehouse-related operations.
+ */
 @Service
 public class WarehouseService {
-    //Injecting Stock and Warehouse Repository dependency
+
+    // Injecting Stock and Warehouse repo dependencies
     @Autowired
     private StockRepo stockRepo;
     @Autowired
     private WarehouseRepo warehouseRepo;
 
-
-    //For get mappings
-    public Iterable<Warehouse> findAll(){
+    /**
+     * Retrieve all Warehouse entities.
+     * @return Iterable of Warehouse entities
+     */
+    public Iterable<Warehouse> findAll() {
         return warehouseRepo.findAll();
     }
-    //For get mappings
-    public Optional<Warehouse> findById(int id){
+
+    /**
+     * Retrieve a Warehouse by its ID.
+     * @param id The ID of the Warehouse
+     * @return Optional containing the Warehouse entity, if found
+     */
+    public Optional<Warehouse> findById(int id) {
         return warehouseRepo.findById(id);
     }
 
-
-    //For post mappings
-    public Warehouse createWarehouse(Warehouse warehouse){
+    /**
+     * Create a new Warehouse entity and update its stock information.
+     * @param warehouse The Warehouse entity to create
+     * @return The created Warehouse entity
+     */
+    public Warehouse createWarehouse(Warehouse warehouse) {
         Warehouse savedWarehouse = warehouseRepo.save(warehouse);
         updateStockForWarehouse(savedWarehouse);
         return savedWarehouse;
     }
 
-    //For put mappings
-    public void updateWarehouse(int id, Warehouse warehouse){
-        Warehouse existingWarehouse = warehouseRepo.findById(id).orElseThrow(() -> new NoSuchElementException("Warehouse not found"));
+    /**
+     * Update an existing Warehouse entity.
+     * @param id The ID of the existing Warehouse 
+     * @param warehouse The Warehouse entity with updated information
+     */
+    public void updateWarehouse(int id, Warehouse warehouse) {
+        Warehouse existingWarehouse = warehouseRepo.findById(id)
+                .orElseThrow(() -> new NoSuchElementException("Warehouse not found"));
 
         existingWarehouse.setLocation(warehouse.getLocation());
         existingWarehouse.setCapacity(warehouse.getCapacity());
-        //existingWarehouse.setCurrentStock(warehouse.getCurrentStock());
         Warehouse updatedWarehouse = warehouseRepo.save(existingWarehouse);
         updateStockForWarehouse(updatedWarehouse);
-
     }
 
-
-    //For delete mappings
-    public void deleteWarehouse(int id){
+    /**
+     * Delete a Warehouse by its ID.
+     * @param id The ID of the Warehouse entity to delete
+     */
+    public void deleteWarehouse(int id) {
         warehouseRepo.deleteById(id);
     }
 
-    private void updateStockForWarehouse(Warehouse warehouse){
+    /**
+     * Update the current stock of a Warehouse based on its associated stocks.
+     * @param warehouse The Warehouse entity to update
+     */
+    private void updateStockForWarehouse(Warehouse warehouse) {
         Iterable<Stock> stocks = stockRepo.findByWarehouse(warehouse);
         int totalQuantity = 0;
         for (Stock stock : stocks) {

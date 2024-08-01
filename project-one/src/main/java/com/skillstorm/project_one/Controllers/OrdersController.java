@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
+//Linking frontend and backend using CORS
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/orders")
@@ -30,6 +31,8 @@ public class OrdersController {
     public OrdersController(OrdersService service){
         this.service = service;
     }
+
+
 
     //Endpoint to retrieve all orders
     @GetMapping
@@ -49,12 +52,16 @@ public class OrdersController {
         return service.getOrdersByStatus(status);
     }
 
+
+
     //Endpoint to add a new order
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     public Orders createOrders (@RequestBody Orders orders) {
         return service.createOrders(orders);
     }
+
+
 
     //Endpoint to update an existing order
     @PutMapping("/{id}")
@@ -64,6 +71,8 @@ public class OrdersController {
         
     }
 
+
+    
     //Endpoint to delete an existing order by its id
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteOrderById(@PathVariable int id){

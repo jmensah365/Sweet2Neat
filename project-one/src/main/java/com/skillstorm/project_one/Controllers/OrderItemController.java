@@ -20,6 +20,8 @@ import com.skillstorm.project_one.Models.OrderItem;
 import com.skillstorm.project_one.Services.OrderItemService;
 import org.springframework.web.bind.annotation.PutMapping;
 
+
+//Linking frontend and backend using CORS
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/orderItem")
@@ -31,6 +33,7 @@ public class OrderItemController {
         this.service = service;
     }
 
+
     // Endpoint to retrieve all order items
     @GetMapping
     public ResponseEntity<Iterable<OrderItemDTO>>findAll(){
@@ -38,17 +41,12 @@ public class OrderItemController {
         return new ResponseEntity<>(orderItem, HttpStatus.OK);
     }
 
-    // // Endpoint to retrieve an order item by its ID
-    // @GetMapping("/{id}")
-    // public Optional<OrderItem> getOrderItemById(@PathVariable int id){
-    //     return service.getOrderItemById(id);
-    // }
-
     //Endpoint to retrieve an order item by its orderId
     @GetMapping("/order/{orderId}")
     public List<OrderItemDTO> getOrderItemsByOrderId(@PathVariable int orderId){
         return service.findByOrderId(orderId);
     }
+
 
     // Endpoint to add a new order item
     @PostMapping
@@ -58,6 +56,7 @@ public class OrderItemController {
         OrderItem createdOrderItem = service.createOrderItem(orderItem);
         return ResponseEntity.ok(createdOrderItem);
     }
+    
 
     // Endpoint to update an existing order item
     @PutMapping("/{id}")

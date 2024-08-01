@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 
 
+//Linking frontend and backend using CORS
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/warehouse")
@@ -31,11 +32,15 @@ public class WarehouseController {
         this.service = service;
     }
 
+
+    
     //Endpoint to retrieve all warehouses
     @GetMapping
     public Iterable<Warehouse> getAllWarehouses() {
         return service.findAll();
     }
+
+
 
     //Endpoint to create a new warehouse
     @PostMapping
@@ -44,6 +49,8 @@ public class WarehouseController {
         return service.createWarehouse(warehouse);
     }
 
+
+
     //Endpoint to update an existing warehouse
     @PutMapping("/{id}")
     public ResponseEntity<Warehouse> updateWarehouse(@PathVariable int id, @RequestBody Warehouse warehouse) {
@@ -51,6 +58,8 @@ public class WarehouseController {
         return new ResponseEntity<>(HttpStatus.OK);
         
     }
+
+
 
     //Endpoint to delete a warehouse by its id
     @DeleteMapping("/{id}")

@@ -14,6 +14,9 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 
+/**
+ * Entity class representing an item in an order.
+ */
 @Entity
 @Table(name = "orderitem")
 public class OrderItem {
@@ -22,24 +25,31 @@ public class OrderItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    // Many-to-One relationship with Orders entity.
+    // Each OrderItem is linked to a single Orders entity.
     @ManyToOne(fetch = FetchType.LAZY)
     @NotNull
     @JoinColumn(name = "orders_id")
     private Orders orders;
 
+    // Many-to-One relationship with Candy entity.
+    // Each OrderItem is linked to a single Candy entity.
     @ManyToOne(fetch = FetchType.LAZY)
     @NotNull
     @JoinColumn(name = "candy_id")
     private Candy candy;
 
+    // Price of the item in the order, must be positive or zero.
     @Column
     @PositiveOrZero
     private BigDecimal price;
 
+    // Quantity of the item in the order, must be positive or zero.
     @Column
     @PositiveOrZero
     private Integer quantity;
 
+    // Getters and Setters
     public Integer getId() {
         return id;
     }
@@ -88,14 +98,10 @@ public class OrderItem {
         this.quantity = quantity;
     }
 
+    // Override toString method to provide a string representation of the OrderItem object.
     @Override
     public String toString() {
         return "OrderItem [id=" + id + ", orders=" + orders + ", candy=" + candy + ", price=" + price + ", quantity="
                 + quantity + "]";
     }
-
-
-    
-
-    
 }
