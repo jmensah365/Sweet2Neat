@@ -15,8 +15,11 @@ import com.skillstorm.project_one.Models.OrderItem;
 import com.skillstorm.project_one.Repositories.CandyRepo;
 import com.skillstorm.project_one.Repositories.OrderItemRepo;
 
+
+//service class to manage order information
 @Service
 public class OrderItemService {
+    //Injecting repo dependencies
     @Autowired
     private OrdersRepo orderRepo;
 
@@ -27,6 +30,7 @@ public class OrderItemService {
     private OrderItemRepo repo;
 
 
+    // Method to fetch all order items
     public List<OrderItemDTO> findAll(){
         List<OrderItemDTO> dtos = new ArrayList<>();
         for (OrderItem orderItem : repo.findAll()) {
@@ -36,6 +40,7 @@ public class OrderItemService {
     }
 
 
+    //Method to fetch order items by its order id
     public List<OrderItemDTO> findByOrderId(Integer id){
         List<OrderItemDTO> dtos = new ArrayList<>();
         for (OrderItem orderItem : repo.findByOrderId(id)) {
@@ -44,6 +49,7 @@ public class OrderItemService {
         return dtos;
     }
 
+    //converting order items to a DTO
     private OrderItemDTO convertToDTO(OrderItem orderItem) {
         OrderItemDTO dto = new OrderItemDTO();
         dto.setId(orderItem.getId());
@@ -55,10 +61,9 @@ public class OrderItemService {
     }
 
 
+    //Method to create a new order item
     public OrderItem createOrderItem(OrderItemDTO orderItemRequest){
-       // System.out.println("Looking up Candy with ID: " + orderItemRequest.getCandy().getCandyId());
         Candy candy = candyRepo.findById(orderItemRequest.getCandyId()).orElseThrow(() -> new NoSuchElementException("Candy does not exist"));
-        //System.out.println("Looking up Order with ID: " + orderItemRequest.getOrders().getId());
         Orders order = orderRepo.findById(orderItemRequest.getOrderId()).orElseThrow(() -> new NoSuchElementException("Order does not exist"));
         
         OrderItem orderItem = new OrderItem();
@@ -69,7 +74,11 @@ public class OrderItemService {
         return repo.save(orderItem);
     }
 
+    //Method to update an exisitng order item
     public void updateOrderItem(int id, OrderItemDTO orderItemDto){
+        if (orderItemDto.getId() == null){
+            throw new NoSuchElementException("Sorry that id does not exist");
+        }
         Candy candy = candyRepo.findById(orderItemDto.getCandyId()).orElseThrow(() -> new NoSuchElementException("Candy does not exist"));
         Orders order = orderRepo.findById(orderItemDto.getOrderId()).orElseThrow(() -> new NoSuchElementException("Order does not exist"));
         OrderItem orderItem = new OrderItem();
@@ -81,6 +90,7 @@ public class OrderItemService {
         repo.save(orderItem);
     }
 
+    //Method to delete an order item using its id
     public void deleteOrderItem(int id){
         repo.deleteById(id);
     }

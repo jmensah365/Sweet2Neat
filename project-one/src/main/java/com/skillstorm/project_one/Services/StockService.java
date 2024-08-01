@@ -26,10 +26,6 @@ public class StockService {
     @Autowired
     private WarehouseRepo warehouseRepo;
 
-    
-    // public Iterable<Stock> getAllStocks(){
-    //     return stockRepo.findAll();
-    // }
 
     public List<StockDTO> getAllStocksDTO(){
         List<StockDTO> dtos = new ArrayList<>();
@@ -69,22 +65,37 @@ public class StockService {
         stock.setCandy(candy);
         stock.setWarehouse(warehouse);
         stock.setQuantity(stockDTO.getQuantity());
+        warehouse.setCurrentStock(warehouse.getCurrentStock() + stockDTO.getQuantity());
+        warehouseRepo.save(warehouse);
         return stockRepo.save(stock);
     }
 
     public void updateStock(int id, StockDTO stockDTO){
         if(!stockRepo.existsById(id)) throw new NoSuchElementException("Stock with id " + id + " does not exits");
+        Stock existingStock = stockRepo.findById(id).orElseThrow(() -> new NoSuchElementException("Stock could not be found"));
+        int oldQuantity = existingStock.getQuantity();
+        
         Candy candy = candyRepo.findById(stockDTO.getCandyId()).orElseThrow(() -> new NoSuchElementException("Candy not found"));
         Warehouse warehouse = warehouseRepo.findById(stockDTO.getWarehouseId()).orElseThrow(() -> new NoSuchElementException("Warehouse not found"));
-        Stock stock = new Stock();
-        stock.setId(id);
-        stock.setCandy(candy);
-        stock.setWarehouse(warehouse);
-        stock.setQuantity(stockDTO.getQuantity());
-        stockRepo.save(stock);
+        
+        existingStock.setCandy(candy);
+        existingStock.setWarehouse(warehouse);
+        existingStock.setQuantity(stockDTO.getQuantity());
+
+        int quantityDifference = stockDTO.getQuantity() - oldQuantity;
+        warehouse.setCurrentStock(quantityDifference + warehouse.getCurrentStock());
+        warehouseRepo.save(warehouse);
+        
+        stockRepo.save(existingStock);
     }
 
     public void deleteStock(int id){
+        Stock existingStock = stockRepo.findById(id).orElseThrow(() -> new NoSuchElementException("Stock could not be found"));
+        Warehouse warehouse = existingStock.getWarehouse();
+
+        warehouse.setCurrentStock(warehouse.getCurrentStock() - existingStock.getQuantity());
+        warehouseRepo.save(warehouse);
+        
         stockRepo.deleteById(id);
     }
 

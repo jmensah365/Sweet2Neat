@@ -6,10 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.skillstorm.project_one.Models.Candy;
+
 import com.skillstorm.project_one.Models.Stock;
 import com.skillstorm.project_one.Models.Warehouse;
-import com.skillstorm.project_one.Repositories.CandyRepo;
 import com.skillstorm.project_one.Repositories.StockRepo;
 import com.skillstorm.project_one.Repositories.WarehouseRepo;
 
@@ -20,8 +19,6 @@ public class WarehouseService {
     private StockRepo stockRepo;
     @Autowired
     private WarehouseRepo warehouseRepo;
-    @Autowired
-    private CandyRepo candyRepo;
 
 
     //For get mappings
@@ -47,9 +44,9 @@ public class WarehouseService {
 
         existingWarehouse.setLocation(warehouse.getLocation());
         existingWarehouse.setCapacity(warehouse.getCapacity());
-        existingWarehouse.setCurrentStock(warehouse.getCurrentStock());
-        Warehouse updatWarehouse = warehouseRepo.save(existingWarehouse);
-        updateStockForWarehouse(updatWarehouse);
+        //existingWarehouse.setCurrentStock(warehouse.getCurrentStock());
+        Warehouse updatedWarehouse = warehouseRepo.save(existingWarehouse);
+        updateStockForWarehouse(updatedWarehouse);
 
     }
 
@@ -60,18 +57,12 @@ public class WarehouseService {
     }
 
     private void updateStockForWarehouse(Warehouse warehouse){
-        //Retrieve the existing stock record for the warehouse, if there is any
-        Stock stock = stockRepo.findByWarehouse(warehouse);
-        if(stock != null){
-            stock.setQuantity(warehouse.getCurrentStock() + stock.getQuantity());
-            stockRepo.save(stock);
-        } else {
-            Stock newStock = new Stock();
-            newStock.setWarehouse(warehouse);
-            newStock.setQuantity(warehouse.getCurrentStock() + newStock.getQuantity());
-            Candy defaultCandy = candyRepo.findById(10). orElseThrow(() -> new NoSuchElementException("Candy not found"));
-            newStock.setCandy(defaultCandy);
-            stockRepo.save(newStock);
+        Iterable<Stock> stocks = stockRepo.findByWarehouse(warehouse);
+        int totalQuantity = 0;
+        for (Stock stock : stocks) {
+            totalQuantity += stock.getQuantity();
         }
+        warehouse.setCurrentStock(totalQuantity);
+        warehouseRepo.save(warehouse);
     }
 }
