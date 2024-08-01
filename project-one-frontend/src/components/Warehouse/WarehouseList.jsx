@@ -55,7 +55,7 @@ const WarehouseList = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const warehouseData = editingWarehouse || newWarehouse
+        const warehouseData = editingWarehouse || newWarehouse;
         const method = editingWarehouse ? 'PUT' : 'POST';
         const endpoint = editingWarehouse ? `${url}/${editingWarehouse.id}` : url;
 
@@ -78,7 +78,6 @@ const WarehouseList = () => {
             if (editingWarehouse) {
                 setWarehouses(warehouses.map(w => w.id === data.id ? data : w))
                 setEditingWarehouse(null);
-                console.log(warehouses.length);
             }else{
                 setWarehouses([...warehouses, data]);
             }
@@ -92,8 +91,6 @@ const WarehouseList = () => {
     };
 
     const handleEdit = (warehouse) => {
-        console.log('Editing warehouse:',warehouse);
-        console.log(warehouses.length);
         setEditingWarehouse(warehouse);
     };
 
@@ -180,6 +177,7 @@ const WarehouseList = () => {
                 <Table>
                     <TableHead>
                         <TableRow>
+                            <TableCell>Warehouse Id</TableCell>
                             <TableCell>Location</TableCell>
                             <TableCell>Capacity</TableCell>
                             <TableCell>Current Stock</TableCell>
@@ -189,6 +187,7 @@ const WarehouseList = () => {
                     <TableBody>
                         {warehouses.map(warehouse => (
                             <TableRow key={warehouse.id}>
+                                <TableCell>{warehouse.id}</TableCell>
                                 <TableCell>{warehouse.location}</TableCell>
                                 <TableCell>{warehouse.capacity}</TableCell>
                                 <TableCell>{warehouse.currentStock}</TableCell>

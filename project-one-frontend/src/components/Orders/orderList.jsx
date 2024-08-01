@@ -140,7 +140,7 @@ const Orders = () => {
                     margin='normal'
                 />
                 <TextField
-                    label='Order Data'
+                    label='Order Date'
                     name='orderDate'
                     value={editingOrders ? editingOrders.orderDate : newOrder.orderDate}
                     onChange={handleInputChange}

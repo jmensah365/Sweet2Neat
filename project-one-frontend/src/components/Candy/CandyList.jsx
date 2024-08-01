@@ -187,12 +187,13 @@ const CandyList = () => {
                 )}
             </Box>
             <Typography variant="h4" gutterBottom>
-                Candy List
+                Candy Inventory
             </Typography>
             <TableContainer component={Paper}>
                 <Table>
                     <TableHead>
                         <TableRow>
+                        <TableCell>Candy ID</TableCell>
                             <TableCell>Candy Name</TableCell>
                             <TableCell>Candy Type</TableCell>
                             <TableCell>Flavor</TableCell>
@@ -203,6 +204,7 @@ const CandyList = () => {
                     <TableBody>
                         {candy.map(candy => (
                             <TableRow key={candy.candyId}>
+                                <TableCell>{candy.candyId}</TableCell>
                                 <TableCell>{candy.name}</TableCell>
                                 <TableCell>{candy.type}</TableCell>
                                 <TableCell>{candy.flavor}</TableCell>

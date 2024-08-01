@@ -12,6 +12,7 @@ import ChocolateCandy from './components/Candy/ChocolateCandy';
 import SourCandy from './components/Candy/SourCandy';
 import TaffyCandy from './components/Candy/TaffyCandy'
 import LollipopCandy from './components/Candy/LollipopCandy'
+import WarehouseStocks from './components/Stocks/stockByWarehouse';
 import './App.css'
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path='/sourCandy' element={<SourCandy/>} />
           <Route path='/taffyCandy' element={<TaffyCandy/>} />
           <Route path='/lollipopCandy' element={<LollipopCandy/>} />
+          <Route path='/stocks' element={<WarehouseStocks/>} />
           <Route path='/about' element={<About/>} />
         </Routes>
       </Router> 

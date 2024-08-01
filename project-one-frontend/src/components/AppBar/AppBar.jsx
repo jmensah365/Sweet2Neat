@@ -82,7 +82,7 @@ const AppBarComponent = () => {
                     open={Boolean(productsMenuAnchorEl)}
                     onClose={handleProductsMenuClose}
                 >
-                    <MenuItem onClick={() => navigateTo('/candy')}>Candy list</MenuItem>
+                    <MenuItem onClick={() => navigateTo('/candy')}>Candy Inventory</MenuItem>
                     <MenuItem onClick={() => navigateTo('/candyTypes')}>Candy categories</MenuItem>
                 </Menu>
 
@@ -99,6 +99,7 @@ const AppBarComponent = () => {
                     onClose={handleWarehouseMenuClose}
                 >
                     <MenuItem onClick={() => navigateTo('/warehouses')}>Warehouse List</MenuItem>
+                    <MenuItem onClick={() => navigateTo('/stocks')}>Warehouse Stock</MenuItem>
                 </Menu>
                 <Button
                     color="inherit"
