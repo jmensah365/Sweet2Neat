@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../components/Forms.css';
 import { useState, useEffect } from "react";
 import {
     Table, TableBody, TableCell, TableContainer,
@@ -127,7 +128,7 @@ const OrderInfo = () => {
 
     return(
         <>
-            <Box component='form' onSubmit={handleSubmit} sx={{mb:2}}>
+            <Box component='form' onSubmit={handleSubmit} sx={{ mb: 2, mt: 8, padding: 2, borderRadius: 1, boxShadow: 10 }}>
                 <TextField
                     label='Order Id'
                     name='orderId'
@@ -136,6 +137,7 @@ const OrderInfo = () => {
                     required
                     fullWidth
                     margin='normal'
+                    className='textField'
                 />
                 <TextField
                     label='Candy Id'
@@ -145,6 +147,7 @@ const OrderInfo = () => {
                     required
                     fullWidth
                     margin='normal'
+                    className='textField'
                 />
                 <TextField
                     label='Price'
@@ -154,6 +157,7 @@ const OrderInfo = () => {
                     required
                     fullWidth
                     margin='normal'
+                    className='textField'
                 />
                 <TextField
                     label='Quantity'
@@ -163,6 +167,7 @@ const OrderInfo = () => {
                     required
                     fullWidth
                     margin='normal'
+                    className='textField'
                 />
             <Button type='submit' variant='contained' color='primary'>
                     {editingOrderItem ? 'Update order item' : 'Add order item'}

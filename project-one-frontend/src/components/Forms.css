@@ -1,0 +1,22 @@
+.textField {
+    background-color: lavender;
+    font-size: 1.2rem;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.textField .MuiInput-underline:before {
+    border-bottom-color: grey;
+}
+
+.textField .MuiInput-underline:hover:before {
+    border-bottom-color: black;
+}
+
+.textField .MuiInput-underline:after {
+    border-bottom-color: rgb(0, 0, 0);
+}
+
+.textField input {
+    color: black;
+}

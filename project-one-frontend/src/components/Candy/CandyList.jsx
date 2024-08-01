@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../components/Forms.css'
 import { useState, useEffect } from "react";
 import {
     Table, TableBody, TableCell, TableContainer,
@@ -131,7 +132,8 @@ const CandyList = () => {
 
     return(
         <>
-            <Box component='form' onSubmit={handleSubmit} sx={{mb: 2}}>
+            
+            <Box component='form' onSubmit={handleSubmit} sx={{ mb: 2, mt: 8, padding: 2, borderRadius: 1, boxShadow: 10 }}>
                 <TextField
                     label='Name'
                     name='name'
@@ -140,6 +142,7 @@ const CandyList = () => {
                     fullWidth
                     required
                     margin='normal'
+                    className='textField'
                 />
                 <TextField
                     label='Type'
@@ -149,6 +152,7 @@ const CandyList = () => {
                     fullWidth
                     required
                     margin='normal'
+                    className='textField'
                 />
                 <TextField
                     label='Flavor'
@@ -158,6 +162,7 @@ const CandyList = () => {
                     fullWidth
                     required
                     margin='normal'
+                    className='textField'
                 />
                 <TextField
                     label='Price'
@@ -167,6 +172,7 @@ const CandyList = () => {
                     fullWidth
                     required
                     margin='normal'
+                    className='textField'
                 />
                 <TextField
                     label='Weight'
@@ -176,6 +182,7 @@ const CandyList = () => {
                     fullWidth
                     required
                     margin='normal'
+                    className='textField'
                 />
                 <Button type='submit' variant='contained' color='primary'>
                     {editingCandy ? 'Update Candy' : 'Add Candy'}

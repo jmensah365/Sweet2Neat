@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../../components/Forms.css'
 import {
     Table, TableBody, TableCell, TableContainer,
     TableHead, TableRow, Paper, CircularProgress, Typography, Box,
@@ -132,24 +133,26 @@ const WarehouseStocks = () => {
 
     return (
         <>
-        <Box component='form' onSubmit={handleSubmit} sx={{mb:2}}>
+        <Box component='form' onSubmit={handleSubmit} sx={{ mb: 2, mt: 8, padding: 2, borderRadius: 1, boxShadow: 10 }}>
             <TextField
-                label='Candy Name'
+                label='Candy Id'
                 name='candyId'
                 value={editingStock ? editingStock.candyId : newStock.candyId}
                 onChange={handleInputChange}
                 required
                 fullWidth
                 margin='normal'
+                className='textField'
             />
             <TextField
-                label='Warehouse Address'
+                label='Warehouse Id'
                 name='warehouseId'
                 value={editingStock ? editingStock.warehouseId : newStock.warehouseId}
                 onChange={handleInputChange}
                 required
                 fullWidth
                 margin='normal'
+                className='textField'
             />
             <TextField
                 label='Quantity'
@@ -159,6 +162,7 @@ const WarehouseStocks = () => {
                 required
                 fullWidth
                 margin='normal'
+                className='textField'
             />
             <Button type='submit' variant='contained' color='primary'>
                     {editingStock ? 'Update stock' : 'Add stock'}

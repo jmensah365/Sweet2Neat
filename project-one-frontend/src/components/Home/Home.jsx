@@ -1,11 +1,13 @@
 import React from 'react';
 import '../../index.css'
+
 import { useState,useEffect } from 'react';
-//import './Home.css'
-import { Typography, Box, Card, CardMedia, Container, Grid, CardContent, Button, CardActions} from '@mui/material';
+import { Typography, Container} from '@mui/material';
 import logoHome from '../../assets/CandyPics/CandyLogos/logo-no-background (1).png';
 import { useNavigate } from "react-router-dom";
 import CandyCard from '../Cards/CandyCard';
+
+
 
 
 
@@ -45,21 +47,18 @@ const Home = () => {
             <div className="home-background">
             <img src={logoHome} alt='home logo' className="background-image"/>
             </div>
+            {/* <br/>
             <br/>
             <br/>
             <br/>
             <br/>
-            {/* <Box sx={{textAlign:'center', mb: 4}}>
-                <Typography variant='h4' gutterBottom>Manage your candy stock with efficiency</Typography>
-                <Button variant='contained' color='primary' size='large' onClick={() => navigateTo('/warehouses')}>Add a warehouse</Button>
-                <Button variant='contained' color='primary' size='large' onClick={() => navigateTo('/stocks')}>Manage stocks</Button>
-                <Typography variant='h3' gutterBottom>Real-Time tracking of warehouses</Typography>
-                <Typography variant='h2' gutterBottom>Warehouse count: {warehouses.length} </Typography>
-            </Box>  */}
-            <Typography variant='h2' gutterBottom>Types of candy</Typography>
+            <br/>
+            <br/>
+            <br/> */}
+            {/* <Typography variant='h2' gutterBottom>Types of candy</Typography>
             <div>
                 <CandyCard/>
-            </div>
+            </div> */}
 
         </Container>
         </>

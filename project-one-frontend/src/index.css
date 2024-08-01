@@ -67,5 +67,14 @@ button:focus-visible {
   }
 }
 
+.custom-badge .MuiBadge-dot {
+  width: 100px;
+  height: 100px;
+}
+
+.custom-icon {
+  font-size: 100px; /* Adjust the size as needed */
+}
+
 
 

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import { AppBar, Toolbar, IconButton, Typography, Button, Menu, MenuItem, Drawer, List, ListItemButton, Divider } from "@mui/material";
+import React, { useState, useEffect } from "react";
+import { AppBar, Toolbar, IconButton, Button, Menu, MenuItem, Badge } from "@mui/material";
 import candyImage from '../../assets/CandyPics/CandyLogos/logo.png'
 import { useNavigate } from "react-router-dom";
 import './AppBar.css'
+import WarehouseIcon from '@mui/icons-material/Warehouse';
 
 
 const AppBarComponent = () => {
@@ -12,10 +13,33 @@ const AppBarComponent = () => {
     const [warehouseMenuAnchorEl, setWarehouseMenuAnchorEl] = useState(null);
     const [ordersMenuAnchorEl, setOrdersMenuAnchorEl] = useState(null);
     const navigate = useNavigate();
+    const url = "http://localhost:8080/warehouse";
+    const [warehouses, setWarehouses] = useState([]);
+    const [error, setError] = useState(null);
+    const [loaded, setLoaded] = useState(false);
 
     const handleMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
     };
+
+    useEffect(() => {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(returnedData => {
+                setWarehouses(returnedData);
+                setLoaded(true);
+            })
+            .catch(err => {
+                setError(err);
+                setLoaded(true);
+            });
+    }, []);
+
 
     const handleMenuClose = () => {
         setAnchorEl(null);
@@ -60,7 +84,8 @@ const AppBarComponent = () => {
     return (
         <>
         <AppBar position="fixed">
-            <Toolbar className="appbar">
+            <Toolbar className="appbar" style={{justifyContent: 'space-between'}}>
+                <div>
                 <IconButton
                     edge="start"
                     color="inherit"
@@ -123,28 +148,27 @@ const AppBarComponent = () => {
                 >
                     About
                 </Button>
+                </div>
+                <div>
+                <Button variant='contained' color='primary' size='large' onClick={() => navigateTo('/warehouses')}>Add a warehouse</Button>
+                <Badge
+                    badgeContent={warehouses.length}
+                    color="primary"
+                    sx={{
+                        '& .MuiBadge-dot': {
+                        width: 30,  
+                        height: 30, 
+                        },
+                        '& .MuiBadge-icon': {
+                        fontSize: '2rem', 
+                        },
+                    }}
+                    >
+                <WarehouseIcon color="action" sx={{ fontSize: 40 }} /> 
+                </Badge>
+                </div>
             </Toolbar>
         </AppBar>
-        {/* <Drawer
-            anchor="right"
-            open={drawerOpen}
-            onClose={toggleDrawer}
-        >
-            <div>
-                <IconButton onClick={toggleDrawer}>
-                    <img src={candyImage} alt="Menu Icon" style={{width: 24, height: 24}} />
-                </IconButton>
-                <Divider />
-                <List>
-                    <ListItemButton onClick={toggleDrawer}>
-                        <Typography variant="body1">Home</Typography>
-                    </ListItemButton>
-                    <ListItemButton onClick={toggleDrawer}>
-                        <Typography variant="body1">About</Typography>
-                    </ListItemButton>
-                </List>
-            </div>
-        </Drawer> */}
         </>
     );
 };

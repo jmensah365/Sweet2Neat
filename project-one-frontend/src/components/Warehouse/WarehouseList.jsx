@@ -123,17 +123,10 @@ const WarehouseList = () => {
             </Alert>;
     }
 
-    if (warehouses.length === 0) {
-        return <Alert severity='error'>
-            <AlertTitle>Error</AlertTitle>
-            No warehouses found
-            </Alert>;
-    }
-
     return(
         <>
             
-            <Box component="form" onSubmit={handleSubmit} sx={{mb: 2}}>
+            <Box component="form" onSubmit={handleSubmit} sx={{ mb: 2, mt: 8, padding: 2, borderRadius: 1, boxShadow: 10 }}>
                 <TextField
                     label='Location'
                     name='location'
@@ -142,6 +135,7 @@ const WarehouseList = () => {
                     fullWidth
                     required
                     margin='normal'
+                    className='textField'
                 />
                 <TextField
                     label='Capacity'
@@ -151,6 +145,8 @@ const WarehouseList = () => {
                     fullWidth
                     required
                     margin='normal'
+                    className='textField'
+                    
                 />
                 <TextField
                     label='Current Stock'
@@ -160,6 +156,7 @@ const WarehouseList = () => {
                     fullWidth
                     required
                     margin='normal'
+                    className='textField'
                 />
                 <Button type='submit' variant='contained' color='primary'>
                     {editingWarehouse ? 'Update warehouse' : 'Add warehouse'}
@@ -179,8 +176,7 @@ const WarehouseList = () => {
                         <TableRow>
                             <TableCell>Warehouse Id</TableCell>
                             <TableCell>Location</TableCell>
-                            <TableCell>Capacity</TableCell>
-                            <TableCell>Current Stock</TableCell>
+                            <TableCell>Stock/Capacity</TableCell>
                             <TableCell>Actions</TableCell>
                         </TableRow>
                     </TableHead>
@@ -188,9 +184,8 @@ const WarehouseList = () => {
                         {warehouses.map(warehouse => (
                             <TableRow key={warehouse.id}>
                                 <TableCell>{warehouse.id}</TableCell>
-                                <TableCell>{warehouse.location}</TableCell>
-                                <TableCell>{warehouse.capacity}</TableCell>
-                                <TableCell>{warehouse.currentStock}</TableCell>
+                                <TableCell >{warehouse.location}</TableCell>
+                                <TableCell>{warehouse.currentStock}/{warehouse.capacity}</TableCell>
                                 <TableCell>
                                     <IconButton onClick={() => handleEdit(warehouse)}>
                                         <EditIcon />

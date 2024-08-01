@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../components/Forms.css'
 import { useState, useEffect } from "react";
 import {
     Table, TableBody, TableCell, TableContainer,
@@ -129,7 +130,7 @@ const Orders = () => {
 
     return(
         <>
-            <Box component="form" onSubmit={handleSubmit} sx={{mb: 2}}>
+            <Box component="form" onSubmit={handleSubmit} sx={{ mb: 2, mt: 8, padding: 2, borderRadius: 1, boxShadow: 10 }}>
                 <TextField
                     label='Customer Name'
                     name='customerName'
@@ -138,6 +139,7 @@ const Orders = () => {
                     fullWidth
                     required
                     margin='normal'
+                    className='textField'
                 />
                 <TextField
                     label='Order Date'
@@ -147,6 +149,7 @@ const Orders = () => {
                     fullWidth
                     required
                     margin='normal'
+                    className='textField'
                 />
                 <TextField
                     label='Status'
@@ -156,6 +159,7 @@ const Orders = () => {
                     fullWidth
                     required
                     margin='normal'
+                    className='textField'
                 />
                 <TextField
                     label='Customer Address'
@@ -165,6 +169,7 @@ const Orders = () => {
                     fullWidth
                     required
                     margin='normal'
+                    className='textField'
                 />
                 <Button type='submit' variant='contained' color='primary'>
                     {editingOrders ? 'Update order' : 'Add order'}
@@ -182,6 +187,7 @@ const Orders = () => {
                 <Table>
                     <TableHead>
                         <TableRow>
+                        <TableCell>Order Id</TableCell>
                             <TableCell>Customer Name</TableCell>
                             <TableCell>Order Date</TableCell>
                             <TableCell>Status</TableCell>
@@ -191,6 +197,7 @@ const Orders = () => {
                     <TableBody>
                         {order.map(order => (
                             <TableRow key={order.id}>
+                                <TableCell>{order.id}</TableCell>
                                 <TableCell>{order.customerName}</TableCell>
                                 <TableCell>{order.orderDate}</TableCell>
                                 <TableCell>{order.status}</TableCell>
