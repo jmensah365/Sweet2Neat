@@ -62,8 +62,8 @@ public class StockController {
 
     // Endpoint to update an existing stock item
     @PutMapping("/{id}")
-    public ResponseEntity<Void> updateStock(@PathVariable Integer id, @RequestBody Stock stock) {
-        service.updateStock(id, stock);
+    public ResponseEntity<Void> updateStock(@PathVariable Integer id, @RequestBody StockDTO stockDto) {
+        service.updateStock(id, stockDto);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 

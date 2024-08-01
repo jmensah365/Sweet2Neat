@@ -69,8 +69,15 @@ public class OrderItemService {
         return repo.save(orderItem);
     }
 
-    public void updateOrderItem(int id, OrderItem orderItem){
+    public void updateOrderItem(int id, OrderItemDTO orderItemDto){
+        Candy candy = candyRepo.findById(orderItemDto.getCandyId()).orElseThrow(() -> new NoSuchElementException("Candy does not exist"));
+        Orders order = orderRepo.findById(orderItemDto.getOrderId()).orElseThrow(() -> new NoSuchElementException("Order does not exist"));
+        OrderItem orderItem = new OrderItem();
         orderItem.setId(id);
+        orderItem.setOrders(order);
+        orderItem.setCandy(candy);
+        orderItem.setPrice(orderItemDto.getPrice());
+        orderItem.setQuantity(orderItemDto.getQuantity());
         repo.save(orderItem);
     }
 

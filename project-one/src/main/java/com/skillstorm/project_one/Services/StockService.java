@@ -72,9 +72,15 @@ public class StockService {
         return stockRepo.save(stock);
     }
 
-    public void updateStock(int id, Stock stock){
+    public void updateStock(int id, StockDTO stockDTO){
         if(!stockRepo.existsById(id)) throw new NoSuchElementException("Stock with id " + id + " does not exits");
+        Candy candy = candyRepo.findById(stockDTO.getCandyId()).orElseThrow(() -> new NoSuchElementException("Candy not found"));
+        Warehouse warehouse = warehouseRepo.findById(stockDTO.getWarehouseId()).orElseThrow(() -> new NoSuchElementException("Warehouse not found"));
+        Stock stock = new Stock();
         stock.setId(id);
+        stock.setCandy(candy);
+        stock.setWarehouse(warehouse);
+        stock.setQuantity(stockDTO.getQuantity());
         stockRepo.save(stock);
     }
 

@@ -61,8 +61,8 @@ public class OrderItemController {
 
     // Endpoint to update an existing order item
     @PutMapping("/{id}")
-    public ResponseEntity<Void> updateOrderItem (@PathVariable Integer id, @RequestBody OrderItem orderItem) {
-        service.updateOrderItem(id, orderItem);
+    public ResponseEntity<Void> updateOrderItem (@PathVariable Integer id, @RequestBody OrderItemDTO orderItemDto) {
+        service.updateOrderItem(id, orderItemDto);
         
         return new ResponseEntity<>(HttpStatus.OK);
     }
