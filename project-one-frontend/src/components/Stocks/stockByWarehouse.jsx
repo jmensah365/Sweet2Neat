@@ -95,7 +95,7 @@ const WarehouseStocks = () => {
                 setStocks([...stocks, data]); //update the list with the new stock
             }
             setNewStock({candyId: '', warehouseId: '', quantity: ''}); // reset form
-            setSuccessMessage(editingStock ? 'Updated stock successfully!' : 'Added stock successfully');
+            setSuccessMessage(editingStock ? 'Updated stock successfully!' : 'Added stock successfully!');
         })
         .catch(err => setError('Failed to update stock'));
     }
@@ -113,7 +113,7 @@ const WarehouseStocks = () => {
         .then (() => {
             //removes deleted stock from list
             setStocks(stocks.filter(s => s.id !== id));
-            setSuccessMessage('Warehouse deleted successfully');
+            setSuccessMessage('Stock deleted successfully!');
         })
         .catch(err => setError(err));
     }
@@ -209,12 +209,18 @@ const WarehouseStocks = () => {
                 </TableBody>
             </Table>
         </TableContainer>
-        <Snackbar
-                open={!!successMessage}
-                autoHideDuration={6000}
+        <Snackbar 
+            open={!!successMessage}
+            autoHideDuration={6000}
+            onClose={handleCloseSnackbar}
+            > 
+                <Alert
                 onClose={handleCloseSnackbar}
-                message={successMessage}
-            />
+                severity='success'
+                >
+                    {successMessage}
+                </Alert>
+            </Snackbar>
         </>
     );
 };

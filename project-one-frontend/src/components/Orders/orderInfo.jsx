@@ -84,7 +84,7 @@ const OrderInfo = () => {
                 setOrderItem([...orderItem, data]); //update the state with the new order item
             }
             setNewOrderItem({orderId: '', candyId: '', price: '', quantity: '',}); // reset form
-            setSuccessMessage(editingOrderItem ? 'Updated order item successfully!' : 'Added order item successfully');
+            setSuccessMessage(editingOrderItem ? 'Updated order item successfully!' : 'Added order item successfully!');
         })
         .catch(err => setError('Failed to update order item'));
     }
@@ -102,7 +102,7 @@ const OrderInfo = () => {
         .then (() => {
             //removes an order item from the list
             setOrderItem(orderItem.filter(oi => oi.id !== id));
-            setSuccessMessage('Order item deleted successfully');
+            setSuccessMessage('Order item deleted successfully!');
         })
         .catch(err => setError(err));
     }
@@ -211,12 +211,18 @@ const OrderInfo = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
-            <Snackbar
-                open={!!successMessage}
-                autoHideDuration={6000}
+            <Snackbar 
+            open={!!successMessage}
+            autoHideDuration={6000}
+            onClose={handleCloseSnackbar}
+            > 
+                <Alert
                 onClose={handleCloseSnackbar}
-                message={successMessage}
-            />
+                severity='success'
+                >
+                    {successMessage}
+                </Alert>
+            </Snackbar>
         </>
     );
 };

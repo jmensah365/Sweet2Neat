@@ -202,12 +202,18 @@ const WarehouseList = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
-            <Snackbar
-                open={!!successMessage}
-                autoHideDuration={6000}
+            <Snackbar 
+            open={!!successMessage}
+            autoHideDuration={6000}
+            onClose={handleCloseSnackbar}
+            > 
+                <Alert
                 onClose={handleCloseSnackbar}
-                message={successMessage}
-            />
+                severity='success'
+                >
+                    {successMessage}
+                </Alert>
+            </Snackbar>
         </>
     );
 };

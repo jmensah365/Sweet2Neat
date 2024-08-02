@@ -109,7 +109,7 @@ const CandyList = () => {
             }
             //remove the deleted candy from the list
             setCandy(candy.filter(c => c.candyId !== id));
-            setSuccessMessage('Candy was deleted successfully');
+            setSuccessMessage('Candy was deleted successfully!');
         })
         .catch(err => setError(err));
     };
@@ -225,12 +225,18 @@ const CandyList = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
-            <Snackbar
-                open={!!successMessage}
-                autoHideDuration={6000}
+            <Snackbar 
+            open={!!successMessage}
+            autoHideDuration={6000}
+            onClose={handleCloseSnackbar}
+            > 
+                <Alert
                 onClose={handleCloseSnackbar}
-                message={successMessage}
-            />
+                severity='success'
+                >
+                    {successMessage}
+                </Alert>
+            </Snackbar>
         </>
     );
 };
