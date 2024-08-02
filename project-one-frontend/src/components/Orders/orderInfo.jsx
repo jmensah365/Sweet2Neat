@@ -18,6 +18,7 @@ const OrderInfo = () => {
     const [candy, setCandy] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(null);
+    //state to hold new order item data
     const [newOrderItem, setNewOrderItem] = useState({
         orderId: '',
         candyId: '',
@@ -28,6 +29,7 @@ const OrderInfo = () => {
     const [editingOrderItem, setEditingOrderItem] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
 
+    //fetch order items, orders, and candies when the component mounts
     useEffect(() => {
         fetch(orderItemUrl)
             .then(response => response.json())
@@ -48,6 +50,7 @@ const OrderInfo = () => {
             .catch(err => setError(err));
     }, []);
 
+    //handle input changes for both new order item and editing order item
     const handleInputChange = (e) => {
         const {name, value} = e.target;
         if(editingOrderItem) {
@@ -57,6 +60,7 @@ const OrderInfo = () => {
         }
     };
 
+    //handle form submission for adding or updating an order item
     const handleSubmit = (e) => {
         e.preventDefault();
         const orderItemData = editingOrderItem || newOrderItem;
@@ -73,6 +77,7 @@ const OrderInfo = () => {
         .then(response => response.json())
         .then(data =>{
             if(editingOrderItem) {
+                //updates states with editing order item
                 setOrderItem(orderItem.map(oi => oi.id === data.id ? data : oi))
                 setEditingOrderItem(null);
             } else{
@@ -84,15 +89,18 @@ const OrderInfo = () => {
         .catch(err => setError('Failed to update order item'));
     }
 
+    //sets orderItem to edit
     const handleEdit = (orderItem) => {
         setEditingOrderItem(orderItem);
     }
 
+    //handles deletion of an order item
     const handleDeleteOrderItem = (id) => {
         fetch(`${orderItemUrl}/${id}`,{
             method: 'DELETE'
         })
         .then (() => {
+            //removes an order item from the list
             setOrderItem(orderItem.filter(oi => oi.id !== id));
             setSuccessMessage('Order item deleted successfully');
         })
@@ -105,14 +113,6 @@ const OrderInfo = () => {
 
     if (!loaded) {
         return <CircularProgress />;
-    }
-
-
-    if (orderItem.length === 0) {
-        return <Alert severity='error'>
-            <AlertTitle>Error</AlertTitle>
-            No order information found
-            </Alert>;
     }
 
     const getCustomerName = (id) => {

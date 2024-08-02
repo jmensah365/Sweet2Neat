@@ -13,6 +13,7 @@ const CandyList = () => {
     const [candy, setCandy] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(null);
+    //state to hold new data
     const [newCandy, setNewCandy] = useState({
         name: '',
         type: '',
@@ -24,6 +25,7 @@ const CandyList = () => {
     const [editingCandy, setEditingCandy] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
 
+    //fetch the candy data from the API endpoint when the component mounts
     useEffect(() => {
         fetch(url)
             .then(response => {
@@ -42,6 +44,7 @@ const CandyList = () => {
             });
     }, []);
 
+    //handle input changes for both new candy and editing candy
     const handleInputChange = (e) => {
         const {name, value} = e.target;
         if (editingCandy){
@@ -51,6 +54,7 @@ const CandyList = () => {
         }
     };
 
+    //handle form submission for adding or updating candy
     const handleSubmit = (e) => {
         e.preventDefault();
         const candyData = editingCandy || newCandy;
@@ -89,10 +93,12 @@ const CandyList = () => {
         });
     };
 
+    //set the candy to edit
     const handleEdit = (candy) => {
         setEditingCandy(candy);
     }
 
+    //handle deletion of a candy
     const handleDelete = (id) => {
         fetch(`${url}/${id}`,{
             method: 'DELETE',
@@ -101,6 +107,7 @@ const CandyList = () => {
             if (!response.ok){
                 throw new Error('Network response was unsuccessful');
             }
+            //remove the deleted candy from the list
             setCandy(candy.filter(c => c.candyId !== id));
             setSuccessMessage('Candy was deleted successfully');
         })

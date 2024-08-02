@@ -18,11 +18,12 @@ const Orders = () => {
         orderDate: '',
         status: '',
         customerAddress: '',
-    });
+    }); //setting the state for the new order form
 
     const [editingOrders, setEditingOrders] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
 
+    //fetch order data when the component mounts
     useEffect(() => {
         fetch(url)
             .then(response => {
@@ -41,6 +42,7 @@ const Orders = () => {
             });
     }, []);
 
+    //handles the form submission for adding or updating an order
     const handleSubmit = (e) => {
         e.preventDefault();
         const orderData = editingOrders || newOrder;
@@ -78,6 +80,7 @@ const Orders = () => {
         });
     };
 
+    //function to handle form input changes
     const handleInputChange = (e) => {
         const {name, value} = e.target;
         if(editingOrders){
@@ -87,10 +90,12 @@ const Orders = () => {
         }
     };
 
+    //setting the order to edit
     const handleEdit = (order) => {
         setEditingOrders(order);
     };
 
+    //handles deletion of an order
     const handleDelete = (id) => {
         fetch(`${url}/${id}`, {
             method: 'DELETE',
@@ -169,7 +174,7 @@ const Orders = () => {
                 )}
             </Box>
             <Typography variant="h4" gutterBottom>
-                Order Information
+                Order List
             </Typography>
             <TableContainer component={Paper}>
                 <Table>
