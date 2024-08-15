@@ -161,11 +161,11 @@ const WarehouseList = () => {
                     margin='normal'
                     className='textField'
                 />
-                <Button type='submit' variant='contained' color='primary'>
+                <Button name = 'warehouseBtn' type='submit' variant='contained' color='primary'>
                     {editingWarehouse ? 'Update warehouse' : 'Add warehouse'}
                 </Button>
                 {editingWarehouse && (
-                    <Button variant='contained' color='secondary' onClick={() =>setEditingWarehouse(null)}>
+                    <Button name = 'cancelEditBtn' variant='contained' color='secondary' onClick={() =>setEditingWarehouse(null)}>
                         Cancel edit
                     </Button>
                 )}
@@ -173,7 +173,7 @@ const WarehouseList = () => {
             <Typography variant="h4" gutterBottom>
                 Warehouse List
             </Typography>
-            <TableContainer component={Paper}>
+            <TableContainer name='warehouseTable' component={Paper}>
                 <Table>
                     <TableHead>
                         <TableRow>
@@ -190,7 +190,7 @@ const WarehouseList = () => {
                                 <TableCell >{warehouse.location}</TableCell>
                                 <TableCell>{warehouse.currentStock}/{warehouse.capacity}</TableCell>
                                 <TableCell>
-                                    <IconButton onClick={() => handleEdit(warehouse)}>
+                                    <IconButton name ='editIcon' onClick={() => handleEdit(warehouse)}>
                                         <EditIcon />
                                     </IconButton>
                                     <IconButton onClick={() => handleDelete(warehouse.id)}>
