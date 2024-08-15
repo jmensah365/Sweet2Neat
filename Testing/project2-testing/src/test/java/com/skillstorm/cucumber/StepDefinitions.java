@@ -64,8 +64,8 @@ public class StepDefinitions {
     this.warehouseList.clickAddWarehouseButton();
     }
 
-    @Then("I should see the newly created Warehouse with {string} in the list of Warehouses")
-    public void iShouldSeeNewlyCreatedWarehouse(String location) {
-        
+    @Then("I should see the newly created Warehouse in the list of Warehouses")
+    public void iShouldSeeNewlyCreatedWarehouse() {
+        this.warehouseList.getWarehouseLocation();
     }
 }

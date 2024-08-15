@@ -50,7 +50,11 @@
             <artifactId>cucumber-junit-platform-engine</artifactId>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.23.0</version>
+		</dependency>
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-suite</artifactId>

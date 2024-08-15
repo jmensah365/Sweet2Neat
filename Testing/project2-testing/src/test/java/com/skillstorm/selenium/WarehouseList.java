@@ -44,6 +44,9 @@ public class WarehouseList {
     @FindBy(className = "MuiButtonBase-root")
     private WebElement addWarehouseButton;
 
+    @FindBy(xpath = "//td[last()]")
+    private WebElement warehouseLocation;
+
     public WarehouseList(WebDriver driver){
         this.driver = driver;
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -134,5 +137,9 @@ public class WarehouseList {
 
     public void clickAddWarehouseButton() {
         addWarehouseButton.click();
+    }
+
+    public void getWarehouseLocation() {
+        warehouseLocation.getText();
     }
 }

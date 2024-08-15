@@ -16,14 +16,17 @@ Feature: Warehouse CRUD
   Examples:
   | location | capacity | stock |
   | Test      | 200     |  0    |
+  | Test1     | 500     |  10    |
+  | Test2      | 1000     |  50   |
+
 
   Scenario Outline: Successful warehouse creation with valid information
 
     Given I am on the Warehouse List page
     When I fill in the "<location>", "<capacity>", and "<currentStock>" fields with valid information
     And I click the ADD WAREHOUSE button
-    Then I should see the newly created Warehouse with "<location>" in the list of Warehouses
+    Then I should see the newly created Warehouse in the list of Warehouses
 
-  Examples:
-  | location                    | capacity | currentStock |
-  | 3212 Spur Ln, Austin, Texas | 5000     | 400          |
+    Examples:
+    | location                    | capacity | currentStock |
+    | 3212 Spur Ln, Austin, Texas | 5000     | 400          |

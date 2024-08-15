@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.skillstorm.cucumber.RunCucumberTest" time="11.679" tests="2" errors="1" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.skillstorm.cucumber.RunCucumberTest" time="25.943" tests="4" errors="4" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/dj/Desktop/InventoryManagement/Testing/project2-testing/target/surefire/surefirebooter-20240815160414575_3.jar /Users/dj/Desktop/InventoryManagement/Testing/project2-testing/target/surefire 2024-08-15T16-04-14_479-jvmRun1 surefire-20240815160414575_1tmp surefire_0-20240815160414575_2tmp"/>
+    <property name="sun.java.command" value="/Users/dj/Desktop/InventoryManagement/Testing/project2-testing/target/surefire/surefirebooter-20240815162959031_3.jar /Users/dj/Desktop/InventoryManagement/Testing/project2-testing/target/surefire 2024-08-15T16-29-58_937-jvmRun1 surefire-20240815162959031_1tmp surefire_0-20240815162959031_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/dj/Desktop/InventoryManagement/Testing/project2-testing/target/test-classes:/Users/dj/Desktop/InventoryManagement/Testing/project2-testing/target/classes:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-java/4.23.0/selenium-java-4.23.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-api/4.23.0/selenium-api-4.23.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.23.0/selenium-chrome-driver-4.23.0.jar:/Users/dj/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.23.0/selenium-chromium-driver-4.23.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-json/4.23.0/selenium-json-4.23.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.23.0/selenium-manager-4.23.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v125/4.23.0/selenium-devtools-v125-4.23.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v126/4.23.0/selenium-devtools-v126-4.23.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v127/4.23.0/selenium-devtools-v127-4.23.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.23.0/selenium-devtools-v85-4.23.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.23.0/selenium-edge-driver-4.23.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.23.0/selenium-firefox-driver-4.23.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-http/4.23.0/selenium-http-4.23.0.jar:/Users/dj/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.23.0/selenium-ie-driver-4.23.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.23.0/selenium-remote-driver-4.23.0.jar:/Users/dj/.m2/repository/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre.jar:/Users/dj/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/dj/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/dj/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/dj/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/Users/dj/.m2/repository/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1.jar:/Users/dj/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/dj/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-api/1.40.0/opentelemetry-api-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-context/1.40.0/opentelemetry-context-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.40.0/opentelemetry-exporter-logging-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.40.0/opentelemetry-sdk-common-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.40.0/opentelemetry-sdk-extension-autoconfigure-spi-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.40.0/opentelemetry-sdk-extension-autoconfigure-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.40.0-alpha/opentelemetry-api-incubator-1.40.0-alpha.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.40.0/opentelemetry-sdk-trace-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.40.0/opentelemetry-sdk-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.40.0/opentelemetry-sdk-metrics-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.40.0/opentelemetry-sdk-logs-1.40.0.jar:/Users/dj/.m2/repository/net/bytebuddy/byte-buddy/1.14.18/byte-buddy-1.14.18.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-os/4.23.0/selenium-os-4.23.0.jar:/Users/dj/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.23.0/selenium-safari-driver-4.23.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-support/4.23.0/selenium-support-4.23.0.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-java/7.11.1/cucumber-java-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-core/7.11.1/cucumber-core-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-gherkin/7.11.1/cucumber-gherkin-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.11.1/cucumber-gherkin-messages-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/gherkin/26.0.3/gherkin-26.0.3.jar:/Users/dj/.m2/repository/io/cucumber/messages/21.0.1/messages-21.0.1.jar:/Users/dj/.m2/repository/io/cucumber/tag-expressions/5.0.1/tag-expressions-5.0.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/Users/dj/.m2/repository/io/cucumber/datatable/7.11.1/datatable-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-plugin/7.11.1/cucumber-plugin-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/docstring/7.11.1/docstring-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/html-formatter/20.2.1/html-formatter-20.2.1.jar:/Users/dj/.m2/repository/io/cucumber/junit-xml-formatter/0.1.0/junit-xml-formatter-0.1.0.jar:/Users/dj/.m2/repository/io/cucumber/ci-environment/9.1.0/ci-environment-9.1.0.jar:/Users/dj/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.11.1/cucumber-junit-platform-engine-7.11.1.jar:/Users/dj/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/dj/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/dj/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/dj/.m2/repository/org/junit/platform/junit-platform-suite/1.9.2/junit-platform-suite-1.9.2.jar:/Users/dj/.m2/repository/org/junit/platform/junit-platform-suite-api/1.9.2/junit-platform-suite-api-1.9.2.jar:/Users/dj/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.9.2/junit-platform-suite-engine-1.9.2.jar:/Users/dj/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.9.2/junit-platform-suite-commons-1.9.2.jar:/Users/dj/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/dj/.m2/repository/org/testng/testng/7.10.2/testng-7.10.2.jar:/Users/dj/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/dj/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/dj/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/dj/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.2/junit-jupiter-5.9.2.jar:/Users/dj/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/dj/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.2/junit-jupiter-params-5.9.2.jar:/Users/dj/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:"/>
@@ -29,7 +29,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/Users/dj/Desktop/InventoryManagement/Testing/project2-testing/target/surefire/surefirebooter-20240815160414575_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/dj/Desktop/InventoryManagement/Testing/project2-testing/target/surefire/surefirebooter-20240815162959031_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
@@ -55,17 +55,17 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="Example #1.1" classname="Examples" time="8.479">
-    <error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;editIcon&apos;]&quot;}&#10;  (Session info: chrome=127.0.6533.119)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#10;Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;&#10;System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [a8136cb8b157e09766bf8b1b3b9fd89d, findElement {using=name, value=editIcon}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/x5/lg9yk44s7wx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64878}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64878/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a8136cb8b157e09766bf8b1b3b9fd89d" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"css selector","selector":"*[name='editIcon']"}
+  <testcase name="Example #1.1" classname="Examples" time="11.827">
+    <error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.warehouseTable&quot;}&#10;  (Session info: chrome=127.0.6533.119)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#10;Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;&#10;System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [603196b5af0b9f12ac4bdbe837338796, findElement {using=class name, value=warehouseTable}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/x5/lg9yk44s7wx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55039}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55039/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 603196b5af0b9f12ac4bdbe837338796" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":".warehouseTable"}
   (Session info: chrome=127.0.6533.119)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.23.0', revision: '4df0a231af'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a8136cb8b157e09766bf8b1b3b9fd89d, findElement {using=name, value=editIcon}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/x5/lg9yk44s7wx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64878}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64878/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a8136cb8b157e09766bf8b1b3b9fd89d
+Command: [603196b5af0b9f12ac4bdbe837338796, findElement {using=class name, value=warehouseTable}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/x5/lg9yk44s7wx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55039}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55039/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 603196b5af0b9f12ac4bdbe837338796
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -84,25 +84,139 @@ Session ID: a8136cb8b157e09766bf8b1b3b9fd89d
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy20.click(Unknown Source)
-	at com.skillstorm.selenium.WarehouseList.clickEditButton(WarehouseList.java:68)
-	at com.skillstorm.cucumber.StepDefinitions.iClickOnTheEditIconForTheWarehouseIWantToEdit(StepDefinitions.java:33)
-	at ✽.I click on the edit icon for the Warehouse I want to edit(classpath:com/skillstorm/warehouse.feature:8)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.isDisplayed(Unknown Source)
+	at com.skillstorm.selenium.WarehouseList.displayWarehouseTable(WarehouseList.java:114)
+	at com.skillstorm.cucumber.StepDefinitions.iShouldSeeTheUpdatedDetailsForTheWarehouseIEditedInTheListOfWarehouses(StepDefinitions.java:50)
+	at ✽.I should see the updated details for the Warehouse I edited in the list of Warehouses(classpath:com/skillstorm/warehouse.feature:14)
 ]]></error>
     <system-out><![CDATA[
 @Warehouse
 Scenario Outline: Updating a warehouse                                                       &amp#27;[90m# com/skillstorm/warehouse.feature:18&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse List page&amp#27;[0m                                                      &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iAmOnTheWarehouseListPage()&amp#27;[0m
-  &amp#27;[31mWhen &amp#27;[0m&amp#27;[31mI click on the edit icon for the Warehouse I want to edit&amp#27;[0m                             &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iClickOnTheEditIconForTheWarehouseIWantToEdit()&amp#27;[0m
-      &amp#27;[31morg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='editIcon']"}
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the edit icon for the Warehouse I want to edit&amp#27;[0m                             &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iClickOnTheEditIconForTheWarehouseIWantToEdit()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Test"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"200"&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"0"&amp#27;[0m&amp#27;[32m with valid information&amp#27;[0m                          &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iChangeWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the UPDATE WAREHOUSE button&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iClickOnTheUpdateWarehouseButton()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mI should see the updated details for the Warehouse I edited in the list of Warehouses&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iShouldSeeTheUpdatedDetailsForTheWarehouseIEditedInTheListOfWarehouses()&amp#27;[0m
+      &amp#27;[31morg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".warehouseTable"}
   (Session info: chrome=127.0.6533.119)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.23.0', revision: '4df0a231af'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.12'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a8136cb8b157e09766bf8b1b3b9fd89d, findElement {using=name, value=editIcon}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/x5/lg9yk44s7wx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64878}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64878/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a8136cb8b157e09766bf8b1b3b9fd89d
+Command: [603196b5af0b9f12ac4bdbe837338796, findElement {using=class name, value=warehouseTable}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/x5/lg9yk44s7wx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55039}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55039/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 603196b5af0b9f12ac4bdbe837338796
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.isDisplayed(Unknown Source)
+	at com.skillstorm.selenium.WarehouseList.displayWarehouseTable(WarehouseList.java:114)
+	at com.skillstorm.cucumber.StepDefinitions.iShouldSeeTheUpdatedDetailsForTheWarehouseIEditedInTheListOfWarehouses(StepDefinitions.java:50)
+	at ✽.I should see the updated details for the Warehouse I edited in the list of Warehouses(classpath:com/skillstorm/warehouse.feature:14)
+&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="8.363">
+    <error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[last()]&quot;}&#10;  (Session info: chrome=127.0.6533.119)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#10;Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;&#10;System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [aab0cd64ff305c658bec244389eeacaf, findElement {using=xpath, value=//td[last()]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/x5/lg9yk44s7wx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55173}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55173/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: aab0cd64ff305c658bec244389eeacaf" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//td[last()]"}
+  (Session info: chrome=127.0.6533.119)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aab0cd64ff305c658bec244389eeacaf, findElement {using=xpath, value=//td[last()]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/x5/lg9yk44s7wx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55173}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55173/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aab0cd64ff305c658bec244389eeacaf
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.getText(Unknown Source)
+	at com.skillstorm.selenium.WarehouseList.getWarehouseLocation(WarehouseList.java:143)
+	at com.skillstorm.cucumber.StepDefinitions.iShouldSeeNewlyCreatedWarehouse(StepDefinitions.java:69)
+	at ✽.I should see the newly created Warehouse in the list of Warehouses(classpath:com/skillstorm/warehouse.feature:28)
+]]></error>
+    <system-out><![CDATA[
+@Warehouse
+Scenario Outline: Successful warehouse creation with valid information                              &amp#27;[90m# com/skillstorm/warehouse.feature:32&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse List page&amp#27;[0m                                                             &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iAmOnTheWarehouseListPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI fill in the &amp#27;[0m&amp#27;[32m&amp#27;[1m"3212 Spur Ln, Austin, Texas"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"5000"&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"400"&amp#27;[0m&amp#27;[32m fields with valid information&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.fillInTheFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the ADD WAREHOUSE button&amp#27;[0m                                                              &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.clickAddWarehouseButton()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mI should see the newly created Warehouse in the list of Warehouses&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iShouldSeeNewlyCreatedWarehouse()&amp#27;[0m
+      &amp#27;[31morg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[last()]"}
+  (Session info: chrome=127.0.6533.119)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [aab0cd64ff305c658bec244389eeacaf, findElement {using=xpath, value=//td[last()]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/x5/lg9yk44s7wx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55173}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55173/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aab0cd64ff305c658bec244389eeacaf
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.getText(Unknown Source)
+	at com.skillstorm.selenium.WarehouseList.getWarehouseLocation(WarehouseList.java:143)
+	at com.skillstorm.cucumber.StepDefinitions.iShouldSeeNewlyCreatedWarehouse(StepDefinitions.java:69)
+	at ✽.I should see the newly created Warehouse in the list of Warehouses(classpath:com/skillstorm/warehouse.feature:28)
+&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="2.843">
+    <error message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=127.0.6533.119)&#10;Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;&#10;System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [79ba2c0ea5ccdad88af2533ec2743b59, findElement {using=name, value=editIcon}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/x5/lg9yk44s7wx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55111}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55111/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 79ba2c0ea5ccdad88af2533ec2743b59" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=127.0.6533.119)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [79ba2c0ea5ccdad88af2533ec2743b59, findElement {using=name, value=editIcon}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/x5/lg9yk44s7wx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55111}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55111/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 79ba2c0ea5ccdad88af2533ec2743b59
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -122,23 +236,126 @@ Session ID: a8136cb8b157e09766bf8b1b3b9fd89d
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy20.click(Unknown Source)
-	at com.skillstorm.selenium.WarehouseList.clickEditButton(WarehouseList.java:68)
+	at com.skillstorm.selenium.WarehouseList.clickEditButton(WarehouseList.java:71)
+	at com.skillstorm.cucumber.StepDefinitions.iClickOnTheEditIconForTheWarehouseIWantToEdit(StepDefinitions.java:33)
+	at ✽.I click on the edit icon for the Warehouse I want to edit(classpath:com/skillstorm/warehouse.feature:8)
+]]></error>
+    <system-out><![CDATA[
+@Warehouse
+Scenario Outline: Updating a warehouse                                                       &amp#27;[90m# com/skillstorm/warehouse.feature:19&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse List page&amp#27;[0m                                                      &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iAmOnTheWarehouseListPage()&amp#27;[0m
+  &amp#27;[31mWhen &amp#27;[0m&amp#27;[31mI click on the edit icon for the Warehouse I want to edit&amp#27;[0m                             &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iClickOnTheEditIconForTheWarehouseIWantToEdit()&amp#27;[0m
+      &amp#27;[31morg.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=127.0.6533.119)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [79ba2c0ea5ccdad88af2533ec2743b59, findElement {using=name, value=editIcon}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/x5/lg9yk44s7wx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55111}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55111/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 79ba2c0ea5ccdad88af2533ec2743b59
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.click(Unknown Source)
+	at com.skillstorm.selenium.WarehouseList.clickEditButton(WarehouseList.java:71)
 	at com.skillstorm.cucumber.StepDefinitions.iClickOnTheEditIconForTheWarehouseIWantToEdit(StepDefinitions.java:33)
 	at ✽.I click on the edit icon for the Warehouse I want to edit(classpath:com/skillstorm/warehouse.feature:8)
 &amp#27;[0m
-  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI change the &amp#27;[0m&amp#27;[36m&amp#27;[1m"Test"&amp#27;[0m&amp#27;[36m, &amp#27;[0m&amp#27;[36m&amp#27;[1m"200"&amp#27;[0m&amp#27;[36m, and/or &amp#27;[0m&amp#27;[36m&amp#27;[1m"0"&amp#27;[0m&amp#27;[36m with valid information&amp#27;[0m                          &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iChangeWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI change the &amp#27;[0m&amp#27;[36m&amp#27;[1m"Test1"&amp#27;[0m&amp#27;[36m, &amp#27;[0m&amp#27;[36m&amp#27;[1m"500"&amp#27;[0m&amp#27;[36m, and/or &amp#27;[0m&amp#27;[36m&amp#27;[1m"10"&amp#27;[0m&amp#27;[36m with valid information&amp#27;[0m                        &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iChangeWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
   &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI click on the UPDATE WAREHOUSE button&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iClickOnTheUpdateWarehouseButton()&amp#27;[0m
   &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see the updated details for the Warehouse I edited in the list of Warehouses&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iShouldSeeTheUpdatedDetailsForTheWarehouseIEditedInTheListOfWarehouses()&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="3.151">
+  <testcase name="Example #1.3" classname="Examples" time="2.849">
+    <error message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=127.0.6533.119)&#10;Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;&#10;System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.12&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [b3c85fdd6d027ef3391a0606378b7515, findElement {using=name, value=editIcon}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/x5/lg9yk44s7wx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55144}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55144/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: b3c85fdd6d027ef3391a0606378b7515" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=127.0.6533.119)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b3c85fdd6d027ef3391a0606378b7515, findElement {using=name, value=editIcon}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/x5/lg9yk44s7wx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55144}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55144/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b3c85fdd6d027ef3391a0606378b7515
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.click(Unknown Source)
+	at com.skillstorm.selenium.WarehouseList.clickEditButton(WarehouseList.java:71)
+	at com.skillstorm.cucumber.StepDefinitions.iClickOnTheEditIconForTheWarehouseIWantToEdit(StepDefinitions.java:33)
+	at ✽.I click on the edit icon for the Warehouse I want to edit(classpath:com/skillstorm/warehouse.feature:8)
+]]></error>
     <system-out><![CDATA[
 @Warehouse
-Scenario Outline: Successful warehouse creation with valid information                                       &amp#27;[90m# com/skillstorm/warehouse.feature:29&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse List page&amp#27;[0m                                                                      &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iAmOnTheWarehouseListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI fill in the &amp#27;[0m&amp#27;[32m&amp#27;[1m"3212 Spur Ln, Austin, Texas"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"5000"&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"400"&amp#27;[0m&amp#27;[32m fields with valid information&amp#27;[0m          &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.fillInTheFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the ADD WAREHOUSE button&amp#27;[0m                                                                       &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.clickAddWarehouseButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the newly created Warehouse with &amp#27;[0m&amp#27;[32m&amp#27;[1m"3212 Spur Ln, Austin, Texas"&amp#27;[0m&amp#27;[32m in the list of Warehouses&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iShouldSeeNewlyCreatedWarehouse(java.lang.String)&amp#27;[0m
+Scenario Outline: Updating a warehouse                                                       &amp#27;[90m# com/skillstorm/warehouse.feature:20&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse List page&amp#27;[0m                                                      &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iAmOnTheWarehouseListPage()&amp#27;[0m
+  &amp#27;[31mWhen &amp#27;[0m&amp#27;[31mI click on the edit icon for the Warehouse I want to edit&amp#27;[0m                             &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iClickOnTheEditIconForTheWarehouseIWantToEdit()&amp#27;[0m
+      &amp#27;[31morg.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=127.0.6533.119)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b3c85fdd6d027ef3391a0606378b7515, findElement {using=name, value=editIcon}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/x5/lg9yk44s7wx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55144}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55144/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b3c85fdd6d027ef3391a0606378b7515
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.click(Unknown Source)
+	at com.skillstorm.selenium.WarehouseList.clickEditButton(WarehouseList.java:71)
+	at com.skillstorm.cucumber.StepDefinitions.iClickOnTheEditIconForTheWarehouseIWantToEdit(StepDefinitions.java:33)
+	at ✽.I click on the edit icon for the Warehouse I want to edit(classpath:com/skillstorm/warehouse.feature:8)
+&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI change the &amp#27;[0m&amp#27;[36m&amp#27;[1m"Test2"&amp#27;[0m&amp#27;[36m, &amp#27;[0m&amp#27;[36m&amp#27;[1m"1000"&amp#27;[0m&amp#27;[36m, and/or &amp#27;[0m&amp#27;[36m&amp#27;[1m"50"&amp#27;[0m&amp#27;[36m with valid information&amp#27;[0m                       &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iChangeWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI click on the UPDATE WAREHOUSE button&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iClickOnTheUpdateWarehouseButton()&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see the updated details for the Warehouse I edited in the list of Warehouses&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.StepDefinitions.iShouldSeeTheUpdatedDetailsForTheWarehouseIEditedInTheListOfWarehouses()&amp#27;[0m
 ]]></system-out>
   </testcase>
 </testsuite>
