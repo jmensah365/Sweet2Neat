@@ -129,7 +129,7 @@ const WarehouseList = () => {
     return(
         <>
             
-            <Box component="form" onSubmit={handleSubmit} sx={{ mb: 2, mt: 8, padding: 2, borderRadius: 1, boxShadow: 10 }}>
+            <Box name='warehouseListBox' component="form" onSubmit={handleSubmit} sx={{ mb: 2, mt: 8, padding: 2, borderRadius: 1, boxShadow: 10 }}>
                 <TextField
                     label='Location'
                     name='location'
@@ -170,7 +170,7 @@ const WarehouseList = () => {
                     </Button>
                 )}
             </Box>
-            <Typography variant="h4" gutterBottom>
+            <Typography name= 'warehouseListTitle' variant="h4" gutterBottom>
                 Warehouse List
             </Typography>
             <TableContainer name='warehouseTable' component={Paper}>
@@ -193,7 +193,7 @@ const WarehouseList = () => {
                                     <IconButton name ='editIcon' onClick={() => handleEdit(warehouse)}>
                                         <EditIcon />
                                     </IconButton>
-                                    <IconButton onClick={() => handleDelete(warehouse.id)}>
+                                    <IconButton name = 'deleteIcon' onClick={() => handleDelete(warehouse.id)}>
                                         <DeleteIcon />
                                     </IconButton>
                                 </TableCell>
@@ -204,6 +204,7 @@ const WarehouseList = () => {
             </TableContainer>
             <Snackbar 
             open={!!successMessage}
+            name='WarehouseListSnackbar'
             autoHideDuration={6000}
             onClose={handleCloseSnackbar}
             > 
