@@ -1,4 +1,4 @@
-package com.skillstorm;
+package com.skillstorm.cucumber;
 
 import org.junit.platform.suite.api.ConfigurationParameter;
 import org.junit.platform.suite.api.IncludeEngines;
