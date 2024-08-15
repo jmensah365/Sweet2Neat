@@ -187,7 +187,7 @@ const WarehouseList = () => {
                         {warehouses.map(warehouse => (
                             <TableRow key={warehouse.id}>
                                 <TableCell>{warehouse.id}</TableCell>
-                                <TableCell >{warehouse.location}</TableCell>
+                                <TableCell>{warehouse.location}</TableCell>
                                 <TableCell>{warehouse.currentStock}/{warehouse.capacity}</TableCell>
                                 <TableCell>
                                     <IconButton name ='editIcon' onClick={() => handleEdit(warehouse)}>
