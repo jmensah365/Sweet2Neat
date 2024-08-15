@@ -128,7 +128,7 @@ const CandyList = () => {
     return(
         <>
             
-            <Box component='form' onSubmit={handleSubmit} sx={{ mb: 2, mt: 8, padding: 2, borderRadius: 1, boxShadow: 10 }}>
+            <Box name = 'candyListBox' component='form' onSubmit={handleSubmit} sx={{ mb: 2, mt: 8, padding: 2, borderRadius: 1, boxShadow: 10 }}>
                 <TextField
                     label='Name'
                     name='name'
@@ -179,20 +179,20 @@ const CandyList = () => {
                     margin='normal'
                     className='textField'
                 />
-                <Button type='submit' variant='contained' color='primary'>
+                <Button name='candyBtn' type='submit' variant='contained' color='primary'>
                     {editingCandy ? 'Update Candy' : 'Add Candy'}
                 </Button>
                 {editingCandy && (
-                    <Button variant='contained' color='secondary' onClick={() => setEditingCandy(null)}>
+                    <Button name = 'cancelEditBtn' variant='contained' color='secondary' onClick={() => setEditingCandy(null)}>
                         Cancel edit
                     </Button>
                 )}
             </Box>
-            <Typography variant="h4" gutterBottom>
+            <Typography name = 'candyInventoryTitle' variant="h4" gutterBottom>
                 Candy Inventory
             </Typography>
             <TableContainer component={Paper}>
-                <Table>
+                <Table name='candyTable'>
                     <TableHead>
                         <TableRow>
                         <TableCell>Candy ID</TableCell>
@@ -213,10 +213,10 @@ const CandyList = () => {
                                 <TableCell>{candy.price}</TableCell>
                                 <TableCell>{candy.weight}</TableCell>
                                 <TableCell>
-                                    <IconButton onClick={() => handleEdit(candy)}>
+                                    <IconButton name = 'editIcon' onClick={() => handleEdit(candy)}>
                                         <EditIcon />
                                     </IconButton>
-                                    <IconButton onClick={() => handleDelete(candy.candyId)}>
+                                    <IconButton name = 'deleteIcon' onClick={() => handleDelete(candy.candyId)}>
                                         <DeleteIcon />
                                     </IconButton>
                                 </TableCell>
@@ -227,6 +227,7 @@ const CandyList = () => {
             </TableContainer>
             <Snackbar 
             open={!!successMessage}
+            name='candyListSnackbar'
             autoHideDuration={6000}
             onClose={handleCloseSnackbar}
             > 

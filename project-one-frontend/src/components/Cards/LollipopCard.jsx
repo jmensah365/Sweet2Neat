@@ -11,7 +11,7 @@ const LollipopCard = () => {
         navigate(path);
     };
     return (
-        <Card>
+        <Card name = 'lollipopCard'>
         <CardMedia
             component='img'
             height='140'
@@ -24,7 +24,7 @@ const LollipopCard = () => {
             </Typography>
         </CardContent>
         <CardActions>
-            <Button size='small' onClick={() => navigateTo('/lollipopCandy')}>View Lollipops</Button>
+            <Button name='lollipopCardButton' size='small' onClick={() => navigateTo('/lollipopCandy')}>View Lollipops</Button>
         </CardActions>
     </Card>
     )

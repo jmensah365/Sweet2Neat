@@ -10,7 +10,7 @@ const TaffyCard = () => {
         navigate(path);
     }
     return (
-        <Card>
+        <Card name='taffyCard'>
             <CardMedia
                 component='img'
                 height='140'
@@ -23,7 +23,7 @@ const TaffyCard = () => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size='small' onClick={() => navigateTo('/taffyCandy')}>View Taffy Candy</Button>
+                <Button name='taffyCardButton' size='small' onClick={() => navigateTo('/taffyCandy')}>View Taffy Candy</Button>
             </CardActions>
         </Card>
     )

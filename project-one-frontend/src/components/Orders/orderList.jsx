@@ -123,7 +123,7 @@ const Orders = () => {
 
     return(
         <>
-            <Box component="form" onSubmit={handleSubmit} sx={{ mb: 2, mt: 8, padding: 2, borderRadius: 1, boxShadow: 10 }}>
+            <Box name='orderListBox' component="form" onSubmit={handleSubmit} sx={{ mb: 2, mt: 8, padding: 2, borderRadius: 1, boxShadow: 10 }}>
                 <TextField
                     label='Customer Name'
                     name='customerName'
@@ -164,20 +164,20 @@ const Orders = () => {
                     margin='normal'
                     className='textField'
                 />
-                <Button type='submit' variant='contained' color='primary'>
+                <Button name='orderListBtn' type='submit' variant='contained' color='primary'>
                     {editingOrders ? 'Update order' : 'Add order'}
                 </Button>
                 {editingOrders && (
-                    <Button variant='contained' color='secondary' onClick={() =>setEditingOrders(null)}>
+                    <Button name='cancelEditBtn' variant='contained' color='secondary' onClick={() =>setEditingOrders(null)}>
                         Cancel edit
                     </Button>
                 )}
             </Box>
-            <Typography variant="h4" gutterBottom>
+            <Typography name='orderListTitle' variant="h4" gutterBottom>
                 Order List
             </Typography>
             <TableContainer component={Paper}>
-                <Table>
+                <Table name='orderListTable'>
                     <TableHead>
                         <TableRow>
                         <TableCell>Order Id</TableCell>
@@ -196,10 +196,10 @@ const Orders = () => {
                                 <TableCell>{order.status}</TableCell>
                                 <TableCell>{order.customerAddress}</TableCell>
                                 <TableCell>
-                                    <IconButton onClick={() => handleEdit(order)}>
+                                    <IconButton name='editIcon' onClick={() => handleEdit(order)}>
                                         <EditIcon />
                                     </IconButton>
-                                    <IconButton onClick={() => handleDelete(order.id)}>
+                                    <IconButton name='deleteIcon' onClick={() => handleDelete(order.id)}>
                                         <DeleteIcon />
                                     </IconButton>
                                 </TableCell>
@@ -211,6 +211,7 @@ const Orders = () => {
             <Snackbar 
             open={!!successMessage}
             autoHideDuration={6000}
+            name='orderListSnackbar'
             onClose={handleCloseSnackbar}
             > 
                 <Alert

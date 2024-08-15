@@ -138,7 +138,7 @@ const WarehouseStocks = () => {
 
     return (
         <>
-        <Box component='form' onSubmit={handleSubmit} sx={{ mb: 2, mt: 8, padding: 2, borderRadius: 1, boxShadow: 10 }}>
+        <Box name='warehouseStockBox' component='form' onSubmit={handleSubmit} sx={{ mb: 2, mt: 8, padding: 2, borderRadius: 1, boxShadow: 10 }}>
             <TextField
                 label='Candy Id'
                 name='candyId'
@@ -169,19 +169,19 @@ const WarehouseStocks = () => {
                 margin='normal'
                 className='textField'
             />
-            <Button type='submit' variant='contained' color='primary'>
+            <Button name='warehouseStockBtn' type='submit' variant='contained' color='primary'>
                     {editingStock ? 'Update stock' : 'Add stock'}
                 </Button>
                 {editingStock && (
-                    <Button variant='contained' color='secondary' onClick={() => setEditingStock(null)}>
+                    <Button name='cancelEditBtn' variant='contained' color='secondary' onClick={() => setEditingStock(null)}>
                         Cancel edit
                     </Button>
                 )}
         </Box>
-        <Typography variant='h4' gutterBottom>
+        <Typography name='warehouseStockTitle' variant='h4' gutterBottom>
             Stock Inventory</Typography>
         <TableContainer component={Paper}>
-            <Table>
+            <Table name='warehouseStockTable'>
                 <TableHead>
                     <TableRow>
                         <TableCell>Warehouse</TableCell>
@@ -197,10 +197,10 @@ const WarehouseStocks = () => {
                             <TableCell>{getCandyName(stock.candyId)}</TableCell>
                             <TableCell>{stock.quantity}</TableCell>
                             <TableCell>
-                                <IconButton onClick={() => handleEdit(stock)}>
+                                <IconButton name='editIcon' onClick={() => handleEdit(stock)}>
                                     <Edit />
                                 </IconButton>
-                                <IconButton onClick={() => handleDeleteStock(stock.id)}>
+                                <IconButton name='deleteIcon' onClick={() => handleDeleteStock(stock.id)}>
                                     <Delete />
                                 </IconButton>
                             </TableCell>
@@ -212,6 +212,7 @@ const WarehouseStocks = () => {
         <Snackbar 
             open={!!successMessage}
             autoHideDuration={6000}
+            name='warehouseStockSnackbar'
             onClose={handleCloseSnackbar}
             > 
                 <Alert

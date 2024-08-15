@@ -93,6 +93,7 @@ const AppBarComponent = () => {
                 <Button
                     color="inherit"
                     className="menuItems"
+                    name='candy'
                     onClick={handleProductsMenuOpen}
                 >
                     Candy
@@ -102,13 +103,14 @@ const AppBarComponent = () => {
                     open={Boolean(productsMenuAnchorEl)}
                     onClose={handleProductsMenuClose}
                 >
-                    <MenuItem onClick={() => navigateTo('/candy')}>Candy Inventory</MenuItem>
-                    <MenuItem onClick={() => navigateTo('/candyTypes')}>Candy categories</MenuItem>
+                    <MenuItem name='candyRoute' onClick={() => navigateTo('/candy')}>Candy Inventory</MenuItem>
+                    <MenuItem name='candyTypesRoute' onClick={() => navigateTo('/candyTypes')}>Candy categories</MenuItem>
                 </Menu>
 
                 <Button
                     color="inherit"
                     className="menuItems"
+                    name='warehouses'
                     onClick={handleWarehouseMenuOpen}
                 >
                     Warehouses
@@ -118,12 +120,13 @@ const AppBarComponent = () => {
                     open={Boolean(warehouseMenuAnchorEl)}
                     onClose={handleWarehouseMenuClose}
                 >
-                    <MenuItem onClick={() => navigateTo('/warehouses')}>Warehouse List</MenuItem>
-                    <MenuItem onClick={() => navigateTo('/stocks')}>Warehouse Stock</MenuItem>
+                    <MenuItem name='warehousesRoute' onClick={() => navigateTo('/warehouses')}>Warehouse List</MenuItem>
+                    <MenuItem name='warehousesStockRoute' onClick={() => navigateTo('/stocks')}>Warehouse Stock</MenuItem>
                 </Menu>
                 <Button
                     color="inherit"
                     className="menuItems"
+                    name='orders'
                     onClick={handleOrdersMenuOpen}
                 >
                     Orders
@@ -133,19 +136,20 @@ const AppBarComponent = () => {
                     open={Boolean(ordersMenuAnchorEl)}
                     onClose={handleOrdersMenuClose}
                 >
-                    <MenuItem onClick={() => navigateTo('/orders')}>List of Orders</MenuItem>
-                    <MenuItem onClick={() => navigateTo('/orderInfo')}>Order Info</MenuItem>
+                    <MenuItem name='orderListRoute' onClick={() => navigateTo('/orders')}>List of Orders</MenuItem>
+                    <MenuItem name='orderInfoRoute' onClick={() => navigateTo('/orderInfo')}>Order Info</MenuItem>
                 </Menu>
                 <Button
                     color="inherit"
                     className="menuItems"
+                    name='about'
                     onClick={() => navigateTo('/about')}
                 >
                     About
                 </Button>
                 </div>
                 <div>
-                <Button variant='contained' color='primary' size='large' onClick={() => navigateTo('/warehouses')}>
+                <Button name='homeAddAWarehouseBtn' variant='contained' color='primary' size='large' onClick={() => navigateTo('/warehouses')}>
                     Add a warehouse
                 </Button>
                 <Badge
