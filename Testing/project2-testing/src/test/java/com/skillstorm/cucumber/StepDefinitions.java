@@ -33,6 +33,11 @@ public class StepDefinitions {
         this.warehouseList.clickEditButton();
     }
 
+    @When("I click on the delete icon for the Warehouse I want to delete")
+    public void iClickOnTheDeleteIconForTheWarehouseIWantToDelete(){
+        this.warehouseList.clickDeleteIcon();
+    }
+
     @And("I change the {string} and\\/or {string} with valid information")
     public void iChangeWithValidCredentials(String location, String capacity) {
         this.warehouseList.setLocation(location);
@@ -48,6 +53,8 @@ public class StepDefinitions {
     public void iShouldSeeTheUpdatedDetailsForTheWarehouseIEditedInTheListOfWarehouses(){
         this.warehouseList.confirmWarehouseUpdation();
     }
+
+
 
 
 }

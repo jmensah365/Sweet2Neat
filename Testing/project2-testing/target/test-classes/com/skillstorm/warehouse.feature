@@ -17,4 +17,11 @@ Feature: Warehouse CRUD
   | location | capacity |
   | New location 3     | 10000    |
 
+  Scenario: Delete a warehouse
+    Given I am on the Warehouse List page
+
+    When I click on the delete icon for the Warehouse I want to delete
+
+    Then the warehouse should be removed from the list
+
   

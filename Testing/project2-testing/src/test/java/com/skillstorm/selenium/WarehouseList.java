@@ -25,6 +25,10 @@ public class WarehouseList {
     @FindBy(name = "editIcon")
     private WebElement editBtn;
 
+    //Finding delete icon button
+    @FindBy(name = "deleteIcon")
+    private WebElement deleteBtn;
+
     //Finding update warehouse button
     @FindBy(name = "warehouseBtn")
     private WebElement warehouseBtn;
@@ -36,6 +40,10 @@ public class WarehouseList {
     //Finding the location in the last row in the warehouse list
     @FindBy(xpath = "//table[@name='warehouseTable']//tr[last()]/td[2]")
     private WebElement warehouseRowLocation;
+
+    //Finding the location in the first row in the warehouse list
+    @FindBy(xpath = "//table[@name='warehouseTable']//tr[1]/td[2]")
+    private WebElement warehouseFirstRowLocation;
 
     public WarehouseList(WebDriver driver){
         this.driver = driver;
@@ -52,9 +60,10 @@ public class WarehouseList {
         this.driver.get(url);
     }
 
+    //=====================UPDATE======================//
     public void clickEditButton() {
         try {
-            Thread.sleep(7000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -63,7 +72,7 @@ public class WarehouseList {
 
     public void setLocation(String location){
         try {
-            Thread.sleep(5000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -76,7 +85,7 @@ public class WarehouseList {
 
     public void setCapacity(String capacity){
         try {
-            Thread.sleep(5000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -87,10 +96,9 @@ public class WarehouseList {
         capacityField.sendKeys(capacity);
     }
 
-
     public void clickUpdateWarehouse(){
         try {
-            Thread.sleep(7000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -99,14 +107,33 @@ public class WarehouseList {
 
     public void confirmWarehouseUpdation(){
         try {
-            Thread.sleep(5000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         System.out.println("New warehouse location: " + warehouseRowLocation.getText());
     }
 
-    //TODO: check to see if success message pops up
+     //TODO: check to see if success message pops up
+    //=====================UPDATE======================//
+
+    //=====================DELETE======================//
+    public void clickDeleteIcon(){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        String warehouseName = warehouseFirstRowLocation.getText();
+        deleteBtn.click();
+        String warehouseList = warehouseTable.getText();
+        boolean isWarehousePresent = warehouseList.contains(warehouseName);
+        System.out.println(warehouseName);
+        System.out.println(warehouseList);
+        System.out.println(!isWarehousePresent);
+    }
+    //=====================DELETE======================//
+
 
 
 
