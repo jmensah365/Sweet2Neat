@@ -33,11 +33,10 @@ public class StepDefinitions {
         this.warehouseList.clickEditButton();
     }
 
-    @And("I change the {string}, {string}, and\\/or {string} with valid information")
-    public void iChangeWithValidCredentials(String location, String capacity, String stock) {
+    @And("I change the {string} and\\/or {string} with valid information")
+    public void iChangeWithValidCredentials(String location, String capacity) {
         this.warehouseList.setLocation(location);
         this.warehouseList.setCapacity(capacity);
-        this.warehouseList.setStock(stock);
     }
 
     @And("I click on the UPDATE WAREHOUSE button")
@@ -47,7 +46,7 @@ public class StepDefinitions {
 
     @Then("I should see the updated details for the Warehouse I edited in the list of Warehouses")
     public void iShouldSeeTheUpdatedDetailsForTheWarehouseIEditedInTheListOfWarehouses(){
-        this.warehouseList.displayWarehouseTable();
+        this.warehouseList.confirmWarehouseUpdation();
     }
 
 

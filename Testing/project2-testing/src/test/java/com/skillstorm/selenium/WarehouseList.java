@@ -2,7 +2,7 @@ package com.skillstorm.selenium;
 
 import java.time.Duration;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,7 +11,6 @@ import org.openqa.selenium.support.PageFactory;
 public class WarehouseList {
     private WebDriver driver;
     private static final String url = "http://localhost:5173/warehouses";
-    //private static final String editIconClassName = "MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root";
 
     /*
      * Finding location, capacity, and stock web elements on the page
@@ -22,9 +21,6 @@ public class WarehouseList {
     @FindBy(name = "capacity")
     private WebElement capacityField;
 
-    @FindBy(name = "currentStock")
-    private WebElement stockField;
-
     //Finding edit icon button
     @FindBy(name = "editIcon")
     private WebElement editBtn;
@@ -34,8 +30,12 @@ public class WarehouseList {
     private WebElement warehouseBtn;
 
     //Finding table of warehouses
-    @FindBy(className = "warehouseTable")
+    @FindBy(name = "warehouseTable")
     private WebElement warehouseTable;
+
+    //Finding the location in the last row in the warehouse list
+    @FindBy(xpath = "//table[@name='warehouseTable']//tr[last()]/td[2]")
+    private WebElement warehouseRowLocation;
 
     public WarehouseList(WebDriver driver){
         this.driver = driver;
@@ -54,7 +54,7 @@ public class WarehouseList {
 
     public void clickEditButton() {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(7000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -62,46 +62,48 @@ public class WarehouseList {
     }
 
     public void setLocation(String location){
-        locationField.clear();
-        // try {
-        //     Thread.sleep(5000);
-        // } catch (InterruptedException e) {
-        //     e.printStackTrace();
-        // }
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        String prevValue = locationField.getAttribute("value");
+        for (int i = 0; i < prevValue.length(); i++){
+            locationField.sendKeys(Keys.BACK_SPACE);
+        }
         locationField.sendKeys(location);
     }
 
     public void setCapacity(String capacity){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        capacityField.clear();
+        String prevValue = capacityField.getAttribute("value");
+        for (int i = 0; i < prevValue.length(); i++){
+            capacityField.sendKeys(Keys.BACK_SPACE);
+        }
         capacityField.sendKeys(capacity);
     }
 
-    public void setStock(String stock){
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        stockField.clear();
-        stockField.sendKeys(stock);
-    }
 
     public void clickUpdateWarehouse(){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(7000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         warehouseBtn.click();
     }
 
-    public boolean displayWarehouseTable(){
-        return warehouseTable.isDisplayed();
+    public void confirmWarehouseUpdation(){
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("New warehouse location: " + warehouseRowLocation.getText());
     }
 
     //TODO: check to see if success message pops up
