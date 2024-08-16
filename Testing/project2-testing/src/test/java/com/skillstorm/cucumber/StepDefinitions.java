@@ -23,6 +23,7 @@ public class StepDefinitions {
         this.warehouseList = new WarehouseList(driver);
     }
 
+    //======================= UPDATE =========================
     @Given("I am on the Warehouse List page")
     public void iAmOnTheWarehouseListPage() {
         this.warehouseList.getUrl();
@@ -52,6 +53,7 @@ public class StepDefinitions {
         this.driver.quit();
     }
 
+    //======================= CREATE =========================
     @When("I fill in the {string}, {string}, and {string} fields with valid information")
     public void fillInTheFields(String location, String capacity, String currentStock) {
     this.warehouseList.setLocation(location);
@@ -67,5 +69,25 @@ public class StepDefinitions {
     @Then("I should see the newly created Warehouse in the list of Warehouses")
     public void iShouldSeeNewlyCreatedWarehouse() {
         this.warehouseList.getWarehouseLocation();
+    }
+
+    //======================= READ =========================
+    @Given("I am on the home page")
+    public void iAmOnTheHomePage() {
+        this.warehouseList.getHomeURL();
+    }
+
+    @When("I click on the Warehouse List option")
+    public void clickOnWarehouseListOption() {
+        this.warehouseList.clickWarehouseListOption();
+    }
+    
+    @Then("I should be navigated to the Warehouse List page")
+    public void iAmNavigatedToWarehouseListPage() {
+        this.warehouseList.getUrl();
+    }
+
+    @And("I should see a list of all warehouses available")
+    public void iSeeListOfWarehouses() {
     }
 }
