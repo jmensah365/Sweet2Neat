@@ -33,7 +33,7 @@ Feature: Warehouse CRUD
     | 3212 Spur Ln, Austin, Texas | 5000     | 400          |
 
 
-  #-------------------------- Warehouse ADD ----------------------------#
+  #-------------------------- Warehouse READ ----------------------------#
   Scenario: Successful view of warehouse list
 
     Given I am on the home page

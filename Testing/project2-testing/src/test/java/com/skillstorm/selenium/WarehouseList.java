@@ -1,6 +1,7 @@
 package com.skillstorm.selenium;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -46,14 +47,21 @@ public class WarehouseList {
     @FindBy(name = "warehouseBtn")
     private WebElement addWarehouseButton;
 
+    //Find last (the latest table row added) warehouse location in warehouse list
     @FindBy(xpath = "//table[@name='warehouseTable']//tr[last()]/td[2]")
     private WebElement warehouseLocation;
 
+    //Find the warehouse menu option
     @FindBy(name = "warehouses")
     private WebElement warehousesMenu;
 
+    //Find the warehouses list option in menu
     @FindBy(name = "warehousesRoute")
     private WebElement warehouseListOption;
+
+    //Find the warehouse table body
+    @FindBy(name = "warehouseTBody")
+    private WebElement warehouseTableBody;
 
     public WarehouseList(WebDriver driver){
         this.driver = driver;
@@ -176,7 +184,7 @@ public class WarehouseList {
         System.out.println(warehouseLocation.getText());
     }
 
-    //======================= CREATE =========================
+    //======================= READ =========================
     public void getHomeURL() {
         this.driver.get(homeUrl);
     }
@@ -189,5 +197,17 @@ public class WarehouseList {
             e.printStackTrace();
         }
         warehouseListOption.click();
+    }
+
+    public void getWarehouseTable() {
+        warehouseTable.getText();
+    }
+
+    public void getWarehouseTableContents() {
+        List<WebElement> tableRows = warehouseTableBody.findElements(By.xpath(".//tr"));
+
+        for(WebElement tr : tableRows) {
+            System.out.println(tr.getText());
+        }
     }
 }

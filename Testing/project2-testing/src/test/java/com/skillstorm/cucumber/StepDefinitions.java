@@ -89,5 +89,6 @@ public class StepDefinitions {
 
     @And("I should see a list of all warehouses available")
     public void iSeeListOfWarehouses() {
+        this.warehouseList.getWarehouseTableContents();
     }
 }
