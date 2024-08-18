@@ -173,8 +173,8 @@ const WarehouseList = () => {
             <Typography name= 'warehouseListTitle' variant="h4" gutterBottom>
                 Warehouse List
             </Typography>
-            <TableContainer name='warehouseTable' component={Paper}>
-                <Table>
+            <TableContainer component={Paper}>
+                <Table name='warehouseTable'>
                     <TableHead>
                         <TableRow>
                             <TableCell>Warehouse Id</TableCell>
@@ -183,7 +183,7 @@ const WarehouseList = () => {
                             <TableCell>Actions</TableCell>
                         </TableRow>
                     </TableHead>
-                    <TableBody>
+                    <TableBody name='warehouseTBody'>
                         {warehouses.map(warehouse => (
                             <TableRow key={warehouse.id}>
                                 <TableCell>{warehouse.id}</TableCell>
