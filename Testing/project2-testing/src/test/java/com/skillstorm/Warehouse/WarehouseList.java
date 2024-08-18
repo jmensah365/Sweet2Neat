@@ -1,7 +1,9 @@
-package com.skillstorm.selenium;
+package com.skillstorm.Warehouse;
 
 import java.time.Duration;
+import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -42,7 +44,7 @@ public class WarehouseList {
     private WebElement warehouseRowLocation;
 
     //Finding the location in the first row in the warehouse list
-    @FindBy(xpath = "//table[@name='warehouseTable']//tr[1]/td[2]")
+    @FindBy(xpath = "//table[@name='warehouseTable']//tr[1]/td[1]")
     private WebElement warehouseFirstRowLocation;
 
     public WarehouseList(WebDriver driver){
@@ -124,13 +126,18 @@ public class WarehouseList {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        String warehouseName = warehouseFirstRowLocation.getText();
+        
+        String warehouseId = warehouseFirstRowLocation.getText();
         deleteBtn.click();
-        String warehouseList = warehouseTable.getText();
-        boolean isWarehousePresent = warehouseList.contains(warehouseName);
-        System.out.println(warehouseName);
-        System.out.println(warehouseList);
-        System.out.println(!isWarehousePresent);
+
+        List<WebElement> tableRows = warehouseTable.findElements(By.xpath(".//tr/td[1]"));
+        for(WebElement tr : tableRows) {
+            if(tr.getText().contains(warehouseId)){
+                System.out.println("True");
+            } else{
+                System.err.println("False");
+            }
+        }
     }
     //=====================DELETE======================//
 

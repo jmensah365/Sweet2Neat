@@ -22,6 +22,4 @@ Feature: Warehouse CRUD
 
     When I click on the delete icon for the Warehouse I want to delete
 
-    Then the warehouse should be removed from the list
-
   

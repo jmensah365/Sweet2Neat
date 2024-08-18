@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import com.skillstorm.selenium.WarehouseList;
+import com.skillstorm.Warehouse.WarehouseList;
 
 public class StepDefinitions {
 
