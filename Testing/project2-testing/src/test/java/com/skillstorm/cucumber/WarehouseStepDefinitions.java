@@ -55,11 +55,11 @@ public class WarehouseStepDefinitions {
     }
 
      //======================= CREATE =========================
-    @When("I fill in the {string}, {string}, and {string} fields with valid information")
-    public void fillInTheFields(String location, String capacity, String currentStock) {
+    @When("I fill in the {string} and {string} fields with valid information")
+    public void fillInTheFields(String location, String capacity) {
         this.warehouseList.setLocation(location);
         this.warehouseList.setCapacity(capacity);
-        this.warehouseList.setCurrentStock(currentStock);
+        //this.warehouseList.setCurrentStock(currentStock);
     }
 
     @And("I click the ADD WAREHOUSE button")

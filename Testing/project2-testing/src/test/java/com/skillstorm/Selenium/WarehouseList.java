@@ -24,8 +24,8 @@ public class WarehouseList {
     @FindBy(name = "capacity")
     private WebElement capacityField;
 
-    @FindBy(name = "currentStock")
-    private WebElement stockField;
+    // @FindBy(name = "currentStock")
+    // private WebElement stockField;
 
     //Finding edit icon button
     @FindBy(name = "editIcon")
@@ -184,14 +184,14 @@ public class WarehouseList {
             capacityField.sendKeys(capacity);
         }
         
-        public void setCurrentStock(String currentStock) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            stockField.sendKeys(currentStock);
-        }
+        // public void setCurrentStock(String currentStock) {
+        //     try {
+        //         Thread.sleep(1000);
+        //     } catch (InterruptedException e) {
+        //         e.printStackTrace();
+        //     }
+        //     stockField.sendKeys(currentStock);
+        // }
     
         public void clickAddWarehouseButton() {
             try {
