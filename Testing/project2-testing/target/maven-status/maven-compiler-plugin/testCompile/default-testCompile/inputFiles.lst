@@ -1,3 +1,5 @@
 /Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/cucumber/RunCucumberTest.java
-/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/selenium/WarehouseList.java
-/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/cucumber/StepDefinitions.java
+/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/navigation/NavigationLinks.java
+/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/navigation/NavigationSteps.java
+/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/warehouse/WarehouseCRUDSteps.java
+/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/warehouse/WarehouseList.java

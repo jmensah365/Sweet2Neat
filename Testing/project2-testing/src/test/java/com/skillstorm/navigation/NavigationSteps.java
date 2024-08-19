@@ -1,4 +1,4 @@
-package com.skillstorm.cucumber;
+package com.skillstorm.navigation;
 
 public class NavigationSteps {
     

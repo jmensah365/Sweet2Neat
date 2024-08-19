@@ -1,18 +1,14 @@
-package com.skillstorm.cucumber;
+package com.skillstorm.warehouse;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
-
-import java.time.Duration;
 
 import org.junit.jupiter.api.Assertions.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import com.skillstorm.selenium.WarehouseList;
-
-public class StepDefinitions {
+public class WarehouseCRUDSteps {
     private WebDriver driver;
     private WarehouseList warehouseList;
 
@@ -34,11 +30,15 @@ public class StepDefinitions {
         this.warehouseList.clickEditButton();
     }
 
-    @And("I change the {string}, {string}, and\\/or {string} with valid information")
-    public void iChangeWithValidCredentials(String location, String capacity, String stock) {
+    @When("I click on the delete icon for the Warehouse I want to delete")
+    public void iClickOnTheDeleteIconForTheWarehouseIWantToDelete(){
+        this.warehouseList.clickDeleteIcon();
+    }
+
+    @And("I change the {string} and\\/or {string} with valid information")
+    public void iChangeWithValidCredentials(String location, String capacity) {
         this.warehouseList.setLocation(location);
         this.warehouseList.setCapacity(capacity);
-        this.warehouseList.setStock(stock);
     }
 
     @And("I click on the UPDATE WAREHOUSE button")
@@ -48,17 +48,21 @@ public class StepDefinitions {
 
     @Then("I should see the updated details for the Warehouse I edited in the list of Warehouses")
     public void iShouldSeeTheUpdatedDetailsForTheWarehouseIEditedInTheListOfWarehouses(){
-        this.warehouseList.displayWarehouseTable();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        this.driver.quit();
+        this.warehouseList.confirmWarehouseUpdation();
+        this.driver.close();
     }
+
+    @Then("the warehouse should be removed from the list")
+    public void warehouseRemovedFromList() {
+
+    }
+
 
     //======================= CREATE =========================
     @When("I fill in the {string}, {string}, and {string} fields with valid information")
     public void fillInTheFields(String location, String capacity, String currentStock) {
     this.warehouseList.setLocation(location);
     this.warehouseList.setCapacity(capacity);
-    this.warehouseList.setCurrentStock(currentStock);
     }
 
     @And("I click the ADD WAREHOUSE button")
@@ -69,6 +73,7 @@ public class StepDefinitions {
     @Then("I should see the newly created Warehouse in the list of Warehouses")
     public void iShouldSeeNewlyCreatedWarehouse() {
         this.warehouseList.getWarehouseLocation();
+        this.driver.close();
     }
 
     //======================= READ =========================
@@ -90,5 +95,6 @@ public class StepDefinitions {
     @And("I should see a list of all warehouses available")
     public void iSeeListOfWarehouses() {
         this.warehouseList.getWarehouseTableContents();
+        this.driver.close();
     }
 }

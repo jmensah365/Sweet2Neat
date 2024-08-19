@@ -1,25 +1,6 @@
 @Warehouse
 Feature: Warehouse CRUD
 
-  #-------------------------- Warehouse UPDATE ----------------------------#
-  Scenario Outline: Updating a warehouse
-
-    Given I am on the Warehouse List page
-
-    When I click on the edit icon for the Warehouse I want to edit
-
-    And I change the "<location>", "<capacity>", and/or "<stock>" with valid information
-
-    And I click on the UPDATE WAREHOUSE button
-
-    Then I should see the updated details for the Warehouse I edited in the list of Warehouses
-
-  Examples:
-  | location | capacity | stock |
-  | Test      | 200     |  0    |
-  # | Test1     | 500     |  10    |
-  # | Test2      | 1000     |  50   |
-
   #-------------------------- Warehouse CREATE ----------------------------#
   Scenario Outline: Successful warehouse creation with valid information
 
@@ -31,6 +12,31 @@ Feature: Warehouse CRUD
     Examples:
     | location                    | capacity | currentStock |
     | 3212 Spur Ln, Austin, Texas | 5000     | 400          |
+
+  #-------------------------- Warehouse UPDATE ----------------------------#
+  Scenario Outline: Updating a warehouse
+
+    Given I am on the Warehouse List page
+
+    When I click on the edit icon for the Warehouse I want to edit
+
+    And I change the "<location>" and/or "<capacity>" with valid information
+
+    And I click on the UPDATE WAREHOUSE button
+
+    Then I should see the updated details for the Warehouse I edited in the list of Warehouses
+
+  Examples:
+    | location | capacity |
+    | New location 3     | 10000    |
+  
+  #-------------------------- Warehouse DELETE ----------------------------#
+  Scenario: Delete a warehouse
+    Given I am on the Warehouse List page
+
+    When I click on the delete icon for the Warehouse I want to delete
+
+    Then the warehouse should be removed from the list
 
 
   #-------------------------- Warehouse READ ----------------------------#

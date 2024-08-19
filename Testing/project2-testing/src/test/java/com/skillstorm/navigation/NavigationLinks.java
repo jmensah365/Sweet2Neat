@@ -1,4 +1,4 @@
-package com.skillstorm.selenium;
+package com.skillstorm.navigation;
 
 public class NavigationLinks {
     
