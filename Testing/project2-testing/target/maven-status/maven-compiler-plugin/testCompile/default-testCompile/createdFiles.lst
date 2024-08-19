@@ -1,1 +1,5 @@
+com/skillstorm/warehouse/WarehouseList.class
 com/skillstorm/cucumber/RunCucumberTest.class
+com/skillstorm/navigation/NavigationSteps.class
+com/skillstorm/navigation/NavigationLinks.class
+com/skillstorm/warehouse/WarehouseCRUDSteps.class
