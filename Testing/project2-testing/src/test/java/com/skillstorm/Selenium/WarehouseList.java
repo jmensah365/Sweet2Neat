@@ -67,6 +67,7 @@ public class WarehouseList {
     @FindBy(xpath = "//table[@name='warehouseTable']//tr[1]/td[1]")
     private WebElement warehouseFirstRowLocation;
 
+    //class variable for warehouseId
     String warehouseId = "";
 
     public WarehouseList(WebDriver driver){

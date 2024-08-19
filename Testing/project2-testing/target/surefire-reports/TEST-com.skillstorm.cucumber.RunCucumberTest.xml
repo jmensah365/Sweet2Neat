@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.skillstorm.cucumber.RunCucumberTest" time="40.684" tests="4" errors="2" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.skillstorm.cucumber.RunCucumberTest" time="57.162" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="22"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/Users/mensahj/Library/Java/JavaVirtualMachines/openjdk-22.0.1/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/mensahj/Documents/InventoryManagementProject/Testing/project2-testing/target/surefire/surefirebooter-20240819115028065_3.jar /Users/mensahj/Documents/InventoryManagementProject/Testing/project2-testing/target/surefire 2024-08-19T11-50-27_896-jvmRun1 surefire-20240819115028065_1tmp surefire_0-20240819115028065_2tmp"/>
+    <property name="sun.java.command" value="/Users/mensahj/Documents/InventoryManagementProject/Testing/project2-testing/target/surefire/surefirebooter-20240819134108553_3.jar /Users/mensahj/Documents/InventoryManagementProject/Testing/project2-testing/target/surefire 2024-08-19T13-41-08_378-jvmRun1 surefire-20240819134108553_1tmp surefire_0-20240819134108553_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/mensahj/Documents/InventoryManagementProject/Testing/project2-testing/target/test-classes:/Users/mensahj/Documents/InventoryManagementProject/Testing/project2-testing/target/classes:/Users/mensahj/.m2/repository/io/cucumber/cucumber-java/7.11.1/cucumber-java-7.11.1.jar:/Users/mensahj/.m2/repository/io/cucumber/cucumber-core/7.11.1/cucumber-core-7.11.1.jar:/Users/mensahj/.m2/repository/io/cucumber/cucumber-gherkin/7.11.1/cucumber-gherkin-7.11.1.jar:/Users/mensahj/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.11.1/cucumber-gherkin-messages-7.11.1.jar:/Users/mensahj/.m2/repository/io/cucumber/gherkin/26.0.3/gherkin-26.0.3.jar:/Users/mensahj/.m2/repository/io/cucumber/messages/21.0.1/messages-21.0.1.jar:/Users/mensahj/.m2/repository/io/cucumber/tag-expressions/5.0.1/tag-expressions-5.0.1.jar:/Users/mensahj/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/Users/mensahj/.m2/repository/io/cucumber/datatable/7.11.1/datatable-7.11.1.jar:/Users/mensahj/.m2/repository/io/cucumber/cucumber-plugin/7.11.1/cucumber-plugin-7.11.1.jar:/Users/mensahj/.m2/repository/io/cucumber/docstring/7.11.1/docstring-7.11.1.jar:/Users/mensahj/.m2/repository/io/cucumber/html-formatter/20.2.1/html-formatter-20.2.1.jar:/Users/mensahj/.m2/repository/io/cucumber/junit-xml-formatter/0.1.0/junit-xml-formatter-0.1.0.jar:/Users/mensahj/.m2/repository/io/cucumber/ci-environment/9.1.0/ci-environment-9.1.0.jar:/Users/mensahj/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/mensahj/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.11.1/cucumber-junit-platform-engine-7.11.1.jar:/Users/mensahj/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/mensahj/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/mensahj/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-java/4.23.0/selenium-java-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-api/4.23.0/selenium-api-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.23.0/selenium-chrome-driver-4.23.0.jar:/Users/mensahj/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.23.0/selenium-chromium-driver-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-json/4.23.0/selenium-json-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.23.0/selenium-manager-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v125/4.23.0/selenium-devtools-v125-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v126/4.23.0/selenium-devtools-v126-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v127/4.23.0/selenium-devtools-v127-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.23.0/selenium-devtools-v85-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.23.0/selenium-edge-driver-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.23.0/selenium-firefox-driver-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-http/4.23.0/selenium-http-4.23.0.jar:/Users/mensahj/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.23.0/selenium-ie-driver-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.23.0/selenium-remote-driver-4.23.0.jar:/Users/mensahj/.m2/repository/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre.jar:/Users/mensahj/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/mensahj/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/mensahj/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/mensahj/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/Users/mensahj/.m2/repository/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1.jar:/Users/mensahj/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-api/1.40.0/opentelemetry-api-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-context/1.40.0/opentelemetry-context-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.40.0/opentelemetry-exporter-logging-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.40.0/opentelemetry-sdk-common-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.40.0/opentelemetry-sdk-extension-autoconfigure-spi-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.40.0/opentelemetry-sdk-extension-autoconfigure-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.40.0-alpha/opentelemetry-api-incubator-1.40.0-alpha.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.40.0/opentelemetry-sdk-trace-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.40.0/opentelemetry-sdk-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.40.0/opentelemetry-sdk-metrics-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.40.0/opentelemetry-sdk-logs-1.40.0.jar:/Users/mensahj/.m2/repository/net/bytebuddy/byte-buddy/1.14.18/byte-buddy-1.14.18.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-os/4.23.0/selenium-os-4.23.0.jar:/Users/mensahj/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.23.0/selenium-safari-driver-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-support/4.23.0/selenium-support-4.23.0.jar:/Users/mensahj/.m2/repository/org/junit/platform/junit-platform-suite/1.9.2/junit-platform-suite-1.9.2.jar:/Users/mensahj/.m2/repository/org/junit/platform/junit-platform-suite-api/1.9.2/junit-platform-suite-api-1.9.2.jar:/Users/mensahj/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.9.2/junit-platform-suite-engine-1.9.2.jar:/Users/mensahj/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.9.2/junit-platform-suite-commons-1.9.2.jar:/Users/mensahj/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/mensahj/.m2/repository/org/testng/testng/7.10.2/testng-7.10.2.jar:/Users/mensahj/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/mensahj/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/mensahj/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/mensahj/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.2/junit-jupiter-5.9.2.jar:/Users/mensahj/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/mensahj/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.2/junit-jupiter-params-5.9.2.jar:/Users/mensahj/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/mensahj/Documents/InventoryManagementProject/Testing/project2-testing/target/surefire/surefirebooter-20240819115028065_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/mensahj/Documents/InventoryManagementProject/Testing/project2-testing/target/surefire/surefirebooter-20240819134108553_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="22.0.1+8-16"/>
@@ -58,156 +58,48 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="66.0"/>
   </properties>
-  <testcase name="Example #1.1" classname="Examples" time="19.905">
+  <testcase name="Example #1.1" classname="Examples" time="26.983">
     <system-out><![CDATA[
-@Warehouse
-Scenario Outline: Updating a warehouse                                                                           &amp#27;[90m# com/skillstorm/warehouse.feature:19&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse List page&amp#27;[0m                                                                          &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iAmOnTheWarehouseListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the edit icon for the Warehouse I want to edit&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iClickOnTheEditIconForTheWarehouseIWantToEdit()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Apt. 862 652 Shad Neck, South Hershelborough, IN 14539"&amp#27;[0m&amp#27;[32m and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"2000"&amp#27;[0m&amp#27;[32m with valid information&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iChangeWithValidCredentials(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the UPDATE WAREHOUSE button&amp#27;[0m                                                                     &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iClickOnTheUpdateWarehouseButton()&amp#27;[0m
-New warehouse location: 94908 Delcie Locks, Kirkfurt, AR 69894-6595
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the updated details for the Warehouse I edited in the list of Warehouses&amp#27;[0m                     &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iShouldSeeTheUpdatedDetailsForTheWarehouseIEditedInTheListOfWarehouses()&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy                                                 &amp#27;[90m# com/skillstorm/candy.feature:11&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the ADD CANDY button&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton()&amp#27;[0m
+31
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the newly created candy on the list&amp#27;[0m                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeTheNewlyCreatedCandyOnTheList()&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="10.615">
-    <error message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=127.0.6533.120)&#10;Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;&#10;System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;22.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [a715ab7ea762e28dc364012739bbb94c, findElement {using=xpath, value=//table[@name=&apos;warehouseTable&apos;]//tr[last()]/td[2]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/dy/cx3b95zd3t1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55577}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55577/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a715ab7ea762e28dc364012739bbb94c" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[org.openqa.selenium.NoSuchWindowException: 
-no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.120)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '22.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a715ab7ea762e28dc364012739bbb94c, findElement {using=xpath, value=//table[@name='warehouseTable']//tr[last()]/td[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/dy/cx3b95zd3t1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55577}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55577/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a715ab7ea762e28dc364012739bbb94c
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy20.getText(Unknown Source)
-	at com.skillstorm.Selenium.WarehouseList.getWarehouseLocation(WarehouseList.java:223)
-	at com.skillstorm.cucumber.WarehouseStepDefinitions.iShouldSeeNewlyCreatedWarehouse(WarehouseStepDefinitions.java:77)
-	at ✽.I should see the newly created Warehouse in the list of Warehouses(classpath:com/skillstorm/warehouse.feature:36)
-]]></error>
+  <testcase name="Example #1.2" classname="Examples" time="26.236">
     <system-out><![CDATA[
-@Warehouse
-Scenario Outline: Successful warehouse creation with valid information                      &amp#27;[90m# com/skillstorm/warehouse.feature:40&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse List page&amp#27;[0m                                                     &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iAmOnTheWarehouseListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI fill in the &amp#27;[0m&amp#27;[32m&amp#27;[1m"3212 Spur Ln, Austin, Texas"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"5000"&amp#27;[0m&amp#27;[32m fields with valid information&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.fillInTheFields(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the ADD WAREHOUSE button&amp#27;[0m                                                      &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.clickAddWarehouseButton()&amp#27;[0m
-  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mI should see the newly created Warehouse in the list of Warehouses&amp#27;[0m                   &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iShouldSeeNewlyCreatedWarehouse()&amp#27;[0m
-      &amp#27;[31morg.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.120)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '22.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a715ab7ea762e28dc364012739bbb94c, findElement {using=xpath, value=//table[@name='warehouseTable']//tr[last()]/td[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/dy/cx3b95zd3t1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55577}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55577/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a715ab7ea762e28dc364012739bbb94c
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy20.getText(Unknown Source)
-	at com.skillstorm.Selenium.WarehouseList.getWarehouseLocation(WarehouseList.java:223)
-	at com.skillstorm.cucumber.WarehouseStepDefinitions.iShouldSeeNewlyCreatedWarehouse(WarehouseStepDefinitions.java:77)
-	at ✽.I should see the newly created Warehouse in the list of Warehouses(classpath:com/skillstorm/warehouse.feature:36)
-&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy                                                     &amp#27;[90m# com/skillstorm/candy.feature:12&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                               &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Ring Pops"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Gummy Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Watermelon"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"2.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"0.50"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the ADD CANDY button&amp#27;[0m                                                     &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton()&amp#27;[0m
+32
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the newly created candy on the list&amp#27;[0m                                &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeTheNewlyCreatedCandyOnTheList()&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Delete a warehouse" classname="Warehouse CRUD" time="8.063">
+  <testcase name="Successful of candy list" classname="Candy CRUD Operations" time="3.837">
     <system-out><![CDATA[
-@Warehouse
-Scenario: Delete a warehouse                                         &amp#27;[90m# com/skillstorm/warehouse.feature:22&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse List page&amp#27;[0m                              &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iAmOnTheWarehouseListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the delete icon for the Warehouse I want to delete&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iClickOnTheDeleteIconForTheWarehouseIWantToDelete()&amp#27;[0m
-43
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse should not be visible in the table&amp#27;[0m              &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.theWarehouseShouldNotBeVisibleInTheTable()&amp#27;[0m
-]]></system-out>
-  </testcase>
-  <testcase name="Successful view of warehouse list" classname="Warehouse CRUD" time="2.003">
-    <error message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=127.0.6533.120)&#10;Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;&#10;System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;22.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [530fcbf2e70329363ae015ff94f9f46a, get {url=http://localhost:5173/warehouses}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/dy/cx3b95zd3t1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55608}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55608/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 530fcbf2e70329363ae015ff94f9f46a" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[org.openqa.selenium.NoSuchWindowException: 
-no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.120)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '22.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [530fcbf2e70329363ae015ff94f9f46a, get {url=http://localhost:5173/warehouses}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/dy/cx3b95zd3t1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55608}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55608/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 530fcbf2e70329363ae015ff94f9f46a
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)
-	at com.skillstorm.Selenium.WarehouseList.getUrl(WarehouseList.java:84)
-	at com.skillstorm.cucumber.WarehouseStepDefinitions.iAmOnTheHomePage(WarehouseStepDefinitions.java:83)
-	at ✽.I am on the home page(classpath:com/skillstorm/warehouse.feature:46)
-]]></error>
-    <system-out><![CDATA[
-@Warehouse
-Scenario: Successful view of warehouse list             &amp#27;[90m# com/skillstorm/warehouse.feature:44&amp#27;[0m
-  &amp#27;[31mGiven &amp#27;[0m&amp#27;[31mI am on the home page&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iAmOnTheHomePage()&amp#27;[0m
-      &amp#27;[31morg.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.120)
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '22.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [530fcbf2e70329363ae015ff94f9f46a, get {url=http://localhost:5173/warehouses}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.120, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /var/folders/dy/cx3b95zd3t1...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55608}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55608/devtoo..., se:cdpVersion: 127.0.6533.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 530fcbf2e70329363ae015ff94f9f46a
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)
-	at com.skillstorm.Selenium.WarehouseList.getUrl(WarehouseList.java:84)
-	at com.skillstorm.cucumber.WarehouseStepDefinitions.iAmOnTheHomePage(WarehouseStepDefinitions.java:83)
-	at ✽.I am on the home page(classpath:com/skillstorm/warehouse.feature:46)
-&amp#27;[0m
-  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI click on the Warehouse List option&amp#27;[0m             &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.clickOnWarehouseListOption()&amp#27;[0m
-  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should be navigated to the Warehouse List page&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iAmNavigatedToWarehouseListPage()&amp#27;[0m
-  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI should see a list of all warehouses available&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iSeeListOfWarehouses()&amp#27;[0m
+@Candy
+Scenario: Successful of candy list             &amp#27;[90m# com/skillstorm/candy.feature:14&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Home page&amp#27;[0m                  &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI navigate to Candy Inventory&amp#27;[0m           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iNavigateToTheCandyInventory()&amp#27;[0m
+Candy ID Candy Name Candy Type Flavor Price ($) Weight (oz.)
+1 3 Musketeers Chocolate Bar Choclate 1.75 1.92
+2 Air Heads Taffy Bar Cherry 0.75 0.55
+3 Air Heads Taffy Bar Watermelon 0.75 0.55
+4 Almondy Joy Chocolate Bar Coconut 1.75 1.7
+6 Turking Taffy Taffy Bar Strawberry 1.75 1.5
+8 Tootsie Pop Lollipops Grape 18 32
+9 Sour Blast Candy Spray Sour Candy Sour 2.5 5
+10 Sour DOTS Gumdrops Sour Candy Sour 2.5 6
+11 4D Gummy Apples Bulk Gummy Candy Apple 18 35.2
+7 Haribo's Gummy Candy Multi-flavored 2.99 2
+31 Sour Skittles Sour Candy Sour 4.99 1
+32 Ring Pops Gummy Candy Watermelon 2.99 0.5
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mlist of all candies should be displayed&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.theListOfAllCandiesShouldBeDisplayed()&amp#27;[0m
 ]]></system-out>
   </testcase>
 </testsuite>
