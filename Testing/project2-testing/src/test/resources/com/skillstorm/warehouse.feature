@@ -27,10 +27,10 @@ Feature: Warehouse CRUD
     Then I should see the updated details for the Warehouse I edited in the list of Warehouses
 
   Examples:
-    | location | capacity |
-    | New location 3     | 10000    |
-  
-  #-------------------------- Warehouse DELETE ----------------------------#
+  | location | capacity |
+  | Apt. 862 652 Shad Neck, South Hershelborough, IN 14539    | 2000    |
+
+#-------------------------- Warehouse DELETE ----------------------------#
   Scenario: Delete a warehouse
     Given I am on the Warehouse List page
 
@@ -46,3 +46,5 @@ Feature: Warehouse CRUD
     When I click on the Warehouse List option
     Then I should be navigated to the Warehouse List page
     And I should see a list of all warehouses available
+
+  
