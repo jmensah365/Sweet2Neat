@@ -1,6 +1,7 @@
 @Warehouse
 Feature: Warehouse CRUD
 
+  #-------------------------- Warehouse UPDATE ----------------------------#
   Scenario Outline: Updating a warehouse
 
     Given I am on the Warehouse List page
@@ -15,11 +16,34 @@ Feature: Warehouse CRUD
 
   Examples:
   | location | capacity |
-  | New location 3     | 10000    |
+  | Apt. 862 652 Shad Neck, South Hershelborough, IN 14539    | 2000    |
 
+#-------------------------- Warehouse DELETE ----------------------------#
   Scenario: Delete a warehouse
     Given I am on the Warehouse List page
 
     When I click on the delete icon for the Warehouse I want to delete
+
+
+    #-------------------------- Warehouse CREATE ----------------------------#
+  Scenario Outline: Successful warehouse creation with valid information
+
+    Given I am on the Warehouse List page
+    When I fill in the "<location>", "<capacity>", and "<currentStock>" fields with valid information
+    And I click the ADD WAREHOUSE button
+    Then I should see the newly created Warehouse in the list of Warehouses
+
+    Examples:
+    | location                    | capacity | currentStock |
+    | 3212 Spur Ln, Austin, Texas | 5000     | 400          |
+
+
+  #-------------------------- Warehouse READ ----------------------------#
+  Scenario: Successful view of warehouse list
+
+    Given I am on the home page
+    When I click on the Warehouse List option
+    Then I should be navigated to the Warehouse List page
+    And I should see a list of all warehouses available
 
   

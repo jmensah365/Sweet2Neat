@@ -1,4 +1,4 @@
-package com.skillstorm.Warehouse;
+package com.skillstorm.Selenium;
 
 import java.time.Duration;
 import java.util.List;
@@ -13,6 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 public class WarehouseList {
     private WebDriver driver;
     private static final String url = "http://localhost:5173/warehouses";
+    private static final String homeUrl = "http://localhost:5173/";
 
     /*
      * Finding location, capacity, and stock web elements on the page
@@ -23,6 +24,9 @@ public class WarehouseList {
     @FindBy(name = "capacity")
     private WebElement capacityField;
 
+    @FindBy(name = "currentStock")
+    private WebElement stockField;
+
     //Finding edit icon button
     @FindBy(name = "editIcon")
     private WebElement editBtn;
@@ -31,13 +35,29 @@ public class WarehouseList {
     @FindBy(name = "deleteIcon")
     private WebElement deleteBtn;
 
+    //Find the warehouse menu option
+    @FindBy(name = "warehouses")
+    private WebElement warehousesMenu;
+
     //Finding update warehouse button
     @FindBy(name = "warehouseBtn")
     private WebElement warehouseBtn;
 
+    //Find the "ADD WAREHOUSE" button
+    @FindBy(name = "warehouseBtn")
+    private WebElement addWarehouseButton;
+
+    //Find the title "Warehouse List"
+    @FindBy(className = "MuiTypography-root")
+    private WebElement warehouseListTitle;
+
     //Finding table of warehouses
     @FindBy(name = "warehouseTable")
     private WebElement warehouseTable;
+
+    //Find the warehouses list option in menu
+    @FindBy(name = "warehousesRoute")
+    private WebElement warehouseListOption;
 
     //Finding the location in the last row in the warehouse list
     @FindBy(xpath = "//table[@name='warehouseTable']//tr[last()]/td[2]")
@@ -140,6 +160,84 @@ public class WarehouseList {
         }
     }
     //=====================DELETE======================//
+
+        //======================= CREATE =========================
+        public String checkPageTitle() {
+            return warehouseListTitle.getText();
+        }
+    
+        public void addLocation(String location) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            locationField.sendKeys(location);
+        }
+    
+        public void addCapacity(String capacity) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            capacityField.sendKeys(capacity);
+        }
+        
+        public void setCurrentStock(String currentStock) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            stockField.sendKeys(currentStock);
+        }
+    
+        public void clickAddWarehouseButton() {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            addWarehouseButton.click();
+        }
+    
+        public void getWarehouseLocation() {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(warehouseRowLocation.getText());
+        }
+
+    //======================= READ =========================
+    public void getHomeURL() {
+        this.driver.get(homeUrl);
+    }
+
+    public void clickWarehouseListOption() {
+        warehousesMenu.click();        
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        warehouseListOption.click();
+    }
+
+    public void getWarehouseTable() {
+        warehouseTable.getText();
+    }
+
+    public void getWarehouseTableContents() {
+        List<WebElement> tableRows = warehouseTable.findElements(By.xpath(".//tr"));
+
+        for(WebElement tr : tableRows) {
+            System.out.println(tr.getText());
+        }
+    }
+    
 
 
 

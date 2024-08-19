@@ -8,9 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import com.skillstorm.Warehouse.WarehouseList;
+import com.skillstorm.Selenium.WarehouseList;
 
-public class StepDefinitions {
+public class WarehouseStepDefinitions {
 
     private WarehouseList warehouseList;
 
@@ -52,6 +52,45 @@ public class StepDefinitions {
     @Then("I should see the updated details for the Warehouse I edited in the list of Warehouses")
     public void iShouldSeeTheUpdatedDetailsForTheWarehouseIEditedInTheListOfWarehouses(){
         this.warehouseList.confirmWarehouseUpdation();
+    }
+
+     //======================= CREATE =========================
+    @When("I fill in the {string}, {string}, and {string} fields with valid information")
+    public void fillInTheFields(String location, String capacity, String currentStock) {
+        this.warehouseList.setLocation(location);
+        this.warehouseList.setCapacity(capacity);
+        this.warehouseList.setCurrentStock(currentStock);
+    }
+
+    @And("I click the ADD WAREHOUSE button")
+    public void clickAddWarehouseButton() {
+        this.warehouseList.clickAddWarehouseButton();
+    }
+
+    @Then("I should see the newly created Warehouse in the list of Warehouses")
+    public void iShouldSeeNewlyCreatedWarehouse() {
+        this.warehouseList.getWarehouseLocation();
+    }
+
+    //======================= READ =========================
+    @Given("I am on the home page")
+    public void iAmOnTheHomePage() {
+        this.warehouseList.getUrl();
+    }
+
+    @When("I click on the Warehouse List option")
+    public void clickOnWarehouseListOption() {
+        this.warehouseList.clickWarehouseListOption();
+    }
+    
+    @Then("I should be navigated to the Warehouse List page")
+    public void iAmNavigatedToWarehouseListPage() {
+        this.warehouseList.getUrl();
+    }
+
+    @And("I should see a list of all warehouses available")
+    public void iSeeListOfWarehouses() {
+        this.warehouseList.getWarehouseTableContents();
     }
 
 

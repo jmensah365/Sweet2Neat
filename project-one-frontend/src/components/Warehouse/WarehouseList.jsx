@@ -88,12 +88,32 @@ const WarehouseList = () => {
             }
             setNewWarehouse({location: '', capacity: '', currentStock: ''});
             setSuccessMessage(editingWarehouse ? 'Warehouse updated successfully!' : 'Warehouse added successfully!');
+
+            refreshWarehouseDetails();
         })
         .catch(err => {
             console.log(err);
             setError('Failed to update warehouse');
         });
     };
+
+    const refreshWarehouseDetails = () => {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(returnedData => {
+                setWarehouses(returnedData);
+                setLoaded(true);
+            })
+            .catch(err => {
+                setError(err);
+                setLoaded(true);
+            });
+    }
 
     // sets the warehouse to edit
     const handleEdit = (warehouse) => {
@@ -173,8 +193,8 @@ const WarehouseList = () => {
             <Typography name= 'warehouseListTitle' variant="h4" gutterBottom>
                 Warehouse List
             </Typography>
-            <TableContainer name='warehouseTable' component={Paper}>
-                <Table>
+            <TableContainer component={Paper}>
+                <Table name='warehouseTable'>
                     <TableHead>
                         <TableRow>
                             <TableCell>Warehouse Id</TableCell>
