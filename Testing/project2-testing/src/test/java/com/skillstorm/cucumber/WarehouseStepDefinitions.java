@@ -54,6 +54,11 @@ public class WarehouseStepDefinitions {
         this.warehouseList.confirmWarehouseUpdation();
     }
 
+    @Then("the warehouse should not be visible in the table")
+    public void theWarehouseShouldNotBeVisibleInTheTable(){
+        this.warehouseList.confirmDeletion();
+    }
+
      //======================= CREATE =========================
     @When("I fill in the {string} and {string} fields with valid information")
     public void fillInTheFields(String location, String capacity) {

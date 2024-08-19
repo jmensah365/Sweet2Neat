@@ -3,6 +3,7 @@ package com.skillstorm.Selenium;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CandyList {
@@ -17,4 +18,11 @@ public class CandyList {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         PageFactory.initElements(driver, this);
     }
+
+
+    /*
+     * Finding name, type, flavor, price, and weight text fields
+     */
+
+    //@FindBy()
 }

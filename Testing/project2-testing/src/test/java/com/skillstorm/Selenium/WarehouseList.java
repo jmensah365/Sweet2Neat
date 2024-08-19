@@ -24,6 +24,9 @@ public class WarehouseList {
     @FindBy(name = "capacity")
     private WebElement capacityField;
 
+    @FindBy(name = "currentStock")
+    private WebElement stockField;
+
     //Finding edit icon button
     @FindBy(name = "editIcon")
     private WebElement editBtn;
@@ -63,6 +66,8 @@ public class WarehouseList {
     //Finding the location in the first row in the warehouse list
     @FindBy(xpath = "//table[@name='warehouseTable']//tr[1]/td[1]")
     private WebElement warehouseFirstRowLocation;
+
+    String warehouseId = "";
 
     public WarehouseList(WebDriver driver){
         this.driver = driver;
@@ -144,9 +149,16 @@ public class WarehouseList {
             e.printStackTrace();
         }
         
-        String warehouseId = warehouseFirstRowLocation.getText();
+        warehouseId = warehouseFirstRowLocation.getText();
         deleteBtn.click();
+    }
 
+    public void confirmDeletion(){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         List<WebElement> tableRows = warehouseTable.findElements(By.xpath(".//tr/td[1]"));
         for(WebElement tr : tableRows) {
             if(tr.getText().contains(warehouseId)){
@@ -155,6 +167,8 @@ public class WarehouseList {
                 System.err.println("False");
             }
         }
+
+
     }
     //=====================DELETE======================//
 
@@ -181,6 +195,14 @@ public class WarehouseList {
             capacityField.sendKeys(capacity);
         }
         
+        public void setCurrentStock(String currentStock) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            stockField.sendKeys(currentStock);
+        }
     
         public void clickAddWarehouseButton() {
             try {
