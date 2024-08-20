@@ -28,7 +28,7 @@ public class WarehouseService {
      * @return Iterable of Warehouse entities
      */
     public Iterable<Warehouse> findAll() {
-        return warehouseRepo.findAll();
+        return warehouseRepo.findAllByOrderByIdAsc();
     }
 
     /**

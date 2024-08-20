@@ -9,6 +9,7 @@ import java.util.List;
 public interface CandyRepo extends JpaRepository<Candy, Integer>{
     List<Candy> findByFlavor(String flavor);
 
-    
     List<Candy> findByType(String type);
+
+    List<Candy> findAllByOrderByIdAsc();
 }

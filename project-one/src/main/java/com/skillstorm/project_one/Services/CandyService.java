@@ -24,7 +24,8 @@ public class CandyService {
 
     // Retrieve all Candy entities from the repo
     public Iterable<Candy> findAll(){
-        return repo.findAll();
+        // return repo.findAll();
+        return repo.findAllByOrderByIdAsc();
     }
 
 

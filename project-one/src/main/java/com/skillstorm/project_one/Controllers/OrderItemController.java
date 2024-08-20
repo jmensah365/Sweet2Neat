@@ -22,7 +22,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 
 
 //Linking frontend and backend using CORS
-@CrossOrigin(origins = "http://cim-frontend.s3-website-us-east-1.amazonaws.com")
+// @CrossOrigin(origins = "http://cim-frontend.s3-website-us-east-1.amazonaws.com")
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/orderItem")
 public class OrderItemController {
@@ -32,7 +33,6 @@ public class OrderItemController {
     public OrderItemController(OrderItemService service){
         this.service = service;
     }
-
 
     // Endpoint to retrieve all order items
     @GetMapping
