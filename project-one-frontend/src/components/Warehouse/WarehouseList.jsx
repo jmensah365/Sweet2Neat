@@ -10,7 +10,7 @@ import DeleteIcon from '@mui/icons-material/Delete'
 
 
 const WarehouseList = () => {
-    const url = "http://localhost:8080/warehouse";
+    const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/warehouse";
     
     //hook to keep track of warehouses
     const [warehouses, setWarehouses] = useState([]);

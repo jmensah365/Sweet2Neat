@@ -5,7 +5,7 @@ import {
     TableHead, TableRow, Paper, Typography} from '@mui/material';
 
 const GummyCandy = () => {
-    const url = "http://localhost:8080/candy/getByType?type=Lollipops";
+    const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/candy/getByType?type=Lollipops";
     const [candy, setCandy] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(null);

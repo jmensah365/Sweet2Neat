@@ -10,9 +10,9 @@ import Delete from '@mui/icons-material/Delete';
 
 
 const WarehouseStocks = () => {
-    const stockUrl = 'http://localhost:8080/stock';
-    const warehouseUrl = 'http://localhost:8080/warehouse';
-    const candyUrl = 'http://localhost:8080/candy';
+    const stockUrl = 'http://sweet2neat.us-east-1.elasticbeanstalk.com/stock';
+    const warehouseUrl = 'http://sweet2neat.us-east-1.elasticbeanstalk.com/warehouse';
+    const candyUrl = 'http://sweet2neat.us-east-1.elasticbeanstalk.com/candy';
     
     //hooks that will hold our retrieved data
     const [stocks, setStocks] = useState([]);

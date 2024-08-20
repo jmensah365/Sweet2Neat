@@ -10,9 +10,9 @@ import Edit from '@mui/icons-material/Edit';
 import Delete from '@mui/icons-material/Delete';
 
 const OrderInfo = () => {
-    const orderItemUrl = "http://localhost:8080/orderItem";
-    const orderUrl = "http://localhost:8080/orders";
-    const candyUrl = 'http://localhost:8080/candy';
+    const orderItemUrl = "http://sweet2neat.us-east-1.elasticbeanstalk.com/orderItem";
+    const orderUrl = "http://sweet2neat.us-east-1.elasticbeanstalk.com/orders";
+    const candyUrl = 'http://sweet2neat.us-east-1.elasticbeanstalk.com/candy';
     const [orderItem, setOrderItem] = useState([]);
     const [order, setOrder] = useState([]);
     const [candy, setCandy] = useState([]);
