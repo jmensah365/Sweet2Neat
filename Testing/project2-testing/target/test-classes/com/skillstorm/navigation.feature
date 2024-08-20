@@ -16,7 +16,17 @@ Feature: Navigation Links
     #     When I click on the Candy Inventory menu option
     #     Then I should see the Candy Inventory page
 
-    Scenario: Successfully navigate to Candy Categories page
+    # Scenario: Successfully navigate to Candy Categories page
+    #     Given I am on the home page
+    #     When I click on the Candy Categories menu option
+    #     Then I should see the Candy Categories page
+
+    Scenario: Successfully navigate to List of Orders page
         Given I am on the home page
-        When I click on the Candy Categories menu option
-        Then I should see the Candy Categories page
+        When I click on the List of Orders menu option
+        Then I should see the List of Orders page
+
+    # Scenario: Successfully navigate to Order Info page
+    #     Given I am on the home page
+    #     When I click on the Order Info menu option
+    #     Then I should see the Order Info page

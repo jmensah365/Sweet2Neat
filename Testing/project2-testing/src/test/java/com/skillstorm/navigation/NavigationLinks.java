@@ -42,6 +42,21 @@ public class NavigationLinks {
     @FindBy(name = "candyTypesHeader")
     private WebElement candyCategoriesHeader;
 
+    @FindBy(name = "orders")
+    private WebElement ordersMenu;
+
+    @FindBy(name = "orderListRoute")
+    private WebElement listOfOrdersMenu;
+
+    @FindBy(name = "orderListTitle")
+    private WebElement listOfOrdersHeader;
+
+    @FindBy(name = "orderInfoRoute")
+    private WebElement orderInfoMenu;
+
+    @FindBy(name = "orderInfoTitle")
+    private WebElement orderInfoHeader;
+
     // Setup driver
     public NavigationLinks(WebDriver driver){
         this.driver = driver;
@@ -100,7 +115,7 @@ public class NavigationLinks {
         return candyInventoryHeader.getText();
     }
 
-    //================= NAV TO CANDY INVENTORY PAGE ==================//
+    //================= NAV TO CANDY CATEGORIES PAGE ==================//
     public void clickOnCandyCategoriesMenu() {
         candyMenu.click();
         candyCategoriesMenu.click();
@@ -108,6 +123,26 @@ public class NavigationLinks {
 
     public String getCandyCategoriesHeader() {
         return candyCategoriesHeader.getText();
+    }
+    
+    //================= NAV TO LIST OF ORDERS PAGE ==================//
+    public void clickOnListOfOrdersMenu() {
+        ordersMenu.click();
+        orderInfoMenu.click();
+    }
+
+    public String getListOfOrdersHeader() {
+        return orderInfoHeader.getText();
+    }
+
+    //================= NAV TO ORDER INFO PAGE ==================//
+    public void clickOnOrderInfoMenu() {
+        ordersMenu.click();
+        listOfOrdersMenu.click();
+    }
+
+    public String getOrderInfoHeader() {
+        return listOfOrdersHeader.getText();
     }
 }
 

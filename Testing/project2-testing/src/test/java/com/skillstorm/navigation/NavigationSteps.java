@@ -7,7 +7,6 @@ import org.testng.Assert;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
 
 public class NavigationSteps {
@@ -71,7 +70,7 @@ public class NavigationSteps {
         System.out.println(navigationLinks.getCandyInventoryHeader());
     }
 
-    //================= NAV TO CANDY INVENTORY PAGE ==================//
+    //================= NAV TO CANDY CATEGORIES PAGE ==================//
 
     @When("I click on the Candy Categories menu option")
     public void clickOnCandyCategoriesOption() {
@@ -80,5 +79,27 @@ public class NavigationSteps {
     @Then("I should see the Candy Categories page")
     public void shouldSeeCandyCategoriesPage() {
         System.out.println(navigationLinks.getCandyCategoriesHeader());
+    }
+
+    //================= NAV TO LIST OF ORDERS PAGE ==================//
+
+    @When("I click on the List of Orders menu option")
+    public void clickOnListOfOrdersOption() {
+        navigationLinks.clickOnListOfOrdersMenu();
+    }
+    @Then("I should see the List of Orders page")
+    public void shouldSeeListOfOrders() {
+        System.out.println(navigationLinks.getListOfOrdersHeader());
+    }
+
+    //================= NAV TO ORDER INFO PAGE ==================//
+
+    @When("I click on the Order Info menu option")
+    public void clickOnOrderInfoOption() {
+        navigationLinks.clickOnOrderInfoMenu();
+    }
+    @Then("I should see the Order Info page")
+    public void shouldSeeOrderInfo() {
+        System.out.println(navigationLinks.getOrderInfoHeader());
     }
 }
