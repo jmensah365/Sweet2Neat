@@ -14,7 +14,6 @@ public class NavigationLinks {
     
     private static final String homeUrl = "http://localhost:5173/";
     private static final String orderUrl = "http://localhost:5173/orders";
-    private static final String warehouseUrl = "http://localhost:5173/warehouse";
 
     @FindBy(name = "logo")
     private WebElement logo;
@@ -28,11 +27,27 @@ public class NavigationLinks {
     @FindBy(name = "warehouseListTitle")
     private WebElement warehouseListHeader;
 
+    @FindBy(name = "candy")
+    private WebElement candyMenu;
+
+    @FindBy(name = "candyRoute")
+    private WebElement candyInventoryMenu;
+
+    @FindBy(name = "candy")
+    private WebElement candyCategoriesMenu;
+
+    @FindBy(name = "candyInventoryTitle")
+    private WebElement candyInventoryHeader;
+
     // Setup driver
     public NavigationLinks(WebDriver driver){
         this.driver = driver;
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         PageFactory.initElements(driver, this);
+    }
+
+    public void close() {
+        this.driver.close();
     }
 
     //================= NAV TO HOME PAGE ==================//
@@ -73,5 +88,12 @@ public class NavigationLinks {
     }
 
     //================= NAV TO WAREHOUSE LIST PAGE ==================//
+    public void clickOnCandyInventoryMenu() {
+        candyMenu.click();
+        candyInventoryMenu.click();        
+    }
 
+    public String getCandyInventoryHeader() {
+        return candyInventoryHeader.getText();
+    }
 }
