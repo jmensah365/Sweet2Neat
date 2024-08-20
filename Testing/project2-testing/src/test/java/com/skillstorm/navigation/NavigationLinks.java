@@ -57,6 +57,12 @@ public class NavigationLinks {
     @FindBy(name = "orderInfoTitle")
     private WebElement orderInfoHeader;
 
+    @FindBy(name = "about")
+    private WebElement aboutMenu;
+
+    @FindBy(name = "aboutInfo")
+    private WebElement aboutInfo;
+
     // Setup driver
     public NavigationLinks(WebDriver driver){
         this.driver = driver;
@@ -143,6 +149,15 @@ public class NavigationLinks {
 
     public String getOrderInfoHeader() {
         return listOfOrdersHeader.getText();
+    }
+
+    //================= NAV TO ABOUT PAGE ==================//
+    public void clickOnAboutMenu() {
+        aboutMenu.click();
+    }
+
+    public String getAboutInfo() {
+        return aboutInfo.getText();
     }
 }
 

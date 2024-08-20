@@ -102,4 +102,15 @@ public class NavigationSteps {
     public void shouldSeeOrderInfo() {
         System.out.println(navigationLinks.getOrderInfoHeader());
     }
+
+    //================= NAV TO ABOUT PAGE ==================//
+
+    @When("I click on the About menu option")
+    public void clickOnAboutOption() {
+        navigationLinks.clickOnAboutMenu();
+    }
+    @Then("I should see the About page")
+    public void shouldSeeAboutPage() {
+        System.out.println(navigationLinks.getAboutInfo());
+    }
 }
