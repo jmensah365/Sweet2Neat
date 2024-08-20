@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -53,6 +54,18 @@ public class CandyList {
     //Finding last row in Candy table and grabbing the candy ID
     @FindBy(xpath = "//table[@name='candyTable']//tr[last()]/td[1]")
     private WebElement lastRowCandyId;
+
+     //Finding first row in Candy table and grabbing the candy ID
+    @FindBy(xpath = "//table[@name='candyTable']//tr[1]/td[1]")
+    private WebElement firstRowCandyId;
+
+    @FindBy(name = "deleteIcon")
+    private WebElement deleteBtn;
+
+    @FindBy(name = "editIcon")
+    private WebElement editBtn;
+
+    String candyId = "";
 
     public CandyList(WebDriver driver){
         this.driver = driver;
@@ -162,4 +175,123 @@ public class CandyList {
         }
     }
     //========================READ==========================//
+
+    //========================UPDATE==========================//
+    public void clickEditButton(){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        editBtn.click();
+    }
+
+    public void setNameField(String name){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        String prevValue = nameField.getAttribute("value");
+        for (int i = 0; i < prevValue.length(); i ++){
+            nameField.sendKeys(Keys.BACK_SPACE);
+        }
+        nameField.sendKeys(name);
+    }
+
+
+    public void setTypeField(String type){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        String prevValue = typeField.getAttribute("value");
+        for (int i = 0; i < prevValue.length(); i ++){
+            typeField.sendKeys(Keys.BACK_SPACE);
+        }
+        typeField.sendKeys(type);
+    }
+
+
+    public void setFlavorField(String flavor){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        String prevValue = flavorField.getAttribute("value");
+        for (int i = 0; i < prevValue.length(); i ++){
+            flavorField.sendKeys(Keys.BACK_SPACE);
+        }
+        flavorField.sendKeys(flavor);
+    }
+
+
+    public void setPriceField(String price){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        String prevValue = priceFeild.getAttribute("value");
+        for (int i = 0; i < prevValue.length(); i ++){
+            priceFeild.sendKeys(Keys.BACK_SPACE);
+        }
+        priceFeild.sendKeys(price);
+    }
+
+
+    public void setWeightField(String weight){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        String prevValue = weightField.getAttribute("value");
+        for (int i = 0; i < prevValue.length(); i ++){
+            weightField.sendKeys(Keys.BACK_SPACE);
+        }
+        weightField.sendKeys(weight);
+    }
+
+    //========================UPDATE==========================//
+
+
+
+
+    //========================DELETE==========================//
+    public void clickDeleteIcon(){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
+        candyId = firstRowCandyId.getText();
+        deleteBtn.click();
+    }
+
+    public void confirmDeletion(){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        List<WebElement> tableRows = candyTable.findElements(By.xpath(".//tr/td[1]"));
+        for(WebElement tr : tableRows) {
+            if(tr.getText().contains(candyId)){
+                System.out.println("True");
+            } else{
+                System.err.println("False");
+            }
+        }
+    }
+    //========================DELETE==========================//
 }

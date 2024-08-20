@@ -171,7 +171,7 @@ const WarehouseList = () => {
                     className='textField'
                     
                 />
-                <TextField
+                {/* <TextField
                     label='Current Stock'
                     name='currentStock'
                     value={editingWarehouse ? editingWarehouse.currentStock : newWarehouse.currentStock}
@@ -180,7 +180,7 @@ const WarehouseList = () => {
                     required
                     margin='normal'
                     className='textField'
-                />
+                /> */}
                 <Button name = 'warehouseBtn' type='submit' variant='contained' color='primary'>
                     {editingWarehouse ? 'Update warehouse' : 'Add warehouse'}
                 </Button>

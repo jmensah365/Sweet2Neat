@@ -65,7 +65,7 @@ public class WarehouseList {
 
     //Finding the location in the first row in the warehouse list
     @FindBy(xpath = "//table[@name='warehouseTable']//tr[1]/td[1]")
-    private WebElement warehouseFirstRowLocation;
+    private WebElement warehouseFirstRowId;
 
     //class variable for warehouseId
     String warehouseId = "";
@@ -150,7 +150,7 @@ public class WarehouseList {
             e.printStackTrace();
         }
         
-        warehouseId = warehouseFirstRowLocation.getText();
+        warehouseId = warehouseFirstRowId.getText();
         deleteBtn.click();
     }
 

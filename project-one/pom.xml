@@ -70,4 +70,15 @@
 		</plugins>
 	</build>
 
+	<profiles>
+		<profile>
+			<id>dev</id>
+				<properties>
+					<db.url>${env.DB_URL}</db.url>
+					<db.username>${env.DB_USERNAME}</db.username>
+					<db.password>${env.DB_PWD}</db.password>
+				</properties>
+		</profile>
+	</profiles>
+
 </project>

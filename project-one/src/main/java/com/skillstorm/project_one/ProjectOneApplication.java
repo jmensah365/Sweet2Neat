@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ProjectOneApplication {
 
 	public static void main(String[] args) {
+		System.out.println("Database Password: " + System.getenv("db-pwd"));
+
 		SpringApplication.run(ProjectOneApplication.class, args);
 	}
 

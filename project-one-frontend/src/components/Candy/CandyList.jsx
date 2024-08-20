@@ -35,7 +35,8 @@ const CandyList = () => {
                 return response.json();
             })
             .then(returnedData => {
-                setCandy(returnedData);
+                const sortedData = returnedData.sort((a,b) => a.candyId - b.candyId);
+                setCandy(sortedData);
                 setLoaded(true);
             })
             .catch(err => {
@@ -83,7 +84,7 @@ const CandyList = () => {
                 setCandy(candy.map(c => c.candyId === data.candyId ? data : c));
                 setEditingCandy(null);
             } else {
-                setCandy([...candy, data]);
+                setCandy([...candy,data]);
             }
             setNewCandy({flavor: '', name: '', price: '', type: '', weight: ''});
             setSuccessMessage(editingCandy ? 'Successfully updated candy!' : 'Successfully added candy!');
@@ -92,6 +93,7 @@ const CandyList = () => {
             setError(err);
         });
     };
+    
 
     //set the candy to edit
     const handleEdit = (candy) => {
