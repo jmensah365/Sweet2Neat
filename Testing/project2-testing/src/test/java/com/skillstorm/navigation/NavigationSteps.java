@@ -72,4 +72,13 @@ public class NavigationSteps {
     }
 
     //================= NAV TO CANDY INVENTORY PAGE ==================//
+
+    @When("I click on the Candy Categories menu option")
+    public void clickOnCandyCategoriesOption() {
+        navigationLinks.clickOnCandyCategoriesMenu();
+    }
+    @Then("I should see the Candy Categories page")
+    public void shouldSeeCandyCategoriesPage() {
+        System.out.println(navigationLinks.getCandyCategoriesHeader());
+    }
 }

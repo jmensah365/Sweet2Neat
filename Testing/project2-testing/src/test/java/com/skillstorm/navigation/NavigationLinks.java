@@ -33,11 +33,14 @@ public class NavigationLinks {
     @FindBy(name = "candyRoute")
     private WebElement candyInventoryMenu;
 
-    @FindBy(name = "candy")
+    @FindBy(name = "candyTypesRoute")
     private WebElement candyCategoriesMenu;
 
     @FindBy(name = "candyInventoryTitle")
     private WebElement candyInventoryHeader;
+
+    @FindBy(name = "candyTypesHeader")
+    private WebElement candyCategoriesHeader;
 
     // Setup driver
     public NavigationLinks(WebDriver driver){
@@ -87,7 +90,7 @@ public class NavigationLinks {
         return warehouseListHeader.getText();
     }
 
-    //================= NAV TO WAREHOUSE LIST PAGE ==================//
+    //================= NAV TO CANDY INVENTORY PAGE ==================//
     public void clickOnCandyInventoryMenu() {
         candyMenu.click();
         candyInventoryMenu.click();        
@@ -96,4 +99,15 @@ public class NavigationLinks {
     public String getCandyInventoryHeader() {
         return candyInventoryHeader.getText();
     }
+
+    //================= NAV TO CANDY INVENTORY PAGE ==================//
+    public void clickOnCandyCategoriesMenu() {
+        candyMenu.click();
+        candyCategoriesMenu.click();
+    }
+
+    public String getCandyCategoriesHeader() {
+        return candyCategoriesHeader.getText();
+    }
 }
+

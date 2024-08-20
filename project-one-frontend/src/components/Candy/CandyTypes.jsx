@@ -11,7 +11,7 @@ const CandyTypes = () => {
     <>
     <div>CandyTypes</div>
       <Container component='main' sx={{flexGrow: 1, py: 4}}>
-            <Typography variant='h2' gutterBottom>Types of candy</Typography>
+            <Typography variant='h2' name="candyTypesHeader" gutterBottom>Types of candy</Typography>
             <Grid container spacing={8}>
                 <Grid item xs={12} sm={6} md={4}>
                     <GummyCard/>
