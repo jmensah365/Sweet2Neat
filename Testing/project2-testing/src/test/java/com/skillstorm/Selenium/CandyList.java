@@ -13,8 +13,8 @@ import org.openqa.selenium.support.PageFactory;
 public class CandyList {
     
     private WebDriver driver;
-    private static final String url = "http://localhost:5173/candy";
-    private static final String homeUrl = "http://localhost:5173/";
+    private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/candy";
+    private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
 
     /*
      * Finding name, type, flavor, price, and weight text fields
@@ -261,21 +261,38 @@ public class CandyList {
         weightField.sendKeys(weight);
     }
 
+    public void confirmUpdation(){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Updated Candy ID " + firstRowCandyId.getText());
+    }
+
     //========================UPDATE==========================//
 
 
 
 
     //========================DELETE==========================//
-    public void clickDeleteIcon(){
+    public void clickDeleteIcon() {
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         
-        candyId = firstRowCandyId.getText();
-        deleteBtn.click();
+        // Update to get the candy ID from the last row
+        candyId = lastRowCandyId.getText();
+        
+        // Find the delete button for the last row
+        WebElement lastRowDeleteBtn = driver.findElement(By.xpath("//table[@name='candyTable']//tbody/tr[last()]/td[last()]/button[@name='deleteIcon']\n" + //
+                ""));
+        
+        // Click the delete button for the last row
+        lastRowDeleteBtn.click();
     }
 
     public void confirmDeletion(){
@@ -287,7 +304,7 @@ public class CandyList {
         List<WebElement> tableRows = candyTable.findElements(By.xpath(".//tr/td[1]"));
         for(WebElement tr : tableRows) {
             if(tr.getText().contains(candyId)){
-                System.out.println("True");
+                throw new AssertionError("Candy with ID " + candyId + " was found in the table");
             } else{
                 System.err.println("False");
             }

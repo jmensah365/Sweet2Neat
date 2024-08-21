@@ -91,7 +91,7 @@ public class CandyStepDefinitions {
 
     @Then("I should see the updated candy in the candy table")
     public void iShouldSeeTheUpdatedCandyInTheCandyTable(){
-        
+        this.candyList.confirmUpdation();
     }
 
 

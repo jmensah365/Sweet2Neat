@@ -136,7 +136,7 @@ public class WarehouseList {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("New warehouse location: " + warehouseRowLocation.getText());
+        System.out.println("Updated warehouse location: " + warehouseRowLocation.getText());
     }
 
      //TODO: check to see if success message pops up
