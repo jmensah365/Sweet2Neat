@@ -33,7 +33,8 @@ const Orders = () => {
                 return response.json();
             })
             .then(returnedData => {
-                setOrder(returnedData);
+                const sortedData = returnedData.sort((a,b) => a.id - b.id);
+                setOrder(sortedData);
                 setLoaded(true);
             })
             .catch(err => {

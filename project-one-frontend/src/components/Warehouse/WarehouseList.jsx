@@ -37,7 +37,8 @@ const WarehouseList = () => {
                 return response.json();
             })
             .then(returnedData => {
-                setWarehouses(returnedData);
+                const sortedData = returnedData.sort((a,b) => a.id - b.id);
+                setWarehouses(sortedData);
                 setLoaded(true);
             })
             .catch(err => {

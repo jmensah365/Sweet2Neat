@@ -88,11 +88,32 @@ const CandyList = () => {
             }
             setNewCandy({flavor: '', name: '', price: '', type: '', weight: ''});
             setSuccessMessage(editingCandy ? 'Successfully updated candy!' : 'Successfully added candy!');
+
+            refreshWarehouseDetails();
         })
         .catch(err => {
             setError(err);
         });
     };
+
+    const refreshWarehouseDetails = () => {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(returnedData => {
+                const sortedData = returnedData.sort((a,b) => a.candyId - b.candyId);
+                setCandy(sortedData);
+                setLoaded(true);
+            })
+            .catch(err => {
+                setError(err);
+                setLoaded(true);
+            });
+    }
     
 
     //set the candy to edit
