@@ -31,7 +31,12 @@ Feature: Navigation Links
     #     When I click on the Order Info menu option
     #     Then I should see the Order Info page
 
-    Scenario: Successfully navigate to About page
+    # Scenario: Successfully navigate to About page
+    #     Given I am on the home page
+    #     When I click on the About menu option
+    #     Then I should see the About page
+
+    Scenario: Successfully navigate to Warehouse Stock page
         Given I am on the home page
-        When I click on the About menu option
-        Then I should see the About page
+        When I click on the Warehouse Stock menu option
+        Then I should see the Warehouse Stock page

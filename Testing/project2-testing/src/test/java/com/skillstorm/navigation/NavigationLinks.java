@@ -63,6 +63,12 @@ public class NavigationLinks {
     @FindBy(name = "aboutInfo")
     private WebElement aboutInfo;
 
+    @FindBy(name = "warehousesStockRoute")
+    private WebElement warehouseStockMenu;
+
+    @FindBy(name = "warehouseStockTitle")
+    private WebElement warehouseStockHeader;
+
     // Setup driver
     public NavigationLinks(WebDriver driver){
         this.driver = driver;
@@ -158,6 +164,16 @@ public class NavigationLinks {
 
     public String getAboutInfo() {
         return aboutInfo.getText();
+    }
+    
+    //================= NAV TO WAREHOUSE STOCK PAGE ==================//
+    public void clickOnWarehouseStockMenu() {
+        warehousesMenu.click();
+        warehouseStockMenu.click();
+    }
+
+    public String getWarehouseStockHeader() {
+        return warehouseStockHeader.getText();
     }
 }
 

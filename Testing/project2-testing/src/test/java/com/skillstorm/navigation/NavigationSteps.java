@@ -113,4 +113,15 @@ public class NavigationSteps {
     public void shouldSeeAboutPage() {
         System.out.println(navigationLinks.getAboutInfo());
     }
+
+    //================= NAV TO WAREHOUSE STOCK PAGE ==================//
+
+    @When("I click on the Warehouse Stock menu option")
+    public void clickOnWarehouseStockOption() {
+        navigationLinks.clickOnWarehouseStockMenu();
+    }
+    @Then("I should see the Warehouse Stock page")
+    public void shouldSeeWarehouseStockHeader() {
+        System.out.println(navigationLinks.getWarehouseStockHeader());
+    }
 }
