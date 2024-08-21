@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestNGTest-8b243186-063d-4ca7-ab7e-15434976b617"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.053">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testSetters"
+                time="0.001"
+                classname="com.skillstorm.project_one.OrderUnitTests">
+            </testcase>
+            <testcase
+                name="testToString"
+                time="0.005"
+                classname="com.skillstorm.project_one.OrderUnitTests">
+            </testcase>
+            <testcase
+                name="testGetters"
+                time="0.047"
+                classname="com.skillstorm.project_one.OrderUnitTests">
+            </testcase>
+</testsuite>

@@ -1,9 +1,10 @@
 package com.skillstorm.project_one;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.testng.Assert;
 
 import java.math.BigDecimal;
 
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -13,8 +14,8 @@ public class CandyUnitTests {
 
     private Candy candy;
     
-    @BeforeTest
-    void init() {
+    @BeforeMethod
+    public void init() {
         candy = new Candy();
         candy.setId(40);
         candy.setName("Laffy Taffy");
@@ -25,34 +26,34 @@ public class CandyUnitTests {
     }
 
     @Test
-    void testGetters() {
-        assertEquals(40, candy.getCandyId());
-        assertEquals("Laffy Taffy", candy.getName());
-        assertEquals("Taffy Candy", candy.getType());
-        assertEquals("Grape", candy.getFlavor());
-        assertEquals(BigDecimal.valueOf(2.99), candy.getPrice());
-        assertEquals(BigDecimal.valueOf(0.5), candy.getWeight());
+    public void testGetters() {
+        Assert.assertEquals(40, candy.getCandyId());
+        Assert.assertEquals("Laffy Taffy", candy.getName());
+        Assert.assertEquals("Taffy Candy", candy.getType());
+        Assert.assertEquals("Grape", candy.getFlavor());
+        Assert.assertEquals(BigDecimal.valueOf(2.99), candy.getPrice());
+        Assert.assertEquals(BigDecimal.valueOf(0.5), candy.getWeight());
     }
 
     @Test
-    void testSetters() {
+    public void testSetters() {
         candy.setName("Gummy Bear");
         candy.setType("Gummy");
         candy.setFlavor("Strawberry");
         candy.setPrice(BigDecimal.valueOf(1.99));
         candy.setWeight(BigDecimal.valueOf(0.2));
 
-        assertEquals("Gummy Bear", candy.getName());
-        assertEquals("Gummy", candy.getType());
-        assertEquals("Strawberry", candy.getFlavor());
-        assertEquals(BigDecimal.valueOf(1.99), candy.getPrice());
-        assertEquals(BigDecimal.valueOf(0.2), candy.getWeight());
+        Assert.assertEquals("Gummy Bear", candy.getName());
+        Assert.assertEquals("Gummy", candy.getType());
+        Assert.assertEquals("Strawberry", candy.getFlavor());
+        Assert.assertEquals(BigDecimal.valueOf(1.99), candy.getPrice());
+        Assert.assertEquals(BigDecimal.valueOf(0.2), candy.getWeight());
     }
 
     @Test
-    void testToString() {
-        String expectedString = "Candy [id=40, name=Gummy Bear, type=Gummy, flavor=Strawberry, price=1.99, weight=0.2]";
-        assertEquals(expectedString, candy.toString());
+    public void testToString() {
+        String expectedString = "Candy [id=40, name=Laffy Taffy, type=Taffy Candy, flavor=Grape, price=2.99, weight=0.5]";
+        Assert.assertEquals(expectedString, candy.toString());
     }
 
 }
