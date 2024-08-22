@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import com.skillstorm.project_one.Models.Candy;
 
-public class CandyUnitTests {
+public class CandyTests {
 
     private Candy candy;
     

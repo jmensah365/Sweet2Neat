@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestNGTest-24cee8a1-309d-46e9-9cc0-bda97b3e3ed8"
+<testsuite name="TestNGTest-571274d5-fa83-478d-87ae-77ac937ebd14"
            tests="3"
            failures="0"
            errors="0"
            skipped="0"
-           time="0.041">
+           time="0.038">
     <properties></properties>
 
 
@@ -16,12 +16,12 @@
             </testcase>
             <testcase
                 name="testGetters"
-                time="0.036"
+                time="0.034"
                 classname="com.skillstorm.project_one.CandyUnitTests">
             </testcase>
             <testcase
                 name="testSetters"
-                time="0.001"
+                time="0.000"
                 classname="com.skillstorm.project_one.CandyUnitTests">
             </testcase>
 </testsuite>
