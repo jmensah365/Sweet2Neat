@@ -5,11 +5,16 @@ import {
     Table, TableBody, TableCell, TableContainer,
     TableHead, TableRow, Paper, Typography, Alert, AlertTitle,
     TextField, Button, Box, IconButton, Snackbar,
+    FormControl,
+    InputLabel,
+    MenuItem, Select
 } from '@mui/material';
     import EditIcon from '@mui/icons-material/Edit';
     import DeleteIcon from '@mui/icons-material/Delete';
 const CandyList = () => {
+    //const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/candy";
     const url = "http://localhost:8080/candy";
+    // const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/candy";
     const [candy, setCandy] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(null);
@@ -35,7 +40,8 @@ const CandyList = () => {
                 return response.json();
             })
             .then(returnedData => {
-                setCandy(returnedData);
+                const sortedData = returnedData.sort((a,b) => a.candyId - b.candyId);
+                setCandy(sortedData);
                 setLoaded(true);
             })
             .catch(err => {
@@ -83,15 +89,37 @@ const CandyList = () => {
                 setCandy(candy.map(c => c.candyId === data.candyId ? data : c));
                 setEditingCandy(null);
             } else {
-                setCandy([...candy, data]);
+                setCandy([...candy,data]);
             }
             setNewCandy({flavor: '', name: '', price: '', type: '', weight: ''});
             setSuccessMessage(editingCandy ? 'Successfully updated candy!' : 'Successfully added candy!');
+
+            refreshWarehouseDetails();
         })
         .catch(err => {
             setError(err);
         });
     };
+
+    const refreshWarehouseDetails = () => {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(returnedData => {
+                const sortedData = returnedData.sort((a,b) => a.candyId - b.candyId);
+                setCandy(sortedData);
+                setLoaded(true);
+            })
+            .catch(err => {
+                setError(err);
+                setLoaded(true);
+            });
+    }
+    
 
     //set the candy to edit
     const handleEdit = (candy) => {
@@ -139,7 +167,7 @@ const CandyList = () => {
                     margin='normal'
                     className='textField'
                 />
-                <TextField
+                {/* <TextField
                     label='Type'
                     name='type'
                     value={editingCandy ? editingCandy.type : newCandy.type}
@@ -148,7 +176,24 @@ const CandyList = () => {
                     required
                     margin='normal'
                     className='textField'
-                />
+                /> */}
+                <FormControl fullWidth sx={{ backgroundColor: 'white'}}>
+                    <InputLabel id="selectCandyType" >Candy Type</InputLabel>
+                    <Select 
+                        labelId="selectCandyType"
+                        id="candyTypeSelect"
+                        value ={editingCandy ? editingCandy.type : newCandy.type}
+                        name="type"
+                        required
+                        onChange={handleInputChange}
+                    >
+                        <MenuItem value={"Gummy Candy"}>Gummy Candy</MenuItem>
+                        <MenuItem value={"Chocolate Candy"}>Chocolate Candy</MenuItem>
+                        <MenuItem value={"Sour Candy"}>Sour Candy</MenuItem>
+                        <MenuItem value={"Taffy Candy"}>Taffy Candy</MenuItem>
+                        <MenuItem value={"Lollipops"}>Lollipops</MenuItem>
+                    </Select>
+                </FormControl>
                 <TextField
                     label='Flavor'
                     name='flavor'

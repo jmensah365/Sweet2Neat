@@ -1,9 +1,10 @@
 package com.skillstorm.cucumber;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 
-import org.junit.jupiter.api.Assertions.*;
+// import org.junit.jupiter.api.Assertions.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -21,6 +22,11 @@ public class WarehouseStepDefinitions {
         WebDriver driver = new ChromeDriver(options);
 
         this.warehouseList = new WarehouseList(driver);
+    }
+
+    @After("@Warehouse")
+    public void tearDown() {
+        this.warehouseList.close();
     }
 
     @Given("I am on the Warehouse List page")
@@ -54,6 +60,11 @@ public class WarehouseStepDefinitions {
         this.warehouseList.confirmWarehouseUpdation();
     }
 
+    @Then("the warehouse should not be visible in the table")
+    public void theWarehouseShouldNotBeVisibleInTheTable(){
+        this.warehouseList.confirmDeletion();
+    }
+
      //======================= CREATE =========================
     @When("I fill in the {string} and {string} fields with valid information")
     public void fillInTheFields(String location, String capacity) {
@@ -75,7 +86,7 @@ public class WarehouseStepDefinitions {
     //======================= READ =========================
     @Given("I am on the home page")
     public void iAmOnTheHomePage() {
-        this.warehouseList.getUrl();
+        this.warehouseList.getHomeURL();
     }
 
     @When("I click on the Warehouse List option")
@@ -92,8 +103,5 @@ public class WarehouseStepDefinitions {
     public void iSeeListOfWarehouses() {
         this.warehouseList.getWarehouseTableContents();
     }
-
-
-
 
 }

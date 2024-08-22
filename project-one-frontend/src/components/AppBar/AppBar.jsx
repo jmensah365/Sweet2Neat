@@ -12,7 +12,9 @@ const AppBarComponent = () => {
     const [warehouseMenuAnchorEl, setWarehouseMenuAnchorEl] = useState(null);
     const [ordersMenuAnchorEl, setOrdersMenuAnchorEl] = useState(null);
     const navigate = useNavigate();
+    //const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/warehouse";
     const url = "http://localhost:8080/warehouse";
+    // const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/warehouse";
     const [warehouses, setWarehouses] = useState([]);
     const [error, setError] = useState(null);
     const [loaded, setLoaded] = useState(false);
@@ -88,7 +90,7 @@ const AppBarComponent = () => {
                     className="spin"
                     onClick={() => navigateTo('/')}
                 >
-                    <img src={candyImage} alt="Menu Icon" style={{width: 24, height: 24}} />
+                    <img src={candyImage} name="logo" alt="Menu Icon" style={{width: 24, height: 24}} />
                 </IconButton>
                 <Button
                     color="inherit"

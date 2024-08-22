@@ -7,13 +7,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WarehouseList {
     private WebDriver driver;
-    private static final String url = "http://localhost:5173/warehouses";
-    private static final String homeUrl = "http://localhost:5173/";
+    private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/warehouses";
+    private static final String homeURL = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
+
+    String warehouseId = "";
 
     /*
      * Finding location, capacity, and stock web elements on the page
@@ -55,6 +60,9 @@ public class WarehouseList {
     @FindBy(name = "warehouseTable")
     private WebElement warehouseTable;
 
+    @FindBy(className = "MuiTableBody-root")
+    private WebElement warehouseTableBody;
+
     //Find the warehouses list option in menu
     @FindBy(name = "warehousesRoute")
     private WebElement warehouseListOption;
@@ -65,7 +73,10 @@ public class WarehouseList {
 
     //Finding the location in the first row in the warehouse list
     @FindBy(xpath = "//table[@name='warehouseTable']//tr[1]/td[1]")
-    private WebElement warehouseFirstRowLocation;
+    private WebElement warehouseFirstRowId;
+
+    //class variable for warehouseId
+    String warehouseId = "";
 
     public WarehouseList(WebDriver driver){
         this.driver = driver;
@@ -73,9 +84,15 @@ public class WarehouseList {
         PageFactory.initElements(driver, this);
     }
 
+    public void close() {
+        if(driver != null) {
+            this.driver.close();
+        }
+    }
+
     public void getUrl() {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -85,7 +102,7 @@ public class WarehouseList {
     //=====================UPDATE======================//
     public void clickEditButton() {
         try {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -94,7 +111,7 @@ public class WarehouseList {
 
     public void setLocation(String location){
         try {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -107,7 +124,7 @@ public class WarehouseList {
 
     public void setCapacity(String capacity){
         try {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -120,7 +137,7 @@ public class WarehouseList {
 
     public void clickUpdateWarehouse(){
         try {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -129,27 +146,49 @@ public class WarehouseList {
 
     public void confirmWarehouseUpdation(){
         try {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+<<<<<<< HEAD
+        System.out.println("Updated warehouse location: " + warehouseRowLocation.getText());
+=======
         System.out.println("New warehouse location: " + warehouseRowLocation.getText());
+
+        // this.driver.close();
+>>>>>>> 9e53efadf933e9ee6a5593f050cef8d46f615dff
     }
 
      //TODO: check to see if success message pops up
-    //=====================UPDATE======================//
 
     //=====================DELETE======================//
     public void clickDeleteIcon(){
         try {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         
-        String warehouseId = warehouseFirstRowLocation.getText();
+<<<<<<< HEAD
+        warehouseId = warehouseFirstRowId.getText();
         deleteBtn.click();
+    }
 
+    public void confirmDeletion(){
+        try {
+            Thread.sleep(3000);
+=======
+        warehouseId = warehouseFirstRowLocation.getText();
+        deleteBtn.click();
+    }
+    
+    public void confirmDeletion(){
+        try {
+            Thread.sleep(2000);
+>>>>>>> 9e53efadf933e9ee6a5593f050cef8d46f615dff
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         List<WebElement> tableRows = warehouseTable.findElements(By.xpath(".//tr/td[1]"));
         for(WebElement tr : tableRows) {
             if(tr.getText().contains(warehouseId)){
@@ -158,22 +197,48 @@ public class WarehouseList {
                 System.err.println("False");
             }
         }
+<<<<<<< HEAD
+
+
     }
     //=====================DELETE======================//
+=======
+            // this.driver.close();
+>>>>>>> 9e53efadf933e9ee6a5593f050cef8d46f615dff
 
-        //======================= CREATE =========================
-        public String checkPageTitle() {
-            return warehouseListTitle.getText();
+
+    }
+
+    //======================= CREATE =========================
+    public String checkPageTitle() {
+        return warehouseListTitle.getText();
+    }
+
+    public void addLocation(String location) {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+        locationField.sendKeys(location);
+    }
+
+    public void addCapacity(String capacity) {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        capacityField.sendKeys(capacity);
+    }
     
-        public void addLocation(String location) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            locationField.sendKeys(location);
+    public void clickAddWarehouseButton() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+<<<<<<< HEAD
     
         public void addCapacity(String capacity) {
             try {
@@ -209,17 +274,30 @@ public class WarehouseList {
                 e.printStackTrace();
             }
             System.out.println(warehouseRowLocation.getText());
+=======
+        addWarehouseButton.click();
+    }
+
+    public void getWarehouseLocation() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+>>>>>>> 0637a16ae393dea391dd06d24a43e18d23233f4c
         }
+        System.out.println(warehouseRowLocation.getText());
+        // this.driver.close();
+    }
 
     //======================= READ =========================
     public void getHomeURL() {
-        this.driver.get(homeUrl);
+        this.driver.get(homeURL);
     }
 
     public void clickWarehouseListOption() {
         warehousesMenu.click();        
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -227,21 +305,26 @@ public class WarehouseList {
     }
 
     public void getWarehouseTable() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         warehouseTable.getText();
     }
 
     public void getWarehouseTableContents() {
-        List<WebElement> tableRows = warehouseTable.findElements(By.xpath(".//tr"));
+        List<WebElement> tableRows = warehouseTableBody.findElements(By.xpath(".//tr"));
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         for(WebElement tr : tableRows) {
             System.out.println(tr.getText());
         }
+        // this.driver.close();
     }
-    
-
-
-
-
-
-
 }

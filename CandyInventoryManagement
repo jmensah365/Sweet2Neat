@@ -1,5 +1,5 @@
 --
--- PostgreSQL database dump
+-- cim_adminQL database dump
 --
 
 -- Dumped from database version 16.3
@@ -24,10 +24,10 @@ SET default_table_access_method = heap;
 
 --
 -- TOC entry 216 (class 1259 OID 17011)
--- Name: candy; Type: TABLE; Schema: public; Owner: postgres
+-- Name: candy; Type: TABLE; Schema:  Owner: cim_admin
 --
 
-CREATE TABLE public.candy (
+CREATE TABLE candy (
     id integer NOT NULL,
     name character varying(255),
     type character varying(255),
@@ -37,14 +37,14 @@ CREATE TABLE public.candy (
 );
 
 
-ALTER TABLE public.candy OWNER TO postgres;
+ALTER TABLE candy OWNER TO cim_admin;
 
 --
 -- TOC entry 215 (class 1259 OID 17010)
--- Name: candy_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: candy_id_seq; Type: SEQUENCE; Schema:  Owner: cim_admin
 --
 
-CREATE SEQUENCE public.candy_id_seq
+CREATE SEQUENCE candy_id_seq
     AS integer
     START WITH 1
     INCREMENT BY 1
@@ -53,23 +53,23 @@ CREATE SEQUENCE public.candy_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.candy_id_seq OWNER TO postgres;
+ALTER SEQUENCE candy_id_seq OWNER TO cim_admin;
 
 --
 -- TOC entry 3640 (class 0 OID 0)
 -- Dependencies: 215
--- Name: candy_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: candy_id_seq; Type: SEQUENCE OWNED BY; Schema:  Owner: cim_admin
 --
 
-ALTER SEQUENCE public.candy_id_seq OWNED BY public.candy.id;
+ALTER SEQUENCE candy_id_seq OWNED BY public.candy.id;
 
 
 --
 -- TOC entry 224 (class 1259 OID 17051)
--- Name: orderitem; Type: TABLE; Schema: public; Owner: postgres
+-- Name: orderitem; Type: TABLE; Schema:  Owner: cim_admin
 --
 
-CREATE TABLE public.orderitem (
+CREATE TABLE orderitem (
     id integer NOT NULL,
     orders_id integer NOT NULL,
     candy_id integer NOT NULL,
@@ -78,14 +78,14 @@ CREATE TABLE public.orderitem (
 );
 
 
-ALTER TABLE public.orderitem OWNER TO postgres;
+ALTER TABLE orderitem OWNER TO cim_admin;
 
 --
 -- TOC entry 223 (class 1259 OID 17050)
--- Name: orderitem_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: orderitem_id_seq; Type: SEQUENCE; Schema:  Owner: cim_admin
 --
 
-CREATE SEQUENCE public.orderitem_id_seq
+CREATE SEQUENCE orderitem_id_seq
     AS integer
     START WITH 1
     INCREMENT BY 1
@@ -94,23 +94,23 @@ CREATE SEQUENCE public.orderitem_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.orderitem_id_seq OWNER TO postgres;
+ALTER SEQUENCE orderitem_id_seq OWNER TO cim_admin;
 
 --
 -- TOC entry 3641 (class 0 OID 0)
 -- Dependencies: 223
--- Name: orderitem_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: orderitem_id_seq; Type: SEQUENCE OWNED BY; Schema:  Owner: cim_admin
 --
 
-ALTER SEQUENCE public.orderitem_id_seq OWNED BY public.orderitem.id;
+ALTER SEQUENCE orderitem_id_seq OWNED BY public.orderitem.id;
 
 
 --
 -- TOC entry 222 (class 1259 OID 17044)
--- Name: orders; Type: TABLE; Schema: public; Owner: postgres
+-- Name: orders; Type: TABLE; Schema:  Owner: cim_admin
 --
 
-CREATE TABLE public.orders (
+CREATE TABLE orders (
     id integer NOT NULL,
     customer_name character varying(255),
     order_date timestamp without time zone,
@@ -119,14 +119,14 @@ CREATE TABLE public.orders (
 );
 
 
-ALTER TABLE public.orders OWNER TO postgres;
+ALTER TABLE orders OWNER TO cim_admin;
 
 --
 -- TOC entry 221 (class 1259 OID 17043)
--- Name: orders_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: orders_id_seq; Type: SEQUENCE; Schema:  Owner: cim_admin
 --
 
-CREATE SEQUENCE public.orders_id_seq
+CREATE SEQUENCE orders_id_seq
     AS integer
     START WITH 1
     INCREMENT BY 1
@@ -135,23 +135,23 @@ CREATE SEQUENCE public.orders_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.orders_id_seq OWNER TO postgres;
+ALTER SEQUENCE orders_id_seq OWNER TO cim_admin;
 
 --
 -- TOC entry 3642 (class 0 OID 0)
 -- Dependencies: 221
--- Name: orders_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: orders_id_seq; Type: SEQUENCE OWNED BY; Schema:  Owner: cim_admin
 --
 
-ALTER SEQUENCE public.orders_id_seq OWNED BY public.orders.id;
+ALTER SEQUENCE orders_id_seq OWNED BY public.orders.id;
 
 
 --
 -- TOC entry 220 (class 1259 OID 17027)
--- Name: stock; Type: TABLE; Schema: public; Owner: postgres
+-- Name: stock; Type: TABLE; Schema:  Owner: cim_admin
 --
 
-CREATE TABLE public.stock (
+CREATE TABLE stock (
     id integer NOT NULL,
     candy_id integer NOT NULL,
     warehouse_id integer NOT NULL,
@@ -159,14 +159,14 @@ CREATE TABLE public.stock (
 );
 
 
-ALTER TABLE public.stock OWNER TO postgres;
+ALTER TABLE stock OWNER TO cim_admin;
 
 --
 -- TOC entry 219 (class 1259 OID 17026)
--- Name: stock_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: stock_id_seq; Type: SEQUENCE; Schema:  Owner: cim_admin
 --
 
-CREATE SEQUENCE public.stock_id_seq
+CREATE SEQUENCE stock_id_seq
     AS integer
     START WITH 1
     INCREMENT BY 1
@@ -175,23 +175,23 @@ CREATE SEQUENCE public.stock_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.stock_id_seq OWNER TO postgres;
+ALTER SEQUENCE stock_id_seq OWNER TO cim_admin;
 
 --
 -- TOC entry 3643 (class 0 OID 0)
 -- Dependencies: 219
--- Name: stock_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: stock_id_seq; Type: SEQUENCE OWNED BY; Schema:  Owner: cim_admin
 --
 
-ALTER SEQUENCE public.stock_id_seq OWNED BY public.stock.id;
+ALTER SEQUENCE stock_id_seq OWNED BY public.stock.id;
 
 
 --
 -- TOC entry 218 (class 1259 OID 17020)
--- Name: warehouse; Type: TABLE; Schema: public; Owner: postgres
+-- Name: warehouse; Type: TABLE; Schema:  Owner: cim_admin
 --
 
-CREATE TABLE public.warehouse (
+CREATE TABLE warehouse (
     id integer NOT NULL,
     location character varying(255) NOT NULL,
     capacity integer,
@@ -199,14 +199,14 @@ CREATE TABLE public.warehouse (
 );
 
 
-ALTER TABLE public.warehouse OWNER TO postgres;
+ALTER TABLE warehouse OWNER TO cim_admin;
 
 --
 -- TOC entry 217 (class 1259 OID 17019)
--- Name: warehouse_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: warehouse_id_seq; Type: SEQUENCE; Schema:  Owner: cim_admin
 --
 
-CREATE SEQUENCE public.warehouse_id_seq
+CREATE SEQUENCE warehouse_id_seq
     AS integer
     START WITH 1
     INCREMENT BY 1
@@ -215,64 +215,64 @@ CREATE SEQUENCE public.warehouse_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.warehouse_id_seq OWNER TO postgres;
+ALTER SEQUENCE warehouse_id_seq OWNER TO cim_admin;
 
 --
 -- TOC entry 3644 (class 0 OID 0)
 -- Dependencies: 217
--- Name: warehouse_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: warehouse_id_seq; Type: SEQUENCE OWNED BY; Schema:  Owner: cim_admin
 --
 
-ALTER SEQUENCE public.warehouse_id_seq OWNED BY public.warehouse.id;
+ALTER SEQUENCE warehouse_id_seq OWNED BY public.warehouse.id;
 
 
 --
 -- TOC entry 3463 (class 2604 OID 17014)
--- Name: candy id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: candy id; Type: DEFAULT; Schema:  Owner: cim_admin
 --
 
-ALTER TABLE ONLY public.candy ALTER COLUMN id SET DEFAULT nextval('public.candy_id_seq'::regclass);
+ALTER TABLE ONLY candy ALTER COLUMN id SET DEFAULT nextval('public.candy_id_seq'::regclass);
 
 
 --
 -- TOC entry 3467 (class 2604 OID 17054)
--- Name: orderitem id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: orderitem id; Type: DEFAULT; Schema:  Owner: cim_admin
 --
 
-ALTER TABLE ONLY public.orderitem ALTER COLUMN id SET DEFAULT nextval('public.orderitem_id_seq'::regclass);
+ALTER TABLE ONLY orderitem ALTER COLUMN id SET DEFAULT nextval('public.orderitem_id_seq'::regclass);
 
 
 --
 -- TOC entry 3466 (class 2604 OID 17047)
--- Name: orders id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: orders id; Type: DEFAULT; Schema:  Owner: cim_admin
 --
 
-ALTER TABLE ONLY public.orders ALTER COLUMN id SET DEFAULT nextval('public.orders_id_seq'::regclass);
+ALTER TABLE ONLY orders ALTER COLUMN id SET DEFAULT nextval('public.orders_id_seq'::regclass);
 
 
 --
 -- TOC entry 3465 (class 2604 OID 17030)
--- Name: stock id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: stock id; Type: DEFAULT; Schema:  Owner: cim_admin
 --
 
-ALTER TABLE ONLY public.stock ALTER COLUMN id SET DEFAULT nextval('public.stock_id_seq'::regclass);
+ALTER TABLE ONLY stock ALTER COLUMN id SET DEFAULT nextval('public.stock_id_seq'::regclass);
 
 
 --
 -- TOC entry 3464 (class 2604 OID 17023)
--- Name: warehouse id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: warehouse id; Type: DEFAULT; Schema:  Owner: cim_admin
 --
 
-ALTER TABLE ONLY public.warehouse ALTER COLUMN id SET DEFAULT nextval('public.warehouse_id_seq'::regclass);
+ALTER TABLE ONLY warehouse ALTER COLUMN id SET DEFAULT nextval('public.warehouse_id_seq'::regclass);
 
 
 --
 -- TOC entry 3626 (class 0 OID 17011)
 -- Dependencies: 216
--- Data for Name: candy; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: candy; Type: TABLE DATA; Schema:  Owner: cim_admin
 --
 
-COPY public.candy (id, name, type, flavor, price, weight) FROM stdin;
+COPY candy (id, name, type, flavor, price, weight) FROM stdin;
 1	3 Musketeers	Chocolate Bar	Choclate	1.75	1.92
 2	Air Heads	Taffy Bar	Cherry	0.75	0.55
 3	Air Heads	Taffy Bar	Watermelon	0.75	0.55
@@ -289,10 +289,10 @@ COPY public.candy (id, name, type, flavor, price, weight) FROM stdin;
 --
 -- TOC entry 3634 (class 0 OID 17051)
 -- Dependencies: 224
--- Data for Name: orderitem; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: orderitem; Type: TABLE DATA; Schema:  Owner: cim_admin
 --
 
-COPY public.orderitem (id, orders_id, candy_id, price, quantity) FROM stdin;
+COPY orderitem (id, orders_id, candy_id, price, quantity) FROM stdin;
 11	2	1	30.00	20
 17	1	3	2.99	1
 16	7	1	400.00	200
@@ -302,10 +302,10 @@ COPY public.orderitem (id, orders_id, candy_id, price, quantity) FROM stdin;
 --
 -- TOC entry 3632 (class 0 OID 17044)
 -- Dependencies: 222
--- Data for Name: orders; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: orders; Type: TABLE DATA; Schema:  Owner: cim_admin
 --
 
-COPY public.orders (id, customer_name, order_date, status, customer_address) FROM stdin;
+COPY orders (id, customer_name, order_date, status, customer_address) FROM stdin;
 7	Terrance Mensah	2024-06-07 20:00:00	pending	123 Main St Stocking, FL 20210
 1	Sally Mae	2024-07-31 20:00:00	pending	243 Green St. Westland, MI 48185
 2	Victoria Ombuna	2022-05-08 20:00:00	completed	33 Big Rock Cove Street Queensbury, NY 12804
@@ -315,10 +315,10 @@ COPY public.orders (id, customer_name, order_date, status, customer_address) FRO
 --
 -- TOC entry 3630 (class 0 OID 17027)
 -- Dependencies: 220
--- Data for Name: stock; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: stock; Type: TABLE DATA; Schema:  Owner: cim_admin
 --
 
-COPY public.stock (id, candy_id, warehouse_id, quantity) FROM stdin;
+COPY stock (id, candy_id, warehouse_id, quantity) FROM stdin;
 20	1	19	200
 21	8	20	350
 6	10	8	450
@@ -328,10 +328,10 @@ COPY public.stock (id, candy_id, warehouse_id, quantity) FROM stdin;
 --
 -- TOC entry 3628 (class 0 OID 17020)
 -- Dependencies: 218
--- Data for Name: warehouse; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: warehouse; Type: TABLE DATA; Schema:  Owner: cim_admin
 --
 
-COPY public.warehouse (id, location, capacity, current_stock) FROM stdin;
+COPY warehouse (id, location, capacity, current_stock) FROM stdin;
 19	789 Pine Road Lakeside, MI 48601 USA	1000	200
 20	456 Oak Avenue Greenfield, MA 01201 USA	1000	350
 21	9877 Cedar Swamp Ave. Barberton, OH 44203	100	0
@@ -342,132 +342,132 @@ COPY public.warehouse (id, location, capacity, current_stock) FROM stdin;
 --
 -- TOC entry 3645 (class 0 OID 0)
 -- Dependencies: 215
--- Name: candy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: candy_id_seq; Type: SEQUENCE SET; Schema:  Owner: cim_admin
 --
 
-SELECT pg_catalog.setval('public.candy_id_seq', 25, true);
+SELECT pg_catalog.setval('candy_id_seq', 25, true);
 
 
 --
 -- TOC entry 3646 (class 0 OID 0)
 -- Dependencies: 223
--- Name: orderitem_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: orderitem_id_seq; Type: SEQUENCE SET; Schema:  Owner: cim_admin
 --
 
-SELECT pg_catalog.setval('public.orderitem_id_seq', 19, true);
+SELECT pg_catalog.setval('orderitem_id_seq', 19, true);
 
 
 --
 -- TOC entry 3647 (class 0 OID 0)
 -- Dependencies: 221
--- Name: orders_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: orders_id_seq; Type: SEQUENCE SET; Schema:  Owner: cim_admin
 --
 
-SELECT pg_catalog.setval('public.orders_id_seq', 14, true);
+SELECT pg_catalog.setval('orders_id_seq', 14, true);
 
 
 --
 -- TOC entry 3648 (class 0 OID 0)
 -- Dependencies: 219
--- Name: stock_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: stock_id_seq; Type: SEQUENCE SET; Schema:  Owner: cim_admin
 --
 
-SELECT pg_catalog.setval('public.stock_id_seq', 23, true);
+SELECT pg_catalog.setval('stock_id_seq', 23, true);
 
 
 --
 -- TOC entry 3649 (class 0 OID 0)
 -- Dependencies: 217
--- Name: warehouse_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: warehouse_id_seq; Type: SEQUENCE SET; Schema:  Owner: cim_admin
 --
 
-SELECT pg_catalog.setval('public.warehouse_id_seq', 22, true);
+SELECT pg_catalog.setval('warehouse_id_seq', 22, true);
 
 
 --
 -- TOC entry 3469 (class 2606 OID 17018)
--- Name: candy candy_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: candy candy_pkey; Type: CONSTRAINT; Schema:  Owner: cim_admin
 --
 
-ALTER TABLE ONLY public.candy
+ALTER TABLE ONLY candy
     ADD CONSTRAINT candy_pkey PRIMARY KEY (id);
 
 
 --
 -- TOC entry 3477 (class 2606 OID 17056)
--- Name: orderitem orderitem_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: orderitem orderitem_pkey; Type: CONSTRAINT; Schema:  Owner: cim_admin
 --
 
-ALTER TABLE ONLY public.orderitem
+ALTER TABLE ONLY orderitem
     ADD CONSTRAINT orderitem_pkey PRIMARY KEY (id);
 
 
 --
 -- TOC entry 3475 (class 2606 OID 17049)
--- Name: orders orders_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: orders orders_pkey; Type: CONSTRAINT; Schema:  Owner: cim_admin
 --
 
-ALTER TABLE ONLY public.orders
+ALTER TABLE ONLY orders
     ADD CONSTRAINT orders_pkey PRIMARY KEY (id);
 
 
 --
 -- TOC entry 3473 (class 2606 OID 17032)
--- Name: stock stock_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stock stock_pkey; Type: CONSTRAINT; Schema:  Owner: cim_admin
 --
 
-ALTER TABLE ONLY public.stock
+ALTER TABLE ONLY stock
     ADD CONSTRAINT stock_pkey PRIMARY KEY (id);
 
 
 --
 -- TOC entry 3471 (class 2606 OID 17025)
--- Name: warehouse warehouse_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: warehouse warehouse_pkey; Type: CONSTRAINT; Schema:  Owner: cim_admin
 --
 
-ALTER TABLE ONLY public.warehouse
+ALTER TABLE ONLY warehouse
     ADD CONSTRAINT warehouse_pkey PRIMARY KEY (id);
 
 
 --
 -- TOC entry 3480 (class 2606 OID 17062)
--- Name: orderitem orderitem_candy_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: orderitem orderitem_candy_id_fkey; Type: FK CONSTRAINT; Schema:  Owner: cim_admin
 --
 
-ALTER TABLE ONLY public.orderitem
-    ADD CONSTRAINT orderitem_candy_id_fkey FOREIGN KEY (candy_id) REFERENCES public.candy(id);
+ALTER TABLE ONLY orderitem
+    ADD CONSTRAINT orderitem_candy_id_fkey FOREIGN KEY (candy_id) REFERENCES candy(id);
 
 
 --
 -- TOC entry 3481 (class 2606 OID 17057)
--- Name: orderitem orderitem_orders_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: orderitem orderitem_orders_id_fkey; Type: FK CONSTRAINT; Schema:  Owner: cim_admin
 --
 
-ALTER TABLE ONLY public.orderitem
-    ADD CONSTRAINT orderitem_orders_id_fkey FOREIGN KEY (orders_id) REFERENCES public.orders(id);
+ALTER TABLE ONLY orderitem
+    ADD CONSTRAINT orderitem_orders_id_fkey FOREIGN KEY (orders_id) REFERENCES orders(id);
 
 
 --
 -- TOC entry 3478 (class 2606 OID 17033)
--- Name: stock stock_candy_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stock stock_candy_id_fkey; Type: FK CONSTRAINT; Schema:  Owner: cim_admin
 --
 
-ALTER TABLE ONLY public.stock
-    ADD CONSTRAINT stock_candy_id_fkey FOREIGN KEY (candy_id) REFERENCES public.candy(id);
+ALTER TABLE ONLY stock
+    ADD CONSTRAINT stock_candy_id_fkey FOREIGN KEY (candy_id) REFERENCES candy(id);
 
 
 --
 -- TOC entry 3479 (class 2606 OID 17038)
--- Name: stock stock_warehouse_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stock stock_warehouse_id_fkey; Type: FK CONSTRAINT; Schema:  Owner: cim_admin
 --
 
-ALTER TABLE ONLY public.stock
-    ADD CONSTRAINT stock_warehouse_id_fkey FOREIGN KEY (warehouse_id) REFERENCES public.warehouse(id);
+ALTER TABLE ONLY stock
+    ADD CONSTRAINT stock_warehouse_id_fkey FOREIGN KEY (warehouse_id) REFERENCES warehouse(id);
 
 
 -- Completed on 2024-08-13 14:56:57 EDT
 
 --
--- PostgreSQL database dump complete
+-- cim_adminQL database dump complete
 --
 

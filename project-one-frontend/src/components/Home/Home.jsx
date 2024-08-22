@@ -9,7 +9,9 @@ import { useNavigate } from "react-router-dom";
 
 
 const Home = () => {
+    //const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/warehouse";
     const url = "http://localhost:8080/warehouse";
+    // const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/warehouse";
     const navigate = useNavigate();
     const [warehouses, setWarehouses] = useState([]);
     const [error, setError] = useState(null);

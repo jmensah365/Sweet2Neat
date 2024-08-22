@@ -94,9 +94,13 @@ public class Orders {
         this.status = status;
     }
 
+    
+
     @Override
     public String toString() {
         return "Orders [id=" + id + ", customerName=" + customerName + ", orderDate=" + orderDate + ", status=" + status
-                + "]";
+                + ", customerAddress=" + customerAddress + "]";
     }
+
+    
 }

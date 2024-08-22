@@ -10,7 +10,8 @@ import DeleteIcon from '@mui/icons-material/Delete'
 
 
 const WarehouseList = () => {
-    const url = "http://localhost:8080/warehouse";
+    //const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/warehouse";
+    const url = 'http://localhost:8080/warehouse';
     
     //hook to keep track of warehouses
     const [warehouses, setWarehouses] = useState([]);
@@ -37,7 +38,8 @@ const WarehouseList = () => {
                 return response.json();
             })
             .then(returnedData => {
-                setWarehouses(returnedData);
+                const sortedData = returnedData.sort((a,b) => a.id - b.id);
+                setWarehouses(sortedData);
                 setLoaded(true);
             })
             .catch(err => {
@@ -171,7 +173,7 @@ const WarehouseList = () => {
                     className='textField'
                     
                 />
-                <TextField
+                {/* <TextField
                     label='Current Stock'
                     name='currentStock'
                     value={editingWarehouse ? editingWarehouse.currentStock : newWarehouse.currentStock}
@@ -180,7 +182,7 @@ const WarehouseList = () => {
                     required
                     margin='normal'
                     className='textField'
-                />
+                /> */}
                 <Button name = 'warehouseBtn' type='submit' variant='contained' color='primary'>
                     {editingWarehouse ? 'Update warehouse' : 'Add warehouse'}
                 </Button>
@@ -203,11 +205,11 @@ const WarehouseList = () => {
                             <TableCell>Actions</TableCell>
                         </TableRow>
                     </TableHead>
-                    <TableBody>
+                    <TableBody name='warehouseTBody'>
                         {warehouses.map(warehouse => (
                             <TableRow key={warehouse.id}>
                                 <TableCell>{warehouse.id}</TableCell>
-                                <TableCell >{warehouse.location}</TableCell>
+                                <TableCell>{warehouse.location}</TableCell>
                                 <TableCell>{warehouse.currentStock}/{warehouse.capacity}</TableCell>
                                 <TableCell>
                                     <IconButton name ='editIcon' onClick={() => handleEdit(warehouse)}>
