@@ -1,4 +1,4 @@
-package com.skillstorm.Cucumber.Warehouse;
+package com.skillstorm.Selenium;
 
 import java.time.Duration;
 import java.util.List;

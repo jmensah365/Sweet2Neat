@@ -1,4 +1,4 @@
-package com.skillstorm.Cucumber.Warehouse;
+package com.skillstorm.cucumber;
 
 public class WarehouseStockSteps {
     

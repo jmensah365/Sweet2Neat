@@ -1,4 +1,4 @@
-package com.skillstorm.Cucumber.Navigation;
+package com.skillstorm.Selenium;
 
 import java.time.Duration;
 

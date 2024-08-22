@@ -1,4 +1,4 @@
-package com.skillstorm.Cucumber.Warehouse;
+package com.skillstorm.cucumber;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -8,6 +8,8 @@ import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+
+import com.skillstorm.Selenium.WarehouseList;
 
 public class WarehouseStepDefinitions {
 

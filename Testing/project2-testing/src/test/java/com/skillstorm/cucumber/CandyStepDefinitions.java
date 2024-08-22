@@ -1,8 +1,10 @@
-package com.skillstorm.Cucumber.Candy;
+package com.skillstorm.cucumber;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+
+import com.skillstorm.Selenium.CandyList;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
