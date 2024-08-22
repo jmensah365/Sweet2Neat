@@ -1,5 +1,7 @@
-/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/Navigation/NavigationSteps.java
-/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/Test/RunCucumberTest.java
-/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/Warehouse/WarehouseStepDefinitions.java
-/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/Navigation/NavigationLinks.java
-/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/Warehouse/WarehouseList.java
+/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/Cucumber/Candy/CandyStepDefinitions.java
+/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/Cucumber/Warehouse/WarehouseList.java
+/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/Cucumber/Navigation/NavigationSteps.java
+/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/Cucumber/Candy/CandyList.java
+/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/Cucumber/Warehouse/WarehouseStepDefinitions.java
+/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/RunCucumberTest.java
+/Users/dj/Desktop/project2/InventoryManagement/Testing/project2-testing/src/test/java/com/skillstorm/Cucumber/Navigation/NavigationLinks.java

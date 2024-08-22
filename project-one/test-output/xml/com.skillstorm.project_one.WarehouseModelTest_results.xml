@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestNGTest-78e03d67-774d-43cd-89ba-b186e97c200a"
+           tests="5"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.026">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testSetIdAndGetId"
+                time="0.000"
+                classname="com.skillstorm.project_one.WarehouseModelTest">
+            </testcase>
+            <testcase
+                name="testSetLocationAndGetLocation"
+                time="0.000"
+                classname="com.skillstorm.project_one.WarehouseModelTest">
+            </testcase>
+            <testcase
+                name="testSetCapacityAndGetCapacity"
+                time="0.020"
+                classname="com.skillstorm.project_one.WarehouseModelTest">
+            </testcase>
+            <testcase
+                name="testSetCurrentStockAndGetCurrentStock"
+                time="0.000"
+                classname="com.skillstorm.project_one.WarehouseModelTest">
+            </testcase>
+            <testcase
+                name="testWarehouseToString"
+                time="0.006"
+                classname="com.skillstorm.project_one.WarehouseModelTest">
+            </testcase>
+</testsuite>

@@ -1,5 +1,5 @@
-@Warehouse
-Feature: Warehouse CRUD
+# @Warehouse
+# Feature: Warehouse CRUD
 
 #   #-------------------------- Warehouse CREATE ----------------------------#
 #   Scenario Outline: Successful warehouse creation with valid information
@@ -17,34 +17,25 @@ Feature: Warehouse CRUD
 #   Scenario Outline: Updating a warehouse
 
 #     Given I am on the Warehouse List page
-
 #     When I click on the edit icon for the Warehouse I want to edit
-
 #     And I change the "<location>" and/or "<capacity>" with valid information
-
 #     And I click on the UPDATE WAREHOUSE button
-
 #     Then I should see the updated details for the Warehouse I edited in the list of Warehouses
 
 #   Examples:
 #   | location | capacity |
 #   | Apt. 862 652 Shad Neck, South Hershelborough, IN 14539    | 2000    |
 
+# #-------------------------- Warehouse READ ----------------------------#
+# Scenario: Successful view of warehouse list
+
+#   Given I am on the home page
+#   When I click on the Warehouse List option
+#   Then I should be navigated to the Warehouse List page
+#   And I should see a list of all warehouses available
+
 # #-------------------------- Warehouse DELETE ----------------------------#
 #   Scenario: Delete a warehouse
 #     Given I am on the Warehouse List page
-
 #     When I click on the delete icon for the Warehouse I want to delete
-
 #     Then the warehouse should not be visible in the table
-
-
-  # #-------------------------- Warehouse READ ----------------------------#
-  # Scenario: Successful view of warehouse list
-
-  #   Given I am on the home page
-  #   When I click on the Warehouse List option
-  #   Then I should be navigated to the Warehouse List page
-  #   And I should see a list of all warehouses available
-
-  
