@@ -1,6 +1,5 @@
 package com.skillstorm.Selenium;
 
-
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -13,8 +12,6 @@ public class NavigationLinks {
     
     private WebDriver driver;
     
-    // private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
-    // private static final String orderUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/orders";
     private static final String homeUrl = "http://localhost:5173/";
     private static final String orderUrl = "http://localhost:5173/orders";
 
@@ -71,6 +68,9 @@ public class NavigationLinks {
 
     @FindBy(name = "warehouseStockTitle")
     private WebElement warehouseStockHeader;
+
+    @FindBy(name = "homeAddAWarehouseBtn")
+    private WebElement addWarehouseButton;
 
     // Setup driver
     public NavigationLinks(WebDriver driver){
@@ -143,21 +143,21 @@ public class NavigationLinks {
     //================= NAV TO LIST OF ORDERS PAGE ==================//
     public void clickOnListOfOrdersMenu() {
         ordersMenu.click();
-        orderInfoMenu.click();
+        listOfOrdersMenu.click();
     }
 
     public String getListOfOrdersHeader() {
-        return orderInfoHeader.getText();
+        return listOfOrdersHeader.getText();
     }
 
     //================= NAV TO ORDER INFO PAGE ==================//
     public void clickOnOrderInfoMenu() {
         ordersMenu.click();
-        listOfOrdersMenu.click();
+        orderInfoMenu.click();
     }
 
     public String getOrderInfoHeader() {
-        return listOfOrdersHeader.getText();
+        return orderInfoHeader.getText();
     }
 
     //================= NAV TO ABOUT PAGE ==================//
@@ -177,6 +177,11 @@ public class NavigationLinks {
 
     public String getWarehouseStockHeader() {
         return warehouseStockHeader.getText();
+    }
+
+    //================= NAV USING ADD A WAREHOUSE BUTTON ==================//
+    public void clickOnAddAWarehouseButton() {
+        addWarehouseButton.click();
     }
 }
 

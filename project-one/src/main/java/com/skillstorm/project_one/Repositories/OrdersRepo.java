@@ -8,4 +8,6 @@ import java.util.List;
 
 public interface OrdersRepo extends JpaRepository<Orders, Integer> {
     List<Orders> findByStatus(String status);
+
+    List<Orders> findAllByOrderByIdAsc();
 }

@@ -1,9 +1,10 @@
 package com.skillstorm.cucumber;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 
-import org.junit.jupiter.api.Assertions.*;
+// import org.junit.jupiter.api.Assertions.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -21,6 +22,11 @@ public class WarehouseStepDefinitions {
         WebDriver driver = new ChromeDriver(options);
 
         this.warehouseList = new WarehouseList(driver);
+    }
+
+    @After("@Warehouse")
+    public void tearDown() {
+        this.warehouseList.close();
     }
 
     @Given("I am on the Warehouse List page")
@@ -78,10 +84,10 @@ public class WarehouseStepDefinitions {
     }
 
     //======================= READ =========================
-    // @Given("I am on the home page")
-    // public void i_Am_On_The_Home_Page() {
-    //     this.warehouseList.getUrl();
-    // }
+    @Given("I am on the home page")
+    public void iAmOnTheHomePage() {
+        this.warehouseList.getHomeURL();
+    }
 
     @When("I click on the Warehouse List option")
     public void clickOnWarehouseListOption() {
@@ -97,8 +103,5 @@ public class WarehouseStepDefinitions {
     public void iSeeListOfWarehouses() {
         this.warehouseList.getWarehouseTableContents();
     }
-
-
-
 
 }

@@ -26,7 +26,7 @@ public class OrdersService {
      * @return Iterable of Orders entities
      */
     public Iterable<Orders> findAll() {
-        return repo.findAll();
+        return repo.findAllByOrderByIdAsc();
     }
 
     /**

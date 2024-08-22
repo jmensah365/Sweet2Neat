@@ -42,7 +42,6 @@ public class WarehouseController {
     }
 
 
-
     //Endpoint to create a new warehouse
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)

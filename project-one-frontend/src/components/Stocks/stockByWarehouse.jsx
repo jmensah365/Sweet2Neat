@@ -10,6 +10,7 @@ import Delete from '@mui/icons-material/Delete';
 
 
 const WarehouseStocks = () => {
+
     const stockUrl = 'http://localhost:8080/stock';
     const warehouseUrl = 'http://localhost:8080/warehouse';
     const candyUrl = 'http://localhost:8080/candy';

@@ -17,11 +17,10 @@
             "mainClass": "com.skillstorm.project_one.ProjectOneApplication",
             "projectName": "project-one",
             "env": {
-                "DB_URL": "jdbc:postgresql://cim-cluster-instance-1.c4eqo06kg56i.us-east-1.rds.amazonaws.com:5432/postgres",
+                "DB_URL":"jdbc:postgresql://cim-cluster-instance-1.c4eqo06kg56i.us-east-1.rds.amazonaws.com:5432/postgres",
                 "DB_USERNAME": "cim_admin",
-                "DB_PWD": "CimSdet2024!",
+                "DB_PASSWORD": "CimSdet2024!"
             }
         }
     ]
-    
 }

@@ -34,7 +34,6 @@ public class OrderItemController {
         this.service = service;
     }
 
-
     // Endpoint to retrieve all order items
     @GetMapping
     public ResponseEntity<Iterable<OrderItemDTO>>findAll(){

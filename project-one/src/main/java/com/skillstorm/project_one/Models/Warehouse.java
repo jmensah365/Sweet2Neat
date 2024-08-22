@@ -74,9 +74,4 @@ public class Warehouse {
         return "Warehouse [id=" + id + ", location=" + location + ", capacity=" + capacity + ", currentStock="
                 + currentStock + "]";
     }
-
-    
-
-    
-
 }

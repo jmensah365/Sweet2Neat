@@ -13,5 +13,4 @@ public class ProjectOneApplication {
 
 		SpringApplication.run(ProjectOneApplication.class, args);
 	}
-
 }
