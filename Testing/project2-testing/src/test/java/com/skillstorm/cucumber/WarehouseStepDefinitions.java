@@ -78,10 +78,10 @@ public class WarehouseStepDefinitions {
     }
 
     //======================= READ =========================
-    @Given("I am on the home page")
-    public void iAmOnTheHomePage() {
-        this.warehouseList.getUrl();
-    }
+    // @Given("I am on the home page")
+    // public void i_Am_On_The_Home_Page() {
+    //     this.warehouseList.getUrl();
+    // }
 
     @When("I click on the Warehouse List option")
     public void clickOnWarehouseListOption() {

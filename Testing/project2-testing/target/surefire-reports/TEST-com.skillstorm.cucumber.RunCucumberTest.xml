@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.skillstorm.cucumber.RunCucumberTest" time="115.44" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.skillstorm.cucumber.RunCucumberTest" time="17.17" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="22"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/Users/mensahj/Library/Java/JavaVirtualMachines/openjdk-22.0.1/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/mensahj/Documents/InventoryManagementProject/Testing/project2-testing/target/surefire/surefirebooter-20240821095925260_3.jar /Users/mensahj/Documents/InventoryManagementProject/Testing/project2-testing/target/surefire 2024-08-21T09-59-25_035-jvmRun1 surefire-20240821095925260_1tmp surefire_0-20240821095925260_2tmp"/>
+    <property name="sun.java.command" value="/Users/mensahj/Documents/InventoryManagementProject/Testing/project2-testing/target/surefire/surefirebooter-20240821155017570_3.jar /Users/mensahj/Documents/InventoryManagementProject/Testing/project2-testing/target/surefire 2024-08-21T15-50-17_233-jvmRun1 surefire-20240821155017570_1tmp surefire_0-20240821155017570_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/mensahj/Documents/InventoryManagementProject/Testing/project2-testing/target/test-classes:/Users/mensahj/Documents/InventoryManagementProject/Testing/project2-testing/target/classes:/Users/mensahj/.m2/repository/io/cucumber/cucumber-java/7.11.1/cucumber-java-7.11.1.jar:/Users/mensahj/.m2/repository/io/cucumber/cucumber-core/7.11.1/cucumber-core-7.11.1.jar:/Users/mensahj/.m2/repository/io/cucumber/cucumber-gherkin/7.11.1/cucumber-gherkin-7.11.1.jar:/Users/mensahj/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.11.1/cucumber-gherkin-messages-7.11.1.jar:/Users/mensahj/.m2/repository/io/cucumber/gherkin/26.0.3/gherkin-26.0.3.jar:/Users/mensahj/.m2/repository/io/cucumber/messages/21.0.1/messages-21.0.1.jar:/Users/mensahj/.m2/repository/io/cucumber/tag-expressions/5.0.1/tag-expressions-5.0.1.jar:/Users/mensahj/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/Users/mensahj/.m2/repository/io/cucumber/datatable/7.11.1/datatable-7.11.1.jar:/Users/mensahj/.m2/repository/io/cucumber/cucumber-plugin/7.11.1/cucumber-plugin-7.11.1.jar:/Users/mensahj/.m2/repository/io/cucumber/docstring/7.11.1/docstring-7.11.1.jar:/Users/mensahj/.m2/repository/io/cucumber/html-formatter/20.2.1/html-formatter-20.2.1.jar:/Users/mensahj/.m2/repository/io/cucumber/junit-xml-formatter/0.1.0/junit-xml-formatter-0.1.0.jar:/Users/mensahj/.m2/repository/io/cucumber/ci-environment/9.1.0/ci-environment-9.1.0.jar:/Users/mensahj/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/mensahj/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.11.1/cucumber-junit-platform-engine-7.11.1.jar:/Users/mensahj/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/mensahj/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/mensahj/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-java/4.23.0/selenium-java-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-api/4.23.0/selenium-api-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.23.0/selenium-chrome-driver-4.23.0.jar:/Users/mensahj/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.23.0/selenium-chromium-driver-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-json/4.23.0/selenium-json-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.23.0/selenium-manager-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v125/4.23.0/selenium-devtools-v125-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v126/4.23.0/selenium-devtools-v126-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v127/4.23.0/selenium-devtools-v127-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.23.0/selenium-devtools-v85-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.23.0/selenium-edge-driver-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.23.0/selenium-firefox-driver-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-http/4.23.0/selenium-http-4.23.0.jar:/Users/mensahj/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.23.0/selenium-ie-driver-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.23.0/selenium-remote-driver-4.23.0.jar:/Users/mensahj/.m2/repository/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre.jar:/Users/mensahj/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/mensahj/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/mensahj/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/mensahj/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/Users/mensahj/.m2/repository/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1.jar:/Users/mensahj/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-api/1.40.0/opentelemetry-api-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-context/1.40.0/opentelemetry-context-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.40.0/opentelemetry-exporter-logging-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.40.0/opentelemetry-sdk-common-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.40.0/opentelemetry-sdk-extension-autoconfigure-spi-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.40.0/opentelemetry-sdk-extension-autoconfigure-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.40.0-alpha/opentelemetry-api-incubator-1.40.0-alpha.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.40.0/opentelemetry-sdk-trace-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.40.0/opentelemetry-sdk-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.40.0/opentelemetry-sdk-metrics-1.40.0.jar:/Users/mensahj/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.40.0/opentelemetry-sdk-logs-1.40.0.jar:/Users/mensahj/.m2/repository/net/bytebuddy/byte-buddy/1.14.18/byte-buddy-1.14.18.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-os/4.23.0/selenium-os-4.23.0.jar:/Users/mensahj/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.23.0/selenium-safari-driver-4.23.0.jar:/Users/mensahj/.m2/repository/org/seleniumhq/selenium/selenium-support/4.23.0/selenium-support-4.23.0.jar:/Users/mensahj/.m2/repository/org/junit/platform/junit-platform-suite/1.9.2/junit-platform-suite-1.9.2.jar:/Users/mensahj/.m2/repository/org/junit/platform/junit-platform-suite-api/1.9.2/junit-platform-suite-api-1.9.2.jar:/Users/mensahj/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.9.2/junit-platform-suite-engine-1.9.2.jar:/Users/mensahj/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.9.2/junit-platform-suite-commons-1.9.2.jar:/Users/mensahj/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/mensahj/.m2/repository/org/testng/testng/7.10.2/testng-7.10.2.jar:/Users/mensahj/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/mensahj/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/mensahj/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/mensahj/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.2/junit-jupiter-5.9.2.jar:/Users/mensahj/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/mensahj/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.2/junit-jupiter-params-5.9.2.jar:/Users/mensahj/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/mensahj/Documents/InventoryManagementProject/Testing/project2-testing/target/surefire/surefirebooter-20240821095925260_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/mensahj/Documents/InventoryManagementProject/Testing/project2-testing/target/surefire/surefirebooter-20240821155017570_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="22.0.1+8-16"/>
@@ -58,93 +58,83 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="66.0"/>
   </properties>
-  <testcase name="Example #1.1" classname="Examples" time="29.615">
+  <testcase name="Successfully navigate to the home page" classname="Navigation Links" time="3.459">
     <system-out><![CDATA[
-@Candy
-Scenario Outline: Creating a Candy                                                 &amp#27;[90m# com/skillstorm/candy.feature:11&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the ADD CANDY button&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton()&amp#27;[0m
-39
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the newly created candy on the list&amp#27;[0m                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeTheNewlyCreatedCandyOnTheList()&amp#27;[0m
+@Navigation
+Scenario: Successfully navigate to the home page &amp#27;[90m# com/skillstorm/navigation.feature:4&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on any page&amp#27;[0m                         &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.iAmOnAnyPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the logo&amp#27;[0m                       &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnLogo()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the home page&amp#27;[0m                &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeHomePage()&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="35.038">
+  <testcase name="Successfully navigate to Warehouse List page" classname="Navigation Links" time="3.621">
     <system-out><![CDATA[
-@Candy
-Scenario Outline: Updating a Candy                                                              &amp#27;[90m# com/skillstorm/candy.feature:28&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                                        &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon for the candy I want to edit&amp#27;[0m                                       &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheEditIconForTheCandyIWantToEdit()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Strawberry Belt Bulk Bag"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"10.00"&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iChangeCandyInfoWithValidInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the UPDATE CANDY button&amp#27;[0m                                                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheUpdateCandyButton()&amp#27;[0m
-Updated Candy ID 1
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the updated candy in the candy table&amp#27;[0m                                        &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeTheUpdatedCandyInTheCandyTable()&amp#27;[0m
+@Navigation
+Scenario: Successfully navigate to Warehouse List page &amp#27;[90m# com/skillstorm/navigation.feature:9&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the home page&amp#27;[0m                          &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.onTheHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on Warehouse List menu option&amp#27;[0m           &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnWarehousesMenu()&amp#27;[0m
+Warehouse List
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the Warehouse List page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeWarehouseListPage()&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="29.709">
+  <testcase name="Successfully navigate to Candy Inventory page" classname="Navigation Links" time="1.646">
     <system-out><![CDATA[
-@Candy
-Scenario Outline: Creating a Candy                                                     &amp#27;[90m# com/skillstorm/candy.feature:12&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                               &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Ring Pops"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Gummy Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Watermelon"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"2.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"0.50"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the ADD CANDY button&amp#27;[0m                                                     &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton()&amp#27;[0m
-40
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the newly created candy on the list&amp#27;[0m                                &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeTheNewlyCreatedCandyOnTheList()&amp#27;[0m
+@Navigation
+Scenario: Successfully navigate to Candy Inventory page &amp#27;[90m# com/skillstorm/navigation.feature:14&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the home page&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.onTheHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the Candy Inventory menu option&amp#27;[0m       &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnCandyInventoryOption()&amp#27;[0m
+Candy Inventory
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the Candy Inventory page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeCandyInventoryPage()&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Successful view of candy list" classname="Candy CRUD Operations" time="7.046">
+  <testcase name="Successfully navigate to Candy Categories page" classname="Navigation Links" time="1.549">
     <system-out><![CDATA[
-@Candy
-Scenario: Successful view of candy list        &amp#27;[90m# com/skillstorm/candy.feature:14&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Home page&amp#27;[0m                  &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheHomePage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI navigate to Candy Inventory&amp#27;[0m           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iNavigateToTheCandyInventory()&amp#27;[0m
-Candy ID Candy Name Candy Type Flavor Price ($) Weight (oz.)
-1 Sour Strawberry Belt Bulk Bag Sour Candy Sour 10 1
-3 Air Heads Taffy Bar Watermelon 0.75 0.55
-8 Tootsie Pop Lollipops Grape 18 32
-10 Sour DOTS Gumdrops Sour Candy Sour 2.5 6
-11 4D Gummy Apples Bulk Gummy Candy Watermelon 18 35.2
-13 New Candy 10 Gummy Candy Raspberry 40 100
-16 Haribo's Gummy Candy Apple 2.99 1
-17 Sour Skittles Sour Candy Sour 4.99 1
-18 Ring Pops Gummy Candy Watermelon 2.99 0.5
-30 Sour Skittles Sour Candy Sour 4.99 1
-31 Ring Pops Gummy Candy Watermelon 2.99 0.5
-32 Sour Skittles Sour Candy Sour 4.99 1
-33 Ring Pops Gummy Candy Watermelon 2.99 0.5
-34 Sour Skittles Sour Candy Sour 4.99 1
-35 Ring Pops Gummy Candy Watermelon 2.99 0.5
-38 Sour Skittles Sour Candy Sour 4.99 1
-39 Sour Skittles Sour Candy Sour 4.99 1
-40 Ring Pops Gummy Candy Watermelon 2.99 0.5
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mlist of all candies should be displayed&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.theListOfAllCandiesShouldBeDisplayed()&amp#27;[0m
+@Navigation
+Scenario: Successfully navigate to Candy Categories page &amp#27;[90m# com/skillstorm/navigation.feature:19&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the home page&amp#27;[0m                            &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.onTheHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the Candy Categories menu option&amp#27;[0m       &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnCandyCategoriesOption()&amp#27;[0m
+Types of candy
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the Candy Categories page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeCandyCategoriesPage()&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Deleting a Candy" classname="Candy CRUD Operations" time="13.908">
+  <testcase name="Successfully navigate to List of Orders page" classname="Navigation Links" time="1.916">
     <system-out><![CDATA[
-@Candy
-Scenario: Deleting a Candy                                                          &amp#27;[90m# com/skillstorm/candy.feature:30&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the delete icon&amp#27;[0m                                                      &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheDeleteIcon()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe candy should be deleted from the list and no longer visible in the table&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.theCandyShouldBeDeletedFromTheListAndNoLongerVisibleInTheTable()&amp#27;[0m
+@Navigation
+Scenario: Successfully navigate to List of Orders page &amp#27;[90m# com/skillstorm/navigation.feature:24&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the home page&amp#27;[0m                          &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.onTheHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the List of Orders menu option&amp#27;[0m       &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnListOfOrdersOption()&amp#27;[0m
+Order Information
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the List of Orders page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeListOfOrders()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[False
-False
-False
-False
-False
-False
-False
-False
-False
-False
-False
-False
-False
-False
-False
-False
-False
-]]></system-err>
+  </testcase>
+  <testcase name="Successfully navigate to Order Info page" classname="Navigation Links" time="1.709">
+    <system-out><![CDATA[
+@Navigation
+Scenario: Successfully navigate to Order Info page &amp#27;[90m# com/skillstorm/navigation.feature:29&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the home page&amp#27;[0m                      &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.onTheHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the Order Info menu option&amp#27;[0m       &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnOrderInfoOption()&amp#27;[0m
+Order List
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the Order Info page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeOrderInfo()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Successfully navigate to About page" classname="Navigation Links" time="1.541">
+    <system-out><![CDATA[
+@Navigation
+Scenario: Successfully navigate to About page &amp#27;[90m# com/skillstorm/navigation.feature:34&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the home page&amp#27;[0m                 &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.onTheHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the About menu option&amp#27;[0m       &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnAboutOption()&amp#27;[0m
+This is your one stop shop for Candy Inventory Management. You will be able add different candy products you wish to store and also delete any you do not want. You can also see how many warehouses you currenly have, how much capacity they each have, how much stock they hold, and their location. In addition you can keep track of people who have ordered from you and associated order information.
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the About page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeAboutPage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Successfully navigate to Warehouse Stock page" classname="Navigation Links" time="1.595">
+    <system-out><![CDATA[
+@Navigation
+Scenario: Successfully navigate to Warehouse Stock page &amp#27;[90m# com/skillstorm/navigation.feature:39&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the home page&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.onTheHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the Warehouse Stock menu option&amp#27;[0m       &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnWarehouseStockOption()&amp#27;[0m
+Stock Inventory
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the Warehouse Stock page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeWarehouseStockHeader()&amp#27;[0m
+]]></system-out>
   </testcase>
 </testsuite>
