@@ -1,17 +1,17 @@
 package com.skillstorm.project_one;
 
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-import org.testng.Assert;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.skillstorm.project_one.Models.Warehouse;
 
 public class WarehouseModelTest {
 
-    static Warehouse warehouse;
+    private Warehouse warehouse;
     
-    @BeforeMethod
-    public static void setupWarehouse() {
+    @BeforeEach
+    public void setupWarehouse() {
         warehouse = new Warehouse();
     }
 
@@ -20,14 +20,14 @@ public class WarehouseModelTest {
         int expected = 1;
         warehouse.setId(expected);
         int actual = warehouse.getId();
-        Assert.assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void testSetLocationAndGetLocation() {
         String expected = "12345 Candy Lane, Candyville, CandyLand 678910";
         warehouse.setLocation(expected);
-        Assert.assertEquals(warehouse.getLocation(), expected);
+        assertEquals(expected, warehouse.getLocation());
     }
 
     @Test
@@ -35,7 +35,7 @@ public class WarehouseModelTest {
         int expected = 10000;
         warehouse.setCapacity(expected);
         int actual = warehouse.getCapacity();
-        Assert.assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -43,13 +43,13 @@ public class WarehouseModelTest {
         int expected = 400;
         warehouse.setCurrentStock(expected);
         int actual = warehouse.getCurrentStock();
-        Assert.assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void testWarehouseToString() {
         int id = 1;
-        String location ="12345 Candy Lane, Candyville, CandyLand 678910"; 
+        String location = "12345 Candy Lane, Candyville, CandyLand 678910";
         int capacity = 10000;
         int currentStock = 400;
 
@@ -58,9 +58,8 @@ public class WarehouseModelTest {
         warehouse.setCapacity(capacity);
         warehouse.setCurrentStock(currentStock);
 
-        String expected = "Warehouse [id=" + id + ", location=" + location + ", capacity=" + capacity + ", currentStock="
-                + currentStock + "]";
+        String expected = "Warehouse [id=" + id + ", location=" + location + ", capacity=" + capacity + ", currentStock=" + currentStock + "]";
         String actual = warehouse.toString();
-        Assert.assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 }

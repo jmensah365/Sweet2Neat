@@ -6,16 +6,16 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import com.skillstorm.project_one.Models.Orders;
 
 public class OrderUnitTests {
-    private Orders orders; // January 1, 2023
+    private Orders orders;
 
-    @BeforeMethod
-    public void init(){
+    @BeforeEach
+    public void init() {
         orders = new Orders();
         orders.setId(10);
         orders.setCustomerName("Jeremiah Mensah");
@@ -26,13 +26,12 @@ public class OrderUnitTests {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
         orders.setStatus("pending");
         orders.setCustomerAddress("Apt. 404 609 Cruz Walks, Port Meghanmouth, CO 64357-4203");
     }
 
     @Test
-    public void testGetters(){
+    public void testGetters() {
         assertEquals(10, orders.getId());
         assertEquals("Jeremiah Mensah", orders.getCustomerName());
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -47,7 +46,7 @@ public class OrderUnitTests {
     }
 
     @Test
-    public void testSetters(){
+    public void testSetters() {
         orders.setId(2);
         orders.setCustomerName("DJ Kim");
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -73,8 +72,8 @@ public class OrderUnitTests {
     }
 
     @Test
-    public void testToString(){
-        String expectedString = "Orders [id=10, customerName=Jeremiah Mensah, orderDate=Sun Jan 01 00:00:00 EST 2023, status=pending, customerAddress=Apt. 404 609 Cruz Walks, Port Meghanmouth, CO 64357-4203]";
+    public void testToString() {
+        String expectedString = "Orders [id=10, customerName=Jeremiah Mensah, orderDate=Sun Jan 01 00:00:00 CST 2023, status=pending, customerAddress=Apt. 404 609 Cruz Walks, Port Meghanmouth, CO 64357-4203]";
         assertEquals(expectedString, orders.toString());
     }
 }
