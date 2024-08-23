@@ -29,8 +29,8 @@ public class WarehouseList {
     @FindBy(name = "capacity")
     private WebElement capacityField;
 
-    // @FindBy(name = "currentStock")
-    // private WebElement stockField;
+    @FindBy(name = "currentStock")
+    private WebElement stockField;
 
     //Finding edit icon button
     @FindBy(name = "editIcon")
@@ -73,10 +73,7 @@ public class WarehouseList {
 
     //Finding the location in the first row in the warehouse list
     @FindBy(xpath = "//table[@name='warehouseTable']//tr[1]/td[1]")
-    private WebElement warehouseFirstRowId;
-
-    //class variable for warehouseId
-    String warehouseId = "";
+    private WebElement warehouseFirstRowLocation;
 
     public WarehouseList(WebDriver driver){
         this.driver = driver;
@@ -150,13 +147,9 @@ public class WarehouseList {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-<<<<<<< HEAD
-        System.out.println("Updated warehouse location: " + warehouseRowLocation.getText());
-=======
         System.out.println("New warehouse location: " + warehouseRowLocation.getText());
 
         // this.driver.close();
->>>>>>> 9e53efadf933e9ee6a5593f050cef8d46f615dff
     }
 
      //TODO: check to see if success message pops up
@@ -169,15 +162,6 @@ public class WarehouseList {
             e.printStackTrace();
         }
         
-<<<<<<< HEAD
-        warehouseId = warehouseFirstRowId.getText();
-        deleteBtn.click();
-    }
-
-    public void confirmDeletion(){
-        try {
-            Thread.sleep(3000);
-=======
         warehouseId = warehouseFirstRowLocation.getText();
         deleteBtn.click();
     }
@@ -185,7 +169,6 @@ public class WarehouseList {
     public void confirmDeletion(){
         try {
             Thread.sleep(2000);
->>>>>>> 9e53efadf933e9ee6a5593f050cef8d46f615dff
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -197,14 +180,7 @@ public class WarehouseList {
                 System.err.println("False");
             }
         }
-<<<<<<< HEAD
-
-
-    }
-    //=====================DELETE======================//
-=======
             // this.driver.close();
->>>>>>> 9e53efadf933e9ee6a5593f050cef8d46f615dff
 
 
     }
@@ -238,43 +214,6 @@ public class WarehouseList {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-<<<<<<< HEAD
-    
-        public void addCapacity(String capacity) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            capacityField.sendKeys(capacity);
-        }
-        
-        // public void setCurrentStock(String currentStock) {
-        //     try {
-        //         Thread.sleep(1000);
-        //     } catch (InterruptedException e) {
-        //         e.printStackTrace();
-        //     }
-        //     stockField.sendKeys(currentStock);
-        // }
-    
-        public void clickAddWarehouseButton() {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            addWarehouseButton.click();
-        }
-    
-        public void getWarehouseLocation() {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println(warehouseRowLocation.getText());
-=======
         addWarehouseButton.click();
     }
 
@@ -283,7 +222,6 @@ public class WarehouseList {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
->>>>>>> 0637a16ae393dea391dd06d24a43e18d23233f4c
         }
         System.out.println(warehouseRowLocation.getText());
         // this.driver.close();
