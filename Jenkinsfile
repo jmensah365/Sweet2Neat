@@ -31,7 +31,7 @@ pipeline {
         }
         stage('Test Backend'){
             steps{
-                sh "cd project-one && mvn clean test"
+                sh "cd Testing && mvn clean test"
             }
         }
         stage('Deploy Backend'){
