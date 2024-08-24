@@ -9,8 +9,8 @@ import EditIcon from '@mui/icons-material/Edit'
 import DeleteIcon from '@mui/icons-material/Delete'
 
 const Orders = () => {
-    const url = "http://localhost:8080/orders";
-    //const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/orders";
+    // const url = "http://localhost:8080/orders";
+    const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/orders";
     const [order, setOrder] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(null);

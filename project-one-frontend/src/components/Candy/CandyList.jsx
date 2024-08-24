@@ -12,9 +12,8 @@ import {
     import EditIcon from '@mui/icons-material/Edit';
     import DeleteIcon from '@mui/icons-material/Delete';
 const CandyList = () => {
-    //const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/candy";
-    const url = "http://localhost:8080/candy";
-    // const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/candy";
+    // const url = "http://localhost:8080/candy";
+    const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/candy";
     const [candy, setCandy] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(null);
