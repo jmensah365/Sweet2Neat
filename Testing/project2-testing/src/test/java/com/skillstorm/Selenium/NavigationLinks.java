@@ -12,8 +12,8 @@ public class NavigationLinks {
     
     private WebDriver driver;
     
-    private static final String homeUrl = "http://localhost:5173/";
-    private static final String orderUrl = "http://localhost:5173/orders";
+    private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
+    private static final String orderUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/orders";
 
     @FindBy(name = "logo")
     private WebElement logo;

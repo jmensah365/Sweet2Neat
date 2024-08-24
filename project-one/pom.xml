@@ -57,6 +57,12 @@
 			<artifactId>reportng</artifactId>
 			<version>1.2.2</version>
 		</dependency>
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>42.7.3</version>
+</dependency>
+
 	</dependencies>
 
 	<build>
@@ -98,7 +104,7 @@
 		</plugins>
 	</build>
 
-	<profiles>
+	<!-- <profiles>
 		<profile>
 			<id>dev</id>
 				<properties>
@@ -107,6 +113,6 @@
 					<db.password>${env.DB_PWD}</db.password>
 				</properties>
 		</profile>
-	</profiles>
+	</profiles> -->
 
 </project>
