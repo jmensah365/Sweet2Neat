@@ -8,10 +8,10 @@ import {
 import EditIcon from '@mui/icons-material/Edit'
 import DeleteIcon from '@mui/icons-material/Delete'
 
-
 const WarehouseList = () => {
-    const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/warehouse";
-    // const url = 'http://localhost:8080/warehouse';
+    // defines whether local or remote host
+    const apiUrl = import.meta.env.VITE_API_URL;
+    const url = `${apiUrl}/warehouse`;
     
     //hook to keep track of warehouses
     const [warehouses, setWarehouses] = useState([]);
