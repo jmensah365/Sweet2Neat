@@ -24,8 +24,8 @@ import jakarta.validation.Valid;
 
 
 //Linking frontend and backend using CORS
-//@CrossOrigin(origins = "http://cim-frontend.s3-website-us-east-1.amazonaws.com")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://cim-frontend.s3-website-us-east-1.amazonaws.com")
+//@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/stock")
 public class StockController {
