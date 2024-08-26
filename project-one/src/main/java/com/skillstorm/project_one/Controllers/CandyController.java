@@ -37,7 +37,7 @@ public class CandyController {
 
     // Endpoint to retrieve all candies
     @GetMapping
-    public Iterable<Candy> getAllCandy() {
+    public List<Candy> getAllCandy() {
         return service.findAll();
     }
 
