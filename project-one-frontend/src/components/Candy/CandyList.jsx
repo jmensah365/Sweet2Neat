@@ -12,9 +12,9 @@ import {
     import EditIcon from '@mui/icons-material/Edit';
     import DeleteIcon from '@mui/icons-material/Delete';
 const CandyList = () => {
-    //const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/candy";
-    const url = "http://localhost:8080/candy";
-    // const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/candy";
+
+    const apiUrl = import.meta.env.VITE_API_URL;
+    const url = `${apiUrl}/candy`;
     const [candy, setCandy] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(null);
@@ -177,8 +177,10 @@ const CandyList = () => {
                     margin='normal'
                     className='textField'
                 /> */}
-                <FormControl fullWidth sx={{ backgroundColor: 'white'}}>
-                    <InputLabel id="selectCandyType" >Candy Type</InputLabel>
+
+                {/* Using the set of candy types to create a drop down to limit user error */}
+                <FormControl fullWidth sx={{ backgroundColor: '#e6e6fa', marginTop: 1}}>
+                    <InputLabel id="selectCandyType" >Candy Type*</InputLabel>
                     <Select 
                         labelId="selectCandyType"
                         id="candyTypeSelect"
@@ -186,6 +188,9 @@ const CandyList = () => {
                         name="type"
                         required
                         onChange={handleInputChange}
+                        sx={{
+                            textAlign:'left'
+                        }}
                     >
                         <MenuItem value={"Gummy Candy"}>Gummy Candy</MenuItem>
                         <MenuItem value={"Chocolate Candy"}>Chocolate Candy</MenuItem>

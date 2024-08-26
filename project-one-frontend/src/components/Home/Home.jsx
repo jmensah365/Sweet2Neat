@@ -4,14 +4,10 @@ import {Container} from '@mui/material';
 import logoHome from '../../assets/CandyPics/CandyLogos/logo-no-background (1).png';
 import { useNavigate } from "react-router-dom";
 
-
-
-
-
 const Home = () => {
-    //const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/warehouse";
-    const url = "http://localhost:8080/warehouse";
-    // const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/warehouse";
+
+    const apiUrl = import.meta.env.VITE_API_URL;
+    const url = `${apiUrl}/warehouse`;
     const navigate = useNavigate();
     const [warehouses, setWarehouses] = useState([]);
     const [error, setError] = useState(null);

@@ -4,18 +4,18 @@ import { useState, useEffect } from "react";
 import {
     Table, TableBody, TableCell, TableContainer,
     TableHead, TableRow, Paper, CircularProgress, Typography, Box,
-    TextField, Alert, Button, IconButton, Snackbar, AlertTitle
+    TextField, Alert, Button, IconButton, Snackbar, AlertTitle,
+    FormControl, InputLabel, Select, MenuItem
 } from '@mui/material';
 import Edit from '@mui/icons-material/Edit';
 import Delete from '@mui/icons-material/Delete';
 
 const OrderInfo = () => {
-    const orderItemUrl = "http://localhost:8080/orderItem";
-    const orderUrl = "http://localhost:8080/orders";
-    const candyUrl = 'http://localhost:8080/candy';
-    // const orderItemUrl = "http://sweet2neat.us-east-1.elasticbeanstalk.com/orderItem";
-    // const orderUrl = "http://sweet2neat.us-east-1.elasticbeanstalk.com/orders";
-    // const candyUrl = 'http://sweet2neat.us-east-1.elasticbeanstalk.com/candy';
+    
+    const apiUrl = import.meta.env.VITE_API_URL;
+    const orderItemUrl = `${apiUrl}/orderItem`;
+    const orderUrl = `${apiUrl}/orders`;
+    const candyUrl = `${apiUrl}/candy`;
     const [orderItem, setOrderItem] = useState([]);
     const [order, setOrder] = useState([]);
     const [candy, setCandy] = useState([]);
@@ -28,6 +28,9 @@ const OrderInfo = () => {
         price: '',
         quantity: '',
     });
+    
+    const [orderInfo, setOrderInfo] = useState([]);
+    const [candyIds, setCandyIds] = useState([]);
 
     const [editingOrderItem, setEditingOrderItem] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
@@ -39,19 +42,36 @@ const OrderInfo = () => {
             .then(returnedData => {
                 setOrderItem(returnedData);
                 setLoaded(true);
+
             })
             .catch(err => setError(err));
         
         fetch(orderUrl)
             .then(response => response.json())
-            .then(orderData => setOrder(orderData))
+            .then(orderData => {
+                setOrder(orderData);
+                const orderArr = orderData.map(order => ({
+                    id: order.id,
+                    name: order.customerName,
+                }));
+                setOrderInfo(orderArr);
+            })
             .catch(err => setError(err));
 
         fetch(candyUrl)
             .then(response => response.json())
-            .then(candyData => setCandy(candyData))
+            .then(candyData => {
+                setCandy(candyData);
+                const candyArr = candyData.map(candy => ({
+                    id: candy.candyId,
+                    name: candy.name
+                }));
+                setCandyIds(candyArr);
+        })
             .catch(err => setError(err));
     }, []);
+
+    console.log(candyIds)
 
     //handle input changes for both new order item and editing order item
     const handleInputChange = (e) => {
@@ -131,7 +151,7 @@ const OrderInfo = () => {
     return(
         <>
             <Box name='orderInfoBox' component='form' onSubmit={handleSubmit} sx={{ mb: 2, mt: 8, padding: 2, borderRadius: 1, boxShadow: 10 }}>
-                <TextField
+                {/* <TextField
                     label='Order Id'
                     name='orderId'
                     value={editingOrderItem ? editingOrderItem.orderId : newOrderItem.orderId}
@@ -140,8 +160,26 @@ const OrderInfo = () => {
                     fullWidth
                     margin='normal'
                     className='textField'
-                />
-                <TextField
+                /> */}
+                <FormControl fullWidth sx={{ backgroundColor: '#e6e6fa'}}>
+                    <InputLabel id="selectOrderId" >Order Id*</InputLabel>
+                    <Select 
+                        labelId="selectOrderId"
+                        id="orderIdSelect"
+                        value={editingOrderItem ? editingOrderItem.orderId : newOrderItem.orderId}
+                        name="orderId"
+                        required
+                        onChange={handleInputChange}
+                        sx={{
+                            textAlign:'left'
+                        }}
+                    >
+                        {orderInfo.map(order => (
+                            <MenuItem key={order.id} value={order.id}>{order.name}</MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
+                {/* <TextField
                     label='Candy Id'
                     name='candyId'
                     value={editingOrderItem ? editingOrderItem.candyId : newOrderItem.candyId}
@@ -150,7 +188,25 @@ const OrderInfo = () => {
                     fullWidth
                     margin='normal'
                     className='textField'
-                />
+                /> */}
+                <FormControl fullWidth sx={{ backgroundColor: '#e6e6fa', marginTop:3, marginBottom:1}}>
+                    <InputLabel id="selectCandyId" >Candy Id*</InputLabel>
+                    <Select 
+                        labelId="selectCandyId"
+                        id="candySelect"
+                        value={editingOrderItem ? editingOrderItem.candyId : newOrderItem.candyId}
+                        name="candyId"
+                        required
+                        onChange={handleInputChange}
+                        sx={{
+                            textAlign:'left'
+                        }}
+                    >
+                        {candyIds.map(candy => (
+                            <MenuItem key={candy.id} value={candy.id}>{candy.name}</MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
                 <TextField
                     label='Price'
                     name='price'
