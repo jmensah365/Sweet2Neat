@@ -4,17 +4,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.math.BigDecimal;
 
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import com.skillstorm.project_one.Models.OrderItem;
 
 public class OrderItemUnitTests {
     private OrderItem orderItem;
 
-    @BeforeMethod
-    public void init(){
+    @BeforeEach
+    public void init() {
         orderItem = new OrderItem();
         orderItem.setId(20);
         orderItem.setPrice(BigDecimal.valueOf(2.99));
@@ -22,14 +21,14 @@ public class OrderItemUnitTests {
     }
 
     @Test
-    public void testGetters(){
+    public void testGetters() {
         assertEquals(20, orderItem.getId());
         assertEquals(BigDecimal.valueOf(2.99), orderItem.getPrice());
         assertEquals(35, orderItem.getQuantity());
     }
 
     @Test
-    public void testSetters(){
+    public void testSetters() {
         orderItem.setId(25);
         orderItem.setPrice(BigDecimal.valueOf(15.99));
         orderItem.setQuantity(40);

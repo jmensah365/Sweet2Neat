@@ -4,8 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.math.BigDecimal;
 
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import com.skillstorm.project_one.Models.Candy;
 
@@ -13,7 +13,7 @@ public class CandyUnitTests {
 
     private Candy candy;
     
-    @Test
+    @BeforeEach
     void init() {
         candy = new Candy();
         candy.setId(40);
@@ -51,7 +51,7 @@ public class CandyUnitTests {
 
     @Test
     void testToString() {
-        String expectedString = "Candy [id=40, name=Gummy Bear, type=Gummy, flavor=Strawberry, price=1.99, weight=0.2]";
+        String expectedString = "Candy [id=40, name=Laffy Taffy, type=Taffy Candy, flavor=Grape, price=2.99, weight=0.5]";
         assertEquals(expectedString, candy.toString());
     }
 

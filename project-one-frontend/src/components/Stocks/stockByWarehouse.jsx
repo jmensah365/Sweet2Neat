@@ -3,7 +3,8 @@ import '../../components/Forms.css'
 import {
     Table, TableBody, TableCell, TableContainer,
     TableHead, TableRow, Paper, Typography, Box,
-    TextField, Button, IconButton, Snackbar, Alert
+    TextField, Button, IconButton, Snackbar, Alert,
+    FormControl, InputLabel, Select, MenuItem,
 } from '@mui/material';
 import Edit from '@mui/icons-material/Edit';
 import Delete from '@mui/icons-material/Delete';
@@ -11,12 +12,10 @@ import Delete from '@mui/icons-material/Delete';
 
 const WarehouseStocks = () => {
 
-    // const stockUrl = 'http://localhost:8080/stock';
-    // const warehouseUrl = 'http://localhost:8080/warehouse';
-    // const candyUrl = 'http://localhost:8080/candy';
-    const stockUrl = 'http://sweet2neat.us-east-1.elasticbeanstalk.com/stock';
-    const warehouseUrl = 'http://sweet2neat.us-east-1.elasticbeanstalk.com/warehouse';
-    const candyUrl = 'http://sweet2neat.us-east-1.elasticbeanstalk.com/candy';
+    const apiUrl = import.meta.env.VITE_API_URL;
+    const stockUrl = `${apiUrl}/stock`;
+    const warehouseUrl = `${apiUrl}/warehouse`;
+    const candyUrl = `${apiUrl}/candy`;
     
     //hooks that will hold our retrieved data
     const [stocks, setStocks] = useState([]);
@@ -27,6 +26,9 @@ const WarehouseStocks = () => {
         warehouseId: '',
         quantity: '',
     });
+
+    const [candyIds, setCandyIds] = useState([]);
+    const [warehouseIds, setWarehouseIds] = useState([]);
     
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(null);
@@ -48,13 +50,31 @@ const WarehouseStocks = () => {
         // Fetch warehouses
         fetch(warehouseUrl)
             .then(response => response.json())
-            .then(warehouseData => setWarehouses(warehouseData))
+            .then(warehouseData => {
+                setWarehouses(warehouseData);
+
+                // grab all warehouse ids and their locations and stores it into warehouseIds
+                const warehouseArr = warehouseData.map(warehouse => ({
+                    id: warehouse.id,
+                    location: warehouse.location
+                }));
+                setWarehouseIds(warehouseArr);
+        })
             .catch(err => setError(err));
 
         // Fetch candies
         fetch(candyUrl)
             .then(response => response.json())
-            .then(candyData => setCandies(candyData))
+            .then(candyData => {
+                setCandies(candyData);
+
+                // grab all available candy ids and their names and stores it into candyIds
+                const candyArr = candyData.map(candy => ({
+                    id: candy.candyId,
+                    name: candy.name
+                }));
+                setCandyIds(candyArr);
+        })
             .catch(err => setError(err));
     }, []);
 
@@ -143,7 +163,7 @@ const WarehouseStocks = () => {
     return (
         <>
         <Box name='warehouseStockBox' component='form' onSubmit={handleSubmit} sx={{ mb: 2, mt: 8, padding: 2, borderRadius: 1, boxShadow: 10 }}>
-            <TextField
+            {/* <TextField
                 label='Candy Id'
                 name='candyId'
                 value={editingStock ? editingStock.candyId : newStock.candyId}
@@ -152,8 +172,27 @@ const WarehouseStocks = () => {
                 fullWidth
                 margin='normal'
                 className='textField'
-            />
-            <TextField
+            /> */}
+
+            <FormControl fullWidth sx={{ backgroundColor: '#e6e6fa'}}>
+                <InputLabel id="selectCandyId" >Candy Name*</InputLabel>
+                <Select 
+                    labelId="selectCandyId"
+                    id="candyIdSelect"
+                    value={editingStock ? editingStock.candyId : newStock.candyId}
+                    name="candyId"
+                    required
+                    onChange={handleInputChange}
+                    sx={{
+                        textAlign:'left'
+                    }}
+                >
+                    {candyIds.map(candy => (
+                        <MenuItem key={candy.id} value={candy.id}>{candy.name}</MenuItem>
+                    ))}
+                </Select>
+            </FormControl>
+            {/* <TextField
                 label='Warehouse Id'
                 name='warehouseId'
                 value={editingStock ? editingStock.warehouseId : newStock.warehouseId}
@@ -162,7 +201,25 @@ const WarehouseStocks = () => {
                 fullWidth
                 margin='normal'
                 className='textField'
-            />
+            /> */}
+            <FormControl fullWidth sx={{ backgroundColor: '#e6e6fa', marginTop:2 }}>
+                <InputLabel id="selectWarehouseId" >Warehouse Location*</InputLabel>
+                <Select 
+                    labelId="selectWarehouseId"
+                    id="warehouseIdSelect"
+                    value={editingStock ? editingStock.warehouseId : newStock.warehouseId}
+                    name="warehouseId"
+                    required
+                    onChange={handleInputChange}
+                    sx={{
+                        textAlign:'left'
+                    }}
+                >
+                    {warehouseIds.map(warehouse => (
+                        <MenuItem key={warehouse.id} value={warehouse.id}>{warehouse.location}</MenuItem>
+                    ))}
+                </Select>
+            </FormControl>
             <TextField
                 label='Quantity'
                 name='quantity'

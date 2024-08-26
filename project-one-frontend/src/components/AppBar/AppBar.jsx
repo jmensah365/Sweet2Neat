@@ -12,8 +12,8 @@ const AppBarComponent = () => {
     const [warehouseMenuAnchorEl, setWarehouseMenuAnchorEl] = useState(null);
     const [ordersMenuAnchorEl, setOrdersMenuAnchorEl] = useState(null);
     const navigate = useNavigate();
-    // const url = "http://localhost:8080/warehouse";
-    const url = "http://sweet2neat.us-east-1.elasticbeanstalk.com/warehouse";
+    const apiUrl = import.meta.env.VITE_API_URL;
+    const url = `${apiUrl}/warehouse`;
     const [warehouses, setWarehouses] = useState([]);
     const [error, setError] = useState(null);
     const [loaded, setLoaded] = useState(false);

@@ -12,10 +12,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class WarehouseList {
     private WebDriver driver;
-    private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/warehouses";
-    private static final String homeURL = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
-
-    String warehouseId = "";
+    private static final String url = "http://localhost:5173/warehouses";
+    private static final String homeUrl = "http://localhost:5173/";
 
     /*
      * Finding location, capacity, and stock web elements on the page
@@ -57,9 +55,6 @@ public class WarehouseList {
     @FindBy(name = "warehouseTable")
     private WebElement warehouseTable;
 
-    @FindBy(className = "MuiTableBody-root")
-    private WebElement warehouseTableBody;
-
     //Find the warehouses list option in menu
     @FindBy(name = "warehousesRoute")
     private WebElement warehouseListOption;
@@ -72,21 +67,17 @@ public class WarehouseList {
     @FindBy(xpath = "//table[@name='warehouseTable']//tr[1]/td[1]")
     private WebElement warehouseFirstRowLocation;
 
+    String warehouseId = "";
+
     public WarehouseList(WebDriver driver){
         this.driver = driver;
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         PageFactory.initElements(driver, this);
     }
 
-    public void close() {
-        if(driver != null) {
-            this.driver.close();
-        }
-    }
-
     public void getUrl() {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -96,7 +87,7 @@ public class WarehouseList {
     //=====================UPDATE======================//
     public void clickEditButton() {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -105,7 +96,7 @@ public class WarehouseList {
 
     public void setLocation(String location){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -118,7 +109,7 @@ public class WarehouseList {
 
     public void setCapacity(String capacity){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -131,7 +122,7 @@ public class WarehouseList {
 
     public void clickUpdateWarehouse(){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -140,7 +131,7 @@ public class WarehouseList {
 
     public void confirmWarehouseUpdation(){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -150,6 +141,7 @@ public class WarehouseList {
     }
 
      //TODO: check to see if success message pops up
+    //=====================UPDATE======================//
 
     //=====================DELETE======================//
     public void clickDeleteIcon(){
@@ -182,57 +174,67 @@ public class WarehouseList {
 
     }
 
-    //======================= CREATE =========================
-    public String checkPageTitle() {
-        return warehouseListTitle.getText();
-    }
+    //=====================DELETE======================//
 
-    public void addLocation(String location) {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        //======================= CREATE =========================
+        public String checkPageTitle() {
+            return warehouseListTitle.getText();
         }
-        locationField.sendKeys(location);
-    }
-
-    public void addCapacity(String capacity) {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        capacityField.sendKeys(capacity);
-    }
     
-    public void clickAddWarehouseButton() {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        public void addLocation(String location) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            locationField.sendKeys(location);
         }
-        addWarehouseButton.click();
-    }
-
-    public void getWarehouseLocation() {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+    
+        public void addCapacity(String capacity) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            capacityField.sendKeys(capacity);
         }
-        System.out.println(warehouseRowLocation.getText());
-        // this.driver.close();
-    }
+        
+        public void setCurrentStock(String currentStock) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            stockField.sendKeys(currentStock);
+        }
+    
+        public void clickAddWarehouseButton() {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            addWarehouseButton.click();
+        }
+    
+        public void getWarehouseLocation() {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(warehouseRowLocation.getText());
+        }
 
     //======================= READ =========================
     public void getHomeURL() {
-        this.driver.get(homeURL);
+        this.driver.get(homeUrl);
     }
 
     public void clickWarehouseListOption() {
         warehousesMenu.click();        
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -240,26 +242,21 @@ public class WarehouseList {
     }
 
     public void getWarehouseTable() {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         warehouseTable.getText();
     }
 
     public void getWarehouseTableContents() {
-        List<WebElement> tableRows = warehouseTableBody.findElements(By.xpath(".//tr"));
-
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        List<WebElement> tableRows = warehouseTable.findElements(By.xpath(".//tr"));
 
         for(WebElement tr : tableRows) {
             System.out.println(tr.getText());
         }
-        // this.driver.close();
     }
+    
+
+
+
+
+
+
 }
