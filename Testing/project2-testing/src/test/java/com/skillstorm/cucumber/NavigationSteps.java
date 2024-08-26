@@ -46,10 +46,10 @@ public class NavigationSteps {
     }
     
     //================= NAV TO WAREHOUSE LIST PAGE ==================//
-    @Given("I am on the home page")
-    public void onTheHomePage() {
-        navigationLinks.getHomePage();
-    }
+    // @Given("I am on the home page")
+    // public void onTheHomePage() {
+    //     navigationLinks.getHomePage();
+    // }
 
     @When("I click on Warehouse List menu option")
     public void clickOnWarehousesMenu() {

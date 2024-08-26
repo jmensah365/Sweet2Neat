@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import com.skillstorm.Selenium.CandyList;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 
@@ -18,6 +19,11 @@ public class CandyStepDefinitions {
         WebDriver driver = new ChromeDriver(options);
 
         this.candyList = new CandyList(driver);
+    }
+    
+    @After("@Candy")
+    public void after() {
+        candyList.close();
     }
 
     @Given("I am on the Candy Inventory page")
