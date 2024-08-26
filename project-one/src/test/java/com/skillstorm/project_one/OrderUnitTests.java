@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.TimeZone;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,6 +21,7 @@ public class OrderUnitTests {
         orders.setId(10);
         orders.setCustomerName("Jeremiah Mensah");
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        TimeZone.setDefault(TimeZone.getTimeZone("EST"));
         try {
             Date date = sdf.parse("2023-01-01");
             orders.setOrderDate(date);
