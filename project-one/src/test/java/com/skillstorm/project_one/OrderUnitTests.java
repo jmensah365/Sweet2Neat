@@ -21,7 +21,7 @@ public class OrderUnitTests {
         orders.setId(10);
         orders.setCustomerName("Jeremiah Mensah");
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        TimeZone.setDefault(TimeZone.getTimeZone("EST"));
+        //TimeZone.setDefault(TimeZone.getTimeZone("EST"));
         try {
             Date date = sdf.parse("2023-01-01");
             orders.setOrderDate(date);
