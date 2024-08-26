@@ -67,6 +67,8 @@ public class WarehouseList {
     @FindBy(xpath = "//table[@name='warehouseTable']//tr[1]/td[1]")
     private WebElement warehouseFirstRowLocation;
 
+    String warehouseId = "";
+
     public WarehouseList(WebDriver driver){
         this.driver = driver;
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
