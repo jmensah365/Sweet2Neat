@@ -75,6 +75,10 @@ public class WarehouseList {
         PageFactory.initElements(driver, this);
     }
 
+    public void close() { // warehouseStepDefintion calls this to close all open browsers when tests finish
+        this.driver.close();
+    }
+
     public void getUrl() {
         try {
             Thread.sleep(1000);
