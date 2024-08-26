@@ -175,7 +175,7 @@ const WarehouseStocks = () => {
             /> */}
 
             <FormControl fullWidth sx={{ backgroundColor: '#e6e6fa'}}>
-                <InputLabel id="selectCandyId" >Candy Id*</InputLabel>
+                <InputLabel id="selectCandyId" >Candy Name*</InputLabel>
                 <Select 
                     labelId="selectCandyId"
                     id="candyIdSelect"
@@ -203,7 +203,7 @@ const WarehouseStocks = () => {
                 className='textField'
             /> */}
             <FormControl fullWidth sx={{ backgroundColor: '#e6e6fa', marginTop:2 }}>
-                <InputLabel id="selectWarehouseId" >Warehouse Id*</InputLabel>
+                <InputLabel id="selectWarehouseId" >Warehouse Location*</InputLabel>
                 <Select 
                     labelId="selectWarehouseId"
                     id="warehouseIdSelect"

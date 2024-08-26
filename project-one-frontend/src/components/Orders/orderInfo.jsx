@@ -162,7 +162,7 @@ const OrderInfo = () => {
                     className='textField'
                 /> */}
                 <FormControl fullWidth sx={{ backgroundColor: '#e6e6fa'}}>
-                    <InputLabel id="selectOrderId" >Order Id*</InputLabel>
+                    <InputLabel id="selectOrderId" >Customer Name*</InputLabel>
                     <Select 
                         labelId="selectOrderId"
                         id="orderIdSelect"
@@ -190,7 +190,7 @@ const OrderInfo = () => {
                     className='textField'
                 /> */}
                 <FormControl fullWidth sx={{ backgroundColor: '#e6e6fa', marginTop:3, marginBottom:1}}>
-                    <InputLabel id="selectCandyId" >Candy Id*</InputLabel>
+                    <InputLabel id="selectCandyId" >Candy Name*</InputLabel>
                     <Select 
                         labelId="selectCandyId"
                         id="candySelect"
