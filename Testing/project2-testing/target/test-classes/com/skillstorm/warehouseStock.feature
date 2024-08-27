@@ -29,14 +29,15 @@ Feature: WarehouseStock CRUD
 
 
 
-#   #-------------------------- Warehouse Stock UPDATE ----------------------------#
-#   Scenario Outline: Successful warehouse stock update with valid information
+  #-------------------------- Warehouse Stock UPDATE ----------------------------#
+  Scenario Outline: Successful warehouse stock update with valid information
 
-#     Given I am on the Warehouse Stock page
-#     When I click the edit icon
-#     Then I select a new "<candy>", "<location>" and input "<quantity>" fields
-#     And I click the Update Stock button
+    Given I am on the Warehouse Stock page
+    When I click the edit icon
+    Then I select a new "<candy>", "<location>" and input "<quantity>" fields
+    And I click the Update Stock button
+    Then I should see the updated warehouse stock
 
-#     Examples:
-#     | candy | location | quantity |
-#     |  Sour Skittles   | 3212 Spur Ln, Austin, Texas | 10000   |
+    Examples:
+    | candy     | location      | quantity |
+    | Ring Pops | Test location | 40000    |
