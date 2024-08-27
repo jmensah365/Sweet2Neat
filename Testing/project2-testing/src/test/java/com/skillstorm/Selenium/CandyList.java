@@ -77,6 +77,10 @@ public class CandyList {
         PageFactory.initElements(driver, this);
     }
 
+    public void close() {
+        this.driver.close();
+    }
+
     public void getCandyPageUrl(){
         try {
             Thread.sleep(3000);

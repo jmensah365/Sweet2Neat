@@ -24,10 +24,10 @@ public class WarehouseStepDefinitions {
         this.warehouseList = new WarehouseList(driver);
     }
 
-    // @After("@Warehouse")
-    // public void tearDown() {
-    //     this.warehouseList.close();
-    // }
+    @After("@Warehouse") // added for closing all browsers down after testing
+    public void tearDown() {
+        this.warehouseList.close();
+    }
 
     @Given("I am on the Warehouse List page")
     public void iAmOnTheWarehouseListPage() {

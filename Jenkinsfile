@@ -26,12 +26,25 @@ pipeline {
         }
         stage('Build Backend'){
             steps{
+                
+                dir('project-one') {
+                    withSonarQubeEnv('SonarCloud') {
+                        sh '''
+                            mvn sonar:sonar \
+                            -Dsonar.projectKey=Candy-Inventory-Group_Sweet2Neat \
+                            -Dsonar.projectName=Sweet2Neat-project-one \
+                            -Dsonar.java.binaries=target/classes \
+                            -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
+                        '''
+                    }
+                }
+                
                 sh "cd project-one && mvn clean install && ls target/"
             }
         }
         stage('Test Backend'){
             steps{
-                sh "cd Testing/project2-testing && mvn clean test"
+                sh "cd project-one && mvn test"
             }
         }
         stage('Deploy Backend'){
