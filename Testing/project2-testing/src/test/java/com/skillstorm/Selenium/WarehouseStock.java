@@ -33,6 +33,9 @@ public class WarehouseStock {
     @FindBy(name = "tableBody")
     private WebElement warehouseStockTBody;
 
+    @FindBy(name = "editIcon")
+    private WebElement editIcon;
+
     public WarehouseStock(WebDriver driver){
         this.driver = driver;
         this.action = new Actions(driver);
@@ -116,6 +119,10 @@ public class WarehouseStock {
             return true;
         }
         return false;
+    }
+
+    public void clickEditIcon() {
+        editIcon.click();
     }
 
 }
