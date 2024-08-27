@@ -1,8 +1,8 @@
 // package com.skillstorm.project_one;
 
-// import org.junit.jupiter.api.BeforeEach;
-// import org.junit.jupiter.api.Test;
-// import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 // import com.skillstorm.project_one.Models.Warehouse;
 
@@ -10,41 +10,41 @@
 
 //     private Warehouse warehouse;
     
-//     @BeforeEach
-//     public void setupWarehouse() {
-//         warehouse = new Warehouse();
-//     }
+    @BeforeMethod
+    public void setupWarehouse() {
+        warehouse = new Warehouse();
+    }
 
-//     @Test
-//     public void testSetIdAndGetId() {
-//         int expected = 1;
-//         warehouse.setId(expected);
-//         int actual = warehouse.getId();
-//         assertEquals(expected, actual);
-//     }
+    @Test
+    public void testSetIdAndGetId() {
+        int expected = 1;
+        warehouse.setId(expected);
+        int actual = warehouse.getId();
+        Assert.assertEquals(actual, expected);
+    }
 
-//     @Test
-//     public void testSetLocationAndGetLocation() {
-//         String expected = "12345 Candy Lane, Candyville, CandyLand 678910";
-//         warehouse.setLocation(expected);
-//         assertEquals(expected, warehouse.getLocation());
-//     }
+    @Test
+    public void testSetLocationAndGetLocation() {
+        String expected = "12345 Candy Lane, Candyville, CandyLand 678910";
+        warehouse.setLocation(expected);
+        Assert.assertEquals(warehouse.getLocation(), expected);
+    }
 
-//     @Test
-//     public void testSetCapacityAndGetCapacity() {
-//         int expected = 10000;
-//         warehouse.setCapacity(expected);
-//         int actual = warehouse.getCapacity();
-//         assertEquals(expected, actual);
-//     }
+    @Test
+    public void testSetCapacityAndGetCapacity() {
+        int expected = 10000;
+        warehouse.setCapacity(expected);
+        int actual = warehouse.getCapacity();
+        Assert.assertEquals(actual, expected);
+    }
 
-//     @Test
-//     public void testSetCurrentStockAndGetCurrentStock() {
-//         int expected = 400;
-//         warehouse.setCurrentStock(expected);
-//         int actual = warehouse.getCurrentStock();
-//         assertEquals(expected, actual);
-//     }
+    @Test
+    public void testSetCurrentStockAndGetCurrentStock() {
+        int expected = 400;
+        warehouse.setCurrentStock(expected);
+        int actual = warehouse.getCurrentStock();
+        Assert.assertEquals(actual, expected);
+    }
 
 //     @Test
 //     public void testWarehouseToString() {
@@ -58,8 +58,8 @@
 //         warehouse.setCapacity(capacity);
 //         warehouse.setCurrentStock(currentStock);
 
-//         String expected = "Warehouse [id=" + id + ", location=" + location + ", capacity=" + capacity + ", currentStock=" + currentStock + "]";
-//         String actual = warehouse.toString();
-//         assertEquals(expected, actual);
-//     }
-// }
+        String expected = "Warehouse [id=" + id + ", location=" + location + ", capacity=" + capacity + ", currentStock=" + currentStock + "]";
+        String actual = warehouse.toString();
+        Assert.assertEquals(actual, expected);
+    }
+}
