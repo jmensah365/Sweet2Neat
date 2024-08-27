@@ -1,5 +1,6 @@
 package com.skillstorm.cucumber;
 
+import org.junit.jupiter.api.Order;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -66,6 +67,29 @@ public class OrdersStepDefinition {
     @Then("The order should not be visible in the order list page")
     public void theOrderShouldNotBeVisibleInTheOrderListPage(){
         ordersList.confirmDeletion();
+    }
+
+    @When("I click the edit button")
+    public void iClickTheEditButton(){
+        ordersList.clickEditButton();
+    }
+
+    @And("I modify {string}, {string}, {string}, and\\/or {string}")
+    public void iModifyInformation(String customerName, String orderDate, String status, String customerAddress){
+        ordersList.setCustomerName(customerName);
+        ordersList.setOrderDate(orderDate);
+        ordersList.setStatus(status);
+        ordersList.setCustomerAddress(customerAddress);
+    }
+
+    @And("I click the update order button")
+    public void iClickTheUpdateOrderButton(){
+        ordersList.clickAddOrderBtn();
+    }
+
+    @Then("I should see the updated order in the list of orders")
+    public void iShouldSeeTheUpdatedOrderInTheListOfOrders(){
+        ordersList.confirmOrderUpdation();
     }
 
     
