@@ -1,9 +1,9 @@
 package com.skillstorm.project_one;
 
-import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import com.skillstorm.project_one.Models.Candy;
 import com.skillstorm.project_one.Models.Stock;
@@ -15,7 +15,7 @@ class StockTest {
     private Candy candy;
     private Warehouse warehouse;
 
-    @BeforeEach
+    @BeforeMethod
     void setUp() {
         stock = new Stock();
         candy = new Candy(); // You need to create instances of Candy and Warehouse
@@ -32,13 +32,13 @@ class StockTest {
         stock.setCandy(candy);
         stock.setWarehouse(warehouse);
 
-        assertEquals(1, stock.getId());
-        assertEquals(10, stock.getQuantity());
-        assertEquals(candy, stock.getCandy());
-        assertEquals(warehouse, stock.getWarehouse());
+        Assert.assertEquals(1, stock.getId());
+        Assert.assertEquals(10, stock.getQuantity());
+        Assert.assertEquals(candy, stock.getCandy());
+        Assert.assertEquals(warehouse, stock.getWarehouse());
 
-        assertEquals(100, stock.getCandyId());
-        assertEquals(200, stock.getWarehouseId());
+        Assert.assertEquals(100, stock.getCandyId());
+        Assert.assertEquals(200, stock.getWarehouseId());
     }
 
     @Test
@@ -49,6 +49,6 @@ class StockTest {
         stock.setWarehouse(warehouse);
 
         String expectedString = "Stock [id=1, warehouse=" + warehouse + ", candy=" + candy + ", quantity=10]";
-        assertEquals(expectedString, stock.toString());
+        Assert.assertEquals(expectedString, stock.toString());
     }
 }

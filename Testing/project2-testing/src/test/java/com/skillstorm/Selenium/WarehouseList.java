@@ -12,8 +12,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class WarehouseList {
     private WebDriver driver;
-    private static final String url = "http://localhost:5173/warehouses";
-    private static final String homeUrl = "http://localhost:5173/";
+    private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/warehouses";
+    private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
 
     /*
      * Finding location, capacity, and stock web elements on the page
@@ -257,10 +257,4 @@ public class WarehouseList {
         }
     }
     
-
-
-
-
-
-
 }

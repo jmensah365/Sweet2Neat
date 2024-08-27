@@ -71,8 +71,6 @@ const OrderInfo = () => {
             .catch(err => setError(err));
     }, []);
 
-    console.log(candyIds)
-
     //handle input changes for both new order item and editing order item
     const handleInputChange = (e) => {
         const {name, value} = e.target;

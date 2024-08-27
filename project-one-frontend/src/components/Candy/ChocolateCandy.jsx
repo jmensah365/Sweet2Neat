@@ -32,7 +32,7 @@ const ChocolateCandy = () => {
     return (
         <>
             <Typography variant='h3' gutterBottom>
-                Choclate Bars
+                Choclate Candy
             </Typography>
             <TableContainer component={Paper}>
                 <Table>

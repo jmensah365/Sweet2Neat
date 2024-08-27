@@ -1,16 +1,15 @@
 package com.skillstorm.project_one;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.testng.Assert;
+import org.testng.annotations.*;
 
 import com.skillstorm.project_one.DTOs.StockDTO;
 
 public class StockDTOUnitTests {
     private StockDTO stockDTO;
 
-    @BeforeEach
+    @BeforeMethod
     public void init(){
         stockDTO = new StockDTO();
     }
@@ -22,19 +21,19 @@ public class StockDTOUnitTests {
         stockDTO.setWarehouseId(3);
         stockDTO.setQuantity(30);
 
-        assertEquals(1, stockDTO.getId());
-        assertEquals(2, stockDTO.getCandyId());
-        assertEquals(3, stockDTO.getWarehouseId());
-        assertEquals(30, stockDTO.getQuantity());
+        Assert.assertEquals(1, stockDTO.getId());
+        Assert.assertEquals(2, stockDTO.getCandyId());
+        Assert.assertEquals(3, stockDTO.getWarehouseId());
+        Assert.assertEquals(30, stockDTO.getQuantity());
     }
 
     @Test
     public void testConstructor(){
         StockDTO dto = new StockDTO(5,10,15,50);
-        assertEquals(5, dto.getId());
-        assertEquals(10, dto.getCandyId());
-        assertEquals(15, dto.getWarehouseId());
-        assertEquals(50, dto.getQuantity());
+        Assert.assertEquals(5, dto.getId());
+        Assert.assertEquals(10, dto.getCandyId());
+        Assert.assertEquals(15, dto.getWarehouseId());
+        Assert.assertEquals(50, dto.getQuantity());
     }
 
     @Test
@@ -44,6 +43,6 @@ public class StockDTOUnitTests {
         stockDTO.setWarehouseId(6);
         stockDTO.setQuantity(100);
         String expectedString = "StockDTO [id=2, candyId=4, warehouseId=6, quantity=100]";
-        assertEquals(expectedString, stockDTO.toString());
+        Assert.assertEquals(expectedString, stockDTO.toString());
     }
 }

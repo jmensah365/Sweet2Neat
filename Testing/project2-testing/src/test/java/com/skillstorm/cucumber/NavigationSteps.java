@@ -138,4 +138,20 @@ public class NavigationSteps {
     public void clickOnAddAWarehouseMenuButton() {
         navigationLinks.clickOnAddAWarehouseButton();
     }
+
+    //================= NAV USING ADD A WAREHOUSE BUTTON ==================//
+    @Given("I am on the Candy Categories page")
+    public void iAmOnCandyCategoriesPage() {
+        this.navigationLinks.candyCategoriesPage();
+    }
+
+    @When("I click on the desired {string}")
+    public void clickOnTheDesiredCandyType(String candyType) {
+        this.navigationLinks.selectCandyType(candyType);
+    }
+    
+    @Then("I should see the desired {string} page")
+    public void shouldSeeTheDesiredCandyType(String candyType) {
+        System.out.println(this.navigationLinks.checkCandyHeader(candyType));
+    }
 }
