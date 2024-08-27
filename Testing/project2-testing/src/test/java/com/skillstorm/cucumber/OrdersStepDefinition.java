@@ -25,13 +25,13 @@ public class OrdersStepDefinition {
         ordersList.getOrderListPageUrl();
     }
 
-    // @When("I fill in {string}, {string}, {string}, and {string}")
-    // public void iFillIn(String customerName, String orderDate, String status, String customerAddress){
-    //     ordersList.getCustomerName(customerName);
-    //     ordersList.getOrderDate(orderDate);
-    //     ordersList.getStatus(status);
-    //     ordersList.getCustomerAddress(customerAddress);
-    // }
+    @When("I fill in {string}, {string}, {string}, and {string}")
+    public void iFillIn(String customerName, String orderDate, String status, String customerAddress){
+        ordersList.getCustomerName(customerName);
+        ordersList.getOrderDate(orderDate);
+        ordersList.getStatus(status);
+        ordersList.getCustomerAddress(customerAddress);
+    }
 
     @And("I click the Add order button")
     public void iClickTheAddOrderButton(){

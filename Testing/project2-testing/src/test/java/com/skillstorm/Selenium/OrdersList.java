@@ -22,8 +22,8 @@ public class OrdersList {
     @FindBy(name = "customerName")
     private WebElement customerNameField;
 
-    // @FindBy(aria)
-    // private WebElement orderDateField;
+    @FindBy(name = "orderDatePicker")
+    private WebElement orderDateField;
 
     @FindBy(name = "status")
     private WebElement statusField;
@@ -86,23 +86,15 @@ public class OrdersList {
             // Wait for the date picker to be ready
             Thread.sleep(2000);
 
-            // Locate the date picker input field by its ID, CSS Selector, etc.
-            WebElement dateInput = driver.findElement(By.cssSelector("input[id=':rb:']"));
+            orderDateField.click();
 
-            // Click the input field to open the date picker (if necessary)
-            dateInput.click();
-
-            // Clear any existing date in the input field
-            dateInput.clear();
-
-            // Enter the desired date in the expected format
-            dateInput.sendKeys(orderDate);
-
-            // Optionally, press Enter if required to confirm the date selection
-            dateInput.sendKeys(Keys.RETURN);
+            Thread.sleep(2000);
+            
+            orderDateField.sendKeys(orderDate);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
 
 
     }

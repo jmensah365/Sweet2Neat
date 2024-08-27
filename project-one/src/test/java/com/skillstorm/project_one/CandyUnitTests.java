@@ -4,8 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.math.BigDecimal;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+//import org.junit.jupiter.api.BeforeEach;
+import org.testng.annotations.*;
 
 import com.skillstorm.project_one.Models.Candy;
 
@@ -13,7 +13,7 @@ public class CandyUnitTests {
 
     private Candy candy;
     
-    @BeforeEach
+    @BeforeTest
     void init() {
         candy = new Candy();
         candy.setId(40);
@@ -37,13 +37,13 @@ public class CandyUnitTests {
     @Test
     void testSetters() {
         candy.setName("Gummy Bear");
-        candy.setType("Gummy");
+        candy.setType("Gummy Candy");
         candy.setFlavor("Strawberry");
         candy.setPrice(BigDecimal.valueOf(1.99));
         candy.setWeight(BigDecimal.valueOf(0.2));
 
         assertEquals("Gummy Bear", candy.getName());
-        assertEquals("Gummy", candy.getType());
+        assertEquals("Gummy Candy", candy.getType());
         assertEquals("Strawberry", candy.getFlavor());
         assertEquals(BigDecimal.valueOf(1.99), candy.getPrice());
         assertEquals(BigDecimal.valueOf(0.2), candy.getWeight());
@@ -51,7 +51,7 @@ public class CandyUnitTests {
 
     @Test
     void testToString() {
-        String expectedString = "Candy [id=40, name=Laffy Taffy, type=Taffy Candy, flavor=Grape, price=2.99, weight=0.5]";
+        String expectedString = "Candy [id=40, name=Gummy Bear, type=Gummy Candy, flavor=Strawberry, price=1.99, weight=0.2]";
         assertEquals(expectedString, candy.toString());
     }
 

@@ -1,4 +1,4 @@
-// package com.skillstorm.project_one;
+package com.skillstorm.project_one;
 
 // import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -11,25 +11,25 @@
 
 // import com.skillstorm.project_one.Models.Orders;
 
-// public class OrderUnitTests {
+public class OrderUnitTests {
 //     private Orders orders;
 
-    @BeforeEach
-    public void init() {
-        orders = new Orders();
-        orders.setId(10);
-        orders.setCustomerName("Jeremiah Mensah");
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        //TimeZone.setDefault(TimeZone.getTimeZone("EST"));
-        try {
-            Date date = sdf.parse("2023-01-01");
-            orders.setOrderDate(date);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        orders.setStatus("pending");
-        orders.setCustomerAddress("Apt. 404 609 Cruz Walks, Port Meghanmouth, CO 64357-4203");
-    }
+    // @BeforeEach
+    // public void init() {
+    //     orders = new Orders();
+    //     orders.setId(10);
+    //     orders.setCustomerName("Jeremiah Mensah");
+    //     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    //     //TimeZone.setDefault(TimeZone.getTimeZone("EST"));
+    //     try {
+    //         Date date = sdf.parse("2023-01-01");
+    //         orders.setOrderDate(date);
+    //     } catch (ParseException e) {
+    //         e.printStackTrace();
+    //     }
+    //     orders.setStatus("pending");
+    //     orders.setCustomerAddress("Apt. 404 609 Cruz Walks, Port Meghanmouth, CO 64357-4203");
+    // }
 
 //     @Test
 //     public void testGetters() {
