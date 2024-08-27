@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StockController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project-one</a> &gt; <a href="index.source.html" class="el_package">com.skillstorm.project_one.Controllers</a> &gt; <span class="el_source">StockController.java</span></div><h1>StockController.java</h1><pre class="source lang-java linenums">package com.skillstorm.project_one.Controllers;
+
+
+import java.util.List;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.skillstorm.project_one.DTOs.StockDTO;
+import com.skillstorm.project_one.Models.Stock;
+import com.skillstorm.project_one.Services.StockService;
+
+import jakarta.validation.Valid;
+
+
+//Linking frontend and backend using CORS
+// @CrossOrigin(origins = &quot;http://cim-frontend.s3-website-us-east-1.amazonaws.com&quot;)
+@CrossOrigin(origins = &quot;http://localhost:5173&quot;)
+@RestController
+@RequestMapping(&quot;/stock&quot;)
+public class StockController {
+
+    //Injecting StockService dependency
+    private StockService service;
+<span class="nc" id="L35">    public StockController(StockService service){</span>
+<span class="nc" id="L36">        this.service = service;</span>
+<span class="nc" id="L37">    }</span>
+    
+
+
+    @GetMapping
+    public ResponseEntity&lt;List&lt;StockDTO&gt;&gt; findAllStocks(){
+<span class="nc" id="L43">        List&lt;StockDTO&gt; stocks = service.getAllStocksDTO();</span>
+<span class="nc" id="L44">        return new ResponseEntity&lt;&gt;(stocks, HttpStatus.OK);</span>
+    }
+
+    @GetMapping(&quot;/warehouse/{warehouseId}&quot;)
+    public ResponseEntity&lt;List&lt;StockDTO&gt;&gt; getStocksByWarehouse(@PathVariable int warehouseId) {
+<span class="nc" id="L49">        List&lt;StockDTO&gt; stocks = service.getStocksByWarehouse(warehouseId);</span>
+<span class="nc" id="L50">        return new ResponseEntity&lt;&gt;(stocks, HttpStatus.OK);</span>
+    }
+
+
+
+    // Endpoint to add a new stock item
+    @PostMapping
+    @ResponseStatus(code = HttpStatus.CREATED)
+    public ResponseEntity&lt;Stock&gt; createStock(@Valid @RequestBody StockDTO stockDTO) {
+        
+<span class="nc" id="L60">        Stock stock = service.createStock(stockDTO);</span>
+<span class="nc" id="L61">        return new ResponseEntity&lt;&gt;(stock, HttpStatus.OK);</span>
+    }
+
+
+
+    // Endpoint to update an existing stock item
+    @PutMapping(&quot;/{id}&quot;)
+    public ResponseEntity&lt;Void&gt; updateStock(@PathVariable Integer id, @RequestBody StockDTO stockDto) {
+<span class="nc" id="L69">        service.updateStock(id, stockDto);</span>
+<span class="nc" id="L70">        return new ResponseEntity&lt;&gt;(HttpStatus.OK);</span>
+    }
+
+
+    
+    // Endpoint to delete a stock item by its ID
+    @DeleteMapping(&quot;/{id}&quot;)
+    public ResponseEntity&lt;Void&gt; deleteStock(@PathVariable Integer id) {
+<span class="nc" id="L78">        service.deleteStock(id);</span>
+<span class="nc" id="L79">        return new ResponseEntity&lt;&gt;(HttpStatus.NO_CONTENT);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
