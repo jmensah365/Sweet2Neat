@@ -26,7 +26,6 @@ pipeline {
         }
         stage('Build Backend'){
             steps{
-                sh "cd project-one && mvn clean install && ls target/"
                 
                 dir('project-one') {
                     withSonarQubeEnv('SonarCloud') {
@@ -39,11 +38,13 @@ pipeline {
                         '''
                     }
                 }
+                
+                sh "cd project-one && mvn clean install && ls target/"
             }
         }
         stage('Test Backend'){
             steps{
-                sh "cd project-one && mvn clean test"
+                sh "cd project-one && mvn test"
             }
         }
         stage('Deploy Backend'){
