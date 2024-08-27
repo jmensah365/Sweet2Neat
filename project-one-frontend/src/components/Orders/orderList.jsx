@@ -187,6 +187,9 @@ const Orders = () => {
                                     name: "orderDatePicker",
                                 },
                             },
+                            openDatePicker: {
+                                name: "orderDatePickerBtn",
+                            },
                         }}
                     />
                 </LocalizationProvider>
