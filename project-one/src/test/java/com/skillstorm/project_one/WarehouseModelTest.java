@@ -1,14 +1,15 @@
-// package com.skillstorm.project_one;
+package com.skillstorm.project_one;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-// import com.skillstorm.project_one.Models.Warehouse;
+import com.skillstorm.project_one.Models.Warehouse;
 
-// public class WarehouseModelTest {
 
-//     private Warehouse warehouse;
+public class WarehouseModelTest {
+
+    private Warehouse warehouse;
     
     @BeforeMethod
     public void setupWarehouse() {
@@ -46,17 +47,17 @@ import org.testng.annotations.Test;
         Assert.assertEquals(actual, expected);
     }
 
-//     @Test
-//     public void testWarehouseToString() {
-//         int id = 1;
-//         String location = "12345 Candy Lane, Candyville, CandyLand 678910";
-//         int capacity = 10000;
-//         int currentStock = 400;
+    @Test
+    public void testWarehouseToString() {
+        int id = 1;
+        String location = "12345 Candy Lane, Candyville, CandyLand 678910";
+        int capacity = 10000;
+        int currentStock = 400;
 
-//         warehouse.setId(id);
-//         warehouse.setLocation(location);
-//         warehouse.setCapacity(capacity);
-//         warehouse.setCurrentStock(currentStock);
+        warehouse.setId(id);
+        warehouse.setLocation(location);
+        warehouse.setCapacity(capacity);
+        warehouse.setCurrentStock(currentStock);
 
         String expected = "Warehouse [id=" + id + ", location=" + location + ", capacity=" + capacity + ", currentStock=" + currentStock + "]";
         String actual = warehouse.toString();
