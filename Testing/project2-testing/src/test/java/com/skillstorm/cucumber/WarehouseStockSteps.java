@@ -38,7 +38,13 @@ public class WarehouseStockSteps {
 
     @When("I select the {string}, {string} and input {string} fields")
     public void selectWarehouseStockFields(String candy, String location, String quantity) {
-        
+        this.warehouseStock.selectCandy(candy);
+        this.warehouseStock.selectLocation(location);
+        this.warehouseStock.inputQuantity(quantity);
+    }
+
+    @When("I don't select {string}, {string} and input {string} fields")
+    public void dontSelectWarehouseStockFields(String candy, String location, String quantity) {
         this.warehouseStock.selectCandy(candy);
         this.warehouseStock.selectLocation(location);
         this.warehouseStock.inputQuantity(quantity);
@@ -50,9 +56,12 @@ public class WarehouseStockSteps {
     }
 
     @Then("I should see the last row with {string}, {string}, and {string}")
-    public void shouldSeeNewWarehouseStocks(String candy, String location, String quantity) {
+    public void shouldSeeNewWarehouseStock(String candy, String location, String quantity) {
         System.out.println(this.warehouseStock.checkNewWarehouseStock(candy, location, quantity));
     }
 
-
+    @Then("the warehouse stock should not be added with {string}, {string}, and {string}")
+    public void shouldNotSeeNewWarehouseStock(String candy, String location, String quantity) {
+        System.out.println(this.warehouseStock.checkNewWarehouseStock(candy, location, quantity));
+    }
 }
