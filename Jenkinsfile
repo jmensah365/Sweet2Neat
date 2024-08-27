@@ -40,7 +40,7 @@ pipeline {
         }
         stage('Test Backend'){
             steps{
-                sh "cd project-one/src/test/java/com/skillstorm/project_one && mvn clean test"
+                sh "cd project-one && mvn clean test"
             }
         }
         stage('Deploy Backend'){
