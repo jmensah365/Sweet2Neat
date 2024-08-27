@@ -26,6 +26,8 @@ pipeline {
         }
         stage('Build Backend'){
             steps{
+                sh "cd project-one && mvn clean install && ls target/"
+                
                 withSonarQubeEnv('SonarCloud') {
                     sh '''
                         mvn sonar:sonar \
@@ -35,7 +37,6 @@ pipeline {
                         -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
                     '''
                 }
-                sh "cd project-one && mvn clean install && ls target/"
             }
         }
         stage('Test Backend'){
