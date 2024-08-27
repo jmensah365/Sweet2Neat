@@ -257,10 +257,4 @@ public class WarehouseList {
         }
     }
     
-
-
-
-
-
-
 }
