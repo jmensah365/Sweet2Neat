@@ -8,7 +8,6 @@ import com.skillstorm.Selenium.WarehouseStock;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -75,16 +74,59 @@ public class WarehouseStockSteps {
 
     @Then("I select a new {string}, {string} and input {string} fields")
     public void selectNewAndInputFields(String candy, String location, String quantity) {
-        throw new PendingException();
+        this.warehouseStock.selectCandy(candy);
+        this.warehouseStock.selectLocation(location);
+        this.warehouseStock.clearQuantityField();
+        this.warehouseStock.inputQuantity(quantity);
+    }
+
+    @And("I don't select a new {string}, {string} and input {string} fields")
+    public void doNotSelectWarehouseStockFields(String candy, String location, String quantity) {
+        this.warehouseStock.selectCandy(candy);
+        this.warehouseStock.selectLocation(location);
+        this.warehouseStock.clearQuantityField();
+        this.warehouseStock.inputQuantity(quantity);
     }
 
     @And("I click the Update Stock button")
     public void clickUpdateStockButton() {
-        throw new PendingException();
+        this.warehouseStock.clickUpdateStockButton();
     }
 
-    @Then("I should see the updated warehouse stock")
-    public void shouldSeeUpdatedWarehouseStock() {
-        throw new PendingException();
+    @Then("the warehouse stock should not be updated with {string}, {string}, and {string}")
+    public void shouldNotBeUpdatedWith(String candy, String location, String quantity) {
+        System.out.println(this.warehouseStock.checkNewWarehouseStock(candy, location, quantity));
+    }
+
+    //=============================== READ ====================================//
+    @Given("I am currently on the home page")
+    public void currentlyOnTheHomePage() {
+        this.warehouseStock.getHomePageUrl();
+    }
+
+    @When("I click on the Warehouse Stock option")
+    public void clickOnWarehouseStockOption() {
+        this.warehouseStock.clickOnWarehouseStockOption();
+    }
+
+    @Then("I should be navigated to the Warehouse Stock page")
+    public void shouldBeNavigatedToWarehouseStock() {
+        System.out.println(this.warehouseStock.getWarehouseStockUrl());
+    }
+
+    @And("I should see a list of all warehouse stocks available")
+    public void shouldSeeListOfAllWarehouseStocks() {
+        this.warehouseStock.getWarehouseTableContents();
+    }
+
+    //=============================== DELETE ====================================//
+    @When("I click on the delete icon for the Warehouse Stock I want to delete")
+    public void clickOnDeleteIconForWarehouseStock() {
+        this.warehouseStock.clickDeleteIcon();
+    }
+
+    @Then("the warehouse stock should not be visible in the table")
+    public void warehouseStockShouldNotBeVisible() {
+        this.warehouseStock.confirmDeletion();
     }
 }

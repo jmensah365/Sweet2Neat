@@ -1,6 +1,7 @@
 package com.skillstorm.Selenium;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -10,13 +11,14 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import io.cucumber.java.en_old.Ac;
-
 public class WarehouseStock {
 
     private WebDriver driver;
-    private final String warehouseStockUrl = "http://localhost:5173/stocks";
+    private final String warehouseStockUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/stocks";
+    private final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
     private Actions action;
+
+    private String firstRow = "";
 
     @FindBy(xpath = "//div[@id='candyIdSelect']")
     private WebElement candySelect;
@@ -35,6 +37,23 @@ public class WarehouseStock {
 
     @FindBy(name = "editIcon")
     private WebElement editIcon;
+
+    @FindBy(name = "warehouseStockBtn")
+    private WebElement updateButton;
+
+    @FindBy(name = "tableBody")
+    private WebElement tableBody;
+
+    @FindBy(name = "warehouses")
+    private WebElement warehousesMenuElement;
+
+    @FindBy(name = "warehousesStockRoute")
+    private WebElement warehousesStockMenuElement;
+
+    @FindBy(name = "deleteIcon")
+    private WebElement deleteIcon;
+
+
 
     public WarehouseStock(WebDriver driver){
         this.driver = driver;
@@ -123,6 +142,58 @@ public class WarehouseStock {
 
     public void clickEditIcon() {
         editIcon.click();
+    }
+
+    public void clickUpdateStockButton() {
+        updateButton.click();
+    }
+
+    public void clearQuantityField() {
+        quantity.sendKeys(Keys.COMMAND + "a");
+        quantity.sendKeys(Keys.DELETE);
+    }
+
+    public void getHomePageUrl() {
+        driver.get(homeUrl);
+    }
+
+    public void clickOnWarehouseStockOption() {
+        warehousesMenuElement.click();
+        warehousesStockMenuElement.click();
+    }
+
+    public String getWarehouseStockUrl() {
+        return this.driver.getCurrentUrl();
+    }
+
+    public void getWarehouseTableContents() {
+        List<WebElement> tableRows = tableBody.findElements(By.xpath(".//tr"));
+
+        for(WebElement tr : tableRows) {
+            System.out.println(tr.getText());
+        }
+    }
+
+    public void clickDeleteIcon() {
+        firstRow = tableBody.findElement(By.xpath(".//tr[1]")).getText();
+        System.out.println("Deleted row: " + firstRow);
+        deleteIcon.click();
+    }
+
+    public void confirmDeletion(){
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        List<WebElement> tableRows = tableBody.findElements(By.xpath(".//tr"));
+        for(WebElement tr : tableRows) {
+            if(tr.getText().equals(firstRow)){
+                throw new AssertionError("Candy with ID " + tableRows + " was found in the table");
+            } else{
+                System.err.println("False");
+            }
+        }
     }
 
 }

@@ -10,10 +10,10 @@ Feature: Order CRUD operations
     #     |Jeremiah Mensah| 09/19/2023| Pending| 1110 Fake Address Dr, Greensboro NC, 20675|
     
 
-    # Scenario: View the order list table
-    #     Given I am on the base page
-    #     When I navigate to the order list page
-    #     Then I should see the list of orders
+    Scenario: View the order list table
+        Given I am on the home page
+        When I navigate to the order list page
+        Then I should I see the list of orders
     
     Scenario Outline: Update an order
         Given I am on the order list page
@@ -29,6 +29,10 @@ Feature: Order CRUD operations
     #     Given I am on the order list page
 	# 	When I click the delete button
 	# 	Then The order should not be visible in the order list page
+    Scenario: Delete an order
+        Given I am on the order list page
+		When I click the delete icon
+		Then The order should not be visible in the order list page
 
 
 
