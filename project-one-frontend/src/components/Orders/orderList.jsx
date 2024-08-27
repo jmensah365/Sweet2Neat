@@ -181,6 +181,13 @@ const Orders = () => {
                             width: '100%',
                             marginTop:1
                         }}
+                        slotProps={{
+                            textField: {
+                                inputProps: {
+                                    name: "orderDatePicker",
+                                },
+                            },
+                        }}
                     />
                 </LocalizationProvider>
                             {/* <TextField
