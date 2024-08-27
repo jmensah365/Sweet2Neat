@@ -14,8 +14,8 @@ import org.openqa.selenium.support.PageFactory;
 public class WarehouseStock {
 
     private WebDriver driver;
-    private final String warehouseStockUrl = "http://localhost:5173/stocks";
-    private final String homeUrl = "http://localhost:5173/";
+    private final String warehouseStockUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/stocks";
+    private final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
     private Actions action;
 
     private String firstRow = "";
