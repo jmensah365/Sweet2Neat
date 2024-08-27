@@ -175,6 +175,7 @@ const Orders = () => {
                         value={editingOrders?.orderDate ? dayjs(editingOrders.orderDate) : (newOrder?.orderDate ? dayjs(newOrder.orderDate) : null)}
                         // calls handleOrderDate to structure the object so it can be applied like a regular form input
                         onChange={handleOrderDate}
+                        name=datePicker
                         sx={{
                             backgroundColor: '#e6e6fa',
                             width: '100%',
