@@ -15,7 +15,7 @@ const ChoclateCard = () => {
                 component='img'
                 height='140'
                 image={chocolateImage}
-                alt='Chocolate Candy'
+                alt='Choclate Candy'
             />
             <CardContent>
                 <Typography gutterBottom variant='h5' component='div'>
@@ -23,7 +23,7 @@ const ChoclateCard = () => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button name='choclateCardButton' size='small' onClick={() => navigateTo('/chocolateCandy')}>View Choclate Candy</Button>
+                <Button name='chocolateCardButton' size='small' onClick={() => navigateTo('/chocolateCandy')}>View Choclate Candy</Button>
             </CardActions>
         </Card>
     )

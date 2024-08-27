@@ -1,6 +1,6 @@
-# @Navigation
+@Navigation
 
-# Feature: Navigation Links
+Feature: Navigation Links
 #     Scenario: Successfully navigate to the home page
 #         Given I am on any page
 #         When I click on the logo
@@ -41,7 +41,20 @@
 #         When I click on the Warehouse Stock menu option
 #         Then I should see the Warehouse Stock page
 
-#     Scenario: Successfully navigation with Add a Warehouse button
+#     Scenario: Successfully navigate with Add a Warehouse button
 #         Given I am on the home page
 #         When I click on the Add a Warehouse menu button
 #         Then I should see the Warehouse List page
+
+Scenario Outline: Successfully navigate to all Candy Types pages
+    Given I am on the Candy Categories page
+    When I click on the desired "<candytype>" 
+    Then I should see the desired "<candytype>" page
+
+    Examples:
+    |   candytype      |
+    |   Gummy Candy    |
+    |   Chocolate Candy|
+    |   Sour Candy     |
+    |   Taffy Candy    |
+    |    Lollipops     |

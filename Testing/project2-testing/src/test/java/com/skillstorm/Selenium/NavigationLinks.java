@@ -14,6 +14,7 @@ public class NavigationLinks {
     
     private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
     private static final String orderUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/orders";
+    private static final String candyCategoriesUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/candyTypes";
 
     @FindBy(name = "logo")
     private WebElement logo;
@@ -71,6 +72,24 @@ public class NavigationLinks {
 
     @FindBy(name = "homeAddAWarehouseBtn")
     private WebElement addWarehouseButton;
+
+    @FindBy(name = "gummyCardButton")
+    private WebElement gummyCardButton;
+
+    @FindBy(name = "choclateCardButton")
+    private WebElement chocolateCardButton;
+
+    @FindBy(name = "sourCandyCardButton")
+    private WebElement sourCandyCardButton;
+
+    @FindBy(name = "taffyCardButton")
+    private WebElement taffyCardButton;
+
+    @FindBy(name = "lollipopCardButton")
+    private WebElement lollipopCardButton;
+
+    @FindBy(tagName = "h3")
+    private WebElement candyHeader;
 
     // Setup driver
     public NavigationLinks(WebDriver driver){
@@ -182,6 +201,41 @@ public class NavigationLinks {
     //================= NAV USING ADD A WAREHOUSE BUTTON ==================//
     public void clickOnAddAWarehouseButton() {
         addWarehouseButton.click();
+    }
+
+    //================= NAV TO DIFFERENT CANDY TYPES ==================//
+    public void candyCategoriesPage() {
+        this.driver.get(candyCategoriesUrl);
+    }
+
+    public void selectCandyType(String candyType) {
+        switch(candyType) {
+            case "Gummy Candy":
+            gummyCardButton.click();
+                break;
+            case "Chocolate Candy":
+            chocolateCardButton.click();
+                break;
+            case "Sour Candy":
+            sourCandyCardButton.click();
+                break;
+            case "Taffy Candy":
+            taffyCardButton.click();
+                break;
+            case "Lollipops":
+            lollipopCardButton.click();
+                break;
+            default:
+        }
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+    }
+
+    public boolean checkCandyHeader(String candyType) {
+        return candyHeader.getText().equals(candyType);
     }
 }
 
