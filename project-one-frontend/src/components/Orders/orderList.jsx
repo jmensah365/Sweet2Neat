@@ -169,7 +169,7 @@ const Orders = () => {
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DatePicker
                         label="Order Date"
-                        name=datePicker
+                        name="datePicker"
                         // editingOrders?.orderData checks if editingOrders is exists and has an orerDate
                         // DatePicker needs its value to be a Day.js object so convert it here.
                         // the last condition for null is to allow it to start from a null state, without it, it outlines the datepicker in red
