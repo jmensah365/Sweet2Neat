@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class CandyList {
     
@@ -65,6 +66,9 @@ public class CandyList {
     @FindBy(name = "editIcon")
     private WebElement editBtn;
 
+    @FindBy(id = "candyTypeSelect")
+    private WebElement candyTypeSelect;
+
     String candyId = "";
 
     public CandyList(WebDriver driver){
@@ -101,11 +105,18 @@ public class CandyList {
     public void addCandyType(String candyType){
         try {
             Thread.sleep(3000);
+
+            candyTypeSelect.click();
+
+
+            Thread.sleep(1000);
+
+            WebElement option = driver.findElement(By.xpath("//li[@data-value='" + candyType + "']"));
+
+            option.click();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-        typeField.sendKeys(candyType);
     }
 
     public void addCandyFlavor(String candyFlavor){
@@ -209,15 +220,18 @@ public class CandyList {
     public void setTypeField(String type){
         try {
             Thread.sleep(3000);
+
+            candyTypeSelect.click();
+
+
+            Thread.sleep(1000);
+
+            WebElement option = driver.findElement(By.xpath("//li[@data-value='" + type + "']"));
+
+            option.click();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-        String prevValue = typeField.getAttribute("value");
-        for (int i = 0; i < prevValue.length(); i ++){
-            typeField.sendKeys(Keys.BACK_SPACE);
-        }
-        typeField.sendKeys(type);
     }
 
 

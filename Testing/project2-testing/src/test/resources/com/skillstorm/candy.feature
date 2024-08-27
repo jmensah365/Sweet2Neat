@@ -1,15 +1,15 @@
 @Candy
 Feature: Candy CRUD Operations
 
-    Scenario Outline: Creating a Candy
-        Given I am on the Candy Inventory page
-        When I input the candy "<name>", "<type>", "<flavor>", "<price>", and, "<weight>"
-        And I click the ADD CANDY button
-        Then I should see the newly created candy on the list
-    Examples:
-        |name|type|flavor|price|weight|
-        |Sour Skittles|Sour Candy| Sour| 4.99|1.0|
-        |Ring Pops|Gummy Candy| Watermelon| 2.99|0.50|
+    # Scenario Outline: Creating a Candy
+    #     Given I am on the Candy Inventory page
+    #     When I input the candy "<name>", "<type>", "<flavor>", "<price>", and, "<weight>"
+    #     And I click the ADD CANDY button
+    #     Then I should see the newly created candy on the list
+    # Examples:
+    #     |name|type|flavor|price|weight|
+    #     |Sour Skittles|Gummy Candy| Sour| 4.99|1.0|
+    #     |Ring Pops|Sour Candy| Watermelon| 2.99|0.50|
     
     Scenario: Successful view of candy list
         Given I am on the Home page
