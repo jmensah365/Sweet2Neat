@@ -187,7 +187,7 @@ const Orders = () => {
                                     name: "orderDatePicker",
                                 },
                             },
-                            openDatePicker: {
+                            openPickerButton: {
                                 name: "orderDatePickerBtn",
                             },
                         }}
