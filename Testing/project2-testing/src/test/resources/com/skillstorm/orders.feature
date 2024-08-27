@@ -7,7 +7,7 @@ Feature: Order CRUD operations
         Then new order information should be in the table
     Examples:
         |Customer Name| Order Date| Status| Customer Address|
-        |Jeremiah Mensah| 2024-09-19| pending| 1010 Fake Address Dr, Greensboro NC, 20675|
+        |Jeremiah Mensah| 09-19-2023| Pending| 1010 Fake Address Dr, Greensboro NC, 20675|
     
 
     # Scenario: View the order list table

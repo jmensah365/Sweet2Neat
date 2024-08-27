@@ -16,7 +16,7 @@ Feature: Warehouse CRUD
   #-------------------------- Warehouse UPDATE ----------------------------#
   Scenario Outline: Updating a warehouse
 
-    Given I am on the Warehouse List page
+    Given Given I am on the Warehouse List page
     When I click on the edit icon for the Warehouse I want to edit
     And I change the "<location>" and/or "<capacity>" with valid information
     And I click on the UPDATE WAREHOUSE button
