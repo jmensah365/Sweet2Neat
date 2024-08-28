@@ -139,12 +139,13 @@ const WarehouseStocks = () => {
             setNewStock({candyId: '', warehouseId: '', quantity: ''});
             setSuccessMessage(editingStock ? 'Updated stock successfully!' : 'Added stock successfully!');
             refreshWarehouseDetails();
+            
         })
         .catch(err => setError('Failed to update stock'));
     };
 
     const refreshWarehouseDetails = () => {
-        fetch(url)
+        fetch(stockUrl)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -156,10 +157,11 @@ const WarehouseStocks = () => {
                 setLoaded(true);
             })
             .catch(err => {
-                setError(err);
+                setError("Failed to fetch");
                 setLoaded(true);
             });
     }
+
 
     const handleEdit = (stock) => {
         setEditingStock(stock);
