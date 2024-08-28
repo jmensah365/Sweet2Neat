@@ -30,7 +30,6 @@ const CandyList = () => {
     const [editingCandy, setEditingCandy] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-    const [validationErrors, setValidationErrors] = useState({});
 
     //fetch the candy data from the API endpoint when the component mounts
     useEffect(() => {
