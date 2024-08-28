@@ -31,6 +31,7 @@ const CandyList = () => {
     const [successMessage, setSuccessMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
+
     //fetch the candy data from the API endpoint when the component mounts
     useEffect(() => {
         fetch(url)
@@ -233,7 +234,7 @@ const CandyList = () => {
                             textAlign:'left'
                         }}
                     >
-                        <MenuItem value=""> </MenuItem>
+                        <MenuItem value="" style={{ color: 'red' }}>Clear Field</MenuItem>
                         <MenuItem value={"Gummy Candy"}>Gummy Candy</MenuItem>
                         <MenuItem value={"Chocolate Candy"}>Chocolate Candy</MenuItem>
                         <MenuItem value={"Sour Candy"}>Sour Candy</MenuItem>
