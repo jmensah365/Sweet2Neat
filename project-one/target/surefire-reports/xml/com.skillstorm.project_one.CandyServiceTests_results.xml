@@ -4,7 +4,7 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.047">
+           time="0.044">
     <properties></properties>
 
 
@@ -15,8 +15,8 @@
                 classname="com.skillstorm.project_one.CandyServiceTests">
             </testcase>
             <testcase
-                name="testFindByFlavor"
-                time="0.001"
+                name="testUpdateCandyThrowsException"
+                time="0.002"
                 classname="com.skillstorm.project_one.CandyServiceTests">
             </testcase>
             <testcase
@@ -25,18 +25,8 @@
                 classname="com.skillstorm.project_one.CandyServiceTests">
             </testcase>
             <testcase
-                name="testFindById"
-                time="0.000"
-                classname="com.skillstorm.project_one.CandyServiceTests">
-            </testcase>
-            <testcase
-                name="testCreateCandy"
-                time="0.043"
-                classname="com.skillstorm.project_one.CandyServiceTests">
-            </testcase>
-            <testcase
                 name="testFindAll"
-                time="0.000"
+                time="0.001"
                 classname="com.skillstorm.project_one.CandyServiceTests">
             </testcase>
             <testcase
@@ -45,8 +35,18 @@
                 classname="com.skillstorm.project_one.CandyServiceTests">
             </testcase>
             <testcase
-                name="testUpdateCandyThrowsException"
-                time="0.002"
+                name="testFindById"
+                time="0.001"
+                classname="com.skillstorm.project_one.CandyServiceTests">
+            </testcase>
+            <testcase
+                name="testCreateCandy"
+                time="0.039"
+                classname="com.skillstorm.project_one.CandyServiceTests">
+            </testcase>
+            <testcase
+                name="testFindByFlavor"
+                time="0.000"
                 classname="com.skillstorm.project_one.CandyServiceTests">
             </testcase>
 </testsuite>

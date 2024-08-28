@@ -4,13 +4,13 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.003">
+           time="0.001">
     <properties></properties>
 
 
 
             <testcase
-                name="testConstructor"
+                name="testToString"
                 time="0.001"
                 classname="com.skillstorm.project_one.StockDTOUnitTests">
             </testcase>
@@ -20,8 +20,8 @@
                 classname="com.skillstorm.project_one.StockDTOUnitTests">
             </testcase>
             <testcase
-                name="testToString"
-                time="0.002"
+                name="testConstructor"
+                time="0.000"
                 classname="com.skillstorm.project_one.StockDTOUnitTests">
             </testcase>
 </testsuite>

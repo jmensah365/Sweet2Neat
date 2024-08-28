@@ -10,28 +10,28 @@
 
 
             <testcase
+                name="testSetCurrentStockAndGetCurrentStock"
+                time="0.000"
+                classname="com.skillstorm.project_one.WarehouseModelTest">
+            </testcase>
+            <testcase
+                name="testWarehouseToString"
+                time="0.003"
+                classname="com.skillstorm.project_one.WarehouseModelTest">
+            </testcase>
+            <testcase
                 name="testSetLocationAndGetLocation"
+                time="0.000"
+                classname="com.skillstorm.project_one.WarehouseModelTest">
+            </testcase>
+            <testcase
+                name="testSetIdAndGetId"
                 time="0.000"
                 classname="com.skillstorm.project_one.WarehouseModelTest">
             </testcase>
             <testcase
                 name="testSetCapacityAndGetCapacity"
                 time="0.000"
-                classname="com.skillstorm.project_one.WarehouseModelTest">
-            </testcase>
-            <testcase
-                name="testSetCurrentStockAndGetCurrentStock"
-                time="0.000"
-                classname="com.skillstorm.project_one.WarehouseModelTest">
-            </testcase>
-            <testcase
-                name="testSetIdAndGetId"
-                time="0.001"
-                classname="com.skillstorm.project_one.WarehouseModelTest">
-            </testcase>
-            <testcase
-                name="testWarehouseToString"
-                time="0.002"
                 classname="com.skillstorm.project_one.WarehouseModelTest">
             </testcase>
 </testsuite>

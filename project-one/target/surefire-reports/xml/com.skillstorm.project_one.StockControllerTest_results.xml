@@ -4,18 +4,13 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.002">
+           time="0.001">
     <properties></properties>
 
 
 
             <testcase
-                name="testGetStocksByWarehouse"
-                time="0.001"
-                classname="com.skillstorm.project_one.StockControllerTest">
-            </testcase>
-            <testcase
-                name="testDeleteStock"
+                name="testFindAllStocks"
                 time="0.000"
                 classname="com.skillstorm.project_one.StockControllerTest">
             </testcase>
@@ -25,12 +20,17 @@
                 classname="com.skillstorm.project_one.StockControllerTest">
             </testcase>
             <testcase
-                name="testFindAllStocks"
+                name="testUpdateStock"
                 time="0.000"
                 classname="com.skillstorm.project_one.StockControllerTest">
             </testcase>
             <testcase
-                name="testUpdateStock"
+                name="testDeleteStock"
+                time="0.000"
+                classname="com.skillstorm.project_one.StockControllerTest">
+            </testcase>
+            <testcase
+                name="testGetStocksByWarehouse"
                 time="0.000"
                 classname="com.skillstorm.project_one.StockControllerTest">
             </testcase>

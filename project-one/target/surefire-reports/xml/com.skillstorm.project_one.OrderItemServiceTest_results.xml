@@ -4,11 +4,21 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.005">
+           time="0.003">
     <properties></properties>
 
 
 
+            <testcase
+                name="testDeleteOrderItem"
+                time="0.000"
+                classname="com.skillstorm.project_one.OrderItemServiceTest">
+            </testcase>
+            <testcase
+                name="testFindAll"
+                time="0.000"
+                classname="com.skillstorm.project_one.OrderItemServiceTest">
+            </testcase>
             <testcase
                 name="testCreateOrderItem_CandyNotFound"
                 time="0.001"
@@ -20,23 +30,13 @@
                 classname="com.skillstorm.project_one.OrderItemServiceTest">
             </testcase>
             <testcase
-                name="testDeleteOrderItem"
+                name="testUpdateOrderItem_Success"
                 time="0.001"
                 classname="com.skillstorm.project_one.OrderItemServiceTest">
             </testcase>
             <testcase
                 name="testFindByOrderId"
                 time="0.000"
-                classname="com.skillstorm.project_one.OrderItemServiceTest">
-            </testcase>
-            <testcase
-                name="testUpdateOrderItem_Success"
-                time="0.001"
-                classname="com.skillstorm.project_one.OrderItemServiceTest">
-            </testcase>
-            <testcase
-                name="testFindAll"
-                time="0.001"
                 classname="com.skillstorm.project_one.OrderItemServiceTest">
             </testcase>
 </testsuite>

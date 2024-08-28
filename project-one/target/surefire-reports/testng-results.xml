@@ -2,148 +2,148 @@
 <testng-results ignored="0" total="55" passed="55" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-28T15:24:17 EDT" name="Default suite" finished-at="2024-08-28T15:24:18 EDT" duration-ms="929">
+  <suite started-at="2024-08-28T17:03:24 EDT" name="Default suite" finished-at="2024-08-28T17:03:25 EDT" duration-ms="983">
     <groups>
     </groups>
-    <test started-at="2024-08-28T15:24:17 EDT" name="Default test" finished-at="2024-08-28T15:24:18 EDT" duration-ms="929">
+    <test started-at="2024-08-28T17:03:24 EDT" name="Default test" finished-at="2024-08-28T17:03:25 EDT" duration-ms="983">
       <class name="com.skillstorm.project_one.OrdersControllerTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.skillstorm.project_one.OrdersControllerTest@74f7d1d2]" started-at="2024-08-28T15:24:17 EDT" name="setup" finished-at="2024-08-28T15:24:18 EDT" duration-ms="525" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.skillstorm.project_one.OrdersControllerTest@4b4dd216]" started-at="2024-08-28T17:03:24 EDT" name="setup" finished-at="2024-08-28T17:03:24 EDT" duration-ms="578" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testCreateOrders()[pri:0, instance:com.skillstorm.project_one.OrdersControllerTest@74f7d1d2]" started-at="2024-08-28T15:24:18 EDT" name="testCreateOrders" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method signature="testCreateOrders()[pri:0, instance:com.skillstorm.project_one.OrdersControllerTest@4b4dd216]" started-at="2024-08-28T17:03:25 EDT" name="testCreateOrders" finished-at="2024-08-28T17:03:25 EDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateOrders -->
-        <test-method signature="testDeleteOrderById()[pri:0, instance:com.skillstorm.project_one.OrdersControllerTest@74f7d1d2]" started-at="2024-08-28T15:24:18 EDT" name="testDeleteOrderById" finished-at="2024-08-28T15:24:18 EDT" duration-ms="14" status="PASS">
+        <test-method signature="testDeleteOrderById()[pri:0, instance:com.skillstorm.project_one.OrdersControllerTest@4b4dd216]" started-at="2024-08-28T17:03:25 EDT" name="testDeleteOrderById" finished-at="2024-08-28T17:03:25 EDT" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDeleteOrderById -->
-        <test-method signature="testFindAllOrders()[pri:0, instance:com.skillstorm.project_one.OrdersControllerTest@74f7d1d2]" started-at="2024-08-28T15:24:18 EDT" name="testFindAllOrders" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method signature="testFindAllOrders()[pri:0, instance:com.skillstorm.project_one.OrdersControllerTest@4b4dd216]" started-at="2024-08-28T17:03:25 EDT" name="testFindAllOrders" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFindAllOrders -->
-        <test-method signature="testFindOrdersById()[pri:0, instance:com.skillstorm.project_one.OrdersControllerTest@74f7d1d2]" started-at="2024-08-28T15:24:18 EDT" name="testFindOrdersById" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testFindOrdersById()[pri:0, instance:com.skillstorm.project_one.OrdersControllerTest@4b4dd216]" started-at="2024-08-28T17:03:25 EDT" name="testFindOrdersById" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFindOrdersById -->
-        <test-method signature="testFindOrdersByStatus()[pri:0, instance:com.skillstorm.project_one.OrdersControllerTest@74f7d1d2]" started-at="2024-08-28T15:24:18 EDT" name="testFindOrdersByStatus" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testFindOrdersByStatus -->
-        <test-method signature="testUpdateOrders()[pri:0, instance:com.skillstorm.project_one.OrdersControllerTest@74f7d1d2]" started-at="2024-08-28T15:24:18 EDT" name="testUpdateOrders" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testUpdateOrders()[pri:0, instance:com.skillstorm.project_one.OrdersControllerTest@4b4dd216]" started-at="2024-08-28T17:03:25 EDT" name="testUpdateOrders" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUpdateOrders -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.OrdersControllerTest@74f7d1d2]" started-at="2024-08-28T15:24:18 EDT" name="teardown" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testFindOrdersByStatus()[pri:0, instance:com.skillstorm.project_one.OrdersControllerTest@4b4dd216]" started-at="2024-08-28T17:03:25 EDT" name="testFindOrdersByStatus" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindOrdersByStatus -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.OrdersControllerTest@4b4dd216]" started-at="2024-08-28T17:03:25 EDT" name="teardown" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.skillstorm.project_one.OrdersControllerTest -->
       <class name="com.skillstorm.project_one.CandyServiceTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="31" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="33" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testCreateCandy()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="testCreateCandy" finished-at="2024-08-28T15:24:18 EDT" duration-ms="43" status="PASS">
+        <test-method signature="testCreateCandy()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="testCreateCandy" finished-at="2024-08-28T17:03:25 EDT" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateCandy -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="teardown" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="teardown" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="testDeleteCandy()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="testDeleteCandy" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testDeleteCandy()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="testDeleteCandy" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDeleteCandy -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="teardown" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="teardown" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testFindAll()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="testFindAll" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testFindAll()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="testFindAll" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFindAll -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="teardown" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="teardown" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="testFindByFlavor()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="testFindByFlavor" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testFindByFlavor()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="testFindByFlavor" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFindByFlavor -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="teardown" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="teardown" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="testFindById()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="testFindById" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testFindById()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="testFindById" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFindById -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="teardown" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="teardown" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="testFindByType()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="testFindByType" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testFindByType()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="testFindByType" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFindByType -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="teardown" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method signature="testUpdateCandy()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="testUpdateCandy" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method signature="testUpdateCandy()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="testUpdateCandy" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUpdateCandy -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="teardown" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="teardown" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="teardown" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testUpdateCandyThrowsException()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="testUpdateCandyThrowsException" finished-at="2024-08-28T15:24:18 EDT" duration-ms="2" status="PASS">
+        <test-method signature="testUpdateCandyThrowsException()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="testUpdateCandyThrowsException" finished-at="2024-08-28T17:03:25 EDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUpdateCandyThrowsException -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@620aa4ea]" started-at="2024-08-28T15:24:18 EDT" name="teardown" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.CandyServiceTests@2db2dd9d]" started-at="2024-08-28T17:03:25 EDT" name="teardown" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.skillstorm.project_one.CandyServiceTests -->
       <class name="com.skillstorm.project_one.OrderItemServiceTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@3174cb09]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="35" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@4d411036]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testCreateOrderItem_CandyNotFound()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@3174cb09]" started-at="2024-08-28T15:24:18 EDT" name="testCreateOrderItem_CandyNotFound" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method signature="testCreateOrderItem_CandyNotFound()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@4d411036]" started-at="2024-08-28T17:03:25 EDT" name="testCreateOrderItem_CandyNotFound" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <exception class="java.util.NoSuchElementException">
             <message>
               <![CDATA[Candy does not exist]]>
@@ -192,319 +192,319 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateOrderItem_CandyNotFound -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@3174cb09]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@4d411036]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testCreateOrderItem_Success()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@3174cb09]" started-at="2024-08-28T15:24:18 EDT" name="testCreateOrderItem_Success" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method signature="testCreateOrderItem_Success()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@4d411036]" started-at="2024-08-28T17:03:25 EDT" name="testCreateOrderItem_Success" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateOrderItem_Success -->
-        <test-method signature="testDeleteOrderItem()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@3174cb09]" started-at="2024-08-28T15:24:18 EDT" name="testDeleteOrderItem" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@4d411036]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testDeleteOrderItem()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@4d411036]" started-at="2024-08-28T17:03:25 EDT" name="testDeleteOrderItem" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDeleteOrderItem -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@3174cb09]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@4d411036]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testFindAll()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@3174cb09]" started-at="2024-08-28T15:24:18 EDT" name="testFindAll" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method signature="testFindAll()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@4d411036]" started-at="2024-08-28T17:03:25 EDT" name="testFindAll" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFindAll -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@3174cb09]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@4d411036]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@3174cb09]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testFindByOrderId()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@3174cb09]" started-at="2024-08-28T15:24:18 EDT" name="testFindByOrderId" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testFindByOrderId()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@4d411036]" started-at="2024-08-28T17:03:25 EDT" name="testFindByOrderId" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFindByOrderId -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@3174cb09]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testUpdateOrderItem_Success()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@3174cb09]" started-at="2024-08-28T15:24:18 EDT" name="testUpdateOrderItem_Success" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method signature="testUpdateOrderItem_Success()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@4d411036]" started-at="2024-08-28T17:03:25 EDT" name="testUpdateOrderItem_Success" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUpdateOrderItem_Success -->
-      </class> <!-- com.skillstorm.project_one.OrderItemServiceTest -->
-      <class name="com.skillstorm.project_one.OrderItemDTOUnitTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.OrderItemDTOUnitTests@5ca17ab0]" started-at="2024-08-28T15:24:17 EDT" name="setUp" finished-at="2024-08-28T15:24:17 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.OrderItemServiceTest@4d411036]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testGettersAndSetters()[pri:0, instance:com.skillstorm.project_one.OrderItemDTOUnitTests@5ca17ab0]" started-at="2024-08-28T15:24:18 EDT" name="testGettersAndSetters" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+      </class> <!-- com.skillstorm.project_one.OrderItemServiceTest -->
+      <class name="com.skillstorm.project_one.OrderItemDTOUnitTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.OrderItemDTOUnitTests@5a62b2a4]" started-at="2024-08-28T17:03:24 EDT" name="setUp" finished-at="2024-08-28T17:03:24 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGettersAndSetters -->
-        <test-method signature="testConstructor()[pri:0, instance:com.skillstorm.project_one.OrderItemDTOUnitTests@5ca17ab0]" started-at="2024-08-28T15:24:18 EDT" name="testConstructor" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="testConstructor()[pri:0, instance:com.skillstorm.project_one.OrderItemDTOUnitTests@5a62b2a4]" started-at="2024-08-28T17:03:25 EDT" name="testConstructor" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConstructor -->
-        <test-method signature="testToString()[pri:0, instance:com.skillstorm.project_one.OrderItemDTOUnitTests@5ca17ab0]" started-at="2024-08-28T15:24:18 EDT" name="testToString" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method signature="testGettersAndSetters()[pri:0, instance:com.skillstorm.project_one.OrderItemDTOUnitTests@5a62b2a4]" started-at="2024-08-28T17:03:25 EDT" name="testGettersAndSetters" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGettersAndSetters -->
+        <test-method signature="testToString()[pri:0, instance:com.skillstorm.project_one.OrderItemDTOUnitTests@5a62b2a4]" started-at="2024-08-28T17:03:25 EDT" name="testToString" finished-at="2024-08-28T17:03:25 EDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testToString -->
       </class> <!-- com.skillstorm.project_one.OrderItemDTOUnitTests -->
       <class name="com.skillstorm.project_one.WarehouseControllerTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.skillstorm.project_one.WarehouseControllerTest@5a62b2a4]" started-at="2024-08-28T15:24:18 EDT" name="setup" finished-at="2024-08-28T15:24:18 EDT" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.skillstorm.project_one.WarehouseControllerTest@1051817b]" started-at="2024-08-28T17:03:25 EDT" name="setup" finished-at="2024-08-28T17:03:25 EDT" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testCreateWarehouse()[pri:0, instance:com.skillstorm.project_one.WarehouseControllerTest@5a62b2a4]" started-at="2024-08-28T15:24:18 EDT" name="testCreateWarehouse" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method signature="testCreateWarehouse()[pri:0, instance:com.skillstorm.project_one.WarehouseControllerTest@1051817b]" started-at="2024-08-28T17:03:25 EDT" name="testCreateWarehouse" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateWarehouse -->
-        <test-method signature="testGetAllWarehouses()[pri:0, instance:com.skillstorm.project_one.WarehouseControllerTest@5a62b2a4]" started-at="2024-08-28T15:24:18 EDT" name="testGetAllWarehouses" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method signature="testGetAllWarehouses()[pri:0, instance:com.skillstorm.project_one.WarehouseControllerTest@1051817b]" started-at="2024-08-28T17:03:25 EDT" name="testGetAllWarehouses" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetAllWarehouses -->
-        <test-method signature="testDeleteWarehouse()[pri:0, instance:com.skillstorm.project_one.WarehouseControllerTest@5a62b2a4]" started-at="2024-08-28T15:24:18 EDT" name="testDeleteWarehouse" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testDeleteWarehouse()[pri:0, instance:com.skillstorm.project_one.WarehouseControllerTest@1051817b]" started-at="2024-08-28T17:03:25 EDT" name="testDeleteWarehouse" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDeleteWarehouse -->
-        <test-method signature="testUpdateWarehouse()[pri:0, instance:com.skillstorm.project_one.WarehouseControllerTest@5a62b2a4]" started-at="2024-08-28T15:24:18 EDT" name="testUpdateWarehouse" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testUpdateWarehouse()[pri:0, instance:com.skillstorm.project_one.WarehouseControllerTest@1051817b]" started-at="2024-08-28T17:03:25 EDT" name="testUpdateWarehouse" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUpdateWarehouse -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.WarehouseControllerTest@5a62b2a4]" started-at="2024-08-28T15:24:18 EDT" name="teardown" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.WarehouseControllerTest@1051817b]" started-at="2024-08-28T17:03:25 EDT" name="teardown" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.skillstorm.project_one.WarehouseControllerTest -->
       <class name="com.skillstorm.project_one.OrderItemUnitTests">
-        <test-method signature="testGetters()[pri:0, instance:com.skillstorm.project_one.OrderItemUnitTests@f713686]" started-at="2024-08-28T15:24:18 EDT" name="testGetters" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGetters -->
-        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.OrderItemUnitTests@f713686]" started-at="2024-08-28T15:24:18 EDT" name="init" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.OrderItemUnitTests@74f7d1d2]" started-at="2024-08-28T17:03:25 EDT" name="init" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="testSetters()[pri:0, instance:com.skillstorm.project_one.OrderItemUnitTests@f713686]" started-at="2024-08-28T15:24:18 EDT" name="testSetters" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testSetters()[pri:0, instance:com.skillstorm.project_one.OrderItemUnitTests@74f7d1d2]" started-at="2024-08-28T17:03:25 EDT" name="testSetters" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetters -->
-        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.OrderItemUnitTests@f713686]" started-at="2024-08-28T15:24:18 EDT" name="init" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method signature="testGetters()[pri:0, instance:com.skillstorm.project_one.OrderItemUnitTests@74f7d1d2]" started-at="2024-08-28T17:03:25 EDT" name="testGetters" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetters -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.OrderItemUnitTests@74f7d1d2]" started-at="2024-08-28T17:03:25 EDT" name="init" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.OrderItemUnitTests@f713686]" started-at="2024-08-28T15:24:18 EDT" name="init" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.OrderItemUnitTests@74f7d1d2]" started-at="2024-08-28T17:03:25 EDT" name="init" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="testToString()[pri:0, instance:com.skillstorm.project_one.OrderItemUnitTests@f713686]" started-at="2024-08-28T15:24:18 EDT" name="testToString" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testToString()[pri:0, instance:com.skillstorm.project_one.OrderItemUnitTests@74f7d1d2]" started-at="2024-08-28T17:03:25 EDT" name="testToString" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testToString -->
       </class> <!-- com.skillstorm.project_one.OrderItemUnitTests -->
       <class name="com.skillstorm.project_one.StockControllerTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.skillstorm.project_one.StockControllerTest@5aa0dbf4]" started-at="2024-08-28T15:24:18 EDT" name="setup" finished-at="2024-08-28T15:24:18 EDT" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.skillstorm.project_one.StockControllerTest@16afbd92]" started-at="2024-08-28T17:03:25 EDT" name="setup" finished-at="2024-08-28T17:03:25 EDT" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testCreateStock()[pri:0, instance:com.skillstorm.project_one.StockControllerTest@5aa0dbf4]" started-at="2024-08-28T15:24:18 EDT" name="testCreateStock" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method signature="testCreateStock()[pri:0, instance:com.skillstorm.project_one.StockControllerTest@16afbd92]" started-at="2024-08-28T17:03:25 EDT" name="testCreateStock" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateStock -->
-        <test-method signature="testGetStocksByWarehouse()[pri:0, instance:com.skillstorm.project_one.StockControllerTest@5aa0dbf4]" started-at="2024-08-28T15:24:18 EDT" name="testGetStocksByWarehouse" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGetStocksByWarehouse -->
-        <test-method signature="testDeleteStock()[pri:0, instance:com.skillstorm.project_one.StockControllerTest@5aa0dbf4]" started-at="2024-08-28T15:24:18 EDT" name="testDeleteStock" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testDeleteStock -->
-        <test-method signature="testFindAllStocks()[pri:0, instance:com.skillstorm.project_one.StockControllerTest@5aa0dbf4]" started-at="2024-08-28T15:24:18 EDT" name="testFindAllStocks" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testFindAllStocks()[pri:0, instance:com.skillstorm.project_one.StockControllerTest@16afbd92]" started-at="2024-08-28T17:03:25 EDT" name="testFindAllStocks" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFindAllStocks -->
-        <test-method signature="testUpdateStock()[pri:0, instance:com.skillstorm.project_one.StockControllerTest@5aa0dbf4]" started-at="2024-08-28T15:24:18 EDT" name="testUpdateStock" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testDeleteStock()[pri:0, instance:com.skillstorm.project_one.StockControllerTest@16afbd92]" started-at="2024-08-28T17:03:25 EDT" name="testDeleteStock" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteStock -->
+        <test-method signature="testGetStocksByWarehouse()[pri:0, instance:com.skillstorm.project_one.StockControllerTest@16afbd92]" started-at="2024-08-28T17:03:25 EDT" name="testGetStocksByWarehouse" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetStocksByWarehouse -->
+        <test-method signature="testUpdateStock()[pri:0, instance:com.skillstorm.project_one.StockControllerTest@16afbd92]" started-at="2024-08-28T17:03:25 EDT" name="testUpdateStock" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUpdateStock -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.StockControllerTest@5aa0dbf4]" started-at="2024-08-28T15:24:18 EDT" name="teardown" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.StockControllerTest@16afbd92]" started-at="2024-08-28T17:03:25 EDT" name="teardown" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.skillstorm.project_one.StockControllerTest -->
       <class name="com.skillstorm.project_one.StockTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.StockTest@7adbd080]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="32" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.StockTest@41beb473]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="38" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testGetAndSetCandy()[pri:0, instance:com.skillstorm.project_one.StockTest@7adbd080]" started-at="2024-08-28T15:24:18 EDT" name="testGetAndSetCandy" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testGetAndSetCandy()[pri:0, instance:com.skillstorm.project_one.StockTest@41beb473]" started-at="2024-08-28T17:03:25 EDT" name="testGetAndSetCandy" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetAndSetCandy -->
-        <test-method signature="testGetAndSetId()[pri:0, instance:com.skillstorm.project_one.StockTest@7adbd080]" started-at="2024-08-28T15:24:18 EDT" name="testGetAndSetId" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGetAndSetId -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.StockTest@7adbd080]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.StockTest@41beb473]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testGetAndSetQuantity()[pri:0, instance:com.skillstorm.project_one.StockTest@7adbd080]" started-at="2024-08-28T15:24:18 EDT" name="testGetAndSetQuantity" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testGetAndSetQuantity()[pri:0, instance:com.skillstorm.project_one.StockTest@41beb473]" started-at="2024-08-28T17:03:25 EDT" name="testGetAndSetQuantity" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetAndSetQuantity -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.StockTest@7adbd080]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method signature="testGetAndSetId()[pri:0, instance:com.skillstorm.project_one.StockTest@41beb473]" started-at="2024-08-28T17:03:25 EDT" name="testGetAndSetId" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAndSetId -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.StockTest@41beb473]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.StockTest@7adbd080]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testGetAndSetWarehouse()[pri:0, instance:com.skillstorm.project_one.StockTest@7adbd080]" started-at="2024-08-28T15:24:18 EDT" name="testGetAndSetWarehouse" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testGetAndSetWarehouse()[pri:0, instance:com.skillstorm.project_one.StockTest@41beb473]" started-at="2024-08-28T17:03:25 EDT" name="testGetAndSetWarehouse" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetAndSetWarehouse -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.StockTest@7adbd080]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.StockTest@41beb473]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testGetCandyId()[pri:0, instance:com.skillstorm.project_one.StockTest@7adbd080]" started-at="2024-08-28T15:24:18 EDT" name="testGetCandyId" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.StockTest@41beb473]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGetCandyId()[pri:0, instance:com.skillstorm.project_one.StockTest@41beb473]" started-at="2024-08-28T17:03:25 EDT" name="testGetCandyId" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetCandyId -->
-        <test-method signature="testGetWarehouseId()[pri:0, instance:com.skillstorm.project_one.StockTest@7adbd080]" started-at="2024-08-28T15:24:18 EDT" name="testGetWarehouseId" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method signature="testGetWarehouseId()[pri:0, instance:com.skillstorm.project_one.StockTest@41beb473]" started-at="2024-08-28T17:03:25 EDT" name="testGetWarehouseId" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetWarehouseId -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.StockTest@7adbd080]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.StockTest@41beb473]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.StockTest@7adbd080]" started-at="2024-08-28T15:24:18 EDT" name="setUp" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.skillstorm.project_one.StockTest@41beb473]" started-at="2024-08-28T17:03:25 EDT" name="setUp" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testToString()[pri:0, instance:com.skillstorm.project_one.StockTest@7adbd080]" started-at="2024-08-28T15:24:18 EDT" name="testToString" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testToString()[pri:0, instance:com.skillstorm.project_one.StockTest@41beb473]" started-at="2024-08-28T17:03:25 EDT" name="testToString" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testToString -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.StockTest@7adbd080]" started-at="2024-08-28T15:24:18 EDT" name="teardown" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.StockTest@41beb473]" started-at="2024-08-28T17:03:25 EDT" name="teardown" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.skillstorm.project_one.StockTest -->
       <class name="com.skillstorm.project_one.StockDTOUnitTests">
-        <test-method signature="testConstructor()[pri:0, instance:com.skillstorm.project_one.StockDTOUnitTests@2db2dd9d]" started-at="2024-08-28T15:24:18 EDT" name="testConstructor" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method signature="testConstructor()[pri:0, instance:com.skillstorm.project_one.StockDTOUnitTests@3174cb09]" started-at="2024-08-28T17:03:25 EDT" name="testConstructor" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConstructor -->
-        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.StockDTOUnitTests@2db2dd9d]" started-at="2024-08-28T15:24:18 EDT" name="init" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.StockDTOUnitTests@3174cb09]" started-at="2024-08-28T17:03:25 EDT" name="init" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="testGettersAndSetters()[pri:0, instance:com.skillstorm.project_one.StockDTOUnitTests@2db2dd9d]" started-at="2024-08-28T15:24:18 EDT" name="testGettersAndSetters" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.StockDTOUnitTests@3174cb09]" started-at="2024-08-28T17:03:25 EDT" name="init" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGettersAndSetters -->
-        <test-method signature="testToString()[pri:0, instance:com.skillstorm.project_one.StockDTOUnitTests@2db2dd9d]" started-at="2024-08-28T15:24:18 EDT" name="testToString" finished-at="2024-08-28T15:24:18 EDT" duration-ms="2" status="PASS">
+        </test-method> <!-- init -->
+        <test-method signature="testToString()[pri:0, instance:com.skillstorm.project_one.StockDTOUnitTests@3174cb09]" started-at="2024-08-28T17:03:25 EDT" name="testToString" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testToString -->
-        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.StockDTOUnitTests@2db2dd9d]" started-at="2024-08-28T15:24:18 EDT" name="init" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testGettersAndSetters()[pri:0, instance:com.skillstorm.project_one.StockDTOUnitTests@3174cb09]" started-at="2024-08-28T17:03:25 EDT" name="testGettersAndSetters" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- init -->
-        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.StockDTOUnitTests@2db2dd9d]" started-at="2024-08-28T15:24:18 EDT" name="init" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        </test-method> <!-- testGettersAndSetters -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.StockDTOUnitTests@3174cb09]" started-at="2024-08-28T17:03:25 EDT" name="init" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
       </class> <!-- com.skillstorm.project_one.StockDTOUnitTests -->
       <class name="com.skillstorm.project_one.OrdersServiceTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.skillstorm.project_one.OrdersServiceTest@1051817b]" started-at="2024-08-28T15:24:18 EDT" name="setup" finished-at="2024-08-28T15:24:18 EDT" duration-ms="114" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.skillstorm.project_one.OrdersServiceTest@35293c05]" started-at="2024-08-28T17:03:24 EDT" name="setup" finished-at="2024-08-28T17:03:25 EDT" duration-ms="108" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.OrdersServiceTest@1051817b]" started-at="2024-08-28T15:24:18 EDT" name="teardown" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.skillstorm.project_one.OrdersServiceTest@35293c05]" started-at="2024-08-28T17:03:25 EDT" name="teardown" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.skillstorm.project_one.OrdersServiceTest -->
       <class name="com.skillstorm.project_one.WarehouseModelTest">
-        <test-method is-config="true" signature="setupWarehouse()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@4b4dd216]" started-at="2024-08-28T15:24:18 EDT" name="setupWarehouse" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupWarehouse -->
-        <test-method signature="testSetCapacityAndGetCapacity()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@4b4dd216]" started-at="2024-08-28T15:24:18 EDT" name="testSetCapacityAndGetCapacity" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSetCapacityAndGetCapacity -->
-        <test-method signature="testSetCurrentStockAndGetCurrentStock()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@4b4dd216]" started-at="2024-08-28T15:24:18 EDT" name="testSetCurrentStockAndGetCurrentStock" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testSetCurrentStockAndGetCurrentStock()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@5ca17ab0]" started-at="2024-08-28T17:03:25 EDT" name="testSetCurrentStockAndGetCurrentStock" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetCurrentStockAndGetCurrentStock -->
-        <test-method signature="testSetIdAndGetId()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@4b4dd216]" started-at="2024-08-28T15:24:18 EDT" name="testSetIdAndGetId" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
+        <test-method signature="testSetCapacityAndGetCapacity()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@5ca17ab0]" started-at="2024-08-28T17:03:25 EDT" name="testSetCapacityAndGetCapacity" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSetIdAndGetId -->
-        <test-method is-config="true" signature="setupWarehouse()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@4b4dd216]" started-at="2024-08-28T15:24:18 EDT" name="setupWarehouse" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupWarehouse -->
-        <test-method is-config="true" signature="setupWarehouse()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@4b4dd216]" started-at="2024-08-28T15:24:18 EDT" name="setupWarehouse" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        </test-method> <!-- testSetCapacityAndGetCapacity -->
+        <test-method is-config="true" signature="setupWarehouse()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@5ca17ab0]" started-at="2024-08-28T17:03:25 EDT" name="setupWarehouse" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupWarehouse -->
-        <test-method signature="testSetLocationAndGetLocation()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@4b4dd216]" started-at="2024-08-28T15:24:18 EDT" name="testSetLocationAndGetLocation" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupWarehouse()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@5ca17ab0]" started-at="2024-08-28T17:03:25 EDT" name="setupWarehouse" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSetLocationAndGetLocation -->
-        <test-method signature="testWarehouseToString()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@4b4dd216]" started-at="2024-08-28T15:24:18 EDT" name="testWarehouseToString" finished-at="2024-08-28T15:24:18 EDT" duration-ms="2" status="PASS">
+        </test-method> <!-- setupWarehouse -->
+        <test-method signature="testWarehouseToString()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@5ca17ab0]" started-at="2024-08-28T17:03:25 EDT" name="testWarehouseToString" finished-at="2024-08-28T17:03:25 EDT" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testWarehouseToString -->
-        <test-method is-config="true" signature="setupWarehouse()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@4b4dd216]" started-at="2024-08-28T15:24:18 EDT" name="setupWarehouse" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testSetLocationAndGetLocation()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@5ca17ab0]" started-at="2024-08-28T17:03:25 EDT" name="testSetLocationAndGetLocation" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetLocationAndGetLocation -->
+        <test-method signature="testSetIdAndGetId()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@5ca17ab0]" started-at="2024-08-28T17:03:25 EDT" name="testSetIdAndGetId" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetIdAndGetId -->
+        <test-method is-config="true" signature="setupWarehouse()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@5ca17ab0]" started-at="2024-08-28T17:03:25 EDT" name="setupWarehouse" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupWarehouse -->
-        <test-method is-config="true" signature="setupWarehouse()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@4b4dd216]" started-at="2024-08-28T15:24:18 EDT" name="setupWarehouse" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupWarehouse()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@5ca17ab0]" started-at="2024-08-28T17:03:25 EDT" name="setupWarehouse" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupWarehouse -->
+        <test-method is-config="true" signature="setupWarehouse()[pri:0, instance:com.skillstorm.project_one.WarehouseModelTest@5ca17ab0]" started-at="2024-08-28T17:03:25 EDT" name="setupWarehouse" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupWarehouse -->
       </class> <!-- com.skillstorm.project_one.WarehouseModelTest -->
       <class name="com.skillstorm.project_one.OrderUnitTests">
-        <test-method signature="testGetters()[pri:0, instance:com.skillstorm.project_one.OrderUnitTests@4d411036]" started-at="2024-08-28T15:24:18 EDT" name="testGetters" finished-at="2024-08-28T15:24:18 EDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGetters -->
-        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.OrderUnitTests@4d411036]" started-at="2024-08-28T15:24:18 EDT" name="init" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.OrderUnitTests@7adbd080]" started-at="2024-08-28T17:03:25 EDT" name="init" finished-at="2024-08-28T17:03:25 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="testSetters()[pri:0, instance:com.skillstorm.project_one.OrderUnitTests@4d411036]" started-at="2024-08-28T15:24:18 EDT" name="testSetters" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testGetters()[pri:0, instance:com.skillstorm.project_one.OrderUnitTests@7adbd080]" started-at="2024-08-28T17:03:25 EDT" name="testGetters" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetters -->
+        <test-method signature="testSetters()[pri:0, instance:com.skillstorm.project_one.OrderUnitTests@7adbd080]" started-at="2024-08-28T17:03:25 EDT" name="testSetters" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetters -->
-        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.OrderUnitTests@4d411036]" started-at="2024-08-28T15:24:18 EDT" name="init" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.OrderUnitTests@7adbd080]" started-at="2024-08-28T17:03:25 EDT" name="init" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
       </class> <!-- com.skillstorm.project_one.OrderUnitTests -->
       <class name="com.skillstorm.project_one.CandyUnitTests">
-        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.CandyUnitTests@35293c05]" started-at="2024-08-28T15:24:17 EDT" name="init" finished-at="2024-08-28T15:24:17 EDT" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.skillstorm.project_one.CandyUnitTests@620aa4ea]" started-at="2024-08-28T17:03:24 EDT" name="init" finished-at="2024-08-28T17:03:24 EDT" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="testGetters()[pri:0, instance:com.skillstorm.project_one.CandyUnitTests@35293c05]" started-at="2024-08-28T15:24:18 EDT" name="testGetters" finished-at="2024-08-28T15:24:18 EDT" duration-ms="10" status="PASS">
+        <test-method signature="testGetters()[pri:0, instance:com.skillstorm.project_one.CandyUnitTests@620aa4ea]" started-at="2024-08-28T17:03:25 EDT" name="testGetters" finished-at="2024-08-28T17:03:25 EDT" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetters -->
-        <test-method signature="testSetters()[pri:0, instance:com.skillstorm.project_one.CandyUnitTests@35293c05]" started-at="2024-08-28T15:24:18 EDT" name="testSetters" finished-at="2024-08-28T15:24:18 EDT" duration-ms="0" status="PASS">
+        <test-method signature="testSetters()[pri:0, instance:com.skillstorm.project_one.CandyUnitTests@620aa4ea]" started-at="2024-08-28T17:03:25 EDT" name="testSetters" finished-at="2024-08-28T17:03:25 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetters -->
-        <test-method signature="testToString()[pri:0, instance:com.skillstorm.project_one.CandyUnitTests@35293c05]" started-at="2024-08-28T15:24:18 EDT" name="testToString" finished-at="2024-08-28T15:24:18 EDT" duration-ms="3" status="PASS">
+        <test-method signature="testToString()[pri:0, instance:com.skillstorm.project_one.CandyUnitTests@620aa4ea]" started-at="2024-08-28T17:03:25 EDT" name="testToString" finished-at="2024-08-28T17:03:25 EDT" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testToString -->
