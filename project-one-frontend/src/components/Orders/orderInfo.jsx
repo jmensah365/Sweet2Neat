@@ -127,10 +127,30 @@ const OrderInfo = () => {
             } else{
                 setOrderItem([...orderItem, data]); //update the state with the new order item
             }
-            setNewOrderItem({orderId: '', candyId: '', price: '', quantity: '',}); // reset form
+            setNewOrderItem({orderId: '', candyId: '', price: '', quantity: ''}); // reset form
             setSuccessMessage(editingOrderItem ? 'Updated order item successfully!' : 'Added order item successfully!');
+            refreshWarehouseDetails();
         })
         .catch(err => setError('Failed to update order item'));
+    }
+
+    
+    const refreshWarehouseDetails = () => {
+        fetch(orderItemUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(returnedData => {
+                setOrderItem(returnedData);
+                setLoaded(true);
+            })
+            .catch(err => {
+                setError(err);
+                setLoaded(true);
+            });
     }
 
     //sets orderItem to edit
@@ -252,7 +272,7 @@ const OrderInfo = () => {
                     margin='normal'
                     className='textField'
                 />
-            <Button name='orderInfoBtn' type='submit' variant='contained' color='primary'>
+                <Button name='orderInfoBtn' type='submit' variant='contained' color='primary'>
                     {editingOrderItem ? 'Update order item' : 'Add order item'}
                 </Button>
                 {editingOrderItem && (

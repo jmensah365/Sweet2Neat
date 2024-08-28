@@ -29,10 +29,6 @@ Feature: Order CRUD operations
         Given I am on the order list page
 		When I click the delete button
 		Then The order should not be visible in the order list page
-    Scenario: Delete an order
-        Given I am on the order list page
-		When I click the delete icon
-		Then The order should not be visible in the order list page
 
 
 

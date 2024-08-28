@@ -138,9 +138,30 @@ const WarehouseStocks = () => {
             }
             setNewStock({candyId: '', warehouseId: '', quantity: ''});
             setSuccessMessage(editingStock ? 'Updated stock successfully!' : 'Added stock successfully!');
+            refreshWarehouseDetails();
+            
         })
         .catch(err => setError('Failed to update stock'));
     };
+
+    const refreshWarehouseDetails = () => {
+        fetch(stockUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(returnedData => {
+                setStocks(returnedData);
+                setLoaded(true);
+            })
+            .catch(err => {
+                setError("Failed to fetch");
+                setLoaded(true);
+            });
+    }
+
 
     const handleEdit = (stock) => {
         setEditingStock(stock);

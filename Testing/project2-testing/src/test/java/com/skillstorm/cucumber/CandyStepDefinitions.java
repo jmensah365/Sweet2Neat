@@ -101,7 +101,9 @@ public class CandyStepDefinitions {
     }
 
     @Then("I should see an error message indicating invalid input")
-    public void iShouldSeeAnErrorMessageIndicatingInvalidInput(){}
+    public void iShouldSeeAnErrorMessageIndicatingInvalidInput(){
+        candyList.errorMessageDisplayed();
+    }
 
 
 }

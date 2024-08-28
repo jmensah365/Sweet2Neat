@@ -29,6 +29,7 @@ const CandyList = () => {
 
     const [editingCandy, setEditingCandy] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
     const [validationErrors, setValidationErrors] = useState({});
 
     //fetch the candy data from the API endpoint when the component mounts
@@ -62,20 +63,39 @@ const CandyList = () => {
     };
 
     const validateCandyData = (data) => {
-        const errors = {};
-        if (data.price < 0) {
-            errors.price = 'Price must be a positive number';
+        let errorMessages = [];
+
+        if (data.name.trim() === '') {
+            errorMessages.push('Name is required');
+        }
+
+        if(!data.type){
+            errorMessages.push("Candy type is required")
+        }
+    
+        if (data.flavor.trim() === '') {
+            errorMessages.push('Flavor is required');
+        }
+        if (data.price < 0 || data.price.trim() === '') {
+            errorMessages.push('Price must be a positive number');
         }
         if (isNaN(data.price)) {
-            errors.price = 'Price cannot contain letters';
+            errorMessages.push('Price cannot contain letters');
         }
-        if (data.weight <= 0) {
-            errors.weight = 'Weight must be a positive number';
+        if (data.weight <= 0 || data.weight.trim() === '') {
+            errorMessages.push('Weight must be a positive number');
         }
         if (isNaN(data.weight)) {
-            errors.weight = 'Weight cannot contain letters';
+            errorMessages.push('Weight cannot contain letters');
         }
-        return errors;
+    
+        if (errorMessages.length > 0) {
+            setErrorMessage(errorMessages.join(', and '));
+            return false;
+        }
+
+        
+        return true; // No errors
     };
 
     //handle form submission for adding or updating candy
@@ -84,10 +104,10 @@ const CandyList = () => {
         const candyData = editingCandy || newCandy;
         const method = editingCandy ? 'PUT' : 'POST';
         const endpoint = editingCandy ? `${url}/${editingCandy.candyId}` : url;
-        const validationErrors = validateCandyData(candyData)
-        if (Object.keys(validationErrors).length > 0) {
-            setValidationErrors(validationErrors);
-            return;
+        // Validate candy data
+        const isValid = validateCandyData(candyData);
+        if (!isValid) {
+            return; // Stop form submission if validation fails
         }
     
         fetch(endpoint, {
@@ -117,14 +137,14 @@ const CandyList = () => {
             setNewCandy({flavor: '', name: '', price: '', type: '', weight: ''});
             setSuccessMessage(editingCandy ? 'Successfully updated candy!' : 'Successfully added candy!');
 
-            refreshWarehouseDetails();
+            refreshCandyDetails();
         })
         .catch(err => {
             setError(err);
         });
     };
 
-    const refreshWarehouseDetails = () => {
+    const refreshCandyDetails = () => {
         fetch(url)
             .then(response => {
                 if (!response.ok) {
@@ -167,6 +187,7 @@ const CandyList = () => {
 
     const handleCloseSnackbar = () => {
         setSuccessMessage('');
+        setErrorMessage('');
     }
 
     if (error) {
@@ -186,7 +207,6 @@ const CandyList = () => {
                     value={editingCandy ? editingCandy.name : newCandy.name}
                     onChange={handleInputChange}
                     fullWidth
-                    required
                     margin='normal'
                     className='textField'
                 />
@@ -209,12 +229,12 @@ const CandyList = () => {
                         id="candyTypeSelect"
                         value ={editingCandy ? editingCandy.type : newCandy.type}
                         name="type"
-                        required
                         onChange={handleInputChange}
                         sx={{
                             textAlign:'left'
                         }}
                     >
+                        <MenuItem value=""> </MenuItem>
                         <MenuItem value={"Gummy Candy"}>Gummy Candy</MenuItem>
                         <MenuItem value={"Chocolate Candy"}>Chocolate Candy</MenuItem>
                         <MenuItem value={"Sour Candy"}>Sour Candy</MenuItem>
@@ -228,7 +248,6 @@ const CandyList = () => {
                     value={editingCandy ? editingCandy.flavor : newCandy.flavor}
                     onChange={handleInputChange}
                     fullWidth
-                    required
                     margin='normal'
                     className='textField'
                 />
@@ -238,9 +257,6 @@ const CandyList = () => {
                     value={editingCandy ? editingCandy.price : newCandy.price}
                     onChange={handleInputChange}
                     fullWidth
-                    required
-                    error={!!validationErrors.price}
-                    helperText={validationErrors.price}
                     margin='normal'
                     className='textField'
                 />
@@ -250,9 +266,6 @@ const CandyList = () => {
                     value={editingCandy ? editingCandy.weight : newCandy.weight}
                     onChange={handleInputChange}
                     fullWidth
-                    required
-                    error={!!validationErrors.weight}
-                    helperText={validationErrors.weight}
                     margin='normal'
                     className='textField'
                 />
@@ -313,6 +326,19 @@ const CandyList = () => {
                 severity='success'
                 >
                     {successMessage}
+                </Alert>
+            </Snackbar>
+            <Snackbar 
+            open={!!errorMessage}
+            name='candyListSnackbarError'
+            autoHideDuration={60000}
+            onClose={handleCloseSnackbar}
+            > 
+                <Alert
+                onClose={handleCloseSnackbar}
+                severity='error'
+                >
+                    {errorMessage}
                 </Alert>
             </Snackbar>
         </>
