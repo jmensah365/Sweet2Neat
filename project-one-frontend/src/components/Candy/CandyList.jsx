@@ -29,6 +29,7 @@ const CandyList = () => {
 
     const [editingCandy, setEditingCandy] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
+    const [validationErrors, setValidationErrors] = useState({});
 
     //fetch the candy data from the API endpoint when the component mounts
     useEffect(() => {
@@ -60,12 +61,34 @@ const CandyList = () => {
         }
     };
 
+    const validateCandyData = (data) => {
+        const errors = {};
+        if (data.price < 0) {
+            errors.price = 'Price must be a positive number';
+        }
+        if (isNaN(data.price)) {
+            errors.price = 'Price cannot contain letters';
+        }
+        if (data.weight <= 0) {
+            errors.weight = 'Weight must be a positive number';
+        }
+        if (isNaN(data.weight)) {
+            errors.weight = 'Weight cannot contain letters';
+        }
+        return errors;
+    };
+
     //handle form submission for adding or updating candy
     const handleSubmit = (e) => {
         e.preventDefault();
         const candyData = editingCandy || newCandy;
         const method = editingCandy ? 'PUT' : 'POST';
         const endpoint = editingCandy ? `${url}/${editingCandy.candyId}` : url;
+        const validationErrors = validateCandyData(candyData)
+        if (Object.keys(validationErrors).length > 0) {
+            setValidationErrors(validationErrors);
+            return;
+        }
     
         fetch(endpoint, {
             method: method,
@@ -216,6 +239,8 @@ const CandyList = () => {
                     onChange={handleInputChange}
                     fullWidth
                     required
+                    error={!!validationErrors.price}
+                    helperText={validationErrors.price}
                     margin='normal'
                     className='textField'
                 />
@@ -226,6 +251,8 @@ const CandyList = () => {
                     onChange={handleInputChange}
                     fullWidth
                     required
+                    error={!!validationErrors.weight}
+                    helperText={validationErrors.weight}
                     margin='normal'
                     className='textField'
                 />
