@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OrdersService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project-one</a> &gt; <a href="index.source.html" class="el_package">com.skillstorm.project_one.Services</a> &gt; <span class="el_source">OrdersService.java</span></div><h1>OrdersService.java</h1><pre class="source lang-java linenums">package com.skillstorm.project_one.Services;
+
+import java.util.NoSuchElementException;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.skillstorm.project_one.Models.Orders;
+import com.skillstorm.project_one.Repositories.OrdersRepo;
+
+/**
+ * Service class for managing orders-related operations.
+ */
+@Service
+public class OrdersService {
+    
+    private OrdersRepo repo;
+
+    // Constructor injection for OrdersRepo
+<span class="fc" id="L20">    public OrdersService(OrdersRepo repo) {</span>
+<span class="fc" id="L21">        this.repo = repo;</span>
+<span class="fc" id="L22">    }</span>
+
+    /**
+     * Retrieve all Orders 
+     * @return Iterable of Orders entities
+     */
+    public Iterable&lt;Orders&gt; findAll() {
+<span class="nc" id="L29">        return repo.findAllByOrderByIdAsc();</span>
+    }
+
+    /**
+     * Retrieve an Orders by its ID
+     * @param id The ID of the Orders entity
+     * @return Optional containing the Orders entity, if found
+     */
+    public Optional&lt;Orders&gt; getOrdersById(int id) {
+<span class="nc" id="L38">        return repo.findById(id);</span>
+    }
+
+    /**
+     * Retrieve Orders entities by their status
+     * @param status The status of the Orders entities
+     * @return Iterable of Orders entities with the specified status
+     */
+    public Iterable&lt;Orders&gt; getOrdersByStatus(String status) {
+<span class="nc" id="L47">        return repo.findByStatus(status);</span>
+    }
+
+    /**
+     * Create a new Orders entity
+     * @param orders The Orders entity to create
+     * @return The created Orders entity
+     */
+    public Orders createOrders(Orders orders) {
+<span class="nc" id="L56">        return repo.save(orders);</span>
+    }
+
+    /**
+     * Update an existing Orders entity.
+     * @param id The ID of the existing Orders entity
+     * @param order The Orders entity with updated data
+     */
+    public void updateOrders(int id, Orders order) {
+<span class="nc bnc" id="L65" title="All 2 branches missed.">        if (!repo.existsById(id)) {</span>
+<span class="nc" id="L66">            throw new NoSuchElementException(&quot;Order with id &quot; + id + &quot; does not exist&quot;);</span>
+        }
+<span class="nc" id="L68">        order.setId(id);</span>
+<span class="nc" id="L69">        repo.save(order);</span>
+<span class="nc" id="L70">    }</span>
+
+    /**
+     * Delete an Orders entity by its ID
+     * @param id The ID of the Orders entity to delete
+     */
+    public void deleteOrder(int id) {
+<span class="nc" id="L77">        repo.deleteById(id);</span>
+<span class="nc" id="L78">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
