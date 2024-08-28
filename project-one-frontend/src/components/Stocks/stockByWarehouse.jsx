@@ -239,7 +239,7 @@ const WarehouseStocks = () => {
                         onChange={handleInputChange}
                         sx={{ textAlign:'left' }}
                     >
-                        <MenuItem value="">Clear Field</MenuItem>
+                        <MenuItem value="" style={{ color: 'red' }}>Clear Field</MenuItem>
                         {warehouseIds.map(warehouse => (
                             <MenuItem key={warehouse.id} value={warehouse.id}>{warehouse.location}</MenuItem>
                         ))}
