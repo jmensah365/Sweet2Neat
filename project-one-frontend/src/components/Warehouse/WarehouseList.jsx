@@ -9,26 +9,21 @@ import EditIcon from '@mui/icons-material/Edit'
 import DeleteIcon from '@mui/icons-material/Delete'
 
 const WarehouseList = () => {
-    // defines whether local or remote host
     const apiUrl = import.meta.env.VITE_API_URL;
     const url = `${apiUrl}/warehouse`;
-    
-    //hook to keep track of warehouses
+
     const [warehouses, setWarehouses] = useState([]);
     const [newWarehouse, setNewWarehouse] = useState({
         location: '',
         capacity: '',
         currentStock: ''
     });
-
-    const [loaded, setLoaded] = useState(false);
-    const [error, setError] = useState(null);
-    
-
     const [editingWarehouse, setEditingWarehouse] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
+    const [error, setError] = useState(null);
+    const [loaded, setLoaded] = useState(false);
+    const [validationErrors, setValidationErrors] = useState({});
 
-    //Fetch warehouses from the backend on component mount
     useEffect(() => {
         fetch(url)
             .then(response => {
@@ -48,20 +43,41 @@ const WarehouseList = () => {
             });
     }, []);
 
-    //Handle input changes for both new and editing warehouse forms
     const handleInputChange = (e) => {
         const {name, value} = e.target;
-        if(editingWarehouse){
+        if (editingWarehouse) {
             setEditingWarehouse({...editingWarehouse, [name]: value});
-        } else{
+        } else {
             setNewWarehouse({...newWarehouse, [name]: value});
         }
     };
 
-    //Handle form submission for adding or editing a warehouse
+    const validateWarehouseData = (data) => {
+        const errors = {};
+        const capacity = parseFloat(data.capacity);
+        const currentStock = parseFloat(data.currentStock);
+        if (data.capacity < 0) {
+            errors.capacity = 'Capacity must be a positive number';
+        }
+        if (isNaN(data.capacity)) {
+            errors.capacity = 'Capacity cannot contain letters';
+        }
+
+        if (currentStock > capacity){
+            errors.capacity = 'Current stock cannot exceed capacity'
+        }
+        return errors;
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const warehouseData = editingWarehouse || newWarehouse;
+        const validationErrors = validateWarehouseData(warehouseData);
+        if (Object.keys(validationErrors).length > 0) {
+            setValidationErrors(validationErrors);
+            return;
+        }
+        
         const method = editingWarehouse ? 'PUT' : 'POST';
         const endpoint = editingWarehouse ? `${url}/${editingWarehouse.id}` : url;
 
@@ -76,21 +92,19 @@ const WarehouseList = () => {
         .then(text => {
             if (text) {
                 return JSON.parse(text);
-            } else{
+            } else {
                 return {};
             }
         })
         .then(data => {
             if (editingWarehouse) {
-                //updating the warehouse in the list
                 setWarehouses(warehouses.map(w => w.id === data.id ? data : w))
                 setEditingWarehouse(null);
-            }else{
+            } else {
                 setWarehouses([...warehouses, data]);
             }
             setNewWarehouse({location: '', capacity: '', currentStock: ''});
             setSuccessMessage(editingWarehouse ? 'Warehouse updated successfully!' : 'Warehouse added successfully!');
-
             refreshWarehouseDetails();
         })
         .catch(err => {
@@ -117,12 +131,10 @@ const WarehouseList = () => {
             });
     }
 
-    // sets the warehouse to edit
     const handleEdit = (warehouse) => {
         setEditingWarehouse(warehouse);
     };
 
-    //handles the deletion of a warehouse
     const handleDelete = (id) => {
         fetch(`${url}/${id}`, {
             method: 'DELETE',
@@ -145,12 +157,11 @@ const WarehouseList = () => {
         return <Alert severity='error'>
             <AlertTitle>Error</AlertTitle>
             {error.message}
-            </Alert>;
+        </Alert>;
     }
 
     return(
         <>
-            
             <Box name='warehouseListBox' component="form" onSubmit={handleSubmit} sx={{ mb: 2, mt: 8, padding: 2, borderRadius: 1, boxShadow: 10 }}>
                 <TextField
                     label='Location'
@@ -171,28 +182,19 @@ const WarehouseList = () => {
                     required
                     margin='normal'
                     className='textField'
-                    
+                    error={!!validationErrors.capacity}
+                    helperText={validationErrors.capacity}
                 />
-                {/* <TextField
-                    label='Current Stock'
-                    name='currentStock'
-                    value={editingWarehouse ? editingWarehouse.currentStock : newWarehouse.currentStock}
-                    onChange={handleInputChange}
-                    fullWidth
-                    required
-                    margin='normal'
-                    className='textField'
-                /> */}
-                <Button name = 'warehouseBtn' type='submit' variant='contained' color='primary'>
+                <Button name='warehouseBtn' type='submit' variant='contained' color='primary'>
                     {editingWarehouse ? 'Update warehouse' : 'Add warehouse'}
                 </Button>
                 {editingWarehouse && (
-                    <Button name = 'cancelEditBtn' variant='contained' color='secondary' onClick={() =>setEditingWarehouse(null)}>
+                    <Button name='cancelEditBtn' variant='contained' color='secondary' onClick={() => setEditingWarehouse(null)}>
                         Cancel edit
                     </Button>
                 )}
             </Box>
-            <Typography name= 'warehouseListTitle' variant="h4" gutterBottom>
+            <Typography name='warehouseListTitle' variant="h4" gutterBottom>
                 Warehouse List
             </Typography>
             <TableContainer component={Paper}>
@@ -212,10 +214,10 @@ const WarehouseList = () => {
                                 <TableCell>{warehouse.location}</TableCell>
                                 <TableCell>{warehouse.currentStock}/{warehouse.capacity}</TableCell>
                                 <TableCell>
-                                    <IconButton name ='editIcon' onClick={() => handleEdit(warehouse)}>
+                                    <IconButton name='editIcon' onClick={() => handleEdit(warehouse)}>
                                         <EditIcon />
                                     </IconButton>
-                                    <IconButton name = 'deleteIcon' onClick={() => handleDelete(warehouse.id)}>
+                                    <IconButton name='deleteIcon' onClick={() => handleDelete(warehouse.id)}>
                                         <DeleteIcon />
                                     </IconButton>
                                 </TableCell>
@@ -224,15 +226,15 @@ const WarehouseList = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
-            <Snackbar 
-            open={!!successMessage}
-            name='WarehouseListSnackbar'
-            autoHideDuration={6000}
-            onClose={handleCloseSnackbar}
+            <Snackbar
+                open={!!successMessage}
+                name='WarehouseListSnackbar'
+                autoHideDuration={6000}
+                onClose={handleCloseSnackbar}
             > 
                 <Alert
-                onClose={handleCloseSnackbar}
-                severity='success'
+                    onClose={handleCloseSnackbar}
+                    severity='success'
                 >
                     {successMessage}
                 </Alert>

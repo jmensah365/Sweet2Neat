@@ -83,12 +83,33 @@ const Orders = () => {
             }
             setNewOrder({customerName: '', orderDate: '', status: '', customerAddress: '',});
             setSuccessMessage(editingOrders ? 'Order updated successfully!' : 'Order added successfully!');
+            refreshWarehouseDetails();
         })
         .catch(err => {
             console.log(err);
             setError('Failed to update order');
         });
     };
+
+
+    const refreshWarehouseDetails = () => {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(returnedData => {
+                const sortedData = returnedData.sort((a,b) => a.id - b.id);
+                setOrder(sortedData);
+                setLoaded(true);
+            })
+            .catch(err => {
+                setError(err);
+                setLoaded(true);
+            });
+    }
 
     //function to handle form input changes
     const handleInputChange = (e) => {
@@ -186,9 +207,6 @@ const Orders = () => {
                                 inputProps: {
                                     name: "orderDatePicker",
                                 },
-                            },
-                            openPickerButton: {
-                                name: "orderDatePickerBtn",
                             },
                         }}
                     />
