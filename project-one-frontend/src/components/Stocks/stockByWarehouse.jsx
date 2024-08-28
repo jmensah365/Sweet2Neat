@@ -30,9 +30,9 @@ const WarehouseStocks = () => {
 
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(null);
-    const [validationErrors, setValidationErrors] = useState({});
     const [editingStock, setEditingStock] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
     useEffect(() => {
         // Fetch stocks
@@ -88,27 +88,40 @@ const WarehouseStocks = () => {
     };
 
     const validateStockData = (data) => {
-        const errors = {};
-        const quantity = parseFloat(data.quantity);
-        const warehouseCapacity = warehouseCapacities[data.warehouseId];
-        
-        if (isNaN(quantity) || quantity < 0) {
-            errors.quantity = 'Quantity must be a non-negative number';
-        } else if (quantity > warehouseCapacity) {
-            errors.quantity = `Quantity cannot exceed warehouse capacity of ${warehouseCapacity}`;
+        let errorMessages = [];
+
+        if (!data.candyId) {
+            errorMessages.push('Candy Name is required');
         }
 
-        return errors;
+        if(!data.warehouseId){
+            errorMessages.push("Warehouse Location is required")
+        }
+    
+        if (data.quantity <= 0 || data.quantity.trim() === '') {
+            errorMessages.push('Quantity must be a number and greater than zero');
+        }
+        if (isNaN(data.quantity)) {
+            errorMessages.push('Quantity cannot contain letters');
+        }
+    
+        if (errorMessages.length > 0) {
+            setErrorMessage(errorMessages.join(', and '));
+            return false;
+        }
+
+        
+        return true; // No errors
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const stockData = editingStock || newStock;
-        const validationErrors = validateStockData(stockData);
 
-        if (Object.keys(validationErrors).length > 0) {
-            setValidationErrors(validationErrors);
-            return;
+        // Validate candy data
+        const isValid = validateStockData(stockData);
+        if (!isValid) {
+            return; // Stop form submission if validation fails
         }
 
         const method = editingStock ? 'PUT' : 'POST';
@@ -180,6 +193,7 @@ const WarehouseStocks = () => {
 
     const handleCloseSnackbar = () => {
         setSuccessMessage('');
+        setErrorMessage('');
     };
 
     if (error) {
@@ -206,10 +220,10 @@ const WarehouseStocks = () => {
                         id="candyIdSelect"
                         value={editingStock ? editingStock.candyId : newStock.candyId}
                         name="candyId"
-                        required
                         onChange={handleInputChange}
                         sx={{ textAlign:'left' }}
                     >
+                        <MenuItem value="" style={{ color: 'red' }}>Clear Field</MenuItem>
                         {candyIds.map(candy => (
                             <MenuItem key={candy.id} value={candy.id}>{candy.name}</MenuItem>
                         ))}
@@ -222,10 +236,10 @@ const WarehouseStocks = () => {
                         id="warehouseIdSelect"
                         value={editingStock ? editingStock.warehouseId : newStock.warehouseId}
                         name="warehouseId"
-                        required
                         onChange={handleInputChange}
                         sx={{ textAlign:'left' }}
                     >
+                        <MenuItem value="">Clear Field</MenuItem>
                         {warehouseIds.map(warehouse => (
                             <MenuItem key={warehouse.id} value={warehouse.id}>{warehouse.location}</MenuItem>
                         ))}
@@ -236,12 +250,9 @@ const WarehouseStocks = () => {
                     name='quantity'
                     value={editingStock ? editingStock.quantity : newStock.quantity}
                     onChange={handleInputChange}
-                    required
                     fullWidth
                     margin='normal'
                     className='textField'
-                    error={!!validationErrors.quantity}
-                    helperText={validationErrors.quantity}
                 />
                 <Button name='warehouseStockBtn' type='submit' variant='contained' color='primary'>
                     {editingStock ? 'Update stock' : 'Add stock'}
@@ -292,6 +303,19 @@ const WarehouseStocks = () => {
             > 
                 <Alert onClose={handleCloseSnackbar} severity='success'>
                     {successMessage}
+                </Alert>
+            </Snackbar>
+            <Snackbar 
+            open={!!errorMessage}
+            name='warehouseStockSnackbarError'
+            autoHideDuration={60000}
+            onClose={handleCloseSnackbar}
+            > 
+                <Alert
+                onClose={handleCloseSnackbar}
+                severity='error'
+                >
+                    {errorMessage}
                 </Alert>
             </Snackbar>
         </>

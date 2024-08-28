@@ -34,7 +34,7 @@ const OrderInfo = () => {
 
     const [editingOrderItem, setEditingOrderItem] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
-    const [validationErrors, setValidationErrors] = useState({});
+    const [errorMessage, setErrorMessage] = useState('');
 
     //fetch order items, orders, and candies when the component mounts
     useEffect(() => {
@@ -83,20 +83,37 @@ const OrderInfo = () => {
     };
 
     const validateOrderItemData = (data) => {
-        const errors = {};
-        if (data.price < 0) {
-            errors.price = 'Price must be a positive number';
+        let errorMessages = [];
+
+        if (!data.customerName) {
+            errorMessages.push('Customer Name is required');
+        }
+
+        if(!data.candyId){
+            errorMessages.push("Candy Name is required")
+        }
+
+        if (data.price < 0 || data.price.trim() === '') {
+            errorMessages.push('Price must be a number and greater than zero');
         }
         if (isNaN(data.price)) {
-            errors.price = 'Price cannot contain letters';
+            errorMessages.push('Price cannot contain letters');
         }
-        if (data.quantity <= 0) {
-            errors.quantity = 'Quantity must be a positive number';
+    
+        if (data.quantity <= 0 || data.quantity.trim() === '') {
+            errorMessages.push('Quantity must be a number and greater than zero');
         }
         if (isNaN(data.quantity)) {
-            errors.quantity = 'Quantity cannot contain letters';
+            errorMessages.push('Quantity cannot contain letters');
         }
-        return errors;
+    
+        if (errorMessages.length > 0) {
+            setErrorMessage(errorMessages.join(', and '));
+            return false;
+        }
+
+        
+        return true; // No errors
     };
 
     //handle form submission for adding or updating an order item
@@ -105,10 +122,10 @@ const OrderInfo = () => {
         const orderItemData = editingOrderItem || newOrderItem;
         const method = editingOrderItem ? 'PUT' : 'POST';
         const endpoint = editingOrderItem ? `${orderItemUrl}/${editingOrderItem.id}` : orderItemUrl;
-        const validationErrors = validateOrderItemData(orderItemData)
-        if (Object.keys(validationErrors).length > 0) {
-            setValidationErrors(validationErrors);
-            return;
+        // Validate order information data
+        const isValid = validateOrderItemData(orderItemData);
+        if (!isValid) {
+            return; // Stop form submission if validation fails
         }
 
         fetch(endpoint, {
@@ -173,6 +190,7 @@ const OrderInfo = () => {
 
     const handleCloseSnackbar = () => {
         setSuccessMessage('');
+        setErrorMessage('');
     }
 
     if (!loaded) {
@@ -209,14 +227,14 @@ const OrderInfo = () => {
                         id="orderIdSelect"
                         value={editingOrderItem ? editingOrderItem.orderId : newOrderItem.orderId}
                         name="orderId"
-                        required
                         onChange={handleInputChange}
                         sx={{
                             textAlign:'left'
                         }}
                     >
+                        <MenuItem value="" style={{ color: 'red' }}>Clear Field</MenuItem>
                         {orderInfo.map(order => (
-                            <MenuItem key={order.id} value={order.id}>{order.name}</MenuItem>
+                            <MenuItem key={order.id} color='red' value={order.id}>{order.name}</MenuItem>
                         ))}
                     </Select>
                 </FormControl>
@@ -237,12 +255,12 @@ const OrderInfo = () => {
                         id="candySelect"
                         value={editingOrderItem ? editingOrderItem.candyId : newOrderItem.candyId}
                         name="candyId"
-                        required
                         onChange={handleInputChange}
                         sx={{
                             textAlign:'left'
                         }}
                     >
+                        <MenuItem value="" style={{ color: 'red' }}>Clear Field</MenuItem>
                         {candyIds.map(candy => (
                             <MenuItem key={candy.id} value={candy.id}>{candy.name}</MenuItem>
                         ))}
@@ -253,10 +271,7 @@ const OrderInfo = () => {
                     name='price'
                     value={editingOrderItem ? editingOrderItem.price : newOrderItem.price}
                     onChange={handleInputChange}
-                    required
                     fullWidth
-                    error={!!validationErrors.price}
-                    helperText={validationErrors.price}
                     margin='normal'
                     className='textField'
                 />
@@ -265,10 +280,7 @@ const OrderInfo = () => {
                     name='quantity'
                     value={editingOrderItem ? editingOrderItem.quantity : newOrderItem.quantity}
                     onChange={handleInputChange}
-                    required
                     fullWidth
-                    error={!!validationErrors.quantity}
-                    helperText={validationErrors.quantity}
                     margin='normal'
                     className='textField'
                 />
@@ -330,7 +342,7 @@ const OrderInfo = () => {
             </Snackbar>
             <Snackbar 
             open={!!errorMessage}
-            name='candyListSnackbarError'
+            name='orderInfoSnackbarError'
             autoHideDuration={60000}
             onClose={handleCloseSnackbar}
             > 

@@ -22,7 +22,9 @@ const WarehouseList = () => {
     const [successMessage, setSuccessMessage] = useState('');
     const [error, setError] = useState(null);
     const [loaded, setLoaded] = useState(false);
-    const [validationErrors, setValidationErrors] = useState({});
+    const [errorMessage, setErrorMessage] = useState('');
+    
+
 
     useEffect(() => {
         fetch(url)
@@ -53,33 +55,41 @@ const WarehouseList = () => {
     };
 
     const validateWarehouseData = (data) => {
-        const errors = {};
-        const capacity = parseFloat(data.capacity);
-        const currentStock = parseFloat(data.currentStock);
-        if (data.capacity < 0) {
-            errors.capacity = 'Capacity must be a positive number';
+        let errorMessages = [];
+
+        if (data.location.trim() === '') {
+            errorMessages.push('Location is required');
         }
-        if (isNaN(data.capacity)) {
-            errors.capacity = 'Capacity cannot contain letters';
+    
+        if (data.capacity < 0 || data.capacity.trim() === '') {
+            errorMessages.push('Capacity must be a positive number');
         }
 
-        if (currentStock > capacity){
-            errors.capacity = 'Current stock cannot exceed capacity'
+        if (isNaN(data.capacity)) {
+            errorMessages.push('Capacity cannot contain letters');
         }
-        return errors;
+
+        if (errorMessages.length > 0) {
+            setErrorMessage(errorMessages.join(', and '));
+            return false;
+        }
+
+        
+        return true; // No errors
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const warehouseData = editingWarehouse || newWarehouse;
-        const validationErrors = validateWarehouseData(warehouseData);
-        if (Object.keys(validationErrors).length > 0) {
-            setValidationErrors(validationErrors);
-            return;
-        }
         
         const method = editingWarehouse ? 'PUT' : 'POST';
         const endpoint = editingWarehouse ? `${url}/${editingWarehouse.id}` : url;
+
+        // Validate warehouse data
+        const isValid = validateWarehouseData(warehouseData);
+        if (!isValid) {
+            return; // Stop form submission if validation fails
+        }
 
         fetch(endpoint, {
             method: method,
@@ -133,6 +143,7 @@ const WarehouseList = () => {
 
     const handleEdit = (warehouse) => {
         setEditingWarehouse(warehouse);
+        setErrorMessage('');
     };
 
     const handleDelete = (id) => {
@@ -169,7 +180,6 @@ const WarehouseList = () => {
                     value={editingWarehouse ? editingWarehouse.location : newWarehouse.location}
                     onChange={handleInputChange}
                     fullWidth
-                    required
                     margin='normal'
                     className='textField'
                 />
@@ -179,11 +189,8 @@ const WarehouseList = () => {
                     value={editingWarehouse ? editingWarehouse.capacity : newWarehouse.capacity}
                     onChange={handleInputChange}
                     fullWidth
-                    required
                     margin='normal'
                     className='textField'
-                    error={!!validationErrors.capacity}
-                    helperText={validationErrors.capacity}
                 />
                 <Button name='warehouseBtn' type='submit' variant='contained' color='primary'>
                     {editingWarehouse ? 'Update warehouse' : 'Add warehouse'}
@@ -237,6 +244,19 @@ const WarehouseList = () => {
                     severity='success'
                 >
                     {successMessage}
+                </Alert>
+            </Snackbar>
+            <Snackbar 
+            open={!!errorMessage}
+            name='warehouseListSnackbarError'
+            autoHideDuration={60000}
+            onClose={handleCloseSnackbar}
+            > 
+                <Alert
+                onClose={handleCloseSnackbar}
+                severity='error'
+                >
+                    {errorMessage}
                 </Alert>
             </Snackbar>
         </>
