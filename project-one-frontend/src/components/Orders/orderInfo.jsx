@@ -34,6 +34,7 @@ const OrderInfo = () => {
 
     const [editingOrderItem, setEditingOrderItem] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
+    const [validationErrors, setValidationErrors] = useState({});
 
     //fetch order items, orders, and candies when the component mounts
     useEffect(() => {
@@ -81,12 +82,34 @@ const OrderInfo = () => {
         }
     };
 
+    const validateOrderItemData = (data) => {
+        const errors = {};
+        if (data.price < 0) {
+            errors.price = 'Price must be a positive number';
+        }
+        if (isNaN(data.price)) {
+            errors.price = 'Price cannot contain letters';
+        }
+        if (data.quantity <= 0) {
+            errors.quantity = 'Quantity must be a positive number';
+        }
+        if (isNaN(data.quantity)) {
+            errors.quantity = 'Quantity cannot contain letters';
+        }
+        return errors;
+    };
+
     //handle form submission for adding or updating an order item
     const handleSubmit = (e) => {
         e.preventDefault();
         const orderItemData = editingOrderItem || newOrderItem;
         const method = editingOrderItem ? 'PUT' : 'POST';
         const endpoint = editingOrderItem ? `${orderItemUrl}/${editingOrderItem.id}` : orderItemUrl;
+        const validationErrors = validateOrderItemData(orderItemData)
+        if (Object.keys(validationErrors).length > 0) {
+            setValidationErrors(validationErrors);
+            return;
+        }
 
         fetch(endpoint, {
             method: method,
@@ -104,10 +127,30 @@ const OrderInfo = () => {
             } else{
                 setOrderItem([...orderItem, data]); //update the state with the new order item
             }
-            setNewOrderItem({orderId: '', candyId: '', price: '', quantity: '',}); // reset form
+            setNewOrderItem({orderId: '', candyId: '', price: '', quantity: ''}); // reset form
             setSuccessMessage(editingOrderItem ? 'Updated order item successfully!' : 'Added order item successfully!');
+            refreshWarehouseDetails();
         })
         .catch(err => setError('Failed to update order item'));
+    }
+
+    
+    const refreshWarehouseDetails = () => {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(returnedData => {
+                setOrderItem(returnedData);
+                setLoaded(true);
+            })
+            .catch(err => {
+                setError(err);
+                setLoaded(true);
+            });
     }
 
     //sets orderItem to edit
@@ -212,6 +255,8 @@ const OrderInfo = () => {
                     onChange={handleInputChange}
                     required
                     fullWidth
+                    error={!!validationErrors.price}
+                    helperText={validationErrors.price}
                     margin='normal'
                     className='textField'
                 />
@@ -222,10 +267,12 @@ const OrderInfo = () => {
                     onChange={handleInputChange}
                     required
                     fullWidth
+                    error={!!validationErrors.quantity}
+                    helperText={validationErrors.quantity}
                     margin='normal'
                     className='textField'
                 />
-            <Button name='orderInfoBtn' type='submit' variant='contained' color='primary'>
+                <Button name='orderInfoBtn' type='submit' variant='contained' color='primary'>
                     {editingOrderItem ? 'Update order item' : 'Add order item'}
                 </Button>
                 {editingOrderItem && (
