@@ -34,6 +34,7 @@ const OrderInfo = () => {
 
     const [editingOrderItem, setEditingOrderItem] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
+    const [validationErrors, setValidationErrors] = useState({});
 
     //fetch order items, orders, and candies when the component mounts
     useEffect(() => {
@@ -81,12 +82,34 @@ const OrderInfo = () => {
         }
     };
 
+    const validateOrderItemData = (data) => {
+        const errors = {};
+        if (data.price < 0) {
+            errors.price = 'Price must be a positive number';
+        }
+        if (isNaN(data.price)) {
+            errors.price = 'Price cannot contain letters';
+        }
+        if (data.quantity <= 0) {
+            errors.quantity = 'Quantity must be a positive number';
+        }
+        if (isNaN(data.quantity)) {
+            errors.quantity = 'Quantity cannot contain letters';
+        }
+        return errors;
+    };
+
     //handle form submission for adding or updating an order item
     const handleSubmit = (e) => {
         e.preventDefault();
         const orderItemData = editingOrderItem || newOrderItem;
         const method = editingOrderItem ? 'PUT' : 'POST';
         const endpoint = editingOrderItem ? `${orderItemUrl}/${editingOrderItem.id}` : orderItemUrl;
+        const validationErrors = validateOrderItemData(orderItemData)
+        if (Object.keys(validationErrors).length > 0) {
+            setValidationErrors(validationErrors);
+            return;
+        }
 
         fetch(endpoint, {
             method: method,
@@ -212,6 +235,8 @@ const OrderInfo = () => {
                     onChange={handleInputChange}
                     required
                     fullWidth
+                    error={!!validationErrors.price}
+                    helperText={validationErrors.price}
                     margin='normal'
                     className='textField'
                 />
@@ -222,6 +247,8 @@ const OrderInfo = () => {
                     onChange={handleInputChange}
                     required
                     fullWidth
+                    error={!!validationErrors.quantity}
+                    helperText={validationErrors.quantity}
                     margin='normal'
                     className='textField'
                 />
