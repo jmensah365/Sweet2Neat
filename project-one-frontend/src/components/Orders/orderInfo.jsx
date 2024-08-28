@@ -328,6 +328,19 @@ const OrderInfo = () => {
                     {successMessage}
                 </Alert>
             </Snackbar>
+            <Snackbar 
+            open={!!errorMessage}
+            name='candyListSnackbarError'
+            autoHideDuration={60000}
+            onClose={handleCloseSnackbar}
+            > 
+                <Alert
+                onClose={handleCloseSnackbar}
+                severity='error'
+                >
+                    {errorMessage}
+                </Alert>
+            </Snackbar>
         </>
     );
 };
