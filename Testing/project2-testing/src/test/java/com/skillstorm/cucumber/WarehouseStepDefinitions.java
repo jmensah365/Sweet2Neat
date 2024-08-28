@@ -84,7 +84,7 @@ public class WarehouseStepDefinitions {
     }
 
     //======================= READ =========================
-    @Given("Given I am on the home page")
+    @Given("I am on the home page")
     public void givenIAmOnTheHomePage() {
         this.warehouseList.getHomeURL();
     }

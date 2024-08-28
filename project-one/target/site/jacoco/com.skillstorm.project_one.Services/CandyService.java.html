@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CandyService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project-one</a> &gt; <a href="index.source.html" class="el_package">com.skillstorm.project_one.Services</a> &gt; <span class="el_source">CandyService.java</span></div><h1>CandyService.java</h1><pre class="source lang-java linenums">package com.skillstorm.project_one.Services;
+
+import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.skillstorm.project_one.Models.Candy;
+import com.skillstorm.project_one.Repositories.CandyRepo;
+
+/**
+ * Service class for managing operations related to Candy entities.
+ */
+@Service
+public class CandyService {
+    
+    private CandyRepo repo;
+
+    // Constructor injection for CandyRepo
+<span class="nc" id="L21">    public CandyService(CandyRepo repo){</span>
+<span class="nc" id="L22">        this.repo = repo;</span>
+<span class="nc" id="L23">    }</span>
+
+    // Retrieve all Candy entities from the repo
+    public List&lt;Candy&gt; findAll(){
+        // return repo.findAll();
+<span class="nc" id="L28">        return repo.findAllByOrderByIdAsc();</span>
+    }
+
+
+    /**
+     * Retrieve a Candy entity by its ID
+     * @param id ID of the candy entity
+     * @return A candy entity
+     */
+    public Optional&lt;Candy&gt; findById(int id){
+<span class="nc" id="L38">        return repo.findById(id);</span>
+    }
+
+
+    /**
+     * Retrieve a list of Candy entities by their flavor
+     * @param flavor the flavor field associated with the candy entity
+     * @return A list of candy entities matching flavor
+     */
+    public List&lt;Candy&gt; findByFlavor(String flavor){
+<span class="nc" id="L48">        return repo.findByFlavor(flavor);</span>
+    }
+
+    /**
+     *  Retrieve a list of Candy entities by their type
+     * @param type the type field associated with the candy entity
+     * @return A list of candy entities with matching type
+     */
+    public List&lt;Candy&gt; findByType(String type){
+<span class="nc" id="L57">        return repo.findByType(type);</span>
+    }
+
+    /**
+     * Create a new Candy in the repo
+     * @param candy the candy entity
+     */
+    public Candy createCandy(Candy candy){
+<span class="nc" id="L65">        return repo.save(candy);</span>
+    }
+
+    /**
+     * Update an existing Candy in the repo
+     * @param id The ID of the candy
+     * @param candy the candy entity
+     */
+    public void updateCandy(int id, Candy candy){
+<span class="nc bnc" id="L74" title="All 2 branches missed.">        if(!repo.existsById(id)) throw new NoSuchElementException(&quot;Candy with id &quot; + id + &quot; does not exist&quot;);</span>
+<span class="nc" id="L75">        candy.setId(id);</span>
+<span class="nc" id="L76">        repo.save(candy);</span>
+<span class="nc" id="L77">    }</span>
+
+    /**
+     * Delete a Candy from the repo by its ID
+     * @param id the ID of the candy
+     */
+    public void deleteCandy(int id){
+<span class="nc" id="L84">        repo.deleteById(id);</span>
+<span class="nc" id="L85">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

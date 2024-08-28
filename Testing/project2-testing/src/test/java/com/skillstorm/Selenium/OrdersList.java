@@ -1,6 +1,8 @@
 package com.skillstorm.Selenium;
 
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -22,6 +24,8 @@ public class OrdersList {
     @FindBy(name = "customerName")
     private WebElement customerNameField;
 
+    @FindBy(name = "orderDatePickerBtn")
+    private WebElement orderDateBtn;
     @FindBy(name = "orderDatePicker")
     private WebElement orderDateField;
 
@@ -38,6 +42,10 @@ public class OrdersList {
     @FindBy(xpath = "//table[@name='orderListTable']//tr[last()]/td[1]")
     private WebElement lastRowOrderId;
 
+    //Finding last row in order list table and grabbing the order ID
+    @FindBy(xpath = "//table[@name='orderListTable']//tr[1]/td[1]")
+    private WebElement firstRowOrderId;
+
     @FindBy(name = "orders")
     private WebElement ordersMenu;
 
@@ -49,6 +57,11 @@ public class OrdersList {
 
     @FindBy(id = "statusSelect")
     private WebElement statusSelect;
+
+    //Finding edit icon button
+    @FindBy(name = "editIcon")
+    private WebElement editBtn;
+
 
 
     String orderId = "";
@@ -86,17 +99,12 @@ public class OrdersList {
             // Wait for the date picker to be ready
             Thread.sleep(2000);
 
-            orderDateField.click();
-
-            Thread.sleep(2000);
-            
-            orderDateField.sendKeys(orderDate);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-
-
+        orderDateField.click();
+        orderDateField.sendKeys(orderDate);
     }
 
     public void getStatus(String status){
@@ -174,6 +182,86 @@ public class OrdersList {
         }
     }
      //======================READ=====================//
+
+     //======================UPDATE=====================//
+    public void clickEditButton(){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        editBtn.click();
+    }
+
+    public void setCustomerName(String customerName){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        String prevValue = customerNameField.getAttribute("value");
+        for (int i = 0; i < prevValue.length(); i++){
+            customerNameField.sendKeys(Keys.BACK_SPACE);
+        }
+        customerNameField.sendKeys(customerName);
+    }
+
+    public void setOrderDate(String orderDate){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        orderDateField.click();
+
+        String prevValue = orderDateField.getAttribute("value");
+        for (int i = 0; i < prevValue.length(); i++){
+            orderDateField.sendKeys(Keys.BACK_SPACE);
+        }
+        orderDateField.sendKeys(orderDate);
+    }
+
+    public void setStatus(String status){
+        try {
+            Thread.sleep(2000);
+
+            statusSelect.click();
+
+
+            Thread.sleep(1000);
+
+            WebElement option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
+
+            option.click();
+            
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void setCustomerAddress(String customerAddress){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        String prevValue = customerAddressField.getAttribute("value");
+        for (int i = 0; i < prevValue.length(); i++){
+            customerAddressField.sendKeys(Keys.BACK_SPACE);
+        }
+        customerAddressField.sendKeys(customerAddress);
+    }
+
+    public void confirmOrderUpdation(){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Updated Candy ID " + firstRowOrderId.getText());
+    }
+     //======================UPDATE=====================//
 
      //======================DELETE=====================//
     public void clickDeleteIcon() {

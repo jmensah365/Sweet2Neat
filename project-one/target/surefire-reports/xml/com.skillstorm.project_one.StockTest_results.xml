@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="7"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.004">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testGetCandyId"
+                time="0.001"
+                classname="com.skillstorm.project_one.StockTest">
+            </testcase>
+            <testcase
+                name="testGetAndSetCandy"
+                time="0.000"
+                classname="com.skillstorm.project_one.StockTest">
+            </testcase>
+            <testcase
+                name="testGetAndSetId"
+                time="0.000"
+                classname="com.skillstorm.project_one.StockTest">
+            </testcase>
+            <testcase
+                name="testGetAndSetQuantity"
+                time="0.000"
+                classname="com.skillstorm.project_one.StockTest">
+            </testcase>
+            <testcase
+                name="testToString"
+                time="0.002"
+                classname="com.skillstorm.project_one.StockTest">
+            </testcase>
+            <testcase
+                name="testGetWarehouseId"
+                time="0.001"
+                classname="com.skillstorm.project_one.StockTest">
+            </testcase>
+            <testcase
+                name="testGetAndSetWarehouse"
+                time="0.000"
+                classname="com.skillstorm.project_one.StockTest">
+            </testcase>
+</testsuite>
