@@ -100,5 +100,8 @@ public class CandyStepDefinitions {
         this.candyList.confirmUpdation();
     }
 
+    @Then("I should see an error message indicating invalid input")
+    public void iShouldSeeAnErrorMessageIndicatingInvalidInput(){}
+
 
 }
