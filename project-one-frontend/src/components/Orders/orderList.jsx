@@ -5,7 +5,7 @@ import {
     Table, TableBody, TableCell, TableContainer,
     TableHead, TableRow, Paper, Typography, Alert, AlertTitle,
     TextField, Button, IconButton, Snackbar, Box,
-    FormControl, InputLabel, Select, MenuItem,
+    FormControl, InputLabel, Select, MenuItem, Menu,
 } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit'
 import DeleteIcon from '@mui/icons-material/Delete'
@@ -31,6 +31,7 @@ const Orders = () => {
 
     const [editingOrders, setEditingOrders] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
     //fetch order data when the component mounts
     useEffect(() => {
@@ -52,12 +53,48 @@ const Orders = () => {
             });
     }, []);
 
+    const validateOrdersData = (data) => {
+        let errorMessages = [];
+
+        if (data.customerName.trim() === '') {
+            errorMessages.push('Customer Name is required');
+        }
+
+        if(!data.orderDate){
+            errorMessages.push("Order Date is required")
+        }
+
+        if (!data.status) {
+            errorMessages.push('Status is required');
+        }
+
+        if (data.customerAddress.trim() === '') {
+            errorMessages.push('Customer Address is required');
+        }
+
+    
+    
+        if (errorMessages.length > 0) {
+            setErrorMessage(errorMessages.join(', and '));
+            return false;
+        }
+
+        
+        return true; // No errors
+    };
+
     //handles the form submission for adding or updating an order
     const handleSubmit = (e) => {
         e.preventDefault();
         const orderData = editingOrders || newOrder;
         const method = editingOrders ? 'PUT' : 'POST';
         const endpoint = editingOrders ? `${url}/${editingOrders.id}` : url;
+
+        // Validate order information data
+        const isValid = validateOrdersData(orderData);
+        if (!isValid) {
+            return; // Stop form submission if validation fails
+        }
 
         fetch(endpoint, {
             method: method,
@@ -153,6 +190,7 @@ const Orders = () => {
 
     const handleCloseSnackbar = () => {
         setSuccessMessage('');
+        setErrorMessage('');
     };
 
     if (error) {
@@ -171,7 +209,6 @@ const Orders = () => {
                     value={editingOrders ? editingOrders.customerName : newOrder.customerName}
                     onChange={handleInputChange}
                     fullWidth
-                    required
                     margin='normal'
                     className='textField'
                 />
@@ -228,12 +265,12 @@ const Orders = () => {
                         id="statusSelect"
                         value={editingOrders ? editingOrders.status : newOrder.status}
                         name="status"
-                        required
                         onChange={handleInputChange}
                         sx={{
                             textAlign:'left',
                         }}
                     >
+                        <MenuItem value="" style={{color: 'red'}}>Clear Field</MenuItem>
                         <MenuItem value={"Ordered"}>Ordered</MenuItem>
                         <MenuItem value={"Pending"}>Pending</MenuItem>
                         <MenuItem value={"Completed"}>Completed</MenuItem>
@@ -245,7 +282,6 @@ const Orders = () => {
                     value={editingOrders ? editingOrders.customerAddress : newOrder.customerAddress}
                     onChange={handleInputChange}
                     fullWidth
-                    required
                     margin='normal'
                     className='textField'
                 />
@@ -304,6 +340,19 @@ const Orders = () => {
                 severity='success'
                 >
                     {successMessage}
+                </Alert>
+            </Snackbar>
+            <Snackbar 
+            open={!!errorMessage}
+            name='orderListSnackbarError'
+            autoHideDuration={60000}
+            onClose={handleCloseSnackbar}
+            > 
+                <Alert
+                onClose={handleCloseSnackbar}
+                severity='error'
+                >
+                    {errorMessage}
                 </Alert>
             </Snackbar>
         </>
