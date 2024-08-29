@@ -44,7 +44,9 @@ public class OrderItemsSteps {
 
     @And("input {string} and {string} fields")
     public void inputPriceAndQuantityFields(String price, String quantity) {
+        this.orderItems.clearPriceField();
         this.orderItems.inputPrice(price);
+        this.orderItems.clearQuantityField();
         this.orderItems.inputQuantity(quantity);
     }
 
@@ -55,6 +57,27 @@ public class OrderItemsSteps {
 
     @Then("I should see the order item with {string}, {string}, {string}, and {string} in the list")
     public void shouldSeeOrderItemWith(String customerName, String candyName, String price, String quantity) {
+        this.orderItems.getOrderItemsContents();
+    }
 
+    //=============================== UPDATE ============================//
+    @When("I click on edit icon")
+    public void clickTheEditIcon() {
+        this.orderItems.clickEditIcon();
+    }
+
+    @And("I click the Update Order Item button")
+    public void iClickTheUpdateOrderItemButton() {
+        this.orderItems.addOrderItemButton();
+    }
+
+    //=============================== DELETE ============================//
+    @When("I click on delete icon")
+    public void clickOnDeleteIcon() {
+        this.orderItems.clickEditIcon();
+    }
+    @Then("the order item should not be visible in the table")
+    public void orderItemShouldNotBeVisibleInTheTable() {
+        this.orderItems.confirmDeletion();
     }
 }
