@@ -85,7 +85,7 @@ const OrderInfo = () => {
     const validateOrderItemData = (data) => {
         let errorMessages = [];
 
-        if (!data.customerName) {
+        if (data.customerName.trim === '') {
             errorMessages.push('Customer Name is required');
         }
 
