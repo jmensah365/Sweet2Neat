@@ -92,5 +92,10 @@ public class OrdersStepDefinition {
         ordersList.confirmOrderUpdation();
     }
 
+    @Then("I should see an error message")
+    public void iShouldSeeAnErrorMessage(){
+        ordersList.displayErrorMessage();
+    }
+
     
 }

@@ -247,7 +247,6 @@ public class CandyList {
                 WebElement option = driver.findElement(By.xpath("//li[@data-value='" + type + "']"));
                 option.click();
             } else{
-                //candyTypeSelect.click();
                 WebElement option = driver.findElement(By.xpath("//li[@data-value='']"));
                 option.click();
             }
