@@ -30,9 +30,9 @@ public class OrderItemController {
 
     // Injecting OrderItemService dependency
     private OrderItemService service;
-<span class="nc" id="L33">    public OrderItemController(OrderItemService service){</span>
-<span class="nc" id="L34">        this.service = service;</span>
-<span class="nc" id="L35">    }</span>
+<span class="fc" id="L33">    public OrderItemController(OrderItemService service){</span>
+<span class="fc" id="L34">        this.service = service;</span>
+<span class="fc" id="L35">    }</span>
 
     // Endpoint to retrieve all order items
     @GetMapping
@@ -53,24 +53,24 @@ public class OrderItemController {
     @ResponseStatus(code = HttpStatus.CREATED)
     public ResponseEntity&lt;OrderItem&gt; createOrderItem(@RequestBody OrderItemDTO orderItem){
 
-<span class="nc" id="L56">        OrderItem createdOrderItem = service.createOrderItem(orderItem);</span>
-<span class="nc" id="L57">        return ResponseEntity.ok(createdOrderItem);</span>
+<span class="fc" id="L56">        OrderItem createdOrderItem = service.createOrderItem(orderItem);</span>
+<span class="fc" id="L57">        return ResponseEntity.ok(createdOrderItem);</span>
     }
     
 
     // Endpoint to update an existing order item
     @PutMapping(&quot;/{id}&quot;)
     public ResponseEntity&lt;Void&gt; updateOrderItem (@PathVariable Integer id, @RequestBody OrderItemDTO orderItemDto) {
-<span class="nc" id="L64">        service.updateOrderItem(id, orderItemDto);</span>
+<span class="fc" id="L64">        service.updateOrderItem(id, orderItemDto);</span>
         
-<span class="nc" id="L66">        return new ResponseEntity&lt;&gt;(HttpStatus.OK);</span>
+<span class="fc" id="L66">        return new ResponseEntity&lt;&gt;(HttpStatus.OK);</span>
     }
 
     // Endpoint to delete an order item by its ID
     @DeleteMapping(&quot;/{id}&quot;)
     public ResponseEntity&lt;Void&gt; deleteOrderItem (@PathVariable int id) {
-<span class="nc" id="L72">        service.deleteOrderItem(id);</span>
-<span class="nc" id="L73">        return new ResponseEntity&lt;&gt;(HttpStatus.NO_CONTENT);</span>
+<span class="fc" id="L72">        service.deleteOrderItem(id);</span>
+<span class="fc" id="L73">        return new ResponseEntity&lt;&gt;(HttpStatus.NO_CONTENT);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

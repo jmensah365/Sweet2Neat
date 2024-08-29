@@ -9,12 +9,12 @@ project-one,com.skillstorm.project_one.Models,Candy,0,59,0,0,0,20,0,14,0,14
 project-one,com.skillstorm.project_one.Models,Stock,0,59,0,4,0,16,0,14,0,12
 project-one,com.skillstorm.project_one.Services,CandyService,0,60,0,2,0,14,0,9,0,8
 project-one,com.skillstorm.project_one.Services,OrderItemService,20,182,1,5,1,39,4,10,3,8
-project-one,com.skillstorm.project_one.Services,StockService,272,0,6,0,45,0,16,0,13,0
-project-one,com.skillstorm.project_one.Services,WarehouseService,96,0,2,0,23,0,9,0,8,0
-project-one,com.skillstorm.project_one.Services,OrdersService,49,6,2,0,11,3,7,1,6,1
-project-one,com.skillstorm.project_one.Controllers,OrderItemController,50,0,0,0,12,0,6,0,6,0
+project-one,com.skillstorm.project_one.Services,StockService,269,3,6,0,44,1,15,1,12,1
+project-one,com.skillstorm.project_one.Services,WarehouseService,77,19,2,0,18,5,5,4,4,4
+project-one,com.skillstorm.project_one.Services,OrdersService,6,49,1,1,1,13,1,7,0,7
+project-one,com.skillstorm.project_one.Controllers,OrderItemController,16,34,0,0,3,9,2,4,2,4
 project-one,com.skillstorm.project_one.Controllers,WarehouseController,0,34,0,0,0,9,0,5,0,5
-project-one,com.skillstorm.project_one.Controllers,CandyController,49,0,0,0,12,0,8,0,8,0
+project-one,com.skillstorm.project_one.Controllers,CandyController,0,49,0,0,0,12,0,8,0,8
 project-one,com.skillstorm.project_one.Controllers,GlobalExceptionHandler,8,0,0,0,2,0,2,0,2,0
 project-one,com.skillstorm.project_one.Controllers,OrdersController,0,44,0,0,0,11,0,7,0,7
 project-one,com.skillstorm.project_one.Controllers,StockController,0,60,0,0,0,13,0,6,0,6

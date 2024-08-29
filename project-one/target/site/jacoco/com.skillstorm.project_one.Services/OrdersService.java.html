@@ -26,7 +26,7 @@ public class OrdersService {
      * @return Iterable of Orders entities
      */
     public Iterable&lt;Orders&gt; findAll() {
-<span class="nc" id="L29">        return repo.findAllByOrderByIdAsc();</span>
+<span class="fc" id="L29">        return repo.findAllByOrderByIdAsc();</span>
     }
 
     /**
@@ -35,7 +35,7 @@ public class OrdersService {
      * @return Optional containing the Orders entity, if found
      */
     public Optional&lt;Orders&gt; getOrdersById(int id) {
-<span class="nc" id="L38">        return repo.findById(id);</span>
+<span class="fc" id="L38">        return repo.findById(id);</span>
     }
 
     /**
@@ -44,7 +44,7 @@ public class OrdersService {
      * @return Iterable of Orders entities with the specified status
      */
     public Iterable&lt;Orders&gt; getOrdersByStatus(String status) {
-<span class="nc" id="L47">        return repo.findByStatus(status);</span>
+<span class="fc" id="L47">        return repo.findByStatus(status);</span>
     }
 
     /**
@@ -53,7 +53,7 @@ public class OrdersService {
      * @return The created Orders entity
      */
     public Orders createOrders(Orders orders) {
-<span class="nc" id="L56">        return repo.save(orders);</span>
+<span class="fc" id="L56">        return repo.save(orders);</span>
     }
 
     /**
@@ -62,19 +62,19 @@ public class OrdersService {
      * @param order The Orders entity with updated data
      */
     public void updateOrders(int id, Orders order) {
-<span class="nc bnc" id="L65" title="All 2 branches missed.">        if (!repo.existsById(id)) {</span>
+<span class="pc bpc" id="L65" title="1 of 2 branches missed.">        if (!repo.existsById(id)) {</span>
 <span class="nc" id="L66">            throw new NoSuchElementException(&quot;Order with id &quot; + id + &quot; does not exist&quot;);</span>
         }
-<span class="nc" id="L68">        order.setId(id);</span>
-<span class="nc" id="L69">        repo.save(order);</span>
-<span class="nc" id="L70">    }</span>
+<span class="fc" id="L68">        order.setId(id);</span>
+<span class="fc" id="L69">        repo.save(order);</span>
+<span class="fc" id="L70">    }</span>
 
     /**
      * Delete an Orders entity by its ID
      * @param id The ID of the Orders entity to delete
      */
     public void deleteOrder(int id) {
-<span class="nc" id="L77">        repo.deleteById(id);</span>
-<span class="nc" id="L78">    }</span>
+<span class="fc" id="L77">        repo.deleteById(id);</span>
+<span class="fc" id="L78">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

@@ -15,7 +15,7 @@ import com.skillstorm.project_one.Repositories.WarehouseRepo;
  * Service class for managing warehouse-related operations.
  */
 @Service
-<span class="nc" id="L18">public class WarehouseService {</span>
+<span class="fc" id="L18">public class WarehouseService {</span>
 
     // Injecting Stock and Warehouse repo dependencies
     @Autowired
@@ -28,7 +28,7 @@ import com.skillstorm.project_one.Repositories.WarehouseRepo;
      * @return Iterable of Warehouse entities
      */
     public Iterable&lt;Warehouse&gt; findAll() {
-<span class="nc" id="L31">        return warehouseRepo.findAllByOrderByIdAsc();</span>
+<span class="fc" id="L31">        return warehouseRepo.findAllByOrderByIdAsc();</span>
     }
 
     /**
@@ -37,7 +37,7 @@ import com.skillstorm.project_one.Repositories.WarehouseRepo;
      * @return Optional containing the Warehouse entity, if found
      */
     public Optional&lt;Warehouse&gt; findById(int id) {
-<span class="nc" id="L40">        return warehouseRepo.findById(id);</span>
+<span class="fc" id="L40">        return warehouseRepo.findById(id);</span>
     }
 
     /**
@@ -71,8 +71,8 @@ import com.skillstorm.project_one.Repositories.WarehouseRepo;
      * @param id The ID of the Warehouse entity to delete
      */
     public void deleteWarehouse(int id) {
-<span class="nc" id="L74">        warehouseRepo.deleteById(id);</span>
-<span class="nc" id="L75">    }</span>
+<span class="fc" id="L74">        warehouseRepo.deleteById(id);</span>
+<span class="fc" id="L75">    }</span>
 
     /**
      * Update the current stock of a Warehouse based on its associated stocks.

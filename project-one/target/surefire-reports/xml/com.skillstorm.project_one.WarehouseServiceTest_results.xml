@@ -10,18 +10,18 @@
 
 
             <testcase
-                name="testConstructor"
+                name="testFindAll"
                 time="0.000"
-                classname="com.skillstorm.project_one.StockDTOUnitTests">
+                classname="com.skillstorm.project_one.WarehouseServiceTest">
             </testcase>
             <testcase
-                name="testGettersAndSetters"
-                time="0.000"
-                classname="com.skillstorm.project_one.StockDTOUnitTests">
-            </testcase>
-            <testcase
-                name="testToString"
+                name="testFindById"
                 time="0.001"
-                classname="com.skillstorm.project_one.StockDTOUnitTests">
+                classname="com.skillstorm.project_one.WarehouseServiceTest">
+            </testcase>
+            <testcase
+                name="testDeleteWarehouse"
+                time="0.000"
+                classname="com.skillstorm.project_one.WarehouseServiceTest">
             </testcase>
 </testsuite>

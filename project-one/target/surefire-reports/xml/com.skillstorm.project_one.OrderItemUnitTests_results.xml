@@ -4,23 +4,23 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.000">
+           time="0.001">
     <properties></properties>
 
 
 
             <testcase
-                name="testSetters"
+                name="testToString"
                 time="0.000"
+                classname="com.skillstorm.project_one.OrderItemUnitTests">
+            </testcase>
+            <testcase
+                name="testSetters"
+                time="0.001"
                 classname="com.skillstorm.project_one.OrderItemUnitTests">
             </testcase>
             <testcase
                 name="testGetters"
-                time="0.000"
-                classname="com.skillstorm.project_one.OrderItemUnitTests">
-            </testcase>
-            <testcase
-                name="testToString"
                 time="0.000"
                 classname="com.skillstorm.project_one.OrderItemUnitTests">
             </testcase>

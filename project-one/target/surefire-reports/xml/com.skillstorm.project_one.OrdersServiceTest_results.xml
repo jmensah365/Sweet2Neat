@@ -10,33 +10,33 @@
 
 
             <testcase
-                name="testDeleteOrderById"
-                time="0.000"
-                classname="com.skillstorm.project_one.OrdersControllerTest">
-            </testcase>
-            <testcase
-                name="testFindAllOrders"
-                time="0.000"
-                classname="com.skillstorm.project_one.OrdersControllerTest">
-            </testcase>
-            <testcase
-                name="testFindOrdersByStatus"
-                time="0.000"
-                classname="com.skillstorm.project_one.OrdersControllerTest">
-            </testcase>
-            <testcase
                 name="testUpdateOrders"
                 time="0.000"
-                classname="com.skillstorm.project_one.OrdersControllerTest">
+                classname="com.skillstorm.project_one.OrdersServiceTest">
+            </testcase>
+            <testcase
+                name="testGetOrdersById"
+                time="0.000"
+                classname="com.skillstorm.project_one.OrdersServiceTest">
+            </testcase>
+            <testcase
+                name="testFindByStatus"
+                time="0.000"
+                classname="com.skillstorm.project_one.OrdersServiceTest">
+            </testcase>
+            <testcase
+                name="testDeleteOrder"
+                time="0.000"
+                classname="com.skillstorm.project_one.OrdersServiceTest">
             </testcase>
             <testcase
                 name="testCreateOrders"
                 time="0.001"
-                classname="com.skillstorm.project_one.OrdersControllerTest">
+                classname="com.skillstorm.project_one.OrdersServiceTest">
             </testcase>
             <testcase
-                name="testFindOrdersById"
+                name="testFindAll"
                 time="0.000"
-                classname="com.skillstorm.project_one.OrdersControllerTest">
+                classname="com.skillstorm.project_one.OrdersServiceTest">
             </testcase>
 </testsuite>

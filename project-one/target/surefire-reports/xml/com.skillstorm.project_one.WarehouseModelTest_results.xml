@@ -4,19 +4,19 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.003">
+           time="0.002">
     <properties></properties>
 
 
 
             <testcase
-                name="testSetCurrentStockAndGetCurrentStock"
+                name="testSetCapacityAndGetCapacity"
                 time="0.000"
                 classname="com.skillstorm.project_one.WarehouseModelTest">
             </testcase>
             <testcase
                 name="testWarehouseToString"
-                time="0.003"
+                time="0.002"
                 classname="com.skillstorm.project_one.WarehouseModelTest">
             </testcase>
             <testcase
@@ -25,12 +25,12 @@
                 classname="com.skillstorm.project_one.WarehouseModelTest">
             </testcase>
             <testcase
-                name="testSetIdAndGetId"
+                name="testSetCurrentStockAndGetCurrentStock"
                 time="0.000"
                 classname="com.skillstorm.project_one.WarehouseModelTest">
             </testcase>
             <testcase
-                name="testSetCapacityAndGetCapacity"
+                name="testSetIdAndGetId"
                 time="0.000"
                 classname="com.skillstorm.project_one.WarehouseModelTest">
             </testcase>
