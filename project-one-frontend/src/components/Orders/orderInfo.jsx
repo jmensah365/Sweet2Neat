@@ -85,7 +85,7 @@ const OrderInfo = () => {
     const validateOrderItemData = (data) => {
         let errorMessages = [];
 
-        if (!data.customerName) {
+        if (!data.orderId) {
             errorMessages.push('Customer Name is required');
         }
 
@@ -307,7 +307,7 @@ const OrderInfo = () => {
                             <TableCell>Actions </TableCell>
                         </TableRow>
                     </TableHead>
-                    <TableBody>
+                    <TableBody name="tableBody">
                         {orderItem.map(orderItem => (
                             <TableRow key={orderItem.id}>
                                 <TableCell>{getCustomerName(orderItem.orderId)}</TableCell>

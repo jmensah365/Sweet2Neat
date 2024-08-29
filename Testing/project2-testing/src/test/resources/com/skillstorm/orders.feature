@@ -46,10 +46,10 @@ Feature: Order CRUD operations
 
     Examples:
         |Customer Name| Order date| Status| Customer Address|
-        #|| 06/17/2021| Completed| 1011 Super Address Dr, Ballston VA, 10234|
+        || 06/17/2021| Completed| 1011 Super Address Dr, Ballston VA, 10234|
         |DJ Kim| | Completed| 1011 Super Address Dr, Ballston VA, 10234|
-        #|DJ Kim| 06/17/2021| | 1011 Super Address Dr, Ballston VA, 10234|
-        #|DJ Kim| 06/17/2021| Completed| |
+        |DJ Kim| 06/17/2021| | 1011 Super Address Dr, Ballston VA, 10234|
+        |DJ Kim| 06/17/2021| Completed| |
     
     Scenario: Delete an order
         Given I am on the order list page

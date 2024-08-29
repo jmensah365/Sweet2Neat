@@ -76,7 +76,7 @@ public class NavigationLinks {
     @FindBy(name = "gummyCardButton")
     private WebElement gummyCardButton;
 
-    @FindBy(name = "choclateCardButton")
+    @FindBy(name = "chocolateCardButton")
     private WebElement chocolateCardButton;
 
     @FindBy(name = "sourCandyCardButton")
@@ -222,7 +222,7 @@ public class NavigationLinks {
             case "Taffy Candy":
             taffyCardButton.click();
                 break;
-            case "Lollipops":
+            case "Lollipop Candy":
             lollipopCardButton.click();
                 break;
             default:
@@ -238,4 +238,3 @@ public class NavigationLinks {
         return candyHeader.getText().equals(candyType);
     }
 }
-
