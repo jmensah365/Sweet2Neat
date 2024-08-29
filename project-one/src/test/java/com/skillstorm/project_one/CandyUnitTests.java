@@ -10,8 +10,10 @@ import com.skillstorm.project_one.Models.Candy;
 
 public class CandyUnitTests {
 
+    //Creating a private instance of the candy object
     private Candy candy;
     
+    //Initialzing the candy before all tests
     @BeforeTest
     void init() {
         candy = new Candy();
@@ -23,6 +25,7 @@ public class CandyUnitTests {
         candy.setWeight(BigDecimal.valueOf(0.5));
     }
 
+    //Testing the getters of candy
     @Test
     void testGetters() {
         assertEquals(40, candy.getCandyId());
@@ -33,6 +36,7 @@ public class CandyUnitTests {
         assertEquals(BigDecimal.valueOf(0.5), candy.getWeight());
     }
 
+    //testing the setters of candy
     @Test
     void testSetters() {
         candy.setName("Gummy Bear");
@@ -48,6 +52,7 @@ public class CandyUnitTests {
         assertEquals(BigDecimal.valueOf(0.2), candy.getWeight());
     }
 
+    //testing the toString method of candy
     @Test
     void testToString() {
         String expectedString = "Candy [id=40, name=Gummy Bear, type=Gummy Candy, flavor=Strawberry, price=1.99, weight=0.2]";
