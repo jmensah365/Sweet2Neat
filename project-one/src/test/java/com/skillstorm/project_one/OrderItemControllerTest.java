@@ -67,11 +67,13 @@ public class OrderItemControllerTest {
         // When: Mock the service's findAll method to return the list of OrderItemDTOs
         when(orderItemService.findAll()).thenReturn(orderItems);
 
+        // When: Mocking the controllers findAll()
+        ResponseEntity<Iterable<OrderItemDTO>> response = orderItemController.findAll();
+
         // Assert: Verify that the list is not null, contains two items, and their IDs are correct
-        assertNotNull(orderItems);
-        assertEquals(orderItems.size(), 2);
-        assertEquals(orderItems.get(0).getId(), 1);
-        assertEquals(orderItems.get(1).getId(), 2);
+        assertEquals(response.getStatusCode(), HttpStatus.OK);
+        assertNotNull(response.getBody());
+        assertEquals(2, ((List<OrderItemDTO>) response.getBody()).size()); // Check if the list size is 2
     }
 
     @Test
