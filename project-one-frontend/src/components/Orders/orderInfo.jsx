@@ -85,7 +85,7 @@ const OrderInfo = () => {
     const validateOrderItemData = (data) => {
         let errorMessages = [];
 
-        if (!data.customerName) {
+        if (!data.orderId) {
             errorMessages.push('Customer Name is required');
         }
 
