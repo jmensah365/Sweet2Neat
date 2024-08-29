@@ -99,7 +99,7 @@ public class WarehouseStockSteps {
     }
 
     //=============================== READ ====================================//
-    @Given("I am currently on the home page")
+    @Given("I am starting on the home page")
     public void currentlyOnTheHomePage() {
         this.warehouseStock.getHomePageUrl();
     }

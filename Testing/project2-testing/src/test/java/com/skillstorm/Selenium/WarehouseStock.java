@@ -189,7 +189,7 @@ public class WarehouseStock {
         List<WebElement> tableRows = tableBody.findElements(By.xpath(".//tr"));
         for(WebElement tr : tableRows) {
             if(tr.getText().equals(firstRow)){
-                throw new AssertionError("Candy with ID " + tableRows + " was found in the table");
+                throw new AssertionError(tableRows + " was found in the table");
             } else{
                 System.err.println("False");
             }

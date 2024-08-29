@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.009">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testGetters"
+                time="0.006"
+                classname="com.skillstorm.project_one.CandyUnitTests">
+            </testcase>
+            <testcase
+                name="testToString"
+                time="0.003"
+                classname="com.skillstorm.project_one.CandyUnitTests">
+            </testcase>
+            <testcase
+                name="testSetters"
+                time="0.000"
+                classname="com.skillstorm.project_one.CandyUnitTests">
+            </testcase>
+</testsuite>

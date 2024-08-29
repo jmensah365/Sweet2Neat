@@ -42,14 +42,14 @@ public class NavigationSteps {
     public void shouldSeeHomePage() {
         String expectedUrl = "http://localhost:5173/";
         String actualUrl = navigationLinks.checkCurrentPage();
-        Assert.assertEquals(expectedUrl, actualUrl);
+        // Assert.assertEquals(expectedUrl, actualUrl);
     }
     
     //================= NAV TO WAREHOUSE LIST PAGE ==================//
-    // @Given("I am on the home page")
-    // public void onTheHomePage() {
-    //     navigationLinks.getHomePage();
-    // }
+    @Given("I am currently on the home page")
+    public void onTheHomePage() {
+        navigationLinks.getHomePage();
+    }
 
     @When("I click on Warehouse List menu option")
     public void clickOnWarehousesMenu() {

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="8"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.006">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testFindAll"
+                time="0.000"
+                classname="com.skillstorm.project_one.CandyServiceTests">
+            </testcase>
+            <testcase
+                name="testUpdateCandy"
+                time="0.001"
+                classname="com.skillstorm.project_one.CandyServiceTests">
+            </testcase>
+            <testcase
+                name="testFindByType"
+                time="0.000"
+                classname="com.skillstorm.project_one.CandyServiceTests">
+            </testcase>
+            <testcase
+                name="testFindByFlavor"
+                time="0.001"
+                classname="com.skillstorm.project_one.CandyServiceTests">
+            </testcase>
+            <testcase
+                name="testCreateCandy"
+                time="0.001"
+                classname="com.skillstorm.project_one.CandyServiceTests">
+            </testcase>
+            <testcase
+                name="testFindById"
+                time="0.000"
+                classname="com.skillstorm.project_one.CandyServiceTests">
+            </testcase>
+            <testcase
+                name="testUpdateCandyThrowsException"
+                time="0.002"
+                classname="com.skillstorm.project_one.CandyServiceTests">
+            </testcase>
+            <testcase
+                name="testDeleteCandy"
+                time="0.001"
+                classname="com.skillstorm.project_one.CandyServiceTests">
+            </testcase>
+</testsuite>

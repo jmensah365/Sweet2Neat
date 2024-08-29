@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 
 import com.skillstorm.project_one.Models.Warehouse;
 
-
 public class WarehouseModelTest {
 
     private Warehouse warehouse;
