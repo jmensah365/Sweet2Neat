@@ -20,7 +20,7 @@ Feature: Candy CRUD Operations
     Examples:
         |name       |type           |flavor       |price |weight |
         |           |Sour Candy      |Sour         |4.99  |1.0    |  # Empty name
-        |Sour Skittles|               |Sour         |4.99  |1.0    |  # Empty type
+        |Sour Skittles|             |Sour         |4.99  |1.0    |  # Empty type
         |Sour Skittles|Sour Candy     |             |4.99  |1.0    |  # Empty flavor
         |Sour Skittles|Sour Candy     |Sour         |      |1.0    |  # Empty price
         |Sour Skittles|Sour Candy     |Sour         |4.99  |       |  # Empty weight
