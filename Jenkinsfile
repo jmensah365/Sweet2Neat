@@ -49,7 +49,7 @@ pipeline {
         }
         stage('Selenium/Cucumber Tests'){
             steps{
-                sh "cd Testing/project2-testing && mvn test -X -e"
+                sh "cd Testing/project2-testing && mvn verify"
             }
         }
         stage('Deploy Backend'){
