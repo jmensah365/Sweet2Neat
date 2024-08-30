@@ -238,4 +238,3 @@ public class NavigationLinks {
         return candyHeader.getText().equals(candyType);
     }
 }
-

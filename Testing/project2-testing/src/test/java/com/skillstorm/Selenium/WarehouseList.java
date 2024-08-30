@@ -76,7 +76,7 @@ public class WarehouseList {
     }
 
     public void close() { // warehouseStepDefintion calls this to close all open browsers when tests finish
-        this.driver.close();
+        this.driver.quit();
     }
 
     public void getUrl() {

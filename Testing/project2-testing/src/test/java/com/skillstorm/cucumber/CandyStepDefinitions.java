@@ -16,6 +16,7 @@ public class CandyStepDefinitions {
     @Before("@Candy")
     public void before(){
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless","--no-sandbox");
         WebDriver driver = new ChromeDriver(options);
 
         this.candyList = new CandyList(driver);
@@ -23,7 +24,7 @@ public class CandyStepDefinitions {
     
     @After("@Candy")
     public void after() {
-        candyList.close();
+        candyList.quit();
     }
 
     @Given("I am on the Candy Inventory page")
@@ -98,6 +99,11 @@ public class CandyStepDefinitions {
     @Then("I should see the updated candy in the candy table")
     public void iShouldSeeTheUpdatedCandyInTheCandyTable(){
         this.candyList.confirmUpdation();
+    }
+
+    @Then("I should see an error message indicating invalid input")
+    public void iShouldSeeAnErrorMessageIndicatingInvalidInput(){
+        candyList.errorMessageDisplayed();
     }
 
 

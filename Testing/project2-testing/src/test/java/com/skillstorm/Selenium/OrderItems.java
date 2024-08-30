@@ -48,7 +48,7 @@ public class OrderItems {
     }
 
     public void close() {
-        this.driver.close();
+        this.driver.quit();
     }
 
     public void getOrderItemsPage() {
