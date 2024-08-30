@@ -30,8 +30,11 @@ public class StockControllerTest {
     private StockController stockController;
     private AutoCloseable closeable;
 
+    private int stockId;
+
     @BeforeTest
     public void setup() {
+        stockId = 1;
         closeable = MockitoAnnotations.openMocks(this);
     }
 
@@ -44,11 +47,14 @@ public class StockControllerTest {
     public void testFindAllStocks() {
         List<StockDTO> outputStockDTOs = Arrays.asList(new StockDTO(), new StockDTO());
 
+        // stub this func it returns list of stock dtos
         when(stockService.getAllStocksDTO())
         .thenReturn(outputStockDTOs);
 
+        // get the response from findallstocks
         ResponseEntity<List<StockDTO>> response = stockController.findAllStocks();
 
+        // ensure list, status code and size matches
         Assert.assertEquals(response.getBody(), outputStockDTOs);
         Assert.assertEquals(response.getStatusCode(), HttpStatus.OK);
         Assert.assertEquals(response.getBody().size(), 2);
@@ -59,11 +65,13 @@ public class StockControllerTest {
         int warehouseId = 7;
         List<StockDTO> outputStockDTOs = Arrays.asList(new StockDTO(), new StockDTO(), new StockDTO());
 
+        // stub func returns list of stock dtos
         when(stockService.getStocksByWarehouse(warehouseId))
         .thenReturn(outputStockDTOs);
 
         ResponseEntity<List<StockDTO>> response = stockController.getStocksByWarehouse(warehouseId);
 
+        // ensure lists, status codes, and sizes match
         Assert.assertEquals(response.getBody(), outputStockDTOs);
         Assert.assertEquals(response.getStatusCode(), HttpStatus.OK);
         Assert.assertEquals(response.getBody().size(), 3);
@@ -74,31 +82,34 @@ public class StockControllerTest {
         Stock stock = new Stock();
         StockDTO stockDTO = new StockDTO();
 
+        // stub func returns stock when given stockdto
         when(stockService.createStock(stockDTO))
         .thenReturn(stock);
 
         ResponseEntity<Stock> response = stockController.createStock(stockDTO);
 
+        // ensure stock and status codes match
         Assert.assertEquals(response.getBody(), stock);
         Assert.assertEquals(response.getStatusCode(), HttpStatus.OK);
     }
 
     @Test
     public void testUpdateStock() {
-        int stockId = 15;
         StockDTO stockDTO = new StockDTO();
 
+        // returns updated stock
         ResponseEntity<Void> response = stockController.updateStock(stockId, stockDTO);
 
+        // ensure status code is OK
         Assert.assertEquals(response.getStatusCode(), HttpStatus.OK);
     }
 
     @Test
     public void testDeleteStock() {
-        int stockId = 15;
-
+        // deletes a stock
         ResponseEntity<Void> response = stockController.deleteStock(stockId);
 
+        // ensure status code is NO_CONTENT
         Assert.assertEquals(response.getStatusCode(), HttpStatus.NO_CONTENT);
     }
 

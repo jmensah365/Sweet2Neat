@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.009">
+           time="0.010">
     <properties></properties>
 
 
 
             <testcase
                 name="testGetters"
-                time="0.006"
+                time="0.007"
                 classname="com.skillstorm.project_one.CandyUnitTests">
             </testcase>
             <testcase

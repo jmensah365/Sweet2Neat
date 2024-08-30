@@ -7,12 +7,10 @@ import static org.mockito.Mockito.when;
 
 import java.util.Arrays;
 
-import org.apache.catalina.connector.Response;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -32,8 +30,13 @@ public class OrdersControllerTest {
     private OrdersController ordersController;
     private AutoCloseable closeable;
 
-        @BeforeTest
+    private int orderId;
+    private Orders order;
+
+    @BeforeTest
     public void setup() {
+        orderId = 1;
+        order = new Orders();
         closeable = MockitoAnnotations.openMocks(this);
     }
 
@@ -44,39 +47,49 @@ public class OrdersControllerTest {
 
     @Test
     public void testFindAllOrders() {
+        // new order list used for stub return
         List<Orders> expectedOrders = Arrays.asList(new Orders(), new Orders(), new Orders());
+
+        // stub findall func to return order list
         when(ordersService.findAll())
         .thenReturn(expectedOrders);
 
+        // return func as iterable
         Iterable<Orders> orders = ordersController.findAllOrders();
 
+        // get size of iterable
         int count = 0;
         for (Orders o : orders) {
             count++;
         }
 
+        // ensure lists match
         Assert.assertEquals(orders, expectedOrders);
+
+        // ensure lists have same size
         Assert.assertEquals(count, 3);
     }
 
     @Test
     public void testFindOrdersById() {
-        int id = 1;
-        Orders order = new Orders();
-        order.setId(id);
+        order.setId(orderId);
 
+        // since getordersbyid returns optional obj we need to convert
         Optional<Orders> expectedOrders1 = Optional.ofNullable(order);
         Optional<Orders> expectedOrders2 = Optional.ofNullable(null);
 
-        when(ordersService.getOrdersById(id))
+        // stub this func to return the order
+        when(ordersService.getOrdersById(orderId))
         .thenReturn(expectedOrders1);
 
-        Optional<Orders> actual1 = ordersController.findOrdersById(id);
+        // get the returns of as optional objs
+        Optional<Orders> actual1 = ordersController.findOrdersById(orderId);
         Optional<Orders> actual2 = ordersController.findOrdersById(0);
 
+        // ensure the orders and ids match and also the null orders match
         Assert.assertEquals(actual1, expectedOrders1);
+        Assert.assertEquals(actual1.get().getId(), expectedOrders1.get().getId());
         Assert.assertEquals(actual2, expectedOrders2);
-
     }
 
     @Test
@@ -84,16 +97,20 @@ public class OrdersControllerTest {
         String status = "Pending";
         List<Orders> expectedOrders = Arrays.asList(new Orders(), new Orders());
 
+        // stub func to return predefined list
         when(ordersService.getOrdersByStatus(status))
         .thenReturn(expectedOrders);
 
+        // need to convert to iterable
         Iterable<Orders> orders = ordersController.findOrdersByStatus(status);
 
+        // get size of iterable
         int count = 0;
         for (Orders o : orders) {
             count++;
         }
 
+        // ensure both order lists are the same and their sizes are the same
         Assert.assertEquals(orders, expectedOrders);
         Assert.assertEquals(count, 2);
     }
@@ -101,36 +118,33 @@ public class OrdersControllerTest {
     @Test
     public void testCreateOrders() {
         Orders inputOrder = new Orders();
-        Orders outputOrder = new Orders();
+        Orders expectedOrder = new Orders();
 
+        // stub func to take in an order and out the other
         when(ordersService.createOrders(inputOrder))
-        .thenReturn(outputOrder);
+        .thenReturn(expectedOrder);
 
-        Orders expectedOrder = ordersController.createOrders(inputOrder);
+        // get the stubbed return from createorders
+        Orders outputOrder = ordersController.createOrders(inputOrder);
 
+        // ensure both the orders are the same
         Assert.assertEquals(outputOrder, expectedOrder);
     }
 
     @Test
     public void testUpdateOrders() {
-        int id = 1;
-        Orders order = new Orders();
+        // get the response status code from this func
+        ResponseEntity<Orders> response = ordersController.updateOrders(orderId, order);
 
-        // ordersService.updateOrders(id, order);
-
-        ResponseEntity<Orders> response = ordersController.updateOrders(id, order);
-
-        Assert.assertEquals(HttpStatus.OK, response.getStatusCode());
+        // ensure the status code matches
+        Assert.assertEquals(response.getStatusCode(), HttpStatus.OK);
     }
 
     @Test
     public void testDeleteOrderById() {
-        int id = 1;
-        
-        // ordersService.deleteOrder(id);
+        ResponseEntity<Void> response = ordersController.deleteOrderById(orderId);
 
-        ResponseEntity<Void> response = ordersController.deleteOrderById(id);
-
-        Assert.assertEquals(HttpStatus.NO_CONTENT, response.getStatusCode());
+        // ensure response returns status code NO CONTENT
+        Assert.assertEquals(response.getStatusCode(), HttpStatus.NO_CONTENT);
     }
 }

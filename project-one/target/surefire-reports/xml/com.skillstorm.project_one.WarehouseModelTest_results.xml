@@ -10,13 +10,13 @@
 
 
             <testcase
-                name="testSetCapacityAndGetCapacity"
+                name="testSetIdAndGetId"
                 time="0.000"
                 classname="com.skillstorm.project_one.WarehouseModelTest">
             </testcase>
             <testcase
-                name="testWarehouseToString"
-                time="0.002"
+                name="testSetCapacityAndGetCapacity"
+                time="0.000"
                 classname="com.skillstorm.project_one.WarehouseModelTest">
             </testcase>
             <testcase
@@ -30,8 +30,8 @@
                 classname="com.skillstorm.project_one.WarehouseModelTest">
             </testcase>
             <testcase
-                name="testSetIdAndGetId"
-                time="0.000"
+                name="testWarehouseToString"
+                time="0.002"
                 classname="com.skillstorm.project_one.WarehouseModelTest">
             </testcase>
 </testsuite>
