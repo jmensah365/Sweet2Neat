@@ -162,6 +162,7 @@ const WarehouseList = () => {
 
     const handleCloseSnackbar = () => {
         setSuccessMessage('');
+        setErrorMessage('');
     };
 
     if (error) {
