@@ -10,6 +10,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.skillstorm.RunCucumberTest;
+
 public class WarehouseList {
     private WebDriver driver;
     private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/warehouses";
@@ -80,30 +82,18 @@ public class WarehouseList {
     }
 
     public void getUrl() {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         this.driver.get(url);
     }
 
     //=====================UPDATE======================//
     public void clickEditButton() {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         editBtn.click();
     }
 
     public void setLocation(String location){
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         String prevValue = locationField.getAttribute("value");
         for (int i = 0; i < prevValue.length(); i++){
             locationField.sendKeys(Keys.BACK_SPACE);
@@ -112,11 +102,7 @@ public class WarehouseList {
     }
 
     public void setCapacity(String capacity){
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         String prevValue = capacityField.getAttribute("value");
         for (int i = 0; i < prevValue.length(); i++){
             capacityField.sendKeys(Keys.BACK_SPACE);
@@ -125,46 +111,26 @@ public class WarehouseList {
     }
 
     public void clickUpdateWarehouse(){
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         warehouseBtn.click();
     }
 
     public void confirmWarehouseUpdation(){
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         System.out.println("New warehouse location: " + warehouseRowLocation.getText());
-
-        // this.driver.close();
     }
-
-     //TODO: check to see if success message pops up
     //=====================UPDATE======================//
 
     //=====================DELETE======================//
     public void clickDeleteIcon(){
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         
         warehouseId = warehouseFirstRowLocation.getText();
         deleteBtn.click();
     }
     
     public void confirmDeletion(){
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         List<WebElement> tableRows = warehouseTable.findElements(By.xpath(".//tr/td[1]"));
         for(WebElement tr : tableRows) {
             if(tr.getText().contains(warehouseId)){
@@ -173,83 +139,65 @@ public class WarehouseList {
                 System.err.println("False");
             }
         }
-            // this.driver.close();
-
-
     }
 
     //=====================DELETE======================//
 
         //======================= CREATE =========================
         public String checkPageTitle() {
+        RunCucumberTest.sleepThread();
             return warehouseListTitle.getText();
         }
     
         public void addLocation(String location) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            locationField.sendKeys(location);
+        RunCucumberTest.sleepThread();
+            // if(!location.equals("empty")) {
+            //     locationField.sendKeys(location);
+            // } else {
+            //     action.sendKeys(Keys.ESCAPE).perform();
+            // }
         }
     
         public void addCapacity(String capacity) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        RunCucumberTest.sleepThread();
             capacityField.sendKeys(capacity);
         }
         
         public void setCurrentStock(String currentStock) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        RunCucumberTest.sleepThread();
             stockField.sendKeys(currentStock);
         }
     
         public void clickAddWarehouseButton() {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        RunCucumberTest.sleepThread();
             addWarehouseButton.click();
         }
     
         public void getWarehouseLocation() {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        RunCucumberTest.sleepThread();
             System.out.println(warehouseRowLocation.getText());
         }
 
     //======================= READ =========================
     public void getHomeURL() {
+        RunCucumberTest.sleepThread();
         this.driver.get(homeUrl);
     }
 
     public void clickWarehouseListOption() {
+        RunCucumberTest.sleepThread();
         warehousesMenu.click();        
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         warehouseListOption.click();
     }
 
     public void getWarehouseTable() {
+        RunCucumberTest.sleepThread();
         warehouseTable.getText();
     }
 
     public void getWarehouseTableContents() {
+        RunCucumberTest.sleepThread();
         List<WebElement> tableRows = warehouseTable.findElements(By.xpath(".//tr"));
 
         for(WebElement tr : tableRows) {

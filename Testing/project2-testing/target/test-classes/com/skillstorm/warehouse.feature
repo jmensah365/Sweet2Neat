@@ -2,10 +2,10 @@
 Feature: Warehouse CRUD
 
   #-------------------------- Warehouse CREATE ----------------------------#
-  Scenario Outline: Successful warehouse creation with valid information
+  Scenario Outline: Successful warehouse creation
 
     Given I am on the Warehouse List page
-    When I fill in the "<location>" and "<capacity>" fields with valid information
+    When I fill in the "<location>" and "<capacity>" fields 
     And I click the ADD WAREHOUSE button
     Then I should see the newly created Warehouse in the list of Warehouses
 
@@ -14,12 +14,25 @@ Feature: Warehouse CRUD
     | 3212 Spur Ln, Austin, Texas | 5000     | 
     | Test location | 10000     | 
 
+  # Scenario Outline: Unsuccessful warehouse creation
+
+  #   Given I am on the Warehouse List page
+  #   When I fill in the "<location>" and "<capacity>" fields 
+  #   And I click the ADD WAREHOUSE button
+  #   Then I should not see the newly created Warehouse in the list of Warehouses
+
+  #   Examples:
+  #   | location      | capacity | 
+  #   | empty         | 5000     | 
+  #   | Test location | empty    | 
+  #   |   empty       | empty    | 
+
   #-------------------------- Warehouse UPDATE ----------------------------#
   Scenario Outline: Updating a warehouse
 
     Given I am on the Warehouse List page
     When I click on the edit icon for the Warehouse I want to edit
-    And I change the "<location>" and/or "<capacity>" with valid information
+    And I change the "<location>" and/or "<capacity>" 
     And I click on the UPDATE WAREHOUSE button
     Then I should see the updated details for the Warehouse I edited in the list of Warehouses
 

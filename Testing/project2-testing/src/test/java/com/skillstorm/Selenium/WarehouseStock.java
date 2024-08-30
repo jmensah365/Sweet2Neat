@@ -11,6 +11,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.skillstorm.RunCucumberTest;
+
 public class WarehouseStock {
 
     private WebDriver driver;
@@ -18,7 +20,7 @@ public class WarehouseStock {
     private final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
     private Actions action;
 
-    private String firstRow = "";
+    private String stockId = "";
 
     @FindBy(xpath = "//div[@id='candyIdSelect']")
     private WebElement candySelect;
@@ -53,8 +55,6 @@ public class WarehouseStock {
     @FindBy(name = "deleteIcon")
     private WebElement deleteIcon;
 
-
-
     public WarehouseStock(WebDriver driver){
         this.driver = driver;
         this.action = new Actions(driver);
@@ -67,16 +67,13 @@ public class WarehouseStock {
     }
 
     public void getWarehoueStockUrl() {
+        RunCucumberTest.sleepThread();
         this.driver.get(warehouseStockUrl);
     }
 
     public void selectCandy(String candyName) {
+        RunCucumberTest.sleepThread();
         candySelect.click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         if(!candyName.equals("empty")) {
             this.driver.findElement(By.xpath("//li[text()='" + candyName + "']")).click();
         } else {
@@ -86,12 +83,8 @@ public class WarehouseStock {
     }
 
     public void selectLocation(String location) {
+        RunCucumberTest.sleepThread();
         warehouseSelect.click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         if(!location.equals("empty")) {
             this.driver.findElement(By.xpath("//li[text()='" + location + "']")).click();
         } else {
@@ -100,26 +93,19 @@ public class WarehouseStock {
     }
     
     public void inputQuantity(String quantity) {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         if(!quantity.equals("empty")) {
             this.quantity.sendKeys(quantity); 
         }
     }
 
     public void addStockBtn() {
+        RunCucumberTest.sleepThread();
         addWarehouseButton.click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
     public boolean checkNewWarehouseStock(String candy, String location, String quantity) {
+        RunCucumberTest.sleepThread();
         WebElement lastTableRow = warehouseStockTBody.findElement(By.xpath(".//tr[last()]"));
 
         if(!candy.equals("empty")) {
@@ -141,55 +127,60 @@ public class WarehouseStock {
     }
 
     public void clickEditIcon() {
+        RunCucumberTest.sleepThread();
         editIcon.click();
     }
 
     public void clickUpdateStockButton() {
+        RunCucumberTest.sleepThread();
         updateButton.click();
     }
 
     public void clearQuantityField() {
+        RunCucumberTest.sleepThread();
         quantity.sendKeys(Keys.COMMAND + "a");
         quantity.sendKeys(Keys.DELETE);
     }
 
     public void getHomePageUrl() {
+        RunCucumberTest.sleepThread();
         driver.get(homeUrl);
     }
 
     public void clickOnWarehouseStockOption() {
+        RunCucumberTest.sleepThread();
         warehousesMenuElement.click();
+        RunCucumberTest.sleepThread();
         warehousesStockMenuElement.click();
     }
 
     public String getWarehouseStockUrl() {
+        RunCucumberTest.sleepThread();
         return this.driver.getCurrentUrl();
     }
 
     public void getWarehouseTableContents() {
+        RunCucumberTest.sleepThread();
         List<WebElement> tableRows = tableBody.findElements(By.xpath(".//tr"));
-
         for(WebElement tr : tableRows) {
             System.out.println(tr.getText());
         }
     }
 
     public void clickDeleteIcon() {
-        firstRow = tableBody.findElement(By.xpath(".//tr[1]")).getText();
-        System.out.println("Deleted row: " + firstRow);
+        RunCucumberTest.sleepThread();
+        stockId = tableBody.findElement(By.xpath(".//tr[1]")).getAttribute("id");
+        System.out.println("Deleted stock Id: " + stockId);
         deleteIcon.click();
     }
 
     public void confirmDeletion(){
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
+
         List<WebElement> tableRows = tableBody.findElements(By.xpath(".//tr"));
         for(WebElement tr : tableRows) {
-            if(tr.getText().equals(firstRow)){
-                throw new AssertionError("Candy with ID " + tableRows + " was found in the table");
+            if(tr.getText().equals(stockId)){
+                throw new AssertionError(tableRows + " was found in the table");
             } else{
                 System.err.println("False");
             }

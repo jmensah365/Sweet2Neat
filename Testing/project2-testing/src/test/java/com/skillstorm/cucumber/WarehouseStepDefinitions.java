@@ -45,7 +45,7 @@ public class WarehouseStepDefinitions {
         this.warehouseList.clickDeleteIcon();
     }
 
-    @And("I change the {string} and\\/or {string} with valid information")
+    @And("I change the {string} and\\/or {string}")
     public void iChangeWithValidCredentials(String location, String capacity) {
         this.warehouseList.setLocation(location);
         this.warehouseList.setCapacity(capacity);
@@ -67,7 +67,7 @@ public class WarehouseStepDefinitions {
     }
 
      //======================= CREATE =========================
-    @When("I fill in the {string} and {string} fields with valid information")
+    @When("I fill in the {string} and {string} fields")
     public void fillInTheFields(String location, String capacity) {
         this.warehouseList.setLocation(location);
         this.warehouseList.setCapacity(capacity);
