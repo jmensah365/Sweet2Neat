@@ -16,7 +16,7 @@ public class CandyStepDefinitions {
     @Before("@Candy")
     public void before(){
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--no-sandbox");
+        options.addArguments("--headless","--no-sandbox","--disable-gpu");
         WebDriver driver = new ChromeDriver(options);
 
         this.candyList = new CandyList(driver);

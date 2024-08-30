@@ -17,7 +17,7 @@ public class OrdersStepDefinition {
     @Before("@Orders")
     public void before(){
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--no-sandbox");
+        options.addArguments("--headless","--no-sandbox","--disable-gpu");
         WebDriver driver = new ChromeDriver(options);
 
         this.ordersList = new OrdersList(driver);
