@@ -58,7 +58,7 @@ public class OrderItems {
     public void selectCustomerName(String customerName) {
         this.customerName.click();
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -72,7 +72,7 @@ public class OrderItems {
     public void selectCandy(String candyName) {
         this.candyName.click();
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -84,7 +84,7 @@ public class OrderItems {
     }
     public void inputPrice(String price) {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -95,7 +95,7 @@ public class OrderItems {
 
     public void inputQuantity(String quantity) {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -107,7 +107,7 @@ public class OrderItems {
     public void addOrderItemButton() {
         addOrderItemButton.click();
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -143,7 +143,7 @@ public class OrderItems {
 
     public void confirmDeletion(){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

@@ -83,7 +83,7 @@ public class OrdersList {
 
     public void getOrderListPageUrl(){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -93,7 +93,7 @@ public class OrdersList {
 
     public void getCustomerName(String customerName){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -104,7 +104,7 @@ public class OrdersList {
     public void getOrderDate(String orderDate) {
         try {
             // Wait for the date picker to be ready
-            Thread.sleep(2000);
+            Thread.sleep(500);
 
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -116,12 +116,12 @@ public class OrdersList {
 
     public void getStatus(String status){
         try {
-            Thread.sleep(3000);
+            Thread.sleep(500);
 
             statusSelect.click();
 
 
-            Thread.sleep(1000);
+            Thread.sleep(500);
 
             if(status != null && !status.isEmpty()){
                 WebElement option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
@@ -139,7 +139,7 @@ public class OrdersList {
 
     public void getCustomerAddress(String customerAddress){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -148,7 +148,7 @@ public class OrdersList {
 
     public void clickAddOrderBtn(){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -157,7 +157,7 @@ public class OrdersList {
 
     public void confirmOrderCreation(){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -166,7 +166,7 @@ public class OrdersList {
 
     public void displayErrorMessage(){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -184,7 +184,7 @@ public class OrdersList {
     public void clickListOfOrdersBtn(){
         ordersMenu.click();
         try {
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -193,7 +193,7 @@ public class OrdersList {
 
     public void displayOrderListTable(){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -208,7 +208,7 @@ public class OrdersList {
      //======================UPDATE=====================//
     public void clickEditButton(){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -217,7 +217,7 @@ public class OrdersList {
 
     public void setCustomerName(String customerName){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -230,7 +230,7 @@ public class OrdersList {
 
     public void setOrderDate(String orderDate){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -243,12 +243,12 @@ public class OrdersList {
 
     public void setStatus(String status){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(500);
 
             statusSelect.click();
 
 
-            Thread.sleep(1000);
+            Thread.sleep(500);
             if(status != null && !status.isEmpty()){
                 WebElement option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
                 option.click();
@@ -265,7 +265,7 @@ public class OrdersList {
 
     public void setCustomerAddress(String customerAddress){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -278,7 +278,7 @@ public class OrdersList {
 
     public void confirmOrderUpdation(){
         try {
-            Thread.sleep(3000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -290,7 +290,7 @@ public class OrdersList {
      //======================DELETE=====================//
     public void clickDeleteIcon() {
         try {
-            Thread.sleep(3000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -308,7 +308,7 @@ public class OrdersList {
 
     public void confirmDeletion(){
         try {
-            Thread.sleep(3000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

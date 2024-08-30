@@ -122,7 +122,7 @@ public class NavigationLinks {
 
     public void clickWarehouseMenu() {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -132,7 +132,7 @@ public class NavigationLinks {
 
     public String getWarehouseListHeader() {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -228,7 +228,7 @@ public class NavigationLinks {
             default:
         }
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

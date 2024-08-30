@@ -81,7 +81,7 @@ public class WarehouseList {
 
     public void getUrl() {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -91,7 +91,7 @@ public class WarehouseList {
     //=====================UPDATE======================//
     public void clickEditButton() {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -100,7 +100,7 @@ public class WarehouseList {
 
     public void setLocation(String location){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -113,7 +113,7 @@ public class WarehouseList {
 
     public void setCapacity(String capacity){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -126,7 +126,7 @@ public class WarehouseList {
 
     public void clickUpdateWarehouse(){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -135,7 +135,7 @@ public class WarehouseList {
 
     public void confirmWarehouseUpdation(){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -150,7 +150,7 @@ public class WarehouseList {
     //=====================DELETE======================//
     public void clickDeleteIcon(){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -161,7 +161,7 @@ public class WarehouseList {
     
     public void confirmDeletion(){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -187,7 +187,7 @@ public class WarehouseList {
     
         public void addLocation(String location) {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -200,7 +200,7 @@ public class WarehouseList {
     
         public void addCapacity(String capacity) {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -209,7 +209,7 @@ public class WarehouseList {
         
         public void setCurrentStock(String currentStock) {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -218,7 +218,7 @@ public class WarehouseList {
     
         public void clickAddWarehouseButton() {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -227,7 +227,7 @@ public class WarehouseList {
     
         public void getWarehouseLocation() {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -242,7 +242,7 @@ public class WarehouseList {
     public void clickWarehouseListOption() {
         warehousesMenu.click();        
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

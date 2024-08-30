@@ -1,4 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: com.skillstorm.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 44, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 362.2 s -- in com.skillstorm.RunCucumberTest
+Tests run: 69, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 506.4 s <<< FAILURE! -- in com.skillstorm.RunCucumberTest
+WarehouseStock CRUD.Delete a warehouse stock -- Time elapsed: 4.659 s <<< FAILURE!
+java.lang.AssertionError: Candy with ID [[[[[ChromeDriver: chrome on mac (bffc1e73ba26893eacaac343e091800b)] -> name: tableBody]] -> xpath: .//tr], [[[[ChromeDriver: chrome on mac (bffc1e73ba26893eacaac343e091800b)] -> name: tableBody]] -> xpath: .//tr]] was found in the table
+	at com.skillstorm.Selenium.WarehouseStock.confirmDeletion(WarehouseStock.java:192)
+	at com.skillstorm.cucumber.WarehouseStockSteps.warehouseStockShouldNotBeVisible(WarehouseStockSteps.java:131)
+	at ✽.the warehouse stock should not be visible in the table(classpath:com/skillstorm//warehouseStock.feature:72)
+

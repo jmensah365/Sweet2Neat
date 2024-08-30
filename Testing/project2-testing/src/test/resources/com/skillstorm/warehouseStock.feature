@@ -60,7 +60,7 @@ Feature: WarehouseStock CRUD
   #-------------------------- Warehouse Stock READ ----------------------------#
   Scenario: Successful view of warehouse stocks
 
-    Given I am currently on the home page
+    Given I am starting on the home page
     When I click on the Warehouse Stock option
     Then I should be navigated to the Warehouse Stock page
     And I should see a list of all warehouse stocks available

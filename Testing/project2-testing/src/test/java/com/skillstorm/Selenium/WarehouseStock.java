@@ -73,7 +73,7 @@ public class WarehouseStock {
     public void selectCandy(String candyName) {
         candySelect.click();
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -88,7 +88,7 @@ public class WarehouseStock {
     public void selectLocation(String location) {
         warehouseSelect.click();
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -101,7 +101,7 @@ public class WarehouseStock {
     
     public void inputQuantity(String quantity) {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -113,7 +113,7 @@ public class WarehouseStock {
     public void addStockBtn() {
         addWarehouseButton.click();
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -182,14 +182,14 @@ public class WarehouseStock {
 
     public void confirmDeletion(){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         List<WebElement> tableRows = tableBody.findElements(By.xpath(".//tr"));
         for(WebElement tr : tableRows) {
             if(tr.getText().equals(firstRow)){
-                throw new AssertionError("Candy with ID " + tableRows + " was found in the table");
+                throw new AssertionError(tableRows + " was found in the table");
             } else{
                 System.err.println("False");
             }

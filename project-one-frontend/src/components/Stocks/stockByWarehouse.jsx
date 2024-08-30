@@ -278,7 +278,7 @@ const WarehouseStocks = () => {
                     </TableHead>
                     <TableBody name='tableBody'>
                         {stocks.map((stock) => (
-                            <TableRow key={stock.id}>
+                            <TableRow key={stock.id} id={stock.id}>
                                 <TableCell>{getWarehouseName(stock.warehouseId)}</TableCell>
                                 <TableCell>{getCandyName(stock.candyId)}</TableCell>
                                 <TableCell>{stock.quantity}</TableCell>

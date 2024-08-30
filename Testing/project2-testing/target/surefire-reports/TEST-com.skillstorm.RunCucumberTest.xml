@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.skillstorm.RunCucumberTest" time="362.24" tests="44" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.skillstorm.RunCucumberTest" time="506.374" tests="69" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/surefire/surefirebooter-20240830131633463_3.jar /Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/surefire 2024-08-30T13-16-33_431-jvmRun1 surefire-20240830131633463_1tmp surefire_0-20240830131633463_2tmp"/>
+    <property name="sun.java.command" value="/Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/surefire/surefirebooter-20240830135137405_3.jar /Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/surefire 2024-08-30T13-51-37_363-jvmRun1 surefire-20240830135137405_1tmp surefire_0-20240830135137405_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/test-classes:/Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/classes:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-java/4.23.1/selenium-java-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-api/4.23.1/selenium-api-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.23.1/selenium-chrome-driver-4.23.1.jar:/Users/dj/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.23.1/selenium-chromium-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-json/4.23.1/selenium-json-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.23.1/selenium-manager-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v125/4.23.1/selenium-devtools-v125-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v126/4.23.1/selenium-devtools-v126-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v127/4.23.1/selenium-devtools-v127-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.23.1/selenium-devtools-v85-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.23.1/selenium-edge-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.23.1/selenium-firefox-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-http/4.23.1/selenium-http-4.23.1.jar:/Users/dj/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.23.1/selenium-ie-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.23.1/selenium-remote-driver-4.23.1.jar:/Users/dj/.m2/repository/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre.jar:/Users/dj/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/dj/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/dj/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/dj/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/Users/dj/.m2/repository/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1.jar:/Users/dj/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/dj/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-api/1.40.0/opentelemetry-api-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-context/1.40.0/opentelemetry-context-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.40.0/opentelemetry-exporter-logging-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.40.0/opentelemetry-sdk-common-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.40.0/opentelemetry-sdk-extension-autoconfigure-spi-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.40.0/opentelemetry-sdk-extension-autoconfigure-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.40.0-alpha/opentelemetry-api-incubator-1.40.0-alpha.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.40.0/opentelemetry-sdk-trace-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.40.0/opentelemetry-sdk-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.40.0/opentelemetry-sdk-metrics-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.40.0/opentelemetry-sdk-logs-1.40.0.jar:/Users/dj/.m2/repository/net/bytebuddy/byte-buddy/1.14.18/byte-buddy-1.14.18.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-os/4.23.1/selenium-os-4.23.1.jar:/Users/dj/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.23.1/selenium-safari-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-support/4.23.1/selenium-support-4.23.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-java/7.11.1/cucumber-java-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-core/7.11.1/cucumber-core-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-gherkin/7.11.1/cucumber-gherkin-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.11.1/cucumber-gherkin-messages-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/gherkin/26.0.3/gherkin-26.0.3.jar:/Users/dj/.m2/repository/io/cucumber/messages/21.0.1/messages-21.0.1.jar:/Users/dj/.m2/repository/io/cucumber/tag-expressions/5.0.1/tag-expressions-5.0.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/Users/dj/.m2/repository/io/cucumber/datatable/7.11.1/datatable-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-plugin/7.11.1/cucumber-plugin-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/docstring/7.11.1/docstring-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/html-formatter/20.2.1/html-formatter-20.2.1.jar:/Users/dj/.m2/repository/io/cucumber/junit-xml-formatter/0.1.0/junit-xml-formatter-0.1.0.jar:/Users/dj/.m2/repository/io/cucumber/ci-environment/9.1.0/ci-environment-9.1.0.jar:/Users/dj/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/dj/.m2/repository/org/testng/testng/7.10.2/testng-7.10.2.jar:/Users/dj/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/dj/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/dj/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-testng/7.18.1/cucumber-testng-7.18.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.11.1/cucumber-junit-platform-engine-7.11.1.jar:/Users/dj/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:/Users/dj/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/dj/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/dj/.m2/repository/org/junit/platform/junit-platform-suite/1.9.2/junit-platform-suite-1.9.2.jar:/Users/dj/.m2/repository/org/junit/platform/junit-platform-suite-api/1.9.2/junit-platform-suite-api-1.9.2.jar:/Users/dj/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.9.2/junit-platform-suite-engine-1.9.2.jar:/Users/dj/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.9.2/junit-platform-suite-commons-1.9.2.jar:/Users/dj/.m2/repository/org/junit/platform/junit-platform-launcher/1.9.2/junit-platform-launcher-1.9.2.jar:/Users/dj/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.2/junit-jupiter-5.9.2.jar:/Users/dj/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/dj/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.2/junit-jupiter-params-5.9.2.jar:/Users/dj/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:"/>
@@ -29,7 +29,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/surefire/surefirebooter-20240830131633463_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/surefire/surefirebooter-20240830135137405_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
@@ -55,214 +55,400 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="Example #1.1" classname="Examples" time="14.584">
-    <system-out><![CDATA[86
+  <testcase name="Example #1.1" classname="Examples" time="9.619">
+    <system-out><![CDATA[89
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:16:35 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:51:38 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="15.526">
-    <system-out><![CDATA[Updated Candy ID 1
-]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:17:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="5.196">
+  <testcase name="Example #1.1" classname="Examples" time="9.179">
     <system-out><![CDATA[true
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:18:12 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:51:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="10.086">
-    <system-out><![CDATA[DJ Kim Ring Pops 7.99 365
-DJ Kim Ring Pops 7.99 365
-DJ Kim Ring Pops 7.99 365
-Micheal Phelps Sour Skittles 3.99 200
-DJ Kim Ring Pops 7.99 365
-Micheal Phelps Sour Skittles 3.99 200
-Micheal Phelps Sour Skittles 3.99 200
-Micheal Phelps Sour Skittles 3.99 200
-Micheal Phelps Sour Skittles 3.99 200
-Micheal Phelps Sour Skittles 3.99 200
-Micheal Phelps Sour Skittles 3.99 200
-Micheal Phelps Sour Skittles 3.99 200
-Micheal Phelps Sour Skittles 3.99 200
-]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:18:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="9.992">
-    <system-out><![CDATA[DJ Kim Ring Pops 7.99 365
-DJ Kim Ring Pops 7.99 365
-DJ Kim Ring Pops 7.99 365
-Micheal Phelps Sour Skittles 3.99 200
-DJ Kim Ring Pops 7.99 365
-Micheal Phelps Sour Skittles 3.99 200
-Micheal Phelps Sour Skittles 3.99 200
-Micheal Phelps Sour Skittles 3.99 200
-Micheal Phelps Sour Skittles 3.99 200
-Micheal Phelps Sour Skittles 3.99 200
-Micheal Phelps Sour Skittles 3.99 200
-Micheal Phelps Sour Skittles 3.99 200
-Micheal Phelps Sour Skittles 3.99 200
-]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:18:47 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="20.448">
-    <system-out><![CDATA[43
-]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:19:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="23.339">
+  <testcase name="Example #1.1" classname="Examples" time="10.486">
     <system-out><![CDATA[Updated Candy ID 1
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:19:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:53:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="9.423">
+  <testcase name="Example #1.1" classname="Examples" time="10.316">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:53:34 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="4.616">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:55:51 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="7.428">
+    <system-out><![CDATA[DJ Kim Ring Pops 7.99 365
+DJ Kim Ring Pops 7.99 365
+DJ Kim Ring Pops 7.99 365
+Micheal Phelps Sour Skittles 3.99 200
+DJ Kim Ring Pops 7.99 365
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:56:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="7.537">
+    <system-out><![CDATA[DJ Kim Ring Pops 7.99 365
+DJ Kim Ring Pops 7.99 365
+DJ Kim Ring Pops 7.99 365
+Micheal Phelps Sour Skittles 3.99 200
+DJ Kim Ring Pops 7.99 365
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+Micheal Phelps Sour Skittles 3.99 200
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:56:22 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="8.647">
+    <system-out><![CDATA[45
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:56:34 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="8.688">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:56:43 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="9.829">
+    <system-out><![CDATA[Updated Candy ID 1
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:57:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="9.919">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:57:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="6.914">
     <system-out><![CDATA[Test location
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:20:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:58:18 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="11.082">
+  <testcase name="Example #1.1" classname="Examples" time="7.612">
     <system-out><![CDATA[New warehouse location: Test location
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:20:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:58:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="8.848">
+  <testcase name="Example #1.1" classname="Examples" time="6.739">
     <system-out><![CDATA[false
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:21:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:58:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="8.952">
+  <testcase name="Example #1.1" classname="Examples" time="6.732">
     <system-out><![CDATA[false
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:21:11 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:58:56 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="8.1">
+  <testcase name="Example #1.1" classname="Examples" time="6.334">
     <system-out><![CDATA[false
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:21:46 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:59:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.1" classname="Examples" time="7.981">
+  <testcase name="Example #1.1" classname="Examples" time="6.306">
     <system-out><![CDATA[false
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:21:54 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:59:30 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="14.022">
-    <system-out><![CDATA[87
+  <testcase name="Example #1.2" classname="Examples" time="9.24">
+    <system-out><![CDATA[90
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:16:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:51:48 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="5.195">
+  <testcase name="Example #1.2" classname="Examples" time="8.675">
     <system-out><![CDATA[true
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:18:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:52:06 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="9.369">
+  <testcase name="Example #1.2" classname="Examples" time="9.868">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:53:44 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="4.875">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:55:56 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="8.663">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:56:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="9.847">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:57:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="6.809">
     <system-out><![CDATA[Test location
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:20:28 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:58:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="8.841">
+  <testcase name="Example #1.2" classname="Examples" time="6.935">
     <system-out><![CDATA[false
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:21:20 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:59:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.2" classname="Examples" time="8.06">
+  <testcase name="Example #1.2" classname="Examples" time="6.385">
     <system-out><![CDATA[false
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:22:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:59:36 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="5.174">
+  <testcase name="Example #1.3" classname="Examples" time="9.215">
     <system-out><![CDATA[true
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:18:22 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:52:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="8.854">
-    <system-out><![CDATA[false
-]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:21:29 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="Example #1.3" classname="Examples" time="7.962">
-    <system-out><![CDATA[false
-]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:22:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="Example #1.4" classname="Examples" time="5.074">
+  <testcase name="Example #1.3" classname="Examples" time="10.505">
     <system-out><![CDATA[true
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:18:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:53:54 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Example #1.4" classname="Examples" time="8.735">
-    <system-out><![CDATA[false
-]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:21:38 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="Example #1.4" classname="Examples" time="8.291">
-    <system-out><![CDATA[false
-]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:22:18 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="Example #1.5" classname="Examples" time="5.043">
+  <testcase name="Example #1.3" classname="Examples" time="4.735">
     <system-out><![CDATA[true
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:18:32 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:56:01 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Successful view of candy list" classname="Candy CRUD Operations" time="5.328">
+  <testcase name="Example #1.3" classname="Examples" time="8.684">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:57:00 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.3" classname="Examples" time="9.857">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:57:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.3" classname="Examples" time="6.713">
+    <system-out><![CDATA[false
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:59:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.3" classname="Examples" time="6.4">
+    <system-out><![CDATA[false
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:59:43 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.4" classname="Examples" time="9.076">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:52:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.4" classname="Examples" time="10.381">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:54:05 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.4" classname="Examples" time="4.633">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:56:05 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.4" classname="Examples" time="8.542">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:57:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.4" classname="Examples" time="9.607">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:58:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.4" classname="Examples" time="6.714">
+    <system-out><![CDATA[false
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:59:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.4" classname="Examples" time="6.203">
+    <system-out><![CDATA[false
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:59:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.5" classname="Examples" time="9.21">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:52:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.5" classname="Examples" time="10.328">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:54:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.5" classname="Examples" time="4.577">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:56:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.6" classname="Examples" time="9.169">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:52:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.6" classname="Examples" time="10.294">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:54:25 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.7" classname="Examples" time="9.207">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:52:51 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.7" classname="Examples" time="10.411">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:54:36 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.8" classname="Examples" time="9.228">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:53:01 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.8" classname="Examples" time="10.761">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:54:46 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.9" classname="Examples" time="9.261">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:53:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.9" classname="Examples" time="10.288">
+    <system-out><![CDATA[true
+]]></system-out>
+    <system-err><![CDATA[Aug 30, 2024 1:54:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+]]></system-err>
+  </testcase>
+  <testcase name="Successful view of candy list" classname="Candy CRUD Operations" time="4.6">
     <system-out><![CDATA[Candy ID Candy Name Candy Type Flavor Price ($) Weight (oz.)
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:17:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:53:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Deleting a Candy" classname="Candy CRUD Operations" time="7.378">
-    <system-err><![CDATA[Aug 30, 2024 1:17:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="Deleting a Candy" classname="Candy CRUD Operations" time="5.581">
+    <system-err><![CDATA[Aug 30, 2024 1:55:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 False
 False
@@ -286,70 +472,72 @@ False
 False
 ]]></system-err>
   </testcase>
-  <testcase name="Successfully navigate to the home page" classname="Navigation Links" time="4.165">
-    <system-err><![CDATA[Aug 30, 2024 1:17:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="Successfully navigate to the home page" classname="Navigation Links" time="3.961">
+    <system-err><![CDATA[Aug 30, 2024 1:55:13 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Successfully navigate to Warehouse List page" classname="Navigation Links" time="6.276">
+  <testcase name="Successfully navigate to Warehouse List page" classname="Navigation Links" time="5.134">
     <system-out><![CDATA[Warehouse List
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:17:35 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:55:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Successfully navigate to Candy Inventory page" classname="Navigation Links" time="4.155">
+  <testcase name="Successfully navigate to Candy Inventory page" classname="Navigation Links" time="4.125">
     <system-out><![CDATA[Candy Inventory
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:17:41 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:55:22 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Successfully navigate to Candy Categories page" classname="Navigation Links" time="4.156">
+  <testcase name="Successfully navigate to Candy Categories page" classname="Navigation Links" time="4.161">
     <system-out><![CDATA[Types of candy
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:17:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:55:26 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Successfully navigate to List of Orders page" classname="Navigation Links" time="4.206">
+  <testcase name="Successfully navigate to List of Orders page" classname="Navigation Links" time="4.088">
     <system-out><![CDATA[Order List
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:17:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:55:30 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Successfully navigate to Order Info page" classname="Navigation Links" time="4.362">
+  <testcase name="Successfully navigate to Order Info page" classname="Navigation Links" time="4.057">
     <system-out><![CDATA[Order Information
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:17:54 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:55:34 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Successfully navigate to About page" classname="Navigation Links" time="4.188">
+  <testcase name="Successfully navigate to About page" classname="Navigation Links" time="4.001">
     <system-out><![CDATA[This is your one stop shop for Candy Inventory Management. You will be able add different candy products you wish to store and also delete any you do not want. You can also see how many warehouses you currenly have, how much capacity they each have, how much stock they hold, and their location. In addition you can keep track of people who have ordered from you and associated order information.
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:17:58 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:55:38 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Successfully navigate to Warehouse Stock page" classname="Navigation Links" time="4.202">
+  <testcase name="Successfully navigate to Warehouse Stock page" classname="Navigation Links" time="4.134">
     <system-out><![CDATA[Stock Inventory
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:18:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:55:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Successfully navigate with Add a Warehouse button" classname="Navigation Links" time="5.179">
+  <testcase name="Successfully navigate with Add a Warehouse button" classname="Navigation Links" time="4.684">
     <system-out><![CDATA[Warehouse List
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:18:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:55:46 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Deleting an order item" classname="OrderItem CRUD operations" time="5.222">
-    <system-err><![CDATA[Aug 30, 2024 1:18:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="Deleting an order item" classname="OrderItem CRUD operations" time="4.679">
+    <system-err><![CDATA[Aug 30, 2024 1:56:30 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+False
+False
 False
 False
 False
@@ -365,45 +553,37 @@ False
 False
 ]]></system-err>
   </testcase>
-  <testcase name="View the order list table" classname="Order CRUD operations" time="8.129">
+  <testcase name="View the order list table" classname="Order CRUD operations" time="5.248">
     <system-out><![CDATA[Order Id Customer Name Order Date Status Customer Address
 1 DJ Kim 2021-06-17 Completed 1011 Super Address Dr, Ballston VA, 10234
 2 Victoria Ombuna 2022-05-08 Completed 33 Big Rock Cove Street Queensbury, NY 12804
 36 Micheal Phelps 2024-08-10 Pending Test
-37 -1 2024-08-30 Ordered -1
-
+45 Jeremiah Mensah 2023-09-19 Pending 1110 Fake Address Dr, Greensboro NC, 20675
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:19:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:57:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Delete an order" classname="Order CRUD operations" time="11.927">
-    <system-err><![CDATA[Aug 30, 2024 1:19:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-False
-False
-False
-False
-]]></system-err>
-  </testcase>
-  <testcase name="Delete an order" classname="Order CRUD operations" time="12.085">
-    <system-err><![CDATA[Aug 30, 2024 1:20:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="Delete an order" classname="Order CRUD operations" time="5.764">
+    <system-err><![CDATA[Aug 30, 2024 1:58:12 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 False
 False
 False
 ]]></system-err>
   </testcase>
-  <testcase name="Successful view of warehouse list" classname="Warehouse CRUD" time="6.3">
+  <testcase name="Successful view of warehouse list" classname="Warehouse CRUD" time="5.289">
     <system-out><![CDATA[Warehouse Id Location Stock/Capacity Actions
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:20:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:58:39 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Delete a warehouse" classname="Warehouse CRUD" time="7.181">
-    <system-err><![CDATA[Aug 30, 2024 1:20:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="Delete a warehouse" classname="Warehouse CRUD" time="5.654">
+    <system-err><![CDATA[Aug 30, 2024 1:58:44 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
+False
+False
 False
 False
 False
@@ -420,25 +600,26 @@ False
 False
 ]]></system-err>
   </testcase>
-  <testcase name="Successful view of warehouse stocks" classname="WarehouseStock CRUD" time="4.239">
+  <testcase name="Successful view of warehouse stocks" classname="WarehouseStock CRUD" time="4.167">
     <system-out><![CDATA[http://cim-frontend.s3-website-us-east-1.amazonaws.com/stocks
 3212 Spur Ln, Austin, Texas Sour Skittles 10000
-Test location Air Heads 10000
+3212 Spur Ln, Austin, Texas Sour Skittles 10000
 Test location Ring Pops 40000
-3212 Spur Ln, Austin, Texas Air Heads 2000
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:22:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:59:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="Delete a warehouse stock" classname="WarehouseStock CRUD" time="5.206">
+  <testcase name="Delete a warehouse stock" classname="WarehouseStock CRUD" time="4.659">
+    <failure message="Candy with ID [[[[[ChromeDriver: chrome on mac (bffc1e73ba26893eacaac343e091800b)] -&gt; name: tableBody]] -&gt; xpath: .//tr], [[[[ChromeDriver: chrome on mac (bffc1e73ba26893eacaac343e091800b)] -&gt; name: tableBody]] -&gt; xpath: .//tr]] was found in the table" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Candy with ID [[[[[ChromeDriver: chrome on mac (bffc1e73ba26893eacaac343e091800b)] -> name: tableBody]] -> xpath: .//tr], [[[[ChromeDriver: chrome on mac (bffc1e73ba26893eacaac343e091800b)] -> name: tableBody]] -> xpath: .//tr]] was found in the table
+	at com.skillstorm.Selenium.WarehouseStock.confirmDeletion(WarehouseStock.java:192)
+	at com.skillstorm.cucumber.WarehouseStockSteps.warehouseStockShouldNotBeVisible(WarehouseStockSteps.java:131)
+	at ✽.the warehouse stock should not be visible in the table(classpath:com/skillstorm//warehouseStock.feature:72)
+]]></failure>
     <system-out><![CDATA[Deleted row: 3212 Spur Ln, Austin, Texas Sour Skittles 10000
 ]]></system-out>
-    <system-err><![CDATA[Aug 30, 2024 1:22:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Aug 30, 2024 1:59:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-False
-False
-False
 ]]></system-err>
   </testcase>
 </testsuite>
