@@ -16,6 +16,7 @@ public class CandyStepDefinitions {
     @Before("@Candy")
     public void before(){
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless","--no-sandbox");
         WebDriver driver = new ChromeDriver(options);
 
         this.candyList = new CandyList(driver);
@@ -23,7 +24,7 @@ public class CandyStepDefinitions {
     
     @After("@Candy")
     public void after() {
-        candyList.close();
+        candyList.quit();
     }
 
     @Given("I am on the Candy Inventory page")

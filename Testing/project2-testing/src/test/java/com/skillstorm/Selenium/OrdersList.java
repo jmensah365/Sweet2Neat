@@ -75,6 +75,10 @@ public class OrdersList {
         PageFactory.initElements(driver, this);
     }
 
+    public void quit(){
+        this.driver.quit();
+    }
+
     //======================CREATE=====================//
 
     public void getOrderListPageUrl(){

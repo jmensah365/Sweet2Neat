@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import com.skillstorm.Selenium.OrdersList;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 
@@ -16,9 +17,15 @@ public class OrdersStepDefinition {
     @Before("@Orders")
     public void before(){
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless","--no-sandbox");
         WebDriver driver = new ChromeDriver(options);
 
         this.ordersList = new OrdersList(driver);
+    }
+
+    @After("@Orders")
+    public void quit(){
+        ordersList.quit();
     }
 
     @Given("I am on the order list page")
