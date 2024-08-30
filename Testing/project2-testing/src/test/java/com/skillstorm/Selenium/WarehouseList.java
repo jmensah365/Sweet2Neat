@@ -191,7 +191,11 @@ public class WarehouseList {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            locationField.sendKeys(location);
+            // if(!location.equals("empty")) {
+            //     locationField.sendKeys(location);
+            // } else {
+            //     action.sendKeys(Keys.ESCAPE).perform();
+            // }
         }
     
         public void addCapacity(String capacity) {
