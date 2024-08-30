@@ -12,6 +12,7 @@ Feature: Candy CRUD Operations
         |Sour Skittles|Sour Candy| Sour| 4.99|1.0|
         |Ring Pops|Gummy Candy| Watermelon| 2.99|0.50|
     
+    #-----------------------------CREATE with invalid input-------------------------------------#
     Scenario Outline: Creating a Candy with Invalid Data
         Given I am on the Candy Inventory page
         When I input the candy "<name>", "<type>", "<flavor>", "<price>", and, "<weight>"
@@ -48,7 +49,7 @@ Feature: Candy CRUD Operations
     Examples:
         |name|type|flavor|price|weight|
         |Sour Strawberry Belt Bulk Bag|Sour Candy| Sour| 10.00|1.0|
-    
+    #-----------------------------UPDATE with invalid input-------------------------------------#
     Scenario Outline: Updating a Candy with Invalid Data
         Given I am on the Candy Inventory page
         When I click the edit icon for the candy I want to edit
