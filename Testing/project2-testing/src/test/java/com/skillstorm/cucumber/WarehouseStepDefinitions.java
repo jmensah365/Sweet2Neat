@@ -100,6 +100,11 @@ public class WarehouseStepDefinitions {
         this.warehouseList.getWarehouseLocation();
     }
 
+    @Then("I should see an error messsage on the screen")
+    public void iShouldSeeAnErrorMessageOnTheScreen(){
+        warehouseList.confirmErrorMessage();
+    }
+
     //======================= READ =========================
 
     // Step definition for the Given statement to navigate to the home page

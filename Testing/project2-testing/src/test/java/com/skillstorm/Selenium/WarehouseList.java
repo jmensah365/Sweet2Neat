@@ -16,8 +16,11 @@ public class WarehouseList {
     private WebDriver driver;
 
     // URLs for the warehouse list page and the home page
-    private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/warehouses";
-    private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
+    // private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/warehouses";
+    // private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
+
+    private static final String url = "http://localhost:5173/warehouses";
+    private static final String homeUrl = "http://localhost:5173/";
 
     /*
      * Locators for the form fields on the warehouse page
@@ -70,6 +73,10 @@ public class WarehouseList {
     // Locator for the location in the first row in the warehouse list table
     @FindBy(xpath = "//table[@name='warehouseTable']//tr[1]/td[1]")
     private WebElement warehouseFirstRowLocation;
+
+    // Locator for the warehouse list snackbar error message
+    @FindBy(name = "warehouseListSnackbarError")
+    private WebElement warehouseListSnackbarErrorMessage;
 
     // Variable to store the warehouse ID
     String warehouseId = "";
@@ -246,6 +253,16 @@ public class WarehouseList {
             e.printStackTrace();
         }
         System.out.println(warehouseRowLocation.getText());
+    }
+
+    public void confirmErrorMessage(){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(warehouseListSnackbarErrorMessage.isDisplayed());
     }
 
     //======================= READ =========================

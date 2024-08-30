@@ -12,6 +12,19 @@ Feature: Warehouse CRUD
     Examples:
     | location                    | capacity | 
     | 3212 Spur Ln, Austin, Texas | 5000     | 
+    #-------------------------- Warehouse CREATE with invalid inputs ----------------------------#
+  Scenario Outline: Unsuccessful warehouse creation with invalid information
+
+    Given I am on the Warehouse List page
+    When I fill in the "<location>" and "<capacity>" fields with valid information
+    And I click the ADD WAREHOUSE button
+    Then I should see an error messsage on the screen
+
+    Examples:
+    | location                    | capacity | 
+    |  | 5000     | #empty warehouse location
+    | 3212 Spur Ln, Austin, Texas |   | #empty capacity
+    |  |    | #all empty
 
   #-------------------------- Warehouse UPDATE ----------------------------#
   Scenario Outline: Updating a warehouse
@@ -25,6 +38,21 @@ Feature: Warehouse CRUD
   Examples:
   | location | capacity |
   | Apt. 862 652 Shad Neck, South Hershelborough, IN 14539    | 2000    |
+
+    #-------------------------- Warehouse UPDATE with invalid information ----------------------------#
+  Scenario Outline: Updating a warehouse
+
+    Given I am on the Warehouse List page
+    When I click on the edit icon for the Warehouse I want to edit
+    And I change the "<location>" and/or "<capacity>" with valid information
+    And I click on the UPDATE WAREHOUSE button
+    Then I should see an error messsage on the screen
+
+  Examples:
+  | location | capacity |
+  |    | 2000    | #empty warehouse location
+  | Apt. 862 652 Shad Neck, South Hershelborough, IN 14539    |   | #empty capacity
+  |  |    | #all empty
 
 #-------------------------- Warehouse READ ----------------------------#
 Scenario: Successful view of warehouse list
