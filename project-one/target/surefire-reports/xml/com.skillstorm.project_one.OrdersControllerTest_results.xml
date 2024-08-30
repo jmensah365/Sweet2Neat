@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="6"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.001">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testFindOrdersById"
+                time="0.000"
+                classname="com.skillstorm.project_one.OrdersControllerTest">
+            </testcase>
+            <testcase
+                name="testUpdateOrders"
+                time="0.000"
+                classname="com.skillstorm.project_one.OrdersControllerTest">
+            </testcase>
+            <testcase
+                name="testFindAllOrders"
+                time="0.000"
+                classname="com.skillstorm.project_one.OrdersControllerTest">
+            </testcase>
+            <testcase
+                name="testCreateOrders"
+                time="0.000"
+                classname="com.skillstorm.project_one.OrdersControllerTest">
+            </testcase>
+            <testcase
+                name="testFindOrdersByStatus"
+                time="0.000"
+                classname="com.skillstorm.project_one.OrdersControllerTest">
+            </testcase>
+            <testcase
+                name="testDeleteOrderById"
+                time="0.001"
+                classname="com.skillstorm.project_one.OrdersControllerTest">
+            </testcase>
+</testsuite>

@@ -11,9 +11,9 @@ Feature: Order CRUD operations
     
 
     Scenario: View the order list table
-        Given I am on the home page
+        Given I am on the base page
         When I navigate to the order list page
-        Then I should I see the list of orders
+        Then I should see the list of orders
     
     Scenario Outline: Update an order
         Given I am on the order list page
@@ -25,14 +25,15 @@ Feature: Order CRUD operations
         |Customer Name| Order date| Status| Customer Address|
         |DJ Kim| 06/17/2021| Completed| 1011 Super Address Dr, Ballston VA, 10234|
     
+
     Scenario: Delete an order
         Given I am on the order list page
 		When I click the delete button
 		Then The order should not be visible in the order list page
+
     Scenario: Delete an order
         Given I am on the order list page
-		When I click the delete icon
+		When I click the delete button
 		Then The order should not be visible in the order list page
-
 
 

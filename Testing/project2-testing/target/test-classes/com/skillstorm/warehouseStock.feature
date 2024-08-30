@@ -11,7 +11,7 @@ Feature: WarehouseStock CRUD
 
         Examples:
         | candy | location | quantity |
-        |  Sour Skittles   | 3212 Spur Ln, Austin, Texas | 10000   |
+        |  Air Heads   | Test location | 10000   |
 
     Scenario Outline: Unsuccessful warehouse stock creation with invalid and valid information
 
@@ -55,12 +55,12 @@ Feature: WarehouseStock CRUD
     | empty     | Test location |   1000        |
     | Air Heads |   empty       |   2000        |
     | Air Heads | Test location | empty         |
-    | empty | empty | empty         |
+    | empty     | empty         | empty         |
 
   #-------------------------- Warehouse Stock READ ----------------------------#
   Scenario: Successful view of warehouse stocks
 
-    Given I am currently on the home page
+    Given I am starting on the home page
     When I click on the Warehouse Stock option
     Then I should be navigated to the Warehouse Stock page
     And I should see a list of all warehouse stocks available

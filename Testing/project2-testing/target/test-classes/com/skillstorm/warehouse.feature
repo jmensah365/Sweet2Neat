@@ -12,6 +12,7 @@ Feature: Warehouse CRUD
     Examples:
     | location                    | capacity | 
     | 3212 Spur Ln, Austin, Texas | 5000     | 
+    | Test location | 10000     | 
 
   #-------------------------- Warehouse UPDATE ----------------------------#
   Scenario Outline: Updating a warehouse

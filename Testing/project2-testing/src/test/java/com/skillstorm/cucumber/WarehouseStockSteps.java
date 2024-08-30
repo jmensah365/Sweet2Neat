@@ -20,6 +20,7 @@ public class WarehouseStockSteps {
     @Before("@WarehouseStock")
     public void before(){
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless","--no-sandbox");
         WebDriver driver = new ChromeDriver(options);
 
         this.warehouseStock = new WarehouseStock(driver);
@@ -99,7 +100,7 @@ public class WarehouseStockSteps {
     }
 
     //=============================== READ ====================================//
-    @Given("I am currently on the home page")
+    @Given("I am starting on the home page")
     public void currentlyOnTheHomePage() {
         this.warehouseStock.getHomePageUrl();
     }

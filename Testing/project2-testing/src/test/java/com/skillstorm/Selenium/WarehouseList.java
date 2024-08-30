@@ -76,7 +76,7 @@ public class WarehouseList {
     }
 
     public void close() { // warehouseStepDefintion calls this to close all open browsers when tests finish
-        this.driver.close();
+        this.driver.quit();
     }
 
     public void getUrl() {
@@ -91,7 +91,7 @@ public class WarehouseList {
     //=====================UPDATE======================//
     public void clickEditButton() {
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -100,7 +100,7 @@ public class WarehouseList {
 
     public void setLocation(String location){
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -113,7 +113,7 @@ public class WarehouseList {
 
     public void setCapacity(String capacity){
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -126,7 +126,7 @@ public class WarehouseList {
 
     public void clickUpdateWarehouse(){
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -135,7 +135,7 @@ public class WarehouseList {
 
     public void confirmWarehouseUpdation(){
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -150,7 +150,7 @@ public class WarehouseList {
     //=====================DELETE======================//
     public void clickDeleteIcon(){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -161,7 +161,7 @@ public class WarehouseList {
     
     public void confirmDeletion(){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

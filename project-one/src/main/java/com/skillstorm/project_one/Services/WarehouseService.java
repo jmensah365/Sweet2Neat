@@ -78,7 +78,7 @@ public class WarehouseService {
      * Update the current stock of a Warehouse based on its associated stocks.
      * @param warehouse The Warehouse entity to update
      */
-    private void updateStockForWarehouse(Warehouse warehouse) {
+    public void updateStockForWarehouse(Warehouse warehouse) {
         Iterable<Stock> stocks = stockRepo.findByWarehouse(warehouse);
         int totalQuantity = 0;
         for (Stock stock : stocks) {

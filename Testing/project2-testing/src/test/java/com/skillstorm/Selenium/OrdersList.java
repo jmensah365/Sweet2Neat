@@ -62,6 +62,9 @@ public class OrdersList {
     @FindBy(name = "editIcon")
     private WebElement editBtn;
 
+    @FindBy(name = "orderListSnackbarError")
+    private WebElement orderListErrorMessage;
+
 
 
     String orderId = "";
@@ -70,6 +73,10 @@ public class OrdersList {
         this.driver = driver;
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         PageFactory.initElements(driver, this);
+    }
+
+    public void quit(){
+        this.driver.quit();
     }
 
     //======================CREATE=====================//
@@ -116,9 +123,15 @@ public class OrdersList {
 
             Thread.sleep(1000);
 
-            WebElement option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
+            if(status != null && !status.isEmpty()){
+                WebElement option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
+                option.click();
+            } else {
+                WebElement option = driver.findElement(By.xpath("//li[@data-value='']"));
 
-            option.click();
+                option.click();
+            }
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -149,6 +162,15 @@ public class OrdersList {
             e.printStackTrace();
         }
         System.out.println(lastRowOrderId.getText());
+    }
+
+    public void displayErrorMessage(){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(orderListErrorMessage.isDisplayed());
     }
 
      //======================CREATE=====================//
@@ -214,10 +236,8 @@ public class OrdersList {
         }
         orderDateField.click();
 
-        String prevValue = orderDateField.getAttribute("value");
-        for (int i = 0; i < prevValue.length(); i++){
-            orderDateField.sendKeys(Keys.BACK_SPACE);
-        }
+        orderDateField.sendKeys(Keys.COMMAND + "a");
+        orderDateField.sendKeys(Keys.BACK_SPACE);
         orderDateField.sendKeys(orderDate);
     }
 
@@ -229,10 +249,14 @@ public class OrdersList {
 
 
             Thread.sleep(1000);
+            if(status != null && !status.isEmpty()){
+                WebElement option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
+                option.click();
+            } else {
+                WebElement option = driver.findElement(By.xpath("//li[@data-value='']"));
 
-            WebElement option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
-
-            option.click();
+                option.click();
+            }
             
         } catch (InterruptedException e) {
             e.printStackTrace();

@@ -63,7 +63,7 @@ public class WarehouseStock {
     }
 
     public void close() {
-        driver.close();
+        driver.quit();
     }
 
     public void getWarehoueStockUrl() {
