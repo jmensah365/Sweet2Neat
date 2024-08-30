@@ -309,7 +309,7 @@ const OrderInfo = () => {
                     </TableHead>
                     <TableBody name="tableBody">
                         {orderItem.map(orderItem => (
-                            <TableRow key={orderItem.id}>
+                            <TableRow key={orderItem.id} id={orderItem.id}>
                                 <TableCell>{getCustomerName(orderItem.orderId)}</TableCell>
                                 <TableCell>{getCandyName(orderItem.candyId)}</TableCell>
                                 <TableCell>{orderItem.price}</TableCell>

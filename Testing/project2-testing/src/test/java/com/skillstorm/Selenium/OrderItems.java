@@ -10,12 +10,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.skillstorm.RunCucumberTest;
+
 public class OrderItems {
 
     private WebDriver driver;
     private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/orderInfo";
     private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
-    private String firstRow = "";
+    private String orderItemId = "";
 
     @FindBy(xpath = "//div[@id='orderIdSelect']")
     private WebElement customerName;
@@ -52,16 +54,14 @@ public class OrderItems {
     }
 
     public void getOrderItemsPage() {
+        RunCucumberTest.sleepThread();
         this.driver.get(url);
     }
 
     public void selectCustomerName(String customerName) {
+        RunCucumberTest.sleepThread();
         this.customerName.click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         if(!customerName.equals("empty")) {
             this.driver.findElement(By.xpath("//li[text()='" + customerName + "']")).click();
         } else {
@@ -70,12 +70,9 @@ public class OrderItems {
     }
 
     public void selectCandy(String candyName) {
+        RunCucumberTest.sleepThread();
         this.candyName.click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         if(!candyName.equals("empty")) {
             this.driver.findElement(By.xpath("//li[text()='" + candyName + "']")).click();
         } else {
@@ -83,51 +80,43 @@ public class OrderItems {
         }
     }
     public void inputPrice(String price) {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         if(!price.equals("empty")) {
             this.price.sendKeys(price); 
         }
     }
 
     public void inputQuantity(String quantity) {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         if(!quantity.equals("empty")) {
             this.quantity.sendKeys(quantity); 
         }
     }
 
     public void addOrderItemButton() {
+        RunCucumberTest.sleepThread();
         addOrderItemButton.click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
     public void clearQuantityField() {
+        RunCucumberTest.sleepThread();
         quantity.sendKeys(Keys.COMMAND + "a");
         quantity.sendKeys(Keys.DELETE);
     }
 
     public void clearPriceField() {
+        RunCucumberTest.sleepThread();
         price.sendKeys(Keys.COMMAND + "a");
         price.sendKeys(Keys.DELETE);
     }
 
     public void clickEditIcon() {
+        RunCucumberTest.sleepThread();
         editIcon.click();
     }
 
     public void getOrderItemsContents() {
+        RunCucumberTest.sleepThread();
         List<WebElement> tableRows = tableBody.findElements(By.xpath(".//tr"));
 
         for(WebElement tr : tableRows) {
@@ -136,20 +125,17 @@ public class OrderItems {
     }
 
     public void clickOnDeleteIcon() {
-        firstRow = tableBody.findElement(By.xpath(".//tr[1]")).getText();
-        System.out.println("Delete row:" + firstRow);
+        RunCucumberTest.sleepThread();
+        orderItemId = tableBody.findElement(By.xpath(".//tr[1]")).getAttribute("id");
+        System.out.println("Delete OrderItem Id:" + orderItemId);
         deleteIcon.click();
     }
 
     public void confirmDeletion(){
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         List<WebElement> tableRows = tableBody.findElements(By.xpath(".//tr"));
         for(WebElement tr : tableRows) {
-            if(tr.getText().equals(firstRow)){
+            if(tr.getText().equals(orderItemId)){
                 throw new AssertionError(tableRows + " was found in the table");
             } else{
                 System.err.println("False");
