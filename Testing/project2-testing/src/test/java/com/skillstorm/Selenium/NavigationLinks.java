@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.skillstorm.RunCucumberTest;
+
 
 public class NavigationLinks {
     
@@ -104,111 +106,129 @@ public class NavigationLinks {
 
     //================= NAV TO HOME PAGE ==================//
     public void getOrderPage() {
+        RunCucumberTest.sleepThread();
         this.driver.get(orderUrl);
     }
 
     public void clickLogo() {
+        RunCucumberTest.sleepThread();
         logo.click();
     }
 
     public String checkCurrentPage() {
+        RunCucumberTest.sleepThread();
         return this.driver.getCurrentUrl();
     }
 
     //================= NAV TO WAREHOUSE LIST PAGE ==================//
     public void getHomePage() {
+        RunCucumberTest.sleepThread();
         this.driver.get(homeUrl);
     }
 
     public void clickWarehouseMenu() {
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         warehousesMenu.click();        
+        RunCucumberTest.sleepThread();
         warehousesListMenu.click();        
     }
 
     public String getWarehouseListHeader() {
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         return warehouseListHeader.getText();
     }
 
     //================= NAV TO CANDY INVENTORY PAGE ==================//
     public void clickOnCandyInventoryMenu() {
+        RunCucumberTest.sleepThread();
         candyMenu.click();
+        RunCucumberTest.sleepThread();
         candyInventoryMenu.click();        
     }
 
     public String getCandyInventoryHeader() {
+        RunCucumberTest.sleepThread();
         return candyInventoryHeader.getText();
     }
 
     //================= NAV TO CANDY CATEGORIES PAGE ==================//
     public void clickOnCandyCategoriesMenu() {
+        RunCucumberTest.sleepThread();
         candyMenu.click();
+        RunCucumberTest.sleepThread();
         candyCategoriesMenu.click();
     }
 
     public String getCandyCategoriesHeader() {
+        RunCucumberTest.sleepThread();
         return candyCategoriesHeader.getText();
     }
     
     //================= NAV TO LIST OF ORDERS PAGE ==================//
     public void clickOnListOfOrdersMenu() {
+        RunCucumberTest.sleepThread();
         ordersMenu.click();
+        RunCucumberTest.sleepThread();
         listOfOrdersMenu.click();
     }
 
     public String getListOfOrdersHeader() {
+        RunCucumberTest.sleepThread();
         return listOfOrdersHeader.getText();
     }
 
     //================= NAV TO ORDER INFO PAGE ==================//
     public void clickOnOrderInfoMenu() {
+        RunCucumberTest.sleepThread();
         ordersMenu.click();
+        RunCucumberTest.sleepThread();
         orderInfoMenu.click();
     }
 
     public String getOrderInfoHeader() {
+        RunCucumberTest.sleepThread();
         return orderInfoHeader.getText();
     }
 
     //================= NAV TO ABOUT PAGE ==================//
     public void clickOnAboutMenu() {
+        RunCucumberTest.sleepThread();
         aboutMenu.click();
     }
 
     public String getAboutInfo() {
+        RunCucumberTest.sleepThread();
         return aboutInfo.getText();
     }
     
     //================= NAV TO WAREHOUSE STOCK PAGE ==================//
     public void clickOnWarehouseStockMenu() {
+        RunCucumberTest.sleepThread();
         warehousesMenu.click();
+        RunCucumberTest.sleepThread();
+        
         warehouseStockMenu.click();
     }
 
     public String getWarehouseStockHeader() {
+        RunCucumberTest.sleepThread();
         return warehouseStockHeader.getText();
     }
 
     //================= NAV USING ADD A WAREHOUSE BUTTON ==================//
     public void clickOnAddAWarehouseButton() {
+        RunCucumberTest.sleepThread();
         addWarehouseButton.click();
     }
 
     //================= NAV TO DIFFERENT CANDY TYPES ==================//
     public void candyCategoriesPage() {
+        RunCucumberTest.sleepThread();
         this.driver.get(candyCategoriesUrl);
     }
 
     public void selectCandyType(String candyType) {
+        RunCucumberTest.sleepThread();
         switch(candyType) {
             case "Gummy Candy":
             gummyCardButton.click();
@@ -227,14 +247,10 @@ public class NavigationLinks {
                 break;
             default:
         }
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
     }
 
     public boolean checkCandyHeader(String candyType) {
+        RunCucumberTest.sleepThread();
         return candyHeader.getText().equals(candyType);
     }
 }

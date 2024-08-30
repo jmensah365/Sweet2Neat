@@ -15,6 +15,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.skillstorm.RunCucumberTest;
+
 
 public class OrdersList {
     private WebDriver driver;
@@ -82,94 +84,56 @@ public class OrdersList {
     //======================CREATE=====================//
 
     public void getOrderListPageUrl(){
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
 
         this.driver.get(url);
     }
 
     public void getCustomerName(String customerName){
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         customerNameField.sendKeys(customerName);
     }
 
 
     public void getOrderDate(String orderDate) {
-        try {
-            // Wait for the date picker to be ready
-            Thread.sleep(500);
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
 
         orderDateField.click();
+        RunCucumberTest.sleepThread();
         orderDateField.sendKeys(orderDate);
     }
 
     public void getStatus(String status){
-        try {
-            Thread.sleep(500);
+        RunCucumberTest.sleepThread();
+        statusSelect.click();
+        RunCucumberTest.sleepThread();
+        if(status != null && !status.isEmpty()){
+            WebElement option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
+            option.click();
+        } else {
+            WebElement option = driver.findElement(By.xpath("//li[@data-value='']"));
 
-            statusSelect.click();
-
-
-            Thread.sleep(500);
-
-            if(status != null && !status.isEmpty()){
-                WebElement option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
-                option.click();
-            } else {
-                WebElement option = driver.findElement(By.xpath("//li[@data-value='']"));
-
-                option.click();
-            }
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            option.click();
         }
     }
 
     public void getCustomerAddress(String customerAddress){
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         customerAddressField.sendKeys(customerAddress);
     }
 
     public void clickAddOrderBtn(){
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         orderListBtn.click();
     }
 
     public void confirmOrderCreation(){
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         System.out.println(lastRowOrderId.getText());
     }
 
     public void displayErrorMessage(){
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         System.out.println(orderListErrorMessage.isDisplayed());
     }
 
@@ -178,25 +142,19 @@ public class OrdersList {
 
      //======================READ=====================//
     public void getHomeUrl(){
+        RunCucumberTest.sleepThread();
         this.driver.get(homeUrl);
     }
 
     public void clickListOfOrdersBtn(){
+        RunCucumberTest.sleepThread();
         ordersMenu.click();
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         listOfOrdersMenu.click();
     }
 
     public void displayOrderListTable(){
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         List<WebElement> tableRows = orderListTable.findElements(By.xpath(".//tr"));
 
         for(WebElement tr : tableRows) {
@@ -207,20 +165,13 @@ public class OrdersList {
 
      //======================UPDATE=====================//
     public void clickEditButton(){
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         editBtn.click();
     }
 
     public void setCustomerName(String customerName){
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
+        
         String prevValue = customerNameField.getAttribute("value");
         for (int i = 0; i < prevValue.length(); i++){
             customerNameField.sendKeys(Keys.BACK_SPACE);
@@ -229,11 +180,7 @@ public class OrdersList {
     }
 
     public void setOrderDate(String orderDate){
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         orderDateField.click();
 
         orderDateField.sendKeys(Keys.COMMAND + "a");
@@ -242,13 +189,12 @@ public class OrdersList {
     }
 
     public void setStatus(String status){
-        try {
-            Thread.sleep(500);
+        RunCucumberTest.sleepThread();
 
             statusSelect.click();
 
+        RunCucumberTest.sleepThread();
 
-            Thread.sleep(500);
             if(status != null && !status.isEmpty()){
                 WebElement option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
                 option.click();
@@ -257,18 +203,10 @@ public class OrdersList {
 
                 option.click();
             }
-            
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
     public void setCustomerAddress(String customerAddress){
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         String prevValue = customerAddressField.getAttribute("value");
         for (int i = 0; i < prevValue.length(); i++){
             customerAddressField.sendKeys(Keys.BACK_SPACE);
@@ -277,11 +215,7 @@ public class OrdersList {
     }
 
     public void confirmOrderUpdation(){
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
 
         System.out.println("Updated Candy ID " + firstRowOrderId.getText());
     }
@@ -289,11 +223,7 @@ public class OrdersList {
 
      //======================DELETE=====================//
     public void clickDeleteIcon() {
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         
         // Update to get the candy ID from the last row
         orderId = lastRowOrderId.getText();
@@ -307,11 +237,7 @@ public class OrdersList {
     }
 
     public void confirmDeletion(){
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         List<WebElement> tableRows = orderListTable.findElements(By.xpath(".//tr/td[1]"));
         for(WebElement tr : tableRows) {
             if(tr.getText().contains(orderId)){
