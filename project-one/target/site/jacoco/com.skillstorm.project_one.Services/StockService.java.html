@@ -34,11 +34,11 @@ import com.skillstorm.project_one.Repositories.WarehouseRepo;
      * @return List of StockDTO objects
      */
     public List&lt;StockDTO&gt; getAllStocksDTO(){
-<span class="nc" id="L37">        List&lt;StockDTO&gt; dtos = new ArrayList&lt;&gt;();</span>
-<span class="nc bnc" id="L38" title="All 2 branches missed.">        for (Stock stock : stockRepo.findAll()) {</span>
-<span class="nc" id="L39">            dtos.add(convertToDTO(stock));</span>
-<span class="nc" id="L40">        }</span>
-<span class="nc" id="L41">        return dtos;</span>
+<span class="fc" id="L37">        List&lt;StockDTO&gt; dtos = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">        for (Stock stock : stockRepo.findAll()) {</span>
+<span class="fc" id="L39">            dtos.add(convertToDTO(stock));</span>
+        }
+<span class="fc" id="L41">        return dtos;</span>
     }
 
     /**
@@ -47,11 +47,11 @@ import com.skillstorm.project_one.Repositories.WarehouseRepo;
      * @return List of StockDTO objects
      */
     public List&lt;StockDTO&gt; getStocksByWarehouse(Integer warehouseId){
-<span class="nc" id="L50">        List&lt;StockDTO&gt; dtos = new ArrayList&lt;&gt;();</span>
-<span class="nc bnc" id="L51" title="All 2 branches missed.">        for (Stock stock : stockRepo.findByWarehouseId(warehouseId)){</span>
-<span class="nc" id="L52">            dtos.add(convertToDTO(stock));</span>
-<span class="nc" id="L53">        }</span>
-<span class="nc" id="L54">        return dtos;</span>
+<span class="fc" id="L50">        List&lt;StockDTO&gt; dtos = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">        for (Stock stock : stockRepo.findByWarehouseId(warehouseId)){</span>
+<span class="fc" id="L52">            dtos.add(convertToDTO(stock));</span>
+        }
+<span class="fc" id="L54">        return dtos;</span>
     }
 
     /**
@@ -59,13 +59,13 @@ import com.skillstorm.project_one.Repositories.WarehouseRepo;
      * @param stock The Stock entity to convert
      * @return The converted StockDTO object
      */
-    private StockDTO convertToDTO(Stock stock) {
-<span class="nc" id="L63">        StockDTO dto = new StockDTO();</span>
-<span class="nc" id="L64">        dto.setId(stock.getId());</span>
-<span class="nc" id="L65">        dto.setCandyId(stock.getCandy().getCandyId());</span>
-<span class="nc" id="L66">        dto.setWarehouseId(stock.getWarehouse().getId());</span>
-<span class="nc" id="L67">        dto.setQuantity(stock.getQuantity());</span>
-<span class="nc" id="L68">        return dto;</span>
+    public StockDTO convertToDTO(Stock stock) {
+<span class="fc" id="L63">        StockDTO dto = new StockDTO();</span>
+<span class="fc" id="L64">        dto.setId(stock.getId());</span>
+<span class="fc" id="L65">        dto.setCandyId(stock.getCandy().getCandyId());</span>
+<span class="fc" id="L66">        dto.setWarehouseId(stock.getWarehouse().getId());</span>
+<span class="fc" id="L67">        dto.setQuantity(stock.getQuantity());</span>
+<span class="fc" id="L68">        return dto;</span>
     }
 
     /**
@@ -74,19 +74,19 @@ import com.skillstorm.project_one.Repositories.WarehouseRepo;
      * @return The created Stock entity
      */
     public Stock createStock(StockDTO stockDTO){
-<span class="nc" id="L77">        Candy candy = candyRepo.findById(stockDTO.getCandyId()).orElseThrow(() -&gt; new NoSuchElementException(&quot;Candy not found&quot;));</span>
-<span class="nc" id="L78">        Warehouse warehouse = warehouseRepo.findById(stockDTO.getWarehouseId()).orElseThrow(() -&gt; new NoSuchElementException(&quot;Warehouse not found&quot;));</span>
+<span class="fc" id="L77">        Candy candy = candyRepo.findById(stockDTO.getCandyId()).orElseThrow(() -&gt; new NoSuchElementException(&quot;Candy not found&quot;));</span>
+<span class="fc" id="L78">        Warehouse warehouse = warehouseRepo.findById(stockDTO.getWarehouseId()).orElseThrow(() -&gt; new NoSuchElementException(&quot;Warehouse not found&quot;));</span>
         
-<span class="nc" id="L80">        Stock stock = new Stock();</span>
-<span class="nc" id="L81">        stock.setCandy(candy);</span>
-<span class="nc" id="L82">        stock.setWarehouse(warehouse);</span>
-<span class="nc" id="L83">        stock.setQuantity(stockDTO.getQuantity());</span>
+<span class="fc" id="L80">        Stock stock = new Stock();</span>
+<span class="fc" id="L81">        stock.setCandy(candy);</span>
+<span class="fc" id="L82">        stock.setWarehouse(warehouse);</span>
+<span class="fc" id="L83">        stock.setQuantity(stockDTO.getQuantity());</span>
         
         // Update the warehouse's current stock count
-<span class="nc" id="L86">        warehouse.setCurrentStock(warehouse.getCurrentStock() + stockDTO.getQuantity());</span>
-<span class="nc" id="L87">        warehouseRepo.save(warehouse);</span>
+<span class="fc" id="L86">        warehouse.setCurrentStock(warehouse.getCurrentStock() + stockDTO.getQuantity());</span>
+<span class="fc" id="L87">        warehouseRepo.save(warehouse);</span>
         
-<span class="nc" id="L89">        return stockRepo.save(stock);</span>
+<span class="fc" id="L89">        return stockRepo.save(stock);</span>
     }
 
     /**
@@ -95,38 +95,38 @@ import com.skillstorm.project_one.Repositories.WarehouseRepo;
      * @param stockDTO The StockDTO object containing the updated data
      */
     public void updateStock(int id, StockDTO stockDTO){
-<span class="nc bnc" id="L98" title="All 2 branches missed.">        if(!stockRepo.existsById(id)) throw new NoSuchElementException(&quot;Stock with id &quot; + id + &quot; does not exist&quot;);</span>
-<span class="nc" id="L99">        Stock existingStock = stockRepo.findById(id).orElseThrow(() -&gt; new NoSuchElementException(&quot;Stock could not be found&quot;));</span>
-<span class="nc" id="L100">        int oldQuantity = existingStock.getQuantity();</span>
+<span class="fc bfc" id="L98" title="All 2 branches covered.">        if(!stockRepo.existsById(id)) throw new NoSuchElementException(&quot;Stock with id &quot; + id + &quot; does not exist&quot;);</span>
+<span class="fc" id="L99">        Stock existingStock = stockRepo.findById(id).orElseThrow(() -&gt; new NoSuchElementException(&quot;Stock could not be found&quot;));</span>
+<span class="fc" id="L100">        int oldQuantity = existingStock.getQuantity();</span>
         
-<span class="nc" id="L102">        Candy candy = candyRepo.findById(stockDTO.getCandyId()).orElseThrow(() -&gt; new NoSuchElementException(&quot;Candy not found&quot;));</span>
-<span class="nc" id="L103">        Warehouse warehouse = warehouseRepo.findById(stockDTO.getWarehouseId()).orElseThrow(() -&gt; new NoSuchElementException(&quot;Warehouse not found&quot;));</span>
+<span class="pc" id="L102">        Candy candy = candyRepo.findById(stockDTO.getCandyId()).orElseThrow(() -&gt; new NoSuchElementException(&quot;Candy not found&quot;));</span>
+<span class="pc" id="L103">        Warehouse warehouse = warehouseRepo.findById(stockDTO.getWarehouseId()).orElseThrow(() -&gt; new NoSuchElementException(&quot;Warehouse not found&quot;));</span>
         
-<span class="nc" id="L105">        existingStock.setCandy(candy);</span>
-<span class="nc" id="L106">        existingStock.setWarehouse(warehouse);</span>
-<span class="nc" id="L107">        existingStock.setQuantity(stockDTO.getQuantity());</span>
+<span class="fc" id="L105">        existingStock.setCandy(candy);</span>
+<span class="fc" id="L106">        existingStock.setWarehouse(warehouse);</span>
+<span class="fc" id="L107">        existingStock.setQuantity(stockDTO.getQuantity());</span>
 
         // Update the warehouse's current stock count based on the difference in quantity
-<span class="nc" id="L110">        int quantityDifference = stockDTO.getQuantity() - oldQuantity;</span>
-<span class="nc" id="L111">        warehouse.setCurrentStock(warehouse.getCurrentStock() + quantityDifference);</span>
-<span class="nc" id="L112">        warehouseRepo.save(warehouse);</span>
+<span class="fc" id="L110">        int quantityDifference = stockDTO.getQuantity() - oldQuantity;</span>
+<span class="fc" id="L111">        warehouse.setCurrentStock(warehouse.getCurrentStock() + quantityDifference);</span>
+<span class="fc" id="L112">        warehouseRepo.save(warehouse);</span>
         
-<span class="nc" id="L114">        stockRepo.save(existingStock);</span>
-<span class="nc" id="L115">    }</span>
+<span class="fc" id="L114">        stockRepo.save(existingStock);</span>
+<span class="fc" id="L115">    }</span>
 
     /**
      * Delete a Stock entity by its ID.
      * @param id The ID of the Stock entity to delete
      */
     public void deleteStock(int id){
-<span class="nc" id="L122">        Stock existingStock = stockRepo.findById(id).orElseThrow(() -&gt; new NoSuchElementException(&quot;Stock could not be found&quot;));</span>
-<span class="nc" id="L123">        Warehouse warehouse = existingStock.getWarehouse();</span>
+<span class="pc" id="L122">        Stock existingStock = stockRepo.findById(id).orElseThrow(() -&gt; new NoSuchElementException(&quot;Stock could not be found&quot;));</span>
+<span class="fc" id="L123">        Warehouse warehouse = existingStock.getWarehouse();</span>
 
         // Update the warehouse's current stock count after deletion
-<span class="nc" id="L126">        warehouse.setCurrentStock(warehouse.getCurrentStock() - existingStock.getQuantity());</span>
-<span class="nc" id="L127">        warehouseRepo.save(warehouse);</span>
+<span class="fc" id="L126">        warehouse.setCurrentStock(warehouse.getCurrentStock() - existingStock.getQuantity());</span>
+<span class="fc" id="L127">        warehouseRepo.save(warehouse);</span>
         
-<span class="nc" id="L129">        stockRepo.deleteById(id);</span>
-<span class="nc" id="L130">    }</span>
+<span class="fc" id="L129">        stockRepo.deleteById(id);</span>
+<span class="fc" id="L130">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

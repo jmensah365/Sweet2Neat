@@ -28,8 +28,13 @@ public class WarehouseControllerTest {
     private WarehouseController warehouseController;
     private AutoCloseable closeable;
 
+    private Warehouse warehouse;
+    private int warehouseId;
+
     @BeforeTest
     public void setup() {
+        warehouseId = 1;
+        warehouse = new Warehouse();
         closeable = MockitoAnnotations.openMocks(this);
     }
 
@@ -40,50 +45,57 @@ public class WarehouseControllerTest {
 
     @Test
     public void testGetAllWarehouses() {
+        // predefine a list of warehouses for stub return
         List<Warehouse> expectedWarehouses = Arrays.asList(new Warehouse(), new Warehouse(), new Warehouse());
 
+        // stub findAll func to predefined warehouse list
         when(warehouseService.findAll())
         .thenReturn(expectedWarehouses);
 
+        // get warehouse list from controller func
         Iterable<Warehouse> warehouses = warehouseController.getAllWarehouses();
 
+        // count the size of iterable for test
         int count = 0;
         for (Warehouse w : warehouses) {
             count++;
         }
 
+        // ensure warehouse lists match
         Assert.assertEquals(warehouses, expectedWarehouses);
+        // ensure list counts match
         Assert.assertEquals(count, 3);
     }
 
     @Test
     public void testCreateWarehouse() {
-        Warehouse warehouse = new Warehouse();
-        
+        // stub service func to return warehouse instance
         when(warehouseService.createWarehouse(warehouse))
         .thenReturn(warehouse);
 
+        // get the created warehouse
         Warehouse createdWarehouse = warehouseController.createWarehouse(warehouse);
 
+        // ensure both warehouses match
         Assert.assertEquals(createdWarehouse, warehouse);
     }
 
     @Test
     public void testUpdateWarehouse() {
-        Warehouse warehouse = new Warehouse();
-        int id = 4;
+        // get the response for updated warehouse func
+        ResponseEntity<Warehouse> response = warehouseController.updateWarehouse(warehouseId, warehouse);
 
-        ResponseEntity<Warehouse> response = warehouseController.updateWarehouse(id, warehouse);
-
+        // ensure response status code is OK for update
         Assert.assertEquals(response.getStatusCode(), HttpStatus.OK);
     }
 
+
     @Test
     public void testDeleteWarehouse() {
-        int id = 5;
+        // get the response for deleted warehouse
+        ResponseEntity<Void> response = warehouseController.deleteWarehouseById(warehouseId);
 
-        ResponseEntity<Void> response = warehouseController.deleteWarehouseById(id);
-
+        // ensure response status code is NO_CONTENT for delete
         Assert.assertEquals(response.getStatusCode(), HttpStatus.NO_CONTENT);
     }
 }

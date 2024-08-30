@@ -4,29 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.047">
+           time="0.045">
     <properties></properties>
 
 
 
             <testcase
-                name="testCreateCandy"
-                time="0.025"
-                classname="com.skillstorm.project_one.CandyControllerTest">
-            </testcase>
-            <testcase
-                name="testDeleteCandyById"
-                time="0.020"
-                classname="com.skillstorm.project_one.CandyControllerTest">
-            </testcase>
-            <testcase
                 name="testGetCandyById"
                 time="0.001"
-                classname="com.skillstorm.project_one.CandyControllerTest">
-            </testcase>
-            <testcase
-                name="testGetByFlavor"
-                time="0.000"
                 classname="com.skillstorm.project_one.CandyControllerTest">
             </testcase>
             <testcase
@@ -35,12 +20,27 @@
                 classname="com.skillstorm.project_one.CandyControllerTest">
             </testcase>
             <testcase
-                name="testGetAllCandy"
-                time="0.001"
+                name="testDeleteCandyById"
+                time="0.017"
                 classname="com.skillstorm.project_one.CandyControllerTest">
             </testcase>
             <testcase
                 name="testUpdateCandy"
+                time="0.000"
+                classname="com.skillstorm.project_one.CandyControllerTest">
+            </testcase>
+            <testcase
+                name="testGetByFlavor"
+                time="0.000"
+                classname="com.skillstorm.project_one.CandyControllerTest">
+            </testcase>
+            <testcase
+                name="testCreateCandy"
+                time="0.027"
+                classname="com.skillstorm.project_one.CandyControllerTest">
+            </testcase>
+            <testcase
+                name="testGetAllCandy"
                 time="0.000"
                 classname="com.skillstorm.project_one.CandyControllerTest">
             </testcase>
