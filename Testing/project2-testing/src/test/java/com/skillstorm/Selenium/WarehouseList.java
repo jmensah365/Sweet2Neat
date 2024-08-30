@@ -11,12 +11,16 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class WarehouseList {
+    
+    // WebDriver instance to control the browser
     private WebDriver driver;
+
+    // URLs for the warehouse list page and the home page
     private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/warehouses";
     private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
 
     /*
-     * Finding location, capacity, and stock web elements on the page
+     * Locators for the form fields on the warehouse page
      */
     @FindBy(name = "location")
     private WebElement locationField;
@@ -27,58 +31,62 @@ public class WarehouseList {
     @FindBy(name = "currentStock")
     private WebElement stockField;
 
-    //Finding edit icon button
+    // Locator for the edit icon button
     @FindBy(name = "editIcon")
     private WebElement editBtn;
 
-    //Finding delete icon button
+    // Locator for the delete icon button
     @FindBy(name = "deleteIcon")
     private WebElement deleteBtn;
 
-    //Find the warehouse menu option
+    // Locator for the warehouses menu option
     @FindBy(name = "warehouses")
     private WebElement warehousesMenu;
 
-    //Finding update warehouse button
+    // Locator for the update warehouse button
     @FindBy(name = "warehouseBtn")
     private WebElement warehouseBtn;
 
-    //Find the "ADD WAREHOUSE" button
+    // Locator for the "ADD WAREHOUSE" button
     @FindBy(name = "warehouseBtn")
     private WebElement addWarehouseButton;
 
-    //Find the title "Warehouse List"
+    // Locator for the title "Warehouse List"
     @FindBy(className = "MuiTypography-root")
     private WebElement warehouseListTitle;
 
-    //Finding table of warehouses
+    // Locator for the table of warehouses
     @FindBy(name = "warehouseTable")
     private WebElement warehouseTable;
 
-    //Find the warehouses list option in menu
+    // Locator for the warehouses list option in the menu
     @FindBy(name = "warehousesRoute")
     private WebElement warehouseListOption;
 
-    //Finding the location in the last row in the warehouse list
+    // Locator for the location in the last row in the warehouse list table
     @FindBy(xpath = "//table[@name='warehouseTable']//tr[last()]/td[2]")
     private WebElement warehouseRowLocation;
 
-    //Finding the location in the first row in the warehouse list
+    // Locator for the location in the first row in the warehouse list table
     @FindBy(xpath = "//table[@name='warehouseTable']//tr[1]/td[1]")
     private WebElement warehouseFirstRowLocation;
 
+    // Variable to store the warehouse ID
     String warehouseId = "";
 
-    public WarehouseList(WebDriver driver){
+    // Constructor to initialize the WebDriver and PageFactory elements
+    public WarehouseList(WebDriver driver) {
         this.driver = driver;
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         PageFactory.initElements(driver, this);
     }
 
-    public void close() { // warehouseStepDefintion calls this to close all open browsers when tests finish
+    // Method to close the WebDriver and browser
+    public void close() {
         this.driver.close();
     }
 
+    // Method to navigate to the warehouse list page URL
     public void getUrl() {
         try {
             Thread.sleep(1000);
@@ -89,6 +97,8 @@ public class WarehouseList {
     }
 
     //=====================UPDATE======================//
+    
+    // Method to click the edit button for a warehouse
     public void clickEditButton() {
         try {
             Thread.sleep(3000);
@@ -98,33 +108,40 @@ public class WarehouseList {
         editBtn.click();
     }
 
-    public void setLocation(String location){
+    // Method to update the location field
+    public void setLocation(String location) {
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        // Clear the existing value
         String prevValue = locationField.getAttribute("value");
-        for (int i = 0; i < prevValue.length(); i++){
+        for (int i = 0; i < prevValue.length(); i++) {
             locationField.sendKeys(Keys.BACK_SPACE);
         }
+        // Enter the new value
         locationField.sendKeys(location);
     }
 
-    public void setCapacity(String capacity){
+    // Method to update the capacity field
+    public void setCapacity(String capacity) {
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        // Clear the existing value
         String prevValue = capacityField.getAttribute("value");
-        for (int i = 0; i < prevValue.length(); i++){
+        for (int i = 0; i < prevValue.length(); i++) {
             capacityField.sendKeys(Keys.BACK_SPACE);
         }
+        // Enter the new value
         capacityField.sendKeys(capacity);
     }
 
-    public void clickUpdateWarehouse(){
+    // Method to click the "Update Warehouse" button
+    public void clickUpdateWarehouse() {
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
@@ -133,110 +150,114 @@ public class WarehouseList {
         warehouseBtn.click();
     }
 
-    public void confirmWarehouseUpdation(){
+    // Method to confirm the warehouse update by printing the last row's location
+    public void confirmWarehouseUpdation() {
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         System.out.println("New warehouse location: " + warehouseRowLocation.getText());
-
-        // this.driver.close();
     }
 
-     //TODO: check to see if success message pops up
-    //=====================UPDATE======================//
-
     //=====================DELETE======================//
-    public void clickDeleteIcon(){
+    
+    // Method to click the delete icon for the first row in the warehouse list table
+    public void clickDeleteIcon() {
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        
+        // Get the warehouse ID from the first row
         warehouseId = warehouseFirstRowLocation.getText();
         deleteBtn.click();
     }
-    
-    public void confirmDeletion(){
+
+    // Method to confirm deletion by checking if the warehouse ID is no longer in the table
+    public void confirmDeletion() {
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         List<WebElement> tableRows = warehouseTable.findElements(By.xpath(".//tr/td[1]"));
-        for(WebElement tr : tableRows) {
-            if(tr.getText().contains(warehouseId)){
+        for (WebElement tr : tableRows) {
+            if (tr.getText().contains(warehouseId)) {
                 System.out.println("True");
-            } else{
+            } else {
                 System.err.println("False");
             }
         }
-            // this.driver.close();
-
-
     }
 
-    //=====================DELETE======================//
+    //======================= CREATE =========================
+    
+    // Method to check the page title
+    public String checkPageTitle() {
+        return warehouseListTitle.getText();
+    }
 
-        //======================= CREATE =========================
-        public String checkPageTitle() {
-            return warehouseListTitle.getText();
+    // Method to add a location for a new warehouse
+    public void addLocation(String location) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-    
-        public void addLocation(String location) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            locationField.sendKeys(location);
+        locationField.sendKeys(location);
+    }
+
+    // Method to add capacity for a new warehouse
+    public void addCapacity(String capacity) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-    
-        public void addCapacity(String capacity) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            capacityField.sendKeys(capacity);
+        capacityField.sendKeys(capacity);
+    }
+
+    // Method to set the current stock for a new warehouse
+    public void setCurrentStock(String currentStock) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-        
-        public void setCurrentStock(String currentStock) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            stockField.sendKeys(currentStock);
+        stockField.sendKeys(currentStock);
+    }
+
+    // Method to click the "ADD WAREHOUSE" button
+    public void clickAddWarehouseButton() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-    
-        public void clickAddWarehouseButton() {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            addWarehouseButton.click();
+        addWarehouseButton.click();
+    }
+
+    // Method to get the location of the last row in the warehouse list
+    public void getWarehouseLocation() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-    
-        public void getWarehouseLocation() {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println(warehouseRowLocation.getText());
-        }
+        System.out.println(warehouseRowLocation.getText());
+    }
 
     //======================= READ =========================
+    
+    // Method to navigate to the home page URL
     public void getHomeURL() {
         this.driver.get(homeUrl);
     }
 
+    // Method to navigate to the warehouse list option
     public void clickWarehouseListOption() {
-        warehousesMenu.click();        
+        warehousesMenu.click();
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -245,16 +266,18 @@ public class WarehouseList {
         warehouseListOption.click();
     }
 
+    // Method to get the text of the warehouse table
     public void getWarehouseTable() {
         warehouseTable.getText();
     }
 
+    // Method to print the contents of the warehouse table
     public void getWarehouseTableContents() {
         List<WebElement> tableRows = warehouseTable.findElements(By.xpath(".//tr"));
 
-        for(WebElement tr : tableRows) {
+        for (WebElement tr : tableRows) {
             System.out.println(tr.getText());
         }
     }
-    
+
 }
