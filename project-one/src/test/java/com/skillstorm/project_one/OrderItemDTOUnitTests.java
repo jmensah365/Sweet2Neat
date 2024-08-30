@@ -10,13 +10,16 @@ import com.skillstorm.project_one.DTOs.OrderItemDTO;
 
 class OrderItemDTOUnitTests {
 
+    //Creating a private instance of OrderItemDTO
     private OrderItemDTO orderItemDTO;
 
+    //creating a new OrderItemDTO object
     @BeforeTest
     void setUp() {
         orderItemDTO = new OrderItemDTO();
     }
 
+    //Testing getter and setter methods
     @Test
     void testGettersAndSetters() {
         orderItemDTO.setId(1);
@@ -32,6 +35,7 @@ class OrderItemDTOUnitTests {
         Assert.assertEquals(5, orderItemDTO.getQuantity());
     }
 
+    //testing parameterized constructor
     @Test
     void testConstructor() {
         OrderItemDTO dto = new OrderItemDTO(1, 101, 202, new BigDecimal("19.99"), 5);
@@ -43,6 +47,7 @@ class OrderItemDTOUnitTests {
         Assert.assertEquals(5, dto.getQuantity());
     }
 
+    //testing toString method
     @Test
     void testToString() {
         orderItemDTO.setId(1);

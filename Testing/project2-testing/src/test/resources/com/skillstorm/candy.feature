@@ -1,6 +1,7 @@
 @Candy
 Feature: Candy CRUD Operations
 
+    #-----------------------------CREATE-------------------------------------#
     Scenario Outline: Creating a Candy
         Given I am on the Candy Inventory page
         When I input the candy "<name>", "<type>", "<flavor>", "<price>", and, "<weight>"
@@ -29,12 +30,14 @@ Feature: Candy CRUD Operations
         |Sour Skittles|Sour Candy     |Sour         |abcd  |1.0    |  # Non-numeric price
         |Sour Skittles|Sour Candy     |Sour         |4.99  |xyz    |  # Non-numeric weight
     
+    #-----------------------------READ-------------------------------------#
     Scenario: Successful view of candy list
         Given I am on the Home page
         When I navigate to Candy Inventory
         Then list of all candies should be displayed
 
 
+#-----------------------------UPDATE-------------------------------------#
     Scenario Outline: Updating a Candy
         Given I am on the Candy Inventory page
         When I click the edit icon for the candy I want to edit
@@ -65,6 +68,7 @@ Feature: Candy CRUD Operations
         |Sour Strawberry Belt Bulk Bag|Sour Candy|Sour|10.00|abc| # Non-numeric weight 
         |Sour Strawberry Belt Bulk Bag|Sour Candy|Sour|abc|1.0| # Non-numeric price 
 
+    #-----------------------------DELETE-------------------------------------#
     Scenario: Deleting a Candy
         Given I am on the Candy Inventory page
         When I click the delete icon
