@@ -99,7 +99,7 @@ public class NavigationLinks {
     }
 
     public void close() {
-        this.driver.quit();
+        this.driver.close();
     }
 
     //================= NAV TO HOME PAGE ==================//
@@ -238,4 +238,3 @@ public class NavigationLinks {
         return candyHeader.getText().equals(candyType);
     }
 }
-
