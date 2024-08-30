@@ -47,6 +47,13 @@ pipeline {
                 sh "cd project-one && mvn test"
             }
         }
+        stage('Selenium/Cucumber Tests'){
+            steps{
+                dir('Testing/project2-testing') {
+                    sh "mvn test"
+                }
+            }
+        }
         stage('Deploy Backend'){
             steps{
                 script{
@@ -57,13 +64,6 @@ pipeline {
                         // sh "echo 'aws elasticbeanstalk update-environment --environment-name myName --version-label 0.0.1'"
                     }  
                 }   
-            }
-        }
-        stage('Selenium/Cucumber Tests'){
-            steps{
-                dir('Testing/project2-testing') {
-                    sh "mvn test"
-                }
             }
         }
     }
