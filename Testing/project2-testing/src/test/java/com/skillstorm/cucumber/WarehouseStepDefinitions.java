@@ -19,6 +19,7 @@ public class WarehouseStepDefinitions {
     @Before("@Warehouse")
     public void before(){
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless","--no-sandbox");
         WebDriver driver = new ChromeDriver(options);
 
         this.warehouseList = new WarehouseList(driver);
@@ -84,7 +85,7 @@ public class WarehouseStepDefinitions {
     }
 
     //======================= READ =========================
-    @Given("I am on the home page")
+    @Given("Given I am on the home page")
     public void givenIAmOnTheHomePage() {
         this.warehouseList.getHomeURL();
     }

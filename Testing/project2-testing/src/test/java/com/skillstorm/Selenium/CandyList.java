@@ -9,13 +9,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
 public class CandyList {
     
     private WebDriver driver;
-    private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/candy";
-    private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
+    // private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/candy";
+    // private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
+
+    private static final String url = "http://localhost:5173/candy";
+    private static final String homeUrl = "http://localhost:5173/";
 
     /*
      * Finding name, type, flavor, price, and weight text fields
@@ -69,6 +71,9 @@ public class CandyList {
     @FindBy(id = "candyTypeSelect")
     private WebElement candyTypeSelect;
 
+    @FindBy(name = "candyListSnackbarError")
+    private WebElement candyErrorMessage;
+
     String candyId = "";
 
     public CandyList(WebDriver driver){
@@ -77,8 +82,8 @@ public class CandyList {
         PageFactory.initElements(driver, this);
     }
 
-    public void close() {
-        this.driver.close();
+    public void quit() {
+        this.driver.quit();
     }
 
     public void getCandyPageUrl(){
@@ -94,7 +99,7 @@ public class CandyList {
     //========================CREATE==========================//
     public void addCandyName(String candyName){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -104,16 +109,19 @@ public class CandyList {
 
     public void addCandyType(String candyType){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
 
-            candyTypeSelect.click();
+            if (candyType != null && !candyType.isEmpty()){
+                candyTypeSelect.click();
+                Thread.sleep(2000);
+                WebElement option = driver.findElement(By.xpath("//li[@data-value='" + candyType + "']"));
+                option.click();
+            } else{
+                candyTypeSelect.click();
+                WebElement option = driver.findElement(By.xpath("//li[@data-value='']"));
+                option.click();
+            }
 
-
-            Thread.sleep(1000);
-
-            WebElement option = driver.findElement(By.xpath("//li[@data-value='" + candyType + "']"));
-
-            option.click();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -121,7 +129,7 @@ public class CandyList {
 
     public void addCandyFlavor(String candyFlavor){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -131,7 +139,7 @@ public class CandyList {
 
     public void addPrice(String price){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -140,7 +148,7 @@ public class CandyList {
     }
     public void addWeight(String weight){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -150,7 +158,7 @@ public class CandyList {
 
     public void clickCandyBtn(){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -159,11 +167,19 @@ public class CandyList {
 
     public void confirmCreation(){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         System.out.println(lastRowCandyId.getText());
+    }
+    public void errorMessageDisplayed(){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(candyErrorMessage.isDisplayed());
     }
     //========================CREATE==========================//
 
@@ -175,7 +191,7 @@ public class CandyList {
     public void clickCandyInventory(){
         candyNavBtn.click();
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -194,7 +210,7 @@ public class CandyList {
     //========================UPDATE==========================//
     public void clickEditButton(){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -204,7 +220,7 @@ public class CandyList {
 
     public void setNameField(String name){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -219,16 +235,20 @@ public class CandyList {
 
     public void setTypeField(String type){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
 
             candyTypeSelect.click();
 
 
-            Thread.sleep(1000);
+            if (type != null && !type.isEmpty()){
+                Thread.sleep(2000);
+                WebElement option = driver.findElement(By.xpath("//li[@data-value='" + type + "']"));
+                option.click();
+            } else{
+                WebElement option = driver.findElement(By.xpath("//li[@data-value='']"));
+                option.click();
+            }
 
-            WebElement option = driver.findElement(By.xpath("//li[@data-value='" + type + "']"));
-
-            option.click();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -237,7 +257,7 @@ public class CandyList {
 
     public void setFlavorField(String flavor){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -252,7 +272,7 @@ public class CandyList {
 
     public void setPriceField(String price){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -267,7 +287,7 @@ public class CandyList {
 
     public void setWeightField(String weight){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -281,7 +301,7 @@ public class CandyList {
 
     public void confirmUpdation(){
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

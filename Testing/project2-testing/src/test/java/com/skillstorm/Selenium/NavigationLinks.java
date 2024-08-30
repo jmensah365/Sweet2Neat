@@ -99,7 +99,7 @@ public class NavigationLinks {
     }
 
     public void close() {
-        this.driver.close();
+        this.driver.quit();
     }
 
     //================= NAV TO HOME PAGE ==================//

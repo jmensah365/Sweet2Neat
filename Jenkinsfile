@@ -59,5 +59,12 @@ pipeline {
                 }   
             }
         }
+        stage('Selenium/Cucumber Tests'){
+            steps{
+                dir('Testing/project2-testing') {
+                    sh "mvn test"
+                }
+            }
+        }
     }
 }
