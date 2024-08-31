@@ -96,9 +96,9 @@ public class OrdersList {
 
 
     public void getOrderDate(String orderDate) {
-        RunCucumberTest.sleepThread();
+        // RunCucumberTest.sleepThread();
 
-        orderDateField.click();
+        // orderDateField.click();
         RunCucumberTest.sleepThread();
         orderDateField.sendKeys(orderDate);
     }
