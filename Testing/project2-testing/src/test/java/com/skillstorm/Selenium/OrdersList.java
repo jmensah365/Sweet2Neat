@@ -22,6 +22,7 @@ public class OrdersList {
     private WebDriver driver;
     private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/orders";
     private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
+    private WebDriverWait wait;
 
     @FindBy(name = "customerName")
     private WebElement customerNameField;
@@ -73,6 +74,7 @@ public class OrdersList {
 
     public OrdersList(WebDriver driver){
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         PageFactory.initElements(driver, this);
     }
@@ -96,10 +98,8 @@ public class OrdersList {
 
 
     public void getOrderDate(String orderDate) {
-        // RunCucumberTest.sleepThread();
-
-        // orderDateField.click();
-        RunCucumberTest.sleepThread();
+        orderDateField.click();
+        wait.until(ExpectedConditions.elementToBeClickable(orderDateField));
         orderDateField.sendKeys(orderDate);
     }
 
