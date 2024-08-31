@@ -100,8 +100,7 @@ public class OrdersList {
 
     public void getOrderDate(String orderDate) {
         orderDateField.click();
-        wait.until(ExpectedConditions.elementToBeClickable(orderDateField));
-        orderDateField.sendKeys(orderDate);
+        wait.until(ExpectedConditions.elementToBeClickable(orderDateField)).sendKeys(orderDate);
     }
 
     public void getStatus(String status){
