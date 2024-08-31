@@ -1,5 +1,7 @@
 package com.skillstorm.Selenium;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -7,6 +9,8 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,6 +18,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.io.FileHandler;
+
 
 import com.skillstorm.RunCucumberTest;
 
@@ -73,6 +79,17 @@ public class OrdersList {
 
     String orderId = "";
 
+    public void takeScreenshot(WebDriver driver, String filePath) {
+        TakesScreenshot screenshot = ((TakesScreenshot) driver);
+        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+        File destFile = new File(filePath);
+        try {
+            FileHandler.copy(srcFile, destFile);
+            System.out.println("Screenshot saved at: " + filePath);
+        } catch (IOException e) {
+            System.out.println("Failed to save screenshot: " + e.getMessage());
+        }
+    }
     public OrdersList(WebDriver driver){
         this.driver = driver;
         this.wait = new WebDriverWait(this.driver, Duration.ofSeconds(10));
@@ -100,6 +117,7 @@ public class OrdersList {
 
     public void getOrderDate(String orderDate) {
         orderDateField.click();
+        takeScreenshot(driver, Testing/project2-testing/src/test/java/com/skillstorm/Selenium);
         wait.until(ExpectedConditions.elementToBeClickable(orderDateField)).sendKeys(orderDate);
     }
 
