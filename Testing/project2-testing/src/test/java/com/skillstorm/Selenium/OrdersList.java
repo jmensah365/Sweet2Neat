@@ -180,8 +180,8 @@ public class OrdersList {
     }
 
     public void setOrderDate(String orderDate){
-        RunCucumberTest.sleepThread();
         orderDateField.click();
+        RunCucumberTest.sleepThread();
 
         orderDateField.sendKeys(Keys.COMMAND + "a");
         orderDateField.sendKeys(Keys.BACK_SPACE);
@@ -189,7 +189,6 @@ public class OrdersList {
     }
 
     public void setStatus(String status){
-        RunCucumberTest.sleepThread();
 
             statusSelect.click();
 
@@ -197,10 +196,12 @@ public class OrdersList {
 
             if(status != null && !status.isEmpty()){
                 WebElement option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
+        RunCucumberTest.sleepThread();
                 option.click();
             } else {
                 WebElement option = driver.findElement(By.xpath("//li[@data-value='']"));
 
+        RunCucumberTest.sleepThread();
                 option.click();
             }
     }
