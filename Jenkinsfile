@@ -51,7 +51,6 @@ pipeline {
         stage('Selenium/Cucumber Tests'){
             steps{
                 sh "cd Testing/project2-testing && mvn verify"
-                 sh "mv ss.png ~/"
             }
         }
         stage('Deploy Backend'){
