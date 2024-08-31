@@ -22,7 +22,7 @@ public class OrderItemsSteps {
     @Before("@OrderItems")
     public void before() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--no-sandbox","--window-size=1920,1080","--start-maximized");
+        options.addArguments("--headless","--no-sandbox");
         WebDriver driver = new ChromeDriver(options);
         this.orderItems = new OrderItems(driver);
     }
