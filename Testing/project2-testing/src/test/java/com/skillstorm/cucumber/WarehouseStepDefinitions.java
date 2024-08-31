@@ -20,6 +20,7 @@ public class WarehouseStepDefinitions {
     public void before(){
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless","--no-sandbox","--disable-gpu");
+        options.addArguments("--headless","--no-sandbox","--window-size=1920,1080","--start-maximized");
         WebDriver driver = new ChromeDriver(options);
 
         this.warehouseList = new WarehouseList(driver);
