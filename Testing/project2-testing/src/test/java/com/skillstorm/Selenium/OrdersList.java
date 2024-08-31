@@ -29,7 +29,8 @@ public class OrdersList {
 
     @FindBy(name = "orderDatePickerBtn")
     private WebElement orderDateBtn;
-    @FindBy(name = "orderDatePicker")
+
+    @FindBy(xpath = "//input[@name='orderDatePicker']")
     private WebElement orderDateField;
 
     @FindBy(name = "status")
