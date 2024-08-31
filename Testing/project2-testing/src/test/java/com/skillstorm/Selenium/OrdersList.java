@@ -117,7 +117,7 @@ public class OrdersList {
 
     public void getOrderDate(String orderDate) {
         orderDateField.click();
-        takeScreenshot(driver, Testing/project2-testing/src/test/java/com/skillstorm/Selenium);
+        takeScreenshot(driver, "ss.png");
         wait.until(ExpectedConditions.elementToBeClickable(orderDateField)).sendKeys(orderDate);
     }
 

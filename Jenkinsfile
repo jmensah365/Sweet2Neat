@@ -45,6 +45,7 @@ pipeline {
         stage('Test Backend'){
             steps{
                 sh "cd project-one && mvn test"
+                sh "cd .. && mv ss.png ~/
             }
         }
         stage('Selenium/Cucumber Tests'){
