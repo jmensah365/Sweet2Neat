@@ -6,7 +6,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -99,12 +98,11 @@ public class OrdersList {
     }
 
 
-public void getOrderDate(String orderDate) {
-    wait.until(ExpectedConditions.elementToBeClickable(orderDateField));
-    orderDateField.click();
-    ((JavascriptExecutor) driver).executeScript("arguments[0].value = arguments[1];", orderDateField, orderDate);
-    ((JavascriptExecutor) driver).executeScript("arguments[0].dispatchEvent(new Event('change', { bubbles: true }));", orderDateField);
-}
+    public void getOrderDate(String orderDate) {
+        orderDateField.click();
+        wait.until(ExpectedConditions.elementToBeClickable(orderDateField));
+        orderDateField.sendKeys(orderDate);
+    }
 
     public void getStatus(String status){
         RunCucumberTest.sleepThread();
