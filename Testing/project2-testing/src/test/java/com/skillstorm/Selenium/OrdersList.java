@@ -99,6 +99,8 @@ public class OrdersList {
 
 
     public void getOrderDate(String orderDate) {
+        System.out.println("Window width: " + driver.manage().window().getSize().getWidth());
+        System.out.println("Window height: " + driver.manage().window().getSize().getHeight());
         orderDateField.click();
         wait.until(ExpectedConditions.elementToBeClickable(orderDateField));
         orderDateField.sendKeys(orderDate);
