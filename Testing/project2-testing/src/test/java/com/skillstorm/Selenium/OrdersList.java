@@ -30,7 +30,7 @@ public class OrdersList {
     @FindBy(name = "orderDatePickerBtn")
     private WebElement orderDateBtn;
 
-    @FindBy(xpath = "//input[@name='orderDatePicker']")
+    @FindBy(name = "orderDatePicker")
     private WebElement orderDateField;
 
     @FindBy(name = "status")
