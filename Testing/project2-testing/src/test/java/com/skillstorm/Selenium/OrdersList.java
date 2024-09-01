@@ -1,5 +1,7 @@
 package com.skillstorm.Selenium;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -9,11 +11,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import com.skillstorm.RunCucumberTest;
 
@@ -22,12 +26,14 @@ public class OrdersList {
     private WebDriver driver;
     private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/orders";
     private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
+    private Actions actions;
 
     @FindBy(name = "customerName")
     private WebElement customerNameField;
 
     @FindBy(name = "orderDatePickerBtn")
     private WebElement orderDateBtn;
+
     @FindBy(name = "orderDatePicker")
     private WebElement orderDateField;
 
@@ -73,6 +79,7 @@ public class OrdersList {
 
     public OrdersList(WebDriver driver){
         this.driver = driver;
+        this.actions = new Actions(this.driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         PageFactory.initElements(driver, this);
     }
@@ -96,24 +103,26 @@ public class OrdersList {
 
 
     public void getOrderDate(String orderDate) {
-        RunCucumberTest.sleepThread();
-
-        orderDateField.click();
-        RunCucumberTest.sleepThread();
-        orderDateField.sendKeys(orderDate);
+        actions.moveToElement(orderDateField).click().sendKeys(orderDate).build().perform();
+        // orderDateField.click();
+        // wait.until(ExpectedConditions.elementToBeClickable(orderDateField)).sendKeys(orderDate);
     }
 
     public void getStatus(String status){
-        RunCucumberTest.sleepThread();
-        statusSelect.click();
-        RunCucumberTest.sleepThread();
+        WebElement option;
+        actions.moveToElement(statusSelect).click().build().perform();
+        // RunCucumberTest.sleepThread();
+        // statusSelect.click();
+        // RunCucumberTest.sleepThread();
         if(status != null && !status.isEmpty()){
-            WebElement option = driver.findElement(By.name(status.toLowerCase()));
+            option = driver.findElement(By.name(status.toLowerCase()));
             option.click();
         } else {
-            WebElement option = driver.findElement(By.name("empty"));
+            option = driver.findElement(By.name("empty"));
             option.click();
         }
+        actions.moveToElement(option).click().build().perform();
+
     }
 
     public void getCustomerAddress(String customerAddress){

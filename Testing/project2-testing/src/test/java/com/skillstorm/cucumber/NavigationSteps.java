@@ -3,7 +3,7 @@ package com.skillstorm.cucumber;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.Assert;
+//import org.testng.Assert;
 
 import com.skillstorm.Selenium.NavigationLinks;
 
@@ -18,6 +18,7 @@ public class NavigationSteps {
     @Before("@Navigation")
     public void before() {
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless","--no-sandbox","--disable-gpu");
         options.addArguments("--headless","--no-sandbox","--window-size=1920,1080","--start-maximized");
         WebDriver driver = new ChromeDriver(options);
         this.navigationLinks = new NavigationLinks(driver);
