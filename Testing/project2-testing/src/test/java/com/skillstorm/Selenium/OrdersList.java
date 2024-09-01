@@ -27,7 +27,7 @@ public class OrdersList {
     private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/orders";
     private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
     private Actions actions;
-
+    WebDriverWait wait;
     @FindBy(name = "customerName")
     private WebElement customerNameField;
 
@@ -80,6 +80,7 @@ public class OrdersList {
     public OrdersList(WebDriver driver){
         this.driver = driver;
         this.actions = new Actions(this.driver);
+        wait = new WebDriverWait(this.driver, Duration.ofSeconds(10));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         PageFactory.initElements(driver, this);
     }
@@ -114,10 +115,13 @@ public class OrdersList {
         // RunCucumberTest.sleepThread();
         // statusSelect.click();
         // RunCucumberTest.sleepThread();
+
         if(status != null && !status.isEmpty()){
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(status.toLowerCase())));
             option = driver.findElement(By.name(status.toLowerCase()));
             // option.click();
         } else {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("clear")));
             option = driver.findElement(By.name("clear"));
         }
         actions.moveToElement(option).click().build().perform();
