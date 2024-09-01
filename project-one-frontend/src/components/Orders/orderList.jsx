@@ -268,6 +268,7 @@ const Orders = () => {
                         onChange={handleInputChange}
                         sx={{
                             textAlign:'left',
+                            opacity: 0.00001
                         }}
                     >
                         <MenuItem name="clear" value="" style={{color: 'red'}}>Clear Field</MenuItem>
