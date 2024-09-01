@@ -17,7 +17,7 @@ public class OrdersStepDefinition {
     @Before("@Orders")
     public void before(){
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new","--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
+        // options.addArguments("--headless=new","--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
         WebDriver driver = new ChromeDriver(options);
 
         this.ordersList = new OrdersList(driver);
@@ -33,12 +33,17 @@ public class OrdersStepDefinition {
         ordersList.getOrderListPageUrl();
     }
 
-    @When("I fill in {string}, {string}, {string}, and {string}")
-    public void iFillIn(String customerName, String orderDate, String status, String customerAddress){
+    // @When("I fill in {string}, {string}, {string}, and {string}")
+    // public void iFillIn(String customerName, String orderDate, String status, String customerAddress){
+    //     ordersList.getCustomerName(customerName);
+    //     ordersList.getOrderDate(orderDate);
+    //     ordersList.getStatus(status);
+    //     ordersList.getCustomerAddress(customerAddress);
+    // }
+    @When("I fill in {string}, {string}")
+    public void iFillIn(String customerName, String orderDate){
         ordersList.getCustomerName(customerName);
         ordersList.getOrderDate(orderDate);
-        ordersList.getStatus(status);
-        ordersList.getCustomerAddress(customerAddress);
     }
 
     @And("I click the Add order button")
