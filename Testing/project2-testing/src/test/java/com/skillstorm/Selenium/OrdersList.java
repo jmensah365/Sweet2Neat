@@ -26,7 +26,7 @@ public class OrdersList {
     private WebDriver driver;
     private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/orders";
     private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
-    private WebDriverWait wait;
+    private Actions actions;
 
     @FindBy(name = "customerName")
     private WebElement customerNameField;
@@ -79,7 +79,7 @@ public class OrdersList {
 
     public OrdersList(WebDriver driver){
         this.driver = driver;
-        this.wait = new WebDriverWait(this.driver, Duration.ofSeconds(10));
+        this.actions = new Actions(this.driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         PageFactory.initElements(driver, this);
     }
@@ -103,24 +103,25 @@ public class OrdersList {
 
 
     public void getOrderDate(String orderDate) {
-        Actions actions = new Actions(driver);
         actions.moveToElement(orderDateField).click().sendKeys(orderDate).build().perform();
         // orderDateField.click();
         // wait.until(ExpectedConditions.elementToBeClickable(orderDateField)).sendKeys(orderDate);
     }
 
     public void getStatus(String status){
-        RunCucumberTest.sleepThread();
-        statusSelect.click();
-        RunCucumberTest.sleepThread();
+        WebElement option;
+        actions.moveToElement(statusSelect).click().build().perform();
+        // RunCucumberTest.sleepThread();
+        // statusSelect.click();
+        // RunCucumberTest.sleepThread();
         if(status != null && !status.isEmpty()){
-            WebElement option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
-            option.click();
+            option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
+            // option.click();
         } else {
-            WebElement option = driver.findElement(By.xpath("//li[@data-value='']"));
-
-            option.click();
+            option = driver.findElement(By.xpath("//li[@data-value='']"));
         }
+        actions.moveToElement(option).click().build().perform();
+
     }
 
     public void getCustomerAddress(String customerAddress){
