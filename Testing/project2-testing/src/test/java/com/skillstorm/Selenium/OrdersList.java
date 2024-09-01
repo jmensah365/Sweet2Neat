@@ -110,21 +110,25 @@ public class OrdersList {
     }
 
     public void getStatus(String status){
-        WebElement option;
-        actions.click(statusSelect).perform();
+        // actions.moveToElement(statusSelect).click().sendKeys(status).build().perform();;
         // RunCucumberTest.sleepThread();
         // statusSelect.click();
-        // RunCucumberTest.sleepThread();
+        actions.moveToElement(statusSelect).click().perform();
 
         if(status != null && !status.isEmpty()){
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(status.toLowerCase())));
-            option = driver.findElement(By.name(status.toLowerCase()));
+            // wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(status.toLowerCase())));
+            WebElement option = driver.findElement(By.xpath("//li[@name = '" + status.toLowerCase() + "']"));
+            actions.moveToElement(option).click().perform();
+
+        // RunCucumberTest.sleepThread();
             // option.click();
         } else {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("clear")));
-            option = driver.findElement(By.name("clear"));
+        // actions.moveToElement(statusSelect).click().sendKeys("clear").build().perform();;
+            // wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("clear")));
+            WebElement option = driver.findElement(By.name("clear"));
+            actions.moveToElement(option).click().perform();
         }
-        actions.moveToElement(option).click().build().perform();
+        // actions.moveToElement(option).click().build().perform();
 
     }
 
