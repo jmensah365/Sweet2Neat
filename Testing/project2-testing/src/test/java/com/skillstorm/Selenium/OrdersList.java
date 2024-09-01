@@ -111,13 +111,13 @@ public class OrdersList {
 
     public void getStatus(String status){
         // actions.moveToElement(statusSelect).click().sendKeys(status).build().perform();;
-        // RunCucumberTest.sleepThread();
         // statusSelect.click();
         actions.moveToElement(statusSelect).click().perform();
+        RunCucumberTest.sleepThread();
 
         if(status != null && !status.isEmpty()){
             // wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(status.toLowerCase())));
-            WebElement option = driver.findElement(By.xpath("//li[@name = '" + status.toLowerCase() + "']"));
+            WebElement option = driver.findElement(By.name(status.toLowerCase()));
             actions.moveToElement(option).click().perform();
 
         // RunCucumberTest.sleepThread();
