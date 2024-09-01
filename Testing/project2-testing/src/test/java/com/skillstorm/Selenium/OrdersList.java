@@ -116,10 +116,8 @@ public class OrdersList {
         // RunCucumberTest.sleepThread();
         if(status != null && !status.isEmpty()){
             option = driver.findElement(By.name(status.toLowerCase()));
-            option.click();
         } else {
             option = driver.findElement(By.name("empty"));
-            option.click();
         }
         actions.moveToElement(option).click().build().perform();
 
