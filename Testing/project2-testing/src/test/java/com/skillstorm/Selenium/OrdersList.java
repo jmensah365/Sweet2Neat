@@ -108,11 +108,10 @@ public class OrdersList {
         statusSelect.click();
         RunCucumberTest.sleepThread();
         if(status != null && !status.isEmpty()){
-            WebElement option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
+            WebElement option = driver.findElement(By.name(status.toLowerCase()));
             option.click();
         } else {
-            WebElement option = driver.findElement(By.xpath("//li[@data-value='']"));
-
+            WebElement option = driver.findElement(By.name("empty"));
             option.click();
         }
     }

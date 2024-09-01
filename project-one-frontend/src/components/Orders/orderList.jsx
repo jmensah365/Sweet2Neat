@@ -270,10 +270,10 @@ const Orders = () => {
                             textAlign:'left',
                         }}
                     >
-                        <MenuItem value="" style={{color: 'red'}}>Clear Field</MenuItem>
-                        <MenuItem value={"Ordered"}>Ordered</MenuItem>
-                        <MenuItem value={"Pending"}>Pending</MenuItem>
-                        <MenuItem value={"Completed"}>Completed</MenuItem>
+                        <MenuItem name="clear" value="" style={{color: 'red'}}>Clear Field</MenuItem>
+                        <MenuItem name="ordered" value={"Ordered"}>Ordered</MenuItem>
+                        <MenuItem name="pending" value={"Pending"}>Pending</MenuItem>
+                        <MenuItem name="completed" value={"Completed"}>Completed</MenuItem>
                     </Select>
                 </FormControl>
                 <TextField
