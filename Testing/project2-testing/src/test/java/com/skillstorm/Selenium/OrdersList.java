@@ -110,15 +110,15 @@ public class OrdersList {
 
     public void getStatus(String status){
         WebElement option;
-        actions.moveToElement(statusSelect).click().build().perform();
+        actions.click(statusSelect).perform();
         // RunCucumberTest.sleepThread();
         // statusSelect.click();
         // RunCucumberTest.sleepThread();
         if(status != null && !status.isEmpty()){
-            option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
+            option = driver.findElement(By.name(status.toLowerCase()));
             // option.click();
         } else {
-            option = driver.findElement(By.xpath("//li[@data-value='']"));
+            option = driver.findElement(By.name("clear"));
         }
         actions.moveToElement(option).click().build().perform();
 
