@@ -147,8 +147,8 @@ public class OrdersList {
         } else {
         // actions.moveToElement(statusSelect).click().sendKeys("clear").build().perform();;
             // wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("clear")));
-            WebElement option = driver.findElement(By.name("clear"));
-            actions.moveToElement(option).click().build().perform();
+            driver.findElement(By.name("clear")).click();
+            // actions.moveToElement(option).click().build().perform();
         }
         // actions.moveToElement(option).click().build().perform();
     }

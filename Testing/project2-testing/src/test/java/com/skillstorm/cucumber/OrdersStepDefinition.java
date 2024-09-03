@@ -17,7 +17,7 @@ public class OrdersStepDefinition {
     @Before("@Orders")
     public void before(){
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
+        // options.addArguments("--headless","--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
         WebDriver driver = new ChromeDriver(options);
 
         this.ordersList = new OrdersList(driver);
@@ -80,10 +80,9 @@ public class OrdersStepDefinition {
         ordersList.clickEditButton();
     }
 
-    @And("I modify {string}, {string}, {string}, and\\/or {string}")
-    public void iModifyInformation(String customerName, String orderDate, String status, String customerAddress){
+    @And("I modify {string}, {string}, and\\/or {string}")
+    public void iModifyInformation(String customerName, String status, String customerAddress){
         ordersList.setCustomerName(customerName);
-        ordersList.setOrderDate(orderDate);
         ordersList.setStatus(status);
         ordersList.setCustomerAddress(customerAddress);
     }
