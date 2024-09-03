@@ -3,6 +3,8 @@ package com.skillstorm.project_one.Models;
 import java.util.Date;
 import java.util.Set;
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -59,7 +61,8 @@ public class Orders {
     @PrePersist
     public void prePersist() {
         if (this.orderDate == null) {
-            this.orderDate = LocalDate.now();
+            ZoneId estZoneId = ZoneId.of("America/New_York"); // EST time zone
+            this.orderDate = ZonedDateTime.now(estZoneId).toLocalDate();
         }
     }
 
