@@ -19,7 +19,7 @@ public class WarehouseStepDefinitions {
     @Before("@Warehouse")
     public void before(){
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--no-sandbox","--disable-gpu");
+        options.addArguments("--headless","--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
         WebDriver driver = new ChromeDriver(options);
 
         this.warehouseList = new WarehouseList(driver);
