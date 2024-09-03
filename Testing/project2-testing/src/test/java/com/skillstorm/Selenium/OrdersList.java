@@ -118,7 +118,7 @@ public class OrdersList {
         if(status != null && !status.isEmpty()){
             // wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(status.toLowerCase())));
             WebElement option = driver.findElement(By.name(status.toLowerCase()));
-            actions.moveToElement(option).click().perform();
+            actions.moveToElement(option).click().build().perform();
 
         // RunCucumberTest.sleepThread();
             // option.click();
@@ -126,7 +126,7 @@ public class OrdersList {
         // actions.moveToElement(statusSelect).click().sendKeys("clear").build().perform();;
             // wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("clear")));
             WebElement option = driver.findElement(By.name("clear"));
-            actions.moveToElement(option).click().perform();
+            actions.moveToElement(option).click().build().perform();
         }
         // actions.moveToElement(option).click().build().perform();
 
