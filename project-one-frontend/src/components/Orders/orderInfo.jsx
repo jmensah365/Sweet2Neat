@@ -93,17 +93,21 @@ const OrderInfo = () => {
             errorMessages.push("Candy Name is required")
         }
 
-        if (data.price < 0 || data.price.trim() === '') {
-            errorMessages.push('Price must be a number and greater than zero');
+        // Check if price is a string before trimming
+        const priceStr = typeof data.price === 'string' ? data.price.trim() : data.price;
+        if (priceStr === '' || parseFloat(priceStr) < 0) {
+            errorMessages.push('Price must be a positive number');
         }
-        if (isNaN(data.price)) {
+    
+        if (isNaN(parseFloat(priceStr))) {
             errorMessages.push('Price cannot contain letters');
         }
     
-        if (data.quantity <= 0 || data.quantity.trim() === '') {
+        const quantityStr = typeof data.quantity === 'string' ? data.quantity.trim() : data.quantity;
+        if (parseFloat(quantityStr) <= 0 || quantityStr === '') {
             errorMessages.push('Quantity must be a number and greater than zero');
         }
-        if (isNaN(data.quantity)) {
+        if (isNaN(parseFloat(quantityStr))) {
             errorMessages.push('Quantity cannot contain letters');
         }
     
@@ -309,7 +313,7 @@ const OrderInfo = () => {
                     </TableHead>
                     <TableBody name="tableBody">
                         {orderItem.map(orderItem => (
-                            <TableRow key={orderItem.id} id={orderItem.id}>
+                            <TableRow key={orderItem.id}>
                                 <TableCell>{getCustomerName(orderItem.orderId)}</TableCell>
                                 <TableCell>{getCandyName(orderItem.candyId)}</TableCell>
                                 <TableCell>{orderItem.price}</TableCell>
@@ -343,7 +347,7 @@ const OrderInfo = () => {
             <Snackbar 
             open={!!errorMessage}
             name='orderInfoSnackbarError'
-            autoHideDuration={60000}
+            autoHideDuration={6000}
             onClose={handleCloseSnackbar}
             > 
                 <Alert
