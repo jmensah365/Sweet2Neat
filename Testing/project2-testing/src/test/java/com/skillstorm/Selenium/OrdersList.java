@@ -107,7 +107,7 @@ public class OrdersList {
     }
 
 
-    public void getOrderDate(String orderDate) {
+   public void getOrderDate(String orderDate) {
         actions.moveToElement(orderDateField).click().perform();
         orderDateField.sendKeys(orderDate);
         // orderDateField.click();
@@ -156,7 +156,7 @@ public class OrdersList {
     }
 
     public void getCustomerAddress(String customerAddress){
-        RunCucumberTest.sleepThread();
+        // RunCucumberTest.sleepThread();
         customerAddressField.sendKeys(customerAddress);
     }
 
