@@ -124,10 +124,9 @@ public class OrdersList {
     }
 
     public void getStatus(String status){
-        // actions.moveToElement(statusSelect).click().perform();;
-        statusSelect.click();
-        JavascriptExecutor js = (JavascriptExecutor) this.driver;
-        js.executeScript("arguments[0].click();", statusSelect);
+        // actions.moveToElement(statusSelect).click().sendKeys(status).build().perform();;
+        // statusSelect.click();
+        actions.moveToElement(statusSelect).click().perform();
         TakesScreenshot screenshot = ((TakesScreenshot) driver);
         File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
         File destFile = new File("screenshot.png");
@@ -142,7 +141,6 @@ public class OrdersList {
             WebElement option = driver.findElement(By.xpath("//li[@name='" + status.toLowerCase() + "']"));
             // actions.moveToElement(option).click().build().perform();
             actions.moveToElement(statusSelect).click().moveToElement(option).click().build().perform();
-
         // RunCucumberTest.sleepThread();
             // option.click();
         } else {
@@ -152,7 +150,6 @@ public class OrdersList {
             actions.moveToElement(option).click().build().perform();
         }
         // actions.moveToElement(option).click().build().perform();
-
     }
 
     public void getCustomerAddress(String customerAddress){
