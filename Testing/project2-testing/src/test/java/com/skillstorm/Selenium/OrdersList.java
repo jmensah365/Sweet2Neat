@@ -8,6 +8,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -123,9 +124,10 @@ public class OrdersList {
     }
 
     public void getStatus(String status){
-        actions.moveToElement(statusSelect).click().perform();;
-        // statusSelect.click();
-        RunCucumberTest.sleepThread();
+        // actions.moveToElement(statusSelect).click().perform();;
+        statusSelect.click();
+        JavascriptExecutor js = (JavascriptExecutor) this.driver;
+        js.executeScript("arguments[0].click();", statusSelect);
         TakesScreenshot screenshot = ((TakesScreenshot) driver);
         File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
         File destFile = new File("screenshot.png");
