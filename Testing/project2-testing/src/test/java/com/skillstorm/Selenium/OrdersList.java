@@ -108,8 +108,7 @@ public class OrdersList {
 
 
     public void getOrderDate(String orderDate) {
-        orderDateField.click();
-        actions.moveToElement(orderDateField).sendKeys(orderDate).build().perform();
+        actions.moveToElement(orderDateField).click().sendKeys(orderDate).build().perform();
         actions.sendKeys(Keys.ESCAPE);
         
         // orderDateField.click();
