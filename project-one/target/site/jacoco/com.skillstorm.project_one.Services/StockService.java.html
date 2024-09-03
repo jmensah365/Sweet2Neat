@@ -37,7 +37,7 @@ import com.skillstorm.project_one.Repositories.WarehouseRepo;
 <span class="fc" id="L37">        List&lt;StockDTO&gt; dtos = new ArrayList&lt;&gt;();</span>
 <span class="fc bfc" id="L38" title="All 2 branches covered.">        for (Stock stock : stockRepo.findAll()) {</span>
 <span class="fc" id="L39">            dtos.add(convertToDTO(stock));</span>
-        }
+<span class="fc" id="L40">        }</span>
 <span class="fc" id="L41">        return dtos;</span>
     }
 
@@ -50,7 +50,7 @@ import com.skillstorm.project_one.Repositories.WarehouseRepo;
 <span class="fc" id="L50">        List&lt;StockDTO&gt; dtos = new ArrayList&lt;&gt;();</span>
 <span class="fc bfc" id="L51" title="All 2 branches covered.">        for (Stock stock : stockRepo.findByWarehouseId(warehouseId)){</span>
 <span class="fc" id="L52">            dtos.add(convertToDTO(stock));</span>
-        }
+<span class="fc" id="L53">        }</span>
 <span class="fc" id="L54">        return dtos;</span>
     }
 
@@ -96,7 +96,7 @@ import com.skillstorm.project_one.Repositories.WarehouseRepo;
      */
     public void updateStock(int id, StockDTO stockDTO){
 <span class="fc bfc" id="L98" title="All 2 branches covered.">        if(!stockRepo.existsById(id)) throw new NoSuchElementException(&quot;Stock with id &quot; + id + &quot; does not exist&quot;);</span>
-<span class="fc" id="L99">        Stock existingStock = stockRepo.findById(id).orElseThrow(() -&gt; new NoSuchElementException(&quot;Stock could not be found&quot;));</span>
+<span class="pc" id="L99">        Stock existingStock = stockRepo.findById(id).orElseThrow(() -&gt; new NoSuchElementException(&quot;Stock could not be found&quot;));</span>
 <span class="fc" id="L100">        int oldQuantity = existingStock.getQuantity();</span>
         
 <span class="pc" id="L102">        Candy candy = candyRepo.findById(stockDTO.getCandyId()).orElseThrow(() -&gt; new NoSuchElementException(&quot;Candy not found&quot;));</span>

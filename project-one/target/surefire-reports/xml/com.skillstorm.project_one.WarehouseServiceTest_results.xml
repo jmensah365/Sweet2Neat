@@ -4,7 +4,7 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.002">
+           time="0.000">
     <properties></properties>
 
 
@@ -15,7 +15,7 @@
                 classname="com.skillstorm.project_one.WarehouseServiceTest">
             </testcase>
             <testcase
-                name="testCreateWarehouse"
+                name="testSuccessfulUpdateWarehouse"
                 time="0.000"
                 classname="com.skillstorm.project_one.WarehouseServiceTest">
             </testcase>
@@ -25,18 +25,18 @@
                 classname="com.skillstorm.project_one.WarehouseServiceTest">
             </testcase>
             <testcase
-                name="testSuccessfulUpdateWarehouse"
-                time="0.001"
+                name="testDeleteWarehouse"
+                time="0.000"
+                classname="com.skillstorm.project_one.WarehouseServiceTest">
+            </testcase>
+            <testcase
+                name="testCreateWarehouse"
+                time="0.000"
                 classname="com.skillstorm.project_one.WarehouseServiceTest">
             </testcase>
             <testcase
                 name="testUpdateStockForWarehouse"
                 time="0.000"
-                classname="com.skillstorm.project_one.WarehouseServiceTest">
-            </testcase>
-            <testcase
-                name="testDeleteWarehouse"
-                time="0.001"
                 classname="com.skillstorm.project_one.WarehouseServiceTest">
             </testcase>
 </testsuite>

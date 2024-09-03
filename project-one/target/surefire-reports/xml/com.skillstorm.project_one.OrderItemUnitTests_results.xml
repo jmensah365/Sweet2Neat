@@ -10,17 +10,17 @@
 
 
             <testcase
-                name="testSetters"
-                time="0.000"
-                classname="com.skillstorm.project_one.OrderItemUnitTests">
-            </testcase>
-            <testcase
                 name="testGetters"
                 time="0.000"
                 classname="com.skillstorm.project_one.OrderItemUnitTests">
             </testcase>
             <testcase
                 name="testToString"
+                time="0.000"
+                classname="com.skillstorm.project_one.OrderItemUnitTests">
+            </testcase>
+            <testcase
+                name="testSetters"
                 time="0.000"
                 classname="com.skillstorm.project_one.OrderItemUnitTests">
             </testcase>

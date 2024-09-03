@@ -10,11 +10,6 @@
 
 
             <testcase
-                name="testConstructor"
-                time="0.001"
-                classname="com.skillstorm.project_one.OrderItemDTOUnitTests">
-            </testcase>
-            <testcase
                 name="testToString"
                 time="0.002"
                 classname="com.skillstorm.project_one.OrderItemDTOUnitTests">
@@ -22,6 +17,11 @@
             <testcase
                 name="testGettersAndSetters"
                 time="0.000"
+                classname="com.skillstorm.project_one.OrderItemDTOUnitTests">
+            </testcase>
+            <testcase
+                name="testConstructor"
+                time="0.001"
                 classname="com.skillstorm.project_one.OrderItemDTOUnitTests">
             </testcase>
 </testsuite>

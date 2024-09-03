@@ -10,7 +10,7 @@
 
 
             <testcase
-                name="testGetAllWarehouses"
+                name="testCreateWarehouse"
                 time="0.000"
                 classname="com.skillstorm.project_one.WarehouseControllerTest">
             </testcase>
@@ -20,13 +20,13 @@
                 classname="com.skillstorm.project_one.WarehouseControllerTest">
             </testcase>
             <testcase
-                name="testCreateWarehouse"
-                time="0.001"
+                name="testGetAllWarehouses"
+                time="0.000"
                 classname="com.skillstorm.project_one.WarehouseControllerTest">
             </testcase>
             <testcase
                 name="testUpdateWarehouse"
-                time="0.000"
+                time="0.001"
                 classname="com.skillstorm.project_one.WarehouseControllerTest">
             </testcase>
 </testsuite>

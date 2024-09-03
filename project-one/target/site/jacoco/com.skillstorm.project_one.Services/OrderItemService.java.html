@@ -37,7 +37,7 @@ import com.skillstorm.project_one.Repositories.OrderItemRepo;
 <span class="fc" id="L37">        List&lt;OrderItemDTO&gt; dtos = new ArrayList&lt;&gt;();</span>
 <span class="fc bfc" id="L38" title="All 2 branches covered.">        for (OrderItem orderItem : repo.findAll()) {</span>
 <span class="fc" id="L39">            dtos.add(convertToDTO(orderItem));</span>
-        }
+<span class="fc" id="L40">        }</span>
 <span class="fc" id="L41">        return dtos;</span>
     }
 
@@ -51,7 +51,7 @@ import com.skillstorm.project_one.Repositories.OrderItemRepo;
 <span class="fc" id="L51">        List&lt;OrderItemDTO&gt; dtos = new ArrayList&lt;&gt;();</span>
 <span class="fc bfc" id="L52" title="All 2 branches covered.">        for (OrderItem orderItem : repo.findByOrderId(id)) {</span>
 <span class="fc" id="L53">            dtos.add(convertToDTO(orderItem));</span>
-        }
+<span class="fc" id="L54">        }</span>
 <span class="fc" id="L55">        return dtos;</span>
     }
 

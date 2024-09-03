@@ -4,13 +4,33 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.005">
+           time="0.007">
     <properties></properties>
 
 
 
             <testcase
-                name="testGetStocksByWarehouse"
+                name="testUpdateStock"
+                time="0.000"
+                classname="com.skillstorm.project_one.StockServiceTest">
+            </testcase>
+            <testcase
+                name="testDeleteStock"
+                time="0.001"
+                classname="com.skillstorm.project_one.StockServiceTest">
+            </testcase>
+            <testcase
+                name="testGetAllStockDTO"
+                time="0.001"
+                classname="com.skillstorm.project_one.StockServiceTest">
+            </testcase>
+            <testcase
+                name="testCreateStockWarehouseNotFound"
+                time="0.001"
+                classname="com.skillstorm.project_one.StockServiceTest">
+            </testcase>
+            <testcase
+                name="testUpdateStockStockNotFound"
                 time="0.001"
                 classname="com.skillstorm.project_one.StockServiceTest">
             </testcase>
@@ -20,12 +40,7 @@
                 classname="com.skillstorm.project_one.StockServiceTest">
             </testcase>
             <testcase
-                name="testDeleteStockNotFound"
-                time="0.000"
-                classname="com.skillstorm.project_one.StockServiceTest">
-            </testcase>
-            <testcase
-                name="testCreateStockCandyEmpty"
+                name="testGetStocksByWarehouse"
                 time="0.001"
                 classname="com.skillstorm.project_one.StockServiceTest">
             </testcase>
@@ -35,32 +50,17 @@
                 classname="com.skillstorm.project_one.StockServiceTest">
             </testcase>
             <testcase
-                name="testUpdateStockStockNotFound"
+                name="testCreateStockCandyEmpty"
+                time="0.000"
+                classname="com.skillstorm.project_one.StockServiceTest">
+            </testcase>
+            <testcase
+                name="testDeleteStockNotFound"
                 time="0.000"
                 classname="com.skillstorm.project_one.StockServiceTest">
             </testcase>
             <testcase
                 name="testCreateStock"
-                time="0.001"
-                classname="com.skillstorm.project_one.StockServiceTest">
-            </testcase>
-            <testcase
-                name="testUpdateStock"
-                time="0.000"
-                classname="com.skillstorm.project_one.StockServiceTest">
-            </testcase>
-            <testcase
-                name="testDeleteStock"
-                time="0.000"
-                classname="com.skillstorm.project_one.StockServiceTest">
-            </testcase>
-            <testcase
-                name="testCreateStockWarehouseNotFound"
-                time="0.000"
-                classname="com.skillstorm.project_one.StockServiceTest">
-            </testcase>
-            <testcase
-                name="testGetAllStockDTO"
                 time="0.001"
                 classname="com.skillstorm.project_one.StockServiceTest">
             </testcase>

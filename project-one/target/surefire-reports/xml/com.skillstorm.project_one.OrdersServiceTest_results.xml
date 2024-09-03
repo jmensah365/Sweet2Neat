@@ -10,17 +10,7 @@
 
 
             <testcase
-                name="testDeleteOrder"
-                time="0.000"
-                classname="com.skillstorm.project_one.OrdersServiceTest">
-            </testcase>
-            <testcase
-                name="testFindByStatus"
-                time="0.001"
-                classname="com.skillstorm.project_one.OrdersServiceTest">
-            </testcase>
-            <testcase
-                name="testUpdateOrders"
+                name="testCreateOrders"
                 time="0.000"
                 classname="com.skillstorm.project_one.OrdersServiceTest">
             </testcase>
@@ -30,12 +20,22 @@
                 classname="com.skillstorm.project_one.OrdersServiceTest">
             </testcase>
             <testcase
-                name="testCreateOrders"
+                name="testDeleteOrder"
                 time="0.000"
                 classname="com.skillstorm.project_one.OrdersServiceTest">
             </testcase>
             <testcase
+                name="testUpdateOrders"
+                time="0.001"
+                classname="com.skillstorm.project_one.OrdersServiceTest">
+            </testcase>
+            <testcase
                 name="testGetOrdersById"
+                time="0.000"
+                classname="com.skillstorm.project_one.OrdersServiceTest">
+            </testcase>
+            <testcase
+                name="testFindByStatus"
                 time="0.000"
                 classname="com.skillstorm.project_one.OrdersServiceTest">
             </testcase>

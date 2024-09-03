@@ -4,23 +4,13 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.004">
+           time="0.007">
     <properties></properties>
 
 
 
             <testcase
-                name="testUpdateCandyThrowsException"
-                time="0.001"
-                classname="com.skillstorm.project_one.CandyServiceTests">
-            </testcase>
-            <testcase
-                name="testFindById"
-                time="0.000"
-                classname="com.skillstorm.project_one.CandyServiceTests">
-            </testcase>
-            <testcase
-                name="testCreateCandy"
+                name="testFindByType"
                 time="0.001"
                 classname="com.skillstorm.project_one.CandyServiceTests">
             </testcase>
@@ -30,13 +20,23 @@
                 classname="com.skillstorm.project_one.CandyServiceTests">
             </testcase>
             <testcase
-                name="testUpdateCandy"
+                name="testFindById"
                 time="0.001"
                 classname="com.skillstorm.project_one.CandyServiceTests">
             </testcase>
             <testcase
-                name="testFindAll"
+                name="testCreateCandy"
+                time="0.002"
+                classname="com.skillstorm.project_one.CandyServiceTests">
+            </testcase>
+            <testcase
+                name="testUpdateCandy"
                 time="0.000"
+                classname="com.skillstorm.project_one.CandyServiceTests">
+            </testcase>
+            <testcase
+                name="testFindAll"
+                time="0.001"
                 classname="com.skillstorm.project_one.CandyServiceTests">
             </testcase>
             <testcase
@@ -45,8 +45,8 @@
                 classname="com.skillstorm.project_one.CandyServiceTests">
             </testcase>
             <testcase
-                name="testFindByType"
-                time="0.001"
+                name="testUpdateCandyThrowsException"
+                time="0.002"
                 classname="com.skillstorm.project_one.CandyServiceTests">
             </testcase>
 </testsuite>
