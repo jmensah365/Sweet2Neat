@@ -106,27 +106,27 @@ public class OrdersList {
     }
 
 
-    public void getOrderDate(String orderDate) {
-        this.actions = new Actions(this.driver);
-        actions.moveToElement(orderDateField).click().sendKeys(orderDate).build().perform();
-        actions.sendKeys(Keys.ESCAPE);
+    // public void getOrderDate(String orderDate) {
+    //     this.actions = new Actions(this.driver);
+    //     actions.moveToElement(orderDateField).click().sendKeys(orderDate).build().perform();
+    //     actions.sendKeys(Keys.ESCAPE);
         
-        // orderDateField.click();
-        // wait.until(ExpectedConditions.elementToBeClickable(orderDateField)).sendKeys(orderDate);
-        TakesScreenshot screenshot = ((TakesScreenshot) driver);
-        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
-        File destFile = new File("orderdatescreenshot.png");
-        try {
-            FileUtils.copyFile(srcFile, destFile);
-            System.out.println("Screenshot saved at: " + destFile.getAbsolutePath());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    //     // orderDateField.click();
+    //     // wait.until(ExpectedConditions.elementToBeClickable(orderDateField)).sendKeys(orderDate);
+    //     TakesScreenshot screenshot = ((TakesScreenshot) driver);
+    //     File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+    //     File destFile = new File("orderdatescreenshot.png");
+    //     try {
+    //         FileUtils.copyFile(srcFile, destFile);
+    //         System.out.println("Screenshot saved at: " + destFile.getAbsolutePath());
+    //     } catch (IOException e) {
+    //         e.printStackTrace();
+    //     }
+    // }
     public void getStatus(String status){
         // actions.moveToElement(statusSelect).click().sendKeys(status).build().perform();;
-        // statusSelect.click();
-        actions.moveToElement(statusSelect).click().perform();
+        statusSelect.click();
+        // actions.moveToElement(statusSelect).click().perform();
         RunCucumberTest.sleepThread();
         TakesScreenshot screenshot = ((TakesScreenshot) driver);
         File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
@@ -139,9 +139,9 @@ public class OrdersList {
         }
         if(status != null && !status.isEmpty()){
             // wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(status.toLowerCase())));
-            WebElement option = driver.findElement(By.xpath("//li[@name='" + status.toLowerCase() + "']"));
+            driver.findElement(By.xpath("//li[@name='" + status.toLowerCase() + "']")).click();
             // actions.moveToElement(option).click().build().perform();
-            actions.moveToElement(statusSelect).click().moveToElement(option).click().build().perform();
+            // actions.moveToElement(statusSelect).click().moveToElement(option).click().build().perform();
         // RunCucumberTest.sleepThread();
             // option.click();
         } else {
