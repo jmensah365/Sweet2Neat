@@ -110,6 +110,15 @@ public class OrdersList {
         actions.moveToElement(orderDateField).click().sendKeys(orderDate).build().perform();
         // orderDateField.click();
         // wait.until(ExpectedConditions.elementToBeClickable(orderDateField)).sendKeys(orderDate);
+        TakesScreenshot screenshot = ((TakesScreenshot) driver);
+        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+        File destFile = new File("orderdatescreenshot.png");
+        try {
+            FileUtils.copyFile(srcFile, destFile);
+            System.out.println("Screenshot saved at: " + destFile.getAbsolutePath());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void getStatus(String status){
