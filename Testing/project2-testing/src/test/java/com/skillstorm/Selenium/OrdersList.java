@@ -107,9 +107,9 @@ public class OrdersList {
     }
 
 
-   public void getOrderDate(String orderDate) {
-        actions.moveToElement(orderDateField).click().perform();
-        orderDateField.sendKeys(orderDate);
+    public void getOrderDate(String orderDate) {
+        // actions.moveToElement(orderDateField).click().sendKeys(orderDate).perform();
+        actions.moveToElement(orderDateField).sendKeys(orderDate).build().perform();
         // orderDateField.click();
         // wait.until(ExpectedConditions.elementToBeClickable(orderDateField)).sendKeys(orderDate);
         TakesScreenshot screenshot = ((TakesScreenshot) driver);
@@ -122,11 +122,11 @@ public class OrdersList {
             e.printStackTrace();
         }
     }
-
     public void getStatus(String status){
         // actions.moveToElement(statusSelect).click().sendKeys(status).build().perform();;
         // statusSelect.click();
         actions.moveToElement(statusSelect).click().perform();
+        RunCucumberTest.sleepThread();
         TakesScreenshot screenshot = ((TakesScreenshot) driver);
         File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
         File destFile = new File("screenshot.png");
