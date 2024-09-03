@@ -115,19 +115,20 @@ public class OrdersList {
         actions.moveToElement(statusSelect).click().perform();
         RunCucumberTest.sleepThread();
 
-        if(status != null && !status.isEmpty()){
+        // if(status != null && !status.isEmpty()){
             // wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(status.toLowerCase())));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(status.toLowerCase())));
             WebElement option = driver.findElement(By.name(status.toLowerCase()));
-            actions.moveToElement(option).click().build().perform();
-
+            actions.moveToElement(option).click().perform();
         // RunCucumberTest.sleepThread();
             // option.click();
-        } else {
-        // actions.moveToElement(statusSelect).click().sendKeys("clear").build().perform();;
-            // wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("clear")));
-            WebElement option = driver.findElement(By.name("clear"));
-            actions.moveToElement(option).click().build().perform();
-        }
+        // } else {
+        // // actions.moveToElement(statusSelect).click().sendKeys("clear").build().perform();;
+        //     // wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("clear")));
+        //     WebElement option = driver.findElement(By.name("clear"));
+        //     actions.moveToElement(option).click().build().perform();
+        // }
         // actions.moveToElement(option).click().build().perform();
 
     }
