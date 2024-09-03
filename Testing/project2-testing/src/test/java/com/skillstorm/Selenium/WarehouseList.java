@@ -69,6 +69,9 @@ public class WarehouseList {
     @FindBy(xpath = "//table[@name='warehouseTable']//tr[1]/td[1]")
     private WebElement warehouseFirstRowLocation;
 
+    @FindBy(className = "MuiAlert-message")
+    private WebElement alertErrMsg;
+
     String warehouseId = "";
 
     public WarehouseList(WebDriver driver){
@@ -98,7 +101,9 @@ public class WarehouseList {
         for (int i = 0; i < prevValue.length(); i++){
             locationField.sendKeys(Keys.BACK_SPACE);
         }
-        locationField.sendKeys(location);
+        if(!location.equals("empty")) {
+            locationField.sendKeys(location);
+        }
     }
 
     public void setCapacity(String capacity){
@@ -107,7 +112,9 @@ public class WarehouseList {
         for (int i = 0; i < prevValue.length(); i++){
             capacityField.sendKeys(Keys.BACK_SPACE);
         }
-        capacityField.sendKeys(capacity);
+        if(!capacity.equals("empty")) {
+            capacityField.sendKeys(capacity);
+        }
     }
 
     public void clickUpdateWarehouse(){
@@ -143,40 +150,39 @@ public class WarehouseList {
 
     //=====================DELETE======================//
 
-        //======================= CREATE =========================
-        public String checkPageTitle() {
-        RunCucumberTest.sleepThread();
-            return warehouseListTitle.getText();
+    //======================= CREATE =========================
+    public String checkPageTitle() {
+    RunCucumberTest.sleepThread();
+        return warehouseListTitle.getText();
+    }
+
+    public void addLocation(String location) {
+    RunCucumberTest.sleepThread();
+        if(!location.equals("empty")) {
+            locationField.sendKeys(location);
         }
-    
-        public void addLocation(String location) {
-        RunCucumberTest.sleepThread();
-            // if(!location.equals("empty")) {
-            //     locationField.sendKeys(location);
-            // } else {
-            //     action.sendKeys(Keys.ESCAPE).perform();
-            // }
-        }
-    
-        public void addCapacity(String capacity) {
-        RunCucumberTest.sleepThread();
+    }
+
+    public void addCapacity(String capacity) {
+    RunCucumberTest.sleepThread();
+        if(!capacity.equals("empty")) {
             capacityField.sendKeys(capacity);
         }
-        
-        public void setCurrentStock(String currentStock) {
-        RunCucumberTest.sleepThread();
-            stockField.sendKeys(currentStock);
-        }
-    
-        public void clickAddWarehouseButton() {
-        RunCucumberTest.sleepThread();
-            addWarehouseButton.click();
-        }
-    
-        public void getWarehouseLocation() {
-        RunCucumberTest.sleepThread();
-            System.out.println(warehouseRowLocation.getText());
-        }
+    }
+
+    public void clickAddWarehouseButton() {
+    RunCucumberTest.sleepThread();
+        addWarehouseButton.click();
+    }
+
+    public void getWarehouseLocation() {
+    RunCucumberTest.sleepThread();
+        System.out.println(warehouseRowLocation.getText());
+    }
+
+    public void alertMsgText() {
+        System.out.println(alertErrMsg.getText());
+    }
 
     //======================= READ =========================
     public void getHomeURL() {
@@ -204,5 +210,4 @@ public class WarehouseList {
             System.out.println(tr.getText());
         }
     }
-    
 }

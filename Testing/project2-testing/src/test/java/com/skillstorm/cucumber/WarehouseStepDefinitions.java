@@ -3,6 +3,7 @@ package com.skillstorm.cucumber;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
+import io.cucumber.java.lu.an;
 
 // import org.junit.jupiter.api.Assertions.*;
 import org.openqa.selenium.WebDriver;
@@ -61,7 +62,7 @@ public class WarehouseStepDefinitions {
         this.warehouseList.confirmWarehouseUpdation();
     }
 
-    @Then("the warehouse should not be visible in the table")
+    @And("the warehouse should not be visible in the table")
     public void theWarehouseShouldNotBeVisibleInTheTable(){
         this.warehouseList.confirmDeletion();
     }
@@ -77,6 +78,11 @@ public class WarehouseStepDefinitions {
     @And("I click the ADD WAREHOUSE button")
     public void clickAddWarehouseButton() {
         this.warehouseList.clickAddWarehouseButton();
+    }
+
+    @Then("I should see an alert message {string}")
+    public void seeAlertErrorMessage(String errorMsg) {
+        this.warehouseList.alertMsgText();
     }
 
     @Then("I should see the newly created Warehouse in the list of Warehouses")
