@@ -58,22 +58,23 @@ public class Orders {
     private Set<OrderItem> orderItems;
 
     // needs this to persist current localdate when orders is created
-    @PrePersist
-    public void prePersist() {
-        if (this.orderDate == null) {
-            ZoneId estZoneId = ZoneId.of("America/New_York"); // EST time zone
-            this.orderDate = ZonedDateTime.now(estZoneId).toLocalDate();
-        }
-    }
+    // @PrePersist
+    // public void prePersist() {
+    //     if (this.orderDate == null) {
+    //         ZoneId estZoneId = ZoneId.of("America/New_York"); // EST time zone
+    //         this.orderDate = ZonedDateTime.now(estZoneId).toLocalDate();
+    //     }
+    // }
 
     public Orders() {
+        this.orderDate = LocalDate.now();
     }
 
-    public Orders(Integer id, @NotBlank String customerName, @NotNull LocalDate orderDate, @NotBlank String status,
-            @NotBlank String customerAddress, Set<OrderItem> orderItems) {
+    public Orders(Integer id, String customerName, String status,
+        String customerAddress, Set<OrderItem> orderItems) {
         this.id = id;
         this.customerName = customerName;
-        this.orderDate = orderDate;
+        this.orderDate = LocalDate.now();
         this.status = status;
         this.customerAddress = customerAddress;
         this.orderItems = orderItems;
@@ -108,9 +109,9 @@ public class Orders {
         return orderDate;
     }
 
-    public void setOrderDate(LocalDate orderDate) {
-        this.orderDate = orderDate;
-    }
+    // public void setOrderDate(LocalDate orderDate) {
+    //     this.orderDate = orderDate;
+    // }
 
     public String getStatus() {
         return status;
