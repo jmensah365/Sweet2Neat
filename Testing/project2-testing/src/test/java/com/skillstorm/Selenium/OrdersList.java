@@ -107,7 +107,7 @@ public class OrdersList {
 
 
     public void getOrderDate(String orderDate) {
-        actions.moveToElement(orderDateField).click().sendKeys(orderDate).perform();
+        actions.moveToElement(orderDateField).sendKeys(orderDate).build().perform();
         // orderDateField.click();
         // wait.until(ExpectedConditions.elementToBeClickable(orderDateField)).sendKeys(orderDate);
         TakesScreenshot screenshot = ((TakesScreenshot) driver);
