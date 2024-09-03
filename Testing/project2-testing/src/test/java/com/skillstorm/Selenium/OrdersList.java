@@ -124,9 +124,7 @@ public class OrdersList {
 
     public void getStatus(String status){
         // actions.moveToElement(statusSelect).click().sendKeys(status).build().perform();;
-        // statusSelect.click();
-        actions.moveToElement(statusSelect).click().perform();
-        RunCucumberTest.sleepThread();
+        statusSelect.click();
         TakesScreenshot screenshot = ((TakesScreenshot) driver);
         File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
         File destFile = new File("screenshot.png");
