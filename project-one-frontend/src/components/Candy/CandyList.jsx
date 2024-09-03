@@ -64,11 +64,11 @@ const CandyList = () => {
 
     const validateCandyData = (data) => {
         let errorMessages = [];
-
+    
         if (data.name.trim() === '') {
             errorMessages.push('Name is required');
         }
-
+    
         if(!data.type){
             errorMessages.push("Candy type is required")
         }
@@ -76,16 +76,24 @@ const CandyList = () => {
         if (data.flavor.trim() === '') {
             errorMessages.push('Flavor is required');
         }
-        if (data.price < 0 || data.price.trim() === '') {
+    
+        // Check if price is a string before trimming
+        const priceStr = typeof data.price === 'string' ? data.price.trim() : data.price;
+        if (priceStr === '' || parseFloat(priceStr) < 0) {
             errorMessages.push('Price must be a positive number');
         }
-        if (isNaN(data.price)) {
+    
+        if (isNaN(parseFloat(priceStr))) {
             errorMessages.push('Price cannot contain letters');
         }
-        if (data.weight <= 0 || data.weight.trim() === '') {
+    
+        // Check if weight is a string before trimming
+        const weightStr = typeof data.weight === 'string' ? data.weight.trim() : data.weight;
+        if (weightStr === '' || parseFloat(weightStr) <= 0) {
             errorMessages.push('Weight must be a positive number');
         }
-        if (isNaN(data.weight)) {
+    
+        if (isNaN(parseFloat(weightStr))) {
             errorMessages.push('Weight cannot contain letters');
         }
     
@@ -93,8 +101,7 @@ const CandyList = () => {
             setErrorMessage(errorMessages.join(', and '));
             return false;
         }
-
-        
+    
         return true; // No errors
     };
 
