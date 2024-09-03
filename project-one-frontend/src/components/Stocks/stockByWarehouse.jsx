@@ -98,13 +98,19 @@ const WarehouseStocks = () => {
             errorMessages.push("Warehouse Location is required")
         }
     
-        if (data.quantity <= 0 || data.quantity.trim() === '') {
+        const quantityStr = typeof data.quantity === 'string' ? data.quantity.trim() : data.quantity;
+        if (parseFloat(quantityStr) <= 0 || quantityStr === '') {
             errorMessages.push('Quantity must be a number and greater than zero');
         }
-        if (isNaN(data.quantity)) {
+        if (isNaN(parseFloat(quantityStr))) {
             errorMessages.push('Quantity cannot contain letters');
         }
     
+        const warehouseCapacity = warehouseCapacities[data.warehouseId];
+        if (warehouseCapacity + data.quantity > warehouseCapacity) {
+            errorMessages.push(`Quantity exceeds warehouse capacity of ${warehouseCapacity}`);
+        }
+
         if (errorMessages.length > 0) {
             setErrorMessage(errorMessages.join(', and '));
             return false;
@@ -308,7 +314,7 @@ const WarehouseStocks = () => {
             <Snackbar 
             open={!!errorMessage}
             name='warehouseStockSnackbarError'
-            autoHideDuration={60000}
+            autoHideDuration={6000}
             onClose={handleCloseSnackbar}
             > 
                 <Alert
