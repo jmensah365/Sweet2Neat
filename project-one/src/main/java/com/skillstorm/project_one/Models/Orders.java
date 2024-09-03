@@ -55,6 +55,7 @@ public class Orders {
     @OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
     private Set<OrderItem> orderItems;
 
+    // needs this to persist current localdate when orders is created
     @PrePersist
     public void prePersist() {
         if (this.orderDate == null) {

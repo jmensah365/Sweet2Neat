@@ -17,9 +17,8 @@ const Orders = () => {
     const [order, setOrder] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(null);
-    const [newOrder, setNewOrder] = useState({
+    const [newOrder, setNewOrder] = useState({ // removed orderDate
         customerName: '',
-        // orderDate: '',
         status: '',
         customerAddress: '',
     }); //setting the state for the new order form
@@ -49,16 +48,12 @@ const Orders = () => {
             });
     }, []);
 
-    const validateOrdersData = (data) => {
+    const validateOrdersData = (data) => { // removed order date validation
         let errorMessages = [];
 
         if (data.customerName.trim() === '') {
             errorMessages.push('Customer Name is required');
         }
-
-        // if(!data.orderDate){
-        //     errorMessages.push("Order Date is required")
-        // }
 
         if (!data.status) {
             errorMessages.push('Status is required');
@@ -68,8 +63,6 @@ const Orders = () => {
             errorMessages.push('Customer Address is required');
         }
 
-    
-    
         if (errorMessages.length > 0) {
             setErrorMessage(errorMessages.join(', and '));
             return false;
@@ -114,7 +107,7 @@ const Orders = () => {
             }else{
                 setOrder([...order, data]);
             }
-            setNewOrder({customerName: '', status: '', customerAddress: '',});
+            setNewOrder({customerName: '', status: '', customerAddress: '',}); // removed saving orderdate state
             setSuccessMessage(editingOrders ? 'Order updated successfully!' : 'Order added successfully!');
             refreshWarehouseDetails();
         })
