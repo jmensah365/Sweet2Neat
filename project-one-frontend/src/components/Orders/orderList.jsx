@@ -9,10 +9,6 @@ import {
 } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit'
 import DeleteIcon from '@mui/icons-material/Delete'
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import dayjs from 'dayjs';
 
 const Orders = () => {
     
@@ -23,7 +19,7 @@ const Orders = () => {
     const [error, setError] = useState(null);
     const [newOrder, setNewOrder] = useState({
         customerName: '',
-        orderDate: '',
+        // orderDate: '',
         status: '',
         customerAddress: '',
     }); //setting the state for the new order form
@@ -60,9 +56,9 @@ const Orders = () => {
             errorMessages.push('Customer Name is required');
         }
 
-        if(!data.orderDate){
-            errorMessages.push("Order Date is required")
-        }
+        // if(!data.orderDate){
+        //     errorMessages.push("Order Date is required")
+        // }
 
         if (!data.status) {
             errorMessages.push('Status is required');
@@ -118,7 +114,7 @@ const Orders = () => {
             }else{
                 setOrder([...order, data]);
             }
-            setNewOrder({customerName: '', orderDate: '', status: '', customerAddress: '',});
+            setNewOrder({customerName: '', status: '', customerAddress: '',});
             setSuccessMessage(editingOrders ? 'Order updated successfully!' : 'Order added successfully!');
             refreshWarehouseDetails();
         })
@@ -179,14 +175,14 @@ const Orders = () => {
     };
 
     // restructure the order date passed in so handleInputChange can handle it
-    const handleOrderDate = (newOrderDate) => {
-        handleInputChange({
-            target: {
-                name: 'orderDate',
-                value: newOrderDate
-            }
-        });
-    };
+    // const handleOrderDate = (newOrderDate) => {
+    //     handleInputChange({
+    //         target: {
+    //             name: 'orderDate',
+    //             value: newOrderDate
+    //         }
+    //     });
+    // };
 
     const handleCloseSnackbar = () => {
         setSuccessMessage('');
@@ -224,7 +220,7 @@ const Orders = () => {
                 /> */}
 
                 {/* LocalizationProvider makes sure the date is localized */}
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DatePicker
                         label="Order Date"
                         name="datePicker"
@@ -247,7 +243,7 @@ const Orders = () => {
                             },
                         }}
                     />
-                </LocalizationProvider>
+                </LocalizationProvider> */}
                             {/* <TextField
                     label='Status'
                     name='status'

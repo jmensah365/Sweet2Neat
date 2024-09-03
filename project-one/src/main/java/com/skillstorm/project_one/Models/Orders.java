@@ -2,6 +2,7 @@ package com.skillstorm.project_one.Models;
 
 import java.util.Date;
 import java.util.Set;
+import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -12,6 +13,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -33,10 +35,10 @@ public class Orders {
     private String customerName;
 
     // Date when the order was placed
-    @Column
+    @Column(name = "order_date")
     @NotNull
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-    private Date orderDate;
+    private LocalDate orderDate;
 
     // Status of the order (e.g., 'Pending', 'Cancelled', 'Completed')
     @Column
@@ -52,6 +54,13 @@ public class Orders {
     // Each order can have multiple items.
     @OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
     private Set<OrderItem> orderItems;
+
+    @PrePersist
+    public void prePersist() {
+        if (this.orderDate == null) {
+            this.orderDate = LocalDate.now();
+        }
+    }
 
     // Getters and Setters
     public String getCustomerAddress() {
@@ -78,11 +87,11 @@ public class Orders {
         this.customerName = customerName;
     }
 
-    public Date getOrderDate() {
+    public LocalDate getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(Date orderDate) {
+    public void setOrderDate(LocalDate orderDate) {
         this.orderDate = orderDate;
     }
 
@@ -94,7 +103,6 @@ public class Orders {
         this.status = status;
     }
 
-    
 
     @Override
     public String toString() {
