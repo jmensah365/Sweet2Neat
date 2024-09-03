@@ -9,6 +9,8 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -17,6 +19,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.apache.commons.io.FileUtils;
 
 
 import com.skillstorm.RunCucumberTest;
@@ -114,7 +117,15 @@ public class OrdersList {
         // statusSelect.click();
         actions.moveToElement(statusSelect).click().perform();
         RunCucumberTest.sleepThread();
-
+        TakesScreenshot screenshot = ((TakesScreenshot) driver);
+        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+        File destFile = new File("screenshot.png");
+        try {
+            FileUtils.copyFile(srcFile, destFile);
+            System.out.println("Screenshot saved at: " + destFile.getAbsolutePath());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         if(status != null && !status.isEmpty()){
             // wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(status.toLowerCase())));
             WebElement option = driver.findElement(By.xpath("//li[@name='" + status.toLowerCase() + "']"));
