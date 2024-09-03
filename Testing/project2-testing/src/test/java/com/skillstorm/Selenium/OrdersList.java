@@ -123,8 +123,8 @@ public class OrdersList {
     }
 
     public void getStatus(String status){
-        // actions.moveToElement(statusSelect).click().sendKeys(status).build().perform();;
-        statusSelect.click();
+        actions.moveToElement(statusSelect).click().perform();;
+        // statusSelect.click();
         RunCucumberTest.sleepThread();
         TakesScreenshot screenshot = ((TakesScreenshot) driver);
         File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
