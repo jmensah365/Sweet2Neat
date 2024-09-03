@@ -66,6 +66,19 @@ public class Orders {
         }
     }
 
+    public Orders() {
+    }
+
+    public Orders(Integer id, @NotBlank String customerName, @NotNull LocalDate orderDate, @NotBlank String status,
+            @NotBlank String customerAddress, Set<OrderItem> orderItems) {
+        this.id = id;
+        this.customerName = customerName;
+        this.orderDate = orderDate;
+        this.status = status;
+        this.customerAddress = customerAddress;
+        this.orderItems = orderItems;
+    }
+
     // Getters and Setters
     public String getCustomerAddress() {
         return customerAddress;
