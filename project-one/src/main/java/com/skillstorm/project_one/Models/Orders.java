@@ -37,7 +37,7 @@ public class Orders {
     private String customerName;
 
     // Date when the order was placed
-    @Column(name = "order_date")
+    @Column
     @NotNull
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDate orderDate;
