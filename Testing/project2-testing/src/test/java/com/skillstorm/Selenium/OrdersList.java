@@ -83,7 +83,6 @@ public class OrdersList {
 
     public OrdersList(WebDriver driver){
         this.driver = driver;
-        this.actions = new Actions(this.driver);
         wait = new WebDriverWait(this.driver, Duration.ofSeconds(10));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         PageFactory.initElements(driver, this);
@@ -108,6 +107,7 @@ public class OrdersList {
 
 
     public void getOrderDate(String orderDate) {
+        this.actions = new Actions(this.driver);
         actions.moveToElement(orderDateField).click().sendKeys(orderDate).build().perform();
         actions.sendKeys(Keys.ESCAPE);
         
