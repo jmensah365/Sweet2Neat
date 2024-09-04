@@ -1,4 +1,103 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 139.0 s -- in TestSuite
+Tests run: 11, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 142.2 s <<< FAILURE! -- in TestSuite
+com.skillstorm.RunCucumberTest.runScenario["Creating a Candy with Invalid Data", "Candy CRUD Operations"](3) -- Time elapsed: 12.72 s <<< FAILURE!
+java.lang.AssertionError: expected [Successfully added candy!] but found [Name is required]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+
+com.skillstorm.RunCucumberTest.runScenario["Creating a Candy with Invalid Data", "Candy CRUD Operations"](4) -- Time elapsed: 11.70 s <<< FAILURE!
+java.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+
+com.skillstorm.RunCucumberTest.runScenario["Creating a Candy with Invalid Data", "Candy CRUD Operations"](5) -- Time elapsed: 12.67 s <<< FAILURE!
+java.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+
+com.skillstorm.RunCucumberTest.runScenario["Creating a Candy with Invalid Data", "Candy CRUD Operations"](6) -- Time elapsed: 12.81 s <<< FAILURE!
+java.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+
+com.skillstorm.RunCucumberTest.runScenario["Creating a Candy with Invalid Data", "Candy CRUD Operations"](7) -- Time elapsed: 12.72 s <<< FAILURE!
+java.lang.AssertionError: expected [Successfully added candy!] but found [Weight must be a positive number, and Weight cannot contain letters]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+
+com.skillstorm.RunCucumberTest.runScenario["Creating a Candy with Invalid Data", "Candy CRUD Operations"](8) -- Time elapsed: 12.81 s <<< FAILURE!
+java.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+
+com.skillstorm.RunCucumberTest.runScenario["Creating a Candy with Invalid Data", "Candy CRUD Operations"](9) -- Time elapsed: 12.76 s <<< FAILURE!
+java.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+
+com.skillstorm.RunCucumberTest.runScenario["Creating a Candy with Invalid Data", "Candy CRUD Operations"](10) -- Time elapsed: 12.65 s <<< FAILURE!
+java.lang.AssertionError: expected [Successfully added candy!] but found [Price cannot contain letters]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+
+com.skillstorm.RunCucumberTest.runScenario["Creating a Candy with Invalid Data", "Candy CRUD Operations"](11) -- Time elapsed: 12.61 s <<< FAILURE!
+java.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+

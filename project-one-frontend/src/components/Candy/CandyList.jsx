@@ -300,7 +300,7 @@ const CandyList = () => {
                             <TableCell>Weight (oz.)</TableCell>
                         </TableRow>
                     </TableHead>
-                    <TableBody>
+                    <TableBody name='tableBody'>
                         {candy.map(candy => (
                             <TableRow key={candy.candyId}>
                                 <TableCell>{candy.candyId}</TableCell>

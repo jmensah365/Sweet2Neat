@@ -1,219 +1,356 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="0" total="11" passed="2" failed="9" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-04T15:03:54 EDT" name="Cucumber Suite" finished-at="2024-09-04T15:06:13 EDT" duration-ms="138759">
+  <suite started-at="2024-09-04T15:31:54 EDT" name="Cucumber Suite" finished-at="2024-09-04T15:34:16 EDT" duration-ms="141998">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-09-04T15:03:54 EDT" name="Cucumber Tests" finished-at="2024-09-04T15:06:13 EDT" duration-ms="138759">
+    <test started-at="2024-09-04T15:31:54 EDT" name="Cucumber Tests" finished-at="2024-09-04T15:34:16 EDT" duration-ms="141998">
       <class name="com.skillstorm.RunCucumberTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:03:54 EDT" name="setUpClass" finished-at="2024-09-04T15:03:54 EDT" duration-ms="350" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:31:54 EDT" name="setUpClass" finished-at="2024-09-04T15:31:54 EDT" duration-ms="356" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@241abc2]]>
+                <![CDATA[org.testng.TestRunner@1df2e767]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:03:54 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:04:07 EDT" duration-ms="13302" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:31:54 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:32:09 EDT" duration-ms="14277" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Successful warehouse stock creation with valid information"]]>
+                <![CDATA["Creating a Candy"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["WarehouseStock CRUD"]]>
+                <![CDATA["Candy CRUD Operations"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:04:07 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:04:19 EDT" duration-ms="11266" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:32:09 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:32:23 EDT" duration-ms="13871" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Unsuccessful warehouse stock creation with invalid and valid information"]]>
+                <![CDATA["Creating a Candy"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["WarehouseStock CRUD"]]>
+                <![CDATA["Candy CRUD Operations"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:04:19 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:04:30 EDT" duration-ms="11394" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:32:23 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:32:35 EDT" duration-ms="12714" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Unsuccessful warehouse stock creation with invalid and valid information"]]>
+                <![CDATA["Creating a Candy with Invalid Data"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["WarehouseStock CRUD"]]>
+                <![CDATA["Candy CRUD Operations"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Successfully added candy!] but found [Name is required]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found [Name is required]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:04:30 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:04:41 EDT" duration-ms="11255" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:32:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:32:47 EDT" duration-ms="11698" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Unsuccessful warehouse stock creation with invalid and valid information"]]>
+                <![CDATA["Creating a Candy with Invalid Data"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["WarehouseStock CRUD"]]>
+                <![CDATA["Candy CRUD Operations"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Successfully added candy!] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:04:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:04:53 EDT" duration-ms="11097" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:32:47 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:33:00 EDT" duration-ms="12674" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Unsuccessful warehouse stock creation with invalid and valid information"]]>
+                <![CDATA["Creating a Candy with Invalid Data"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["WarehouseStock CRUD"]]>
+                <![CDATA["Candy CRUD Operations"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Successfully added candy!] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:04:53 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:05:06 EDT" duration-ms="13393" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:33:00 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:33:13 EDT" duration-ms="12813" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Successful warehouse stock update with valid information"]]>
+                <![CDATA["Creating a Candy with Invalid Data"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["WarehouseStock CRUD"]]>
+                <![CDATA["Candy CRUD Operations"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Successfully added candy!] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:05:06 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:05:18 EDT" duration-ms="12316" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:33:13 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:33:25 EDT" duration-ms="12716" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Unsuccessful warehouse stock update with invalid and valid information"]]>
+                <![CDATA["Creating a Candy with Invalid Data"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["WarehouseStock CRUD"]]>
+                <![CDATA["Candy CRUD Operations"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Successfully added candy!] but found [Weight must be a positive number, and Weight cannot contain letters]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found [Weight must be a positive number, and Weight cannot contain letters]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:05:18 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:05:31 EDT" duration-ms="12392" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:33:25 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:33:38 EDT" duration-ms="12809" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Unsuccessful warehouse stock update with invalid and valid information"]]>
+                <![CDATA["Creating a Candy with Invalid Data"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["WarehouseStock CRUD"]]>
+                <![CDATA["Candy CRUD Operations"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Successfully added candy!] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:05:31 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:05:43 EDT" duration-ms="12409" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:33:38 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:33:51 EDT" duration-ms="12756" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Unsuccessful warehouse stock update with invalid and valid information"]]>
+                <![CDATA["Creating a Candy with Invalid Data"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["WarehouseStock CRUD"]]>
+                <![CDATA["Candy CRUD Operations"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Successfully added candy!] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:05:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:05:55 EDT" duration-ms="12348" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:33:51 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:34:03 EDT" duration-ms="12654" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Unsuccessful warehouse stock update with invalid and valid information"]]>
+                <![CDATA["Creating a Candy with Invalid Data"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["WarehouseStock CRUD"]]>
+                <![CDATA["Candy CRUD Operations"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Successfully added candy!] but found [Price cannot contain letters]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found [Price cannot contain letters]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:05:55 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:06:04 EDT" duration-ms="9129" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:34:03 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:34:16 EDT" duration-ms="12613" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Successful view of warehouse stocks"]]>
+                <![CDATA["Creating a Candy with Invalid Data"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["WarehouseStock CRUD"]]>
+                <![CDATA["Candy CRUD Operations"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Successfully added candy!] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:06:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:06:13 EDT" duration-ms="8071" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Delete a warehouse stock"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["WarehouseStock CRUD"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:06:13 EDT" name="tearDownClass" finished-at="2024-09-04T15:06:13 EDT" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:34:16 EDT" name="tearDownClass" finished-at="2024-09-04T15:34:16 EDT" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

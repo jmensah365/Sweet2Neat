@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="138.972" tests="12" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="142.218" tests="11" errors="0" skipped="0" failures="9">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/surefire 2024-09-04T15-03-53_902-jvmRun1 surefire-20240904150353934_1tmp surefire_0-20240904150353934_2tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/surefire 2024-09-04T15-31-54_167-jvmRun1 surefire-20240904153154206_1tmp surefire_0-20240904153154206_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/test-classes:/Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/classes:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-java/4.23.1/selenium-java-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-api/4.23.1/selenium-api-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.23.1/selenium-chrome-driver-4.23.1.jar:/Users/dj/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.23.1/selenium-chromium-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-json/4.23.1/selenium-json-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.23.1/selenium-manager-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v125/4.23.1/selenium-devtools-v125-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v126/4.23.1/selenium-devtools-v126-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v127/4.23.1/selenium-devtools-v127-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.23.1/selenium-devtools-v85-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.23.1/selenium-edge-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.23.1/selenium-firefox-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-http/4.23.1/selenium-http-4.23.1.jar:/Users/dj/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.23.1/selenium-ie-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.23.1/selenium-remote-driver-4.23.1.jar:/Users/dj/.m2/repository/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre.jar:/Users/dj/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/dj/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/dj/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/dj/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/Users/dj/.m2/repository/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1.jar:/Users/dj/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/dj/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-api/1.40.0/opentelemetry-api-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-context/1.40.0/opentelemetry-context-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.40.0/opentelemetry-exporter-logging-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.40.0/opentelemetry-sdk-common-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.40.0/opentelemetry-sdk-extension-autoconfigure-spi-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.40.0/opentelemetry-sdk-extension-autoconfigure-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.40.0-alpha/opentelemetry-api-incubator-1.40.0-alpha.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.40.0/opentelemetry-sdk-trace-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.40.0/opentelemetry-sdk-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.40.0/opentelemetry-sdk-metrics-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.40.0/opentelemetry-sdk-logs-1.40.0.jar:/Users/dj/.m2/repository/net/bytebuddy/byte-buddy/1.14.18/byte-buddy-1.14.18.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-os/4.23.1/selenium-os-4.23.1.jar:/Users/dj/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.23.1/selenium-safari-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-support/4.23.1/selenium-support-4.23.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-java/7.11.1/cucumber-java-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-core/7.11.1/cucumber-core-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-gherkin/7.11.1/cucumber-gherkin-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.11.1/cucumber-gherkin-messages-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/gherkin/26.0.3/gherkin-26.0.3.jar:/Users/dj/.m2/repository/io/cucumber/messages/21.0.1/messages-21.0.1.jar:/Users/dj/.m2/repository/io/cucumber/tag-expressions/5.0.1/tag-expressions-5.0.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/Users/dj/.m2/repository/io/cucumber/datatable/7.11.1/datatable-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-plugin/7.11.1/cucumber-plugin-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/docstring/7.11.1/docstring-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/html-formatter/20.2.1/html-formatter-20.2.1.jar:/Users/dj/.m2/repository/io/cucumber/junit-xml-formatter/0.1.0/junit-xml-formatter-0.1.0.jar:/Users/dj/.m2/repository/io/cucumber/ci-environment/9.1.0/ci-environment-9.1.0.jar:/Users/dj/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/dj/.m2/repository/org/testng/testng/7.10.2/testng-7.10.2.jar:/Users/dj/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/dj/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/dj/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-testng/7.11.1/cucumber-testng-7.11.1.jar:"/>
@@ -54,179 +54,341 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="runScenario[&quot;Successful warehouse stock creation with valid information&quot;, &quot;WarehouseStock CRUD&quot;](1)" classname="com.skillstorm.RunCucumberTest" time="13.303">
+  <testcase name="runScenario[&quot;Creating a Candy&quot;, &quot;Candy CRUD Operations&quot;](1)" classname="com.skillstorm.RunCucumberTest" time="14.28">
     <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Successful warehouse stock creation with valid information                   &amp#27;[90m# com/skillstorm/warehouseStock.feature:15&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                       &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"3212 Spur Ln, Austin, Texas"&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m"10"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m       &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.selectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Add Stock button&amp#27;[0m                                                             &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickAddStockButton()&amp#27;[0m
-true
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the last row with &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"3212 Spur Ln, Austin, Texas"&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"10"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldSeeNewWarehouseStock(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mshould see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Added stock successfully!"&amp#27;[0m                                  &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.iShouldSeeAlertMessage(java.lang.String)&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy                                                 &amp#27;[90m# com/skillstorm/candy.feature:12&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the ADD CANDY button&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton()&amp#27;[0m
+153
+Sour Skittles
+Sour Candy
+Sour
+4.99
+1.0
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the newly created candy on the list&amp#27;[0m                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeTheNewlyCreatedCandyOnTheList()&amp#27;[0m
 ]]></system-out>
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Sep 04, 2024 3:03:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Sep 04, 2024 3:31:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse stock creation with invalid and valid information&quot;, &quot;WarehouseStock CRUD&quot;](2)" classname="com.skillstorm.RunCucumberTest" time="11.265">
+  <testcase name="runScenario[&quot;Creating a Candy&quot;, &quot;Candy CRUD Operations&quot;](2)" classname="com.skillstorm.RunCucumberTest" time="13.868">
     <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Unsuccessful warehouse stock creation with invalid and valid information &amp#27;[90m# com/skillstorm/warehouseStock.feature:27&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                   &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI don't select &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Test location"&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m"1000"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                          &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.dontSelectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Add Stock button&amp#27;[0m                                                      &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnAddStockButton()&amp#27;[0m
-false
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be added with &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Test location"&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"1000"&amp#27;[0m        &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldNotSeeNewWarehouseStock(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mshould see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Candy Name is required"&amp#27;[0m                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.iShouldSeeAlertMessage(java.lang.String)&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy                                                     &amp#27;[90m# com/skillstorm/candy.feature:13&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                               &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Ring Pops"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Gummy Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Watermelon"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"2.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"0.50"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the ADD CANDY button&amp#27;[0m                                                     &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton()&amp#27;[0m
+154
+Ring Pops
+Gummy Candy
+Watermelon
+2.99
+0.50
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the newly created candy on the list&amp#27;[0m                                &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeTheNewlyCreatedCandyOnTheList()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 04, 2024 3:04:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 04, 2024 3:32:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse stock creation with invalid and valid information&quot;, &quot;WarehouseStock CRUD&quot;](3)" classname="com.skillstorm.RunCucumberTest" time="11.395">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](3)" classname="com.skillstorm.RunCucumberTest" time="12.721">
+    <failure message="expected [Successfully added candy!] but found [Name is required]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found [Name is required]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]></failure>
     <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Unsuccessful warehouse stock creation with invalid and valid information &amp#27;[90m# com/skillstorm/warehouseStock.feature:28&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                   &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI don't select &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m"2000"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                              &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.dontSelectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Add Stock button&amp#27;[0m                                                      &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnAddStockButton()&amp#27;[0m
-false
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be added with &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"2000"&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldNotSeeNewWarehouseStock(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mshould see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Warehouse Location is required"&amp#27;[0m                         &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.iShouldSeeAlertMessage(java.lang.String)&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                  &amp#27;[90m# com/skillstorm/candy.feature:23&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                              &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mI click the ADD CANDY button&amp#27;[0m                                    &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton()&amp#27;[0m
+      &amp#27;[31mjava.lang.AssertionError: expected [Successfully added candy!] but found [Name is required]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see an error message indicating invalid input&amp#27;[0m         &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeAnErrorMessageIndicatingInvalidInput()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 04, 2024 3:04:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 04, 2024 3:32:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse stock creation with invalid and valid information&quot;, &quot;WarehouseStock CRUD&quot;](4)" classname="com.skillstorm.RunCucumberTest" time="11.254">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](4)" classname="com.skillstorm.RunCucumberTest" time="11.698">
+    <failure message="expected [Successfully added candy!] but found []" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]></failure>
     <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Unsuccessful warehouse stock creation with invalid and valid information                               &amp#27;[90m# com/skillstorm/warehouseStock.feature:29&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI don't select &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Test location"&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                                                   &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.dontSelectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Add Stock button&amp#27;[0m                                                                                    &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnAddStockButton()&amp#27;[0m
-false
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be added with &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Test location"&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldNotSeeNewWarehouseStock(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mshould see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Quantity must be a number and greater than zero, and Quantity cannot contain letters"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.iShouldSeeAlertMessage(java.lang.String)&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                     &amp#27;[90m# com/skillstorm/candy.feature:24&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                 &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mI click the ADD CANDY button&amp#27;[0m                                       &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton()&amp#27;[0m
+      &amp#27;[31mjava.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see an error message indicating invalid input&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeAnErrorMessageIndicatingInvalidInput()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 04, 2024 3:04:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 04, 2024 3:32:36 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse stock creation with invalid and valid information&quot;, &quot;WarehouseStock CRUD&quot;](5)" classname="com.skillstorm.RunCucumberTest" time="11.097">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](5)" classname="com.skillstorm.RunCucumberTest" time="12.674">
+    <failure message="expected [Successfully added candy!] but found []" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]></failure>
     <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Unsuccessful warehouse stock creation with invalid and valid information                                                                                               &amp#27;[90m# com/skillstorm/warehouseStock.feature:30&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                                                                                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI don't select &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                                                                                                                                         &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.dontSelectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Add Stock button&amp#27;[0m                                                                                                                                                    &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnAddStockButton()&amp#27;[0m
-false
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be added with &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                                                                                                                       &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldNotSeeNewWarehouseStock(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mshould see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Candy Name is required, and Warehouse Location is required, and Quantity must be a number and greater than zero, and Quantity cannot contain letters"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.iShouldSeeAlertMessage(java.lang.String)&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                           &amp#27;[90m# com/skillstorm/candy.feature:25&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                       &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mI click the ADD CANDY button&amp#27;[0m                                             &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton()&amp#27;[0m
+      &amp#27;[31mjava.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see an error message indicating invalid input&amp#27;[0m                  &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeAnErrorMessageIndicatingInvalidInput()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 04, 2024 3:04:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 04, 2024 3:32:48 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Successful warehouse stock update with valid information&quot;, &quot;WarehouseStock CRUD&quot;](6)" classname="com.skillstorm.RunCucumberTest" time="13.393">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](6)" classname="com.skillstorm.RunCucumberTest" time="12.813">
+    <failure message="expected [Successfully added candy!] but found []" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]></failure>
     <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Successful warehouse stock update with valid information   &amp#27;[90m# com/skillstorm/warehouseStock.feature:44&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                     &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickEditIcon()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI select a new &amp#27;[0m&amp#27;[32m&amp#27;[1m"Ring Pops"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Test location"&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m"40"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m     &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.selectNewAndInputFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Update Stock button&amp#27;[0m                                        &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickUpdateStockButton()&amp#27;[0m
-false
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the last row with &amp#27;[0m&amp#27;[32m&amp#27;[1m"Ring Pops"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Test location"&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"40"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldSeeNewWarehouseStock(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                           &amp#27;[90m# com/skillstorm/candy.feature:26&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                       &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mI click the ADD CANDY button&amp#27;[0m                                             &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton()&amp#27;[0m
+      &amp#27;[31mjava.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see an error message indicating invalid input&amp#27;[0m                  &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeAnErrorMessageIndicatingInvalidInput()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 04, 2024 3:04:53 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 04, 2024 3:33:00 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse stock update with invalid and valid information&quot;, &quot;WarehouseStock CRUD&quot;](7)" classname="com.skillstorm.RunCucumberTest" time="12.316">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](7)" classname="com.skillstorm.RunCucumberTest" time="12.716">
+    <failure message="expected [Successfully added candy!] but found [Weight must be a positive number, and Weight cannot contain letters]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found [Weight must be a positive number, and Weight cannot contain letters]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]></failure>
     <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Unsuccessful warehouse stock update with invalid and valid information &amp#27;[90m# com/skillstorm/warehouseStock.feature:56&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon&amp#27;[0m                                                             &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickEditIcon()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI don't select a new &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Test location"&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m"1000"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                   &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.doNotSelectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Update Stock button&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnUpdateStockButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be updated with &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Test location"&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"1000"&amp#27;[0m    &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldNotBeUpdatedWith(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                            &amp#27;[90m# com/skillstorm/candy.feature:27&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                        &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mI click the ADD CANDY button&amp#27;[0m                                              &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton()&amp#27;[0m
+      &amp#27;[31mjava.lang.AssertionError: expected [Successfully added candy!] but found [Weight must be a positive number, and Weight cannot contain letters]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see an error message indicating invalid input&amp#27;[0m                   &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeAnErrorMessageIndicatingInvalidInput()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 04, 2024 3:05:06 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 04, 2024 3:33:13 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse stock update with invalid and valid information&quot;, &quot;WarehouseStock CRUD&quot;](8)" classname="com.skillstorm.RunCucumberTest" time="12.393">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](8)" classname="com.skillstorm.RunCucumberTest" time="12.809">
+    <failure message="expected [Successfully added candy!] but found []" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]></failure>
     <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Unsuccessful warehouse stock update with invalid and valid information &amp#27;[90m# com/skillstorm/warehouseStock.feature:57&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon&amp#27;[0m                                                             &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickEditIcon()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI don't select a new &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m"2000"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                       &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.doNotSelectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Update Stock button&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnUpdateStockButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be updated with &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"2000"&amp#27;[0m        &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldNotBeUpdatedWith(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                                &amp#27;[90m# com/skillstorm/candy.feature:28&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"-1.00"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mI click the ADD CANDY button&amp#27;[0m                                                  &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton()&amp#27;[0m
+      &amp#27;[31mjava.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see an error message indicating invalid input&amp#27;[0m                       &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeAnErrorMessageIndicatingInvalidInput()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 04, 2024 3:05:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 04, 2024 3:33:26 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse stock update with invalid and valid information&quot;, &quot;WarehouseStock CRUD&quot;](9)" classname="com.skillstorm.RunCucumberTest" time="12.409">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](9)" classname="com.skillstorm.RunCucumberTest" time="12.757">
+    <failure message="expected [Successfully added candy!] but found []" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]></failure>
     <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Unsuccessful warehouse stock update with invalid and valid information        &amp#27;[90m# com/skillstorm/warehouseStock.feature:58&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                        &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon&amp#27;[0m                                                                    &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickEditIcon()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI don't select a new &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Test location"&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m"empty"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.doNotSelectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Update Stock button&amp#27;[0m                                                        &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnUpdateStockButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be updated with &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Test location"&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"empty"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldNotBeUpdatedWith(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                                &amp#27;[90m# com/skillstorm/candy.feature:29&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"-0.5"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mI click the ADD CANDY button&amp#27;[0m                                                  &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton()&amp#27;[0m
+      &amp#27;[31mjava.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see an error message indicating invalid input&amp#27;[0m                       &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeAnErrorMessageIndicatingInvalidInput()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 04, 2024 3:05:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 04, 2024 3:33:39 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse stock update with invalid and valid information&quot;, &quot;WarehouseStock CRUD&quot;](10)" classname="com.skillstorm.RunCucumberTest" time="12.348">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](10)" classname="com.skillstorm.RunCucumberTest" time="12.654">
+    <failure message="expected [Successfully added candy!] but found [Price cannot contain letters]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found [Price cannot contain letters]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]></failure>
     <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Unsuccessful warehouse stock update with invalid and valid information &amp#27;[90m# com/skillstorm/warehouseStock.feature:59&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon&amp#27;[0m                                                             &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickEditIcon()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI don't select a new &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                                    &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.doNotSelectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Update Stock button&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnUpdateStockButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be updated with &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                     &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldNotBeUpdatedWith(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                               &amp#27;[90m# com/skillstorm/candy.feature:30&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"abcd"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mI click the ADD CANDY button&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton()&amp#27;[0m
+      &amp#27;[31mjava.lang.AssertionError: expected [Successfully added candy!] but found [Price cannot contain letters]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see an error message indicating invalid input&amp#27;[0m                      &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeAnErrorMessageIndicatingInvalidInput()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 04, 2024 3:05:44 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 04, 2024 3:33:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Successful view of warehouse stocks&quot;, &quot;WarehouseStock CRUD&quot;](11)" classname="com.skillstorm.RunCucumberTest" time="9.129">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](11)" classname="com.skillstorm.RunCucumberTest" time="12.614">
+    <failure message="expected [Successfully added candy!] but found []" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+]]></failure>
     <system-out><![CDATA[
-@WarehouseStock
-Scenario: Successful view of warehouse stocks               &amp#27;[90m# com/skillstorm/warehouseStock.feature:62&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am starting on the home page&amp#27;[0m                      &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.currentlyOnTheHomePage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the Warehouse Stock option&amp#27;[0m                &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnWarehouseStockOption()&amp#27;[0m
-http://cim-frontend.s3-website-us-east-1.amazonaws.com/stocks
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should be navigated to the Warehouse Stock page&amp#27;[0m    &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldBeNavigatedToWarehouseStock()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI should see a list of all warehouse stocks available&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldSeeListOfAllWarehouseStocks()&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                               &amp#27;[90m# com/skillstorm/candy.feature:31&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"xyz"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31mI click the ADD CANDY button&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton()&amp#27;[0m
+      &amp#27;[31mjava.lang.AssertionError: expected [Successfully added candy!] but found []
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
+	at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
+&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should see an error message indicating invalid input&amp#27;[0m                      &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeAnErrorMessageIndicatingInvalidInput()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 04, 2024 3:05:56 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Delete a warehouse stock&quot;, &quot;WarehouseStock CRUD&quot;](12)" classname="com.skillstorm.RunCucumberTest" time="8.071">
-    <system-out><![CDATA[
-@WarehouseStock
-Scenario: Delete a warehouse stock                                         &amp#27;[90m# com/skillstorm/warehouseStock.feature:70&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                   &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-Deleted stock Id: 
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the delete icon for the Warehouse Stock I want to delete&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnDeleteIconForWarehouseStock()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be visible in the table&amp#27;[0m              &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.warehouseStockShouldNotBeVisible()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 04, 2024 3:06:05 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 04, 2024 3:34:04 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>

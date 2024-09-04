@@ -169,7 +169,6 @@ public class WarehouseStock {
     public void clickDeleteIcon() {
         RunCucumberTest.sleepThread();
         stockId = tableBody.findElement(By.xpath(".//tr[1]")).getAttribute("id");
-        System.out.println("Deleted stock Id: " + stockId);
         deleteIcon.click();
     }
 
