@@ -57,7 +57,7 @@ pipeline {
         stage('Run JMeter Tests') {
             steps {
                 //Run Jmeter tests without a GUI
-                sh '/ec2-user/jmeter/apache-jmeter-5.6.3/bin/jmeter -n -t /Sweet2Neat/JmeterTestPlans/reqres-test.jmx -l /Sweet2Neat/JmeterTestResults/results.jtl'
+                sh '/home/ec2-user/jmeter/apache-jmeter-5.6.3/bin/jmeter -n -t /Sweet2Neat/JmeterTestPlans/reqres-test.jmx -l /Sweet2Neat/JmeterTestResults/results.jtl'
             }
         }
 
