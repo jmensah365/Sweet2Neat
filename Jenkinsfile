@@ -53,6 +53,7 @@ pipeline {
                 sh "cd Testing/project2-testing && mvn verify"
             }
         }
+
         stage('Deploy Backend'){
             steps{
                 script{
@@ -63,6 +64,22 @@ pipeline {
                         // sh "echo 'aws elasticbeanstalk update-environment --environment-name myName --version-label 0.0.1'"
                     }  
                 }   
+            }
+        }
+
+        stage('Run JMeter Tests') {
+            steps {
+                //Run Jmeter tests without a GUI
+                sh '/home/ec2-user/jmeter/apache-jmeter-5.6.3/bin/jmeter -n -t /home/ec2-user/Sweet2Neat/JmeterTestPlans/CIM-Test-Plan.jmx -l /home/ec2-user/Sweet2Neat/JmeterTestResults/cim-results.jtl'
+                sh 'cat /home/ec2-user/Sweet2Neat/JmeterTestResults/cim-results.jtl'
+            }
+        }
+
+        stage('Publish test results') {
+            steps{
+                //publishing test results
+                //should be in xml format
+                perfReport sourceDataFiles: '/home/ec2-user/Sweet2Neat/JmeterTestResults/cim-results.jtl'
             }
         }
     }
