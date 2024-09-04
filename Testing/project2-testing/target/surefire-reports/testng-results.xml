@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-04T15:03:54 EDT" name="Cucumber Suite" finished-at="2024-09-04T15:06:13 EDT" duration-ms="138759">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2024-09-04T15:03:54 EDT" name="Cucumber Tests" finished-at="2024-09-04T15:06:13 EDT" duration-ms="138759">
+      <class name="com.skillstorm.RunCucumberTest">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:03:54 EDT" name="setUpClass" finished-at="2024-09-04T15:03:54 EDT" duration-ms="350" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@241abc2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:03:54 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:04:07 EDT" duration-ms="13302" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful warehouse stock creation with valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:04:07 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:04:19 EDT" duration-ms="11266" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse stock creation with invalid and valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:04:19 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:04:30 EDT" duration-ms="11394" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse stock creation with invalid and valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:04:30 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:04:41 EDT" duration-ms="11255" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse stock creation with invalid and valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:04:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:04:53 EDT" duration-ms="11097" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse stock creation with invalid and valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:04:53 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:05:06 EDT" duration-ms="13393" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful warehouse stock update with valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:05:06 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:05:18 EDT" duration-ms="12316" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse stock update with invalid and valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:05:18 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:05:31 EDT" duration-ms="12392" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse stock update with invalid and valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:05:31 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:05:43 EDT" duration-ms="12409" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse stock update with invalid and valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:05:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:05:55 EDT" duration-ms="12348" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse stock update with invalid and valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:05:55 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:06:04 EDT" duration-ms="9129" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful view of warehouse stocks"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:06:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:06:13 EDT" duration-ms="8071" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Delete a warehouse stock"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:06:13 EDT" name="tearDownClass" finished-at="2024-09-04T15:06:13 EDT" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.skillstorm.RunCucumberTest -->
+    </test> <!-- Cucumber Tests -->
+  </suite> <!-- Cucumber Suite -->
+</testng-results>

@@ -34,8 +34,6 @@ public class WarehouseStock {
     @FindBy(name = "warehouseStockBtn")
     private WebElement addWarehouseButton;
 
-    @FindBy(name = "tableBody")
-    private WebElement warehouseStockTBody;
 
     @FindBy(name = "editIcon")
     private WebElement editIcon;
@@ -46,6 +44,9 @@ public class WarehouseStock {
     @FindBy(name = "tableBody")
     private WebElement tableBody;
 
+    @FindBy(name = "warehouseStockTable")
+    private WebElement stockTable;
+
     @FindBy(name = "warehouses")
     private WebElement warehousesMenuElement;
 
@@ -54,6 +55,12 @@ public class WarehouseStock {
 
     @FindBy(name = "deleteIcon")
     private WebElement deleteIcon;
+
+    @FindBy(className = "MuiAlert-message")
+    private WebElement alertMsg;
+
+    @FindBy(name = "cancelEditBtn")
+    private WebElement cancelBtn;
 
     public WarehouseStock(WebDriver driver){
         this.driver = driver;
@@ -71,10 +78,14 @@ public class WarehouseStock {
         this.driver.get(warehouseStockUrl);
     }
 
+    public String checkCurrentUrl() {
+        return this.driver.getCurrentUrl();
+    }
+
     public void selectCandy(String candyName) {
         RunCucumberTest.sleepThread();
         candySelect.click();
-        if(!candyName.equals("empty")) {
+        if(!candyName.isEmpty()) {
             this.driver.findElement(By.xpath("//li[text()='" + candyName + "']")).click();
         } else {
             action.sendKeys(Keys.ESCAPE).perform();
@@ -85,7 +96,7 @@ public class WarehouseStock {
     public void selectLocation(String location) {
         RunCucumberTest.sleepThread();
         warehouseSelect.click();
-        if(!location.equals("empty")) {
+        if(!location.isEmpty()) {
             this.driver.findElement(By.xpath("//li[text()='" + location + "']")).click();
         } else {
             action.sendKeys(Keys.ESCAPE).perform();
@@ -94,7 +105,7 @@ public class WarehouseStock {
     
     public void inputQuantity(String quantity) {
         RunCucumberTest.sleepThread();
-        if(!quantity.equals("empty")) {
+        if(!quantity.isEmpty()) {
             this.quantity.sendKeys(quantity); 
         }
     }
@@ -106,17 +117,7 @@ public class WarehouseStock {
 
     public boolean checkNewWarehouseStock(String candy, String location, String quantity) {
         RunCucumberTest.sleepThread();
-        WebElement lastTableRow = warehouseStockTBody.findElement(By.xpath(".//tr[last()]"));
-
-        if(!candy.equals("empty")) {
-            candy = "";
-        }
-        if(!location.equals("empty")) {
-            location = "";
-        } 
-        if(!quantity.equals("empty")) {
-            quantity = "";
-        }
+        WebElement lastTableRow = tableBody.findElement(By.xpath(".//tr[last()]"));
 
         String warehouseStockText = location + " " + candy + " " + quantity;
 
@@ -159,12 +160,10 @@ public class WarehouseStock {
         return this.driver.getCurrentUrl();
     }
 
-    public void getWarehouseTableContents() {
+    public String getWarehouseTableContents() {
         RunCucumberTest.sleepThread();
-        List<WebElement> tableRows = tableBody.findElements(By.xpath(".//tr"));
-        for(WebElement tr : tableRows) {
-            System.out.println(tr.getText());
-        }
+        String tableRow = stockTable.findElement(By.xpath(".//tr")).getText();
+        return tableRow;
     }
 
     public void clickDeleteIcon() {
@@ -174,17 +173,27 @@ public class WarehouseStock {
         deleteIcon.click();
     }
 
-    public void confirmDeletion(){
+    public boolean confirmDeletion(){
         RunCucumberTest.sleepThread();
 
         List<WebElement> tableRows = tableBody.findElements(By.xpath(".//tr"));
         for(WebElement tr : tableRows) {
             if(tr.getText().equals(stockId)){
-                throw new AssertionError(tableRows + " was found in the table");
-            } else{
-                System.err.println("False");
+                return true;
             }
         }
+        return false;
     }
 
+    public String getAlertMsg() {
+        RunCucumberTest.sleepThread();
+        return alertMsg.getText();
+    }
+
+    public boolean isCancelBtn() {
+        if(cancelBtn != null) {
+            return true;
+        }
+        return false;
+    }
 }

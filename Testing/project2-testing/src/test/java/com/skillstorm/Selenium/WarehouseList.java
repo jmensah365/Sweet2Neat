@@ -72,6 +72,9 @@ public class WarehouseList {
     @FindBy(className = "MuiAlert-message")
     private WebElement alertErrMsg;
 
+    @FindBy(name = "cancelEditBtn")
+    private WebElement cancelBtn;
+
     String warehouseId = "";
 
     public WarehouseList(WebDriver driver){
@@ -89,32 +92,38 @@ public class WarehouseList {
         this.driver.get(url);
     }
 
+    public String checkCurrentPageUrl() {
+        return this.driver.getCurrentUrl();
+    }
+
     //=====================UPDATE======================//
     public void clickEditButton() {
         RunCucumberTest.sleepThread();
         editBtn.click();
     }
 
-    public void setLocation(String location){
+    public String setLocation(String location){
         RunCucumberTest.sleepThread();
         String prevValue = locationField.getAttribute("value");
         for (int i = 0; i < prevValue.length(); i++){
             locationField.sendKeys(Keys.BACK_SPACE);
         }
-        if(!location.equals("empty")) {
+        if(!location.isEmpty()) {
             locationField.sendKeys(location);
         }
+        return warehouseFirstRowLocation.getText();
     }
 
-    public void setCapacity(String capacity){
+    public String setCapacity(String capacity){
         RunCucumberTest.sleepThread();
         String prevValue = capacityField.getAttribute("value");
         for (int i = 0; i < prevValue.length(); i++){
             capacityField.sendKeys(Keys.BACK_SPACE);
         }
-        if(!capacity.equals("empty")) {
+        if(!capacity.isEmpty()) {
             capacityField.sendKeys(capacity);
         }
+        return warehouseFirstRowLocation.getText();
     }
 
     public void clickUpdateWarehouse(){
@@ -131,21 +140,19 @@ public class WarehouseList {
     //=====================DELETE======================//
     public void clickDeleteIcon(){
         RunCucumberTest.sleepThread();
-        
         warehouseId = warehouseFirstRowLocation.getText();
         deleteBtn.click();
     }
     
-    public void confirmDeletion(){
+    public boolean confirmDeletion(){
         RunCucumberTest.sleepThread();
         List<WebElement> tableRows = warehouseTable.findElements(By.xpath(".//tr/td[1]"));
         for(WebElement tr : tableRows) {
             if(tr.getText().contains(warehouseId)){
-                System.out.println("True");
-            } else{
-                System.err.println("False");
+                return true;
             }
         }
+        return false;
     }
 
     //=====================DELETE======================//
@@ -156,32 +163,19 @@ public class WarehouseList {
         return warehouseListTitle.getText();
     }
 
-    public void addLocation(String location) {
-    RunCucumberTest.sleepThread();
-        if(!location.equals("empty")) {
-            locationField.sendKeys(location);
-        }
-    }
-
-    public void addCapacity(String capacity) {
-    RunCucumberTest.sleepThread();
-        if(!capacity.equals("empty")) {
-            capacityField.sendKeys(capacity);
-        }
-    }
-
     public void clickAddWarehouseButton() {
     RunCucumberTest.sleepThread();
         addWarehouseButton.click();
     }
 
-    public void getWarehouseLocation() {
+    public String getWarehouseLocation() {
     RunCucumberTest.sleepThread();
-        System.out.println(warehouseRowLocation.getText());
+        return warehouseRowLocation.getText();
     }
 
-    public void alertMsgText() {
-        System.out.println(alertErrMsg.getText());
+    public String alertMsgText() {
+    RunCucumberTest.sleepThread();
+        return alertErrMsg.getText();
     }
 
     //======================= READ =========================
@@ -191,7 +185,6 @@ public class WarehouseList {
     }
 
     public void clickWarehouseListOption() {
-        RunCucumberTest.sleepThread();
         warehousesMenu.click();        
         RunCucumberTest.sleepThread();
         warehouseListOption.click();
@@ -202,12 +195,16 @@ public class WarehouseList {
         warehouseTable.getText();
     }
 
-    public void getWarehouseTableContents() {
+    public String getWarehouseTableContents() {
         RunCucumberTest.sleepThread();
-        List<WebElement> tableRows = warehouseTable.findElements(By.xpath(".//tr"));
+        return warehouseTable.findElement(By.xpath(".//tr")).getText();
 
-        for(WebElement tr : tableRows) {
-            System.out.println(tr.getText());
+    }
+
+    public boolean findEditCancelBtn() {
+        if(cancelBtn != null) {
+            return true;
         }
+        return false;
     }
 }

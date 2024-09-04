@@ -1,27 +1,16 @@
 package com.skillstorm.Selenium;
 
-import java.io.File;
-import java.io.IOException;
 import java.time.Duration;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.apache.commons.io.FileUtils;
-
 
 import com.skillstorm.RunCucumberTest;
 
@@ -105,56 +94,17 @@ public class OrdersList {
         customerNameField.sendKeys(customerName);
     }
 
-
-    // public void getOrderDate(String orderDate) {
-    //     this.actions = new Actions(this.driver);
-    //     actions.moveToElement(orderDateField).click().sendKeys(orderDate).build().perform();
-    //     actions.sendKeys(Keys.ESCAPE);
-        
-    //     // orderDateField.click();
-    //     // wait.until(ExpectedConditions.elementToBeClickable(orderDateField)).sendKeys(orderDate);
-    //     TakesScreenshot screenshot = ((TakesScreenshot) driver);
-    //     File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
-    //     File destFile = new File("orderdatescreenshot.png");
-    //     try {
-    //         FileUtils.copyFile(srcFile, destFile);
-    //         System.out.println("Screenshot saved at: " + destFile.getAbsolutePath());
-    //     } catch (IOException e) {
-    //         e.printStackTrace();
-    //     }
-    // }
     public void getStatus(String status){
-        // actions.moveToElement(statusSelect).click().sendKeys(status).build().perform();;
         statusSelect.click();
-        // actions.moveToElement(statusSelect).click().perform();
         RunCucumberTest.sleepThread();
-        TakesScreenshot screenshot = ((TakesScreenshot) driver);
-        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
-        File destFile = new File("screenshot.png");
-        try {
-            FileUtils.copyFile(srcFile, destFile);
-            System.out.println("Screenshot saved at: " + destFile.getAbsolutePath());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         if(status != null && !status.isEmpty()){
-            // wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(status.toLowerCase())));
             driver.findElement(By.xpath("//li[@name='" + status.toLowerCase() + "']")).click();
-            // actions.moveToElement(option).click().build().perform();
-            // actions.moveToElement(statusSelect).click().moveToElement(option).click().build().perform();
-        // RunCucumberTest.sleepThread();
-            // option.click();
         } else {
-        // actions.moveToElement(statusSelect).click().sendKeys("clear").build().perform();;
-            // wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("clear")));
             driver.findElement(By.name("clear")).click();
-            // actions.moveToElement(option).click().build().perform();
         }
-        // actions.moveToElement(option).click().build().perform();
     }
 
     public void getCustomerAddress(String customerAddress){
-        // RunCucumberTest.sleepThread();
         customerAddressField.sendKeys(customerAddress);
     }
 
