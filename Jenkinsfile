@@ -53,6 +53,16 @@ pipeline {
                 sh "cd Testing/project2-testing && mvn verify"
             }
         }
+
+        stage('Run JMeter Tests') {
+            steps {
+                sh '/jmeter/apache-jmeter-5.6.3/bin/jmeter -n -t /Sweet2Neat/JmeterTestPlans/reqres-test.jmx -l /Sweet2Neat/JmeterTestResults/results.jtl'
+            }
+        }
+
+        stage('Publish test results') {
+            perfReport sourceDataFiles: 'JmeterTestResults/results.jtl'
+        }
         stage('Deploy Backend'){
             steps{
                 script{
