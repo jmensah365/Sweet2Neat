@@ -64,6 +64,7 @@ pipeline {
 
         stage('Publish test results') {
             steps{
+                //publishing test results
                 perfReport sourceDataFiles: '/home/ec2-user/Sweet2Neat/JmeterTestResults/results.jtl'
             }
         }
