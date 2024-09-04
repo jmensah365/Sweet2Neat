@@ -57,13 +57,13 @@ pipeline {
         stage('Run JMeter Tests') {
             steps {
                 //Run Jmeter tests without a GUI
-                sh '/home/ec2-user/jmeter/apache-jmeter-5.6.3/bin/jmeter -n -t /Sweet2Neat/JmeterTestPlans/reqres-test.jmx -l /Sweet2Neat/JmeterTestResults/results.jtl'
+                sh '/home/ec2-user/jmeter/apache-jmeter-5.6.3/bin/jmeter -n -t /home/ec2-user/Sweet2Neat/JmeterTestPlans/reqres-test.jmx -l /home/ec2-user/Sweet2Neat/JmeterTestResults/results.jtl'
             }
         }
 
         stage('Publish test results') {
             steps{
-                perfReport sourceDataFiles: 'JmeterTestResults/results.jtl'
+                perfReport sourceDataFiles: '/home/ec2-user/JmeterTestResults/results.jtl'
             }
         }
         stage('Deploy Backend'){
