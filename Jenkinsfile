@@ -61,7 +61,9 @@ pipeline {
         }
 
         stage('Publish test results') {
-            perfReport sourceDataFiles: 'JmeterTestResults/results.jtl'
+            steps{
+                perfReport sourceDataFiles: 'JmeterTestResults/results.jtl'
+            }
         }
         stage('Deploy Backend'){
             steps{
