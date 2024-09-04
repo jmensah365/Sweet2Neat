@@ -7,13 +7,16 @@ import org.testng.annotations.*;
 import com.skillstorm.project_one.DTOs.StockDTO;
 
 public class StockDTOUnitTests {
+
     private StockDTO stockDTO;
 
+    //Creating a new stockDTO object before each test
     @BeforeMethod
     public void init(){
         stockDTO = new StockDTO();
     }
 
+    //Testing getters and setters
     @Test
     public void testGettersAndSetters(){
         stockDTO.setId(1);
@@ -27,6 +30,7 @@ public class StockDTOUnitTests {
         Assert.assertEquals(30, stockDTO.getQuantity());
     }
 
+    //Testing the paramterized constructor
     @Test
     public void testConstructor(){
         StockDTO dto = new StockDTO(5,10,15,50);
@@ -36,6 +40,7 @@ public class StockDTOUnitTests {
         Assert.assertEquals(50, dto.getQuantity());
     }
 
+    //Testing toString method
     @Test
     public void testToString(){
         stockDTO.setId(2);
