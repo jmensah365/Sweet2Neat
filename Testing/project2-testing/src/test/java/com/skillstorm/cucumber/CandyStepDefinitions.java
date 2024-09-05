@@ -20,7 +20,7 @@ public class CandyStepDefinitions {
     public void before(){
         // Setting up ChromeOptions to run Chrome in headless mode (without GUI)
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--no-sandbox");
+        options.addArguments("--headless","--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
         WebDriver driver = new ChromeDriver(options);
 
         // Initializing CandyList with the WebDriver instance
