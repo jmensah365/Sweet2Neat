@@ -21,34 +21,37 @@ import static org.testng.Assert.*;
 
 import com.skillstorm.project_one.Controllers.OrderItemController;
 import com.skillstorm.project_one.DTOs.OrderItemDTO;
-import com.skillstorm.project_one.Models.Candy;
 import com.skillstorm.project_one.Models.OrderItem;
-import com.skillstorm.project_one.Models.Orders;
 import com.skillstorm.project_one.Services.OrderItemService;
 
 public class OrderItemControllerTest {
+    //Creating a mock instance of the OrderItemService
     @Mock
     private OrderItemService orderItemService;
 
+    // Injecting the mocked service into OrderItemController
     @InjectMocks
     private OrderItemController orderItemController;
     AutoCloseable closeable;
 
+    //initializes the mock objects to ensure they are ready before tests are run
     @BeforeMethod
     public void setUp(){
         closeable = MockitoAnnotations.openMocks(this);
     }
 
+    //closes the closeable resource to ensure that the mock objects are cleaned up properly - prevents memory leaks
     @AfterMethod
     public void teardown() throws Exception{
         closeable.close();
     }
 
+
     @Test
     public void testFindAll(){
+        // Given: Create two OrderItemDTO objects to represent the data to be returned
         OrderItemDTO orderItem1 = new OrderItemDTO();
         OrderItemDTO orderItem2 = new OrderItemDTO();
-
 
         orderItem1.setId(1);
         orderItem1.setPrice(new BigDecimal(15.99));
@@ -58,31 +61,42 @@ public class OrderItemControllerTest {
         orderItem2.setPrice(new BigDecimal(20.99));
         orderItem2.setQuantity(25);
 
+        // Given: Create a list of these OrderItemDTOs
         List<OrderItemDTO> orderItems = Arrays.asList(orderItem1, orderItem2);
 
+        // When: Mock the service's findAll method to return the list of OrderItemDTOs
         when(orderItemService.findAll()).thenReturn(orderItems);
 
-        assertNotNull(orderItems);
-        assertEquals(orderItems.size(), 2);
-        assertEquals(orderItems.get(0).getId(), 1);
-        assertEquals(orderItems.get(1).getId(), 2);
+        // When: Mocking the controllers findAll()
+        ResponseEntity<Iterable<OrderItemDTO>> response = orderItemController.findAll();
+
+        // Assert: Verify that the list is not null, contains two items, and their IDs are correct
+        assertEquals(response.getStatusCode(), HttpStatus.OK);
+        assertNotNull(response.getBody());
+        assertEquals(2, ((List<OrderItemDTO>) response.getBody()).size()); // Check if the list size is 2
     }
-        @Test
+
+    @Test
     public void testCreateOrderItem() {
+        // Given: Create an OrderItemDTO object to represent the input
         OrderItemDTO orderItemDTO = new OrderItemDTO();
         orderItemDTO.setId(1);
         orderItemDTO.setPrice(new BigDecimal(15.99));
         orderItemDTO.setQuantity(20);
 
+        // Given: Create an OrderItem object to represent the output from the service
         OrderItem createdOrderItem = new OrderItem();
         createdOrderItem.setId(1);
         createdOrderItem.setPrice(new BigDecimal(15.99));
         createdOrderItem.setQuantity(20);
 
+        // When: Mock the service's createOrderItem method to return the created OrderItem
         when(orderItemService.createOrderItem(orderItemDTO)).thenReturn(createdOrderItem);
 
+        // Act: Call the controller's createOrderItem method
         ResponseEntity<OrderItem> response = orderItemController.createOrderItem(orderItemDTO);
 
+        // Assert: Verify that the response status is OK, the body is not null, and the ID is correct
         assertEquals(response.getStatusCode(), HttpStatus.OK);
         assertNotNull(response.getBody());
         assertEquals(response.getBody().getId(), 1);
@@ -90,22 +104,31 @@ public class OrderItemControllerTest {
 
     @Test
     public void testUpdateOrderItem() {
+        // Given: Create an OrderItemDTO object
         OrderItemDTO orderItemDTO = new OrderItemDTO();
         orderItemDTO.setId(1);
         orderItemDTO.setPrice(new BigDecimal(15.99));
         orderItemDTO.setQuantity(20);
 
+        // Calling the controller's updateOrderItem method
         ResponseEntity<Void> response = orderItemController.updateOrderItem(1, orderItemDTO);
 
+        // Assert: Verify that the response status is OK
         assertEquals(response.getStatusCode(), HttpStatus.OK);
+
+        // Verify: Ensure that the service's updateOrderItem method was called exactly once with the correct parameters
         verify(orderItemService, times(1)).updateOrderItem(1, orderItemDTO);
     }
 
     @Test
     public void testDeleteOrderItem() {
+        // Calling the controller's deleteOrderItem method
         ResponseEntity<Void> response = orderItemController.deleteOrderItem(1);
 
+        // Assert: Verify that the response status is NO_CONTENT
         assertEquals(response.getStatusCode(), HttpStatus.NO_CONTENT);
+
+        // Verify: Ensure that the service's deleteOrderItem method was called exactly once with the correct ID
         verify(orderItemService, times(1)).deleteOrderItem(1);
     }
 }

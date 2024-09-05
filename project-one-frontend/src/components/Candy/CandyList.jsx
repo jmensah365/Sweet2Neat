@@ -310,6 +310,8 @@ const CandyList = () => {
                                 <TableCell>{candy.flavor}</TableCell>
                                 <TableCell>{candy.price.toFixed(2)}</TableCell>
                                 <TableCell>{candy.weight.toFixed(2)}</TableCell>
+                                <TableCell>{candy.price.toFixed(2)}</TableCell>
+                                <TableCell>{candy.weight.toFixed(2)}</TableCell>
                                 <TableCell>
                                     <IconButton name = 'editIcon' onClick={() => handleEdit(candy)}>
                                         <EditIcon />

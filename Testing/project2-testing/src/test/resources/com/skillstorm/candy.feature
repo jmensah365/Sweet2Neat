@@ -11,6 +11,7 @@ Feature: Candy CRUD Operations
         |name         |type      |flavor|price|weight|
         |Sour Skittles|Sour Candy| Sour | 4.99|1.0   |
     
+    #-----------------------------CREATE with invalid input-------------------------------------#
     Scenario Outline: Creating a Candy with Invalid Data
         Given I am on the Candy Inventory page
         When I input the candy "<name>", "<type>", "<flavor>", "<price>", and, "<weight>"

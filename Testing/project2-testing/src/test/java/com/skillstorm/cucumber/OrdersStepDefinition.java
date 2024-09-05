@@ -12,23 +12,31 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 
 public class OrdersStepDefinition {
+    // Private instance of OrdersList to interact with the web elements related to orders
     private OrdersList ordersList;
     private String[] order;
     
+    // Hook that runs before each scenario tagged with @Orders
     @Before("@Orders")
     public void before(){
+        // Setting up ChromeOptions to run Chrome in headless mode (without GUI)
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
+        options.addArguments("--headless","--no-sandbox");
         WebDriver driver = new ChromeDriver(options);
+
+        // Initializing OrdersList with the WebDriver instance
         this.ordersList = new OrdersList(driver);
         order = new String[3];
     }
 
+    // Hook that runs after each scenario tagged with @Orders
     @After("@Orders")
     public void quit(){
+        // Quitting the WebDriver instance to close the browser
         ordersList.quit();
     }
 
+    // Step definition for the Given statement to navigate to the order list page
     @Given("I am on the order list page")
     public void iAmOnTheOrderListPage(){
         ordersList.getOrderListPageUrl();
@@ -37,6 +45,7 @@ public class OrdersStepDefinition {
         Assert.assertEquals(actualUrl, expectedUrl);
     }
 
+    // Step definition for the When statement to fill in order information
     @When("I fill in {string}, {string}, and {string}")
     public void iFillIn(String customerName, String status, String customerAddress){
         order[0] = ordersList.getCustomerName(customerName);
@@ -44,6 +53,7 @@ public class OrdersStepDefinition {
         order[2] = ordersList.getCustomerAddress(customerAddress);
     }
 
+    // Step definition for the And statement to click the Add order button
     @And("I click the Add order button")
     public void iClickTheAddOrderButton(){
         ordersList.clickAddOrderBtn();
@@ -57,6 +67,7 @@ public class OrdersStepDefinition {
         ordersList.clickAddOrderBtn();
     }
 
+    // Step definition for the Then statement to verify the new order appears in the list
     @Then("new order information should be in the table")
     public void newOrderInformationShouldBeInTheTable(){
         String actualString = ordersList.confirmOrderCreation();
@@ -65,6 +76,7 @@ public class OrdersStepDefinition {
         }
     }
 
+    // Step definition for the Given statement to navigate to the base (home) page
     @Given("I am on the base page")
     public void iAmOnTheBasePage(){
         ordersList.getHomeUrl();
@@ -73,6 +85,7 @@ public class OrdersStepDefinition {
         Assert.assertEquals(actualUrl, expectedUrl);
     }
 
+    // Step definition for the When statement to navigate to the order list page from the base page
     @When("I navigate to the order list page")
     public void iNavigateToTheOrderListPage(){
         ordersList.clickListOfOrdersBtn();
@@ -81,6 +94,7 @@ public class OrdersStepDefinition {
         Assert.assertEquals(actualUrl, expectedUrl);
     }
 
+    // Step definition for the Then statement to verify the list of orders is displayed
     @Then("I should see the list of orders")
     public void iShouldSeeTheListOfOrders(){
         String expectedString = "Order Id Customer Name Order Date Status Customer Address";
@@ -88,6 +102,7 @@ public class OrdersStepDefinition {
         Assert.assertEquals(actualString, expectedString);
     }
 
+    // Step definition for the When statement to click the delete button for an order
     @When("I click the delete button")
     public void iClickTheDeleteIcon(){
         ordersList.clickDeleteIcon();
@@ -96,17 +111,20 @@ public class OrdersStepDefinition {
         Assert.assertEquals(actualString, expectedString);
     }
 
+    // Step definition for the Then statement to verify the order is no longer visible in the list
     @Then("The order should not be visible in the order list page")
     public void theOrderShouldNotBeVisibleInTheOrderListPage(){
         Assert.assertFalse(ordersList.confirmDeletion());
     }
 
+    // Step definition for the When statement to click the edit button for an order
     @When("I click the edit button")
     public void iClickTheEditButton(){
         ordersList.clickEditButton();
         Assert.assertTrue(this.ordersList.isCancelBtn());
     }
 
+    // Step definition for the And statement to modify the order information
     @And("I modify {string}, {string}, and\\/or {string}")
     public void iModifyInformation(String customerName, String status, String customerAddress){
         order[0] = ordersList.setCustomerName(customerName);
@@ -114,6 +132,7 @@ public class OrdersStepDefinition {
         order[2] = ordersList.setCustomerAddress(customerAddress);
     }
 
+    // Step definition for the And statement to click the update order button
     @And("I click the update order button")
     public void iClickTheUpdateOrderButton(){
         ordersList.clickAddOrderBtn();
@@ -127,6 +146,7 @@ public class OrdersStepDefinition {
         ordersList.clickAddOrderBtn();
     }
 
+    // Step definition for the Then statement to verify the updated order appears in the list
     @Then("I should see the updated order in the list of orders")
     public void iShouldSeeTheUpdatedOrderInTheListOfOrders(){
         String actualString = this.ordersList.confirmOrderUpdation();

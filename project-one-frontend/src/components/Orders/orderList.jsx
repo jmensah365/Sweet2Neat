@@ -297,7 +297,7 @@ const Orders = () => {
                             <TableCell>Customer Address </TableCell>
                         </TableRow>
                     </TableHead>
-                    <TableBody>
+                    <TableBody name="tableBody">
                         {order.map(order => (
                             <TableRow key={order.id}>
                                 <TableCell>{order.id}</TableCell>
