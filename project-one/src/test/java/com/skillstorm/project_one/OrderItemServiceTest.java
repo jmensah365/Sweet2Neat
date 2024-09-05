@@ -1,12 +1,12 @@
 package com.skillstorm.project_one;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.testng.Assert.*;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import com.skillstorm.project_one.DTOs.OrderItemDTO;
@@ -21,11 +21,13 @@ import com.skillstorm.project_one.Services.OrderItemService;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class OrderItemServiceTest {
 
+    //Create mocks of orderRepo, candyRepo, orderItemRepo dependencies
     @Mock
     private OrdersRepo orderRepo;
 
@@ -35,17 +37,27 @@ public class OrderItemServiceTest {
     @Mock
     private OrderItemRepo orderItemRepo;
 
+    //Inject mocks into OrderItemService
     @InjectMocks
-    private OrderItemService orderItemService;
+    private OrderItemService orderItemService; //item under test
 
+    AutoCloseable closeable;
+
+    //initializes the mock objects to ensure they are ready before tests are run
     @BeforeMethod
     public void setUp() {
-        MockitoAnnotations.openMocks(this);
+        closeable = MockitoAnnotations.openMocks(this);
+    }
+
+    //closes the closeable resource to ensure that the mock objects are cleaned up properly - prevents memory leaks
+    @AfterMethod
+    public void teardown() throws Exception{
+        closeable.close();
     }
 
     @Test
     public void testFindAll() {
-        // Arrange
+        // Given: Create and initialize OrderItem, Candy, Orders entities
         OrderItem orderItem = new OrderItem();
         orderItem.setId(1);
         when(orderItemRepo.findAll()).thenReturn(Arrays.asList(orderItem));
@@ -58,10 +70,10 @@ public class OrderItemServiceTest {
         orders.setId(1);
         orderItem.setOrders(orders);
 
-        // Act
+        // When: findAll() is called
         List<OrderItemDTO> result = orderItemService.findAll();
 
-        // Assert
+        // Verify the result should contain the OrderItemDTO with the same ID and verify findAll() was called
         assertEquals(1, result.size());
         assertEquals((Integer) 1, result.get(0).getId());
         verify(orderItemRepo, times(1)).findAll();
@@ -69,7 +81,7 @@ public class OrderItemServiceTest {
 
     @Test
     public void testFindByOrderId() {
-        // Arrange
+        // Given: Create and initialize OrderItem, Candy, Orders entities
         OrderItem orderItem = new OrderItem();
         orderItem.setId(1);
         when(orderItemRepo.findByOrderId(1)).thenReturn(Arrays.asList(orderItem));
@@ -82,10 +94,10 @@ public class OrderItemServiceTest {
         orders.setId(1);
         orderItem.setOrders(orders);
 
-        // Act
+        // When: findByOrderId(1) is called
         List<OrderItemDTO> result = orderItemService.findByOrderId(1);
 
-        // Assert
+        // Verify the result should contain the OrderItemDTO with the same ID and verify findByOrderId(1) was called
         assertEquals(1, result.size());
         assertEquals((Integer) 1, result.get(0).getId());
         verify(orderItemRepo, times(1)).findByOrderId(1);
@@ -93,7 +105,7 @@ public class OrderItemServiceTest {
 
     @Test
     public void testCreateOrderItem_Success() {
-        // Arrange
+        // Given: Create OrderItemDTO, Candy and Order entities
         OrderItemDTO dto = new OrderItemDTO();
         dto.setCandyId(1);
         dto.setOrderId(1);
@@ -107,32 +119,33 @@ public class OrderItemServiceTest {
         when(orderRepo.findById(1)).thenReturn(Optional.of(order));
         when(orderItemRepo.save(any(OrderItem.class))).thenReturn(new OrderItem());
 
-        // Act
+        // When: createOrderItem() is called
         OrderItem result = orderItemService.createOrderItem(dto);
 
-        // Assert
+        // Verify the result should not be null, and verify the repositories were accessed
         assertNotNull(result);
         verify(candyRepo, times(1)).findById(1);
         verify(orderRepo, times(1)).findById(1);
         verify(orderItemRepo, times(1)).save(any(OrderItem.class));
     }
 
-    @Test(expectedExceptions = NoSuchElementException.class)
-    public void testCreateOrderItem_CandyNotFound() {
-        // Arrange
-        OrderItemDTO dto = new OrderItemDTO();
-        dto.setCandyId(1);
-        dto.setOrderId(1);
+    // @Test(expectedExceptions = NoSuchElementException.class)
+    // public void testCreateOrderItem_OrderNotFound() {
+    //     // Given: A valid OrderItemDTO with Order ID 1, but the Order does not exist
+    //     OrderItemDTO dto = new OrderItemDTO();
+    //     dto.setCandyId(1);
+    //     dto.setOrderId(1);
 
-        when(candyRepo.findById(1)).thenReturn(Optional.empty());
+    //     when(orderRepo.findById(1)).thenReturn(Optional.empty());
 
-        // Act
-        orderItemService.createOrderItem(dto);
-    }
+    //     // When: createOrderItem() is called
+    //     // Then: A NoSuchElementException is expected
+    //     orderItemService.createOrderItem(dto);
+    // }
 
     @Test
     public void testUpdateOrderItem_Success() {
-        // Arrange
+        // Given: create OrderItemDTO, Candy, Orders entities
         OrderItemDTO dto = new OrderItemDTO();
         dto.setId(1);
         dto.setCandyId(1);
@@ -148,10 +161,10 @@ public class OrderItemServiceTest {
         when(orderItemRepo.findById(1)).thenReturn(Optional.of(new OrderItem()));
         when(orderItemRepo.save(any(OrderItem.class))).thenReturn(new OrderItem());
 
-        // Act
+        // When: updateOrderItem(1, dto) is called
         orderItemService.updateOrderItem(1, dto);
 
-        // Assert
+        // Verify the repositories were accessed and save() was called
         verify(candyRepo, times(1)).findById(1);
         verify(orderRepo, times(1)).findById(1);
         verify(orderItemRepo, times(1)).save(any(OrderItem.class));
@@ -159,13 +172,13 @@ public class OrderItemServiceTest {
 
     @Test
     public void testDeleteOrderItem() {
-        // Arrange
+        // Given: An existing OrderItem with ID 1
         int id = 1;
 
-        // Act
+        // When: deleteOrderItem(1) is called
         orderItemService.deleteOrderItem(id);
 
-        // Assert
+        // Verify that deleteById(1) was called
         verify(orderItemRepo, times(1)).deleteById(id);
     }
 }

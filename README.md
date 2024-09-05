@@ -1,11 +1,12 @@
 This Candy Inventory Management is a web application designed to efficiently manage candy inventory across multiple warehouses. This application provides CRUD (Create, Read, Update, and Delete) functionality for managing warehouses, candy inventory and types, and stock levels.
 
-*** Edit feature for warehouse is implemented just forgot to show it***
 
-
-https://github.com/user-attachments/assets/11ede20d-051d-4821-b39c-d5ed2021ea72
-
-
+SonarCloud:
+https://sonarcloud.io/organizations/candy-inventory-group/projects
+Jenkins Pipeline: 
+http://ec2-44-204-72-183.compute-1.amazonaws.com:8080/
+Jmeter performance trend:
+http://ec2-44-204-72-183.compute-1.amazonaws.com:8080/job/Sweet2Neat%20Pipeline/performance/
 
 1. Features
     - Warehouse management
@@ -23,7 +24,13 @@ https://github.com/user-attachments/assets/11ede20d-051d-4821-b39c-d5ed2021ea72
         - SpringBoot
         - PostgreSQL
         - Spring Data JPA
-
+    - Testing:
+        - Selenium
+        - Cucumber
+        - Mockito
+        - TestNG
+        - Jmeter
+        - Burp Suite
 
 
 3. The backend has 5 entities:
