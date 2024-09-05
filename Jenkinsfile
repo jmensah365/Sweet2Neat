@@ -47,12 +47,6 @@ pipeline {
                 sh "cd project-one && mvn test"
             }
         }
-        
-        stage('Selenium/Cucumber Tests'){
-            steps{
-                sh "cd Testing/project2-testing && mvn verify"
-            }
-        }
 
         stage('Deploy Backend'){
             steps{
@@ -62,6 +56,12 @@ pipeline {
                         sh "aws s3 cp project-one/target/*.jar s3://cim-backend"
                     }  
                 }   
+            }
+        }
+
+        stage('Selenium/Cucumber Tests'){
+            steps{
+                sh "cd Testing/project2-testing && mvn verify"
             }
         }
 
