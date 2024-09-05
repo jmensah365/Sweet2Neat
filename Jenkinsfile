@@ -71,6 +71,7 @@ pipeline {
             steps {
                 //Run Jmeter tests without a GUI
                 sh '/home/ec2-user/jmeter/apache-jmeter-5.6.3/bin/jmeter -n -t /home/ec2-user/Sweet2Neat/JmeterTestPlans/CIM-Test-Plan.jmx -l /home/ec2-user/Sweet2Neat/JmeterTestResults/cim-results.jtl'
+                //display the results of the tests
                 sh 'cat /home/ec2-user/Sweet2Neat/JmeterTestResults/cim-results.jtl'
             }
         }
