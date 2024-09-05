@@ -60,8 +60,6 @@ pipeline {
                     withAWS(region: 'us-east-1', credentials: 'AWS_CREDENTIALS'){
                         sh 'pwd'
                         sh "aws s3 cp project-one/target/*.jar s3://cim-backend"
-                        // sh "echo 'aws elasticbeanstalk create-application-version --application-name myName --version-label 0.0.1 --source-bundle S3Bucket=\"bjgomes-bucket-sdet-backend\",S3Key=\"demo-1.0-SNAPSHOT.jar\"'"
-                        // sh "echo 'aws elasticbeanstalk update-environment --environment-name myName --version-label 0.0.1'"
                     }  
                 }   
             }
