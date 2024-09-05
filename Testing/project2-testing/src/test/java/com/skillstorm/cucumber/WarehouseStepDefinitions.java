@@ -103,7 +103,7 @@ public class WarehouseStepDefinitions {
 
     @Then("I should see an error messsage on the screen")
     public void iShouldSeeAnErrorMessageOnTheScreen(){
-        warehouseList.confirmErrorMessage();
+        warehouseList.alertMsgText();
     }
 
     //======================= READ =========================
