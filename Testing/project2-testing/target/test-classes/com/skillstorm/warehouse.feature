@@ -8,12 +8,11 @@ Feature: Warehouse CRUD
     When I fill in the "<location>" and "<capacity>" fields 
     And I click the ADD WAREHOUSE button
     Then I should see the newly created Warehouse in the list of Warehouses
-    And I should see an alert message "<msg>"
+    And I should see an alert message "Warehouse added successfully!"
 
     Examples:
-    | location                    | capacity | msg |
-    | 3212 Spur Ln, Austin, Texas | 5000     | Warehouse added successfully! |
-    | Test location | 10000     | Warehouse added successfully! |
+    | location                    | capacity | 
+    | 123 Maplewood Lane, Brookfield, WI 53005 | 500000     | 
 
   Scenario Outline: Unsuccessful warehouse creation
 
@@ -24,8 +23,8 @@ Feature: Warehouse CRUD
 
     Examples:
     | location      | capacity | errormsg |
-    |          | 5000     | Location is required |
-    | Test location |     | Capacity must be a positive number |
+    |          | 500000     | Location is required |
+    | 456 Elm Street, Riverton, NJ 08077 |     | Capacity must be a positive number |
     |          |     | Location is required, and Capacity must be a positive number |
 
   #-------------------------- Warehouse UPDATE ----------------------------#

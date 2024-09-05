@@ -12,7 +12,7 @@ Feature: WarehouseStock CRUD
 
         Examples:
         | candy | location | quantity |
-        |  Sour Skittles   | 3212 Spur Ln, Austin, Texas | 10   |
+        |  Almondy Joy   | 9877 Cedar Swamp Ave. Barberton, OH 44203 | 10   |
 
     Scenario Outline: Unsuccessful warehouse stock creation with invalid and valid information
 
@@ -24,9 +24,9 @@ Feature: WarehouseStock CRUD
 
         Examples:
         |   candy   |   location    |   quantity    | errormsg |
-        |      | Test location |   1000        |  Candy Name is required |
+        |      | 9877 Cedar Swamp Ave. Barberton, OH 44203 |   1000        |  Candy Name is required |
         | Air Heads |          |   2000        | Warehouse Location is required |
-        | Air Heads | Test location |          | Quantity must be a number and greater than zero, and Quantity cannot contain letters |
+        | Air Heads | 9877 Cedar Swamp Ave. Barberton, OH 44203 |          | Quantity must be a number and greater than zero, and Quantity cannot contain letters |
         |  |  |          | Candy Name is required, and Warehouse Location is required, and Quantity must be a number and greater than zero, and Quantity cannot contain letters |
 
 
@@ -41,7 +41,7 @@ Feature: WarehouseStock CRUD
 
     Examples:
     | candy     | location      | quantity |
-    | Ring Pops | Test location | 40    |
+    | Turking Taffy | 9877 Cedar Swamp Ave. Barberton, OH 44203 | 40    |
 
   Scenario Outline: Unsuccessful warehouse stock update with invalid and valid information
 
@@ -53,9 +53,9 @@ Feature: WarehouseStock CRUD
 
     Examples:
     |   candy   |   location    |   quantity    |
-    |      | Test location |   1000        |
+    |      | 456 Oak Avenue Greenfield, MA 01201 USA |   1000        |
     | Air Heads |          |   2000        |
-    | Air Heads | Test location | empty         |
+    | Air Heads | 456 Oak Avenue Greenfield, MA 01201 USA |         |
     |  |  |          |
 
   #-------------------------- Warehouse Stock READ ----------------------------#

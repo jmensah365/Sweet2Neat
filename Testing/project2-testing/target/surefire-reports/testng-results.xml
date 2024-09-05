@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="2" failed="9" skipped="0">
+<testng-results ignored="0" total="83" passed="83" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-04T15:31:54 EDT" name="Cucumber Suite" finished-at="2024-09-04T15:34:16 EDT" duration-ms="141998">
+  <suite started-at="2024-09-05T16:08:09 EDT" name="Cucumber Suite" finished-at="2024-09-05T16:24:56 EDT" duration-ms="1007226">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-09-04T15:31:54 EDT" name="Cucumber Tests" finished-at="2024-09-04T15:34:16 EDT" duration-ms="141998">
+    <test started-at="2024-09-05T16:08:09 EDT" name="Cucumber Tests" finished-at="2024-09-05T16:24:56 EDT" duration-ms="1007226">
       <class name="com.skillstorm.RunCucumberTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:31:54 EDT" name="setUpClass" finished-at="2024-09-04T15:31:54 EDT" duration-ms="356" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:08:09 EDT" name="setUpClass" finished-at="2024-09-05T16:08:10 EDT" duration-ms="411" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1df2e767]]>
+                <![CDATA[org.testng.TestRunner@5baf9daf]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:31:54 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:32:09 EDT" duration-ms="14277" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:08:10 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:08:25 EDT" duration-ms="15491" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,23 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:32:09 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:32:23 EDT" duration-ms="13871" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Creating a Candy"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Candy CRUD Operations"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:32:23 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:32:35 EDT" duration-ms="12714" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:08:25 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:08:39 EDT" duration-ms="13531" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -66,27 +50,10 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Successfully added candy!] but found [Name is required]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found [Name is required]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
-at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:32:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:32:47 EDT" duration-ms="11698" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:08:39 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:08:51 EDT" duration-ms="12539" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -99,27 +66,10 @@ at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Successfully added candy!] but found []]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
-at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:32:47 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:33:00 EDT" duration-ms="12674" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:08:51 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:09:05 EDT" duration-ms="13592" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -132,27 +82,10 @@ at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Successfully added candy!] but found []]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
-at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:33:00 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:33:13 EDT" duration-ms="12813" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:09:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:09:18 EDT" duration-ms="13607" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -165,27 +98,10 @@ at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Successfully added candy!] but found []]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
-at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:33:13 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:33:25 EDT" duration-ms="12716" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:09:18 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:09:32 EDT" duration-ms="13557" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -198,27 +114,10 @@ at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Successfully added candy!] but found [Weight must be a positive number, and Weight cannot contain letters]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found [Weight must be a positive number, and Weight cannot contain letters]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
-at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:33:25 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:33:38 EDT" duration-ms="12809" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:09:32 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:09:46 EDT" duration-ms="13620" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -231,27 +130,10 @@ at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Successfully added candy!] but found []]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
-at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:33:38 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:33:51 EDT" duration-ms="12756" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:09:46 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:09:59 EDT" duration-ms="13661" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -264,27 +146,10 @@ at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Successfully added candy!] but found []]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
-at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:33:51 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:34:03 EDT" duration-ms="12654" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:09:59 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:10:13 EDT" duration-ms="13645" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -297,27 +162,10 @@ at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Successfully added candy!] but found [Price cannot contain letters]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found [Price cannot contain letters]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
-at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:34:03 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-04T15:34:16 EDT" duration-ms="12613" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:10:13 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:10:26 EDT" duration-ms="13584" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -330,27 +178,1178 @@ at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Successfully added candy!] but found []]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Successfully added candy!] but found []
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton(CandyStepDefinitions.java:54)
-at ✽.I click the ADD CANDY button(classpath:com/skillstorm/candy.feature:18)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-04T15:34:16 EDT" name="tearDownClass" finished-at="2024-09-04T15:34:16 EDT" duration-ms="14" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:10:26 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:10:35 EDT" duration-ms="8178" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful view of candy list"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Candy CRUD Operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:10:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:10:50 EDT" duration-ms="15155" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Updating a Candy"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Candy CRUD Operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:10:50 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:11:04 EDT" duration-ms="14271" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Updating a Candy with Invalid Data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Candy CRUD Operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:11:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:11:18 EDT" duration-ms="14297" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Updating a Candy with Invalid Data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Candy CRUD Operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:11:18 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:11:33 EDT" duration-ms="14215" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Updating a Candy with Invalid Data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Candy CRUD Operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:11:33 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:11:47 EDT" duration-ms="14348" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Updating a Candy with Invalid Data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Candy CRUD Operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:11:47 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:12:01 EDT" duration-ms="14212" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Updating a Candy with Invalid Data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Candy CRUD Operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:12:01 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:12:15 EDT" duration-ms="14211" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Updating a Candy with Invalid Data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Candy CRUD Operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:12:15 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:12:30 EDT" duration-ms="14279" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Updating a Candy with Invalid Data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Candy CRUD Operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:12:30 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:12:44 EDT" duration-ms="14290" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Updating a Candy with Invalid Data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Candy CRUD Operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:12:44 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:12:58 EDT" duration-ms="14136" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Updating a Candy with Invalid Data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Candy CRUD Operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:12:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:13:06 EDT" duration-ms="8011" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Deleting a Candy"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Candy CRUD Operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:13:06 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:13:13 EDT" duration-ms="7004" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully navigate to the home page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Navigation Links"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:13:13 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:13:23 EDT" duration-ms="10102" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully navigate to Warehouse List page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Navigation Links"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:13:23 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:13:33 EDT" duration-ms="10098" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully navigate to Candy Inventory page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Navigation Links"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:13:33 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:13:43 EDT" duration-ms="10077" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully navigate to Candy Categories page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Navigation Links"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:13:43 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:13:53 EDT" duration-ms="10115" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully navigate to List of Orders page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Navigation Links"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:13:53 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:14:04 EDT" duration-ms="10119" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully navigate to Order Info page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Navigation Links"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:14:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:14:13 EDT" duration-ms="8945" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully navigate to About page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Navigation Links"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:14:13 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:14:23 EDT" duration-ms="10051" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully navigate to Warehouse Stock page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Navigation Links"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:14:23 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:14:32 EDT" duration-ms="9063" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully navigate with Add a Warehouse button"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Navigation Links"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:14:32 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:14:40 EDT" duration-ms="8113" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully navigate to all Candy Types pages"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Navigation Links"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:14:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:14:48 EDT" duration-ms="8142" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully navigate to all Candy Types pages"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Navigation Links"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:14:48 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:14:56 EDT" duration-ms="8079" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully navigate to all Candy Types pages"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Navigation Links"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:14:56 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:15:04 EDT" duration-ms="8015" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully navigate to all Candy Types pages"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Navigation Links"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:15:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:15:12 EDT" duration-ms="8132" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully navigate to all Candy Types pages"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Navigation Links"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:15:12 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:15:29 EDT" duration-ms="16509" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful creating an order item"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrderItem CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:15:29 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:15:45 EDT" duration-ms="16615" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful creating an order item"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrderItem CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:15:45 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:16:02 EDT" duration-ms="16549" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful creating an order item"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrderItem CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:16:02 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:16:18 EDT" duration-ms="16481" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful creating an order item"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrderItem CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:16:18 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:16:35 EDT" duration-ms="16480" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful creating an order item"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrderItem CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:16:35 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:16:51 EDT" duration-ms="16461" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful creating an order item"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrderItem CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:16:51 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:17:08 EDT" duration-ms="16545" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful updating an order item"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrderItem CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:17:08 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:17:24 EDT" duration-ms="16679" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful updating an order item"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrderItem CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:17:24 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:17:41 EDT" duration-ms="16616" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful updating an order item"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrderItem CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:17:41 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:17:58 EDT" duration-ms="16525" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful updating an order item"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrderItem CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:17:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:18:14 EDT" duration-ms="16323" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful updating an order item"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrderItem CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:18:14 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:18:31 EDT" duration-ms="16670" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful updating an order item"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrderItem CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:18:31 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:18:39 EDT" duration-ms="8112" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Deleting an order item"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrderItem CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:18:39 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:18:49 EDT" duration-ms="10306" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Creating an order"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Order CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:18:49 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:18:58 EDT" duration-ms="9395" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Creating an order with invalid input"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Order CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:18:58 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:19:08 EDT" duration-ms="9289" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Creating an order with invalid input"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Order CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:19:08 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:19:17 EDT" duration-ms="9457" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Creating an order with invalid input"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Order CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:19:17 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:19:26 EDT" duration-ms="9196" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Creating an order with invalid input"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Order CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:19:26 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:19:34 EDT" duration-ms="8022" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View the order list table"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Order CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:19:34 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:19:48 EDT" duration-ms="13869" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Update an order"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Order CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:19:48 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:20:01 EDT" duration-ms="13040" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Update an order with invalid input"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Order CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:20:01 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:20:14 EDT" duration-ms="12930" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Update an order with invalid input"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Order CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:20:14 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:20:27 EDT" duration-ms="13010" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Update an order with invalid input"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Order CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:20:27 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:20:40 EDT" duration-ms="12956" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Update an order with invalid input"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Order CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:20:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:20:48 EDT" duration-ms="8051" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Delete an order"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Order CRUD operations"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:20:48 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:21:01 EDT" duration-ms="12342" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful warehouse creation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Warehouse CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:21:01 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:21:11 EDT" duration-ms="10151" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse creation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Warehouse CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:21:11 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:21:21 EDT" duration-ms="10184" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse creation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Warehouse CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:21:21 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:21:31 EDT" duration-ms="10131" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse creation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Warehouse CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:21:31 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:21:45 EDT" duration-ms="14122" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful updating a warehouse"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Warehouse CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:21:45 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:21:57 EDT" duration-ms="12065" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful updating a warehouse"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Warehouse CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:21:57 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:22:09 EDT" duration-ms="11885" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful updating a warehouse"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Warehouse CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:22:09 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:22:21 EDT" duration-ms="11884" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful updating a warehouse"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Warehouse CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:22:21 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:22:29 EDT" duration-ms="8138" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful view of warehouse list"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Warehouse CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:22:29 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:22:38 EDT" duration-ms="9042" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Delete a warehouse"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Warehouse CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:22:38 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:22:51 EDT" duration-ms="12382" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful warehouse stock creation with valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:22:51 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:23:02 EDT" duration-ms="11357" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse stock creation with invalid and valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:23:02 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:23:13 EDT" duration-ms="11329" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse stock creation with invalid and valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:23:13 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:23:25 EDT" duration-ms="11241" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse stock creation with invalid and valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:23:25 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:23:36 EDT" duration-ms="11237" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse stock creation with invalid and valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:23:36 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:23:49 EDT" duration-ms="13489" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful warehouse stock update with valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:23:49 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:24:02 EDT" duration-ms="12517" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse stock update with invalid and valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:24:02 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:24:14 EDT" duration-ms="12407" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse stock update with invalid and valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:24:14 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:24:27 EDT" duration-ms="12538" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse stock update with invalid and valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:24:27 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:24:39 EDT" duration-ms="12413" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful warehouse stock update with invalid and valid information"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:24:39 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:24:48 EDT" duration-ms="9190" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful view of warehouse stocks"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:24:48 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-05T16:24:56 EDT" duration-ms="8105" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Delete a warehouse stock"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["WarehouseStock CRUD"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.skillstorm.RunCucumberTest@5b529706]" started-at="2024-09-05T16:24:56 EDT" name="tearDownClass" finished-at="2024-09-05T16:24:56 EDT" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

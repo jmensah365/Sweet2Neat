@@ -69,6 +69,12 @@ public class WarehouseList {
     @FindBy(xpath = "//table[@name='warehouseTable']//tr[1]/td[1]")
     private WebElement warehouseFirstRowLocation;
 
+    @FindBy(xpath = "//tbody[@name='warehouseTBody']//tr[last()]")
+    private WebElement lastRowWarehouse;
+
+    @FindBy(xpath = "//tbody[@name='warehouseTBody']//tr[1]")
+    private WebElement firstRowWarehouse;
+
     @FindBy(className = "MuiAlert-message")
     private WebElement alertErrMsg;
 
@@ -111,7 +117,7 @@ public class WarehouseList {
         if(!location.isEmpty()) {
             locationField.sendKeys(location);
         }
-        return warehouseFirstRowLocation.getText();
+        return location;
     }
 
     public String setCapacity(String capacity){
@@ -123,7 +129,7 @@ public class WarehouseList {
         if(!capacity.isEmpty()) {
             capacityField.sendKeys(capacity);
         }
-        return warehouseFirstRowLocation.getText();
+        return capacity;
     }
 
     public void clickUpdateWarehouse(){
@@ -131,9 +137,14 @@ public class WarehouseList {
         warehouseBtn.click();
     }
 
-    public void confirmWarehouseUpdation(){
+    public String confirmWarehouseCreation(){
         RunCucumberTest.sleepThread();
-        System.out.println("New warehouse location: " + warehouseRowLocation.getText());
+        return lastRowWarehouse.getText();
+    }
+
+    public String confirmWarehouseUpdation(){
+        RunCucumberTest.sleepThread();
+        return firstRowWarehouse.getText();
     }
     //=====================UPDATE======================//
 

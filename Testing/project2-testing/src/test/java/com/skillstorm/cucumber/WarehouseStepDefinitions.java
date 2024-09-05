@@ -14,7 +14,7 @@ import com.skillstorm.Selenium.WarehouseList;
 public class WarehouseStepDefinitions {
 
     private WarehouseList warehouseList;
-    private String location;
+    private String[] warehouse;
 
 
     @Before("@Warehouse")
@@ -22,8 +22,8 @@ public class WarehouseStepDefinitions {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless","--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
         WebDriver driver = new ChromeDriver(options);
-
         this.warehouseList = new WarehouseList(driver);
+        warehouse = new String[2];
     }
 
     @After("@Warehouse") // added for closing all browsers down after testing
@@ -52,16 +52,14 @@ public class WarehouseStepDefinitions {
 
     @And("I change the {string} and\\/or {string}")
     public void iChangeWithValidCredentials(String location, String capacity) {
-        String warehouseId1 = this.warehouseList.setLocation(location);
-        String warehouseId2 = this.warehouseList.setCapacity(capacity);
-        Assert.assertEquals(warehouseId1, warehouseId2);
+        warehouse[0] = this.warehouseList.setLocation(location);
+        warehouse[1] = this.warehouseList.setCapacity(capacity);
     }
 
     @And("I change the {string} and\\/or {string} to invalid fields")
     public void iChangeWithInvalidCredentials(String location, String capacity) {
-        String warehouseId1 = this.warehouseList.setLocation(location);
-        String warehouseId2 = this.warehouseList.setCapacity(capacity);
-        Assert.assertEquals(warehouseId1, warehouseId2);
+        warehouse[0] = this.warehouseList.setLocation(location);
+        warehouse[1] = this.warehouseList.setCapacity(capacity);
     }
 
     @And("I click on the UPDATE WAREHOUSE button")
@@ -79,7 +77,12 @@ public class WarehouseStepDefinitions {
 
     @And("I should see the updated details for the Warehouse I edited in the list of Warehouses")
     public void iShouldSeeTheUpdatedDetailsForTheWarehouseIEditedInTheListOfWarehouses(){
-        this.warehouseList.confirmWarehouseUpdation();
+        String actualString = this.warehouseList.confirmWarehouseUpdation();
+        System.out.println("Actual " + actualString);
+        for(String s : warehouse) {
+            System.out.println("s " + s);
+            Assert.assertTrue(actualString.contains(s));
+        }
     }
 
     @And("the warehouse should not be visible in the table")
@@ -90,9 +93,8 @@ public class WarehouseStepDefinitions {
      //======================= CREATE =========================
     @When("I fill in the {string} and {string} fields")
     public void fillInTheFields(String location, String capacity) {
-        this.location = location;
-        this.warehouseList.setLocation(location);
-        this.warehouseList.setCapacity(capacity);
+        warehouse[0] = this.warehouseList.setLocation(location);
+        warehouse[1] = this.warehouseList.setCapacity(capacity);
     }
 
     @And("I click the ADD WAREHOUSE button")
@@ -117,7 +119,10 @@ public class WarehouseStepDefinitions {
 
     @Then("I should see the newly created Warehouse in the list of Warehouses")
     public void iShouldSeeNewlyCreatedWarehouse() {
-        Assert.assertEquals(this.warehouseList.getWarehouseLocation(), location);
+        String actualString = this.warehouseList.confirmWarehouseCreation();
+        for(String s : warehouse) {
+            Assert.assertTrue(actualString.contains(s));
+        }
     }
 
     //======================= READ =========================

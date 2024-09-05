@@ -165,7 +165,8 @@ const OrderInfo = () => {
                 return response.json();
             })
             .then(returnedData => {
-                setOrderItem(returnedData);
+                const sortedData = returnedData.sort((a,b) => a.orderId - b.orderId);
+                setOrderItem(sortedData);
                 setLoaded(true);
             })
             .catch(err => {
@@ -316,7 +317,7 @@ const OrderInfo = () => {
                             <TableRow key={orderItem.id}>
                                 <TableCell>{getCustomerName(orderItem.orderId)}</TableCell>
                                 <TableCell>{getCandyName(orderItem.candyId)}</TableCell>
-                                <TableCell>{orderItem.price}</TableCell>
+                                <TableCell>{orderItem.price.toFixed(2)}</TableCell>
                                 <TableCell>{orderItem.quantity}</TableCell>
                                 <TableCell>
                                 <IconButton name='editIcon' onClick={() => handleEdit(orderItem)}>

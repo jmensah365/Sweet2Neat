@@ -41,8 +41,11 @@ public class OrdersList {
     private WebElement lastRowOrderId;
 
     //Finding last row in order list table and grabbing the order ID
-    @FindBy(xpath = "//table[@name='orderListTable']//tr[1]/td[1]")
-    private WebElement firstRowOrderId;
+    @FindBy(xpath = "//tbody[@name='tableBody']//tr[1]")
+    private WebElement firstRowOrder;
+
+    @FindBy(xpath = "//tbody[@name='tableBody']//tr[last()]")
+    private WebElement lastRowOrder;
 
     @FindBy(name = "orders")
     private WebElement ordersMenu;
@@ -63,7 +66,11 @@ public class OrdersList {
     @FindBy(name = "orderListSnackbarError")
     private WebElement orderListErrorMessage;
 
+    @FindBy(className = "MuiAlert-message")
+    private WebElement alertMsg;
 
+    @FindBy(name = "cancelEditBtn")
+    private WebElement cancelBtn;
 
     String orderId = "";
 
@@ -81,16 +88,20 @@ public class OrdersList {
 
     public void getOrderListPageUrl(){
         RunCucumberTest.sleepThread();
-
         this.driver.get(url);
     }
 
-    public void getCustomerName(String customerName){
-        RunCucumberTest.sleepThread();
-        customerNameField.sendKeys(customerName);
+    public String checkCurrentUrl() {
+        return this.driver.getCurrentUrl();
     }
 
-    public void getStatus(String status){
+    public String getCustomerName(String customerName){
+        RunCucumberTest.sleepThread();
+        customerNameField.sendKeys(customerName);
+        return customerName;
+    }
+
+    public String getStatus(String status){
         statusSelect.click();
         RunCucumberTest.sleepThread();
         if(status != null && !status.isEmpty()){
@@ -98,10 +109,12 @@ public class OrdersList {
         } else {
             driver.findElement(By.name("clear")).click();
         }
+        return status;
     }
 
-    public void getCustomerAddress(String customerAddress){
+    public String getCustomerAddress(String customerAddress){
         customerAddressField.sendKeys(customerAddress);
+        return customerAddress;
     }
 
     public void clickAddOrderBtn(){
@@ -109,9 +122,9 @@ public class OrdersList {
         orderListBtn.click();
     }
 
-    public void confirmOrderCreation(){
+    public String confirmOrderCreation(){
         RunCucumberTest.sleepThread();
-        System.out.println(lastRowOrderId.getText());
+        return lastRowOrder.getText();
     }
 
     public void displayErrorMessage(){
@@ -135,13 +148,9 @@ public class OrdersList {
         listOfOrdersMenu.click();
     }
 
-    public void displayOrderListTable(){
+    public String displayOrderListTable(){
         RunCucumberTest.sleepThread();
-        List<WebElement> tableRows = orderListTable.findElements(By.xpath(".//tr"));
-
-        for(WebElement tr : tableRows) {
-            System.out.println(tr.getText());
-        }
+        return orderListTable.findElement(By.xpath(".//tr")).getText();
     }
      //======================READ=====================//
 
@@ -151,7 +160,7 @@ public class OrdersList {
         editBtn.click();
     }
 
-    public void setCustomerName(String customerName){
+    public String setCustomerName(String customerName){
         RunCucumberTest.sleepThread();
         
         String prevValue = customerNameField.getAttribute("value");
@@ -159,48 +168,39 @@ public class OrdersList {
             customerNameField.sendKeys(Keys.BACK_SPACE);
         }
         customerNameField.sendKeys(customerName);
+        return customerName;
     }
 
-    public void setOrderDate(String orderDate){
-        orderDateField.click();
+    public String setStatus(String status){
+        statusSelect.click();
         RunCucumberTest.sleepThread();
 
-        orderDateField.sendKeys(Keys.COMMAND + "a");
-        orderDateField.sendKeys(Keys.BACK_SPACE);
-        orderDateField.sendKeys(orderDate);
+        if(status != null && !status.isEmpty()){
+            WebElement option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
+            RunCucumberTest.sleepThread();
+            option.click();
+        } else {
+            WebElement option = driver.findElement(By.xpath("//li[@data-value='']"));
+            RunCucumberTest.sleepThread();
+            option.click();
+        }
+
+        return status;
     }
 
-    public void setStatus(String status){
-
-            statusSelect.click();
-
-        RunCucumberTest.sleepThread();
-
-            if(status != null && !status.isEmpty()){
-                WebElement option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
-        RunCucumberTest.sleepThread();
-                option.click();
-            } else {
-                WebElement option = driver.findElement(By.xpath("//li[@data-value='']"));
-
-        RunCucumberTest.sleepThread();
-                option.click();
-            }
-    }
-
-    public void setCustomerAddress(String customerAddress){
+    public String setCustomerAddress(String customerAddress){
         RunCucumberTest.sleepThread();
         String prevValue = customerAddressField.getAttribute("value");
         for (int i = 0; i < prevValue.length(); i++){
             customerAddressField.sendKeys(Keys.BACK_SPACE);
         }
         customerAddressField.sendKeys(customerAddress);
+        return customerAddress;
     }
 
-    public void confirmOrderUpdation(){
+    public String confirmOrderUpdation(){
         RunCucumberTest.sleepThread();
-
-        System.out.println("Updated Candy ID " + firstRowOrderId.getText());
+        return firstRowOrder.getText();
     }
      //======================UPDATE=====================//
 
@@ -219,17 +219,27 @@ public class OrdersList {
         lastRowDeleteBtn.click();
     }
 
-    public void confirmDeletion(){
+    public boolean confirmDeletion(){
         RunCucumberTest.sleepThread();
         List<WebElement> tableRows = orderListTable.findElements(By.xpath(".//tr/td[1]"));
         for(WebElement tr : tableRows) {
             if(tr.getText().contains(orderId)){
-                throw new AssertionError("Candy with ID " + orderId + " was found in the table");
-            } else{
-                System.err.println("False");
+                return true;
             }
         }
+        return false;
     }
      //======================DELETE=====================//
 
+     public String getAlertMsg() {
+        RunCucumberTest.sleepThread();
+        return alertMsg.getText();
+    }
+
+    public boolean isCancelBtn() {
+        if(cancelBtn != null) {
+            return true;
+        }
+        return false;
+    }
 }

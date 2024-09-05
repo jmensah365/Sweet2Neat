@@ -16,7 +16,6 @@ public class OrderItems {
 
     private WebDriver driver;
     private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/orderInfo";
-    private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
     private String orderItemId = "";
 
     @FindBy(xpath = "//div[@id='orderIdSelect']")
@@ -40,8 +39,17 @@ public class OrderItems {
     @FindBy(name = "tableBody")
     private WebElement tableBody;
 
+    @FindBy(name = "orderInfoTable")
+    private WebElement orderInfoTable;
+
     @FindBy(name = "deleteIcon")
     private WebElement deleteIcon;
+
+    @FindBy(className = "MuiAlert-message")
+    private WebElement alertMsg;
+
+    @FindBy(name = "cancelEditBtn")
+    private WebElement cancelBtn;
 
     public OrderItems(WebDriver driver){
         this.driver = driver;
@@ -53,49 +61,64 @@ public class OrderItems {
         this.driver.quit();
     }
 
+    public String checkCurrentUrl() {
+        return this.driver.getCurrentUrl();
+    }
+
     public void getOrderItemsPage() {
         RunCucumberTest.sleepThread();
         this.driver.get(url);
     }
 
-    public void selectCustomerName(String customerName) {
+    public String selectCustomerName(String customerName) {
         RunCucumberTest.sleepThread();
         this.customerName.click();
         RunCucumberTest.sleepThread();
-        if(!customerName.equals("empty")) {
+        if(!customerName.isEmpty()) {
             this.driver.findElement(By.xpath("//li[text()='" + customerName + "']")).click();
         } else {
             this.driver.findElement(By.xpath("//li[text()='Clear Field']")).click();
         }
+        return customerName;
     }
 
-    public void selectCandy(String candyName) {
+    public String selectCandy(String candyName) {
         RunCucumberTest.sleepThread();
         this.candyName.click();
         RunCucumberTest.sleepThread();
-        if(!candyName.equals("empty")) {
+        if(!candyName.isEmpty()) {
             this.driver.findElement(By.xpath("//li[text()='" + candyName + "']")).click();
         } else {
             this.driver.findElement(By.xpath("//li[text()='Clear Field']")).click();
         }
-    }
-    public void inputPrice(String price) {
-        RunCucumberTest.sleepThread();
-        if(!price.equals("empty")) {
-            this.price.sendKeys(price); 
-        }
+        return candyName;
     }
 
-    public void inputQuantity(String quantity) {
+    public String inputPrice(String price) {
         RunCucumberTest.sleepThread();
-        if(!quantity.equals("empty")) {
+        if(!price.isEmpty()) {
+            this.price.sendKeys(price); 
+        }
+        return price;
+    }
+
+    public String inputQuantity(String quantity) {
+        RunCucumberTest.sleepThread();
+        if(!quantity.isEmpty()) {
             this.quantity.sendKeys(quantity); 
         }
+        return quantity;
     }
 
     public void addOrderItemButton() {
         RunCucumberTest.sleepThread();
         addOrderItemButton.click();
+    }
+
+    public void updateOrderItemButton() {
+        addOrderItemButton.click();
+        RunCucumberTest.sleepThread();
+        this.driver.navigate().refresh();
     }
 
     public void clearQuantityField() {
@@ -115,13 +138,9 @@ public class OrderItems {
         editIcon.click();
     }
 
-    public void getOrderItemsContents() {
+    public String getOrderItemsContents() {
         RunCucumberTest.sleepThread();
-        List<WebElement> tableRows = tableBody.findElements(By.xpath(".//tr"));
-
-        for(WebElement tr : tableRows) {
-            System.out.println(tr.getText());
-        }
+        return tableBody.findElement(By.xpath(".//tr[last()]")).getText();
     }
 
     public void clickOnDeleteIcon() {
@@ -131,15 +150,26 @@ public class OrderItems {
         deleteIcon.click();
     }
 
-    public void confirmDeletion(){
+    public boolean confirmDeletion(){
         RunCucumberTest.sleepThread();
         List<WebElement> tableRows = tableBody.findElements(By.xpath(".//tr"));
         for(WebElement tr : tableRows) {
             if(tr.getText().equals(orderItemId)){
-                throw new AssertionError(tableRows + " was found in the table");
-            } else{
-                System.err.println("False");
+                return true;
             }
         }
+        return false;
+    }
+
+    public String getAlertMsg() {
+        RunCucumberTest.sleepThread();
+        return alertMsg.getText();
+    }
+
+    public boolean isCancelBtn() {
+        if(cancelBtn != null) {
+            return true;
+        }
+        return false;
     }
 }

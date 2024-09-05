@@ -140,6 +140,7 @@ const CandyList = () => {
                 setEditingCandy(null);
             } else {
                 setCandy([...candy,data]);
+                console.log(candy);
             }
             setNewCandy({flavor: '', name: '', price: '', type: '', weight: ''});
             setSuccessMessage(editingCandy ? 'Successfully updated candy!' : 'Successfully added candy!');
@@ -307,8 +308,8 @@ const CandyList = () => {
                                 <TableCell>{candy.name}</TableCell>
                                 <TableCell>{candy.type}</TableCell>
                                 <TableCell>{candy.flavor}</TableCell>
-                                <TableCell>{candy.price}</TableCell>
-                                <TableCell>{candy.weight}</TableCell>
+                                <TableCell>{candy.price.toFixed(2)}</TableCell>
+                                <TableCell>{candy.weight.toFixed(2)}</TableCell>
                                 <TableCell>
                                     <IconButton name = 'editIcon' onClick={() => handleEdit(candy)}>
                                         <EditIcon />
