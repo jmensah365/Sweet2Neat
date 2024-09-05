@@ -249,8 +249,8 @@ public class NavigationLinks {
         }
     }
 
-    public boolean checkCandyHeader(String candyType) {
+    public String checkCandyHeader(String candyType) {
         RunCucumberTest.sleepThread();
-        return candyHeader.getText().equals(candyType);
+        return candyHeader.getText();
     }
 }

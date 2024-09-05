@@ -140,6 +140,7 @@ const CandyList = () => {
                 setEditingCandy(null);
             } else {
                 setCandy([...candy,data]);
+                console.log(candy);
             }
             setNewCandy({flavor: '', name: '', price: '', type: '', weight: ''});
             setSuccessMessage(editingCandy ? 'Successfully updated candy!' : 'Successfully added candy!');
@@ -300,7 +301,7 @@ const CandyList = () => {
                             <TableCell>Weight (oz.)</TableCell>
                         </TableRow>
                     </TableHead>
-                    <TableBody name="tableBody">
+                    <TableBody name='tableBody'>
                         {candy.map(candy => (
                             <TableRow key={candy.candyId}>
                                 <TableCell>{candy.candyId}</TableCell>

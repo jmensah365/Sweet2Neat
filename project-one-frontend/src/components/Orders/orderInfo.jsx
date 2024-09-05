@@ -317,7 +317,7 @@ const OrderInfo = () => {
                             <TableRow key={orderItem.id}>
                                 <TableCell>{getCustomerName(orderItem.orderId)}</TableCell>
                                 <TableCell>{getCandyName(orderItem.candyId)}</TableCell>
-                                <TableCell>{orderItem.price}</TableCell>
+                                <TableCell>{orderItem.price.toFixed(2)}</TableCell>
                                 <TableCell>{orderItem.quantity}</TableCell>
                                 <TableCell>
                                 <IconButton name='editIcon' onClick={() => handleEdit(orderItem)}>

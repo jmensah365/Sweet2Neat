@@ -8,25 +8,26 @@ Feature: WarehouseStock CRUD
         When I select the "<candy>", "<location>" and input "<quantity>" fields
         And I click the Add Stock button
         Then I should see the last row with "<candy>", "<location>", and "<quantity>"
+        And should see an alert message "Added stock successfully!"
 
         Examples:
         | candy | location | quantity |
-        |  Sour Skittles   | 3212 Spur Ln, Austin, Texas | 10000   |
+        |  Almondy Joy   | 9877 Cedar Swamp Ave. Barberton, OH 44203 | 10   |
 
     Scenario Outline: Unsuccessful warehouse stock creation with invalid and valid information
 
         Given I am on the Warehouse Stock page
         When I don't select "<candy>", "<location>" and input "<quantity>" fields
-        And I click the Add Stock button
+        And I click on the Add Stock button
         Then the warehouse stock should not be added with "<candy>", "<location>", and "<quantity>"
+        And should see an alert message "<errormsg>"
 
         Examples:
-        |   candy   |   location    |   quantity    |
-        | empty     | Test location |   1000        |
-        | Air Heads |   empty       |   2000        |
-        | Air Heads | Test location | empty         |
-        | empty | empty | empty         |
-
+        |   candy   |   location    |   quantity    | errormsg |
+        |      | 9877 Cedar Swamp Ave. Barberton, OH 44203 |   1000        |  Candy Name is required |
+        | Air Heads |          |   2000        | Warehouse Location is required |
+        | Air Heads | 9877 Cedar Swamp Ave. Barberton, OH 44203 |          | Quantity must be a number and greater than zero, and Quantity cannot contain letters |
+        |  |  |          | Candy Name is required, and Warehouse Location is required, and Quantity must be a number and greater than zero, and Quantity cannot contain letters |
 
 
   #-------------------------- Warehouse Stock UPDATE ----------------------------#
@@ -40,22 +41,22 @@ Feature: WarehouseStock CRUD
 
     Examples:
     | candy     | location      | quantity |
-    | Ring Pops | Test location | 40000    |
+    | Turking Taffy | 9877 Cedar Swamp Ave. Barberton, OH 44203 | 40    |
 
   Scenario Outline: Unsuccessful warehouse stock update with invalid and valid information
 
     Given I am on the Warehouse Stock page
     When I click the edit icon
     And I don't select a new "<candy>", "<location>" and input "<quantity>" fields
-    And I click the Update Stock button
+    And I click on the Update Stock button
     Then the warehouse stock should not be updated with "<candy>", "<location>", and "<quantity>"
 
     Examples:
     |   candy   |   location    |   quantity    |
-    | empty     | Test location |   1000        |
-    | Air Heads |   empty       |   2000        |
-    | Air Heads | Test location | empty         |
-    | empty | empty | empty         |
+    |      | 456 Oak Avenue Greenfield, MA 01201 USA |   1000        |
+    | Air Heads |          |   2000        |
+    | Air Heads | 456 Oak Avenue Greenfield, MA 01201 USA |         |
+    |  |  |          |
 
   #-------------------------- Warehouse Stock READ ----------------------------#
   Scenario: Successful view of warehouse stocks

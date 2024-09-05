@@ -8,24 +8,24 @@ Feature: Warehouse CRUD
     When I fill in the "<location>" and "<capacity>" fields 
     And I click the ADD WAREHOUSE button
     Then I should see the newly created Warehouse in the list of Warehouses
+    And I should see an alert message "Warehouse added successfully!"
 
     Examples:
     | location                    | capacity | 
-    | 3212 Spur Ln, Austin, Texas | 5000     | 
-    | Test location | 10000     | 
+    | 123 Maplewood Lane, Brookfield, WI 53005 | 500000     | 
 
   Scenario Outline: Unsuccessful warehouse creation
 
     Given I am on the Warehouse List page
     When I fill in the "<location>" and "<capacity>" fields 
-    And I click the ADD WAREHOUSE button
+    And I click ADD WAREHOUSE button
     Then I should see an alert message "<errormsg>"
 
     Examples:
     | location      | capacity | errormsg |
-    | empty         | 5000     | Location is required |
-    | Test location | empty    | Capacity must be a positive number |
-    |   empty       | empty    | Location is required, and Capacity must be a positive number |
+    |          | 500000     | Location is required |
+    | 456 Elm Street, Riverton, NJ 08077 |     | Capacity must be a positive number |
+    |          |     | Location is required, and Capacity must be a positive number |
 
   #-------------------------- Warehouse UPDATE ----------------------------#
   Scenario Outline: Successful updating a warehouse
@@ -34,26 +34,28 @@ Feature: Warehouse CRUD
     When I click on the edit icon for the Warehouse I want to edit
     And I change the "<location>" and/or "<capacity>" 
     And I click on the UPDATE WAREHOUSE button
-    Then I should see the updated details for the Warehouse I edited in the list of Warehouses
+    Then I should see an alert message "<msg>"
+    And I should see the updated details for the Warehouse I edited in the list of Warehouses
 
   Examples:
-  | location | capacity |
-  | Apt. 862 652 Shad Neck, South Hershelborough, IN 14539    | 2000    |
+  | location | capacity | msg |
+  | Apt. 862 652 Shad Neck, South Hershelborough, IN 14539    | 2000    | Warehouse updated successfully! |
 
-  # Scenario Outline: Unsuccessful updating a warehouse
+  Scenario Outline: Unsuccessful updating a warehouse
 
-  #   Given I am on the Warehouse List page
-  #   When I click on the edit icon for the Warehouse I want to edit
-  #   And I change the "<location>" and/or "<capacity>" to invalid fields
-  #   And I click on the UPDATE WAREHOUSE button
-  #   Then I should see an alert message "<errormsg>"
-  #   And I should not see the updated details for the Warehouse I edited in the list of Warehouses
+    Given I am on the Warehouse List page
+    When I click on the edit icon for the Warehouse I want to edit
+    And I change the "<location>" and/or "<capacity>" to invalid fields
+    And I click the UPDATE WAREHOUSE button
+    Then I should see an alert message "<errormsg>"
 
-  # Examples:
-  # | location | capacity | errormsg |
-  # | Apt. 862 652 Shad Neck, South Hershelborough, IN 14539    | 2000    | |
+  Examples:
+  | location | capacity | errormsg |
+  | Apt. 862 652 Shad Neck, South Hershelborough, IN 14539    |    | Capacity must be a positive number |
+  |    | 2000    | Location is required |
+  |     |     | Location is required, and Capacity must be a positive number |
 
-#-------------------------- Warehouse READ ----------------------------#
+# #-------------------------- Warehouse READ ----------------------------#
 Scenario: Successful view of warehouse list
 
   Given I am on the home page

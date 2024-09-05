@@ -1,10 +1,7 @@
 package com.skillstorm.project_one.Models;
 
-import java.util.Date;
 import java.util.Set;
 import java.time.LocalDate;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -15,7 +12,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -56,15 +52,6 @@ public class Orders {
     // Each order can have multiple items.
     @OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
     private Set<OrderItem> orderItems;
-
-    // needs this to persist current localdate when orders is created
-    // @PrePersist
-    // public void prePersist() {
-    //     if (this.orderDate == null) {
-    //         ZoneId estZoneId = ZoneId.of("America/New_York"); // EST time zone
-    //         this.orderDate = ZonedDateTime.now(estZoneId).toLocalDate();
-    //     }
-    // }
 
     public Orders() {
         this.orderDate = LocalDate.now();
@@ -109,10 +96,6 @@ public class Orders {
         return orderDate;
     }
 
-    // public void setOrderDate(LocalDate orderDate) {
-    //     this.orderDate = orderDate;
-    // }
-
     public String getStatus() {
         return status;
     }
@@ -120,7 +103,6 @@ public class Orders {
     public void setStatus(String status) {
         this.status = status;
     }
-
 
     @Override
     public String toString() {

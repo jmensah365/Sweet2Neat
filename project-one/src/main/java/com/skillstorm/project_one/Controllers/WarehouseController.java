@@ -22,8 +22,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 
 //Linking frontend and backend using CORS
-//@CrossOrigin(origins = "http://cim-frontend.s3-website-us-east-1.amazonaws.com")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://cim-frontend.s3-website-us-east-1.amazonaws.com")
+// @CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/warehouse")
 public class WarehouseController {

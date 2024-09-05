@@ -3,7 +3,7 @@ package com.skillstorm.cucumber;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-//import org.testng.Assert;
+import org.testng.Assert;
 
 import com.skillstorm.Selenium.NavigationLinks;
 
@@ -41,36 +41,49 @@ public class NavigationSteps {
 
     @Then("I should see the home page")
     public void shouldSeeHomePage() {
-        String expectedUrl = "http://localhost:5173/";
+        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
         String actualUrl = navigationLinks.checkCurrentPage();
-        // Assert.assertEquals(expectedUrl, actualUrl);
+        Assert.assertEquals(expectedUrl, actualUrl);
     }
     
     //================= NAV TO WAREHOUSE LIST PAGE ==================//
     @Given("I am currently on the home page")
     public void onTheHomePage() {
-        navigationLinks.getHomePage();
+        this.navigationLinks.getHomePage();
+        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
+        String actualUrl = navigationLinks.checkCurrentPage();
+        Assert.assertEquals(expectedUrl, actualUrl);
     }
 
     @When("I click on Warehouse List menu option")
     public void clickOnWarehousesMenu() {
         navigationLinks.clickWarehouseMenu();
+        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/warehouses";
+        String actualUrl = navigationLinks.checkCurrentPage();
+        Assert.assertEquals(expectedUrl, actualUrl);
     }
 
     @Then("I should see the Warehouse List page")
     public void shouldSeeWarehouseListPage() {
-        System.out.println(navigationLinks.getWarehouseListHeader());
+        String expectedHeader = "Warehouse List";
+        String actualHeader = navigationLinks.getWarehouseListHeader();
+        Assert.assertEquals(expectedHeader, actualHeader);
     }
     
     //================= NAV TO CANDY INVENTORY PAGE ==================//
     @When("I click on the Candy Inventory menu option")
     public void clickOnCandyInventoryOption() {
         navigationLinks.clickOnCandyInventoryMenu();
+        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/candy";
+        String actualUrl = navigationLinks.checkCurrentPage();
+        Assert.assertEquals(expectedUrl, actualUrl);
     }
 
     @Then("I should see the Candy Inventory page")
     public void shouldSeeCandyInventoryPage() {
-        System.out.println(navigationLinks.getCandyInventoryHeader());
+        String expectedHeader = "Candy Inventory";
+        String actualHeader = navigationLinks.getCandyInventoryHeader();
+        Assert.assertEquals(expectedHeader, actualHeader);
     }
 
     //================= NAV TO CANDY CATEGORIES PAGE ==================//
@@ -78,11 +91,16 @@ public class NavigationSteps {
     @When("I click on the Candy Categories menu option")
     public void clickOnCandyCategoriesOption() {
         navigationLinks.clickOnCandyCategoriesMenu();
+        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/candyTypes";
+        String actualUrl = navigationLinks.checkCurrentPage();
+        Assert.assertEquals(expectedUrl, actualUrl);
     }
 
     @Then("I should see the Candy Categories page")
     public void shouldSeeCandyCategoriesPage() {
-        System.out.println(navigationLinks.getCandyCategoriesHeader());
+        String expectedHeader = "Types of candy";
+        String actualHeader = navigationLinks.getCandyCategoriesHeader();
+        Assert.assertEquals(expectedHeader, actualHeader);
     }
 
     //================= NAV TO LIST OF ORDERS PAGE ==================//
@@ -90,11 +108,16 @@ public class NavigationSteps {
     @When("I click on the List of Orders menu option")
     public void clickOnListOfOrdersOption() {
         navigationLinks.clickOnListOfOrdersMenu();
+        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/orders";
+        String actualUrl = navigationLinks.checkCurrentPage();
+        Assert.assertEquals(expectedUrl, actualUrl);
     }
 
     @Then("I should see the List of Orders page")
     public void shouldSeeListOfOrders() {
-        System.out.println(navigationLinks.getListOfOrdersHeader());
+        String expectedHeader = "Order List";
+        String actualHeader = navigationLinks.getListOfOrdersHeader();
+        Assert.assertEquals(expectedHeader, actualHeader);
     }
 
     //================= NAV TO ORDER INFO PAGE ==================//
@@ -102,11 +125,16 @@ public class NavigationSteps {
     @When("I click on the Order Info menu option")
     public void clickOnOrderInfoOption() {
         navigationLinks.clickOnOrderInfoMenu();
+        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/orderInfo";
+        String actualUrl = navigationLinks.checkCurrentPage();
+        Assert.assertEquals(expectedUrl, actualUrl);
     }
 
     @Then("I should see the Order Info page")
     public void shouldSeeOrderInfo() {
-        System.out.println(navigationLinks.getOrderInfoHeader());
+        String expectedHeader = "Order Information";
+        String actualHeader = navigationLinks.getOrderInfoHeader();
+        Assert.assertEquals(expectedHeader, actualHeader);
     }
 
     //================= NAV TO ABOUT PAGE ==================//
@@ -114,11 +142,16 @@ public class NavigationSteps {
     @When("I click on the About menu option")
     public void clickOnAboutOption() {
         navigationLinks.clickOnAboutMenu();
+        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/about";
+        String actualUrl = navigationLinks.checkCurrentPage();
+        Assert.assertEquals(expectedUrl, actualUrl);
     }
 
     @Then("I should see the About page")
     public void shouldSeeAboutPage() {
-        System.out.println(navigationLinks.getAboutInfo());
+        String expectedHeader = "This is your one stop shop for Candy Inventory Management. You will be able add different candy products you wish to store and also delete any you do not want. You can also see how many warehouses you currenly have, how much capacity they each have, how much stock they hold, and their location. In addition you can keep track of people who have ordered from you and associated order information.";
+        String actualHeader = navigationLinks.getAboutInfo();
+        Assert.assertEquals(expectedHeader, actualHeader);
     }
 
     //================= NAV TO WAREHOUSE STOCK PAGE ==================//
@@ -126,11 +159,16 @@ public class NavigationSteps {
     @When("I click on the Warehouse Stock menu option")
     public void clickOnWarehouseStockOption() {
         navigationLinks.clickOnWarehouseStockMenu();
+        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/stocks";
+        String actualUrl = navigationLinks.checkCurrentPage();
+        Assert.assertEquals(expectedUrl, actualUrl);
     }
 
     @Then("I should see the Warehouse Stock page")
     public void shouldSeeWarehouseStockHeader() {
-        System.out.println(navigationLinks.getWarehouseStockHeader());
+        String expectedHeader = "Stock Inventory";
+        String actualHeader = navigationLinks.getWarehouseStockHeader();
+        Assert.assertEquals(expectedHeader, actualHeader);
     }
 
     //================= NAV USING ADD A WAREHOUSE BUTTON ==================//
@@ -138,12 +176,17 @@ public class NavigationSteps {
     @When("I click on the Add a Warehouse menu button")
     public void clickOnAddAWarehouseMenuButton() {
         navigationLinks.clickOnAddAWarehouseButton();
+        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/warehouses";
+        String actualUrl = navigationLinks.checkCurrentPage();
+        Assert.assertEquals(expectedUrl, actualUrl);
     }
 
-    //================= NAV USING ADD A WAREHOUSE BUTTON ==================//
     @Given("I am on the Candy Categories page")
     public void iAmOnCandyCategoriesPage() {
         this.navigationLinks.candyCategoriesPage();
+        String expectedHeader = "Types of candy";
+        String actualHeader = navigationLinks.getCandyCategoriesHeader();
+        Assert.assertEquals(expectedHeader, actualHeader);
     }
 
     @When("I click on the desired {string}")
@@ -153,6 +196,8 @@ public class NavigationSteps {
     
     @Then("I should see the desired {string} page")
     public void shouldSeeTheDesiredCandyType(String candyType) {
-        System.out.println(this.navigationLinks.checkCandyHeader(candyType));
+        String expectedHeader = candyType;
+        String actualHeader = navigationLinks.checkCandyHeader(candyType);
+        Assert.assertEquals(expectedHeader, actualHeader);
     }
 }

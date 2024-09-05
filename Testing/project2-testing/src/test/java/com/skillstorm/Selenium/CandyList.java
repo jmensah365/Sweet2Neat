@@ -18,9 +18,6 @@ public class CandyList {
     private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/candy";
     private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
 
-    // private static final String url = "http://localhost:5173/candy";
-    // private static final String homeUrl = "http://localhost:5173/";
-
     /*
      * Finding name, type, flavor, price, and weight text fields
      */
@@ -56,9 +53,18 @@ public class CandyList {
     @FindBy(name = "candyTable")
     private WebElement candyTable;
 
+    @FindBy(name = "tableBody")
+    private WebElement tableBody;
+
     //Finding last row in Candy table and grabbing the candy ID
     @FindBy(xpath = "//table[@name='candyTable']//tr[last()]/td[1]")
     private WebElement lastRowCandyId;
+
+    @FindBy(xpath = "//tbody[@name='tableBody']//tr[last()]")
+    private WebElement lastRowCandy;
+
+    @FindBy(xpath = "//tbody[@name='tableBody']//tr[1]")
+    private WebElement firstRowCandy;
 
      //Finding first row in Candy table and grabbing the candy ID
     @FindBy(xpath = "//table[@name='candyTable']//tr[1]/td[1]")
@@ -76,6 +82,9 @@ public class CandyList {
     @FindBy(name = "candyListSnackbarError")
     private WebElement candyErrorMessage;
 
+    @FindBy(className = "MuiAlert-message")
+    private WebElement alertMsg;
+
     String candyId = "";
 
     public CandyList(WebDriver driver){
@@ -88,18 +97,23 @@ public class CandyList {
         this.driver.quit();
     }
 
+    public String checkCurrentUrl() {
+        return this.driver.getCurrentUrl();
+    }
+
     public void getCandyPageUrl(){
         RunCucumberTest.sleepThread();
         this.driver.get(url);
     }
 
     //========================CREATE==========================//
-    public void addCandyName(String candyName){
+    public String addCandyName(String candyName){
         RunCucumberTest.sleepThread();
         nameField.sendKeys(candyName);
+        return candyName;
     }
 
-    public void addCandyType(String candyType){
+    public String addCandyType(String candyType){
         RunCucumberTest.sleepThread();
         if (candyType != null && !candyType.isEmpty()){
             candyTypeSelect.click();
@@ -111,20 +125,25 @@ public class CandyList {
             WebElement option = driver.findElement(By.xpath("//li[@data-value='']"));
             option.click();
         }
+        return candyType;
     }
 
-    public void addCandyFlavor(String candyFlavor){
+    public String addCandyFlavor(String candyFlavor){
         RunCucumberTest.sleepThread();
         flavorField.sendKeys(candyFlavor);
+        return candyFlavor;
     }
 
-    public void addPrice(String price){
+    public String addPrice(String price){
         RunCucumberTest.sleepThread();
         priceFeild.sendKeys(price);
+        return price;
     }
-    public void addWeight(String weight){
+
+    public String addWeight(String weight){
         RunCucumberTest.sleepThread();
         weightField.sendKeys(weight);
+        return weight;
     }
 
     public void clickCandyBtn(){
@@ -132,11 +151,11 @@ public class CandyList {
         candyBtn.click();
     }
 
-    public void confirmCreation(){
+    public String confirmCreation(){
         RunCucumberTest.sleepThread();
-        
-        System.out.println(lastRowCandyId.getText());
+        return lastRowCandy.getText();
     }
+
     public void errorMessageDisplayed(){
         RunCucumberTest.sleepThread();
         System.out.println(candyErrorMessage.isDisplayed());
@@ -156,24 +175,19 @@ public class CandyList {
         candyInventoryBtn.click();
     }
 
-    public void displayCandyTable(){
+    public String displayCandyTable(){
         RunCucumberTest.sleepThread();
-        List<WebElement> tableRows = candyTable.findElements(By.xpath(".//tr"));
-
-        for(WebElement tr : tableRows) {
-            System.out.println(tr.getText());
-        }
+        return candyTable.findElement(By.xpath(".//tr")).getText();
     }
     //========================READ==========================//
 
     //========================UPDATE==========================//
     public void clickEditButton(){
         RunCucumberTest.sleepThread();
-
         editBtn.click();
     }
 
-    public void setNameField(String name){
+    public String setNameField(String name){
         RunCucumberTest.sleepThread();
 
         String prevValue = nameField.getAttribute("value");
@@ -181,47 +195,48 @@ public class CandyList {
             nameField.sendKeys(Keys.BACK_SPACE);
         }
         nameField.sendKeys(name);
+        return name;
     }
 
-
-    public void setTypeField(String type){
+    public String getAlertMsg() {
         RunCucumberTest.sleepThread();
-            candyTypeSelect.click();
-
-
-        RunCucumberTest.sleepThread();
-            if (type != null && !type.isEmpty()){
-                WebElement option = driver.findElement(By.xpath("//li[@data-value='" + type + "']"));
-                option.click();
-            } else{
-                WebElement option = driver.findElement(By.xpath("//li[@data-value='']"));
-                option.click();
-            }
+        return alertMsg.getText();
     }
 
+    public String setTypeField(String type){
+        candyTypeSelect.click();
+        RunCucumberTest.sleepThread();
+        if (type != null && !type.isEmpty()){
+            WebElement option = driver.findElement(By.xpath("//li[@data-value='" + type + "']"));
+            option.click();
+        } else{
+            WebElement option = driver.findElement(By.xpath("//li[@data-value='']"));
+            option.click();
+        }
+        return type;
+    }
 
-    public void setFlavorField(String flavor){
+    public String setFlavorField(String flavor){
         RunCucumberTest.sleepThread();
         String prevValue = flavorField.getAttribute("value");
         for (int i = 0; i < prevValue.length(); i ++){
             flavorField.sendKeys(Keys.BACK_SPACE);
         }
         flavorField.sendKeys(flavor);
+        return flavor;
     }
 
-
-    public void setPriceField(String price){
+    public String setPriceField(String price){
         RunCucumberTest.sleepThread();
-
         String prevValue = priceFeild.getAttribute("value");
         for (int i = 0; i < prevValue.length(); i ++){
             priceFeild.sendKeys(Keys.BACK_SPACE);
         }
         priceFeild.sendKeys(price);
+        return price;
     }
 
-
-    public void setWeightField(String weight){
+    public String setWeightField(String weight){
         RunCucumberTest.sleepThread();
 
         String prevValue = weightField.getAttribute("value");
@@ -229,18 +244,15 @@ public class CandyList {
             weightField.sendKeys(Keys.BACK_SPACE);
         }
         weightField.sendKeys(weight);
+        return weight;
     }
 
-    public void confirmUpdation(){
+    public String confirmUpdation(){
         RunCucumberTest.sleepThread();
-
-        System.out.println("Updated Candy ID " + firstRowCandyId.getText());
+        return firstRowCandy.getText();
     }
 
     //========================UPDATE==========================//
-
-
-
 
     //========================DELETE==========================//
     public void clickDeleteIcon() {
@@ -256,16 +268,15 @@ public class CandyList {
         lastRowDeleteBtn.click();
     }
 
-    public void confirmDeletion(){
+    public boolean confirmDeletion(){
         RunCucumberTest.sleepThread();
         List<WebElement> tableRows = candyTable.findElements(By.xpath(".//tr/td[1]"));
         for(WebElement tr : tableRows) {
             if(tr.getText().contains(candyId)){
-                throw new AssertionError("Candy with ID " + candyId + " was found in the table");
-            } else{
-                System.err.println("False");
+                return true;
             }
         }
+        return false;
     }
     //========================DELETE==========================//
 }
