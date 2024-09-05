@@ -27,14 +27,14 @@ public class OrderItem {
 
     // Many-to-One relationship with Orders entity.
     // Each OrderItem is linked to a single Orders entity.
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @NotNull
     @JoinColumn(name = "orders_id")
     private Orders orders;
 
     // Many-to-One relationship with Candy entity.
     // Each OrderItem is linked to a single Candy entity.
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @NotNull
     @JoinColumn(name = "candy_id")
     private Candy candy;

@@ -2,6 +2,9 @@ package com.skillstorm.project_one.Models;
 
 import java.util.Date;
 import java.util.Set;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -12,6 +15,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -36,7 +40,7 @@ public class Orders {
     @Column
     @NotNull
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-    private Date orderDate;
+    private LocalDate orderDate;
 
     // Status of the order (e.g., 'Pending', 'Cancelled', 'Completed')
     @Column
@@ -52,6 +56,29 @@ public class Orders {
     // Each order can have multiple items.
     @OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
     private Set<OrderItem> orderItems;
+
+    // needs this to persist current localdate when orders is created
+    // @PrePersist
+    // public void prePersist() {
+    //     if (this.orderDate == null) {
+    //         ZoneId estZoneId = ZoneId.of("America/New_York"); // EST time zone
+    //         this.orderDate = ZonedDateTime.now(estZoneId).toLocalDate();
+    //     }
+    // }
+
+    public Orders() {
+        this.orderDate = LocalDate.now();
+    }
+
+    public Orders(Integer id, String customerName, String status,
+        String customerAddress, Set<OrderItem> orderItems) {
+        this.id = id;
+        this.customerName = customerName;
+        this.orderDate = LocalDate.now();
+        this.status = status;
+        this.customerAddress = customerAddress;
+        this.orderItems = orderItems;
+    }
 
     // Getters and Setters
     public String getCustomerAddress() {
@@ -78,13 +105,13 @@ public class Orders {
         this.customerName = customerName;
     }
 
-    public Date getOrderDate() {
+    public LocalDate getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
-    }
+    // public void setOrderDate(LocalDate orderDate) {
+    //     this.orderDate = orderDate;
+    // }
 
     public String getStatus() {
         return status;
@@ -94,7 +121,6 @@ public class Orders {
         this.status = status;
     }
 
-    
 
     @Override
     public String toString() {

@@ -165,7 +165,8 @@ const OrderInfo = () => {
                 return response.json();
             })
             .then(returnedData => {
-                setOrderItem(returnedData);
+                const sortedData = returnedData.sort((a,b) => a.id - b.id);
+                setOrderItem(sortedData);
                 setLoaded(true);
             })
             .catch(err => {

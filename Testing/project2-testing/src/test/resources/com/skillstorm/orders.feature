@@ -4,26 +4,25 @@ Feature: Order CRUD operations
 #-----------------------------CREATE-------------------------------------#
     Scenario Outline: Creating an order
         Given I am on the order list page
-        When I fill in "<Customer Name>", "<Order date>", "<Status>", and "<Customer Address>"
+        When I fill in "<Customer Name>", "<Status>", and "<Customer Address>"
         Then I click the Add order button
         Then new order information should be in the table
     Examples:
-        |Customer Name| Order date| Status| Customer Address|
-        |Jeremiah Mensah| 09/19/2023| Pending| 1110 Fake Address Dr, Greensboro NC, 20675|
-#-----------------------------CREATE with invalid inputs-------------------------------------#
+        |Customer Name| Status| Customer Address|
+        |Jeremiah Mensah| Pending| 1110 Fake Address Dr, Greensboro NC, 20675|
+    
     Scenario Outline: Creating an order with invalid input
         Given I am on the order list page
-        When I fill in "<Customer Name>", "<Order date>", "<Status>", and "<Customer Address>"
+        When I fill in "<Customer Name>", "<Status>", and "<Customer Address>"
         Then I click the Add order button
         Then I should see an error message
     Examples:
-        |Customer Name| Order date| Status| Customer Address|
-        | | 09/19/2023| Pending| 1110 Fake Address Dr, Greensboro NC, 20675| #empty customer name
-        |Jeremiah Mensah| | Pending| 1110 Fake Address Dr, Greensboro NC, 20675| #empty order date
-        |Jeremiah Mensah| 09/19/2023| | 1110 Fake Address Dr, Greensboro NC, 20675| #empty status
-        |Jeremiah Mensah| 09/19/2023| Pending| | #empty customer address
+        |Customer Name| Status| Customer Address|
+        | | Pending| 1110 Fake Address Dr, Greensboro NC, 20675|
+        |Jeremiah Mensah| | 1110 Fake Address Dr, Greensboro NC, 20675|
+        |Jeremiah Mensah| Pending| |
     
-#-----------------------------READ-------------------------------------#
+
     Scenario: View the order list table
         Given I am on the base page
         When I navigate to the order list page
@@ -33,32 +32,29 @@ Feature: Order CRUD operations
     Scenario Outline: Update an order
         Given I am on the order list page
         When I click the edit button
-        And I modify "<Customer Name>", "<Order date>", "<Status>", and/or "<Customer Address>"
+        And I modify "<Customer Name>", "<Status>", and/or "<Customer Address>"
         And I click the update order button
         Then I should see the updated order in the list of orders
     Examples:
-        |Customer Name| Order date| Status| Customer Address|
-        |DJ Kim| 06/17/2021| Completed| 1011 Super Address Dr, Ballston VA, 10234|
-#-----------------------------UPDATE with invalid inputs-------------------------------------#
+        |Customer Name| Status| Customer Address|
+        |DJ Kim| Completed| 1011 Super Address Dr, Ballston VA, 10234|
+
     Scenario Outline: Update an order with invalid input
         Given I am on the order list page
         When I click the edit button
-        And I modify "<Customer Name>", "<Order date>", "<Status>", and/or "<Customer Address>"
+        And I modify "<Customer Name>", "<Status>", and/or "<Customer Address>"
         And I click the update order button
         Then I should see an error message
 
     Examples:
-        |Customer Name| Order date| Status| Customer Address|
-        || 06/17/2021| Completed| 1011 Super Address Dr, Ballston VA, 10234| #empty customer name
-        |DJ Kim| | Completed| 1011 Super Address Dr, Ballston VA, 10234| #empty order date
-        |DJ Kim| 06/17/2021| | 1011 Super Address Dr, Ballston VA, 10234| #empty status
-        |DJ Kim| 06/17/2021| Completed| | #empty customer address
+        |Customer Name| Status| Customer Address|
+        || Completed| 1011 Super Address Dr, Ballston VA, 10234|
+        |DJ Kim| | 1011 Super Address Dr, Ballston VA, 10234|
+        |DJ Kim| Completed| |
     
-#-----------------------------DELETE-------------------------------------#
     Scenario: Delete an order
         Given I am on the order list page
 		When I click the delete button
 		Then The order should not be visible in the order list page
-
 
 

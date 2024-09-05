@@ -47,16 +47,38 @@ pipeline {
                 sh "cd project-one && mvn test"
             }
         }
+        
+        stage('Selenium/Cucumber Tests'){
+            steps{
+                sh "cd Testing/project2-testing && mvn verify"
+            }
+        }
+
         stage('Deploy Backend'){
             steps{
                 script{
                     withAWS(region: 'us-east-1', credentials: 'AWS_CREDENTIALS'){
                         sh 'pwd'
                         sh "aws s3 cp project-one/target/*.jar s3://cim-backend"
-                        // sh "echo 'aws elasticbeanstalk create-application-version --application-name myName --version-label 0.0.1 --source-bundle S3Bucket=\"bjgomes-bucket-sdet-backend\",S3Key=\"demo-1.0-SNAPSHOT.jar\"'"
-                        // sh "echo 'aws elasticbeanstalk update-environment --environment-name myName --version-label 0.0.1'"
                     }  
                 }   
+            }
+        }
+
+        stage('Run JMeter Tests') {
+            steps {
+                //Run Jmeter tests without a GUI
+                sh '/home/ec2-user/jmeter/apache-jmeter-5.6.3/bin/jmeter -n -t /home/ec2-user/Sweet2Neat/JmeterTestPlans/CIM-Test-Plan.jmx -l /home/ec2-user/Sweet2Neat/JmeterTestResults/cim-results.jtl'
+                //display the results of the tests
+                sh 'cat /home/ec2-user/Sweet2Neat/JmeterTestResults/cim-results.jtl'
+            }
+        }
+
+        stage('Publish test results') {
+            steps{
+                //publishing test results
+                //should be in xml format
+                perfReport sourceDataFiles: '/home/ec2-user/Sweet2Neat/JmeterTestResults/cim-results.jtl'
             }
         }
     }

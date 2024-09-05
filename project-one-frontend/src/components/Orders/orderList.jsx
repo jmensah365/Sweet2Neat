@@ -9,10 +9,6 @@ import {
 } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit'
 import DeleteIcon from '@mui/icons-material/Delete'
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import dayjs from 'dayjs';
 
 const Orders = () => {
     
@@ -21,9 +17,8 @@ const Orders = () => {
     const [order, setOrder] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(null);
-    const [newOrder, setNewOrder] = useState({
+    const [newOrder, setNewOrder] = useState({ // removed orderDate
         customerName: '',
-        orderDate: '',
         status: '',
         customerAddress: '',
     }); //setting the state for the new order form
@@ -53,15 +48,11 @@ const Orders = () => {
             });
     }, []);
 
-    const validateOrdersData = (data) => {
+    const validateOrdersData = (data) => { // removed order date validation
         let errorMessages = [];
 
         if (data.customerName.trim() === '') {
             errorMessages.push('Customer Name is required');
-        }
-
-        if(!data.orderDate){
-            errorMessages.push("Order Date is required")
         }
 
         if (!data.status) {
@@ -72,8 +63,6 @@ const Orders = () => {
             errorMessages.push('Customer Address is required');
         }
 
-    
-    
         if (errorMessages.length > 0) {
             setErrorMessage(errorMessages.join(', and '));
             return false;
@@ -118,7 +107,7 @@ const Orders = () => {
             }else{
                 setOrder([...order, data]);
             }
-            setNewOrder({customerName: '', orderDate: '', status: '', customerAddress: '',});
+            setNewOrder({customerName: '', status: '', customerAddress: '',}); // removed saving orderdate state
             setSuccessMessage(editingOrders ? 'Order updated successfully!' : 'Order added successfully!');
             refreshWarehouseDetails();
         })
@@ -179,14 +168,14 @@ const Orders = () => {
     };
 
     // restructure the order date passed in so handleInputChange can handle it
-    const handleOrderDate = (newOrderDate) => {
-        handleInputChange({
-            target: {
-                name: 'orderDate',
-                value: newOrderDate
-            }
-        });
-    };
+    // const handleOrderDate = (newOrderDate) => {
+    //     handleInputChange({
+    //         target: {
+    //             name: 'orderDate',
+    //             value: newOrderDate
+    //         }
+    //     });
+    // };
 
     const handleCloseSnackbar = () => {
         setSuccessMessage('');
@@ -224,7 +213,7 @@ const Orders = () => {
                 /> */}
 
                 {/* LocalizationProvider makes sure the date is localized */}
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DatePicker
                         label="Order Date"
                         name="datePicker"
@@ -247,7 +236,7 @@ const Orders = () => {
                             },
                         }}
                     />
-                </LocalizationProvider>
+                </LocalizationProvider> */}
                             {/* <TextField
                     label='Status'
                     name='status'
@@ -270,10 +259,10 @@ const Orders = () => {
                             textAlign:'left',
                         }}
                     >
-                        <MenuItem value="" style={{color: 'red'}}>Clear Field</MenuItem>
-                        <MenuItem value={"Ordered"}>Ordered</MenuItem>
-                        <MenuItem value={"Pending"}>Pending</MenuItem>
-                        <MenuItem value={"Completed"}>Completed</MenuItem>
+                        <MenuItem name="clear" value="" style={{color: 'red'}}>Clear Field</MenuItem>
+                        <MenuItem name="ordered" value={"Ordered"}>Ordered</MenuItem>
+                        <MenuItem name="pending" value={"Pending"}>Pending</MenuItem>
+                        <MenuItem name="completed" value={"Completed"}>Completed</MenuItem>
                     </Select>
                 </FormControl>
                 <TextField
@@ -308,7 +297,7 @@ const Orders = () => {
                             <TableCell>Customer Address </TableCell>
                         </TableRow>
                     </TableHead>
-                    <TableBody>
+                    <TableBody name="tableBody">
                         {order.map(order => (
                             <TableRow key={order.id}>
                                 <TableCell>{order.id}</TableCell>

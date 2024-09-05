@@ -300,15 +300,15 @@ const CandyList = () => {
                             <TableCell>Weight (oz.)</TableCell>
                         </TableRow>
                     </TableHead>
-                    <TableBody>
+                    <TableBody name="tableBody">
                         {candy.map(candy => (
                             <TableRow key={candy.candyId}>
                                 <TableCell>{candy.candyId}</TableCell>
                                 <TableCell>{candy.name}</TableCell>
                                 <TableCell>{candy.type}</TableCell>
                                 <TableCell>{candy.flavor}</TableCell>
-                                <TableCell>{candy.price}</TableCell>
-                                <TableCell>{candy.weight}</TableCell>
+                                <TableCell>{candy.price.toFixed(2)}</TableCell>
+                                <TableCell>{candy.weight.toFixed(2)}</TableCell>
                                 <TableCell>
                                     <IconButton name = 'editIcon' onClick={() => handleEdit(candy)}>
                                         <EditIcon />

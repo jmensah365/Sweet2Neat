@@ -3,6 +3,7 @@ package com.skillstorm.cucumber;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
+import io.cucumber.java.lu.an;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,7 +21,7 @@ public class WarehouseStepDefinitions {
     public void before(){
         // Setting up ChromeOptions to run Chrome in headless mode (without GUI)
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--no-sandbox");
+        options.addArguments("--headless","--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
         WebDriver driver = new ChromeDriver(options);
 
         // Initializing WarehouseList with the WebDriver instance
@@ -52,8 +53,7 @@ public class WarehouseStepDefinitions {
         this.warehouseList.clickDeleteIcon();
     }
 
-    // Step definition for the And statement to change warehouse information
-    @And("I change the {string} and\\/or {string} with valid information")
+    @And("I change the {string} and\\/or {string}")
     public void iChangeWithValidCredentials(String location, String capacity) {
         // Updating the warehouse details
         this.warehouseList.setLocation(location);
@@ -72,16 +72,13 @@ public class WarehouseStepDefinitions {
         this.warehouseList.confirmWarehouseUpdation();
     }
 
-    // Step definition for the Then statement to verify the warehouse is deleted from the list
-    @Then("the warehouse should not be visible in the table")
+    @And("the warehouse should not be visible in the table")
     public void theWarehouseShouldNotBeVisibleInTheTable(){
         this.warehouseList.confirmDeletion();
     }
 
-    //======================= CREATE =========================
-
-    // Step definition for the When statement to fill in warehouse information during creation
-    @When("I fill in the {string} and {string} fields with valid information")
+     //======================= CREATE =========================
+    @When("I fill in the {string} and {string} fields")
     public void fillInTheFields(String location, String capacity) {
         // Setting the location and capacity for the new warehouse
         this.warehouseList.setLocation(location);
@@ -94,7 +91,11 @@ public class WarehouseStepDefinitions {
         this.warehouseList.clickAddWarehouseButton();
     }
 
-    // Step definition for the Then statement to verify the newly created warehouse in the list
+    @Then("I should see an alert message {string}")
+    public void seeAlertErrorMessage(String errorMsg) {
+        this.warehouseList.alertMsgText();
+    }
+
     @Then("I should see the newly created Warehouse in the list of Warehouses")
     public void iShouldSeeNewlyCreatedWarehouse() {
         this.warehouseList.getWarehouseLocation();
@@ -106,9 +107,7 @@ public class WarehouseStepDefinitions {
     }
 
     //======================= READ =========================
-
-    // Step definition for the Given statement to navigate to the home page
-    @Given("Given I am on the home page")
+    @Given("I am on the home page")
     public void givenIAmOnTheHomePage() {
         this.warehouseList.getHomeURL();
     }

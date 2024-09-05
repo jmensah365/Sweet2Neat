@@ -59,7 +59,7 @@ public class StockService {
      * @param stock The Stock entity to convert
      * @return The converted StockDTO object
      */
-    private StockDTO convertToDTO(Stock stock) {
+    public StockDTO convertToDTO(Stock stock) {
         StockDTO dto = new StockDTO();
         dto.setId(stock.getId());
         dto.setCandyId(stock.getCandy().getCandyId());

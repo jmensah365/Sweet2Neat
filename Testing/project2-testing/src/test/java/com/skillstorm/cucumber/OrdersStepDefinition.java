@@ -41,11 +41,9 @@ public class OrdersStepDefinition {
     }
 
     // Step definition for the When statement to fill in order information
-    @When("I fill in {string}, {string}, {string}, and {string}")
-    public void iFillIn(String customerName, String orderDate, String status, String customerAddress){
-        // Filling in the order details
+    @When("I fill in {string}, {string}, and {string}")
+    public void iFillIn(String customerName, String status, String customerAddress){
         ordersList.getCustomerName(customerName);
-        ordersList.getOrderDate(orderDate);
         ordersList.getStatus(status);
         ordersList.getCustomerAddress(customerAddress);
     }
@@ -99,11 +97,9 @@ public class OrdersStepDefinition {
     }
 
     // Step definition for the And statement to modify the order information
-    @And("I modify {string}, {string}, {string}, and\\/or {string}")
-    public void iModifyInformation(String customerName, String orderDate, String status, String customerAddress){
-        // Updating the order details using the OrdersList methods
+    @And("I modify {string}, {string}, and\\/or {string}")
+    public void iModifyInformation(String customerName, String status, String customerAddress){
         ordersList.setCustomerName(customerName);
-        ordersList.setOrderDate(orderDate);
         ordersList.setStatus(status);
         ordersList.setCustomerAddress(customerAddress);
     }

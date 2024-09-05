@@ -10,6 +10,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.skillstorm.RunCucumberTest;
+
 public class WarehouseList {
     
     // WebDriver instance to control the browser
@@ -74,11 +76,9 @@ public class WarehouseList {
     @FindBy(xpath = "//table[@name='warehouseTable']//tr[1]/td[1]")
     private WebElement warehouseFirstRowLocation;
 
-    // Locator for the warehouse list snackbar error message
-    @FindBy(name = "warehouseListSnackbarError")
-    private WebElement warehouseListSnackbarErrorMessage;
+    @FindBy(className = "MuiAlert-message")
+    private WebElement alertErrMsg;
 
-    // Variable to store the warehouse ID
     String warehouseId = "";
 
     // Constructor to initialize the WebDriver and PageFactory elements
@@ -88,18 +88,13 @@ public class WarehouseList {
         PageFactory.initElements(driver, this);
     }
 
-    // Method to close the WebDriver and browser
-    public void close() {
-        this.driver.close();
+    public void close() { // warehouseStepDefintion calls this to close all open browsers when tests finish
+        this.driver.quit();
     }
 
     // Method to navigate to the warehouse list page URL
     public void getUrl() {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         this.driver.get(url);
     }
 
@@ -107,87 +102,53 @@ public class WarehouseList {
     
     // Method to click the edit button for a warehouse
     public void clickEditButton() {
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         editBtn.click();
     }
 
-    // Method to update the location field
-    public void setLocation(String location) {
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        // Clear the existing value
+    public void setLocation(String location){
+        RunCucumberTest.sleepThread();
         String prevValue = locationField.getAttribute("value");
         for (int i = 0; i < prevValue.length(); i++) {
             locationField.sendKeys(Keys.BACK_SPACE);
         }
-        // Enter the new value
-        locationField.sendKeys(location);
+        if(!location.equals("empty")) {
+            locationField.sendKeys(location);
+        }
     }
 
-    // Method to update the capacity field
-    public void setCapacity(String capacity) {
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        // Clear the existing value
+    public void setCapacity(String capacity){
+        RunCucumberTest.sleepThread();
         String prevValue = capacityField.getAttribute("value");
         for (int i = 0; i < prevValue.length(); i++) {
             capacityField.sendKeys(Keys.BACK_SPACE);
         }
-        // Enter the new value
-        capacityField.sendKeys(capacity);
+        if(!capacity.equals("empty")) {
+            capacityField.sendKeys(capacity);
+        }
     }
 
-    // Method to click the "Update Warehouse" button
-    public void clickUpdateWarehouse() {
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    public void clickUpdateWarehouse(){
+        RunCucumberTest.sleepThread();
         warehouseBtn.click();
     }
 
-    // Method to confirm the warehouse update by printing the last row's location
-    public void confirmWarehouseUpdation() {
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    public void confirmWarehouseUpdation(){
+        RunCucumberTest.sleepThread();
         System.out.println("New warehouse location: " + warehouseRowLocation.getText());
     }
+    //=====================UPDATE======================//
 
     //=====================DELETE======================//
-    
-    // Method to click the delete icon for the first row in the warehouse list table
-    public void clickDeleteIcon() {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        // Get the warehouse ID from the first row
+    public void clickDeleteIcon(){
+        RunCucumberTest.sleepThread();
+        
         warehouseId = warehouseFirstRowLocation.getText();
         deleteBtn.click();
     }
-
-    // Method to confirm deletion by checking if the warehouse ID is no longer in the table
-    public void confirmDeletion() {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    
+    public void confirmDeletion(){
+        RunCucumberTest.sleepThread();
         List<WebElement> tableRows = warehouseTable.findElements(By.xpath(".//tr/td[1]"));
         for (WebElement tr : tableRows) {
             if (tr.getText().contains(warehouseId)) {
@@ -198,103 +159,71 @@ public class WarehouseList {
         }
     }
 
+    //=====================DELETE======================//
+
     //======================= CREATE =========================
-    
-    // Method to check the page title
     public String checkPageTitle() {
+    RunCucumberTest.sleepThread();
         return warehouseListTitle.getText();
     }
 
-    // Method to add a location for a new warehouse
     public void addLocation(String location) {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+    RunCucumberTest.sleepThread();
+        if(!location.equals("empty")) {
+            locationField.sendKeys(location);
         }
-        locationField.sendKeys(location);
     }
 
-    // Method to add capacity for a new warehouse
     public void addCapacity(String capacity) {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+    RunCucumberTest.sleepThread();
+        if(!capacity.equals("empty")) {
+            capacityField.sendKeys(capacity);
         }
-        capacityField.sendKeys(capacity);
     }
 
-    // Method to set the current stock for a new warehouse
-    public void setCurrentStock(String currentStock) {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        stockField.sendKeys(currentStock);
-    }
-
-    // Method to click the "ADD WAREHOUSE" button
     public void clickAddWarehouseButton() {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    RunCucumberTest.sleepThread();
         addWarehouseButton.click();
     }
 
-    // Method to get the location of the last row in the warehouse list
     public void getWarehouseLocation() {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    RunCucumberTest.sleepThread();
         System.out.println(warehouseRowLocation.getText());
     }
 
-    public void confirmErrorMessage(){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println(warehouseListSnackbarErrorMessage.isDisplayed());
+    public void alertMsgText() {
+        System.out.println(alertErrMsg.getText());
     }
 
     //======================= READ =========================
     
     // Method to navigate to the home page URL
     public void getHomeURL() {
+        RunCucumberTest.sleepThread();
         this.driver.get(homeUrl);
     }
 
     // Method to navigate to the warehouse list option
     public void clickWarehouseListOption() {
-        warehousesMenu.click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
+        warehousesMenu.click();        
+        RunCucumberTest.sleepThread();
         warehouseListOption.click();
     }
 
     // Method to get the text of the warehouse table
     public void getWarehouseTable() {
+        RunCucumberTest.sleepThread();
         warehouseTable.getText();
     }
 
     // Method to print the contents of the warehouse table
     public void getWarehouseTableContents() {
+        RunCucumberTest.sleepThread();
         List<WebElement> tableRows = warehouseTable.findElements(By.xpath(".//tr"));
 
         for (WebElement tr : tableRows) {
             System.out.println(tr.getText());
         }
     }
-
 }

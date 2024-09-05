@@ -1,14 +1,27 @@
 package com.skillstorm.Selenium;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.apache.commons.io.FileUtils;
+
+
+import com.skillstorm.RunCucumberTest;
 
 
 public class OrdersList {
@@ -19,8 +32,8 @@ public class OrdersList {
     // URLs for the order list page and the home page
     private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/orders";
     private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
-
-    // Locators for the form fields on the order list page
+    private Actions actions;
+    WebDriverWait wait;
     @FindBy(name = "customerName")
     private WebElement customerNameField;
 
@@ -66,9 +79,9 @@ public class OrdersList {
     @FindBy(name = "editIcon")
     private WebElement editBtn;
 
-    // Locator for the order list snackbar error message
     @FindBy(name = "orderListSnackbarError")
     private WebElement orderListErrorMessage;
+
 
     // Variable to store the order ID
     String orderId = "";
@@ -76,11 +89,11 @@ public class OrdersList {
     // Constructor to initialize the WebDriver and PageFactory elements
     public OrdersList(WebDriver driver){
         this.driver = driver;
+        wait = new WebDriverWait(this.driver, Duration.ofSeconds(10));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         PageFactory.initElements(driver, this);
     }
 
-    // Method to quit the WebDriver and close the browser
     public void quit(){
         this.driver.quit();
     }
@@ -89,95 +102,70 @@ public class OrdersList {
 
     // Method to navigate to the order list page URL
     public void getOrderListPageUrl(){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
+
         this.driver.get(url);
     }
 
     // Method to enter customer name
     public void getCustomerName(String customerName){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         customerNameField.sendKeys(customerName);
     }
 
-    // Method to enter order date
-    public void getOrderDate(String orderDate) {
-        try {
-            // Wait for the date picker to be ready
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        //Have to click into the order date field first
-        orderDateField.click();
-        orderDateField.sendKeys(orderDate);
-    }
 
-    // Method to select status from a dropdown
+    // public void getOrderDate(String orderDate) {
+    //     this.actions = new Actions(this.driver);
+    //     actions.moveToElement(orderDateField).click().sendKeys(orderDate).build().perform();
+    //     actions.sendKeys(Keys.ESCAPE);
+        
+    //     // orderDateField.click();
+    //     // wait.until(ExpectedConditions.elementToBeClickable(orderDateField)).sendKeys(orderDate);
+    //     TakesScreenshot screenshot = ((TakesScreenshot) driver);
+    //     File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+    //     File destFile = new File("orderdatescreenshot.png");
+    //     try {
+    //         FileUtils.copyFile(srcFile, destFile);
+    //         System.out.println("Screenshot saved at: " + destFile.getAbsolutePath());
+    //     } catch (IOException e) {
+    //         e.printStackTrace();
+    //     }
+    // }
     public void getStatus(String status){
+        // actions.moveToElement(statusSelect).click().sendKeys(status).build().perform();;
+        statusSelect.click();
+        // actions.moveToElement(statusSelect).click().perform();
+        RunCucumberTest.sleepThread();
+        TakesScreenshot screenshot = ((TakesScreenshot) driver);
+        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+        File destFile = new File("screenshot.png");
         try {
-            Thread.sleep(3000);
-            statusSelect.click();
-            Thread.sleep(1000);
-
-             //Pass in status into select drop down to pick desired status if status is not null or empty
-            if(status != null && !status.isEmpty()){
-                WebElement option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
-                option.click();
-            } else {
-                //if status is null look for the empty value
-                WebElement option = driver.findElement(By.xpath("//li[@data-value='']"));
-                option.click();
-            }
-        } catch (InterruptedException e) {
+            FileUtils.copyFile(srcFile, destFile);
+            System.out.println("Screenshot saved at: " + destFile.getAbsolutePath());
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    // Method to enter customer address
     public void getCustomerAddress(String customerAddress){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        // RunCucumberTest.sleepThread();
         customerAddressField.sendKeys(customerAddress);
     }
 
     // Method to click the ADD ORDER or UPDATE ORDER button
     public void clickAddOrderBtn(){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         orderListBtn.click();
     }
 
     // Method to confirm the creation of an order by printing the last row's order ID
     public void confirmOrderCreation(){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         System.out.println(lastRowOrderId.getText());
     }
 
-    // Method to display an error message if present
     public void displayErrorMessage(){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         System.out.println(orderListErrorMessage.isDisplayed());
     }
 
@@ -188,29 +176,21 @@ public class OrdersList {
 
     // Method to navigate to the home page URL
     public void getHomeUrl(){
+        RunCucumberTest.sleepThread();
         this.driver.get(homeUrl);
     }
 
     // Method to navigate to the list of orders page
     public void clickListOfOrdersBtn(){
+        RunCucumberTest.sleepThread();
         ordersMenu.click();
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         listOfOrdersMenu.click();
     }
 
     // Method to display all rows in the order list table
     public void displayOrderListTable(){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        //Iterate through the table and print each row
+        RunCucumberTest.sleepThread();
         List<WebElement> tableRows = orderListTable.findElements(By.xpath(".//tr"));
         for(WebElement tr : tableRows) {
             System.out.println(tr.getText());
@@ -223,23 +203,14 @@ public class OrdersList {
 
     // Method to click the edit button for an order
     public void clickEditButton(){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         editBtn.click();
     }
 
     // Method to update the customer name field
     public void setCustomerName(String customerName){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        //Find the previous value in the text field and backspace the whole value to ensure it does not pop up again
+        RunCucumberTest.sleepThread();
+        
         String prevValue = customerNameField.getAttribute("value");
         for (int i = 0; i < prevValue.length(); i++){
             customerNameField.sendKeys(Keys.BACK_SPACE);
@@ -249,13 +220,9 @@ public class OrdersList {
 
     // Method to update the order date field
     public void setOrderDate(String orderDate){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         orderDateField.click();
-        //Highlighting all the text in the date field and deleting it
+        RunCucumberTest.sleepThread();
+
         orderDateField.sendKeys(Keys.COMMAND + "a");
         orderDateField.sendKeys(Keys.BACK_SPACE);
         orderDateField.sendKeys(orderDate);
@@ -263,35 +230,26 @@ public class OrdersList {
 
     // Method to update the status field
     public void setStatus(String status){
-        try {
-            Thread.sleep(2000);
-            statusSelect.click();
-            Thread.sleep(1000);
 
-            //Pass in status into select drop down to pick desired status if status is not null or empty
+            statusSelect.click();
+
+        RunCucumberTest.sleepThread();
+
             if(status != null && !status.isEmpty()){
                 WebElement option = driver.findElement(By.xpath("//li[@data-value='" + status + "']"));
+        RunCucumberTest.sleepThread();
                 option.click();
             } else {
-                //if status is null look for the empty value
                 WebElement option = driver.findElement(By.xpath("//li[@data-value='']"));
+
+        RunCucumberTest.sleepThread();
                 option.click();
             }
-            
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
     // Method to update the customer address field
     public void setCustomerAddress(String customerAddress){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        //Find the previous value in the text field and backspace the whole value to ensure it does not pop up again
+        RunCucumberTest.sleepThread();
         String prevValue = customerAddressField.getAttribute("value");
         for (int i = 0; i < prevValue.length(); i++){
             customerAddressField.sendKeys(Keys.BACK_SPACE);
@@ -301,12 +259,9 @@ public class OrdersList {
 
     // Method to confirm the update by printing the first row's order ID
     public void confirmOrderUpdation(){
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Updated Order ID " + firstRowOrderId.getText());
+        RunCucumberTest.sleepThread();
+
+        System.out.println("Updated Candy ID " + firstRowOrderId.getText());
     }
     //======================UPDATE=====================//
 
@@ -315,11 +270,7 @@ public class OrdersList {
 
     // Method to click the delete icon for the last row in the order list table
     public void clickDeleteIcon() {
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        RunCucumberTest.sleepThread();
         
         // Get the order ID from the last row
         orderId = lastRowOrderId.getText();
@@ -334,14 +285,7 @@ public class OrdersList {
 
     // Method to confirm deletion by checking if the order ID is no longer in the table
     public void confirmDeletion(){
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        //Iterating through the order list table and checking to see if the deleted ID is still in the table
-        //If not return False, if it is throw an Assertion
+        RunCucumberTest.sleepThread();
         List<WebElement> tableRows = orderListTable.findElements(By.xpath(".//tr/td[1]"));
         for(WebElement tr : tableRows) {
             if(tr.getText().contains(orderId)){

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Candy.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project-one</a> &gt; <a href="index.source.html" class="el_package">com.skillstorm.project_one.Models</a> &gt; <span class="el_source">Candy.java</span></div><h1>Candy.java</h1><pre class="source lang-java linenums">package com.skillstorm.project_one.Models;
+
+import java.math.BigDecimal;
+import java.util.Set;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+
+// Entity class representing a single candy
+@Entity
+@Table(name = &quot;candy&quot;)
+<span class="fc" id="L20">public class Candy {</span>
+    
+    //Entity fields
+    //Autogenerating UID
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(length = 50)
+    @NotBlank
+    private String name;
+
+    @Column(length = 50)
+    @NotBlank
+    private String type;
+
+    @Column(length = 50)
+    @NotBlank
+    private String flavor;
+
+    @Min(value = 0)
+    private BigDecimal price;
+
+    @Min(value = 0)
+    private BigDecimal weight;
+
+    //adding OneToMany relationship with stock table
+    @OneToMany(mappedBy = &quot;candy&quot;, cascade = CascadeType.ALL)
+    private Set&lt;Stock&gt; stocks;
+
+    ///Adding Getters, Setters, and toString method
+    public Integer getCandyId() {
+<span class="fc" id="L52">        return id;</span>
+    }
+
+    public void setId(Integer id) {
+<span class="fc" id="L56">        this.id = id;</span>
+<span class="fc" id="L57">    }</span>
+
+    public String getName() {
+<span class="fc" id="L60">        return name;</span>
+    }
+
+    public void setName(String name) {
+<span class="fc" id="L64">        this.name = name;</span>
+<span class="fc" id="L65">    }</span>
+
+    public String getType() {
+<span class="fc" id="L68">        return type;</span>
+    }
+
+    public void setType(String type) {
+<span class="fc" id="L72">        this.type = type;</span>
+<span class="fc" id="L73">    }</span>
+
+    public String getFlavor() {
+<span class="fc" id="L76">        return flavor;</span>
+    }
+
+    public void setFlavor(String flavor) {
+<span class="fc" id="L80">        this.flavor = flavor;</span>
+<span class="fc" id="L81">    }</span>
+
+    public BigDecimal getPrice() {
+<span class="fc" id="L84">        return price;</span>
+    }
+
+    public void setPrice(BigDecimal price) {
+<span class="fc" id="L88">        this.price = price;</span>
+<span class="fc" id="L89">    }</span>
+
+    public BigDecimal getWeight() {
+<span class="fc" id="L92">        return weight;</span>
+    }
+
+    public void setWeight(BigDecimal weight) {
+<span class="fc" id="L96">        this.weight = weight;</span>
+<span class="fc" id="L97">    }</span>
+
+    @Override
+    public String toString() {
+<span class="fc" id="L101">        return &quot;Candy [id=&quot; + id + &quot;, name=&quot; + name + &quot;, type=&quot; + type + &quot;, flavor=&quot; + flavor + &quot;, price=&quot; + price</span>
+<span class="fc" id="L102">                + &quot;, weight=&quot; + weight + &quot;]&quot;;</span>
+    }
+
+    
+
+
+    
+    
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

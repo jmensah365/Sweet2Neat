@@ -76,4 +76,3 @@ Feature: Candy CRUD Operations
         Then the candy should be deleted from the list and no longer visible in the table
 
 
-

@@ -107,7 +107,7 @@ const WarehouseStocks = () => {
         }
     
         const warehouseCapacity = warehouseCapacities[data.warehouseId];
-        if (warehouseCapacity + data.quantity > warehouseCapacity) {
+        if (warehouseCapacity && data.quantity > warehouseCapacity) {
             errorMessages.push(`Quantity exceeds warehouse capacity of ${warehouseCapacity}`);
         }
 
