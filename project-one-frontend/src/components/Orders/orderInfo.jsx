@@ -82,6 +82,7 @@ const OrderInfo = () => {
         }
     };
 
+    //validating order item data before submission
     const validateOrderItemData = (data) => {
         let errorMessages = [];
 
@@ -150,13 +151,13 @@ const OrderInfo = () => {
             }
             setNewOrderItem({orderId: '', candyId: '', price: '', quantity: ''}); // reset form
             setSuccessMessage(editingOrderItem ? 'Updated order item successfully!' : 'Added order item successfully!');
-            refreshWarehouseDetails();
+            refreshOrderItemDetails();
         })
         .catch(err => setError('Failed to update order item'));
     }
 
-    
-    const refreshWarehouseDetails = () => {
+    //refreshing order item information after an action
+    const refreshOrderItemDetails = () => {
         fetch(orderItemUrl)
             .then(response => {
                 if (!response.ok) {
@@ -215,16 +216,6 @@ const OrderInfo = () => {
     return(
         <>
             <Box name='orderInfoBox' component='form' onSubmit={handleSubmit} sx={{ mb: 2, mt: 8, padding: 2, borderRadius: 1, boxShadow: 10 }}>
-                {/* <TextField
-                    label='Order Id'
-                    name='orderId'
-                    value={editingOrderItem ? editingOrderItem.orderId : newOrderItem.orderId}
-                    onChange={handleInputChange}
-                    required
-                    fullWidth
-                    margin='normal'
-                    className='textField'
-                /> */}
                 <FormControl fullWidth sx={{ backgroundColor: '#e6e6fa'}}>
                     <InputLabel id="selectOrderId" >Customer Name*</InputLabel>
                     <Select 
@@ -243,16 +234,6 @@ const OrderInfo = () => {
                         ))}
                     </Select>
                 </FormControl>
-                {/* <TextField
-                    label='Candy Id'
-                    name='candyId'
-                    value={editingOrderItem ? editingOrderItem.candyId : newOrderItem.candyId}
-                    onChange={handleInputChange}
-                    required
-                    fullWidth
-                    margin='normal'
-                    className='textField'
-                /> */}
                 <FormControl fullWidth sx={{ backgroundColor: '#e6e6fa', marginTop:3, marginBottom:1}}>
                     <InputLabel id="selectCandyId" >Candy Name*</InputLabel>
                     <Select 
