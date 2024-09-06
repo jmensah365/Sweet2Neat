@@ -77,7 +77,7 @@ import com.skillstorm.project_one.Repositories.OrderItemRepo;
      * @return the created orderItem
      */
     public OrderItem createOrderItem(OrderItemDTO orderItemRequest){
-<span class="fc" id="L80">        Candy candy = candyRepo.findById(orderItemRequest.getCandyId()).orElseThrow(() -&gt; new NoSuchElementException(&quot;Candy does not exist&quot;));</span>
+<span class="pc" id="L80">        Candy candy = candyRepo.findById(orderItemRequest.getCandyId()).orElseThrow(() -&gt; new NoSuchElementException(&quot;Candy does not exist&quot;));</span>
 <span class="pc" id="L81">        Orders order = orderRepo.findById(orderItemRequest.getOrderId()).orElseThrow(() -&gt; new NoSuchElementException(&quot;Order does not exist&quot;));</span>
         
 <span class="fc" id="L83">        OrderItem orderItem = new OrderItem();</span>

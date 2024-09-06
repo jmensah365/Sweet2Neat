@@ -4,13 +4,23 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.001">
+           time="0.002">
     <properties></properties>
 
 
 
             <testcase
-                name="testSetIdAndGetId"
+                name="testSetLocationAndGetLocation"
+                time="0.001"
+                classname="com.skillstorm.project_one.WarehouseModelTest">
+            </testcase>
+            <testcase
+                name="testSetCurrentStockAndGetCurrentStock"
+                time="0.000"
+                classname="com.skillstorm.project_one.WarehouseModelTest">
+            </testcase>
+            <testcase
+                name="testSetCapacityAndGetCapacity"
                 time="0.000"
                 classname="com.skillstorm.project_one.WarehouseModelTest">
             </testcase>
@@ -20,17 +30,7 @@
                 classname="com.skillstorm.project_one.WarehouseModelTest">
             </testcase>
             <testcase
-                name="testSetCapacityAndGetCapacity"
-                time="0.000"
-                classname="com.skillstorm.project_one.WarehouseModelTest">
-            </testcase>
-            <testcase
-                name="testSetLocationAndGetLocation"
-                time="0.000"
-                classname="com.skillstorm.project_one.WarehouseModelTest">
-            </testcase>
-            <testcase
-                name="testSetCurrentStockAndGetCurrentStock"
+                name="testSetIdAndGetId"
                 time="0.000"
                 classname="com.skillstorm.project_one.WarehouseModelTest">
             </testcase>

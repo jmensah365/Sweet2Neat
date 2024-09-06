@@ -4,7 +4,7 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.003">
+           time="0.002">
     <properties></properties>
 
 
@@ -15,13 +15,13 @@
                 classname="com.skillstorm.project_one.OrderItemDTOUnitTests">
             </testcase>
             <testcase
-                name="testGettersAndSetters"
+                name="testConstructor"
                 time="0.000"
                 classname="com.skillstorm.project_one.OrderItemDTOUnitTests">
             </testcase>
             <testcase
-                name="testConstructor"
-                time="0.001"
+                name="testGettersAndSetters"
+                time="0.000"
                 classname="com.skillstorm.project_one.OrderItemDTOUnitTests">
             </testcase>
 </testsuite>

@@ -17,11 +17,11 @@ import jakarta.validation.constraints.PositiveOrZero;
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = &quot;candy_id&quot;)
     private Candy candy;
     
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = &quot;warehouse_id&quot;)
     private Warehouse warehouse;
     

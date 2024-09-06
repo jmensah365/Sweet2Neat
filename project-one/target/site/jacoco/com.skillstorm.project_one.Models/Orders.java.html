@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Orders.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project-one</a> &gt; <a href="index.source.html" class="el_package">com.skillstorm.project_one.Models</a> &gt; <span class="el_source">Orders.java</span></div><h1>Orders.java</h1><pre class="source lang-java linenums">package com.skillstorm.project_one.Models;
 
-import java.util.Date;
 import java.util.Set;
 import java.time.LocalDate;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -15,7 +12,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -57,74 +53,60 @@ public class Orders {
     @OneToMany(mappedBy = &quot;orders&quot;, cascade = CascadeType.ALL)
     private Set&lt;OrderItem&gt; orderItems;
 
-    // needs this to persist current localdate when orders is created
-    // @PrePersist
-    // public void prePersist() {
-    //     if (this.orderDate == null) {
-    //         ZoneId estZoneId = ZoneId.of(&quot;America/New_York&quot;); // EST time zone
-    //         this.orderDate = ZonedDateTime.now(estZoneId).toLocalDate();
-    //     }
-    // }
-
-<span class="fc" id="L69">    public Orders() {</span>
-<span class="fc" id="L70">        this.orderDate = LocalDate.now();</span>
-<span class="fc" id="L71">    }</span>
+<span class="fc" id="L56">    public Orders() {</span>
+<span class="fc" id="L57">        this.orderDate = LocalDate.now();</span>
+<span class="fc" id="L58">    }</span>
 
     public Orders(Integer id, String customerName, String status,
-<span class="nc" id="L74">        String customerAddress, Set&lt;OrderItem&gt; orderItems) {</span>
-<span class="nc" id="L75">        this.id = id;</span>
-<span class="nc" id="L76">        this.customerName = customerName;</span>
-<span class="nc" id="L77">        this.orderDate = LocalDate.now();</span>
-<span class="nc" id="L78">        this.status = status;</span>
-<span class="nc" id="L79">        this.customerAddress = customerAddress;</span>
-<span class="nc" id="L80">        this.orderItems = orderItems;</span>
-<span class="nc" id="L81">    }</span>
+<span class="fc" id="L61">        String customerAddress, Set&lt;OrderItem&gt; orderItems) {</span>
+<span class="fc" id="L62">        this.id = id;</span>
+<span class="fc" id="L63">        this.customerName = customerName;</span>
+<span class="fc" id="L64">        this.orderDate = LocalDate.now();</span>
+<span class="fc" id="L65">        this.status = status;</span>
+<span class="fc" id="L66">        this.customerAddress = customerAddress;</span>
+<span class="fc" id="L67">        this.orderItems = orderItems;</span>
+<span class="fc" id="L68">    }</span>
 
     // Getters and Setters
     public String getCustomerAddress() {
-<span class="fc" id="L85">        return customerAddress;</span>
+<span class="fc" id="L72">        return customerAddress;</span>
     }
 
     public void setCustomerAddress(String customerAddress) {
-<span class="fc" id="L89">        this.customerAddress = customerAddress;</span>
-<span class="fc" id="L90">    }</span>
+<span class="fc" id="L76">        this.customerAddress = customerAddress;</span>
+<span class="fc" id="L77">    }</span>
 
     public Integer getId() {
-<span class="fc" id="L93">        return id;</span>
+<span class="fc" id="L80">        return id;</span>
     }
 
     public void setId(Integer id) {
-<span class="fc" id="L97">        this.id = id;</span>
-<span class="fc" id="L98">    }</span>
+<span class="fc" id="L84">        this.id = id;</span>
+<span class="fc" id="L85">    }</span>
 
     public String getCustomerName() {
-<span class="fc" id="L101">        return customerName;</span>
+<span class="fc" id="L88">        return customerName;</span>
     }
 
     public void setCustomerName(String customerName) {
-<span class="fc" id="L105">        this.customerName = customerName;</span>
-<span class="fc" id="L106">    }</span>
+<span class="fc" id="L92">        this.customerName = customerName;</span>
+<span class="fc" id="L93">    }</span>
 
     public LocalDate getOrderDate() {
-<span class="fc" id="L109">        return orderDate;</span>
+<span class="fc" id="L96">        return orderDate;</span>
     }
 
-    // public void setOrderDate(LocalDate orderDate) {
-    //     this.orderDate = orderDate;
-    // }
-
     public String getStatus() {
-<span class="fc" id="L117">        return status;</span>
+<span class="fc" id="L100">        return status;</span>
     }
 
     public void setStatus(String status) {
-<span class="fc" id="L121">        this.status = status;</span>
-<span class="fc" id="L122">    }</span>
-
+<span class="fc" id="L104">        this.status = status;</span>
+<span class="fc" id="L105">    }</span>
 
     @Override
     public String toString() {
-<span class="fc" id="L127">        return &quot;Orders [id=&quot; + id + &quot;, customerName=&quot; + customerName + &quot;, orderDate=&quot; + orderDate + &quot;, status=&quot; + status</span>
+<span class="fc" id="L109">        return &quot;Orders [id=&quot; + id + &quot;, customerName=&quot; + customerName + &quot;, orderDate=&quot; + orderDate + &quot;, status=&quot; + status</span>
                 + &quot;, customerAddress=&quot; + customerAddress + &quot;]&quot;;
     }
 

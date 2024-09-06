@@ -1,14 +1,9 @@
 package com.skillstorm.project_one;
 
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Date;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
-
 
 import com.skillstorm.project_one.Models.Orders;
 
@@ -17,7 +12,7 @@ public class OrderUnitTests {
 
     @BeforeMethod
     public void init() {
-        orders = new Orders();
+        orders = new Orders(10, "Jeremiah Mensah", "pending","Apt. 404 609 Cruz Walks, Port Meghanmouth, CO 64357-4203", null );
         orders.setId(10);
         orders.setCustomerName("Jeremiah Mensah");
         orders.setStatus("pending");
