@@ -21,12 +21,12 @@
             </testcase>
             <testcase
                 name="testFindByType"
-                time="0.000"
+                time="0.001"
                 classname="com.skillstorm.project_one.CandyServiceTests">
             </testcase>
             <testcase
                 name="testUpdateCandyThrowsException"
-                time="0.002"
+                time="0.001"
                 classname="com.skillstorm.project_one.CandyServiceTests">
             </testcase>
             <testcase

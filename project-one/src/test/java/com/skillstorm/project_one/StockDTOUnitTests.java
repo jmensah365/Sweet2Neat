@@ -24,20 +24,20 @@ public class StockDTOUnitTests {
         stockDTO.setWarehouseId(3);
         stockDTO.setQuantity(30);
 
-        Assert.assertEquals(1, stockDTO.getId());
-        Assert.assertEquals(2, stockDTO.getCandyId());
-        Assert.assertEquals(3, stockDTO.getWarehouseId());
-        Assert.assertEquals(30, stockDTO.getQuantity());
+        Assert.assertEquals(stockDTO.getId(), 1);
+        Assert.assertEquals(stockDTO.getCandyId(), 2);
+        Assert.assertEquals(stockDTO.getWarehouseId(), 3);
+        Assert.assertEquals(stockDTO.getQuantity(), 30);
     }
 
     //Testing the paramterized constructor
     @Test
     public void testConstructor(){
         StockDTO dto = new StockDTO(5,10,15,50);
-        Assert.assertEquals(5, dto.getId());
-        Assert.assertEquals(10, dto.getCandyId());
-        Assert.assertEquals(15, dto.getWarehouseId());
-        Assert.assertEquals(50, dto.getQuantity());
+        Assert.assertEquals(dto.getId(), 5);
+        Assert.assertEquals(dto.getCandyId(), 10);
+        Assert.assertEquals(dto.getWarehouseId(), 15);
+        Assert.assertEquals(dto.getQuantity(), 50);
     }
 
     //Testing toString method
@@ -48,6 +48,6 @@ public class StockDTOUnitTests {
         stockDTO.setWarehouseId(6);
         stockDTO.setQuantity(100);
         String expectedString = "StockDTO [id=2, candyId=4, warehouseId=6, quantity=100]";
-        Assert.assertEquals(expectedString, stockDTO.toString());
+        Assert.assertEquals(stockDTO.toString(), expectedString);
     }
 }

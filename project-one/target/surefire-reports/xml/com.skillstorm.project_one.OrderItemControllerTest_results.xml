@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.002">
+           time="0.001">
     <properties></properties>
 
 
 
             <testcase
                 name="testDeleteOrderItem"
-                time="0.000"
+                time="0.001"
                 classname="com.skillstorm.project_one.OrderItemControllerTest">
             </testcase>
             <testcase
@@ -21,12 +21,12 @@
             </testcase>
             <testcase
                 name="testCreateOrderItem"
-                time="0.001"
+                time="0.000"
                 classname="com.skillstorm.project_one.OrderItemControllerTest">
             </testcase>
             <testcase
                 name="testFindAll"
-                time="0.001"
+                time="0.000"
                 classname="com.skillstorm.project_one.OrderItemControllerTest">
             </testcase>
 </testsuite>

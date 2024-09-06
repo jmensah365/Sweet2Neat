@@ -56,7 +56,7 @@ public class CandyServiceTests {
         List<Candy> actualCandies = candyService.findAll();
     
         // Assert: Check that the actual list matches the expected list
-        Assert.assertEquals(expectedCandies, actualCandies);
+        Assert.assertEquals(actualCandies, expectedCandies);
     
         // Verify: Ensure that the repository's method was called exactly once
         verify(candyRepo, times(1)).findAllByOrderByIdAsc();
@@ -76,7 +76,7 @@ public class CandyServiceTests {
     
         // Assert: Check that the result is present and the ID matches
         Assert.assertTrue(result.isPresent());
-        Assert.assertEquals(1, result.get().getCandyId());
+        Assert.assertEquals(result.get().getCandyId(), 1);
     
         // Verify: Ensure that the repository's findById method was called exactly once
         verify(candyRepo, times(1)).findById(1);
@@ -94,7 +94,7 @@ public class CandyServiceTests {
         List<Candy> actualCandies = candyService.findByFlavor("chocolate");
     
         // Assert: Check that the actual list matches the expected list
-        Assert.assertEquals(expectedCandies, actualCandies);
+        Assert.assertEquals(actualCandies, expectedCandies);
     
         // Verify: Ensure that the repository's findByFlavor method was called exactly once
         verify(candyRepo, times(1)).findByFlavor("chocolate");
@@ -112,7 +112,7 @@ public class CandyServiceTests {
         List<Candy> actualCandies = candyService.findByType("Gummy Candy");
     
         // Assert: Check that the actual list matches the expected list
-        Assert.assertEquals(expectedCandies, actualCandies);
+        Assert.assertEquals(actualCandies, expectedCandies);
     
         // Verify: Ensure that the repository's findByType method was called exactly once
         verify(candyRepo, times(1)).findByType("Gummy Candy");

@@ -26,7 +26,7 @@
             </testcase>
             <testcase
                 name="testCreateStock"
-                time="0.001"
+                time="0.002"
                 classname="com.skillstorm.project_one.StockServiceTest">
             </testcase>
             <testcase
@@ -46,7 +46,7 @@
             </testcase>
             <testcase
                 name="testGetStocksByWarehouse"
-                time="0.000"
+                time="0.001"
                 classname="com.skillstorm.project_one.StockServiceTest">
             </testcase>
             <testcase
@@ -56,12 +56,12 @@
             </testcase>
             <testcase
                 name="testDeleteStock"
-                time="0.001"
+                time="0.000"
                 classname="com.skillstorm.project_one.StockServiceTest">
             </testcase>
             <testcase
                 name="testCreateStockCandyNotFound"
-                time="0.002"
+                time="0.001"
                 classname="com.skillstorm.project_one.StockServiceTest">
             </testcase>
 </testsuite>
