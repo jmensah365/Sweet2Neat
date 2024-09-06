@@ -139,7 +139,7 @@ public class WarehouseStock {
 
     public void clearQuantityField() {
         RunCucumberTest.sleepThread();
-        quantity.sendKeys(Keys.COMMAND + "a");
+        quantity.sendKeys(Keys.CONTROL + "a");
         quantity.sendKeys(Keys.DELETE);
     }
 
