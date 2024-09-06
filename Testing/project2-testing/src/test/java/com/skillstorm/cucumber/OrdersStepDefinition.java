@@ -150,9 +150,7 @@ public class OrdersStepDefinition {
     @Then("I should see the updated order in the list of orders")
     public void iShouldSeeTheUpdatedOrderInTheListOfOrders(){
         String actualString = this.ordersList.confirmOrderUpdation();
-        System.out.println(actualString);
         for(String s : order) {
-            System.out.println(s);
             Assert.assertTrue(actualString.contains(s));
         }
     }

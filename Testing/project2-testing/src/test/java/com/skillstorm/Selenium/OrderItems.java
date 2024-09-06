@@ -72,24 +72,24 @@ public class OrderItems {
 
     public String selectCustomerName(String customerName) {
         RunCucumberTest.sleepThread();
-        this.customerName.click();
-        RunCucumberTest.sleepThread();
         if(!customerName.isEmpty()) {
+            this.customerName.click();
+            RunCucumberTest.sleepThread();
             this.driver.findElement(By.xpath("//li[text()='" + customerName + "']")).click();
-        } else {
-            this.driver.findElement(By.xpath("//li[text()='Clear Field']")).click();
+        // } else {
+        //     this.driver.findElement(By.xpath("//li[text()='Clear Field']")).click();
         }
         return customerName;
     }
 
     public String selectCandy(String candyName) {
         RunCucumberTest.sleepThread();
-        this.candyName.click();
-        RunCucumberTest.sleepThread();
         if(!candyName.isEmpty()) {
+            this.candyName.click();
+            RunCucumberTest.sleepThread();
             this.driver.findElement(By.xpath("//li[text()='" + candyName + "']")).click();
-        } else {
-            this.driver.findElement(By.xpath("//li[text()='Clear Field']")).click();
+        // } else {
+        //     this.driver.findElement(By.xpath("//li[text()='Clear Field']")).click();
         }
         return candyName;
     }
@@ -146,7 +146,6 @@ public class OrderItems {
     public void clickOnDeleteIcon() {
         RunCucumberTest.sleepThread();
         orderItemId = tableBody.findElement(By.xpath(".//tr[1]")).getAttribute("id");
-        System.out.println("Delete OrderItem Id:" + orderItemId);
         deleteIcon.click();
     }
 

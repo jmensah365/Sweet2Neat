@@ -71,9 +71,7 @@ public class OrderItemsSteps {
     @Then("I should see the order added in the list")
     public void shouldSeeOrderItemWith() {
         String actualString = this.orderItems.getOrderItemsContents();
-        System.out.println(actualString);
         for(String s : orderInfo) {
-            System.out.println(s);
             Assert.assertTrue(actualString.contains(s));
         }
     }

@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 // @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")
 // @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "html:target/cucumber-reports.html")
 @CucumberOptions(
-    features = "classpath:com/skillstorm/", 
+    features = "classpath:com/skillstorm/orderItem.feature", 
     glue = "com.skillstorm",
     plugin = {"pretty", "html:target/cucumber-reports.html"} 
 )

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="1009.469" tests="83" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="198.776" tests="13" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/surefire 2024-09-05T19-32-31_200-jvmRun1 surefire-20240905193231235_1tmp surefire_0-20240905193231235_2tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/surefire 2024-09-05T21-26-46_671-jvmRun1 surefire-20240905212646711_1tmp surefire_0-20240905212646711_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/test-classes:/Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/classes:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-java/4.23.1/selenium-java-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-api/4.23.1/selenium-api-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.23.1/selenium-chrome-driver-4.23.1.jar:/Users/dj/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.23.1/selenium-chromium-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-json/4.23.1/selenium-json-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.23.1/selenium-manager-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v125/4.23.1/selenium-devtools-v125-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v126/4.23.1/selenium-devtools-v126-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v127/4.23.1/selenium-devtools-v127-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.23.1/selenium-devtools-v85-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.23.1/selenium-edge-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.23.1/selenium-firefox-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-http/4.23.1/selenium-http-4.23.1.jar:/Users/dj/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.23.1/selenium-ie-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.23.1/selenium-remote-driver-4.23.1.jar:/Users/dj/.m2/repository/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre.jar:/Users/dj/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/dj/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/dj/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/dj/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/Users/dj/.m2/repository/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1.jar:/Users/dj/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/dj/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-api/1.40.0/opentelemetry-api-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-context/1.40.0/opentelemetry-context-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.40.0/opentelemetry-exporter-logging-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.40.0/opentelemetry-sdk-common-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.40.0/opentelemetry-sdk-extension-autoconfigure-spi-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.40.0/opentelemetry-sdk-extension-autoconfigure-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.40.0-alpha/opentelemetry-api-incubator-1.40.0-alpha.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.40.0/opentelemetry-sdk-trace-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.40.0/opentelemetry-sdk-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.40.0/opentelemetry-sdk-metrics-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.40.0/opentelemetry-sdk-logs-1.40.0.jar:/Users/dj/.m2/repository/net/bytebuddy/byte-buddy/1.14.18/byte-buddy-1.14.18.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-os/4.23.1/selenium-os-4.23.1.jar:/Users/dj/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.23.1/selenium-safari-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-support/4.23.1/selenium-support-4.23.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-java/7.11.1/cucumber-java-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-core/7.11.1/cucumber-core-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-gherkin/7.11.1/cucumber-gherkin-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.11.1/cucumber-gherkin-messages-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/gherkin/26.0.3/gherkin-26.0.3.jar:/Users/dj/.m2/repository/io/cucumber/messages/21.0.1/messages-21.0.1.jar:/Users/dj/.m2/repository/io/cucumber/tag-expressions/5.0.1/tag-expressions-5.0.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/Users/dj/.m2/repository/io/cucumber/datatable/7.11.1/datatable-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-plugin/7.11.1/cucumber-plugin-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/docstring/7.11.1/docstring-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/html-formatter/20.2.1/html-formatter-20.2.1.jar:/Users/dj/.m2/repository/io/cucumber/junit-xml-formatter/0.1.0/junit-xml-formatter-0.1.0.jar:/Users/dj/.m2/repository/io/cucumber/ci-environment/9.1.0/ci-environment-9.1.0.jar:/Users/dj/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/dj/.m2/repository/org/testng/testng/7.10.2/testng-7.10.2.jar:/Users/dj/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/dj/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/dj/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-testng/7.11.1/cucumber-testng-7.11.1.jar:"/>
@@ -54,475 +54,10 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="runScenario[&quot;Creating a Candy&quot;, &quot;Candy CRUD Operations&quot;](1)" classname="com.skillstorm.RunCucumberTest" time="15.933">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Creating a Candy                                                 &amp#27;[90m# com/skillstorm//candy.feature:12&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the ADD CANDY button&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the newly created candy on the list&amp#27;[0m                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeTheNewlyCreatedCandyOnTheList()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Sep 05, 2024 7:32:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](2)" classname="com.skillstorm.RunCucumberTest" time="13.529">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Creating a Candy with Invalid Data                  &amp#27;[90m# com/skillstorm//candy.feature:24&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                              &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                 &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Name is required"&amp#27;[0m               &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:32:48 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](3)" classname="com.skillstorm.RunCucumberTest" time="12.586">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Creating a Candy with Invalid Data                     &amp#27;[90m# com/skillstorm//candy.feature:25&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                 &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                    &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Candy type is required"&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:33:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](4)" classname="com.skillstorm.RunCucumberTest" time="13.457">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Creating a Candy with Invalid Data                           &amp#27;[90m# com/skillstorm//candy.feature:26&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                       &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                          &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Flavor is required"&amp#27;[0m                      &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:33:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](5)" classname="com.skillstorm.RunCucumberTest" time="13.59">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Creating a Candy with Invalid Data                                                     &amp#27;[90m# com/skillstorm//candy.feature:27&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                                                 &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                                                    &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Price must be a positive number, and Price cannot contain letters"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:33:28 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](6)" classname="com.skillstorm.RunCucumberTest" time="13.604">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Creating a Candy with Invalid Data                                                       &amp#27;[90m# com/skillstorm//candy.feature:28&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                                                   &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                                                      &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Weight must be a positive number, and Weight cannot contain letters"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:33:41 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](7)" classname="com.skillstorm.RunCucumberTest" time="13.609">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Creating a Candy with Invalid Data                                &amp#27;[90m# com/skillstorm//candy.feature:29&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"-1.00"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                               &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Price must be a positive number"&amp#27;[0m              &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:33:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](8)" classname="com.skillstorm.RunCucumberTest" time="13.545">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Creating a Candy with Invalid Data                                &amp#27;[90m# com/skillstorm//candy.feature:30&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"-0.5"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                               &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Weight must be a positive number"&amp#27;[0m             &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:34:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](9)" classname="com.skillstorm.RunCucumberTest" time="13.606">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Creating a Candy with Invalid Data                               &amp#27;[90m# com/skillstorm//candy.feature:31&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"abcd"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                              &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Price cannot contain letters"&amp#27;[0m                &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:34:22 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](10)" classname="com.skillstorm.RunCucumberTest" time="13.561">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Creating a Candy with Invalid Data                               &amp#27;[90m# com/skillstorm//candy.feature:32&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"xyz"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                              &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Weight cannot contain letters"&amp#27;[0m               &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:34:36 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successful view of candy list&quot;, &quot;Candy CRUD Operations&quot;](11)" classname="com.skillstorm.RunCucumberTest" time="8.113">
-    <system-out><![CDATA[
-@Candy
-Scenario: Successful view of candy list        &amp#27;[90m# com/skillstorm//candy.feature:35&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Home page&amp#27;[0m                  &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheHomePage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI navigate to Candy Inventory&amp#27;[0m           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iNavigateToTheCandyInventory()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mlist of all candies should be displayed&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.theListOfAllCandiesShouldBeDisplayed()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:34:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Updating a Candy&quot;, &quot;Candy CRUD Operations&quot;](12)" classname="com.skillstorm.RunCucumberTest" time="15.127">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Updating a Candy                                                                   &amp#27;[90m# com/skillstorm//candy.feature:51&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                                             &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon for the candy I want to edit&amp#27;[0m                                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheEditIconForTheCandyIWantToEdit()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Strawberry Belt Bulk Bag"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Blueberry"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"10.00"&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iChangeCandyInfoWithValidInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the UPDATE CANDY button&amp#27;[0m                                                                &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheUpdateCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the updated candy in the candy table&amp#27;[0m                                             &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeTheUpdatedCandyInTheCandyTable()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:34:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Updating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](13)" classname="com.skillstorm.RunCucumberTest" time="14.02">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Updating a Candy with Invalid Data               &amp#27;[90m# com/skillstorm//candy.feature:62&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon for the candy I want to edit&amp#27;[0m          &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheEditIconForTheCandyIWantToEdit()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"10.00"&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iChangeCandyInfoWithValidInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the UPDATE CANDY button&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheUpdateCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Name is required"&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:35:12 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Updating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](14)" classname="com.skillstorm.RunCucumberTest" time="14.282">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Updating a Candy with Invalid Data                                  &amp#27;[90m# com/skillstorm//candy.feature:63&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                              &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon for the candy I want to edit&amp#27;[0m                             &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheEditIconForTheCandyIWantToEdit()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Strawberry Belt Bulk Bag"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"10.00"&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iChangeCandyInfoWithValidInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the UPDATE CANDY button&amp#27;[0m                                              &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheUpdateCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Candy type is required"&amp#27;[0m                         &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:35:26 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Updating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](15)" classname="com.skillstorm.RunCucumberTest" time="14.222">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Updating a Candy with Invalid Data                                        &amp#27;[90m# com/skillstorm//candy.feature:64&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                                    &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon for the candy I want to edit&amp#27;[0m                                   &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheEditIconForTheCandyIWantToEdit()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Strawberry Belt Bulk Bag"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"10.00"&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iChangeCandyInfoWithValidInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the UPDATE CANDY button&amp#27;[0m                                                    &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheUpdateCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Flavor is required"&amp#27;[0m                                   &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:35:41 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Updating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](16)" classname="com.skillstorm.RunCucumberTest" time="14.184">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Updating a Candy with Invalid Data                                                     &amp#27;[90m# com/skillstorm//candy.feature:65&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                                                 &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon for the candy I want to edit&amp#27;[0m                                                &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheEditIconForTheCandyIWantToEdit()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Strawberry Belt Bulk Bag"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m               &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iChangeCandyInfoWithValidInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the UPDATE CANDY button&amp#27;[0m                                                                 &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheUpdateCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Price must be a positive number, and Price cannot contain letters"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:35:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Updating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](17)" classname="com.skillstorm.RunCucumberTest" time="14.213">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Updating a Candy with Invalid Data                                                       &amp#27;[90m# com/skillstorm//candy.feature:66&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                                                   &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon for the candy I want to edit&amp#27;[0m                                                  &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheEditIconForTheCandyIWantToEdit()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Strawberry Belt Bulk Bag"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"10.00"&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m               &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iChangeCandyInfoWithValidInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the UPDATE CANDY button&amp#27;[0m                                                                   &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheUpdateCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Weight must be a positive number, and Weight cannot contain letters"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:36:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Updating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](18)" classname="com.skillstorm.RunCucumberTest" time="14.135">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Updating a Candy with Invalid Data                                             &amp#27;[90m# com/skillstorm//candy.feature:67&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                                         &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon for the candy I want to edit&amp#27;[0m                                        &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheEditIconForTheCandyIWantToEdit()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Strawberry Belt Bulk Bag"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"10.00"&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"-1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iChangeCandyInfoWithValidInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the UPDATE CANDY button&amp#27;[0m                                                         &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheUpdateCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Weight must be a positive number"&amp#27;[0m                          &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:36:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Updating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](19)" classname="com.skillstorm.RunCucumberTest" time="14.17">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Updating a Candy with Invalid Data                                             &amp#27;[90m# com/skillstorm//candy.feature:68&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                                         &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon for the candy I want to edit&amp#27;[0m                                        &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheEditIconForTheCandyIWantToEdit()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Strawberry Belt Bulk Bag"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"-10.00"&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iChangeCandyInfoWithValidInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the UPDATE CANDY button&amp#27;[0m                                                         &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheUpdateCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Price must be a positive number"&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:36:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Updating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](20)" classname="com.skillstorm.RunCucumberTest" time="14.182">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Updating a Candy with Invalid Data                                            &amp#27;[90m# com/skillstorm//candy.feature:69&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                                        &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon for the candy I want to edit&amp#27;[0m                                       &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheEditIconForTheCandyIWantToEdit()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Strawberry Belt Bulk Bag"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"10.00"&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"abc"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iChangeCandyInfoWithValidInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the UPDATE CANDY button&amp#27;[0m                                                        &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheUpdateCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Weight cannot contain letters"&amp#27;[0m                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:36:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Updating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](21)" classname="com.skillstorm.RunCucumberTest" time="14.126">
-    <system-out><![CDATA[
-@Candy
-Scenario Outline: Updating a Candy with Invalid Data                                          &amp#27;[90m# com/skillstorm//candy.feature:70&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                                      &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon for the candy I want to edit&amp#27;[0m                                     &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheEditIconForTheCandyIWantToEdit()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Strawberry Belt Bulk Bag"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"abc"&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iChangeCandyInfoWithValidInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the UPDATE CANDY button&amp#27;[0m                                                      &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheUpdateCandyButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Price cannot contain letters"&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:37:06 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Deleting a Candy&quot;, &quot;Candy CRUD Operations&quot;](22)" classname="com.skillstorm.RunCucumberTest" time="8.126">
-    <system-out><![CDATA[
-@Candy
-Scenario: Deleting a Candy                                                          &amp#27;[90m# com/skillstorm//candy.feature:73&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the delete icon&amp#27;[0m                                                      &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheDeleteIcon()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe candy should be deleted from the list and no longer visible in the table&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.theCandyShouldBeDeletedFromTheListAndNoLongerVisibleInTheTable()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:37:20 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successfully navigate to the home page&quot;, &quot;Navigation Links&quot;](23)" classname="com.skillstorm.RunCucumberTest" time="7.082">
-    <system-out><![CDATA[
-@Navigation
-Scenario: Successfully navigate to the home page &amp#27;[90m# com/skillstorm//navigation.feature:4&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on any page&amp#27;[0m                         &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.iAmOnAnyPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the logo&amp#27;[0m                       &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnLogo()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the home page&amp#27;[0m                &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeHomePage()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:37:28 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successfully navigate to Warehouse List page&quot;, &quot;Navigation Links&quot;](24)" classname="com.skillstorm.RunCucumberTest" time="10.091">
-    <system-out><![CDATA[
-@Navigation
-Scenario: Successfully navigate to Warehouse List page &amp#27;[90m# com/skillstorm//navigation.feature:9&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am currently on the home page&amp#27;[0m                &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.onTheHomePage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on Warehouse List menu option&amp#27;[0m           &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnWarehousesMenu()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the Warehouse List page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeWarehouseListPage()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:37:35 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successfully navigate to Candy Inventory page&quot;, &quot;Navigation Links&quot;](25)" classname="com.skillstorm.RunCucumberTest" time="10.313">
-    <system-out><![CDATA[
-@Navigation
-Scenario: Successfully navigate to Candy Inventory page &amp#27;[90m# com/skillstorm//navigation.feature:14&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am currently on the home page&amp#27;[0m                 &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.onTheHomePage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the Candy Inventory menu option&amp#27;[0m       &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnCandyInventoryOption()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the Candy Inventory page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeCandyInventoryPage()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:37:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successfully navigate to Candy Categories page&quot;, &quot;Navigation Links&quot;](26)" classname="com.skillstorm.RunCucumberTest" time="10.289">
-    <system-out><![CDATA[
-@Navigation
-Scenario: Successfully navigate to Candy Categories page &amp#27;[90m# com/skillstorm//navigation.feature:19&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am currently on the home page&amp#27;[0m                  &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.onTheHomePage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the Candy Categories menu option&amp#27;[0m       &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnCandyCategoriesOption()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the Candy Categories page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeCandyCategoriesPage()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:37:56 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successfully navigate to List of Orders page&quot;, &quot;Navigation Links&quot;](27)" classname="com.skillstorm.RunCucumberTest" time="10.152">
-    <system-out><![CDATA[
-@Navigation
-Scenario: Successfully navigate to List of Orders page &amp#27;[90m# com/skillstorm//navigation.feature:24&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am currently on the home page&amp#27;[0m                &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.onTheHomePage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the List of Orders menu option&amp#27;[0m       &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnListOfOrdersOption()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the List of Orders page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeListOfOrders()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:38:06 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successfully navigate to Order Info page&quot;, &quot;Navigation Links&quot;](28)" classname="com.skillstorm.RunCucumberTest" time="9.94">
-    <system-out><![CDATA[
-@Navigation
-Scenario: Successfully navigate to Order Info page &amp#27;[90m# com/skillstorm//navigation.feature:29&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am currently on the home page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.onTheHomePage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the Order Info menu option&amp#27;[0m       &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnOrderInfoOption()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the Order Info page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeOrderInfo()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:38:16 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successfully navigate to About page&quot;, &quot;Navigation Links&quot;](29)" classname="com.skillstorm.RunCucumberTest" time="9.076">
-    <system-out><![CDATA[
-@Navigation
-Scenario: Successfully navigate to About page &amp#27;[90m# com/skillstorm//navigation.feature:34&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am currently on the home page&amp#27;[0m       &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.onTheHomePage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the About menu option&amp#27;[0m       &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnAboutOption()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the About page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeAboutPage()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:38:26 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successfully navigate to Warehouse Stock page&quot;, &quot;Navigation Links&quot;](30)" classname="com.skillstorm.RunCucumberTest" time="10.224">
-    <system-out><![CDATA[
-@Navigation
-Scenario: Successfully navigate to Warehouse Stock page &amp#27;[90m# com/skillstorm//navigation.feature:39&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am currently on the home page&amp#27;[0m                 &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.onTheHomePage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the Warehouse Stock menu option&amp#27;[0m       &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnWarehouseStockOption()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the Warehouse Stock page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeWarehouseStockHeader()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:38:35 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successfully navigate with Add a Warehouse button&quot;, &quot;Navigation Links&quot;](31)" classname="com.skillstorm.RunCucumberTest" time="9.125">
-    <system-out><![CDATA[
-@Navigation
-Scenario: Successfully navigate with Add a Warehouse button &amp#27;[90m# com/skillstorm//navigation.feature:44&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am currently on the home page&amp#27;[0m                     &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.onTheHomePage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the Add a Warehouse menu button&amp#27;[0m           &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnAddAWarehouseMenuButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the Warehouse List page&amp#27;[0m                 &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeWarehouseListPage()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:38:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successfully navigate to all Candy Types pages&quot;, &quot;Navigation Links&quot;](32)" classname="com.skillstorm.RunCucumberTest" time="8.027">
-    <system-out><![CDATA[
-@Navigation
-Scenario Outline: Successfully navigate to all Candy Types pages &amp#27;[90m# com/skillstorm//navigation.feature:56&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Categories page&amp#27;[0m                        &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.iAmOnCandyCategoriesPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the desired &amp#27;[0m&amp#27;[32m&amp#27;[1m"Gummy Candy"&amp#27;[0m                      &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnTheDesiredCandyType(java.lang.String)&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the desired &amp#27;[0m&amp#27;[32m&amp#27;[1m"Gummy Candy"&amp#27;[0m&amp#27;[32m page&amp#27;[0m               &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeTheDesiredCandyType(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:38:54 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successfully navigate to all Candy Types pages&quot;, &quot;Navigation Links&quot;](33)" classname="com.skillstorm.RunCucumberTest" time="8.094">
-    <system-out><![CDATA[
-@Navigation
-Scenario Outline: Successfully navigate to all Candy Types pages &amp#27;[90m# com/skillstorm//navigation.feature:57&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Categories page&amp#27;[0m                        &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.iAmOnCandyCategoriesPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the desired &amp#27;[0m&amp#27;[32m&amp#27;[1m"Chocolate Candy"&amp#27;[0m                  &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnTheDesiredCandyType(java.lang.String)&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the desired &amp#27;[0m&amp#27;[32m&amp#27;[1m"Chocolate Candy"&amp#27;[0m&amp#27;[32m page&amp#27;[0m           &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeTheDesiredCandyType(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:39:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successfully navigate to all Candy Types pages&quot;, &quot;Navigation Links&quot;](34)" classname="com.skillstorm.RunCucumberTest" time="8.158">
-    <system-out><![CDATA[
-@Navigation
-Scenario Outline: Successfully navigate to all Candy Types pages &amp#27;[90m# com/skillstorm//navigation.feature:58&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Categories page&amp#27;[0m                        &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.iAmOnCandyCategoriesPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the desired &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m                       &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnTheDesiredCandyType(java.lang.String)&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the desired &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m page&amp#27;[0m                &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeTheDesiredCandyType(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:39:11 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successfully navigate to all Candy Types pages&quot;, &quot;Navigation Links&quot;](35)" classname="com.skillstorm.RunCucumberTest" time="8.19">
-    <system-out><![CDATA[
-@Navigation
-Scenario Outline: Successfully navigate to all Candy Types pages &amp#27;[90m# com/skillstorm//navigation.feature:59&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Categories page&amp#27;[0m                        &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.iAmOnCandyCategoriesPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the desired &amp#27;[0m&amp#27;[32m&amp#27;[1m"Taffy Candy"&amp#27;[0m                      &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnTheDesiredCandyType(java.lang.String)&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the desired &amp#27;[0m&amp#27;[32m&amp#27;[1m"Taffy Candy"&amp#27;[0m&amp#27;[32m page&amp#27;[0m               &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeTheDesiredCandyType(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:39:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successfully navigate to all Candy Types pages&quot;, &quot;Navigation Links&quot;](36)" classname="com.skillstorm.RunCucumberTest" time="8.18">
-    <system-out><![CDATA[
-@Navigation
-Scenario Outline: Successfully navigate to all Candy Types pages &amp#27;[90m# com/skillstorm//navigation.feature:60&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Categories page&amp#27;[0m                        &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.iAmOnCandyCategoriesPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the desired &amp#27;[0m&amp#27;[32m&amp#27;[1m"Lollipop Candy"&amp#27;[0m                   &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.clickOnTheDesiredCandyType(java.lang.String)&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the desired &amp#27;[0m&amp#27;[32m&amp#27;[1m"Lollipop Candy"&amp#27;[0m&amp#27;[32m page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.NavigationSteps.shouldSeeTheDesiredCandyType(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:39:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](37)" classname="com.skillstorm.RunCucumberTest" time="16.547">
+  <testcase name="runScenario[&quot;Successful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](1)" classname="com.skillstorm.RunCucumberTest" time="16.881">
     <system-out><![CDATA[
 @OrderItems
-Scenario Outline: Successful creating an order item &amp#27;[90m# com/skillstorm//orderItem.feature:11&amp#27;[0m
+Scenario Outline: Successful creating an order item &amp#27;[90m# com/skillstorm/orderItem.feature:11&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m          &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m"Jeremiah Mensah"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m"2.99"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"200"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                 &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
@@ -534,14 +69,17 @@ Air Heads
 200
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the order added in the list&amp#27;[0m     &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldSeeOrderItemWith()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:39:35 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Sep 05, 2024 9:26:48 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](38)" classname="com.skillstorm.RunCucumberTest" time="16.569">
+  <testcase name="runScenario[&quot;Unsuccessful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](2)" classname="com.skillstorm.RunCucumberTest" time="15.367">
     <system-out><![CDATA[
 @OrderItems
-Scenario Outline: Unsuccessful creating an order item       &amp#27;[90m# com/skillstorm//orderItem.feature:22&amp#27;[0m
+Scenario Outline: Unsuccessful creating an order item       &amp#27;[90m# com/skillstorm/orderItem.feature:22&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m                  &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m                          &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m"2.99"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"500"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                         &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
@@ -549,14 +87,14 @@ Scenario Outline: Unsuccessful creating an order item       &amp#27;[90m# com/sk
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m         &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI should see an error msg &amp#27;[0m&amp#27;[32m&amp#27;[1m"Customer Name is required"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldSeeAnErrorMsg(java.lang.String)&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:39:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 05, 2024 9:27:05 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](39)" classname="com.skillstorm.RunCucumberTest" time="16.344">
+  <testcase name="runScenario[&quot;Unsuccessful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](3)" classname="com.skillstorm.RunCucumberTest" time="15.414">
     <system-out><![CDATA[
 @OrderItems
-Scenario Outline: Unsuccessful creating an order item    &amp#27;[90m# com/skillstorm//orderItem.feature:23&amp#27;[0m
+Scenario Outline: Unsuccessful creating an order item    &amp#27;[90m# com/skillstorm/orderItem.feature:23&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m               &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m"Jeremiah Mensah"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                 &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m"2.99"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"500"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                      &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
@@ -564,14 +102,14 @@ Scenario Outline: Unsuccessful creating an order item    &amp#27;[90m# com/skill
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m      &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI should see an error msg &amp#27;[0m&amp#27;[32m&amp#27;[1m"Candy Name is required"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldSeeAnErrorMsg(java.lang.String)&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:40:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 05, 2024 9:27:20 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](40)" classname="com.skillstorm.RunCucumberTest" time="16.451">
+  <testcase name="runScenario[&quot;Unsuccessful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](4)" classname="com.skillstorm.RunCucumberTest" time="16.506">
     <system-out><![CDATA[
 @OrderItems
-Scenario Outline: Unsuccessful creating an order item                                               &amp#27;[90m# com/skillstorm//orderItem.feature:24&amp#27;[0m
+Scenario Outline: Unsuccessful creating an order item                                               &amp#27;[90m# com/skillstorm/orderItem.feature:24&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m                                                          &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m"Jeremiah Mensah"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m                                                   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"500"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                                                                     &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
@@ -579,14 +117,14 @@ Scenario Outline: Unsuccessful creating an order item                           
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI should see an error msg &amp#27;[0m&amp#27;[32m&amp#27;[1m"Price must be a positive number, and Price cannot contain letters"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldSeeAnErrorMsg(java.lang.String)&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:40:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 05, 2024 9:27:35 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](41)" classname="com.skillstorm.RunCucumberTest" time="16.489">
+  <testcase name="runScenario[&quot;Unsuccessful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](5)" classname="com.skillstorm.RunCucumberTest" time="16.575">
     <system-out><![CDATA[
 @OrderItems
-Scenario Outline: Unsuccessful creating an order item                                                                  &amp#27;[90m# com/skillstorm//orderItem.feature:25&amp#27;[0m
+Scenario Outline: Unsuccessful creating an order item                                                                  &amp#27;[90m# com/skillstorm/orderItem.feature:25&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m                                                                             &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m"Jeremiah Mensah"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m                                                                      &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m"2.99"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                                                                                       &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
@@ -594,14 +132,14 @@ Scenario Outline: Unsuccessful creating an order item                           
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m                                                                    &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI should see an error msg &amp#27;[0m&amp#27;[32m&amp#27;[1m"Quantity must be a number and greater than zero, and Quantity cannot contain letters"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldSeeAnErrorMsg(java.lang.String)&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:40:41 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 05, 2024 9:27:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](42)" classname="com.skillstorm.RunCucumberTest" time="16.538">
+  <testcase name="runScenario[&quot;Unsuccessful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](6)" classname="com.skillstorm.RunCucumberTest" time="14.32">
     <system-out><![CDATA[
 @OrderItems
-Scenario Outline: Unsuccessful creating an order item                                                                                                                                                                                                    &amp#27;[90m# com/skillstorm//orderItem.feature:26&amp#27;[0m
+Scenario Outline: Unsuccessful creating an order item                                                                                                                                                                                                    &amp#27;[90m# com/skillstorm/orderItem.feature:26&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m                                                                                                                                                                                                               &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                                                                                                                                                                                                                                &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                                                                                                                                                                                                                             &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
@@ -609,14 +147,14 @@ Scenario Outline: Unsuccessful creating an order item                           
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m                                                                                                                                                                                                      &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI should see an error msg &amp#27;[0m&amp#27;[32m&amp#27;[1m"Customer Name is required, and Candy Name is required, and Price must be a positive number, and Price cannot contain letters, and Quantity must be a number and greater than zero, and Quantity cannot contain letters"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldSeeAnErrorMsg(java.lang.String)&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:40:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 05, 2024 9:28:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Successful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](43)" classname="com.skillstorm.RunCucumberTest" time="16.658">
+  <testcase name="runScenario[&quot;Successful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](7)" classname="com.skillstorm.RunCucumberTest" time="16.601">
     <system-out><![CDATA[
 @OrderItems
-Scenario Outline: Successful updating an order item &amp#27;[90m# com/skillstorm//orderItem.feature:37&amp#27;[0m
+Scenario Outline: Successful updating an order item &amp#27;[90m# com/skillstorm/orderItem.feature:37&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m          &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on edit icon&amp#27;[0m                         &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickTheEditIcon()&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m"DJ Kim"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tootsie Pop"&amp#27;[0m           &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
@@ -629,14 +167,14 @@ Tootsie Pop
 300
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the order added in the list&amp#27;[0m     &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldSeeOrderItemWith()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:41:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 05, 2024 9:28:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](44)" classname="com.skillstorm.RunCucumberTest" time="16.818">
+  <testcase name="runScenario[&quot;Unsuccessful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](8)" classname="com.skillstorm.RunCucumberTest" time="15.412">
     <system-out><![CDATA[
 @OrderItems
-Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillstorm//orderItem.feature:48&amp#27;[0m
+Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillstorm/orderItem.feature:48&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on edit icon&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickTheEditIcon()&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tootsie Pop"&amp#27;[0m                   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
@@ -644,14 +182,14 @@ Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillsto
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Update Order Item button&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.iClickTheUpdateOrderItemButton()&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:41:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 05, 2024 9:28:39 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](45)" classname="com.skillstorm.RunCucumberTest" time="16.716">
+  <testcase name="runScenario[&quot;Unsuccessful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](9)" classname="com.skillstorm.RunCucumberTest" time="15.415">
     <system-out><![CDATA[
 @OrderItems
-Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillstorm//orderItem.feature:49&amp#27;[0m
+Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillstorm/orderItem.feature:49&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on edit icon&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickTheEditIcon()&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m"DJ Kim"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                        &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
@@ -659,14 +197,14 @@ Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillsto
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Update Order Item button&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.iClickTheUpdateOrderItemButton()&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:41:47 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 05, 2024 9:28:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](46)" classname="com.skillstorm.RunCucumberTest" time="16.592">
+  <testcase name="runScenario[&quot;Unsuccessful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](10)" classname="com.skillstorm.RunCucumberTest" time="16.578">
     <system-out><![CDATA[
 @OrderItems
-Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillstorm//orderItem.feature:50&amp#27;[0m
+Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillstorm/orderItem.feature:50&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on edit icon&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickTheEditIcon()&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m"DJ Kim"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tootsie Pop"&amp#27;[0m             &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
@@ -674,14 +212,14 @@ Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillsto
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Update Order Item button&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.iClickTheUpdateOrderItemButton()&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:42:04 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 05, 2024 9:29:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](47)" classname="com.skillstorm.RunCucumberTest" time="16.771">
+  <testcase name="runScenario[&quot;Unsuccessful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](11)" classname="com.skillstorm.RunCucumberTest" time="16.562">
     <system-out><![CDATA[
 @OrderItems
-Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillstorm//orderItem.feature:51&amp#27;[0m
+Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillstorm/orderItem.feature:51&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on edit icon&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickTheEditIcon()&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m"DJ Kim"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tootsie Pop"&amp#27;[0m             &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
@@ -689,14 +227,14 @@ Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillsto
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Update Order Item button&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.iClickTheUpdateOrderItemButton()&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:42:21 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 05, 2024 9:29:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](48)" classname="com.skillstorm.RunCucumberTest" time="16.761">
+  <testcase name="runScenario[&quot;Unsuccessful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](12)" classname="com.skillstorm.RunCucumberTest" time="14.342">
     <system-out><![CDATA[
 @OrderItems
-Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillstorm//orderItem.feature:52&amp#27;[0m
+Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillstorm/orderItem.feature:52&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on edit icon&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickTheEditIcon()&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                              &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
@@ -704,494 +242,19 @@ Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillsto
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Update Order Item button&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.iClickTheUpdateOrderItemButton()&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:42:38 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 05, 2024 9:29:43 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Deleting an order item&quot;, &quot;OrderItem CRUD operations&quot;](49)" classname="com.skillstorm.RunCucumberTest" time="8.137">
+  <testcase name="runScenario[&quot;Deleting an order item&quot;, &quot;OrderItem CRUD operations&quot;](13)" classname="com.skillstorm.RunCucumberTest" time="8.102">
     <system-out><![CDATA[
 @OrderItems
-Scenario: Deleting an order item                         &amp#27;[90m# com/skillstorm//orderItem.feature:54&amp#27;[0m
+Scenario: Deleting an order item                         &amp#27;[90m# com/skillstorm/orderItem.feature:54&amp#27;[0m
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m               &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
-Delete OrderItem Id:
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on delete icon&amp#27;[0m                            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickOnDeleteIcon()&amp#27;[0m
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe order item should not be visible in the table&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.orderItemShouldNotBeVisibleInTheTable()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:42:54 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Creating an order&quot;, &quot;Order CRUD operations&quot;](50)" classname="com.skillstorm.RunCucumberTest" time="10.451">
-    <system-out><![CDATA[
-@Orders
-Scenario Outline: Creating an order                                                          &amp#27;[90m# com/skillstorm//orders.feature:10&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order list page&amp#27;[0m                                                          &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iAmOnTheOrderListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI fill in &amp#27;[0m&amp#27;[32m&amp#27;[1m"Jordan Ellis"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Pending"&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"1110 Fake Address Dr, Greensboro NC, 20675"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iFillIn(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI click the Add order button&amp#27;[0m                                                          &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iClickTheAddOrderButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mnew order information should be in the table&amp#27;[0m                                          &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.newOrderInformationShouldBeInTheTable()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:43:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Creating an order with invalid input&quot;, &quot;Order CRUD operations&quot;](51)" classname="com.skillstorm.RunCucumberTest" time="9.428">
-    <system-out><![CDATA[
-@Orders
-Scenario Outline: Creating an order with invalid input                           &amp#27;[90m# com/skillstorm//orders.feature:19&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order list page&amp#27;[0m                                              &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iAmOnTheOrderListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI fill in &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Pending"&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"1110 Fake Address Dr, Greensboro NC, 20675"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iFillIn(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI click on the Add order button&amp#27;[0m                                           &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iClickOnTheAddOrderButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Customer Name is required"&amp#27;[0m                &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iShouldSeeAnErrorMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:43:13 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Creating an order with invalid input&quot;, &quot;Order CRUD operations&quot;](52)" classname="com.skillstorm.RunCucumberTest" time="9.385">
-    <system-out><![CDATA[
-@Orders
-Scenario Outline: Creating an order with invalid input                                &amp#27;[90m# com/skillstorm//orders.feature:20&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order list page&amp#27;[0m                                                   &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iAmOnTheOrderListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI fill in &amp#27;[0m&amp#27;[32m&amp#27;[1m"Jordan Ellis"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"1110 Fake Address Dr, Greensboro NC, 20675"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iFillIn(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI click on the Add order button&amp#27;[0m                                                &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iClickOnTheAddOrderButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Status is required"&amp#27;[0m                            &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iShouldSeeAnErrorMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:43:22 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Creating an order with invalid input&quot;, &quot;Order CRUD operations&quot;](53)" classname="com.skillstorm.RunCucumberTest" time="9.293">
-    <system-out><![CDATA[
-@Orders
-Scenario Outline: Creating an order with invalid input               &amp#27;[90m# com/skillstorm//orders.feature:21&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order list page&amp#27;[0m                                  &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iAmOnTheOrderListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI fill in &amp#27;[0m&amp#27;[32m&amp#27;[1m"Jordan Ellis"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Pending"&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                   &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iFillIn(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI click on the Add order button&amp#27;[0m                               &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iClickOnTheAddOrderButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Customer Address is required"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iShouldSeeAnErrorMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:43:32 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Creating an order with invalid input&quot;, &quot;Order CRUD operations&quot;](54)" classname="com.skillstorm.RunCucumberTest" time="9.274">
-    <system-out><![CDATA[
-@Orders
-Scenario Outline: Creating an order with invalid input                                                                      &amp#27;[90m# com/skillstorm//orders.feature:22&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order list page&amp#27;[0m                                                                                         &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iAmOnTheOrderListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI fill in &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                                                                                             &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iFillIn(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI click on the Add order button&amp#27;[0m                                                                                      &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iClickOnTheAddOrderButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Customer Name is required, and Status is required, and Customer Address is required"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iShouldSeeAnErrorMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:43:41 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;View the order list table&quot;, &quot;Order CRUD operations&quot;](55)" classname="com.skillstorm.RunCucumberTest" time="8.182">
-    <system-out><![CDATA[
-@Orders
-Scenario: View the order list table      &amp#27;[90m# com/skillstorm//orders.feature:24&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the base page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iAmOnTheBasePage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI navigate to the order list page&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iNavigateToTheOrderListPage()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the list of orders&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iShouldSeeTheListOfOrders()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:43:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Update an order&quot;, &quot;Order CRUD operations&quot;](56)" classname="com.skillstorm.RunCucumberTest" time="13.992">
-    <system-out><![CDATA[
-@Orders
-Scenario Outline: Update an order                                                        &amp#27;[90m# com/skillstorm//orders.feature:37&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order list page&amp#27;[0m                                                      &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iAmOnTheOrderListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit button&amp#27;[0m                                                           &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iClickTheEditButton()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI modify &amp#27;[0m&amp#27;[32m&amp#27;[1m"DJ Kim"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Completed"&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"1011 Super Address Dr, Ballston VA, 10234"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iModifyInformation(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the update order button&amp#27;[0m                                                    &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iClickTheUpdateOrderButton()&amp#27;[0m
-1 DJ Kim 2024-07-31 Completed 1011 Super Address Dr, Ballston VA, 10234
-DJ Kim
-Completed
-1011 Super Address Dr, Ballston VA, 10234
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the updated order in the list of orders&amp#27;[0m                              &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iShouldSeeTheUpdatedOrderInTheListOfOrders()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:43:58 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Update an order with invalid input&quot;, &quot;Order CRUD operations&quot;](57)" classname="com.skillstorm.RunCucumberTest" time="12.963">
-    <system-out><![CDATA[
-@Orders
-Scenario Outline: Update an order with invalid input                               &amp#27;[90m# com/skillstorm//orders.feature:48&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order list page&amp#27;[0m                                                &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iAmOnTheOrderListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit button&amp#27;[0m                                                     &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iClickTheEditButton()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI modify &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Completed"&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"1011 Super Address Dr, Ballston VA, 10234"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iModifyInformation(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the update order button&amp#27;[0m                                           &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iClickOnTheUpdateOrderButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Customer Name is required"&amp#27;[0m                  &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iShouldSeeAnErrorMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:44:12 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Update an order with invalid input&quot;, &quot;Order CRUD operations&quot;](58)" classname="com.skillstorm.RunCucumberTest" time="13.152">
-    <system-out><![CDATA[
-@Orders
-Scenario Outline: Update an order with invalid input                            &amp#27;[90m# com/skillstorm//orders.feature:49&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order list page&amp#27;[0m                                             &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iAmOnTheOrderListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit button&amp#27;[0m                                                  &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iClickTheEditButton()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI modify &amp#27;[0m&amp#27;[32m&amp#27;[1m"DJ Kim"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"1011 Super Address Dr, Ballston VA, 10234"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iModifyInformation(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the update order button&amp#27;[0m                                        &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iClickOnTheUpdateOrderButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Status is required"&amp#27;[0m                      &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iShouldSeeAnErrorMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:44:25 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Update an order with invalid input&quot;, &quot;Order CRUD operations&quot;](59)" classname="com.skillstorm.RunCucumberTest" time="12.982">
-    <system-out><![CDATA[
-@Orders
-Scenario Outline: Update an order with invalid input                 &amp#27;[90m# com/skillstorm//orders.feature:50&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order list page&amp#27;[0m                                  &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iAmOnTheOrderListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit button&amp#27;[0m                                       &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iClickTheEditButton()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI modify &amp#27;[0m&amp#27;[32m&amp#27;[1m"DJ Kim"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Completed"&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                      &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iModifyInformation(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the update order button&amp#27;[0m                             &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iClickOnTheUpdateOrderButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Customer Address is required"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iShouldSeeAnErrorMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:44:39 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Update an order with invalid input&quot;, &quot;Order CRUD operations&quot;](60)" classname="com.skillstorm.RunCucumberTest" time="13.073">
-    <system-out><![CDATA[
-@Orders
-Scenario Outline: Update an order with invalid input                                                                        &amp#27;[90m# com/skillstorm//orders.feature:51&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order list page&amp#27;[0m                                                                                         &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iAmOnTheOrderListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit button&amp#27;[0m                                                                                              &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iClickTheEditButton()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI modify &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                                                                                            &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iModifyInformation(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the update order button&amp#27;[0m                                                                                    &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iClickOnTheUpdateOrderButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Customer Name is required, and Status is required, and Customer Address is required"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iShouldSeeAnErrorMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:44:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Delete an order&quot;, &quot;Order CRUD operations&quot;](61)" classname="com.skillstorm.RunCucumberTest" time="8.084">
-    <system-out><![CDATA[
-@Orders
-Scenario: Delete an order                                     &amp#27;[90m# com/skillstorm//orders.feature:53&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order list page&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iAmOnTheOrderListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the delete button&amp#27;[0m                              &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.iClickTheDeleteIcon()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe order should not be visible in the order list page&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrdersStepDefinition.theOrderShouldNotBeVisibleInTheOrderListPage()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:45:05 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successful warehouse creation&quot;, &quot;Warehouse CRUD&quot;](62)" classname="com.skillstorm.RunCucumberTest" time="12.421">
-    <system-out><![CDATA[
-@Warehouse
-Scenario Outline: Successful warehouse creation                                     &amp#27;[90m# com/skillstorm//warehouse.feature:15&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse List page&amp#27;[0m                                             &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iAmOnTheWarehouseListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI fill in the &amp#27;[0m&amp#27;[32m&amp#27;[1m"123 Maplewood Lane, Brookfield, WI 53005"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"500000"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.fillInTheFields(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the ADD WAREHOUSE button&amp#27;[0m                                              &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.clickTheAddWarehouseButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the newly created Warehouse in the list of Warehouses&amp#27;[0m           &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iShouldSeeNewlyCreatedWarehouse()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI should see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Warehouse added successfully!"&amp#27;[0m                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.seeAlertErrorMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:45:13 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse creation&quot;, &quot;Warehouse CRUD&quot;](63)" classname="com.skillstorm.RunCucumberTest" time="10.248">
-    <system-out><![CDATA[
-@Warehouse
-Scenario Outline: Unsuccessful warehouse creation           &amp#27;[90m# com/skillstorm//warehouse.feature:26&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse List page&amp#27;[0m                     &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iAmOnTheWarehouseListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI fill in the &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"500000"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.fillInTheFields(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click ADD WAREHOUSE button&amp#27;[0m                          &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.clickAddWarehouseButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Location is required"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.seeAlertErrorMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:45:25 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse creation&quot;, &quot;Warehouse CRUD&quot;](64)" classname="com.skillstorm.RunCucumberTest" time="10.349">
-    <system-out><![CDATA[
-@Warehouse
-Scenario Outline: Unsuccessful warehouse creation                         &amp#27;[90m# com/skillstorm//warehouse.feature:27&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse List page&amp#27;[0m                                   &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iAmOnTheWarehouseListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI fill in the &amp#27;[0m&amp#27;[32m&amp#27;[1m"456 Elm Street, Riverton, NJ 08077"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m fields&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.fillInTheFields(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click ADD WAREHOUSE button&amp#27;[0m                                        &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.clickAddWarehouseButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Capacity must be a positive number"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.seeAlertErrorMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:45:35 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse creation&quot;, &quot;Warehouse CRUD&quot;](65)" classname="com.skillstorm.RunCucumberTest" time="10.217">
-    <system-out><![CDATA[
-@Warehouse
-Scenario Outline: Unsuccessful warehouse creation                                                   &amp#27;[90m# com/skillstorm//warehouse.feature:28&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse List page&amp#27;[0m                                                             &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iAmOnTheWarehouseListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI fill in the &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                                                               &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.fillInTheFields(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click ADD WAREHOUSE button&amp#27;[0m                                                                  &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.clickAddWarehouseButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Location is required, and Capacity must be a positive number"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.seeAlertErrorMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:45:46 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successful updating a warehouse&quot;, &quot;Warehouse CRUD&quot;](66)" classname="com.skillstorm.RunCucumberTest" time="13.877">
-    <system-out><![CDATA[
-@Warehouse
-Scenario Outline: Successful updating a warehouse                                           &amp#27;[90m# com/skillstorm//warehouse.feature:42&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse List page&amp#27;[0m                                                     &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iAmOnTheWarehouseListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the edit icon for the Warehouse I want to edit&amp#27;[0m                            &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iClickOnTheEditIconForTheWarehouseIWantToEdit()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Apt. 862 652 Shad Neck, South Hershelborough, IN 14539"&amp#27;[0m&amp#27;[32m and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"2000"&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iChangeWithValidCredentials(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the UPDATE WAREHOUSE button&amp#27;[0m                                                &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iClickOnTheUpdateWarehouseButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Warehouse updated successfully!"&amp#27;[0m                      &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.seeAlertErrorMessage(java.lang.String)&amp#27;[0m
-Actual 8 Apt. 862 652 Shad Neck, South Hershelborough, IN 14539 450/2000
-s Apt. 862 652 Shad Neck, South Hershelborough, IN 14539
-s 2000
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI should see the updated details for the Warehouse I edited in the list of Warehouses&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iShouldSeeTheUpdatedDetailsForTheWarehouseIEditedInTheListOfWarehouses()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:45:56 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful updating a warehouse&quot;, &quot;Warehouse CRUD&quot;](67)" classname="com.skillstorm.RunCucumberTest" time="12.094">
-    <system-out><![CDATA[
-@Warehouse
-Scenario Outline: Unsuccessful updating a warehouse                                                     &amp#27;[90m# com/skillstorm//warehouse.feature:54&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse List page&amp#27;[0m                                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iAmOnTheWarehouseListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the edit icon for the Warehouse I want to edit&amp#27;[0m                                        &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iClickOnTheEditIconForTheWarehouseIWantToEdit()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Apt. 862 652 Shad Neck, South Hershelborough, IN 14539"&amp#27;[0m&amp#27;[32m and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m to invalid fields&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iChangeWithInvalidCredentials(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the UPDATE WAREHOUSE button&amp#27;[0m                                                               &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iClickTheUpdateWarehouseButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Capacity must be a positive number"&amp#27;[0m                               &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.seeAlertErrorMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:46:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful updating a warehouse&quot;, &quot;Warehouse CRUD&quot;](68)" classname="com.skillstorm.RunCucumberTest" time="11.932">
-    <system-out><![CDATA[
-@Warehouse
-Scenario Outline: Unsuccessful updating a warehouse              &amp#27;[90m# com/skillstorm//warehouse.feature:55&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse List page&amp#27;[0m                          &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iAmOnTheWarehouseListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the edit icon for the Warehouse I want to edit&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iClickOnTheEditIconForTheWarehouseIWantToEdit()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"2000"&amp#27;[0m&amp#27;[32m to invalid fields&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iChangeWithInvalidCredentials(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the UPDATE WAREHOUSE button&amp#27;[0m                        &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iClickTheUpdateWarehouseButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Location is required"&amp#27;[0m      &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.seeAlertErrorMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:46:22 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful updating a warehouse&quot;, &quot;Warehouse CRUD&quot;](69)" classname="com.skillstorm.RunCucumberTest" time="11.94">
-    <system-out><![CDATA[
-@Warehouse
-Scenario Outline: Unsuccessful updating a warehouse                                                 &amp#27;[90m# com/skillstorm//warehouse.feature:56&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse List page&amp#27;[0m                                                             &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iAmOnTheWarehouseListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the edit icon for the Warehouse I want to edit&amp#27;[0m                                    &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iClickOnTheEditIconForTheWarehouseIWantToEdit()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m to invalid fields&amp#27;[0m                                                   &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iChangeWithInvalidCredentials(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the UPDATE WAREHOUSE button&amp#27;[0m                                                           &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iClickTheUpdateWarehouseButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Location is required, and Capacity must be a positive number"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.seeAlertErrorMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:46:34 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successful view of warehouse list&quot;, &quot;Warehouse CRUD&quot;](70)" classname="com.skillstorm.RunCucumberTest" time="8.254">
-    <system-out><![CDATA[
-@Warehouse
-Scenario: Successful view of warehouse list             &amp#27;[90m# com/skillstorm//warehouse.feature:59&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the home page&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.givenIAmOnTheHomePage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the Warehouse List option&amp#27;[0m             &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.clickOnWarehouseListOption()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should be navigated to the Warehouse List page&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iAmNavigatedToWarehouseListPage()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI should see a list of all warehouses available&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iSeeListOfWarehouses()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:46:46 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Delete a warehouse&quot;, &quot;Warehouse CRUD&quot;](71)" classname="com.skillstorm.RunCucumberTest" time="9.101">
-    <system-out><![CDATA[
-@Warehouse
-Scenario: Delete a warehouse                                           &amp#27;[90m# com/skillstorm//warehouse.feature:67&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse List page&amp#27;[0m                                &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iAmOnTheWarehouseListPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the delete icon for the Warehouse I want to delete&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.iClickOnTheDeleteIconForTheWarehouseIWantToDelete()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Warehouse deleted successfully!"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.seeAlertErrorMessage(java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mthe warehouse should not be visible in the table&amp#27;[0m                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStepDefinitions.theWarehouseShouldNotBeVisibleInTheTable()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:46:54 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successful warehouse stock creation with valid information&quot;, &quot;WarehouseStock CRUD&quot;](72)" classname="com.skillstorm.RunCucumberTest" time="12.383">
-    <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Successful warehouse stock creation with valid information                               &amp#27;[90m# com/skillstorm//warehouseStock.feature:15&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                                   &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Almondy Joy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"9877 Cedar Swamp Ave. Barberton, OH 44203"&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m"10"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m       &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.selectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Add Stock button&amp#27;[0m                                                                         &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickAddStockButton()&amp#27;[0m
-true
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the last row with &amp#27;[0m&amp#27;[32m&amp#27;[1m"Almondy Joy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"9877 Cedar Swamp Ave. Barberton, OH 44203"&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"10"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldSeeNewWarehouseStock(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mshould see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Added stock successfully!"&amp#27;[0m                                              &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.iShouldSeeAlertMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:47:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse stock creation with invalid and valid information&quot;, &quot;WarehouseStock CRUD&quot;](73)" classname="com.skillstorm.RunCucumberTest" time="11.454">
-    <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Unsuccessful warehouse stock creation with invalid and valid information                      &amp#27;[90m# com/skillstorm//warehouseStock.feature:27&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                                        &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI don't select &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"9877 Cedar Swamp Ave. Barberton, OH 44203"&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m"1000"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                   &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.dontSelectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Add Stock button&amp#27;[0m                                                                           &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnAddStockButton()&amp#27;[0m
-false
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be added with &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"9877 Cedar Swamp Ave. Barberton, OH 44203"&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"1000"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldNotSeeNewWarehouseStock(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mshould see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Candy Name is required"&amp#27;[0m                                                      &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.iShouldSeeAlertMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:47:16 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse stock creation with invalid and valid information&quot;, &quot;WarehouseStock CRUD&quot;](74)" classname="com.skillstorm.RunCucumberTest" time="11.372">
-    <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Unsuccessful warehouse stock creation with invalid and valid information &amp#27;[90m# com/skillstorm//warehouseStock.feature:28&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                   &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI don't select &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m"2000"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                              &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.dontSelectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Add Stock button&amp#27;[0m                                                      &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnAddStockButton()&amp#27;[0m
-false
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be added with &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"2000"&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldNotSeeNewWarehouseStock(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mshould see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Warehouse Location is required"&amp#27;[0m                         &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.iShouldSeeAlertMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:47:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse stock creation with invalid and valid information&quot;, &quot;WarehouseStock CRUD&quot;](75)" classname="com.skillstorm.RunCucumberTest" time="11.173">
-    <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Unsuccessful warehouse stock creation with invalid and valid information                               &amp#27;[90m# com/skillstorm//warehouseStock.feature:29&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI don't select &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"9877 Cedar Swamp Ave. Barberton, OH 44203"&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                       &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.dontSelectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Add Stock button&amp#27;[0m                                                                                    &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnAddStockButton()&amp#27;[0m
-false
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be added with &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"9877 Cedar Swamp Ave. Barberton, OH 44203"&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m     &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldNotSeeNewWarehouseStock(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mshould see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Quantity must be a number and greater than zero, and Quantity cannot contain letters"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.iShouldSeeAlertMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:47:38 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse stock creation with invalid and valid information&quot;, &quot;WarehouseStock CRUD&quot;](76)" classname="com.skillstorm.RunCucumberTest" time="11.203">
-    <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Unsuccessful warehouse stock creation with invalid and valid information                                                                                               &amp#27;[90m# com/skillstorm//warehouseStock.feature:30&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                                                                                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI don't select &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                                                                                                                                         &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.dontSelectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Add Stock button&amp#27;[0m                                                                                                                                                    &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnAddStockButton()&amp#27;[0m
-false
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be added with &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                                                                                                                       &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldNotSeeNewWarehouseStock(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mshould see an alert message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Candy Name is required, and Warehouse Location is required, and Quantity must be a number and greater than zero, and Quantity cannot contain letters"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.iShouldSeeAlertMessage(java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:47:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successful warehouse stock update with valid information&quot;, &quot;WarehouseStock CRUD&quot;](77)" classname="com.skillstorm.RunCucumberTest" time="13.42">
-    <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Successful warehouse stock update with valid information                                   &amp#27;[90m# com/skillstorm//warehouseStock.feature:44&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                                     &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon&amp#27;[0m                                                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickEditIcon()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI select a new &amp#27;[0m&amp#27;[32m&amp#27;[1m"Turking Taffy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"9877 Cedar Swamp Ave. Barberton, OH 44203"&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m"40"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m     &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.selectNewAndInputFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Update Stock button&amp#27;[0m                                                                        &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickUpdateStockButton()&amp#27;[0m
-false
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the last row with &amp#27;[0m&amp#27;[32m&amp#27;[1m"Turking Taffy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"9877 Cedar Swamp Ave. Barberton, OH 44203"&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"40"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldSeeNewWarehouseStock(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:48:01 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse stock update with invalid and valid information&quot;, &quot;WarehouseStock CRUD&quot;](78)" classname="com.skillstorm.RunCucumberTest" time="12.368">
-    <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Unsuccessful warehouse stock update with invalid and valid information                        &amp#27;[90m# com/skillstorm//warehouseStock.feature:56&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                                        &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon&amp#27;[0m                                                                                    &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickEditIcon()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI don't select a new &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"456 Oak Avenue Greenfield, MA 01201 USA"&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m"1000"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.doNotSelectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Update Stock button&amp#27;[0m                                                                        &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnUpdateStockButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be updated with &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"456 Oak Avenue Greenfield, MA 01201 USA"&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"1000"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldNotBeUpdatedWith(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:48:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse stock update with invalid and valid information&quot;, &quot;WarehouseStock CRUD&quot;](79)" classname="com.skillstorm.RunCucumberTest" time="12.408">
-    <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Unsuccessful warehouse stock update with invalid and valid information &amp#27;[90m# com/skillstorm//warehouseStock.feature:57&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon&amp#27;[0m                                                             &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickEditIcon()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI don't select a new &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m"2000"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                       &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.doNotSelectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Update Stock button&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnUpdateStockButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be updated with &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m"2000"&amp#27;[0m        &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldNotBeUpdatedWith(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:48:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse stock update with invalid and valid information&quot;, &quot;WarehouseStock CRUD&quot;](80)" classname="com.skillstorm.RunCucumberTest" time="12.364">
-    <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Unsuccessful warehouse stock update with invalid and valid information                             &amp#27;[90m# com/skillstorm//warehouseStock.feature:58&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                                             &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon&amp#27;[0m                                                                                         &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickEditIcon()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI don't select a new &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"456 Oak Avenue Greenfield, MA 01201 USA"&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.doNotSelectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Update Stock button&amp#27;[0m                                                                             &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnUpdateStockButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be updated with &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"456 Oak Avenue Greenfield, MA 01201 USA"&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldNotBeUpdatedWith(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:48:39 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful warehouse stock update with invalid and valid information&quot;, &quot;WarehouseStock CRUD&quot;](81)" classname="com.skillstorm.RunCucumberTest" time="12.356">
-    <system-out><![CDATA[
-@WarehouseStock
-Scenario Outline: Unsuccessful warehouse stock update with invalid and valid information &amp#27;[90m# com/skillstorm//warehouseStock.feature:59&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon&amp#27;[0m                                                             &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickEditIcon()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI don't select a new &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and input &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                                    &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.doNotSelectWarehouseStockFields(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Update Stock button&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnUpdateStockButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be updated with &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                     &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldNotBeUpdatedWith(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:48:51 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Successful view of warehouse stocks&quot;, &quot;WarehouseStock CRUD&quot;](82)" classname="com.skillstorm.RunCucumberTest" time="9.181">
-    <system-out><![CDATA[
-@WarehouseStock
-Scenario: Successful view of warehouse stocks               &amp#27;[90m# com/skillstorm//warehouseStock.feature:62&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am starting on the home page&amp#27;[0m                      &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.currentlyOnTheHomePage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the Warehouse Stock option&amp#27;[0m                &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnWarehouseStockOption()&amp#27;[0m
-http://cim-frontend.s3-website-us-east-1.amazonaws.com/stocks
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should be navigated to the Warehouse Stock page&amp#27;[0m    &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldBeNavigatedToWarehouseStock()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI should see a list of all warehouse stocks available&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.shouldSeeListOfAllWarehouseStocks()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:49:04 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Delete a warehouse stock&quot;, &quot;WarehouseStock CRUD&quot;](83)" classname="com.skillstorm.RunCucumberTest" time="8.106">
-    <system-out><![CDATA[
-@WarehouseStock
-Scenario: Delete a warehouse stock                                         &amp#27;[90m# com/skillstorm//warehouseStock.feature:70&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Warehouse Stock page&amp#27;[0m                                   &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.onWarehouseStockPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on the delete icon for the Warehouse Stock I want to delete&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.clickOnDeleteIconForWarehouseStock()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe warehouse stock should not be visible in the table&amp#27;[0m              &amp#27;[90m# com.skillstorm.cucumber.WarehouseStockSteps.warehouseStockShouldNotBeVisible()&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 7:49:13 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 05, 2024 9:29:58 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
