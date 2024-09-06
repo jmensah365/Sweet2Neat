@@ -307,7 +307,7 @@ const Orders = () => {
             <Snackbar 
             open={!!errorMessage}
             name='orderListSnackbarError'
-            autoHideDuration={60000}
+            autoHideDuration={6000}
             onClose={handleCloseSnackbar}
             > 
                 <Alert

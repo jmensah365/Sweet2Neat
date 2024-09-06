@@ -175,3 +175,5 @@ public class WarehouseStepDefinitions {
         String expectedString = "Warehouse Id Location Stock/Capacity Actions"; // Expected table header
         String actualUrl = this.warehouseList.getWarehouseTableContents(); // Get the table contents
         Assert.assertEquals(actualUrl, expectedString); // Assert that the table contents
+    }
+}

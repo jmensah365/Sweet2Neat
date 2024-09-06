@@ -162,6 +162,7 @@ const WarehouseList = () => {
 
     const handleCloseSnackbar = () => {
         setSuccessMessage('');
+        setErrorMessage('');
     };
 
     if (error) {
@@ -249,7 +250,7 @@ const WarehouseList = () => {
             <Snackbar 
             open={!!errorMessage}
             name='warehouseListSnackbarError'
-            autoHideDuration={60000}
+            autoHideDuration={6000}
             onClose={handleCloseSnackbar}
             > 
                 <Alert

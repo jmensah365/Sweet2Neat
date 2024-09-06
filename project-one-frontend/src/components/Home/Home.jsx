@@ -13,6 +13,7 @@ const Home = () => {
     const [error, setError] = useState(null);
     const [loaded, setLoaded] = useState(false);
 
+    //fetching warehouse data to put on home page
     useEffect(() => {
         fetch(url)
             .then(response => {
@@ -35,6 +36,7 @@ const Home = () => {
         navigate(path);
     }
     return (
+        //setting home page background to candy logo
         <>
         <Container component='main' sx={{flexGrow: 1, py: 4}}>
             <br/>
