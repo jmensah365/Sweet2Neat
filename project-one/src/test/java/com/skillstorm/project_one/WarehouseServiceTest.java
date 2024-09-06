@@ -67,8 +67,8 @@ public class WarehouseServiceTest {
         }
 
         // ensure correct iterable/list is returned
-        Assert.assertEquals(expectedWarehouses, warehouses);
-        Assert.assertEquals(2, count);
+        Assert.assertEquals(warehouses, expectedWarehouses);
+        Assert.assertEquals(count, 2);
     }
 
     @Test

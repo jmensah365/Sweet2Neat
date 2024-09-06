@@ -4,7 +4,7 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.008">
+           time="0.006">
     <properties></properties>
 
 
@@ -21,12 +21,12 @@
             </testcase>
             <testcase
                 name="testUpdateStock"
-                time="0.001"
+                time="0.000"
                 classname="com.skillstorm.project_one.StockServiceTest">
             </testcase>
             <testcase
                 name="testCreateStock"
-                time="0.002"
+                time="0.000"
                 classname="com.skillstorm.project_one.StockServiceTest">
             </testcase>
             <testcase
@@ -36,7 +36,7 @@
             </testcase>
             <testcase
                 name="testGetAllStockDTO"
-                time="0.002"
+                time="0.001"
                 classname="com.skillstorm.project_one.StockServiceTest">
             </testcase>
             <testcase
@@ -51,12 +51,12 @@
             </testcase>
             <testcase
                 name="testCreateStockCandyEmpty"
-                time="0.000"
+                time="0.001"
                 classname="com.skillstorm.project_one.StockServiceTest">
             </testcase>
             <testcase
                 name="testDeleteStock"
-                time="0.000"
+                time="0.001"
                 classname="com.skillstorm.project_one.StockServiceTest">
             </testcase>
             <testcase

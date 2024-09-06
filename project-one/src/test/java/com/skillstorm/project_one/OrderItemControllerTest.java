@@ -73,7 +73,7 @@ public class OrderItemControllerTest {
         // Assert: Verify that the list is not null, contains two items, and their IDs are correct
         assertEquals(response.getStatusCode(), HttpStatus.OK);
         assertNotNull(response.getBody());
-        assertEquals(2, ((List<OrderItemDTO>) response.getBody()).size()); // Check if the list size is 2
+        assertEquals(((List<OrderItemDTO>) response.getBody()).size(), 2); // Check if the list size is 2
     }
 
     @Test

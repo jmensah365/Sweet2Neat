@@ -23,9 +23,9 @@ public class OrderItemUnitTests {
     public void testGetters() {
         // When: The getters are called
         // Then: The values should match the initially set values
-        Assert.assertEquals(20, orderItem.getId());
-        Assert.assertEquals(BigDecimal.valueOf(2.99), orderItem.getPrice());
-        Assert.assertEquals(35, orderItem.getQuantity());
+        Assert.assertEquals(orderItem.getId(), 20);
+        Assert.assertEquals(orderItem.getPrice(), BigDecimal.valueOf(2.99));
+        Assert.assertEquals(orderItem.getQuantity(), 35);
     }
 
     @Test
@@ -37,9 +37,9 @@ public class OrderItemUnitTests {
 
         // When: The setters are called to update the OrderItem's attributes
         // Then: The values should match the expected result
-        Assert.assertEquals(25, orderItem.getId());
-        Assert.assertEquals(BigDecimal.valueOf(15.99), orderItem.getPrice());
-        Assert.assertEquals(40, orderItem.getQuantity());
+        Assert.assertEquals(orderItem.getId(), 25);
+        Assert.assertEquals(orderItem.getPrice(), BigDecimal.valueOf(15.99));
+        Assert.assertEquals(orderItem.getQuantity(), 40);
     }
 
     @Test
@@ -49,6 +49,6 @@ public class OrderItemUnitTests {
 
         // When: The toString() method is called
         // Then: The output should match the expected string
-        Assert.assertEquals(expectedString, orderItem.toString());
+        Assert.assertEquals(orderItem.toString(), expectedString);
     }
 }

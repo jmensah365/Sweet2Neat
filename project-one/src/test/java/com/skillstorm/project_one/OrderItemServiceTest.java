@@ -74,8 +74,8 @@ public class OrderItemServiceTest {
         List<OrderItemDTO> result = orderItemService.findAll();
 
         // Verify the result should contain the OrderItemDTO with the same ID and verify findAll() was called
-        assertEquals(1, result.size());
-        assertEquals((Integer) 1, result.get(0).getId());
+        assertEquals(result.size(), 1);
+        assertEquals(result.get(0).getId(), (Integer) 1);
         verify(orderItemRepo, times(1)).findAll();
     }
 
@@ -98,8 +98,8 @@ public class OrderItemServiceTest {
         List<OrderItemDTO> result = orderItemService.findByOrderId(1);
 
         // Verify the result should contain the OrderItemDTO with the same ID and verify findByOrderId(1) was called
-        assertEquals(1, result.size());
-        assertEquals((Integer) 1, result.get(0).getId());
+        assertEquals(result.size(), 1);
+        assertEquals(result.get(0).getId(), (Integer) 1);
         verify(orderItemRepo, times(1)).findByOrderId(1);
     }
 
@@ -128,20 +128,6 @@ public class OrderItemServiceTest {
         verify(orderRepo, times(1)).findById(1);
         verify(orderItemRepo, times(1)).save(any(OrderItem.class));
     }
-
-    // @Test(expectedExceptions = NoSuchElementException.class)
-    // public void testCreateOrderItem_OrderNotFound() {
-    //     // Given: A valid OrderItemDTO with Order ID 1, but the Order does not exist
-    //     OrderItemDTO dto = new OrderItemDTO();
-    //     dto.setCandyId(1);
-    //     dto.setOrderId(1);
-
-    //     when(orderRepo.findById(1)).thenReturn(Optional.empty());
-
-    //     // When: createOrderItem() is called
-    //     // Then: A NoSuchElementException is expected
-    //     orderItemService.createOrderItem(dto);
-    // }
 
     @Test
     public void testUpdateOrderItem_Success() {

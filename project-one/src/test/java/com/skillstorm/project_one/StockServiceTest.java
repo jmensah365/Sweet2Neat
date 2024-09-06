@@ -230,38 +230,6 @@ public class StockServiceTest {
 
         stockService.updateStock(0, dto);
     }
-
-    // @Test(expectedExceptions = NoSuchElementException.class)
-    // public void testUpdateStockNotFound() {
-    //     int stockId = 2;
-    //     // stub so func throws an exception
-    //     when(stockRepo.findById(stockId)).thenReturn(Optional.empty());
-
-    //     // grab the expection thrown
-    //     stockService.updateStock(stockId, dto);
-
-    // }
-
-    // @Test(expectedExceptions = NoSuchElementException.class)
-    // public void testUpdateStockCandyEmpty() {
-    //     int stockId = 17;
-    //     // stub so func throws an exception
-    //     when(candyRepo.findById(dto.getCandyId())).thenReturn(Optional.empty());
-
-    //     // grab the expection thrown
-    //     stockService.updateStock(stockId, dto);
-    // }
-
-    // @Test(expectedExceptions = NoSuchElementException.class)
-    // public void testUpdateStockWarehouseEmpty() {
-    //     int stockId = 17;
-    //     when(candyRepo.findById(dto.getCandyId())).thenReturn(Optional.ofNullable(candy1));
-    //     // stub so func throws an exception
-    //     when(warehouseRepo.findById(dto.getWarehouseId())).thenReturn(Optional.empty());
-
-    //     // grab the expection thrown
-    //     stockService.updateStock(stockId, dto);
-    // }
     
     @Test
     public void testDeleteStock() {

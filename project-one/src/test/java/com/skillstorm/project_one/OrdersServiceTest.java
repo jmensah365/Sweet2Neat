@@ -61,7 +61,7 @@ public class OrdersServiceTest {
 
         // ensure orders and sizes match
         Assert.assertEquals(orders, expectedOrders);
-        Assert.assertEquals(3, count);
+        Assert.assertEquals(count, 3);
     }
 
     @Test
@@ -100,7 +100,7 @@ public class OrdersServiceTest {
 
         // ensure orders and sizes match
         Assert.assertEquals(orders, expectedOrders);
-        Assert.assertEquals(2, count);
+        Assert.assertEquals(count, 2);
     }
 
     @Test

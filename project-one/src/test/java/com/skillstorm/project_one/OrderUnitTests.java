@@ -21,11 +21,11 @@ public class OrderUnitTests {
 
     @Test
     public void testGetters() {
-        Assert.assertEquals(10, orders.getId());
-        Assert.assertEquals("Jeremiah Mensah", orders.getCustomerName());
-        Assert.assertEquals(LocalDate.now(), orders.getOrderDate());
-        Assert.assertEquals("pending", orders.getStatus());
-        Assert.assertEquals("Apt. 404 609 Cruz Walks, Port Meghanmouth, CO 64357-4203", orders.getCustomerAddress());
+        Assert.assertEquals(orders.getId(), 10);
+        Assert.assertEquals(orders.getCustomerName(), "Jeremiah Mensah");
+        Assert.assertEquals(orders.getOrderDate(), LocalDate.now());
+        Assert.assertEquals(orders.getStatus(), "pending");
+        Assert.assertEquals(orders.getCustomerAddress(), "Apt. 404 609 Cruz Walks, Port Meghanmouth, CO 64357-4203");
     }
 
     @Test
@@ -35,10 +35,10 @@ public class OrderUnitTests {
         orders.setStatus("completed");
         orders.setCustomerAddress("Apt. 131 838 Walter Freeway, Geraldoburgh, PA 20991-9051");
 
-        Assert.assertEquals(2, orders.getId());
-        Assert.assertEquals("DJ Kim", orders.getCustomerName());
-        Assert.assertEquals("completed", orders.getStatus());
-        Assert.assertEquals("Apt. 131 838 Walter Freeway, Geraldoburgh, PA 20991-9051", orders.getCustomerAddress());
+        Assert.assertEquals(orders.getId(), 2);
+        Assert.assertEquals(orders.getCustomerName(), "DJ Kim");
+        Assert.assertEquals(orders.getStatus(), "completed");
+        Assert.assertEquals(orders.getCustomerAddress(), "Apt. 131 838 Walter Freeway, Geraldoburgh, PA 20991-9051");
     }
 
     @Test
@@ -46,6 +46,6 @@ public class OrderUnitTests {
         String expectedString = "Orders [id=10, customerName=Jeremiah Mensah, orderDate=" + orders.getOrderDate() + ", status=pending, customerAddress=Apt. 404 609 Cruz Walks, Port Meghanmouth, CO 64357-4203]";
         System.out.println(expectedString);
         System.out.println(orders.toString());
-        Assert.assertEquals(expectedString, orders.toString());
+        Assert.assertEquals(orders.toString(), expectedString);
     }
 }
