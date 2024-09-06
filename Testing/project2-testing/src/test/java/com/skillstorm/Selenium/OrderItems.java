@@ -72,24 +72,24 @@ public class OrderItems {
 
     public String selectCustomerName(String customerName) {
         RunCucumberTest.sleepThread();
+        this.customerName.click();
         if(!customerName.isEmpty()) {
-            this.customerName.click();
             RunCucumberTest.sleepThread();
             this.driver.findElement(By.xpath("//li[text()='" + customerName + "']")).click();
-        // } else {
-        //     this.driver.findElement(By.xpath("//li[text()='Clear Field']")).click();
+        } else {
+            this.driver.findElement(By.xpath("//li[text()='Clear Field']")).click();
         }
         return customerName;
     }
 
     public String selectCandy(String candyName) {
         RunCucumberTest.sleepThread();
+        this.candyName.click();
         if(!candyName.isEmpty()) {
-            this.candyName.click();
-            RunCucumberTest.sleepThread();
+        RunCucumberTest.sleepThread();
             this.driver.findElement(By.xpath("//li[text()='" + candyName + "']")).click();
-        // } else {
-        //     this.driver.findElement(By.xpath("//li[text()='Clear Field']")).click();
+        } else {
+            this.driver.findElement(By.xpath("//li[text()='Clear Field']")).click();
         }
         return candyName;
     }
@@ -123,13 +123,13 @@ public class OrderItems {
 
     public void clearQuantityField() {
         RunCucumberTest.sleepThread();
-        quantity.sendKeys(Keys.COMMAND + "a");
+        quantity.sendKeys(Keys.CONTROL + "a");
         quantity.sendKeys(Keys.DELETE);
     }
 
     public void clearPriceField() {
         RunCucumberTest.sleepThread();
-        price.sendKeys(Keys.COMMAND + "a");
+        price.sendKeys(Keys.CONTROL + "a");
         price.sendKeys(Keys.DELETE);
     }
 
