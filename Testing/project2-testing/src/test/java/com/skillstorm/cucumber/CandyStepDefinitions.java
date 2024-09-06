@@ -20,7 +20,8 @@ public class CandyStepDefinitions {
     public void before(){
         // Setting up ChromeOptions to run Chrome in headless mode (without GUI)
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
+        // options.addArguments("--headless","--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
+        options.addArguments("window-size=1920,1080");
         WebDriver driver = new ChromeDriver(options);
 
         // Initializing CandyList with the WebDriver instance
@@ -161,7 +162,8 @@ public class CandyStepDefinitions {
             Assert.assertTrue(expectedString.contains(s));
         }
     }
-     
+    
+    // after user clicks button after invalid input error modal should appear
     @Then("I should see an error message {string}")
     public void shouldSeeErrorMsg(String errormsg) {
         String expectedUrl = errormsg;
@@ -169,6 +171,7 @@ public class CandyStepDefinitions {
         Assert.assertEquals(actualUrl, expectedUrl);
     }
 
+    // helper function proper formatting for price and weight
     public String formatString(String input) {
         if(input.isEmpty()) {
             return "";

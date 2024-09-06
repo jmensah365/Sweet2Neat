@@ -19,6 +19,7 @@ public class OrderItemsSteps {
     private OrderItems orderItems;
     private String[] orderInfo;
 
+    // setup
     @Before("@OrderItems")
     public void before() {
         ChromeOptions options = new ChromeOptions();
@@ -28,11 +29,13 @@ public class OrderItemsSteps {
         orderInfo = new String[4];
     }
 
+    // teardown
     @After("@OrderItems")
     public void after() {
         orderItems.close();
     }
 
+    // user starts on order info page check url
     @Given("I am on the order information page")
     public void onTheOrderInformationPage() {
         this.orderItems.getOrderItemsPage();
@@ -41,12 +44,14 @@ public class OrderItemsSteps {
         Assert.assertEquals(actualUrl, expectedUrl);
     }
 
+    // user selects available dropdowns 
     @When("I select {string} and {string}")
     public void selectCustomerNameAndCandyName(String customerName, String candyName) {
         orderInfo[0] = this.orderItems.selectCustomerName(customerName);
         orderInfo[1] = this.orderItems.selectCandy(candyName);
     }
 
+    // user inputs valid or possible invalid information
     @And("input {string} and {string} fields")
     public void inputPriceAndQuantityFields(String price, String quantity) {
         this.orderItems.clearPriceField();
@@ -55,6 +60,7 @@ public class OrderItemsSteps {
         orderInfo[3] = this.orderItems.inputQuantity(quantity);
     }
 
+    // sim user clicking on add button and check it went through with success modal
     @And("I click the Add Order Item button")
     public void clickTheAddOrderItemButton() {
         this.orderItems.addOrderItemButton();
@@ -63,11 +69,13 @@ public class OrderItemsSteps {
         Assert.assertEquals(actualUrl, expectedUrl);
     }
 
+    // sim user clicking on add button but this is for invalid case we will check error message later
     @And("I click on the Add Order Item button")
     public void clickOnTheAddOrderItemButton() {
         this.orderItems.addOrderItemButton();
     }
 
+    // user should see the new order we will check the contents of the newly added row to make sure its there
     @Then("I should see the order added in the list")
     public void shouldSeeOrderItemWith() {
         String actualString = this.orderItems.getOrderItemsContents();
@@ -76,6 +84,7 @@ public class OrderItemsSteps {
         }
     }
 
+    // user should not see it for invalid cases and check its not added to the list
     @Then("I should not see the order added in the list")
     public void shouldNotSeeOrderItemWith() {
         String actualString = this.orderItems.getOrderItemsContents();
@@ -87,18 +96,21 @@ public class OrderItemsSteps {
     }
 
     //=============================== UPDATE ============================//
+    // sim user click on edit icon, check that the cancle edit button appears to be sure
     @When("I click on edit icon")
     public void clickTheEditIcon() {
         this.orderItems.clickEditIcon();
         Assert.assertTrue(this.orderItems.isCancelBtn());
     }
 
+    // sim user click the update button
     @And("I click the Update Order Item button")
     public void iClickTheUpdateOrderItemButton() {
         this.orderItems.updateOrderItemButton();
     }
 
     //=============================== DELETE ============================//
+    // sim user click on delete icon which we can check with the success modal popping up
     @When("I click on delete icon")
     public void clickOnDeleteIcon() {
         this.orderItems.clickOnDeleteIcon();
@@ -107,11 +119,13 @@ public class OrderItemsSteps {
         Assert.assertEquals(actualUrl, expectedUrl);
     }
 
+    // check that delete worked properly by iterating through the list and verify its not there
     @Then("the order item should not be visible in the table")
     public void orderItemShouldNotBeVisibleInTheTable() {
         Assert.assertFalse(this.orderItems.confirmDeletion());
     }
 
+    // this lets user know that an invalid input or no dropdowns were selected with specific information
     @And("I should see an error msg {string}")
     public void shouldSeeAnErrorMsg(String error) {
         String expectedUrl = error;

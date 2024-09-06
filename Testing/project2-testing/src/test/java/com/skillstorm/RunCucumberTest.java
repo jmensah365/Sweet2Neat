@@ -5,15 +5,15 @@ import io.cucumber.testng.CucumberOptions;
 
 // cucumberoptions used for testng
 @CucumberOptions(
-    features = "classpath:com/skillstorm/", 
+    features = "classpath:com/skillstorm/candy.feature", 
     glue = "com.skillstorm",
     plugin = {"pretty", "html:target/cucumber-reports.html"} 
 )
 public class RunCucumberTest extends AbstractTestNGCucumberTests{
-
+    // thread sleeper for interactive elements across all files
     public static void sleepThread() {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(700);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

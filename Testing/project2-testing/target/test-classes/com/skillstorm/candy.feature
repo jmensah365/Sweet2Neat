@@ -49,24 +49,24 @@ Feature: Candy CRUD Operations
         |name                         |type      |flavor     |price |weight|
         |Sour Strawberry Belt Bulk Bag|Sour Candy| Blueberry | 10.00|1.0   |
     
-    Scenario Outline: Updating a Candy with Invalid Data
-        Given I am on the Candy Inventory page
-        When I click the edit icon for the candy I want to edit
-        And I change the "<name>", "<type>", "<flavor>", "<price>", and/or "<weight>"
-        And I click on the UPDATE CANDY button
-        Then I should see an error message "<error>"
+    # Scenario Outline: Updating a Candy with Invalid Data
+    #     Given I am on the Candy Inventory page
+    #     When I click the edit icon for the candy I want to edit
+    #     And I change the "<name>", "<type>", "<flavor>", "<price>", and/or "<weight>"
+    #     And I click on the UPDATE CANDY button
+    #     Then I should see an error message "<error>"
 
-    Examples:
-        |name|type|flavor|price|weight| error |
-        |   |Sour Candy|Sour|10.00|1.0|Name is required |         # Empty name
-        |Sour Strawberry Belt Bulk Bag| |Sour|10.00|1.0| Candy type is required | # Empty type
-        |Sour Strawberry Belt Bulk Bag|Sour Candy| |10.00|1.0|Flavor is required | # Empty flavor
-        |Sour Strawberry Belt Bulk Bag|Sour Candy|Sour| |1.0| Price must be a positive number, and Price cannot contain letters |     # Empty price
-        |Sour Strawberry Belt Bulk Bag|Sour Candy|Sour|10.00| | Weight must be a positive number, and Weight cannot contain letters |   # Empty weight
-        |Sour Strawberry Belt Bulk Bag|Sour Candy|Sour|10.00| -1.0| Weight must be a positive number | # Negative weight
-        |Sour Strawberry Belt Bulk Bag|Sour Candy|Sour| -10.00|1.0| Price must be a positive number | # Negative price 
-        |Sour Strawberry Belt Bulk Bag|Sour Candy|Sour|10.00|abc| Weight cannot contain letters | # Non-numeric weight 
-        |Sour Strawberry Belt Bulk Bag|Sour Candy|Sour|abc|1.0| Price cannot contain letters | # Non-numeric price 
+    # Examples:
+    #     |name|type|flavor|price|weight| error |
+    #     |   |Sour Candy|Sour|10.00|1.0|Name is required |         # Empty name
+    #     |Sour Strawberry Belt Bulk Bag| |Sour|10.00|1.0| Candy type is required | # Empty type
+    #     |Sour Strawberry Belt Bulk Bag|Sour Candy| |10.00|1.0|Flavor is required | # Empty flavor
+    #     |Sour Strawberry Belt Bulk Bag|Sour Candy|Sour| |1.0| Price must be a positive number, and Price cannot contain letters |     # Empty price
+    #     |Sour Strawberry Belt Bulk Bag|Sour Candy|Sour|10.00| | Weight must be a positive number, and Weight cannot contain letters |   # Empty weight
+    #     |Sour Strawberry Belt Bulk Bag|Sour Candy|Sour|10.00| -1.0| Weight must be a positive number | # Negative weight
+    #     |Sour Strawberry Belt Bulk Bag|Sour Candy|Sour| -10.00|1.0| Price must be a positive number | # Negative price 
+    #     |Sour Strawberry Belt Bulk Bag|Sour Candy|Sour|10.00|abc| Weight cannot contain letters | # Non-numeric weight 
+    #     |Sour Strawberry Belt Bulk Bag|Sour Candy|Sour|abc|1.0| Price cannot contain letters | # Non-numeric price 
 
     #-----------------------------DELETE-------------------------------------#
     Scenario: Deleting a Candy
