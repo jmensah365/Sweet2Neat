@@ -1,12 +1,9 @@
 This Candy Inventory Management is a web application designed to efficiently manage candy inventory across multiple warehouses. This application provides CRUD (Create, Read, Update, and Delete) functionality for managing warehouses, candy inventory and types, and stock levels.
 
 
-SonarCloud:
-https://sonarcloud.io/organizations/candy-inventory-group/projects
-Jenkins Pipeline: 
-http://ec2-44-204-72-183.compute-1.amazonaws.com:8080/
-Jmeter performance trend:
-http://ec2-44-204-72-183.compute-1.amazonaws.com:8080/job/Sweet2Neat%20Pipeline/performance/
+- SonarCloud: https://sonarcloud.io/organizations/candy-inventory-group/projects
+- Jenkins Pipeline: http://ec2-44-204-72-183.compute-1.amazonaws.com:8080/
+- Jmeter performance trend: http://ec2-44-204-72-183.compute-1.amazonaws.com:8080/job/Sweet2Neat%20Pipeline/performance/
 
 1. Features
     - Warehouse management
