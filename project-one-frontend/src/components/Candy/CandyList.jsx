@@ -62,6 +62,7 @@ const CandyList = () => {
         }
     };
 
+    //validate candy information before form submission
     const validateCandyData = (data) => {
         let errorMessages = [];
     
@@ -152,6 +153,7 @@ const CandyList = () => {
         });
     };
 
+    //refresh candy details after an action
     const refreshCandyDetails = () => {
         fetch(url)
             .then(response => {
@@ -218,16 +220,6 @@ const CandyList = () => {
                     margin='normal'
                     className='textField'
                 />
-                {/* <TextField
-                    label='Type'
-                    name='type'
-                    value={editingCandy ? editingCandy.type : newCandy.type}
-                    onChange={handleInputChange}
-                    fullWidth
-                    required
-                    margin='normal'
-                    className='textField'
-                /> */}
 
                 {/* Using the set of candy types to create a drop down to limit user error */}
                 <FormControl fullWidth sx={{ backgroundColor: '#e6e6fa', marginTop: 1}}>
@@ -339,7 +331,7 @@ const CandyList = () => {
             <Snackbar 
             open={!!errorMessage}
             name='candyListSnackbarError'
-            autoHideDuration={60000}
+            autoHideDuration={6000}
             onClose={handleCloseSnackbar}
             > 
                 <Alert

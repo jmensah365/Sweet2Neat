@@ -48,6 +48,7 @@ const Orders = () => {
             });
     }, []);
 
+    //validating order data before submission
     const validateOrdersData = (data) => { // removed order date validation
         let errorMessages = [];
 
@@ -109,7 +110,7 @@ const Orders = () => {
             }
             setNewOrder({customerName: '', status: '', customerAddress: '',}); // removed saving orderdate state
             setSuccessMessage(editingOrders ? 'Order updated successfully!' : 'Order added successfully!');
-            refreshWarehouseDetails();
+            refreshOrdersDetails();
         })
         .catch(err => {
             console.log(err);
@@ -118,7 +119,8 @@ const Orders = () => {
     };
 
 
-    const refreshWarehouseDetails = () => {
+    //refreshing order table after an action
+    const refreshOrdersDetails = () => {
         fetch(url)
             .then(response => {
                 if (!response.ok) {
@@ -167,15 +169,6 @@ const Orders = () => {
         .catch(err => setError(err));
     };
 
-    // restructure the order date passed in so handleInputChange can handle it
-    // const handleOrderDate = (newOrderDate) => {
-    //     handleInputChange({
-    //         target: {
-    //             name: 'orderDate',
-    //             value: newOrderDate
-    //         }
-    //     });
-    // };
 
     const handleCloseSnackbar = () => {
         setSuccessMessage('');
@@ -201,16 +194,6 @@ const Orders = () => {
                     margin='normal'
                     className='textField'
                 />
-                {/* <TextField
-                    label='Order Date'
-                    name='orderDate'
-                    value={editingOrders ? editingOrders.orderDate : newOrder.orderDate}
-                    onChange={handleInputChange}
-                    fullWidth
-                    required
-                    margin='normal'
-                    className='textField'
-                /> */}
 
                 {/* LocalizationProvider makes sure the date is localized */}
                 {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -237,16 +220,6 @@ const Orders = () => {
                         }}
                     />
                 </LocalizationProvider> */}
-                            {/* <TextField
-                    label='Status'
-                    name='status'
-                    value={editingOrders ? editingOrders.status : newOrder.status}
-                    onChange={handleInputChange}
-                    fullWidth
-                    required
-                    margin='normal'
-                    className='textField'
-                /> */}
                 <FormControl fullWidth sx={{ backgroundColor: '#e6e6fa', marginTop:2, marginBottom:1 }}>
                     <InputLabel id="selectStatus" >Status*</InputLabel>
                     <Select 
@@ -334,7 +307,7 @@ const Orders = () => {
             <Snackbar 
             open={!!errorMessage}
             name='orderListSnackbarError'
-            autoHideDuration={60000}
+            autoHideDuration={6000}
             onClose={handleCloseSnackbar}
             > 
                 <Alert
