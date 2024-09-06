@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="198.776" tests="13" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="171.314" tests="13" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/surefire 2024-09-05T21-26-46_671-jvmRun1 surefire-20240905212646711_1tmp surefire_0-20240905212646711_2tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/surefire 2024-09-06T09-59-32_522-jvmRun1 surefire-20240906095932560_1tmp surefire_0-20240906095932560_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/test-classes:/Users/dj/Desktop/GitRepo/Sweet2Neat/Testing/project2-testing/target/classes:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-java/4.23.1/selenium-java-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-api/4.23.1/selenium-api-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.23.1/selenium-chrome-driver-4.23.1.jar:/Users/dj/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.23.1/selenium-chromium-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-json/4.23.1/selenium-json-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.23.1/selenium-manager-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v125/4.23.1/selenium-devtools-v125-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v126/4.23.1/selenium-devtools-v126-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v127/4.23.1/selenium-devtools-v127-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.23.1/selenium-devtools-v85-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.23.1/selenium-edge-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.23.1/selenium-firefox-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-http/4.23.1/selenium-http-4.23.1.jar:/Users/dj/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.23.1/selenium-ie-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.23.1/selenium-remote-driver-4.23.1.jar:/Users/dj/.m2/repository/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre.jar:/Users/dj/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/dj/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/dj/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/dj/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/Users/dj/.m2/repository/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1.jar:/Users/dj/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/dj/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-api/1.40.0/opentelemetry-api-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-context/1.40.0/opentelemetry-context-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.40.0/opentelemetry-exporter-logging-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.40.0/opentelemetry-sdk-common-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.40.0/opentelemetry-sdk-extension-autoconfigure-spi-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.40.0/opentelemetry-sdk-extension-autoconfigure-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.40.0-alpha/opentelemetry-api-incubator-1.40.0-alpha.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.40.0/opentelemetry-sdk-trace-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.40.0/opentelemetry-sdk-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.40.0/opentelemetry-sdk-metrics-1.40.0.jar:/Users/dj/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.40.0/opentelemetry-sdk-logs-1.40.0.jar:/Users/dj/.m2/repository/net/bytebuddy/byte-buddy/1.14.18/byte-buddy-1.14.18.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-os/4.23.1/selenium-os-4.23.1.jar:/Users/dj/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.23.1/selenium-safari-driver-4.23.1.jar:/Users/dj/.m2/repository/org/seleniumhq/selenium/selenium-support/4.23.1/selenium-support-4.23.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-java/7.11.1/cucumber-java-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-core/7.11.1/cucumber-core-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-gherkin/7.11.1/cucumber-gherkin-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.11.1/cucumber-gherkin-messages-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/gherkin/26.0.3/gherkin-26.0.3.jar:/Users/dj/.m2/repository/io/cucumber/messages/21.0.1/messages-21.0.1.jar:/Users/dj/.m2/repository/io/cucumber/tag-expressions/5.0.1/tag-expressions-5.0.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/Users/dj/.m2/repository/io/cucumber/datatable/7.11.1/datatable-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-plugin/7.11.1/cucumber-plugin-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/docstring/7.11.1/docstring-7.11.1.jar:/Users/dj/.m2/repository/io/cucumber/html-formatter/20.2.1/html-formatter-20.2.1.jar:/Users/dj/.m2/repository/io/cucumber/junit-xml-formatter/0.1.0/junit-xml-formatter-0.1.0.jar:/Users/dj/.m2/repository/io/cucumber/ci-environment/9.1.0/ci-environment-9.1.0.jar:/Users/dj/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/dj/.m2/repository/org/testng/testng/7.10.2/testng-7.10.2.jar:/Users/dj/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/dj/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/dj/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:/Users/dj/.m2/repository/io/cucumber/cucumber-testng/7.11.1/cucumber-testng-7.11.1.jar:"/>
@@ -54,207 +54,174 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="runScenario[&quot;Successful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](1)" classname="com.skillstorm.RunCucumberTest" time="16.881">
+  <testcase name="runScenario[&quot;Creating a Candy&quot;, &quot;Candy CRUD Operations&quot;](1)" classname="com.skillstorm.RunCucumberTest" time="16.141">
     <system-out><![CDATA[
-@OrderItems
-Scenario Outline: Successful creating an order item &amp#27;[90m# com/skillstorm/orderItem.feature:11&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m          &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m"Jeremiah Mensah"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m"2.99"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"200"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                 &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Add Order Item button&amp#27;[0m             &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickTheAddOrderItemButton()&amp#27;[0m
-Jeremiah Mensah Air Heads 2.99 200
-Jeremiah Mensah
-Air Heads
-2.99
-200
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the order added in the list&amp#27;[0m     &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldSeeOrderItemWith()&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy                                                 &amp#27;[90m# com/skillstorm/candy.feature:12&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the ADD CANDY button&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheAddCandyButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the newly created candy on the list&amp#27;[0m                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeTheNewlyCreatedCandyOnTheList()&amp#27;[0m
 ]]></system-out>
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Sep 05, 2024 9:26:48 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Sep 06, 2024 9:59:35 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](2)" classname="com.skillstorm.RunCucumberTest" time="15.367">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](2)" classname="com.skillstorm.RunCucumberTest" time="13.571">
     <system-out><![CDATA[
-@OrderItems
-Scenario Outline: Unsuccessful creating an order item       &amp#27;[90m# com/skillstorm/orderItem.feature:22&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m                  &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m                          &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m"2.99"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"500"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                         &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Add Order Item button&amp#27;[0m                  &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickOnTheAddOrderItemButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m         &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI should see an error msg &amp#27;[0m&amp#27;[32m&amp#27;[1m"Customer Name is required"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldSeeAnErrorMsg(java.lang.String)&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                  &amp#27;[90m# com/skillstorm/candy.feature:23&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                              &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                 &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Name is required"&amp#27;[0m               &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 9:27:05 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 06, 2024 9:59:50 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](3)" classname="com.skillstorm.RunCucumberTest" time="15.414">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](3)" classname="com.skillstorm.RunCucumberTest" time="12.769">
     <system-out><![CDATA[
-@OrderItems
-Scenario Outline: Unsuccessful creating an order item    &amp#27;[90m# com/skillstorm/orderItem.feature:23&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m               &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m"Jeremiah Mensah"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                 &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m"2.99"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"500"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                      &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Add Order Item button&amp#27;[0m               &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickOnTheAddOrderItemButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m      &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI should see an error msg &amp#27;[0m&amp#27;[32m&amp#27;[1m"Candy Name is required"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldSeeAnErrorMsg(java.lang.String)&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                     &amp#27;[90m# com/skillstorm/candy.feature:24&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                 &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                    &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Candy type is required"&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 9:27:20 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 06, 2024 10:00:03 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](4)" classname="com.skillstorm.RunCucumberTest" time="16.506">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](4)" classname="com.skillstorm.RunCucumberTest" time="13.723">
     <system-out><![CDATA[
-@OrderItems
-Scenario Outline: Unsuccessful creating an order item                                               &amp#27;[90m# com/skillstorm/orderItem.feature:24&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m                                                          &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m"Jeremiah Mensah"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m                                                   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"500"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                                                                     &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Add Order Item button&amp#27;[0m                                                          &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickOnTheAddOrderItemButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m                                                 &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI should see an error msg &amp#27;[0m&amp#27;[32m&amp#27;[1m"Price must be a positive number, and Price cannot contain letters"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldSeeAnErrorMsg(java.lang.String)&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                           &amp#27;[90m# com/skillstorm/candy.feature:25&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                       &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                          &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Flavor is required"&amp#27;[0m                      &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 9:27:35 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 06, 2024 10:00:16 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](5)" classname="com.skillstorm.RunCucumberTest" time="16.575">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](5)" classname="com.skillstorm.RunCucumberTest" time="13.87">
     <system-out><![CDATA[
-@OrderItems
-Scenario Outline: Unsuccessful creating an order item                                                                  &amp#27;[90m# com/skillstorm/orderItem.feature:25&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m                                                                             &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m"Jeremiah Mensah"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"Air Heads"&amp#27;[0m                                                                      &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m"2.99"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                                                                                       &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Add Order Item button&amp#27;[0m                                                                             &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickOnTheAddOrderItemButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m                                                                    &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI should see an error msg &amp#27;[0m&amp#27;[32m&amp#27;[1m"Quantity must be a number and greater than zero, and Quantity cannot contain letters"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldSeeAnErrorMsg(java.lang.String)&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                                                     &amp#27;[90m# com/skillstorm/candy.feature:26&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                                                 &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                                                    &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Price must be a positive number, and Price cannot contain letters"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 9:27:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 06, 2024 10:00:30 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful creating an order item&quot;, &quot;OrderItem CRUD operations&quot;](6)" classname="com.skillstorm.RunCucumberTest" time="14.32">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](6)" classname="com.skillstorm.RunCucumberTest" time="13.679">
     <system-out><![CDATA[
-@OrderItems
-Scenario Outline: Unsuccessful creating an order item                                                                                                                                                                                                    &amp#27;[90m# com/skillstorm/orderItem.feature:26&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m                                                                                                                                                                                                               &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                                                                                                                                                                                                                                &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                                                                                                                                                                                                                             &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the Add Order Item button&amp#27;[0m                                                                                                                                                                                                               &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickOnTheAddOrderItemButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m                                                                                                                                                                                                      &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI should see an error msg &amp#27;[0m&amp#27;[32m&amp#27;[1m"Customer Name is required, and Candy Name is required, and Price must be a positive number, and Price cannot contain letters, and Quantity must be a number and greater than zero, and Quantity cannot contain letters"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldSeeAnErrorMsg(java.lang.String)&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                                                       &amp#27;[90m# com/skillstorm/candy.feature:27&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                                                   &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                                                      &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Weight must be a positive number, and Weight cannot contain letters"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 9:28:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 06, 2024 10:00:44 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Successful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](7)" classname="com.skillstorm.RunCucumberTest" time="16.601">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](7)" classname="com.skillstorm.RunCucumberTest" time="13.82">
     <system-out><![CDATA[
-@OrderItems
-Scenario Outline: Successful updating an order item &amp#27;[90m# com/skillstorm/orderItem.feature:37&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m          &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on edit icon&amp#27;[0m                         &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickTheEditIcon()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m"DJ Kim"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tootsie Pop"&amp#27;[0m           &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m"7.99"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"300"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                 &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Update Order Item button&amp#27;[0m          &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.iClickTheUpdateOrderItemButton()&amp#27;[0m
-DJ Kim Tootsie Pop 7.99 300
-DJ Kim
-Tootsie Pop
-7.99
-300
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the order added in the list&amp#27;[0m     &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldSeeOrderItemWith()&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                                &amp#27;[90m# com/skillstorm/candy.feature:28&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"-1.00"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                               &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Price must be a positive number"&amp#27;[0m              &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 9:28:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 06, 2024 10:00:57 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](8)" classname="com.skillstorm.RunCucumberTest" time="15.412">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](8)" classname="com.skillstorm.RunCucumberTest" time="13.627">
     <system-out><![CDATA[
-@OrderItems
-Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillstorm/orderItem.feature:48&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on edit icon&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickTheEditIcon()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tootsie Pop"&amp#27;[0m                   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m"7.99"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"300"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Update Order Item button&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.iClickTheUpdateOrderItemButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                                &amp#27;[90m# com/skillstorm/candy.feature:29&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"-0.5"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                               &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Weight must be a positive number"&amp#27;[0m             &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 9:28:39 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 06, 2024 10:01:11 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](9)" classname="com.skillstorm.RunCucumberTest" time="15.415">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](9)" classname="com.skillstorm.RunCucumberTest" time="13.713">
     <system-out><![CDATA[
-@OrderItems
-Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillstorm/orderItem.feature:49&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on edit icon&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickTheEditIcon()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m"DJ Kim"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                        &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m"7.99"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"300"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Update Order Item button&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.iClickTheUpdateOrderItemButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                               &amp#27;[90m# com/skillstorm/candy.feature:30&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"abcd"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                              &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Price cannot contain letters"&amp#27;[0m                &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 9:28:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 06, 2024 10:01:25 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](10)" classname="com.skillstorm.RunCucumberTest" time="16.578">
+  <testcase name="runScenario[&quot;Creating a Candy with Invalid Data&quot;, &quot;Candy CRUD Operations&quot;](10)" classname="com.skillstorm.RunCucumberTest" time="13.657">
     <system-out><![CDATA[
-@OrderItems
-Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillstorm/orderItem.feature:50&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on edit icon&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickTheEditIcon()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m"DJ Kim"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tootsie Pop"&amp#27;[0m             &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"300"&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                       &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Update Order Item button&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.iClickTheUpdateOrderItemButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
+@Candy
+Scenario Outline: Creating a Candy with Invalid Data                               &amp#27;[90m# com/skillstorm/candy.feature:31&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI input the candy &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Skittles"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"4.99"&amp#27;[0m&amp#27;[32m, and, &amp#27;[0m&amp#27;[32m&amp#27;[1m"xyz"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iInputTheCandyInformation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on the ADD CANDY button&amp#27;[0m                                              &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickOnTheAddCandyButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see an error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Weight cannot contain letters"&amp#27;[0m               &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.shouldSeeErrorMsg(java.lang.String)&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 9:29:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 06, 2024 10:01:38 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](11)" classname="com.skillstorm.RunCucumberTest" time="16.562">
+  <testcase name="runScenario[&quot;Successful view of candy list&quot;, &quot;Candy CRUD Operations&quot;](11)" classname="com.skillstorm.RunCucumberTest" time="8.227">
     <system-out><![CDATA[
-@OrderItems
-Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillstorm/orderItem.feature:51&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on edit icon&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickTheEditIcon()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m"DJ Kim"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tootsie Pop"&amp#27;[0m             &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m"7.99"&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                      &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Update Order Item button&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.iClickTheUpdateOrderItemButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
+@Candy
+Scenario: Successful view of candy list        &amp#27;[90m# com/skillstorm/candy.feature:34&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Home page&amp#27;[0m                  &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheHomePage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI navigate to Candy Inventory&amp#27;[0m           &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iNavigateToTheCandyInventory()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mlist of all candies should be displayed&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.theListOfAllCandiesShouldBeDisplayed()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 9:29:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 06, 2024 10:01:52 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Unsuccessful updating an order item&quot;, &quot;OrderItem CRUD operations&quot;](12)" classname="com.skillstorm.RunCucumberTest" time="14.342">
+  <testcase name="runScenario[&quot;Updating a Candy&quot;, &quot;Candy CRUD Operations&quot;](12)" classname="com.skillstorm.RunCucumberTest" time="15.549">
     <system-out><![CDATA[
-@OrderItems
-Scenario Outline: Unsuccessful updating an order item &amp#27;[90m# com/skillstorm/orderItem.feature:52&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on edit icon&amp#27;[0m                           &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickTheEditIcon()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI select &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m                              &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.selectCustomerNameAndCandyName(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32minput &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m and &amp#27;[0m&amp#27;[32m&amp#27;[1m""&amp#27;[0m&amp#27;[32m fields&amp#27;[0m                          &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.inputPriceAndQuantityFields(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the Update Order Item button&amp#27;[0m            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.iClickTheUpdateOrderItemButton()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should not see the order added in the list&amp#27;[0m   &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.shouldNotSeeOrderItemWith()&amp#27;[0m
+@Candy
+Scenario Outline: Updating a Candy                                                                   &amp#27;[90m# com/skillstorm/candy.feature:50&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                                             &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the edit icon for the candy I want to edit&amp#27;[0m                                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheEditIconForTheCandyIWantToEdit()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI change the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Strawberry Belt Bulk Bag"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sour Candy"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Blueberry"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"10.00"&amp#27;[0m&amp#27;[32m, and/or &amp#27;[0m&amp#27;[32m&amp#27;[1m"1.0"&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iChangeCandyInfoWithValidInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click the UPDATE CANDY button&amp#27;[0m                                                                &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheUpdateCandyButton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI should see the updated candy in the candy table&amp#27;[0m                                             &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iShouldSeeTheUpdatedCandyInTheCandyTable()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 9:29:43 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 06, 2024 10:02:00 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Deleting an order item&quot;, &quot;OrderItem CRUD operations&quot;](13)" classname="com.skillstorm.RunCucumberTest" time="8.102">
+  <testcase name="runScenario[&quot;Deleting a Candy&quot;, &quot;Candy CRUD Operations&quot;](13)" classname="com.skillstorm.RunCucumberTest" time="8.265">
     <system-out><![CDATA[
-@OrderItems
-Scenario: Deleting an order item                         &amp#27;[90m# com/skillstorm/orderItem.feature:54&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the order information page&amp#27;[0m               &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.onTheOrderInformationPage()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on delete icon&amp#27;[0m                            &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.clickOnDeleteIcon()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe order item should not be visible in the table&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.OrderItemsSteps.orderItemShouldNotBeVisibleInTheTable()&amp#27;[0m
+@Candy
+Scenario: Deleting a Candy                                                          &amp#27;[90m# com/skillstorm/candy.feature:72&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am on the Candy Inventory page&amp#27;[0m                                            &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iAmOnTheCandyInventoryPage()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click the delete icon&amp#27;[0m                                                      &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.iClickTheDeleteIcon()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mthe candy should be deleted from the list and no longer visible in the table&amp#27;[0m &amp#27;[90m# com.skillstorm.cucumber.CandyStepDefinitions.theCandyShouldBeDeletedFromTheListAndNoLongerVisibleInTheTable()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Sep 05, 2024 9:29:58 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Sep 06, 2024 10:02:16 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 128, returning the closest version; found: 127; Please update to a Selenium version that supports CDP version 128
 ]]></system-err>
   </testcase>
