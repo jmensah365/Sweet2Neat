@@ -62,7 +62,7 @@ public class WarehouseList {
     @FindBy(xpath = "//table[@name='warehouseTable']//tr[last()]/td[2]")
     private WebElement warehouseRowLocation;
 
-    @FindBy(xpath = "//table[@name='warehouseTable']//tr[1]/td[1]")
+    @FindBy(xpath = "//tbody[@name='warehouseTBody']//tr[1]/td[1]")
     private WebElement warehouseFirstRowLocation;
 
     @FindBy(xpath = "//tbody[@name='warehouseTBody']//tr[last()]")
@@ -169,7 +169,7 @@ public class WarehouseList {
     // Method to confirm deletion by checking if the warehouse is removed
     public boolean confirmDeletion(){
         RunCucumberTest.sleepThread();
-        List<WebElement> tableRows = warehouseTable.findElements(By.xpath(".//tr/td[1]"));
+        List<WebElement> tableRows = firstRowWarehouse.findElements(By.xpath(".//tr/td[1]"));
         for(WebElement tr : tableRows) {
             // Check if the warehouse ID is still present in the table
             if(tr.getText().contains(warehouseId)){

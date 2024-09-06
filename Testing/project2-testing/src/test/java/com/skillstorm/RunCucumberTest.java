@@ -13,7 +13,7 @@ public class RunCucumberTest extends AbstractTestNGCucumberTests{
     // thread sleeper for interactive elements across all files
     public static void sleepThread() {
         try {
-            Thread.sleep(700);
+            Thread.sleep(750);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

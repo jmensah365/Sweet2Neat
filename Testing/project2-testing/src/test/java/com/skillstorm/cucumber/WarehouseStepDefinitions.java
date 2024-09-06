@@ -22,7 +22,7 @@ public class WarehouseStepDefinitions {
     public void before(){
         ChromeOptions options = new ChromeOptions();
         // Headless Chrome setup to run tests without opening a browser window
-        options.addArguments("--headless","--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
+        // options.addArguments("--headless","--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
         WebDriver driver = new ChromeDriver(options); // Initialize ChromeDriver
         this.warehouseList = new WarehouseList(driver); // Initialize the WarehouseList page object
         warehouse = new String[2]; // Array to store location and capacity values
