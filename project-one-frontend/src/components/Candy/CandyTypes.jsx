@@ -1,38 +1,47 @@
-import React from 'react'
+import React from 'react';
 import GummyCard from '../Cards/GummyCard';
 import ChoclateCard from '../Cards/ChoclateCard';
 import SourCandyCard from '../Cards/SourCandyCard';
 import TaffyCard from '../Cards/TaffyCard';
 import LollipopCard from '../Cards/LollipopCard';
-import { Typography,Container, Grid} from '@mui/material';
+import BubbleGumCard from '../Cards/BubbleGumCard';
+import { Typography, Container, Box } from '@mui/material';
 
 const CandyTypes = () => {
-  return (
-    <>
-    <div>CandyTypes</div>
-      <Container component='main' sx={{flexGrow: 1, py: 4}}>
-            <Typography variant='h2' name="candyTypesHeader" gutterBottom>Types of candy</Typography>
-            <Grid container spacing={8}>
-                <Grid item xs={12} sm={6} md={4}>
-                    <GummyCard/>
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <ChoclateCard/>
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <SourCandyCard/>
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <TaffyCard/>
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                    <LollipopCard/>
-                </Grid>
-            </Grid>
-        </Container>
-
-    </>
-  )
-}
+    return (
+        <>
+            <Container component='main' sx={{ flexGrow: 1, py: 4 }}>
+                <Typography variant='h2' name="candyTypesHeader" gutterBottom>Types of Candy</Typography>
+                <Box
+                    sx={{
+                        display: 'flex',
+                        overflowX: 'auto',
+                        gap: 2, 
+                        py: 2,
+                    }}
+                >
+                    <Box sx={{ minWidth: 300 }}>
+                        <GummyCard />
+                    </Box>
+                    <Box sx={{ minWidth: 300 }}>
+                        <ChoclateCard />
+                    </Box>
+                    <Box sx={{ minWidth: 300 }}>
+                        <SourCandyCard />
+                    </Box>
+                    <Box sx={{ minWidth: 300 }}>
+                        <TaffyCard />
+                    </Box>
+                    <Box sx={{ minWidth: 300 }}>
+                        <LollipopCard />
+                    </Box>
+                    <Box sx={{ minWidth: 300 }}>
+                        <BubbleGumCard />
+                    </Box>
+                </Box>
+            </Container>
+        </>
+    );
+};
 
 export default CandyTypes;
