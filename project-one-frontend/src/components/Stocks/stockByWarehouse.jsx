@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import '../../components/Forms.css';
 import {
-    Table, TableBody, TableCell, TableContainer,
+    Table, TableBody, TableCell, TableContainer, TablePagination,
     TableHead, TableRow, Paper, Typography, Box,
     TextField, Button, IconButton, Snackbar, Alert,
-    FormControl, InputLabel, Select, MenuItem,
+    FormControl, InputLabel, Select, MenuItem, Dialog, DialogTitle, DialogContent, DialogActions
 } from '@mui/material';
 import Edit from '@mui/icons-material/Edit';
 import Delete from '@mui/icons-material/Delete';
@@ -33,6 +33,29 @@ const WarehouseStocks = () => {
     const [editingStock, setEditingStock] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+
+    //state for pagination
+    const [page, setPage] = useState(0);
+    const [rowsPerPage, setRowsPerPage] = useState(5);
+
+    //handle page change
+    const handleChangePage = (event, newPage) => {
+        setPage(newPage);
+    };
+
+    //handle rows per page change
+    const handleChangeRowsPerPage = (event) => {
+        setRowsPerPage(parseInt(event.target.value, 10));
+        setPage(0);
+    };
+
+    //pageinate the data
+    const paginatedData = stocks.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
+
+    //state for opening modals
+    const [open, setOpen] = useState(false);
+    const [selectStockId, setSelectStockId] = useState(null);
+
 
     useEffect(() => {
         // Fetch stocks
@@ -197,14 +220,27 @@ const WarehouseStocks = () => {
         .catch(err => setError(err));
     };
 
+    const handleOpenModal = (id) => {
+        setSelectStockId(id);
+        setOpen(true);
+    };
+
+    // Close the modal
+    const handleCloseModal = () => {
+        setSelectStockId(null);
+        setOpen(false);
+    };
+
+    const handleConfirmDelete = () => {
+        handleDeleteStock(selectStockId);
+        handleCloseModal();
+    };
+
     const handleCloseSnackbar = () => {
         setSuccessMessage('');
         setErrorMessage('');
     };
 
-    if (error) {
-        return <Typography>Error: {error.message}</Typography>;
-    }
 
     const getWarehouseName = (id) => {
         const warehouse = warehouses.find(w => w.id === id);
@@ -283,7 +319,7 @@ const WarehouseStocks = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody name='tableBody'>
-                        {stocks.map((stock) => (
+                        {paginatedData.map((stock) => (
                             <TableRow key={stock.id}>
                                 <TableCell>{getWarehouseName(stock.warehouseId)}</TableCell>
                                 <TableCell>{getCandyName(stock.candyId)}</TableCell>
@@ -292,7 +328,7 @@ const WarehouseStocks = () => {
                                     <IconButton name='editIcon' onClick={() => handleEdit(stock)}>
                                         <Edit />
                                     </IconButton>
-                                    <IconButton name='deleteIcon' onClick={() => handleDeleteStock(stock.id)}>
+                                    <IconButton name='deleteIcon' onClick={() => handleOpenModal(stock.id)}>
                                         <Delete />
                                     </IconButton>
                                 </TableCell>
@@ -300,10 +336,29 @@ const WarehouseStocks = () => {
                         ))}
                     </TableBody>
                 </Table>
+                <Dialog open={open} onClose={handleCloseModal}>
+                    <DialogTitle>Confirm Deletion</DialogTitle>
+                        <DialogContent>
+                            <Typography>Are you sure you want to delete this stock?</Typography>
+                        </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleCloseModal} color='primary'>Cancel</Button>
+                        <Button onClick={handleConfirmDelete} style={{color: 'red'}} >Delete</Button>
+                    </DialogActions>
+                </Dialog>  
+                <TablePagination
+                    component={'div'}
+                    count={stocks.length}
+                    page={page}
+                    rowsPerPage={rowsPerPage}
+                    onPageChange={handleChangePage}
+                    onRowsPerPageChange={handleChangeRowsPerPage}
+                    rowsPerPageOptions={[5, 10, 25, {label: 'All', value: stocks.length}]}
+                />
             </TableContainer>
             <Snackbar 
                 open={!!successMessage}
-                autoHideDuration={6000}
+                autoHideDuration={2000}
                 name='warehouseStockSnackbar'
                 onClose={handleCloseSnackbar}
             > 
@@ -314,7 +369,7 @@ const WarehouseStocks = () => {
             <Snackbar 
             open={!!errorMessage}
             name='warehouseStockSnackbarError'
-            autoHideDuration={6000}
+            autoHideDuration={2000}
             onClose={handleCloseSnackbar}
             > 
                 <Alert

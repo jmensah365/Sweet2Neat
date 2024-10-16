@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import {
-    Table, TableBody, TableCell, TableContainer,
+    Table, TableBody, TableCell, TableContainer, TablePagination,
     TableHead, TableRow, Paper, Typography, Alert, AlertTitle,
-    TextField, Button, Box, IconButton, Snackbar
+    TextField, Button, Box, IconButton, Snackbar, Dialog, DialogTitle, DialogContent, DialogActions, Tooltip, LinearProgress
 } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit'
 import DeleteIcon from '@mui/icons-material/Delete'
@@ -23,6 +23,28 @@ const WarehouseList = () => {
     const [error, setError] = useState(null);
     const [loaded, setLoaded] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+
+    //state for pagination
+    const [page, setPage] = useState(0);
+    const [rowsPerPage, setRowsPerPage] = useState(5);
+
+    //state for opening modals
+    const [open, setOpen] = useState(false);
+    const [selectWarehouseId, setSelectWarehouseId] = useState(null);
+
+    //handle page change
+    const handleChangePage = (event, newPage) => {
+        setPage(newPage);
+    };
+
+    //handle rows per page change
+    const handleChangeRowsPerPage = (event) => {
+        setRowsPerPage(parseInt(event.target.value, 10));
+        setPage(0);
+    };
+
+    //Paginate the data
+    const paginatedData = warehouses.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
     
 
 
@@ -160,6 +182,23 @@ const WarehouseList = () => {
         .catch(err => setError(err));
     };
 
+    //open the modal and set the warehouse ID
+    const handleOpenModal = (id) => {
+        setSelectWarehouseId(id);
+        setOpen(true);
+    };
+
+    //close the modal
+    const handleCloseModal = () => {
+        setSelectWarehouseId(null);
+        setOpen(false);
+    };
+
+    const handleConfirmDelete = () => {
+        handleDelete(selectWarehouseId);
+        handleCloseModal();
+    };
+
     const handleCloseSnackbar = () => {
         setSuccessMessage('');
         setErrorMessage('');
@@ -209,35 +248,63 @@ const WarehouseList = () => {
                 <Table name='warehouseTable'>
                     <TableHead>
                         <TableRow>
-                            <TableCell>Warehouse Id</TableCell>
                             <TableCell>Location</TableCell>
                             <TableCell>Stock/Capacity</TableCell>
                             <TableCell>Actions</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody name='warehouseTBody'>
-                        {warehouses.map(warehouse => (
+                        {paginatedData.map(warehouse => (
                             <TableRow key={warehouse.id}>
-                                <TableCell>{warehouse.id}</TableCell>
                                 <TableCell>{warehouse.location}</TableCell>
-                                <TableCell>{warehouse.currentStock}/{warehouse.capacity}</TableCell>
                                 <TableCell>
-                                    <IconButton name='editIcon' onClick={() => handleEdit(warehouse)}>
+                                    <Typography>{warehouse.currentStock}/{warehouse.capacity}</Typography>
+                                    <LinearProgress
+                                        variant='determinate'
+                                        value={(warehouse.currentStock / warehouse.capacity) * 100}
+                                        sx={{mt: 1, height: 5, borderRadius: 5}}
+                                    />
+                                </TableCell>
+                                <TableCell>
+                                <Tooltip title="Edit Warehouse">
+                                    <IconButton onClick={() => handleEdit(warehouse)}>
                                         <EditIcon />
                                     </IconButton>
-                                    <IconButton name='deleteIcon' onClick={() => handleDelete(warehouse.id)}>
+                                </Tooltip>
+                                <Tooltip title="Delete Warehouse">
+                                    <IconButton name='deleteIcon' onClick={() => handleOpenModal(warehouse.id)}>
                                         <DeleteIcon />
                                     </IconButton>
+                                </Tooltip>
                                 </TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
                 </Table>
+                <Dialog open={open} onClose={handleCloseModal}>
+                    <DialogTitle>Confirm Deletion</DialogTitle>
+                    <DialogContent>
+                        <Typography>Are you sure you want to delete this warehouse?</Typography>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleCloseModal} color='primary'>Cancel</Button>
+                        <Button onClick={handleConfirmDelete} style={{color: 'red' }}>Delete</Button>
+                    </DialogActions>
+                </Dialog>
+                <TablePagination
+                    component={'div'}
+                    count={warehouses.length}
+                    page={page}
+                    onPageChange={handleChangePage}
+                    rowsPerPage={rowsPerPage}
+                    onRowsPerPageChange={handleChangeRowsPerPage}
+                    rowsPerPageOptions={[5, 10, 25, {label: 'All', value: warehouses.length}]}
+                />
             </TableContainer>
             <Snackbar
                 open={!!successMessage}
                 name='WarehouseListSnackbar'
-                autoHideDuration={6000}
+                autoHideDuration={2000}
                 onClose={handleCloseSnackbar}
             > 
                 <Alert
@@ -250,7 +317,7 @@ const WarehouseList = () => {
             <Snackbar 
             open={!!errorMessage}
             name='warehouseListSnackbarError'
-            autoHideDuration={6000}
+            autoHideDuration={2000}
             onClose={handleCloseSnackbar}
             > 
                 <Alert
