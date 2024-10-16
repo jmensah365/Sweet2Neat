@@ -4,10 +4,8 @@ This Candy Inventory Management is a web application designed to efficiently man
 - Burp Suite Demo:
 https://github.com/user-attachments/assets/8bc68b53-0a8b-456c-84ae-734d73c54fba
 
-
 - SonarCloud: https://sonarcloud.io/organizations/candy-inventory-group/projects
-- Jenkins Pipeline: http://ec2-44-204-72-183.compute-1.amazonaws.com:8080/
-- Jmeter performance trend: http://ec2-44-204-72-183.compute-1.amazonaws.com:8080/job/Sweet2Neat%20Pipeline/performance/
+
   
 1. Features
     - Warehouse management
