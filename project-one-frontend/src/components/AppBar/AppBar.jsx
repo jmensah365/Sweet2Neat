@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { AppBar, Toolbar, IconButton, Button, Menu, MenuItem, Badge } from "@mui/material";
 import candyImage from '../../assets/CandyPics/CandyLogos/logo.png'
 import { useNavigate } from "react-router-dom";
+import SearchBar from "../SearchBar/SearchBar";
 import './AppBar.css'
 import WarehouseIcon from '@mui/icons-material/Warehouse';
 
@@ -105,7 +106,7 @@ const AppBarComponent = () => {
                     onClose={handleProductsMenuClose}
                 >
                     <MenuItem name='candyRoute' onClick={() => navigateTo('/candy')}>Candy Inventory</MenuItem>
-                    <MenuItem name='candyTypesRoute' onClick={() => navigateTo('/candyTypes')}>Candy categories</MenuItem>
+                    <MenuItem name='candyTypesRoute' onClick={() => navigateTo('/candyTypes')}>Candy Categories</MenuItem>
                 </Menu>
 
                 <Button
@@ -138,7 +139,7 @@ const AppBarComponent = () => {
                     onClose={handleOrdersMenuClose}
                 >
                     <MenuItem name='orderListRoute' onClick={() => navigateTo('/orders')}>List of Orders</MenuItem>
-                    <MenuItem name='orderInfoRoute' onClick={() => navigateTo('/orderInfo')}>Order Info</MenuItem>
+                    <MenuItem name='orderInfoRoute' onClick={() => navigateTo('/orderInfo')}>Order Information</MenuItem>
                 </Menu>
                 <Button
                     color="inherit"
@@ -148,6 +149,9 @@ const AppBarComponent = () => {
                 >
                     About
                 </Button>
+                </div>
+                <div>
+                    {/*<SearchBar></SearchBar>*/}
                 </div>
                 <div>
                 <Button name='homeAddAWarehouseBtn' variant='contained' color='primary' size='large' onClick={() => navigateTo('/warehouses')}>
