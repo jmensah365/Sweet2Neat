@@ -2,10 +2,10 @@ import React from 'react';
 import '../../components/Forms.css';
 import { useState, useEffect } from "react";
 import {
-    Table, TableBody, TableCell, TableContainer,
+    Table, TableBody, TableCell, TableContainer, TablePagination,
     TableHead, TableRow, Paper, CircularProgress, Typography, Box,
-    TextField, Alert, Button, IconButton, Snackbar, AlertTitle,
-    FormControl, InputLabel, Select, MenuItem
+    TextField, Alert, Button, IconButton, Snackbar,
+    FormControl, InputLabel, Select, MenuItem, Dialog, DialogTitle, DialogContent, DialogActions, Tab
 } from '@mui/material';
 import Edit from '@mui/icons-material/Edit';
 import Delete from '@mui/icons-material/Delete';
@@ -35,6 +35,30 @@ const OrderInfo = () => {
     const [editingOrderItem, setEditingOrderItem] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+
+    //state for pagination
+    const [page, setPage] = useState(0);
+    const [rowsPerPage, setRowsPerPage] = useState(5);
+
+    //handle page change 
+    const handleChangePage = (event, newPage) => {
+        setPage(newPage);
+    };
+
+    //handle rows per page change
+    const handleChangeRowsPerPage = (event) => {
+        setRowsPerPage(parseInt(event.target.value, 10));
+        setPage(0);
+    };
+
+    //paginate the data
+    const paginatedData = orderItem.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
+
+
+    //state for opening modals
+    const [open, setOpen] = useState(false);
+    const [selectOrderItemId, setSelectOrderItemId] = useState(null);
+
 
     //fetch order items, orders, and candies when the component mounts
     useEffect(() => {
@@ -194,14 +218,26 @@ const OrderInfo = () => {
         .catch(err => setError(err));
     }
 
+    const handleOpenModal = (id) => {
+        setSelectOrderItemId(id);
+        setOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setSelectOrderItemId(null);
+        setOpen(false);
+    };
+
+    const handleConfirmDelete = () => {
+        handleDeleteOrderItem(selectOrderItemId);
+        handleCloseModal();
+    };
+
     const handleCloseSnackbar = () => {
         setSuccessMessage('');
         setErrorMessage('');
     }
 
-    if (!loaded) {
-        return <CircularProgress />;
-    }
 
     const getCustomerName = (id) => {
         const foundOrder = order.find(o => o.id === id);
@@ -288,13 +324,13 @@ const OrderInfo = () => {
                         <TableRow>
                             <TableCell>Customer</TableCell>
                             <TableCell>Candy Ordered</TableCell>
-                            <TableCell>Total price</TableCell>
+                            <TableCell>Total price($)</TableCell>
                             <TableCell>Quantity </TableCell>
                             <TableCell>Actions </TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody name="tableBody">
-                        {orderItem.map(orderItem => (
+                        {paginatedData.map(orderItem => (
                             <TableRow key={orderItem.id}>
                                 <TableCell>{getCustomerName(orderItem.orderId)}</TableCell>
                                 <TableCell>{getCandyName(orderItem.candyId)}</TableCell>
@@ -304,7 +340,7 @@ const OrderInfo = () => {
                                 <IconButton name='editIcon' onClick={() => handleEdit(orderItem)}>
                                     <Edit />
                                 </IconButton>
-                                <IconButton name='deleteIcon' onClick={() => handleDeleteOrderItem(orderItem.id)}>
+                                <IconButton name='deleteIcon' onClick={() => handleOpenModal(orderItem.id)}>
                                     <Delete />
                                 </IconButton>
                             </TableCell>
@@ -312,10 +348,29 @@ const OrderInfo = () => {
                         ))}
                     </TableBody>
                 </Table>
+                <Dialog open={open} onClose={handleCloseModal}>
+                    <DialogTitle>Confirm Deletion</DialogTitle>
+                    <DialogContent>
+                        <Typography>Are you sure you want to delete this order item?</Typography>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleCloseModal} color='primary'>Cancel</Button>
+                        <Button onClick={handleConfirmDelete} style={{color: 'red'}}>Delete</Button>
+                    </DialogActions>
+                </Dialog>
+                <TablePagination
+                    component={'div'}
+                    count={orderItem.length}
+                    page={page}
+                    onPageChange={handleChangePage}
+                    rowsPerPage={rowsPerPage}
+                    onRowsPerPageChange={handleChangeRowsPerPage}
+                    rowsPerPageOptions={[5, 10, 25, {label: 'All', value: orderItem.length}]}
+                />
             </TableContainer>
             <Snackbar 
             open={!!successMessage}
-            autoHideDuration={6000}
+            autoHideDuration={2000}
             name='orderInfoSnackbar'
             onClose={handleCloseSnackbar}
             > 
@@ -329,7 +384,7 @@ const OrderInfo = () => {
             <Snackbar 
             open={!!errorMessage}
             name='orderInfoSnackbarError'
-            autoHideDuration={6000}
+            autoHideDuration={2000}
             onClose={handleCloseSnackbar}
             > 
                 <Alert

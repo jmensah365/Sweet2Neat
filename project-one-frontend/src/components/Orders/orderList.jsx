@@ -2,10 +2,10 @@ import React from 'react';
 import '../../components/Forms.css'
 import { useState, useEffect } from "react";
 import {
-    Table, TableBody, TableCell, TableContainer,
+    Table, TableBody, TableCell, TableContainer, TablePagination,
     TableHead, TableRow, Paper, Typography, Alert, AlertTitle,
     TextField, Button, IconButton, Snackbar, Box,
-    FormControl, InputLabel, Select, MenuItem, Menu,
+    FormControl, InputLabel, Select, MenuItem, Dialog, DialogTitle, DialogContent, DialogActions
 } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit'
 import DeleteIcon from '@mui/icons-material/Delete'
@@ -27,6 +27,28 @@ const Orders = () => {
     const [editingOrders, setEditingOrders] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+
+    //const state for pagination
+    const [page, setPage] = useState(0);
+    const [rowsPerPage, setRowsPerPage] = useState(5);
+
+    //handle page change
+    const handleChangePage = (event, newPage) => {
+        setPage(newPage);
+    };
+
+    //handle rows per page change
+    const handleChangeRowsPerPage = (event) => {
+        setRowsPerPage(parseInt(event.target.value, 10));
+        setPage(0);
+    };
+
+    //paginate the data
+    const paginatedData = order.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
+
+    //state for opening modals
+    const [open, setOpen] = useState(false);
+    const [selectOrderId, setSelectOrderId] = useState(null);
 
     //fetch order data when the component mounts
     useEffect(() => {
@@ -169,18 +191,26 @@ const Orders = () => {
         .catch(err => setError(err));
     };
 
+    const handleOpenModal = (id) => {
+        setSelectOrderId(id);
+        setOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setSelectOrderId(null);
+        setOpen(false);
+    };
+
+    const handleConfirmDelete = () => {
+        handleDelete(selectOrderId);
+        handleCloseModal();
+    };
 
     const handleCloseSnackbar = () => {
         setSuccessMessage('');
         setErrorMessage('');
     };
 
-    if (error) {
-        return <Alert severity='error'>
-            <AlertTitle>Error</AlertTitle>
-            Sorry could not get order information
-            </Alert>;
-    }
 
     return(
         <>
@@ -263,17 +293,16 @@ const Orders = () => {
                 <Table name='orderListTable'>
                     <TableHead>
                         <TableRow>
-                        <TableCell>Order Id</TableCell>
                             <TableCell>Customer Name</TableCell>
                             <TableCell>Order Date</TableCell>
                             <TableCell>Status</TableCell>
                             <TableCell>Customer Address </TableCell>
+                            <TableCell>Actions</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody name="tableBody">
-                        {order.map(order => (
+                        {paginatedData.map(order => (
                             <TableRow key={order.id}>
-                                <TableCell>{order.id}</TableCell>
                                 <TableCell>{order.customerName}</TableCell>
                                 <TableCell>{order.orderDate}</TableCell>
                                 <TableCell>{order.status}</TableCell>
@@ -282,7 +311,7 @@ const Orders = () => {
                                     <IconButton name='editIcon' onClick={() => handleEdit(order)}>
                                         <EditIcon />
                                     </IconButton>
-                                    <IconButton name='deleteIcon' onClick={() => handleDelete(order.id)}>
+                                    <IconButton name='deleteIcon' onClick={() => handleOpenModal(order.id)}>
                                         <DeleteIcon />
                                     </IconButton>
                                 </TableCell>
@@ -290,10 +319,33 @@ const Orders = () => {
                         ))}
                     </TableBody>
                 </Table>
+                <Dialog open={open} onClose={handleCloseModal}>
+                    <DialogTitle>Confirm Deletion</DialogTitle>
+                    <DialogContent>
+                        <Typography>Are you sure you want to delete this order?</Typography>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleCloseModal} color='primary'>
+                            Cancel
+                        </Button>
+                        <Button onClick={handleConfirmDelete} style={{color:'red'}}>
+                            Delete
+                        </Button>
+                    </DialogActions>
+                </Dialog>
+                <TablePagination
+                    component={'div'}
+                    count={order.length}
+                    page={page}
+                    onPageChange={handleChangePage}
+                    rowsPerPage={rowsPerPage}
+                    onRowsPerPageChange={handleChangeRowsPerPage}
+                    rowsPerPageOptions={[5, 10, 25, { label: 'All', value: order.length }]}
+                />
             </TableContainer>
             <Snackbar 
             open={!!successMessage}
-            autoHideDuration={6000}
+            autoHideDuration={2000}
             name='orderListSnackbar'
             onClose={handleCloseSnackbar}
             > 
@@ -307,7 +359,7 @@ const Orders = () => {
             <Snackbar 
             open={!!errorMessage}
             name='orderListSnackbarError'
-            autoHideDuration={6000}
+            autoHideDuration={2000}
             onClose={handleCloseSnackbar}
             > 
                 <Alert
