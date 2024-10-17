@@ -24,7 +24,7 @@ const LollipopCard = () => {
             </Typography>
         </CardContent>
         <CardActions>
-            <Button name='lollipopCardButton' size='small' onClick={() => navigateTo('/lollipopCandy')}>View Lollipops</Button>
+            <Button name='lollipopCardButton' size='small' onClick={() => navigateTo('/lollipop candy')}>View Lollipops</Button>
         </CardActions>
     </Card>
     )

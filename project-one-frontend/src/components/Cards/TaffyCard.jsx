@@ -23,7 +23,7 @@ const TaffyCard = () => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button name='taffyCardButton' size='small' onClick={() => navigateTo('/taffyCandy')}>View Taffy Candy</Button>
+                <Button name='taffyCardButton' size='small' onClick={() => navigateTo('/taffy candy')}>View Taffy Candy</Button>
             </CardActions>
         </Card>
     )

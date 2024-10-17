@@ -7,7 +7,7 @@ import {
 const ChocolateCandy = () => {
 
     const apiUrl = import.meta.env.VITE_API_URL;
-    const url = `${apiUrl}/candy/getByType?type=Chocolate Bar`;
+    const url = `${apiUrl}/candy/getByType?type=Chocolate Bar` && `${apiUrl}/candy/getByType?type=Chocolate Candy`;
     const [candy, setCandy] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(null);

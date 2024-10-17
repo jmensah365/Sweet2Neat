@@ -23,7 +23,7 @@ const GummyCard = () => {
                             </Typography>
                         </CardContent>
                         <CardActions>
-                            <Button name='gummyCardButton' size='small' onClick={() => navigateTo('/gummyCandy')}>View Gummy Candy</Button>
+                            <Button name='gummyCardButton' size='small' onClick={() => navigateTo('/gummy candy')}>View Gummy Candy</Button>
                         </CardActions>
                     </Card>
     )
