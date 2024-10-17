@@ -23,17 +23,17 @@ function App() {
       <Router>
       <AppBarComponent />
         <Routes>
-          <Route path='/' element={<Home/>} />
+          <Route path='/home' element={<Home/>} />
           <Route path='/orders' element={<Orders/>} />
-          <Route path='/orderInfo' element={<OrderInfo/>} />
+          <Route path='/order information' element={<OrderInfo/>} />
           <Route path='/candy' element={<CandyList/>} />
           <Route path='/warehouses' element={<WarehouseList />} /> 
-          <Route path='/gummyCandy' element={<GummyCandy/>} />
-          <Route path='/candyTypes' element={<CandyTypes/>} />
-          <Route path='/chocolateCandy' element={<ChocolateCandy/>} />
-          <Route path='/sourCandy' element={<SourCandy/>} />
-          <Route path='/taffyCandy' element={<TaffyCandy/>} />
-          <Route path='/lollipopCandy' element={<LollipopCandy/>} />
+          <Route path='/gummy candy' element={<GummyCandy/>} />
+          <Route path='/candy types' element={<CandyTypes/>} />
+          <Route path='/chocolate candy' element={<ChocolateCandy/>} />
+          <Route path='/sour candy' element={<SourCandy/>} />
+          <Route path='/taffy candy' element={<TaffyCandy/>} />
+          <Route path='/lollipop candy' element={<LollipopCandy/>} />
           <Route path='/bubblegum' element={<BubblegumCandy/>} />
           <Route path='/stocks' element={<WarehouseStocks/>} />
           <Route path='/about' element={<About/>} />
