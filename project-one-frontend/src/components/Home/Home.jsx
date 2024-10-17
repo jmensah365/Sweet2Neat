@@ -90,6 +90,9 @@ const Home = () => {
                                     <Typography variant="body2" color="textSecondary">
                                         Current Stock: {warehouse.currentStock}
                                     </Typography>
+                                    <Typography variant="body2" color="textSecondary">
+                                        {warehouse.currentStock === warehouse.capacity ? 'Warehouse is full' : ''}
+                                    </Typography>
                                 </CardContent>
                             </Card>
                         ))}
