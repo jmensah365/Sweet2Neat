@@ -3,9 +3,9 @@ import '../../components/Forms.css';
 import { useState, useEffect } from "react";
 import {
     Table, TableBody, TableCell, TableContainer, TablePagination,
-    TableHead, TableRow, Paper, CircularProgress, Typography, Box,
+    TableHead, TableRow, Paper, Typography, Box,
     TextField, Alert, Button, IconButton, Snackbar,
-    FormControl, InputLabel, Select, MenuItem, Dialog, DialogTitle, DialogContent, DialogActions, Tab
+    FormControl, InputLabel, Select, MenuItem, Dialog, DialogTitle, DialogContent, DialogActions, Tooltip
 } from '@mui/material';
 import Edit from '@mui/icons-material/Edit';
 import Delete from '@mui/icons-material/Delete';
@@ -181,24 +181,58 @@ const OrderInfo = () => {
     }
 
     //refreshing order item information after an action
-    const refreshOrderItemDetails = () => {
+    // const refreshOrderItemDetails = () => {
+    //     fetch(orderItemUrl)
+    //         .then(response => {
+    //             if (!response.ok) {
+    //                 throw new Error('Network response was not ok');
+    //             }
+    //             return response.json();
+    //         })
+    //         .then(returnedData => {
+    //             const sortedData = returnedData.sort((a,b) => a.id - b.id);
+    //             setOrderItem(sortedData);
+    //             setLoaded(true);
+    //         })
+    //         .catch(err => {
+    //             setError(err);
+    //             setLoaded(true);
+    //         });
+    // }
+    useEffect(() => {
         fetch(orderItemUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
+            .then(response => response.json())
             .then(returnedData => {
-                const sortedData = returnedData.sort((a,b) => a.id - b.id);
-                setOrderItem(sortedData);
+                setOrderItem(returnedData);
                 setLoaded(true);
+
             })
-            .catch(err => {
-                setError(err);
-                setLoaded(true);
-            });
-    }
+            .catch(err => setError(err));
+        
+        fetch(orderUrl)
+            .then(response => response.json())
+            .then(orderData => {
+                setOrder(orderData);
+                const orderArr = orderData.map(order => ({
+                    id: order.id,
+                    name: order.customerName,
+                }));
+                setOrderInfo(orderArr);
+            })
+            .catch(err => setError(err));
+
+        fetch(candyUrl)
+            .then(response => response.json())
+            .then(candyData => {
+                setCandy(candyData);
+                const candyArr = candyData.map(candy => ({
+                    id: candy.candyId,
+                    name: candy.name
+                }));
+                setCandyIds(candyArr);
+        })
+            .catch(err => setError(err));
+    }, []);
 
     //sets orderItem to edit
     const handleEdit = (orderItem) => {
@@ -331,18 +365,22 @@ const OrderInfo = () => {
                     </TableHead>
                     <TableBody name="tableBody">
                         {paginatedData.map(orderItem => (
-                            <TableRow key={orderItem.id}>
+                            <TableRow key={orderItem.id} sx={{ '&:hover': { backgroundColor: 'grey.200' }}}>
                                 <TableCell>{getCustomerName(orderItem.orderId)}</TableCell>
                                 <TableCell>{getCandyName(orderItem.candyId)}</TableCell>
                                 <TableCell>{orderItem.price.toFixed(2)}</TableCell>
                                 <TableCell>{orderItem.quantity}</TableCell>
                                 <TableCell>
-                                <IconButton name='editIcon' onClick={() => handleEdit(orderItem)}>
-                                    <Edit />
-                                </IconButton>
-                                <IconButton name='deleteIcon' onClick={() => handleOpenModal(orderItem.id)}>
-                                    <Delete />
-                                </IconButton>
+                                <Tooltip title='Edit Order Item' >
+                                    <IconButton name='editIcon' onClick={() => handleEdit(orderItem)}>
+                                        <Edit />
+                                    </IconButton>
+                                </Tooltip>
+                                <Tooltip title='Delete Order Item'>
+                                    <IconButton name='deleteIcon' onClick={() => handleOpenModal(orderItem.id)}>
+                                        <Delete />
+                                    </IconButton>
+                                </Tooltip>
                             </TableCell>
                             </TableRow>
                         ))}

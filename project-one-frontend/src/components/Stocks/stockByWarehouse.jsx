@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../../components/Forms.css';
 import {
-    Table, TableBody, TableCell, TableContainer, TablePagination,
+    Table, TableBody, TableCell, TableContainer, TablePagination, Tooltip, Fade,
     TableHead, TableRow, Paper, Typography, Box,
     TextField, Button, IconButton, Snackbar, Alert,
     FormControl, InputLabel, Select, MenuItem, Dialog, DialogTitle, DialogContent, DialogActions
@@ -320,32 +320,38 @@ const WarehouseStocks = () => {
                     </TableHead>
                     <TableBody name='tableBody'>
                         {paginatedData.map((stock) => (
-                            <TableRow key={stock.id}>
+                            <TableRow key={stock.id} sx={{ '&:hover': { backgroundColor: 'grey.200' }}}>
                                 <TableCell>{getWarehouseName(stock.warehouseId)}</TableCell>
                                 <TableCell>{getCandyName(stock.candyId)}</TableCell>
                                 <TableCell>{stock.quantity}</TableCell>
                                 <TableCell>
-                                    <IconButton name='editIcon' onClick={() => handleEdit(stock)}>
-                                        <Edit />
-                                    </IconButton>
-                                    <IconButton name='deleteIcon' onClick={() => handleOpenModal(stock.id)}>
-                                        <Delete />
-                                    </IconButton>
+                                    <Tooltip title='Edit Stock'>
+                                        <IconButton name='editIcon' onClick={() => handleEdit(stock)}>
+                                            <Edit />
+                                        </IconButton>
+                                    </Tooltip>
+                                    <Tooltip title='Delete Stock'>
+                                        <IconButton name='deleteIcon' onClick={() => handleOpenModal(stock.id)}>
+                                            <Delete />
+                                        </IconButton>
+                                    </Tooltip>
                                 </TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
                 </Table>
-                <Dialog open={open} onClose={handleCloseModal}>
-                    <DialogTitle>Confirm Deletion</DialogTitle>
-                        <DialogContent>
-                            <Typography>Are you sure you want to delete this stock?</Typography>
-                        </DialogContent>
-                    <DialogActions>
-                        <Button onClick={handleCloseModal} color='primary'>Cancel</Button>
-                        <Button onClick={handleConfirmDelete} style={{color: 'red'}} >Delete</Button>
-                    </DialogActions>
-                </Dialog>  
+                
+                    <Dialog open={open} onClose={handleCloseModal}>
+                        <DialogTitle>Confirm Deletion</DialogTitle>
+                            <DialogContent>
+                                <Typography>Are you sure you want to delete this stock?</Typography>
+                            </DialogContent>
+                        <DialogActions>
+                            <Button onClick={handleCloseModal} color='primary'>Cancel</Button>
+                            <Button onClick={handleConfirmDelete} style={{color: 'red'}} >Delete</Button>
+                        </DialogActions>
+                    </Dialog> 
+                
                 <TablePagination
                     component={'div'}
                     count={stocks.length}

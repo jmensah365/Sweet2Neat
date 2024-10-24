@@ -3,7 +3,7 @@ import '../../components/Forms.css'
 import { useState, useEffect } from "react";
 import {
     Table, TableBody, TableCell, TableContainer, TablePagination,
-    TableHead, TableRow, Paper, Typography, Alert, AlertTitle,
+    TableHead, TableRow, Paper, Typography, Alert, Tooltip,
     TextField, Button, IconButton, Snackbar, Box,
     FormControl, InputLabel, Select, MenuItem, Dialog, DialogTitle, DialogContent, DialogActions
 } from '@mui/material';
@@ -302,18 +302,22 @@ const Orders = () => {
                     </TableHead>
                     <TableBody name="tableBody">
                         {paginatedData.map(order => (
-                            <TableRow key={order.id}>
+                            <TableRow key={order.id} sx={{ '&:hover': { backgroundColor: 'grey.200' }}}>
                                 <TableCell>{order.customerName}</TableCell>
                                 <TableCell>{order.orderDate}</TableCell>
                                 <TableCell>{order.status}</TableCell>
                                 <TableCell>{order.customerAddress}</TableCell>
                                 <TableCell>
-                                    <IconButton name='editIcon' onClick={() => handleEdit(order)}>
-                                        <EditIcon />
-                                    </IconButton>
-                                    <IconButton name='deleteIcon' onClick={() => handleOpenModal(order.id)}>
-                                        <DeleteIcon />
-                                    </IconButton>
+                                    <Tooltip title='Edit Order'>
+                                        <IconButton name='editIcon' onClick={() => handleEdit(order)}>
+                                            <EditIcon />
+                                        </IconButton>
+                                    </Tooltip>
+                                    <Tooltip title='Delete Order'>
+                                        <IconButton name='deleteIcon' onClick={() => handleOpenModal(order.id)}>
+                                            <DeleteIcon />
+                                        </IconButton>
+                                    </Tooltip>
                                 </TableCell>
                             </TableRow>
                         ))}

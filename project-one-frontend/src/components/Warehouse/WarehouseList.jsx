@@ -255,10 +255,10 @@ const WarehouseList = () => {
                     </TableHead>
                     <TableBody name='warehouseTBody'>
                         {paginatedData.map(warehouse => (
-                            <TableRow key={warehouse.id}>
+                            <TableRow key={warehouse.id} sx={{ '&:hover': { backgroundColor: 'grey.200' }}}>
                                 <TableCell>{warehouse.location}</TableCell>
                                 <TableCell>
-                                    <Typography>{warehouse.currentStock}/{warehouse.capacity}</Typography>
+                                    <Typography>{warehouse.currentStock == warehouse.capacity ? 'Full' : `${warehouse.currentStock}/${warehouse.capacity}`}</Typography>
                                     <LinearProgress
                                         variant='determinate'
                                         value={(warehouse.currentStock / warehouse.capacity) * 100}

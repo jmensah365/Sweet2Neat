@@ -46,6 +46,7 @@ const Home = () => {
                     Available Warehouses
                 </Typography>
 
+
                 {error ? (
                     <Alert severity="error">Failed to load warehouses: {error.message}</Alert>
                 ) : !loaded ? (

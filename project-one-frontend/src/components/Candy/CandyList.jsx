@@ -2,7 +2,7 @@ import React from 'react';
 import '../../components/Forms.css'
 import { useState, useEffect } from "react";
 import {
-    Table, TableBody, TableCell, TableContainer, TablePagination,
+    Table, TableBody, TableCell, TableContainer, TablePagination, TableFooter,
     TableHead, TableRow, Paper, Typography, Alert,
     TextField, Button, Box, IconButton, Snackbar,
     FormControl,
@@ -12,7 +12,9 @@ import {
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import SearchBar from '../SearchBar/SearchBar';
+import AddCircleSharpIcon from '@mui/icons-material/AddCircleSharp';
+import EditOffSharpIcon from '@mui/icons-material/EditOffSharp';
+import ThumbUpAltSharpIcon from '@mui/icons-material/ThumbUpAltSharp';
 
 const CandyList = () => {
 
@@ -252,13 +254,69 @@ const CandyList = () => {
         setErrorMessage('');
     }
 
+    useEffect(() => {
+        const fetchFavorites = async () => {
+            try {
+                const response = await fetch(`${apiUrl}/favoriteCandies`);
+                const favorites = await response.json();
+                const favoriteIds = favorites.map(fav => fav.candyId);
+                
+                // Sync with local storage after fetching from backend
+                setFavoriteCandies(favoriteIds);
+                localStorage.setItem('favoriteCandies', JSON.stringify(favoriteIds));
+            } catch (err) {
+                setErrorMessage("Failed to load favorite candies.");
+            }
+        };
+    
+        fetchFavorites();
+    }, [apiUrl]);
+
+    useEffect(() => {
+        const storedFavorites = JSON.parse(localStorage.getItem('favoriteCandies')) || [];
+        setFavoriteCandies(storedFavorites);
+    }, []);
+
     const handleToggleFavorite = (candyId) => {
-        if (favoriteCandies.includes(candyId)) {
-            setFavoriteCandies(favoriteCandies.filter(fav => fav !== candyId));
-        } else {
-            setFavoriteCandies([...favoriteCandies, candyId]);
-        }
+        let updatedFavorties;
+        const isFavorite = favoriteCandies.includes(candyId);
+
+        const endpoint = isFavorite ? `${apiUrl}/favoriteCandies/candy/${candyId}`: `${apiUrl}/favoriteCandies/${candyId}`;
+
+        fetch(endpoint, {method: isFavorite ? 'DELETE' : 'POST',
+        })
+        .then(response => {
+            if(!response.ok) {
+                throw new Error("Failed to update favorite status");
+            }
+            return response.text();
+        })
+        .then(() => {
+            if (isFavorite) {
+                updatedFavorties = favoriteCandies.filter(id => id !== candyId);
+            } else {
+                updatedFavorties = [...favoriteCandies, candyId];
+            }
+            setFavoriteCandies(updatedFavorties);
+            localStorage.setItem('favoriteCandies', JSON.stringify(updatedFavorties));
+            console.log(favoriteCandies);
+        })
+        .catch(err => {
+            console.error(err);
+            setErrorMessage('Failed to update favorite status');
+        });
     };
+
+    
+    useEffect(() => {
+        // Retrieve favorite candies from localStorage when the page loads
+        const storedFavorites = JSON.parse(localStorage.getItem('favoriteCandies'));
+        if (storedFavorites.length > 0) {
+            setFavoriteCandies(storedFavorites);
+        }
+        //console.log(storedFavorites)
+    }, []);
+    
 
 
     return (
@@ -324,11 +382,11 @@ const CandyList = () => {
                     className='textField'
                 />
                 <Button name='candyBtn' type='submit' variant='contained' color='primary'>
-                    {editingCandy ? 'Update Candy' : 'Add Candy'}
+                    {editingCandy ? <ThumbUpAltSharpIcon/> : <AddCircleSharpIcon/>}
                 </Button>
                 {editingCandy && (
                     <Button name='cancelEditBtn' variant='contained' color='secondary' onClick={() => setEditingCandy(null)}>
-                        Cancel edit
+                        <EditOffSharpIcon/>
                     </Button>
                 )}
             </Box>
@@ -349,26 +407,34 @@ const CandyList = () => {
                     </TableHead>
                     <TableBody name='tableBody'>
                         {paginatedData.map(candy => (
-                            <TableRow key={candy.candyId}>
+                            <TableRow key={candy.candyId} sx={{ '&:hover': { backgroundColor: 'grey.200' }}}>
                                 <TableCell>{candy.name}</TableCell>
                                 <TableCell>{candy.type}</TableCell>
                                 <TableCell>{candy.flavor}</TableCell>
                                 <TableCell>{candy.price.toFixed(2)}</TableCell>
                                 <TableCell>{candy.weight.toFixed(2)}</TableCell>
                                 <TableCell>
-                                    <IconButton name='editIcon' onClick={() => handleEdit(candy)}>
-                                        <EditIcon />
-                                    </IconButton>
-                                    <IconButton name='deleteIcon' onClick={() => handleOpenModal(candy.candyId)}>
-                                        <DeleteIcon />
-                                    </IconButton>
-                                    <IconButton 
-                                        name='favoriteIcon' 
-                                        onClick={() => handleToggleFavorite(candy.candyId)}
-                                        style={{ color: favoriteCandies.includes(candy.candyId) ? 'red' : 'grey' }}
-                                        >
-                                        <FavoriteIcon />
-                                    </IconButton>
+                                    <Tooltip title='Edit Candy'>
+                                        <IconButton name='editIcon' onClick={() => handleEdit(candy)}>
+                                            <EditIcon />
+                                        </IconButton>
+                                    </Tooltip>
+                                    <Tooltip title='Delete Candy'>
+                                        <IconButton name='deleteIcon' onClick={() => handleOpenModal(candy.candyId)}>
+                                            <DeleteIcon />
+                                        </IconButton>
+                                    </Tooltip>
+                                    <Tooltip title={favoriteCandies.includes(candy.candyId) ? 'Remove from favorites' : 'Add to favorites'}>
+                                        <IconButton 
+                                            name='favoriteIcon' 
+                                            onClick={() => handleToggleFavorite(candy.candyId)}
+                                            sx={{ 
+                                                color: favoriteCandies.includes(candy.candyId) ? 'red' : 'grey',
+                                                ":hover": { color: 'red' } }}
+                                            >
+                                            <FavoriteIcon />
+                                        </IconButton>
+                                    </Tooltip>
                                 </TableCell>
                             </TableRow>
                         ))}
