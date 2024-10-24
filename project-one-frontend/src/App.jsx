@@ -14,6 +14,7 @@ import TaffyCandy from './components/Candy/TaffyCandy'
 import LollipopCandy from './components/Candy/LollipopCandy'
 import BubblegumCandy from './components/Candy/BubblegumCandy'
 import WarehouseStocks from './components/Stocks/stockByWarehouse';
+import Favorites from './components/Favorites/Favorites';
 import './App.css'
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <Route path='/lollipop candy' element={<LollipopCandy/>} />
           <Route path='/bubblegum' element={<BubblegumCandy/>} />
           <Route path='/stocks' element={<WarehouseStocks/>} />
+          <Route path='/favorites' element={<Favorites/>} />
           <Route path='/about' element={<About/>} />
         </Routes>
       </Router> 

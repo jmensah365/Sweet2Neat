@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { AppBar, Toolbar, IconButton, Button, Menu, MenuItem, Badge } from "@mui/material";
+import { AppBar, Toolbar, IconButton, Button, Menu, MenuItem, Badge, Switch, Tooltip } from "@mui/material";
 import candyImage from '../../assets/CandyPics/CandyLogos/logo.png'
 import { useNavigate } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
 import './AppBar.css'
 import WarehouseIcon from '@mui/icons-material/Warehouse';
+import AddBoxIcon from '@mui/icons-material/AddBox';
+import { useThemeContext } from "../Theme/ThemeContext";
 
 
 const AppBarComponent = () => {
@@ -18,6 +20,8 @@ const AppBarComponent = () => {
     const [warehouses, setWarehouses] = useState([]);
     const [error, setError] = useState(null);
     const [loaded, setLoaded] = useState(false);
+
+    //const { mode, toggleTheme } = useThemeContext();
 
     const handleMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
@@ -88,7 +92,7 @@ const AppBarComponent = () => {
                     color="inherit"
                     aria-label="menu"
                     className="spin"
-                    onClick={() => navigateTo('/')}
+                    onClick={() => navigateTo('/home')}
                 >
                     <img src={candyImage} name="logo" alt="Menu Icon" style={{width: 24, height: 24}} />
                 </IconButton>
@@ -106,7 +110,8 @@ const AppBarComponent = () => {
                     onClose={handleProductsMenuClose}
                 >
                     <MenuItem name='candyRoute' onClick={() => navigateTo('/candy')}>Candy Inventory</MenuItem>
-                    <MenuItem name='candyTypesRoute' onClick={() => navigateTo('/candyTypes')}>Candy Categories</MenuItem>
+                    <MenuItem name='candyTypesRoute' onClick={() => navigateTo('/candy types')}>Candy Categories</MenuItem>
+                    <MenuItem name='favoriteCandy' onClick={() => navigateTo('/favorites')}>Favorite Candy</MenuItem>
                 </Menu>
 
                 <Button
@@ -139,7 +144,7 @@ const AppBarComponent = () => {
                     onClose={handleOrdersMenuClose}
                 >
                     <MenuItem name='orderListRoute' onClick={() => navigateTo('/orders')}>List of Orders</MenuItem>
-                    <MenuItem name='orderInfoRoute' onClick={() => navigateTo('/orderInfo')}>Order Information</MenuItem>
+                    <MenuItem name='orderInfoRoute' onClick={() => navigateTo('/order information')}>Order Information</MenuItem>
                 </Menu>
                 <Button
                     color="inherit"
@@ -151,12 +156,24 @@ const AppBarComponent = () => {
                 </Button>
                 </div>
                 <div>
-                    {/*<SearchBar></SearchBar>*/}
+                    <SearchBar></SearchBar>
                 </div>
+                {/* <div>
+                    {/* <Switch
+                        checked={mode === 'dark'}
+                        onChange={toggleTheme}
+                        inputProps={{ 'aria-label': 'Toggle light/dark mode' }}
+                    /> 
+                </div> */}
                 <div>
                 <Button name='homeAddAWarehouseBtn' variant='contained' color='primary' size='large' onClick={() => navigateTo('/warehouses')}>
-                    Add a warehouse
+                    Add warehouse
                 </Button>
+                {/* <Tooltip title='Add a warehouse'>
+                    <IconButton name='addWarehouseBtn' onClick={() => navigateTo('/warehouses')}>
+                        <AddBoxIcon />
+                    </IconButton>
+                </Tooltip> */}
                 <Badge
                     badgeContent={warehouses.length}
                     color="primary"
