@@ -85,14 +85,14 @@ const AppBarComponent = () => {
     return (
         <>
         <AppBar position="fixed">
-            <Toolbar className="appbar" style={{justifyContent: 'space-between'}}>
+            <Toolbar className="appbar" style={{justifyContent: 'space-between',}}>
                 <div>
                 <IconButton
                     edge="start"
                     color="inherit"
                     aria-label="menu"
                     className="spin"
-                    onClick={() => navigateTo('/home')}
+                    onClick={() => navigateTo('/')}
                 >
                     <img src={candyImage} name="logo" alt="Menu Icon" style={{width: 24, height: 24}} />
                 </IconButton>

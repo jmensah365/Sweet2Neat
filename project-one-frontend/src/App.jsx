@@ -24,7 +24,7 @@ function App() {
       <Router>
       <AppBarComponent />
         <Routes>
-          <Route path='/home' element={<Home/>} />
+          <Route path='/' element={<Home/>} />
           <Route path='/orders' element={<Orders/>} />
           <Route path='/order information' element={<OrderInfo/>} />
           <Route path='/candy' element={<CandyList/>} />
