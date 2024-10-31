@@ -15,8 +15,8 @@ import com.skillstorm.RunCucumberTest;
 public class CandyList {
     
     private WebDriver driver;
-    private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/candy";
-    private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
+    private static final String url = "http://localhost:5173/candy";
+    private static final String homeUrl = "http://localhost:5173/";
 
     /*
      * Finding name, type, flavor, price, and weight text fields

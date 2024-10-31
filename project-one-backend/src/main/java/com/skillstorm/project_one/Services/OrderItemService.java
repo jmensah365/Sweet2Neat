@@ -5,10 +5,12 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import com.skillstorm.project_one.Models.Orders;
+import com.skillstorm.project_one.Models.Warehouse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.skillstorm.project_one.Repositories.OrdersRepo;
+import com.skillstorm.project_one.Repositories.WarehouseRepo;
 import com.skillstorm.project_one.DTOs.OrderItemDTO;
 import com.skillstorm.project_one.Models.Candy;
 import com.skillstorm.project_one.Models.OrderItem;
@@ -27,6 +29,9 @@ public class OrderItemService {
     private CandyRepo candyRepo;
     @Autowired
     private OrderItemRepo repo;
+
+    @Autowired
+    private WarehouseRepo warehouseRepo;
 
 
     /**
@@ -79,12 +84,15 @@ public class OrderItemService {
     public OrderItem createOrderItem(OrderItemDTO orderItemRequest){
         Candy candy = candyRepo.findById(orderItemRequest.getCandyId()).orElseThrow(() -> new NoSuchElementException("Candy does not exist"));
         Orders order = orderRepo.findById(orderItemRequest.getOrderId()).orElseThrow(() -> new NoSuchElementException("Order does not exist"));
+        //Warehouse warehouse = warehouseRepo.findById(null)
         
         OrderItem orderItem = new OrderItem();
         orderItem.setOrders(order);
         orderItem.setCandy(candy);
         orderItem.setPrice(orderItemRequest.getPrice());
         orderItem.setQuantity(orderItemRequest.getQuantity());
+
+        //warehouse.set
         return repo.save(orderItem);
     }
 
