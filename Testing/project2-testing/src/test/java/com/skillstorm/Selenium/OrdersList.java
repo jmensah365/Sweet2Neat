@@ -15,8 +15,8 @@ import com.skillstorm.RunCucumberTest;
 
 public class OrdersList {
     private WebDriver driver;
-    private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/orders";
-    private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
+    private static final String url = "http://localhost:5173/orders";
+    private static final String homeUrl = "http://localhost:5173/";
 
     @FindBy(name = "customerName")
     private WebElement customerNameField;
@@ -71,6 +71,9 @@ public class OrdersList {
 
     @FindBy(name = "cancelEditBtn")
     private WebElement cancelBtn;
+
+    @FindBy(name = "confirmDelete")
+    private WebElement confirmDelete;
 
     String orderId = "";
 
@@ -217,6 +220,10 @@ public class OrdersList {
         
         // Click the delete button for the last row
         lastRowDeleteBtn.click();
+    }
+
+    public void clickConfirmDeleteBtn(){
+        confirmDelete.click();
     }
 
     public boolean confirmDeletion(){

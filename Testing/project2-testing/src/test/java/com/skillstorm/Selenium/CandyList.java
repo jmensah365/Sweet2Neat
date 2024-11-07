@@ -73,6 +73,9 @@ public class CandyList {
     @FindBy(name = "deleteIcon")
     private WebElement deleteBtn;
 
+    @FindBy(name = "confirmDelete")
+    private WebElement confirmDelete;
+
     @FindBy(name = "editIcon")
     private WebElement editBtn;
 
@@ -266,6 +269,11 @@ public class CandyList {
         
         // Click the delete button for the last row
         lastRowDeleteBtn.click();
+    }
+
+    public void clickDeleteBtn(){
+        RunCucumberTest.sleepThread();
+        confirmDelete.click();
     }
 
     public boolean confirmDeletion(){

@@ -54,4 +54,5 @@ Feature: OrderItem CRUD operations
     Scenario: Deleting an order item
         Given I am on the order information page
         When I click on delete icon
+        Then I click the order info delete button
         Then the order item should not be visible in the table

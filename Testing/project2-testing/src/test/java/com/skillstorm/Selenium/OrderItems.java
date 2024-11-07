@@ -15,7 +15,7 @@ import com.skillstorm.RunCucumberTest;
 public class OrderItems {
 
     private WebDriver driver;
-    private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/orderInfo";
+    private static final String url = "http://localhost:5173/order%20information";
     private String orderItemId = "";
 
     @FindBy(xpath = "//div[@id='orderIdSelect']")
@@ -44,6 +44,9 @@ public class OrderItems {
 
     @FindBy(name = "deleteIcon")
     private WebElement deleteIcon;
+
+    @FindBy(name = "confirmDelete")
+    private WebElement confirmDelete;
 
     @FindBy(className = "MuiAlert-message")
     private WebElement alertMsg;
@@ -147,6 +150,11 @@ public class OrderItems {
         RunCucumberTest.sleepThread();
         orderItemId = tableBody.findElement(By.xpath(".//tr[1]")).getAttribute("id");
         deleteIcon.click();
+    }
+
+    public void clickDeleteBtn(){
+        RunCucumberTest.sleepThread();
+        confirmDelete.click();
     }
 
     public boolean confirmDeletion(){

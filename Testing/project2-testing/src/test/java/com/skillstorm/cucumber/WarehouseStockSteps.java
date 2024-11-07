@@ -40,7 +40,7 @@ public class WarehouseStockSteps {
     @Given("I am on the Warehouse Stock page")
     public void onWarehouseStockPage() {
         this.warehouseStock.getWarehoueStockUrl();
-        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/stocks";
+        String expectedUrl = "http://localhost:5173/stocks";
         String actualUrl = this.warehouseStock.checkCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl);
     }
@@ -148,7 +148,7 @@ public class WarehouseStockSteps {
     @Given("I am starting on the home page")
     public void currentlyOnTheHomePage() {
         this.warehouseStock.getHomePageUrl();
-        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
+        String expectedUrl = "http://localhost:5173/";
         String actualUrl = this.warehouseStock.checkCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl);
     }
@@ -157,7 +157,7 @@ public class WarehouseStockSteps {
     @When("I click on the Warehouse Stock option")
     public void clickOnWarehouseStockOption() {
         this.warehouseStock.clickOnWarehouseStockOption();
-        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/stocks";
+        String expectedUrl = "http://localhost:5173/stocks";
         String actualUrl = this.warehouseStock.checkCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl);
     }
@@ -166,7 +166,7 @@ public class WarehouseStockSteps {
     @Then("I should be navigated to the Warehouse Stock page")
     public void shouldBeNavigatedToWarehouseStock() {
         System.out.println(this.warehouseStock.getWarehouseStockUrl());
-        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/stocks";
+        String expectedUrl = "http://localhost:5173/stocks";
         String actualUrl = this.warehouseStock.checkCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl);
     }
@@ -187,6 +187,11 @@ public class WarehouseStockSteps {
         String expectedUrl = "Stock deleted successfully!";
         String actualUrl = this.warehouseStock.getAlertMsg();
         Assert.assertEquals(actualUrl, expectedUrl);
+    }
+
+    @Then("I click the confirm delete button on the warehouse stock page")
+    public void iClickTheConfirmDeleteButtonOnTheWarehouseStockPage(){
+        this.warehouseStock.clickConfirmDeleteBtn();
     }
 
     // user should not see the warehouse stock item any more and check against all items in warehouse stock list

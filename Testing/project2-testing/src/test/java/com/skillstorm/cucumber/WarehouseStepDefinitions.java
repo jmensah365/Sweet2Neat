@@ -22,7 +22,7 @@ public class WarehouseStepDefinitions {
     public void before(){
         ChromeOptions options = new ChromeOptions();
         // Headless Chrome setup to run tests without opening a browser window
-        options.addArguments("--headless","--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
+        options.addArguments("--headless", "--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
         WebDriver driver = new ChromeDriver(options); // Initialize ChromeDriver
         this.warehouseList = new WarehouseList(driver); // Initialize the WarehouseList page object
         warehouse = new String[2]; // Array to store location and capacity values
@@ -54,6 +54,11 @@ public class WarehouseStepDefinitions {
     @When("I click on the delete icon for the Warehouse I want to delete")
     public void iClickOnTheDeleteIconForTheWarehouseIWantToDelete(){
         this.warehouseList.clickDeleteIcon(); // Click the delete button for the selected warehouse
+    }
+
+    @Then("I click the confirm delete button on the warehouse page")
+    public void iClickTheConfirmDeleteButtonOnTheWarehousePage(){
+        this.warehouseList.clickConfirmDeleteBtn();
     }
 
     // Step definition for changing warehouse location and/or capacity with valid inputs
@@ -146,7 +151,7 @@ public class WarehouseStepDefinitions {
     @Given("I am on the home page")
     public void givenIAmOnTheHomePage() {
         this.warehouseList.getHomeURL(); // Navigate to the home page
-        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/"; // Expected home URL
+        String expectedUrl = "http://localhost:5173/"; // Expected home URL
         String actualUrl = this.warehouseList.checkCurrentPageUrl(); // Get the current page URL
         Assert.assertEquals(actualUrl, expectedUrl); // Assert that the user is on the home page
     }
@@ -155,7 +160,7 @@ public class WarehouseStepDefinitions {
     @When("I click on the Warehouse List option")
     public void clickOnWarehouseListOption() {
         this.warehouseList.clickWarehouseListOption(); // Click the warehouse list option in the menu
-        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/warehouses"; // Expected URL for the Warehouse List page
+        String expectedUrl = "http://localhost:5173/warehouses"; // Expected URL for the Warehouse List page
         String actualUrl = this.warehouseList.checkCurrentPageUrl(); // Get the current page URL
         Assert.assertEquals(actualUrl, expectedUrl); // Assert that the user is on the Warehouse List page
     }
@@ -164,7 +169,7 @@ public class WarehouseStepDefinitions {
     @Then("I should be navigated to the Warehouse List page")
     public void iAmNavigatedToWarehouseListPage() {
         this.warehouseList.getUrl(); // Navigate to the Warehouse List page
-        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/warehouses"; // Expected URL for the page
+        String expectedUrl = "http://localhost:5173/warehouses"; // Expected URL for the page
         String actualUrl = this.warehouseList.checkCurrentPageUrl(); // Get the current page URL
         Assert.assertEquals(actualUrl, expectedUrl); // Assert that the user is on the correct page
     }
@@ -172,7 +177,7 @@ public class WarehouseStepDefinitions {
     // Step definition for verifying the list of warehouses is visible on the page
     @And("I should see a list of all warehouses available")
     public void iSeeListOfWarehouses() {
-        String expectedString = "Warehouse Id Location Stock/Capacity Actions"; // Expected table header
+        String expectedString = "Location Stock/Capacity Actions"; // Expected table header
         String actualUrl = this.warehouseList.getWarehouseTableContents(); // Get the table contents
         Assert.assertEquals(actualUrl, expectedString); // Assert that the table contents
     }

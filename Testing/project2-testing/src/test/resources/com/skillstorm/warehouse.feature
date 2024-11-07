@@ -67,5 +67,6 @@ Scenario: Successful view of warehouse list
   Scenario: Delete a warehouse
     Given I am on the Warehouse List page
     When I click on the delete icon for the Warehouse I want to delete
+    Then I click the confirm delete button on the warehouse page
     Then I should see an alert message "Warehouse deleted successfully!"
     And the warehouse should not be visible in the table

@@ -20,8 +20,8 @@ public class CandyStepDefinitions {
     public void before(){
         // Setting up ChromeOptions to run Chrome in headless mode (without GUI)
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
-        options.addArguments("window-size=1920,1080");
+        //options.addArguments("--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
+        options.addArguments("--headless");
         WebDriver driver = new ChromeDriver(options);
 
         // Initializing CandyList with the WebDriver instance
@@ -40,7 +40,7 @@ public class CandyStepDefinitions {
     @Given("I am on the Candy Inventory page")
     public void iAmOnTheCandyInventoryPage(){
         this.candyList.getCandyPageUrl();
-        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/candy";
+        String expectedUrl = "http://localhost:5173/candy";
         String actualUrl = this.candyList.checkCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl);
     }
@@ -84,7 +84,7 @@ public class CandyStepDefinitions {
     @Given("I am on the Home page")
     public void iAmOnTheHomePage(){
         this.candyList.getHomeUrl();
-        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
+        String expectedUrl = "http://localhost:5173/";
         String actualUrl = this.candyList.checkCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl);
     }
@@ -93,7 +93,7 @@ public class CandyStepDefinitions {
     @When("I navigate to Candy Inventory")
     public void iNavigateToTheCandyInventory(){
         this.candyList.clickCandyInventory();
-        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/candy";
+        String expectedUrl = "http://localhost:5173/candy";
         String actualUrl = this.candyList.checkCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl);
     }
@@ -101,7 +101,7 @@ public class CandyStepDefinitions {
     // Step definition for the Then statement to verify all candies are displayed
     @Then("list of all candies should be displayed")
     public void theListOfAllCandiesShouldBeDisplayed(){
-        String expectedString = "Candy ID Candy Name Candy Type Flavor Price ($) Weight (oz.)";
+        String expectedString = "Candy Name Candy Type Flavor Price ($) Weight (oz.) Actions";
         String actualString = this.candyList.displayCandyTable();
         Assert.assertEquals(actualString, expectedString);
     }
@@ -110,9 +110,14 @@ public class CandyStepDefinitions {
     @When("I click the delete icon")
     public void iClickTheDeleteIcon(){
         this.candyList.clickDeleteIcon();
-        String expectedUrl = "Candy was deleted successfully!";
-        String actualUrl = this.candyList.getAlertMsg();
-        Assert.assertEquals(actualUrl, expectedUrl);
+    }
+
+    @Then("I click the confirm delete button")
+    public void iClickTheConfirmDeleteButton(){
+        this.candyList.clickDeleteBtn();
+        String expectedMsg = "Candy was deleted successfully!";
+        String actualMsg = this.candyList.getAlertMsg();
+        Assert.assertEquals(actualMsg, expectedMsg);
     }
 
     // Step definition for the Then statement to verify the candy is deleted from the list

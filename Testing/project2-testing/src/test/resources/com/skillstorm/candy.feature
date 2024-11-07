@@ -72,6 +72,7 @@ Feature: Candy CRUD Operations
     Scenario: Deleting a Candy
         Given I am on the Candy Inventory page
         When I click the delete icon
+        Then I click the confirm delete button
         Then the candy should be deleted from the list and no longer visible in the table
 
 

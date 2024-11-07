@@ -143,7 +143,7 @@ public class NavigationLinks {
         RunCucumberTest.sleepThread();
         candyMenu.click();
         RunCucumberTest.sleepThread();
-        candyInventoryMenu.click();        
+        candyInventoryMenu.click();      
     }
 
     public String getCandyInventoryHeader() {

@@ -23,7 +23,7 @@ public class OrderItemsSteps {
     @Before("@OrderItems")
     public void before() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new","--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
+        options.addArguments("--headless", "--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
         WebDriver driver = new ChromeDriver(options);
         this.orderItems = new OrderItems(driver);
         orderInfo = new String[4];
@@ -39,7 +39,7 @@ public class OrderItemsSteps {
     @Given("I am on the order information page")
     public void onTheOrderInformationPage() {
         this.orderItems.getOrderItemsPage();
-        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/orderInfo";
+        String expectedUrl = "http://localhost:5173/order%20information";
         String actualUrl = this.orderItems.checkCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl);
     }
@@ -114,9 +114,14 @@ public class OrderItemsSteps {
     @When("I click on delete icon")
     public void clickOnDeleteIcon() {
         this.orderItems.clickOnDeleteIcon();
-        String expectedUrl = "Order item deleted successfully!";
-        String actualUrl = this.orderItems.getAlertMsg();
-        Assert.assertEquals(actualUrl, expectedUrl);
+    }
+
+    @Then("I click the order info delete button")
+    public void iClickTheOrderInfoDeleteButton(){
+        this.orderItems.clickDeleteBtn();
+        String expectedMsg = "Order item deleted successfully!";
+        String actualMsg = this.orderItems.getAlertMsg();
+        Assert.assertEquals(actualMsg, expectedMsg);
     }
 
     // check that delete worked properly by iterating through the list and verify its not there

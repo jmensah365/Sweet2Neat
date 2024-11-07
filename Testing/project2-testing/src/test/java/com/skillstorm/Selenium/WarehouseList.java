@@ -17,8 +17,8 @@ public class WarehouseList {
     private WebDriver driver;
     
     // URLs for the warehouses page and the home page
-    private static final String url = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/warehouses";
-    private static final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
+    private static final String url = "http://localhost:5173/warehouses";
+    private static final String homeUrl = "http://localhost:5173/";
 
     /*
      * Web elements for the fields related to warehouse management (location, capacity, stock)
@@ -70,6 +70,9 @@ public class WarehouseList {
 
     @FindBy(xpath = "//tbody[@name='warehouseTBody']//tr[1]")
     private WebElement firstRowWarehouse;
+
+    @FindBy(name = "confirmDelete")
+    private WebElement confirmDelete;
 
     // Web element for alert message (e.g., errors)
     @FindBy(className = "MuiAlert-message")
@@ -164,6 +167,10 @@ public class WarehouseList {
         RunCucumberTest.sleepThread();
         warehouseId = warehouseFirstRowLocation.getText();
         deleteBtn.click();
+    }
+
+    public void clickConfirmDeleteBtn(){
+        confirmDelete.click();
     }
 
     // Method to confirm deletion by checking if the warehouse is removed

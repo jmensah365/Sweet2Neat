@@ -21,7 +21,7 @@ public class OrdersStepDefinition {
     public void before(){
         // Setting up ChromeOptions to run Chrome in headless mode (without GUI)
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless","--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
+        options.addArguments("--headless", "--no-sandbox", "--disable-gpu", "--window-size=1920,1080", "--disable-dev-shm-usage");
         WebDriver driver = new ChromeDriver(options);
 
         // Initializing OrdersList with the WebDriver instance
@@ -40,7 +40,7 @@ public class OrdersStepDefinition {
     @Given("I am on the order list page")
     public void iAmOnTheOrderListPage(){
         ordersList.getOrderListPageUrl();
-        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/orders";
+        String expectedUrl = "http://localhost:5173/orders";
         String actualUrl = this.ordersList.checkCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl);
     }
@@ -80,7 +80,7 @@ public class OrdersStepDefinition {
     @Given("I am on the base page")
     public void iAmOnTheBasePage(){
         ordersList.getHomeUrl();
-        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
+        String expectedUrl = "http://localhost:5173/";
         String actualUrl = this.ordersList.checkCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl);
     }
@@ -89,7 +89,7 @@ public class OrdersStepDefinition {
     @When("I navigate to the order list page")
     public void iNavigateToTheOrderListPage(){
         ordersList.clickListOfOrdersBtn();
-        String expectedUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/orders";
+        String expectedUrl = "http://localhost:5173/orders";
         String actualUrl = this.ordersList.checkCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl);
     }
@@ -97,7 +97,7 @@ public class OrdersStepDefinition {
     // Step definition for the Then statement to verify the list of orders is displayed
     @Then("I should see the list of orders")
     public void iShouldSeeTheListOfOrders(){
-        String expectedString = "Order Id Customer Name Order Date Status Customer Address";
+        String expectedString = "Customer Name Order Date Status Customer Address Actions";
         String actualString = ordersList.displayOrderListTable();
         Assert.assertEquals(actualString, expectedString);
     }
@@ -106,6 +106,11 @@ public class OrdersStepDefinition {
     @When("I click the delete button")
     public void iClickTheDeleteIcon(){
         ordersList.clickDeleteIcon();
+    }
+
+    @Then("I click the confirm delete button on the order list page")
+    public void iClickTheCofirmDeleteButtonOnTheOrderListPage(){
+        ordersList.clickConfirmDeleteBtn();
         String expectedString = "Order deleted successfully!";
         String actualString = ordersList.getAlertMsg();
         Assert.assertEquals(actualString, expectedString);

@@ -16,8 +16,8 @@ import com.skillstorm.RunCucumberTest;
 public class WarehouseStock {
 
     private WebDriver driver;
-    private final String warehouseStockUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/stocks";
-    private final String homeUrl = "http://cim-frontend.s3-website-us-east-1.amazonaws.com/";
+    private final String warehouseStockUrl = "http://localhost:5173/stocks";
+    private final String homeUrl = "http://localhost:5173/";
     private Actions action;
 
     private String stockId = "";
@@ -55,6 +55,9 @@ public class WarehouseStock {
 
     @FindBy(name = "deleteIcon")
     private WebElement deleteIcon;
+
+    @FindBy(name = "confirmDelete")
+    private WebElement confirmDelete;
 
     @FindBy(className = "MuiAlert-message")
     private WebElement alertMsg;
@@ -170,6 +173,10 @@ public class WarehouseStock {
         RunCucumberTest.sleepThread();
         stockId = tableBody.findElement(By.xpath(".//tr[1]")).getAttribute("id");
         deleteIcon.click();
+    }
+
+    public void clickConfirmDeleteBtn(){
+        confirmDelete.click();
     }
 
     public boolean confirmDeletion(){
