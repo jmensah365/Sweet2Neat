@@ -70,4 +70,5 @@ Feature: WarehouseStock CRUD
     Scenario: Delete a warehouse stock
       Given I am on the Warehouse Stock page
       When I click on the delete icon for the Warehouse Stock I want to delete
+      Then I click the confirm delete button on the warehouse stock page
       Then the warehouse stock should not be visible in the table
